@@ -25,10 +25,10 @@
   <layer>
    <name>background</name>
    <texture>
-     <path>Aircraft/p51d/Models/hotspotgrid.rgb</path>
 <!--
-     <path>Aircraft/p51d/Models/transparent-bg.rgb</path>
+     <path>Aircraft/p51d/Models/hotspotgrid.rgb</path>
 -->
+     <path>Aircraft/p51d/Models/transparent-bg.rgb</path>
      <x1>0.0</x1>
      <y1>0.0</y1>
      <x2>1.0</x2>
