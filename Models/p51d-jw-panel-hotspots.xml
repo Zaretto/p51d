@@ -46,7 +46,7 @@
    <name></name>
    <button>0</button>
    <x>-190</x>
-   <y>170</y>
+   <y>125</y>
    <w>20</w>
    <h>32</h>
    <binding>
@@ -63,7 +63,7 @@
    <name></name>
    <button>1</button>
    <x>-190</x>
-   <y>170</y>
+   <y>125</y>
    <w>20</w>
    <h>32</h>
    <binding>
@@ -80,7 +80,7 @@
    <name></name>
    <button>0</button>
    <x>-170</x>
-   <y>170</y>
+   <y>125</y>
    <w>20</w>
    <h>32</h>
    <binding>
@@ -97,7 +97,7 @@
    <name></name>
    <button>1</button>
    <x>-170</x>
-   <y>170</y>
+   <y>125</y>
    <w>20</w>
    <h>32</h>
    <binding>
@@ -115,7 +115,7 @@
    <name>calibrate fine</name>
    <button>0</button>
    <x>-436</x>
-   <y>60</y>
+   <y>10</y>
    <w>20</w>
    <h>36</h>
    <binding>
@@ -132,7 +132,7 @@
    <name>calibrate coarse</name>
    <button>1</button>
    <x>-436</x>
-   <y>60</y>
+   <y>10</y>
    <w>20</w>
    <h>36</h>
    <binding>
@@ -149,7 +149,7 @@
    <name>calibrate fine</name>
    <button>0</button>
    <x>-416</x>
-   <y>60</y>
+   <y>10</y>
    <w>20</w>
    <h>36</h>
    <binding>
@@ -166,7 +166,7 @@
    <name>calibrate coarse</name>
    <button>1</button>
    <x>-416</x>
-   <y>60</y>
+   <y>10</y>
    <w>20</w>
    <h>36</h>
    <binding>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>p51d-jw-gearwarn.ac</path>
+
+ <animation>
+  <type>select</type>
+  <object-name>LeftBulb</object-name>
+  <condition> 
+  <and>
+    <less-than>
+      <property>/controls/throttle[0]</property>
+      <value>0.20</value>
+    </less-than>
+    <not>
+      <property>/controls/gear-down[0]</property>
+    </not>
+  </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>RightBulb</object-name>
+  <condition> 
+    <less-than>
+      <property>/controls/parking-brake[0]</property>
+      <value>0.99</value>
+    </less-than>
+  </condition>
+ </animation>
+
+</PropertyList>
+
+

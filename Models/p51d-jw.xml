@@ -8,17 +8,17 @@
  <panel>
   <path>Aircraft/p51d/Models/p51d-jw-panel-hotspots.xml</path>
   <bottom-left>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>-0.30</y-m>
    <z-m>-0.10</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m> 0.30</y-m>
    <z-m>-0.10</z-m>
   </bottom-right>
   <top-left>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>-0.30</y-m>
    <z-m> 0.76</z-m>
   </top-left>
@@ -28,144 +28,153 @@
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-alt.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>-0.21</y-m>
-   <z-m>0.43</z-m>
+   <z-m>0.39</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-compass.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>-0.10</y-m>
-   <z-m>0.52</z-m>
+   <z-m>0.48</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-attitude.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.035</y-m>
-   <z-m>0.52</z-m>
+   <z-m>0.48</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-carbtemp.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.135</y-m>
-   <z-m>0.555</z-m>
+   <z-m>0.515</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-cooltemp.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.135</y-m>
-   <z-m>0.485</z-m>
+   <z-m>0.445</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-asi.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>-0.21</y-m>
-   <z-m>0.53</z-m>
+   <z-m>0.49</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-tach.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.21</y-m>
-   <z-m>0.53</z-m>
+   <z-m>0.49</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-engine.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.21</y-m>
-   <z-m>0.43</z-m>
+   <z-m>0.39</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-acc.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.030</y-m>
-   <z-m>0.40</z-m>
+   <z-m>0.36</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-vsi.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.12</y-m>
-   <z-m>0.40</z-m>
+   <z-m>0.36</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-turn.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>-0.10</y-m>
-   <z-m>0.40</z-m>
+   <z-m>0.36</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-adf.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>-0.16</y-m>
-   <z-m>0.63</z-m>
+   <z-m>0.59</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-vac.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.085</y-m>
-   <z-m>0.63</z-m>
+   <z-m>0.59</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-clock.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>-0.085</y-m>
-   <z-m>0.63</z-m>
+   <z-m>0.59</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-man.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.16</y-m>
-   <z-m>0.63</z-m>
+   <z-m>0.59</z-m>
   </offsets>
  </model>
 
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-magcompass.xml</path>
   <offsets>
-   <x-m>-1.23</x-m>
+   <x-m>-1.25</x-m>
    <y-m>0.16</y-m>
-   <z-m>0.71</z-m>
+   <z-m>0.67</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/p51d-jw-gearwarn.xml</path>
+  <offsets>
+   <x-m>-1.25</x-m>
+   <y-m>-0.08</y-m>
+   <z-m>0.28</z-m>
   </offsets>
  </model>
 
