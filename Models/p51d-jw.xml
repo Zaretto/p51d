@@ -191,7 +191,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <property>/controls/elevator</property>
+  <property>/controls/flight/elevator</property>
   <factor>0</factor>
   <center>
    <x-m>0.09</x-m>
@@ -208,7 +208,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <property>/controls/aileron</property>
+  <property>/controls/flight/aileron</property>
   <factor>0</factor>
   <center>
    <x-m>0.09</x-m>

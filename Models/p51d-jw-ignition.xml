@@ -6,7 +6,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Handle</object-name>
-  <property>/controls/magnetos[0]</property>
+  <property>/controls/engines/engine[0]/magnetos</property>
   <interpolation>
    <entry>
     <ind>0</ind>

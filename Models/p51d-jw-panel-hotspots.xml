@@ -189,7 +189,7 @@
    <h>64</h>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/magnetos[0]</property>
+    <property>/controls/engines/engine[0]/magnetos</property>
     <step>1</step>
     <min>0</min>
     <max>3</max>
@@ -206,7 +206,7 @@
    <h>64</h>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/magnetos[0]</property>
+    <property>/controls/engines/engine[0]/magnetos</property>
     <step>-1</step>
     <min>0</min>
     <max>3</max>
@@ -225,7 +225,7 @@
    <h>96</h>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/flaps</property>
+    <property>/controls/flight/flaps</property>
     <step>-0.34</step>
     <min>0.0</min>
     <max>1.0</max>
@@ -242,7 +242,7 @@
    <h>96</h>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/flaps</property>
+    <property>/controls/flight/flaps</property>
     <step>0.34</step>
     <min>0.0</min>
     <max>1.0</max>
