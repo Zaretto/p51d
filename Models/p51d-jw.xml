@@ -103,7 +103,7 @@
   <path>Aircraft/p51d/Models/p51d-jw-acc.xml</path>
   <offsets>
    <x-m>3.705</x-m>
-   <y-m>0.030</y-m>
+   <y-m>0.027</y-m>
    <z-m>0.20</z-m>
   </offsets>
  </model>
@@ -112,7 +112,7 @@
   <path>Aircraft/p51d/Models/p51d-jw-vsi.xml</path>
   <offsets>
    <x-m>3.705</x-m>
-   <y-m>0.12</y-m>
+   <y-m>0.123</y-m>
    <z-m>0.20</z-m>
   </offsets>
  </model>
@@ -131,7 +131,7 @@
   <offsets>
    <x-m>3.705</x-m>
    <y-m>-0.16</y-m>
-   <z-m>0.43</z-m>
+   <z-m>0.435</z-m>
   </offsets>
  </model>
 
@@ -158,7 +158,7 @@
   <offsets>
    <x-m>3.705</x-m>
    <y-m>0.16</y-m>
-   <z-m>0.43</z-m>
+   <z-m>0.435</z-m>
   </offsets>
  </model>
 
@@ -174,7 +174,7 @@
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-gearwarn.xml</path>
   <offsets>
-   <x-m>3.705</x-m>
+   <x-m>3.715</x-m>
    <y-m>-0.08</y-m>
    <z-m>0.12</z-m>
   </offsets>
@@ -225,6 +225,15 @@
    <x-m>3.895</x-m>
    <y-m>-0.32</y-m>
    <z-m>0.22</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/p51d-jw-gunsight.ac</path>
+  <offsets>
+   <x-m>3.875</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.60</z-m>
   </offsets>
  </model>
 
