@@ -1062,16 +1062,4 @@
   </axis>
  </animation>
 
- <animation>
-  <type>textranslate</type>
-  <object-name>CanopyRail</object-name>
-  <property>/controls/texture</property>
-  <factor>0.5</factor>
-  <axis>
-   <x>1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
-
 </PropertyList>
