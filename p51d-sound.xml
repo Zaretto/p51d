@@ -58,16 +58,16 @@
    </condition>
    <volume>
     <property>/engines/engine/rpm</property>
-    <factor>0.001</factor>
-    <min>0.50</min>
-    <max>1.50</max>
-    <offset>0.15</offset>
+    <factor>0.00033</factor>
+    <min>0.2</min>
+    <max>1.0</max>
+    <offset>0.0</offset>
    </volume>
    <pitch>
     <property>/engines/engine/rpm</property>
-    <factor>0.0009</factor>
-    <min>0.1</min>
-    <max>2.0</max>
+    <factor>0.00033</factor>
+    <min>0.0</min>
+    <max>1.0</max>
    </pitch>
   </engine>
 
@@ -84,16 +84,16 @@
    </condition>
    <volume>
     <property>/engines/engine/rpm</property>
-    <factor>0.0005</factor>
-    <min>0.50</min>
-    <max>2.00</max>
-    <offset>0.25</offset>
+    <factor>0.00033</factor>
+    <min>0.0</min>
+    <max>1.00</max>
+    <offset>0.0</offset>
    </volume>
    <pitch>
     <property>/engines/engine/rpm</property>
-    <factor>0.0012</factor>
-    <min>0.1</min>
-    <max>6.0</max>
+    <factor>0.00033</factor>
+    <min>0.0</min>
+    <max>1.0</max>
    </pitch>
   </engine>
 
@@ -115,7 +115,6 @@
    </volume>
   </rumble>
 
-<!-- the c172 doesn't have a retractable landing gear
   <gear>
    <name>gear</name>
    <mode>in-transit</mode>
@@ -133,7 +132,6 @@
     </greather-than>
    </condition>
   </gear>
--->
 
   <squeal>
    <name>squeal</name>
@@ -163,7 +161,8 @@
    <pitch>
     <property>/velocities/airspeed-kt</property>
     <factor>0.0025</factor>
-    <offset>1.2</offset>
+    <offset>0.5</offset>
+    <max>1.0</max>
    </pitch>
   </squeal>
  
@@ -183,22 +182,16 @@
    <path>Sounds/wind.wav</path>
    <property>/velocities/airspeed-kt</property>
    <volume>
-    <property>/position/altitude-ft</property>
-    <factor>-0.000015</factor>
-    <offset>1.0</offset>
-    <min>0.1</min>
-    <max>1.0</max>
-   </volume>
-   <volume>
      <property>/velocities/airspeed-kt</property>
-     <factor>0.0015</factor>
-     <min>0.03</min>
+     <factor>0.0025</factor>
+     <min>0.00</min>
      <max>0.25</max>
    </volume>
    <pitch>
     <property>/velocities/airspeed-kt</property>
     <factor>0.01</factor>
-    <offset>1.25</offset>
+    <offset>0.5</offset>
+    <max>1.0</max>
    </pitch>
   </wind>
  
@@ -213,13 +206,6 @@
    </volume>
   </stall>
  
-<!-- no binding yet?
-  <click>
-   <name>click</name>
-   <path>Sounds/click.wav</path>
-  </click>
--->
-
 </fx>
  
 </PropertyList>
