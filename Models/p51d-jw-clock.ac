@@ -168,7 +168,7 @@ refs 3
 1 0.4 1
 kids 0
 OBJECT poly
-name "bezeloutside"
+name "rimoutside"
 loc 0.00442348 0.00204075 0.00117834
 texture "p51d-jw-med-bezel.rgb"
 numvert 128
@@ -911,7 +911,7 @@ refs 3
 96 0 0
 kids 0
 OBJECT poly
-name "bezelinside"
+name "riminside"
 loc 0.00250166 -0.000119554 7.2107e-05
 texture "p51d-jw-med-bezel.rgb"
 numvert 96
@@ -1398,6 +1398,7 @@ refs 3
 89 0.03125 1
 kids 0
 OBJECT poly
+name "bezel"
 loc 0.00234067 -0.000174921 7.21076e-05
 texture "p51d-jw-med-bezel.rgb"
 numvert 36
@@ -1772,15 +1773,15 @@ refs 3
 1 0.4 1
 kids 0
 OBJECT poly
-name "MinuteHand"
+name "SecondHand"
 loc 0.00598015 0.00430843 0.00841444
 numvert 8
 0 0.0177638 -0.00808789
 0 0.0202225 -0.00833771
 0 0.0177638 -0.00858746
 0 0.00510513 -0.00896205
-0 -0.0141259 -0.00889182
-0 -0.0141259 -0.00778353
+0 -0.00604627 -0.00889182
+0 -0.00604627 -0.00778353
 0 0.00510513 -0.00771327
 0 0.0177638 -0.00808789
 numsurf 5
@@ -1816,7 +1817,7 @@ refs 3
 1 0.4 1
 kids 0
 OBJECT poly
-name "cylinder"
+name "AdjustKnob"
 loc 0.00414108 -0.0223905 0.0217507
 texture "p51d-jw-med-bezel.rgb"
 numvert 32
