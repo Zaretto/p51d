@@ -3,32 +3,33 @@
 
  <path>p51d-jw-turn.ac</path>
 
-<!--
  <animation>
   <type>rotate</type>
-  <object-name>Needle1</object-name>
-  <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+  <object-name>Ball</object-name>
+  <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+  <min>-1.1</min>
+  <max>1.1</max>
   <interpolation>
    <entry>
-    <ind>0</ind>
-    <dep>0</dep>
+    <ind>-1.1</ind>
+    <dep>-7.2</dep>
    </entry>
    <entry>
-    <ind>86.95</ind>
-    <dep>26</dep>
-   </entry>
-   <entry>
-    <ind>608.69</ind>
-    <dep>334</dep>
+    <ind>1.1</ind>
+    <dep>7.2</dep>
    </entry>
   </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0.22</z-m>
+  </center>
   <axis>
    <x>-1</x>
    <y>0</y>
    <z>0</z>
   </axis>
  </animation>
--->
 
 </PropertyList>
 
