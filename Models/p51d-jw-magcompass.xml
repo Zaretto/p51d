@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>p51d-jw-compass.ac</path>
+ <path>p51d-jw-magcompass.ac</path>
 
  <animation>
   <type>rotate</type>
   <object-name>Compass</object-name>
-  <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+  <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
   <center>
    <x-m>-0.02</x-m>
    <y-m>0</y-m>

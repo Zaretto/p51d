@@ -4,13 +4,33 @@
 
  <path>p51d-jw.ac</path>
 
+ <!-- Front hotspots -->
+ <panel>
+  <path>Aircraft/p51d/Models/p51d-jw-panel-hotspots.xml</path>
+  <bottom-left>
+   <x-m>-1.23</x-m>
+   <y-m>-0.30</y-m>
+   <z-m>-0.10</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-1.23</x-m>
+   <y-m> 0.30</y-m>
+   <z-m>-0.10</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-1.23</x-m>
+   <y-m>-0.30</y-m>
+   <z-m> 0.76</z-m>
+  </top-left>
+ </panel>
+
  <!-- panel models -->
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-alt.xml</path>
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>-0.21</y-m>
-   <z-m>0.46</z-m>
+   <z-m>0.43</z-m>
   </offsets>
  </model>
 
@@ -19,7 +39,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>-0.10</y-m>
-   <z-m>0.55</z-m>
+   <z-m>0.52</z-m>
   </offsets>
  </model>
 
@@ -28,7 +48,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.035</y-m>
-   <z-m>0.55</z-m>
+   <z-m>0.52</z-m>
   </offsets>
  </model>
 
@@ -37,7 +57,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.135</y-m>
-   <z-m>0.585</z-m>
+   <z-m>0.555</z-m>
   </offsets>
  </model>
 
@@ -46,7 +66,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.135</y-m>
-   <z-m>0.515</z-m>
+   <z-m>0.485</z-m>
   </offsets>
  </model>
 
@@ -55,7 +75,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>-0.21</y-m>
-   <z-m>0.56</z-m>
+   <z-m>0.53</z-m>
   </offsets>
  </model>
 
@@ -64,7 +84,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.21</y-m>
-   <z-m>0.56</z-m>
+   <z-m>0.53</z-m>
   </offsets>
  </model>
 
@@ -73,7 +93,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.21</y-m>
-   <z-m>0.46</z-m>
+   <z-m>0.43</z-m>
   </offsets>
  </model>
 
@@ -82,7 +102,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.030</y-m>
-   <z-m>0.43</z-m>
+   <z-m>0.40</z-m>
   </offsets>
  </model>
 
@@ -91,7 +111,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.12</y-m>
-   <z-m>0.43</z-m>
+   <z-m>0.40</z-m>
   </offsets>
  </model>
 
@@ -100,7 +120,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>-0.10</y-m>
-   <z-m>0.43</z-m>
+   <z-m>0.40</z-m>
   </offsets>
  </model>
 
@@ -109,7 +129,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>-0.16</y-m>
-   <z-m>0.66</z-m>
+   <z-m>0.63</z-m>
   </offsets>
  </model>
 
@@ -118,7 +138,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.085</y-m>
-   <z-m>0.66</z-m>
+   <z-m>0.63</z-m>
   </offsets>
  </model>
 
@@ -127,7 +147,7 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>-0.085</y-m>
-   <z-m>0.66</z-m>
+   <z-m>0.63</z-m>
   </offsets>
  </model>
 
@@ -136,10 +156,18 @@
   <offsets>
    <x-m>-1.23</x-m>
    <y-m>0.16</y-m>
-   <z-m>0.66</z-m>
+   <z-m>0.63</z-m>
   </offsets>
  </model>
 
+ <model>
+  <path>Aircraft/p51d/Models/p51d-jw-magcompass.xml</path>
+  <offsets>
+   <x-m>-1.23</x-m>
+   <y-m>0.16</y-m>
+   <z-m>0.71</z-m>
+  </offsets>
+ </model>
 
 
 <!--
