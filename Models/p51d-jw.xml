@@ -69,6 +69,15 @@
  </model>
 
  <model>
+  <path>Aircraft/p51d/Models/p51d-jw-engine.xml</path>
+  <offsets>
+   <x-m>-1.23</x-m>
+   <y-m>0.21</y-m>
+   <z-m>0.46</z-m>
+  </offsets>
+ </model>
+
+ <model>
   <path>Aircraft/p51d/Models/p51d-jw-vsi.xml</path>
   <offsets>
    <x-m>-1.23</x-m>
