@@ -3,37 +3,41 @@
 
  <path>p51d-jw-clock.ac</path>
 
-<!--
- <animation>
-  <type>rotate</type>
-  <object-name>Needle1</object-name>
-  <property>/engines/engine/cht-degf</property>
-  <min>-58</min>
-  <max>302</max>
-  <interpolation>
-   <entry>
-    <ind>-58</ind>
-    <dep>312</dep>
-   </entry>
-   <entry>
-    <ind>32</ind>
-    <dep>7</dep>
-   </entry>
-   <entry>
-    <ind>212</ind>
-    <dep>33</dep>
-   </entry>
-   <entry>
-    <ind>302</ind>
-    <dep>59</dep>
-   </entry>
-  </interpolation>
-  <axis>
-   <x>1</x>
+
+  <animation>
+   <type>rotate</type>
+  <object-name>HourHand</object-name>
+  <property>/instrumentation/clock/indicated-sec</property>
+  <factor>0.00833333333333333</factor>
+   <axis>
+   <x>-1</x>
    <y>0</y>
    <z>0</z>
   </axis>
  </animation>
--->
 
-</PropertyList>
+ <animation>
+  <type>rotate</type>
+  <object-name>MinuteHand</object-name>
+  <property>/instrumentation/clock/indicated-sec</property>
+  <factor>0.1</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>SecondHand</object-name>
+  <property>/instrumentation/clock/indicated-sec</property>
+  <factor>6</factor>
+  <axis>
+   <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+  </animation>
+ 
+ </PropertyList>

@@ -297,6 +297,75 @@
    </binding>
   </action>
 
+  <!-- clock hotspots -->
+  <action>
+   <name>adjust left fine</name>
+   <button>0</button>
+   <x>-203</x>
+   <y>258</y>
+   <w>20</w>
+   <h>32</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/clock/offset-sec</property>
+    <step>-60</step>
+    <min>0</min>
+    <max>43200</max>
+    <wrap>true</wrap>
+   </binding>
+  </action>
+  
+  <action>
+   <name>adjust left coarse</name>
+   <button>1</button>
+   <x>-203</x>
+   <y>258</y>
+   <w>20</w>
+   <h>32</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/clock/offset-sec</property>
+    <step>-900</step>
+    <min>0</min>
+    <max>43200</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>adjust right fine</name>
+   <button>0</button>
+   <x>-183</x>
+   <y>258</y>
+   <w>20</w>
+   <h>32</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/clock/offset-sec</property>
+    <step>60</step>
+    <min>0</min>
+    <max>43200</max>
+    <wrap>true</wrap>
+   </binding>
+  </action>
+  
+  <action>
+   <name>adjust right coarse</name>
+   <button>1</button>
+   <x>-183</x>
+   <y>258</y>
+   <w>20</w>
+   <h>32</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/clock/offset-sec</property>
+    <step>900</step>
+    <min>0</min>
+    <max>43200</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
   <!-- flaps control -->
 <!--
   <action>
