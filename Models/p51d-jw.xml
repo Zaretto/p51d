@@ -165,8 +165,8 @@
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-magcompass.xml</path>
   <offsets>
-   <x-m>3.705</x-m>
-   <y-m>0.16</y-m>
+   <x-m>3.725</x-m>
+   <y-m>0.15</y-m>
    <z-m>0.51</z-m>
   </offsets>
  </model>
