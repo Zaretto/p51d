@@ -41,9 +41,17 @@ The reference datum for measurements is the nose.
 </approach>
 
 <!-- Cruise configuration -->
-<cruise speed="360" alt="5000">
+<!-- 360ktas is often quoted as the top speed for a mustang, but that
+   - is almost certainly for a stripped aircraft.  In this cruise
+   - condition, we are carrying about 1100 lbs of fuel that the
+   - record-setting aircraft was (probably) not.  Since drag goes
+   - (very roughly) as the square of both weight and speed, a 14%
+   - increase in weight should come out to a proportional reduction
+   - in maximum speed, thus this value.  This results in an aircraft
+   - that is much less "slippery" in descents. -->
+<cruise speed="310" alt="25000">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="1.00"/>
-  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.00"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>
   <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
   <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
   <control-setting axis="/controls/flight/flaps" value="0.0"/>
@@ -99,28 +107,31 @@ flap drag not available
       YASim doesn't model gear supercharger.  Have read various figures (turbo-mul) 4.0 to 5.8 for 
       running the second stage blower.  The second stage should boost at 17000ft. -->
 <!-- cruise-rpm roughly estimated from documented gear ratio of 0.479 -->
+<!-- Give the "book" numbers a hand by tuning the propeller for its
+     best performance at the 360ktas maximum speed. -Andy -->
 <propeller   x="-0.75" y="0" z="0"
            radius="1.75" 
            mass="1690" moment="94.5"
-           cruise-alt="17000" cruise-power="800"
-           cruise-speed="380" cruise-rpm="1200"
+           cruise-alt="25000" cruise-power="1695"
+           cruise-speed="360" cruise-rpm="1437"
            gear-ratio="0.479"
            min-rpm="766" max-rpm="1437" >
   <actionpt x="-1.25" y="0" z="0"/>
   <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
-</propeller>
 
-<!-- engine power overstated by 100hp (s.b. 1695) in order to normalize YASim flight model -->
-<piston-engine
-  eng-power="1795" eng-rpm="3000"
-  turbo-mul="2.0" wastegate-mp="61"
-  >
-  <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
-  <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-  <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
-  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-  <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
-</piston-engine>
+  <!-- Similarly, favor high performance by guessing at the high end of
+       the engine boost values. -->
+  <piston-engine
+     eng-power="1695" eng-rpm="3000"
+     turbo-mul="5.5" wastegate-mp="61"
+     >
+    <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+    <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+    <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+    <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+    <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
+  </piston-engine>
+</propeller>
 
 
 <!-- Tail wheel -->
@@ -169,3 +180,4 @@ flap drag not available
 -->
 
 </airplane>
+
