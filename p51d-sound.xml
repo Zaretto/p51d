@@ -28,7 +28,7 @@
    </volume>
    <pitch>
     <property>/engines/engine/cranking</property>
-    <factor>2.0</factor>
+    <factor>1.0</factor>
    </pitch>
   </crank>
 
@@ -41,7 +41,7 @@
    </volume>
    <pitch>
     <property>/engines/engine/running</property>
-    <factor>2.0</factor>
+    <factor>1.0</factor>
    </pitch>
   </crank>
 
@@ -65,9 +65,9 @@
    </volume>
    <pitch>
     <property>/engines/engine/rpm</property>
-    <factor>0.0024</factor>
-    <min>1.0</min>
-    <max>6.0</max>
+    <factor>0.0009</factor>
+    <min>0.1</min>
+    <max>2.0</max>
    </pitch>
   </engine>
 

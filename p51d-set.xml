@@ -29,7 +29,6 @@ March 2003 Jim Wilson, jimw@kelcomaine.com
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
   <sound>
-   <audible>true</audible>
    <path>Aircraft/p51d/p51d-sound.xml</path>
   </sound>
 
