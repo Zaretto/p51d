@@ -25,10 +25,10 @@
   <layer>
    <name>background</name>
    <texture>
-<!--
      <path>Aircraft/p51d/Models/hotspotgrid.rgb</path>
--->
+<!--
      <path>Aircraft/p51d/Models/transparent-bg.rgb</path>
+-->
      <x1>0.0</x1>
      <y1>0.0</y1>
      <x2>1.0</x2>
@@ -40,6 +40,20 @@
 <!-- define hotspot actions below -->
 
  <actions>
+
+  <!-- attitude indicator -->
+  <action>
+   <name></name>
+   <button>0</button>
+   <x>95</x>
+   <y>100</y>
+   <w>60</w>
+   <h>52</h>
+   <binding>
+    <command>property-toggle</command>
+    <property>/instrumentation/attitude-indicator/serviceable</property>
+   </binding>
+  </action>
 
   <!-- gyro compass hotspots -->
   <action>
@@ -103,6 +117,75 @@
    <binding>
     <command>property-adjust</command>
     <property>/instrumentation/heading-indicator/offset-deg</property>
+    <step>5</step>
+    <min>0</min>
+    <max>360</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <!-- remote compass hotspots -->
+  <action>
+   <name></name>
+   <button>0</button>
+   <x>-360</x>
+   <y>240</y>
+   <w>20</w>
+   <h>32</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+   </binding>
+  </action>
+  
+  <action>
+   <name></name>
+   <button>1</button>
+   <x>-360</x>
+   <y>240</y>
+   <w>20</w>
+   <h>32</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+    <step>-5</step>
+    <min>0</min>
+    <max>360</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name></name>
+   <button>0</button>
+   <x>-340</x>
+   <y>240</y>
+   <w>20</w>
+   <h>32</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+    <step>1</step>
+    <min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+   </binding>
+  </action>
+  
+  <action>
+   <name></name>
+   <button>1</button>
+   <x>-340</x>
+   <y>240</y>
+   <w>20</w>
+   <h>32</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
     <step>5</step>
     <min>0</min>
     <max>360</max>
@@ -184,9 +267,9 @@
    <name>switch up</name>
    <button>0</button>
    <x>-254</x>
-   <y>-260</y>
+   <y>-230</y>
    <w>64</w>
-   <h>64</h>
+   <h>81</h>
    <binding>
     <command>property-adjust</command>
     <property>/controls/engines/engine[0]/magnetos</property>
@@ -201,9 +284,9 @@
    <name>switch down</name>
    <button>0</button>
    <x>-190</x>
-   <y>-260</y>
+   <y>-230</y>
    <w>64</w>
-   <h>64</h>
+   <h>81</h>
    <binding>
     <command>property-adjust</command>
     <property>/controls/engines/engine[0]/magnetos</property>

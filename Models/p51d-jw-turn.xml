@@ -31,6 +31,18 @@
   </axis>
  </animation>
 
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle1</object-name>
+  <property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+  <factor>8.0</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
 </PropertyList>
 
 

@@ -62,7 +62,7 @@
  <animation>
   <type>rotate</type>
   <object-name>NeedleFuel</object-name>
-  <property>/consumables/fuel/tank[0]/level-gal_us</property>
+  <property>/engines/engine/fuel-pump-psi</property>
   <min>0</min>
   <max>25</max>
   <interpolation>

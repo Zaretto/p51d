@@ -23,10 +23,10 @@
   <type>select</type>
   <object-name>RightBulb</object-name>
   <condition> 
-    <less-than>
+    <greater-than>
       <property>/controls/gear/parking-brake[0]</property>
       <value>0.99</value>
-    </less-than>
+    </greater-than>
   </condition>
  </animation>
 
