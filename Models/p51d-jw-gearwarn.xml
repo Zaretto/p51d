@@ -24,7 +24,7 @@
   <object-name>RightBulb</object-name>
   <condition> 
     <greater-than>
-      <property>/controls/gear/parking-brake[0]</property>
+      <property>/controls/gear/brake-parking</property>
       <value>0.99</value>
     </greater-than>
   </condition>

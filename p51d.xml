@@ -128,8 +128,8 @@ flap drag not available
 
  <!-- left main -->
 <gear x="-2.79" y="1.81" z="-2.20" compression="0.4" spring="0.7" damp="3.0">
-  <control-input axis="/controls/gear/wheel[0]/brake" control="BRAKE"/>
-  <control-input axis="/controls/gear/parking-brake" control="BRAKE" split="true"/>
+  <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="6"/>
   <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
@@ -137,8 +137,8 @@ flap drag not available
 
  <!-- right main -->
 <gear x="-2.79" y="-1.81" z="-2.20" compression="0.4" spring="0.7" damp="3.0">
-  <control-input axis="/controls/gear/wheel[1]/brake" control="BRAKE"/>
-  <control-input axis="/controls/gear/parking-brake" control="BRAKE" split="true"/>
+  <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="6"/>
   <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
