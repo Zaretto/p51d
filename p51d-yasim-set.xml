@@ -89,6 +89,10 @@ March 2003 Jim Wilson, jimw@kelcomaine.com
    </config>
  </autopilot>
 
+  <hud>
+   <enable3d>false</enable3d>
+  </hud>
+
  </sim>
 
  <engines>
