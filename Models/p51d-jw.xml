@@ -936,7 +936,7 @@
   <object-name>TailNavLightOff</object-name>
   <condition>
    <not>
-    <property>/controls/lights/navigation</property>
+    <property>/controls/lighting/nav-lights</property>
    </not>
   </condition>
  </animation>
@@ -947,7 +947,7 @@
   <object-name>RightNavLightOn</object-name>
   <object-name>TailNavLightOn</object-name>
   <condition>
-    <property>/controls/lights/navigation</property>
+    <property>/controls/lighting/nav-lights</property>
   </condition>
  </animation>
 
@@ -963,7 +963,7 @@
   <type>select</type>
   <object-name>BeaconFlasher</object-name>
   <condition>
-   <property>/controls/lights/beacon</property>
+   <property>/controls/lighting/beacon</property>
   </condition>
  </animation>
 
