@@ -64,7 +64,7 @@ flap drag not available
       length="5.16" chord="2.845" sweep="-3.5" dihedral="5" camber="0.1">
   <stall aoa="14" width="4" peak="1.5"/>
   <flap0 start="0.024" end="0.543" lift="1.2" drag="1.8"/>
-  <flap1 start="0.543" end="0.94.5" lift="1.3" drag="1.4"/>
+  <flap1 start="0.543" end="0.945" lift="1.3" drag="1.4"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
   <control-speed control="FLAP0" transition-time="5"/>
