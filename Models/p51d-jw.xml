@@ -942,6 +942,15 @@
   <type>select</type>
   <object-name>LeftNavLightOff</object-name>
   <object-name>RightNavLightOff</object-name>
+  <condition>
+   <not>
+    <property>/controls/lighting/nav-lights</property>
+   </not>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
   <object-name>TailNavLightOff</object-name>
   <condition>
    <not>
@@ -954,6 +963,13 @@
   <type>select</type>
   <object-name>LeftNavLightOn</object-name>
   <object-name>RightNavLightOn</object-name>
+  <condition>
+    <property>/controls/lighting/nav-lights</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
   <object-name>TailNavLightOn</object-name>
   <condition>
     <property>/controls/lighting/nav-lights</property>
