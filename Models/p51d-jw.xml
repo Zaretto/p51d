@@ -192,9 +192,10 @@
  <model>
   <path>Aircraft/p51d/Models/p51d-jw-trimknobaileron.xml</path>
   <offsets>
-   <x-m>-1.00</x-m>
+   <x-m>-0.98</x-m>
    <y-m>-0.27</y-m>
-   <z-m>0.20</z-m>
+   <z-m>0.21</z-m>
+   <pitch-deg>15.0</pitch-deg>
   </offsets>
  </model>
 
@@ -213,6 +214,15 @@
    <x-m>-0.96</x-m>
    <y-m>-0.23</y-m>
    <z-m>0.10</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/p51d-jw-throttle.xml</path>
+  <offsets>
+   <x-m>-1.00</x-m>
+   <y-m>-0.27</y-m>
+   <z-m>0.35</z-m>
   </offsets>
  </model>
 
