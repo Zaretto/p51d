@@ -187,6 +187,35 @@
   </offsets>
  </model>
 
+ <!-- non-panel models -->
+
+ <model>
+  <path>Aircraft/p51d/Models/p51d-jw-trimknobaileron.xml</path>
+  <offsets>
+   <x-m>-1.00</x-m>
+   <y-m>-0.27</y-m>
+   <z-m>0.20</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/p51d-jw-trimknobrudder.xml</path>
+  <offsets>
+   <x-m>-0.87</x-m>
+   <y-m>-0.27</y-m>
+   <z-m>0.20</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/p51d-jw-trimwheelelevator.xml</path>
+  <offsets>
+   <x-m>-0.96</x-m>
+   <y-m>-0.23</y-m>
+   <z-m>0.10</z-m>
+  </offsets>
+ </model>
+
 <!--
  <animation>
   <type>rotate</type>
