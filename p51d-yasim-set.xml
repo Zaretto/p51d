@@ -126,6 +126,7 @@ March 2003 Jim Wilson, jimw@kelcomaine.com
  <controls>
    <engines>
       <engine n="0">
+        <magnetos>3</magnetos>
         <boost type="double">0.33</boost>
       </engine>
    </engines>
