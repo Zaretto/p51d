@@ -807,7 +807,7 @@
   <object-name>RightAileron</object-name>
   <object-name>RightAileronEdge</object-name>
   <property>/controls/flight/aileron</property>
-  <factor>15.0</factor>
+  <factor>-15.0</factor>
 
   <center>
    <x-m>4.325000</x-m>
@@ -829,7 +829,7 @@
   <object-name>LeftAileron</object-name>
   <object-name>LeftAileronEdge</object-name>
   <property>/controls/flight/aileron</property>
-  <factor>-15.0</factor>
+  <factor>15.0</factor>
 
   <center>
    <x-m>4.325000</x-m>
