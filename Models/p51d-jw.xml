@@ -178,6 +178,14 @@
   </offsets>
  </model>
 
+ <model>
+  <path>Aircraft/p51d/Models/p51d-jw-ignition.xml</path>
+  <offsets>
+   <x-m>-1.185</x-m>
+   <y-m>-0.10</y-m>
+   <z-m>0.21</z-m>
+  </offsets>
+ </model>
 
 <!--
  <animation>

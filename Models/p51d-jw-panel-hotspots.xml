@@ -179,6 +179,41 @@
    </binding>
   </action>
 
+  <!-- ingition switch hotspots -->
+  <action>
+   <name>switch up</name>
+   <button>0</button>
+   <x>-254</x>
+   <y>-260</y>
+   <w>64</w>
+   <h>64</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls/magnetos[0]</property>
+    <step>1</step>
+    <min>0</min>
+    <max>3</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>switch down</name>
+   <button>0</button>
+   <x>-190</x>
+   <y>-260</y>
+   <w>64</w>
+   <h>64</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls/magnetos[0]</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>3</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
   <!-- flaps control -->
 <!--
   <action>
