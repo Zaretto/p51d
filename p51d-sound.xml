@@ -9,14 +9,14 @@
    <path>Sounds/engstart.wav</path>
    <property>/engines/engine/cranking</property>
    <volume>
-    <offset>0.4</offset>
+    <offset>-0.4</offset>
    </volume>
   </crank>
 
   <crank>
    <name>crank</name>
    <mode>looped</mode>
-   <path>Sounds/cranking.wav</path>
+   <path>Aircraft/p51d/Sounds/p51d_starter.wav</path>
    <condition>
     <property>/engines/engine/cranking</property>
     <not>
@@ -24,35 +24,75 @@
     </not>
    </condition>
    <volume>
-    <offset>0.5</offset>
+    <offset>-0.5</offset>
    </volume>
+   <pitch>
+    <property>/engines/engine/cranking</property>
+    <factor>2.0</factor>
+   </pitch>
   </crank>
 
   <crank>
    <name>cough</name>
-   <path>Sounds/coughing.wav</path>
+   <path>Aircraft/p51d/Sounds/p51d_startup.wav</path>
    <property>/engines/engine/running</property>
    <volume>
-    <offset>0.3</offset>
+    <offset>-0.50</offset>
    </volume>
+   <pitch>
+    <property>/engines/engine/running</property>
+    <factor>2.0</factor>
+   </pitch>
   </crank>
 
   <engine>
    <name>engine</name>
    <mode>looped</mode>
-   <path>Sounds/wasp.wav</path>
-   <property>/engines/engine/running</property>
+   <path>Aircraft/p51d/Sounds/p51d_rpm1.wav</path>
+   <condition>
+    <property>/engines/engine/running</property>
+    <less-than>
+    <property>/engines/engine/rpm</property>
+    <value>5000</value>
+    </less-than>
+   </condition>
    <volume>
     <property>/engines/engine/rpm</property>
-    <factor>0.0002</factor>
-    <min>0.15</min>
-    <max>1.0</max>
+    <factor>0.001</factor>
+    <min>0.50</min>
+    <max>1.50</max>
     <offset>0.15</offset>
    </volume>
    <pitch>
     <property>/engines/engine/rpm</property>
-    <factor>0.0016</factor>
+    <factor>0.0024</factor>
     <min>1.0</min>
+    <max>6.0</max>
+   </pitch>
+  </engine>
+
+  <engine>
+   <name>enginerun</name>
+   <mode>looped</mode>
+   <path>Sounds/wasp.wav</path>
+   <condition>
+    <property>/engines/engine/running</property>
+    <greater-than>
+    <property>/engines/engine/rpm</property>
+    <value>400</value>
+    </greater-than>
+   </condition>
+   <volume>
+    <property>/engines/engine/rpm</property>
+    <factor>0.0005</factor>
+    <min>0.50</min>
+    <max>2.00</max>
+    <offset>0.25</offset>
+   </volume>
+   <pitch>
+    <property>/engines/engine/rpm</property>
+    <factor>0.0012</factor>
+    <min>0.1</min>
     <max>6.0</max>
    </pitch>
   </engine>
