@@ -87,4 +87,18 @@
   </axis>
  </animation>
 
+ <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>NeedleOilTemp</object-name>
+  <object-name>NeedleOilPress</object-name>
+  <object-name>NeedleFuel</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.5</red>
+    <green>0.25</green>
+    <blue>0.25</blue>
+  </emission>
+ </animation>
+
 </PropertyList>

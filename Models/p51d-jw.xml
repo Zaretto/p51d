@@ -181,17 +181,19 @@
  </model>
 
  <model>
+  <name>IGNITION</name>
   <path>Aircraft/p51d/Models/p51d-jw-ignition.xml</path>
   <offsets>
-   <x-m>3.770</x-m>
+   <x-m>3.730</x-m>
    <y-m>-0.10</y-m>
-   <z-m>0.05</z-m>
+   <z-m>0.068</z-m>
   </offsets>
  </model>
 
  <!-- non-panel models -->
 
  <model>
+  <name>TRIMKNOBAILERON</name>
   <path>Aircraft/p51d/Models/p51d-jw-trimknobaileron.xml</path>
   <offsets>
    <x-m>3.955</x-m>
@@ -202,6 +204,7 @@
  </model>
 
  <model>
+  <name>TRIMKNOBRUDDER</name>
   <path>Aircraft/p51d/Models/p51d-jw-trimknobrudder.xml</path>
   <offsets>
    <x-m>4.085</x-m>
@@ -211,6 +214,7 @@
  </model>
 
  <model>
+  <name>TRIMWHEELELEVATOR</name>
   <path>Aircraft/p51d/Models/p51d-jw-trimwheelelevator.xml</path>
   <offsets>
    <x-m>3.995</x-m>
@@ -220,6 +224,7 @@
  </model>
 
  <model>
+  <name>THROTTLE</name>
   <path>Aircraft/p51d/Models/p51d-jw-throttle.xml</path>
   <offsets>
    <x-m>3.895</x-m>
@@ -229,6 +234,7 @@
  </model>
 
  <model>
+  <name>GUNSIGHT</name>
   <path>Aircraft/p51d/Models/p51d-jw-gunsight.ac</path>
   <offsets>
    <x-m>3.875</x-m>
@@ -236,6 +242,23 @@
    <z-m>0.60</z-m>
   </offsets>
  </model>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>ReostatKnob</object-name>
+  <property>/controls/lighting/instruments-norm</property>
+  <factor>-270</factor>
+  <center>
+   <x-m>3.97</x-m>
+   <y-m>0.085</y-m>
+   <z-m>0.068</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
 
  <animation>
   <type>rotate</type>
@@ -1076,6 +1099,107 @@
    <y>1.0</y>
    <z>0.0</z>
   </axis>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>Dash</object-name>
+  <object-name>LeftCockpitWall</object-name>
+  <object-name>RightCockpitWall</object-name>
+  <object-name>RightCockpitPanel</object-name>
+  <object-name>LeftCockpitControlBox</object-name>
+  <object-name>PanelOuter</object-name>
+  <object-name>PanelMain</object-name>
+  <object-name>PanelLineDetail</object-name>
+  <object-name>ConsolePanel</object-name>
+  <object-name>EjectSticker</object-name>
+  <object-name>CoolantSticker</object-name>
+  <object-name>CarbHeatSticker</object-name>
+  <object-name>CockpitFloor</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.5</red>
+    <green>0.2</green>
+    <blue>0.2</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>Stick</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.5</red>
+    <green>0.2</green>
+    <blue>0.2</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>THROTTLE</object-name>
+  <global type="bool">true</global>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.3</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>GUNSIGHT</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.3</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>TRIMWHEELELEVATOR</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.3</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>TRIMKNOBAILERON</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.3</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>TRIMKNOBRUDDER</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.3</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>IGNITION</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.3</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
  </animation>
 
 </PropertyList>

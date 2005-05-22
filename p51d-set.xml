@@ -175,7 +175,7 @@ Excessive braking can cause you to nose over.  Some recommend raising flaps imme
       </engine>
    </engines>
  </controls>
-
+  
  <!-- map key for booster (supercharger) -->
  <input>
     <keyboard>
