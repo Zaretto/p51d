@@ -4,6 +4,17 @@
  <path>p51d-jw-compass.ac</path>
 
  <animation>
+  <type>material</type>
+  <object-name>Compass</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.5</red>
+    <green>0.25</green>
+    <blue>0.25</blue>
+  </emission>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Compass</object-name>
   <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
@@ -17,17 +28,6 @@
    <y>0</y>
    <z>1</z>
   </axis>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>Compass</object-name>
-  <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-    <red>0.5</red>
-    <green>0.25</green>
-    <blue>0.25</blue>
-  </emission>
  </animation>
 
 </PropertyList>

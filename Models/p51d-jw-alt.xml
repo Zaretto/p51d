@@ -4,6 +4,21 @@
  <path>p51d-jw-alt.ac</path>
 
  <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Needle1</object-name>
+  <object-name>Needle2</object-name>
+  <object-name>Needle3</object-name>
+  <object-name>PressureDial</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.5</red>
+    <green>0.25</green>
+    <blue>0.25</blue>
+  </emission>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Needle1</object-name>
   <property>/instrumentation/altimeter/indicated-altitude-ft</property>
@@ -63,21 +78,6 @@
    <y>0</y>
    <z>0</z>
   </axis>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>Face</object-name>
-  <object-name>Needle1</object-name>
-  <object-name>Needle2</object-name>
-  <object-name>Needle3</object-name>
-  <object-name>PressureDial</object-name>
-  <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-    <red>0.5</red>
-    <green>0.25</green>
-    <blue>0.25</blue>
-  </emission>
  </animation>
 
 </PropertyList>

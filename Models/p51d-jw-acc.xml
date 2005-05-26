@@ -4,6 +4,18 @@
  <path>p51d-jw-acc.ac</path>
 
  <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Needle1</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.4</red>
+    <green>0.20</green>
+    <blue>0.20</blue>
+  </emission>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Needle1</object-name>
   <property>/accelerations/pilot/z-accel-fps_sec[0]</property>
@@ -22,18 +34,6 @@
    <y>0</y>
    <z>0</z>
   </axis>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>Face</object-name>
-  <object-name>Needle1</object-name>
-  <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-    <red>0.4</red>
-    <green>0.20</green>
-    <blue>0.20</blue>
-  </emission>
  </animation>
 
 </PropertyList>

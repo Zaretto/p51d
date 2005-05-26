@@ -5,6 +5,19 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>KnobTop</object-name>
+  <object-name>Knob</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <factor>1440</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>Needle</object-name>
   <property>/controls/flight/elevator-trim</property>
   <interpolation>
@@ -21,19 +34,6 @@
     <dep>50</dep>
    </entry>
   </interpolation>
-  <axis>
-   <x>0</x>
-   <y>-1</y>
-   <z>0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>KnobTop</object-name>
-  <object-name>Knob</object-name>
-  <property>/controls/flight/elevator-trim</property>
-  <factor>1440</factor>
   <axis>
    <x>0</x>
    <y>-1</y>

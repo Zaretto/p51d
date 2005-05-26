@@ -4,6 +4,18 @@
  <path>p51d-jw-tach.ac</path>
 
  <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Needle1</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.5</red>
+    <green>0.25</green>
+    <blue>0.25</blue>
+  </emission>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Needle1</object-name>
   <property>/engines/engine/rpm</property>
@@ -24,18 +36,6 @@
    <y>0</y>
    <z>0</z>
   </axis>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>Face</object-name>
-  <object-name>Needle1</object-name>
-  <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-    <red>0.5</red>
-    <green>0.25</green>
-    <blue>0.25</blue>
-  </emission>
  </animation>
 
 </PropertyList>
