@@ -246,7 +246,7 @@
  <animation>
   <type>rotate</type>
   <object-name>ReostatKnob</object-name>
-  <property>/controls/lighting/instruments-norm</property>
+  <property>controls/lighting/instruments-norm</property>
   <factor>-270</factor>
   <center>
    <x-m>3.97</x-m>
@@ -263,7 +263,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <property>/controls/flight/elevator</property>
+  <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
    <x-m>3.94</x-m>
@@ -280,7 +280,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <property>/controls/flight/aileron</property>
+  <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
    <x-m>3.94</x-m>
@@ -300,7 +300,7 @@
   <object-name>Propeller2</object-name>
   <condition>
    <less-than>
-    <property>/engines/engine[0]/rpm</property>
+    <property>engines/engine[0]/rpm</property>
     <value>1000</value>
    </less-than>
   </condition>
@@ -311,7 +311,7 @@
   <object-name>PropellerDisk</object-name>
   <condition>
    <greater-than>
-    <property>/engines/engine[0]/rpm</property>
+    <property>engines/engine[0]/rpm</property>
     <value>900</value>
    </greater-than>
   </condition>
@@ -321,7 +321,7 @@
   <type>spin</type>
   <object-name>Propeller1</object-name>
   <object-name>Propeller2</object-name>
-  <property>/engines/engine[0]/rpm</property>
+  <property>engines/engine[0]/rpm</property>
   <factor>-0.479</factor>
   <center>
    <x-m>-0.40</x-m>
@@ -338,7 +338,7 @@
  <animation>
   <type>spin</type>
   <object-name>PropellerDisk</object-name>
-  <property>/engines/engine[0]/rpm</property>
+  <property>engines/engine[0]/rpm</property>
   <factor>-.01</factor>
   <center>
    <x-m>-0.40</x-m>
@@ -355,7 +355,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftGearStrut</object-name>
-  <property>/gear/gear[0]/position-norm</property>
+  <property>gear/gear[0]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -385,7 +385,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftGearWheel</object-name>
-  <property>/gear/gear[0]/position-norm</property>
+  <property>gear/gear[0]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -415,7 +415,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftOuterGearCover</object-name>
-  <property>/gear/gear[0]/position-norm</property>
+  <property>gear/gear[0]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -445,7 +445,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftInnerGearCover</object-name>
-  <property>/gear/gear[0]/position-norm</property>
+  <property>gear/gear[0]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -477,7 +477,7 @@
   <object-name>LeftGearStrut</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -488,7 +488,7 @@
   <object-name>LeftGearWheel</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -499,7 +499,7 @@
   <object-name>LeftOuterGearCover</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -510,7 +510,7 @@
   <object-name>LeftInnerGearCover</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -519,7 +519,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RightGearStrut</object-name>
-  <property>/gear/gear[1]/position-norm</property>
+  <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -549,7 +549,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RightGearWheel</object-name>
-  <property>/gear/gear[1]/position-norm</property>
+  <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -579,7 +579,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RightOuterGearCover</object-name>
-  <property>/gear/gear[1]/position-norm</property>
+  <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -609,7 +609,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RightInnerGearCover</object-name>
-  <property>/gear/gear[1]/position-norm</property>
+  <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -641,7 +641,7 @@
   <object-name>RightGearStrut</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -652,7 +652,7 @@
   <object-name>RightGearWheel</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -663,7 +663,7 @@
   <object-name>RightOuterGearCover</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -674,7 +674,7 @@
   <object-name>RightInnerGearCover</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -684,7 +684,7 @@
   <type>rotate</type>
   <object-name>TailGearStrut</object-name>
   <object-name>TailGearWheel</object-name>
-  <property>/gear/gear[1]/position-norm</property>
+  <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -714,7 +714,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RightTailGearDoor</object-name>
-  <property>/gear/gear[1]/position-norm</property>
+  <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -744,7 +744,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftTailGearDoor</object-name>
-  <property>/gear/gear[1]/position-norm</property>
+  <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -776,7 +776,7 @@
   <object-name>RightTailGearDoor</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -787,7 +787,7 @@
   <object-name>LeftTailGearDoor</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <value>0.02</value>
    </greater-than>
   </condition>
@@ -797,7 +797,7 @@
   <type>rotate</type>
   <object-name>RightFlap</object-name>
   <object-name>RightFlapEdge</object-name>
-  <property>/surface-positions/flap-pos-norm</property>
+  <property>surface-positions/flap-pos-norm</property>
   <factor>47.0</factor>
 
    <center>
@@ -818,7 +818,7 @@
   <type>rotate</type>
   <object-name>LeftFlap</object-name>
   <object-name>LeftFlapEdge</object-name>
-  <property>/surface-positions/flap-pos-norm</property>
+  <property>surface-positions/flap-pos-norm</property>
   <factor>47.0</factor>
 
   <center>
@@ -838,7 +838,7 @@
   <type>rotate</type>
   <object-name>RightAileron</object-name>
   <object-name>RightAileronEdge</object-name>
-  <property>/controls/flight/aileron</property>
+  <property>controls/flight/aileron</property>
   <factor>-15.0</factor>
 
   <center>
@@ -860,7 +860,7 @@
   <type>rotate</type>
   <object-name>LeftAileron</object-name>
   <object-name>LeftAileronEdge</object-name>
-  <property>/controls/flight/aileron</property>
+  <property>controls/flight/aileron</property>
   <factor>15.0</factor>
 
   <center>
@@ -883,7 +883,7 @@
   <object-name>RudderEdge</object-name>
   <object-name>TailNavLightOn</object-name>
   <object-name>TailNavLightOff</object-name>
-  <property>/surface-positions/rudder-pos-norm</property>
+  <property>surface-positions/rudder-pos-norm</property>
   <factor>30.0</factor>
 
   <center>
@@ -903,7 +903,7 @@
   <type>rotate</type>
   <object-name>RightElevator</object-name>
   <object-name>RightElevatorEdge</object-name>
-  <property>/surface-positions/elevator-pos-norm</property>
+  <property>surface-positions/elevator-pos-norm</property>
   <interpolation>
    <entry>
     <ind>-1.0</ind>
@@ -934,7 +934,7 @@
   <type>rotate</type>
   <object-name>LeftElevator</object-name>
   <object-name>LeftElevatorEdge</object-name>
-  <property>/surface-positions/elevator-pos-norm</property>
+  <property>surface-positions/elevator-pos-norm</property>
   <interpolation>
    <entry>
     <ind>-1.0</ind>
@@ -967,7 +967,7 @@
   <object-name>RightNavLightOff</object-name>
   <condition>
    <not>
-    <property>/controls/lighting/nav-lights</property>
+    <property>controls/lighting/nav-lights</property>
    </not>
   </condition>
  </animation>
@@ -977,7 +977,7 @@
   <object-name>TailNavLightOff</object-name>
   <condition>
    <not>
-    <property>/controls/lighting/nav-lights</property>
+    <property>controls/lighting/nav-lights</property>
    </not>
   </condition>
  </animation>
@@ -987,7 +987,7 @@
   <object-name>LeftNavLightOn</object-name>
   <object-name>RightNavLightOn</object-name>
   <condition>
-    <property>/controls/lighting/nav-lights</property>
+    <property>controls/lighting/nav-lights</property>
   </condition>
  </animation>
 
@@ -995,7 +995,7 @@
   <type>select</type>
   <object-name>TailNavLightOn</object-name>
   <condition>
-    <property>/controls/lighting/nav-lights</property>
+    <property>controls/lighting/nav-lights</property>
   </condition>
  </animation>
 
@@ -1011,7 +1011,7 @@
   <type>select</type>
   <object-name>BeaconFlasher</object-name>
   <condition>
-   <property>/controls/lighting/beacon</property>
+   <property>controls/lighting/beacon</property>
   </condition>
  </animation>
 
@@ -1019,7 +1019,7 @@
   <type>translate</type>
   <object-name>LeftGearWheel</object-name>
   <object-name>LeftGearStrut</object-name>
-  <property>/gear/gear[1]/compression-norm</property>
+  <property>gear/gear[1]/compression-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -1045,7 +1045,7 @@
   <type>translate</type>
   <object-name>RightGearWheel</object-name>
   <object-name>RightGearStrut</object-name>
-  <property>/gear/gear[2]/compression-norm</property>
+  <property>gear/gear[2]/compression-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -1070,7 +1070,7 @@
  <animation>
   <type>spin</type>
   <object-name>LeftGearWheel</object-name>
-  <property>/velocities/uBody-fps</property>
+  <property>velocities/uBody-fps</property>
   <factor>-1.5</factor>
   <center>
    <x-m>2.80</x-m>
@@ -1087,7 +1087,7 @@
  <animation>
   <type>spin</type>
   <object-name>RightGearWheel</object-name>
-  <property>/velocities/uBody-fps</property>
+  <property>velocities/uBody-fps</property>
   <factor>-1.5</factor>
   <center>
    <x-m>2.80</x-m>
@@ -1117,7 +1117,7 @@
   <object-name>CarbHeatSticker</object-name>
   <object-name>CockpitFloor</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.5</red>
     <green>0.2</green>
     <blue>0.2</blue>
@@ -1128,7 +1128,7 @@
   <type>material</type>
   <object-name>Stick</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.5</red>
     <green>0.2</green>
     <blue>0.2</blue>
@@ -1140,7 +1140,7 @@
   <object-name>THROTTLE</object-name>
   <global type="bool">true</global>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.3</red>
     <green>0.15</green>
     <blue>0.15</blue>
@@ -1151,7 +1151,7 @@
   <type>material</type>
   <object-name>GUNSIGHT</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.3</red>
     <green>0.15</green>
     <blue>0.15</blue>
@@ -1162,7 +1162,7 @@
   <type>material</type>
   <object-name>TRIMWHEELELEVATOR</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.3</red>
     <green>0.15</green>
     <blue>0.15</blue>
@@ -1173,7 +1173,7 @@
   <type>material</type>
   <object-name>TRIMKNOBAILERON</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.3</red>
     <green>0.15</green>
     <blue>0.15</blue>
@@ -1184,7 +1184,7 @@
   <type>material</type>
   <object-name>TRIMKNOBRUDDER</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.3</red>
     <green>0.15</green>
     <blue>0.15</blue>
@@ -1195,7 +1195,7 @@
   <type>material</type>
   <object-name>IGNITION</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.3</red>
     <green>0.15</green>
     <blue>0.15</blue>
