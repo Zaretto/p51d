@@ -7,7 +7,7 @@
   <type>rotate</type>
   <object-name>KnobTop</object-name>
   <object-name>Knob</object-name>
-  <property>/controls/flight/aileron-trim</property>
+  <property>controls/flight/aileron-trim</property>
   <factor>1440</factor>
   <axis>
    <x>0</x>
@@ -19,7 +19,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Needle</object-name>
-  <property>/controls/flight/aileron-trim</property>
+  <property>controls/flight/aileron-trim</property>
   <interpolation>
    <entry>
     <ind>-1.0</ind>

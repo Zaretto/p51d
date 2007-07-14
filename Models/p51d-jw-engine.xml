@@ -6,7 +6,7 @@
  <animation>
   <type>rotate</type>
   <object-name>NeedleOilTemp</object-name>
-  <property>/engines/engine[0]/oil-temperature-degf</property>
+  <property>engines/engine[0]/oil-temperature-degf</property>
   <min>-70</min>
   <max>150</max>
   <interpolation>
@@ -34,7 +34,7 @@
  <animation>
   <type>rotate</type>
   <object-name>NeedleOilPress</object-name>
-  <property>/engines/engine[0]/oil-pressure-psi</property>
+  <property>engines/engine[0]/oil-pressure-psi</property>
   <min>0</min>
   <max>200</max>
   <interpolation>
@@ -62,7 +62,7 @@
  <animation>
   <type>rotate</type>
   <object-name>NeedleFuel</object-name>
-  <property>/engines/engine/fuel-pump-psi</property>
+  <property>engines/engine/fuel-pump-psi</property>
   <min>0</min>
   <max>25</max>
   <interpolation>
@@ -94,7 +94,7 @@
   <object-name>NeedleOilPress</object-name>
   <object-name>NeedleFuel</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.5</red>
     <green>0.25</green>
     <blue>0.25</blue>
