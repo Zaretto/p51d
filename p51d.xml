@@ -32,16 +32,16 @@ The reference datum for measurements is the nose.
 <airplane mass="7125">
 
 <!-- Approach configuration -->
-<approach speed="87" aoa="13">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
+<approach speed="75" aoa="11">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>
-  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.8"/>
   <control-setting axis="/controls/flight/flaps" value="1.0"/>
   <control-setting axis="/controls/gear/gear-down" value="1"/>
 </approach>
 
 <!-- Cruise configuration -->
-<cruise speed="360" alt="5000">
+<cruise speed="280" alt="26000">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="1.00"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="1.00"/>
   <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
@@ -54,17 +54,27 @@ The reference datum for measurements is the nose.
 <cockpit x="-4.495" y="0" z="0.689"/>
 
 <fuselage ax="0.0" ay="0.0" az="0.0" bx="-9.9" by="0.0" bz="0.0"
-          width="0.94" taper="0.38"/>
+          width="0.94" taper="0.38" midpoint="0.55" cx="2" cy="2"/>
 
 <!--
 stall aoa not available
 flap drag not available
 -->
-<wing x="-3.96" y="0.55" z="-0.60" taper="0.481" incidence="1.0"
-      length="4.97" chord="2.645" sweep="-3.5" dihedral="5" camber="0.1">
-  <stall aoa="18" width="4" peak="1.5"/>
-  <flap0 start="0.024" end="0.543" lift="1.2" drag="1.8"/>
-  <flap1 start="0.543" end="0.945" lift="1.3" drag="1.4"/>
+<mstab x="-3.96" y="0.55" z="-0.60" taper="0.87" incidence="1.0"
+      length="0.97" chord="2.645" sweep="2.0" dihedral="5" camber="0.1">
+  <stall aoa="14" width="9" peak="1.9"/>
+  <flap0 start="0.024" end="1.0" lift="1.2" drag="2.2"/>
+  <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+  <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+  <control-speed control="FLAP0" transition-time="5"/>
+</mstab>
+
+
+<wing x="-4.012" y="1.521" z="-0.535" taper="0.57" incidence="1.0" twist="1.0"
+      length="4.125" chord="2.307" sweep="-3.5" dihedral="5" camber="0.2">
+  <stall aoa="13.0" width="7" peak="2.5"/>
+  <flap0 start="0.0" end="0.48" lift="1.2" drag="2.2"/>
+  <flap1 start="0.48" end="1.0" lift="1.3" drag="1.2"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
   <control-speed control="FLAP0" transition-time="5"/>
@@ -72,21 +82,21 @@ flap drag not available
   <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
 </wing>
 
-<hstab x="-8.62" y="0.18" z="0.34" taper="0.639" effectiveness="3.5"
-       length="1.834" chord="0.762" sweep="0" incidence="2.0">
-  <stall aoa="17" width="4" peak="1.5"/>
-  <flap0 start="0.0" end="1.8" lift="1.65" drag="1.2"/>
+<hstab x="-8.62" y="0.18" z="0.34" taper="0.639" camber="0.0" effectiveness="2.5"
+       length="1.99" chord="0.9" sweep="0" incidence="2.0">
+  <stall aoa="15" width="8" peak="1.5"/>
+  <flap0 start="0.0" end="1.0" lift="1.85" drag="2.9"/>
   <control-input axis="/controls/flight/elevator" control="FLAP0"/>
   <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
 </hstab>
 
 <!-- rudder has to be able to counteract aileron drag -->
-<vstab x="-9.30" y="0" z="-0.37" taper="0.432" effectiveness="3.5"
+<vstab x="-9.30" y="0" z="-0.37" taper="0.432" effectiveness="2.5" 
        length="1.971" chord="2.65" sweep="25"  incidence="-0.58">
   <stall aoa="15" width="4" peak="1.5"/>
-  <flap0 start="0" end="1" lift="1.3" drag="1.2"/>
-  <control-input axis="/controls/flight/rudder" square="true" control="FLAP0" invert="true"/>
+  <flap0 start="0" end="1" lift="1.5" drag="1.7"/>
+  <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
   <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
   <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"
     min="1" max="-1"/>
@@ -102,16 +112,16 @@ flap drag not available
 <propeller   x="-0.75" y="0" z="0"
            radius="1.75" 
            mass="1690" moment="94.5"
-           cruise-alt="20000" cruise-power="1695"
-           cruise-speed="360" cruise-rpm="1437"
+           cruise-alt="4000" cruise-power="1180"
+           cruise-speed="200" cruise-rpm="1293"
            gear-ratio="0.479"
            min-rpm="766" max-rpm="1437" >
   <actionpt x="-1.25" y="0" z="0"/>
   <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
   <piston-engine
     eng-power="1695" eng-rpm="3000"
-    turbo-mul="5.5" wastegate-mp="61"
-    >
+    turbo-mul="5.75" wastegate-mp="85"
+    displacement="1647" compression="6">
     <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
     <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
     <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
@@ -120,18 +130,16 @@ flap drag not available
   </piston-engine>
 
 </propeller>
+<!--
+<thruster x="-6.528" y="0" z="-0.758" vx="1" vy="0" vz="0" thrust="1000">
+  <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"
+           src0="0" src1="1" dst0="0" dst1="1"/>
+</thruster>
+-->
 
-
-<!-- Tail wheel -->
-<!-- tail wheel "steerable" in p-51d (in stick back locked position it actually should be limited to 6deg +/-) -->
-<gear x="-7.90" y="0" z="-0.96" compression="0.2">
-  <control-input axis="/controls/flight/rudder" control="STEER" square="true" 
-                 src0="-1.0" src1="1.0"
-                 dst0="0.5" dst1="-0.5"/>
-</gear>
 
  <!-- left main -->
-<gear x="-2.79" y="1.81" z="-2.20" compression="0.4" spring="0.7" damp="3.0">
+<gear x="-2.79" y="1.81" z="-2.20" compression="0.15" spring="0.8" damp="15.0" dfric="0.6">
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -140,12 +148,20 @@ flap drag not available
 </gear>
 
  <!-- right main -->
-<gear x="-2.79" y="-1.81" z="-2.20" compression="0.4" spring="0.7" damp="3.0">
+<gear x="-2.79" y="-1.81" z="-2.20" compression="0.15" spring="0.8" damp="15.0" dfric="0.6">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-speed control="EXTEND" transition-time="6"/>
   <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+</gear>
+
+<!-- Tail wheel -->
+<!-- tail wheel "steerable" in p-51d (in stick back locked position it actually should be limited to 6deg +/-) -->
+<gear x="-7.90" y="0" z="-0.96" compression="0.1">
+  <control-input axis="/controls/flight/rudder" control="STEER" square="true" 
+                 src0="-1.0" src1="1.0"
+                 dst0="0.5" dst1="-0.5"/>
 </gear>
 
 <!-- Guess on wing tank positions -->
@@ -155,6 +171,9 @@ flap drag not available
 
 <!-- pilot -->
 <ballast x="-4.495" y="0" z="0.689" mass="180"/>
+
+
+<ballast x="-2.0" y="0" z="0.689" mass="1380"/>
 
 <!-- armament -->
 <!--  Had too much weight I think...disable until stall speed fixed
