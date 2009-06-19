@@ -6,6 +6,29 @@
 
  <path>p51d-jw.ac</path>
 
+ <!-- Pilot -->
+ <model>
+   <path>Aircraft/p51d/Models/pilot.xml</path>
+   <name>pilot</name>
+   <nopreview/>
+   <offsets>
+     <x-m>4.4</x-m>
+     <y-m>0</y-m>
+     <z-m>0.0</z-m>
+   </offsets>
+ </model>
+
+ <animation>
+   <type>select</type>
+   <object-name>pilot</object-name>
+   <condition>
+     <greater-than>
+       <property>sim/current-view/view-number</property>
+       <value>0.0</value>
+     </greater-than>
+   </condition>
+ </animation>
+
  <!-- Front hotspots -->
  <panel>
   <path>Aircraft/p51d/Models/p51d-jw-panel-hotspots.xml</path>
@@ -1138,7 +1161,7 @@
  <animation>
   <type>material</type>
   <object-name>THROTTLE</object-name>
-  <global type="bool">true</global>
+
   <emission>
     <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.3</red>
