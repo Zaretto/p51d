@@ -16,6 +16,7 @@ MATERIAL "ac3dmat1.003" rgb 1 1 1  amb 0.6 0.6 0.6  emis 0.368667 0.368667 0.368
 MATERIAL "ac3dmat6" rgb 0 0.396 0  amb 0.6 0.6 0.6  emis 0 0 0  spec 0.502 0.502 0.502  shi 10  trans 0
 MATERIAL "ac3dmat6.001" rgb 0 1 0  amb 0.6 0.6 0.6  emis 0.333333 0.333333 0.333333  spec 0.502 0.502 0.502  shi 10  trans 0
 MATERIAL "ac3dmat1.001" rgb 1 1 1  amb 0.6 0.6 0.6  emis 1 1 1  spec 0.502 0.502 0.502  shi 10  trans 0
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 1 0 0  spec 0.502 0.502 0.502  shi 10  trans 0
 OBJECT world
 kids 93
 OBJECT group
@@ -546,14 +547,15 @@ refs 3
 72 0.545518 0.25
 68 0.508 0.301825
 67 0.508 0.198176
-kids 0OBJECT group
+kids 0
+OBJECT group
 name "group.001"
 kids 3
 OBJECT poly
 name "Propeller1"
 data 8
 Mesh.086
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-01.rgb"
+texture "p51d-jw-01.rgb"
 numvert 24
 0.490234 -1.79346 -0.01255
 0.495464 -1.78674 -0.02764
@@ -745,7 +747,7 @@ OBJECT poly
 name "Propeller2"
 data 8
 Mesh.088
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-01.rgb"
+texture "p51d-jw-01.rgb"
 numvert 24
 0.488474 0.01671 -1.79661
 0.493705 0.0318 -1.78989
@@ -937,7 +939,7 @@ OBJECT poly
 name "PropellerDisk"
 data 8
 Mesh.087
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-01.rgb"
+texture "p51d-jw-01.rgb"
 numvert 33
 0.507881 0.01803 1.8085
 0.507881 0.368786 1.77376
@@ -1170,7 +1172,7 @@ OBJECT poly
 name "Beacon"
 data 8
 Mesh.094
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 37
 4.70354 -1.09159 -0.084468
 4.7364 -1.09159 -0.078094
@@ -1431,7 +1433,7 @@ OBJECT poly
 name "BeaconOff"
 data 8
 Mesh.093
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 37
 4.70354 -1.09159 -0.084468
 4.7364 -1.09159 -0.078094
@@ -1683,266 +1685,6 @@ refs 3
 36 0.0349889 0.694131
 SURF 0x10
 mat 1
-refs 3
-34 0.0349889 0.693316
-35 0.0375705 0.693316
-36 0.0349889 0.694131
-kids 0
-OBJECT poly
-name "BeaconOn"
-data 8
-Mesh.013
-numvert 37
-4.70354 -1.09159 -0.084468
-4.7364 -1.09159 -0.078094
-4.67067 -1.09159 -0.078094
-4.68029 -1.12902 -0.078094
-4.70354 -1.13864 -0.078094
-4.72677 -1.12902 -0.078094
-4.76425 -1.09159 -0.059945
-4.64281 -1.09159 -0.059945
-4.66059 -1.14869 -0.059945
-4.70354 -1.1641 -0.059945
-4.74647 -1.14869 -0.059945
-4.78286 -1.09159 -0.032786
-4.6242 -1.09159 -0.032786
-4.64743 -1.16182 -0.032786
-4.70354 -1.17325 -0.032786
-4.75964 -1.16182 -0.032786
-4.78941 -1.09159 -0.000746
-4.61767 -1.09159 -0.000746
-4.64281 -1.1641 -0.000746
-4.70354 -1.17647 -0.000746
-4.76425 -1.1641 -0.000746
-4.78286 -1.09159 0.031293
-4.6242 -1.09159 0.031293
-4.64743 -1.16182 0.031293
-4.70354 -1.17325 0.031293
-4.75964 -1.16182 0.031293
-4.76425 -1.09159 0.058454
-4.64281 -1.09159 0.058454
-4.66059 -1.14869 0.058454
-4.70354 -1.1641 0.058454
-4.74647 -1.14869 0.058454
-4.7364 -1.09159 0.076603
-4.67067 -1.09159 0.076603
-4.68029 -1.12902 0.076603
-4.70354 -1.13864 0.076603
-4.72677 -1.12902 0.076603
-4.70354 -1.09159 0.082976
-numsurf 32
-SURF 0x10
-mat 3
-refs 3
-2 0.0313361 0.673543
-0 0.0349889 0.672728
-3 0.0324054 0.673543
-SURF 0x10
-mat 3
-refs 3
-3 0.0324054 0.673543
-0 0.0349889 0.672728
-4 0.0349889 0.673543
-SURF 0x10
-mat 3
-refs 3
-4 0.0349889 0.673543
-0 0.0349889 0.672728
-5 0.0375705 0.673543
-SURF 0x10
-mat 3
-refs 3
-5 0.0375705 0.673543
-0 0.0349889 0.672728
-1 0.0386407 0.673543
-SURF 0x10
-mat 3
-refs 4
-1 0.0386407 0.673543
-6 0.0417364 0.675863
-10 0.03976 0.675863
-5 0.0375705 0.673543
-SURF 0x10
-mat 3
-refs 4
-3 0.0324054 0.673543
-8 0.0302159 0.675863
-7 0.0282395 0.675863
-2 0.0313361 0.673543
-SURF 0x10
-mat 3
-refs 4
-4 0.0349889 0.673543
-9 0.0349889 0.675863
-8 0.0302159 0.675863
-3 0.0324054 0.673543
-SURF 0x10
-mat 3
-refs 4
-5 0.0375705 0.673543
-10 0.03976 0.675863
-9 0.0349889 0.675863
-4 0.0349889 0.673543
-SURF 0x10
-mat 3
-refs 4
-6 0.0417364 0.675863
-11 0.0438048 0.679334
-15 0.0412233 0.679334
-10 0.03976 0.675863
-SURF 0x10
-mat 3
-refs 4
-8 0.0302159 0.675863
-13 0.0287536 0.679334
-12 0.026172 0.679334
-7 0.0282395 0.675863
-SURF 0x10
-mat 3
-refs 4
-9 0.0349889 0.675863
-14 0.0349889 0.679334
-13 0.0287536 0.679334
-8 0.0302159 0.675863
-SURF 0x10
-mat 3
-refs 4
-10 0.03976 0.675863
-15 0.0412233 0.679334
-14 0.0349889 0.679334
-9 0.0349889 0.675863
-SURF 0x10
-mat 3
-refs 4
-11 0.0438048 0.679334
-16 0.044532 0.683429
-20 0.0417364 0.683429
-15 0.0412233 0.679334
-SURF 0x10
-mat 3
-refs 4
-13 0.0287536 0.679334
-18 0.0282395 0.683429
-17 0.0254459 0.683429
-12 0.026172 0.679334
-SURF 0x10
-mat 3
-refs 4
-14 0.0349889 0.679334
-19 0.0349889 0.683429
-18 0.0282395 0.683429
-13 0.0287536 0.679334
-SURF 0x10
-mat 3
-refs 4
-15 0.0412233 0.679334
-20 0.0417364 0.683429
-19 0.0349889 0.683429
-14 0.0349889 0.679334
-SURF 0x10
-mat 3
-refs 4
-16 0.044532 0.683429
-21 0.0438048 0.687525
-25 0.0412233 0.687525
-20 0.0417364 0.683429
-SURF 0x10
-mat 3
-refs 4
-18 0.0282395 0.683429
-23 0.0287536 0.687525
-22 0.026172 0.687525
-17 0.0254459 0.683429
-SURF 0x10
-mat 3
-refs 4
-19 0.0349889 0.683429
-24 0.0349889 0.687525
-23 0.0287536 0.687525
-18 0.0282395 0.683429
-SURF 0x10
-mat 3
-refs 4
-20 0.0417364 0.683429
-25 0.0412233 0.687525
-24 0.0349889 0.687525
-19 0.0349889 0.683429
-SURF 0x10
-mat 3
-refs 4
-21 0.0438048 0.687525
-26 0.0417364 0.690996
-30 0.03976 0.690996
-25 0.0412233 0.687525
-SURF 0x10
-mat 3
-refs 4
-23 0.0287536 0.687525
-28 0.0302159 0.690996
-27 0.0282395 0.690996
-22 0.026172 0.687525
-SURF 0x10
-mat 3
-refs 4
-24 0.0349889 0.687525
-29 0.0349889 0.690996
-28 0.0302159 0.690996
-23 0.0287536 0.687525
-SURF 0x10
-mat 3
-refs 4
-25 0.0412233 0.687525
-30 0.03976 0.690996
-29 0.0349889 0.690996
-24 0.0349889 0.687525
-SURF 0x10
-mat 3
-refs 4
-26 0.0417364 0.690996
-31 0.0386407 0.693316
-35 0.0375705 0.693316
-30 0.03976 0.690996
-SURF 0x10
-mat 3
-refs 4
-28 0.0302159 0.690996
-33 0.0324054 0.693316
-32 0.0313361 0.693316
-27 0.0282395 0.690996
-SURF 0x10
-mat 3
-refs 4
-29 0.0349889 0.690996
-34 0.0349889 0.693316
-33 0.0324054 0.693316
-28 0.0302159 0.690996
-SURF 0x10
-mat 3
-refs 4
-30 0.03976 0.690996
-35 0.0375705 0.693316
-34 0.0349889 0.693316
-29 0.0349889 0.690996
-SURF 0x10
-mat 3
-refs 3
-35 0.0375705 0.693316
-31 0.0386407 0.693316
-36 0.0349889 0.694131
-SURF 0x10
-mat 3
-refs 3
-32 0.0313361 0.693316
-33 0.0324054 0.693316
-36 0.0349889 0.694131
-SURF 0x10
-mat 3
-refs 3
-33 0.0324054 0.693316
-34 0.0349889 0.693316
-36 0.0349889 0.694131
-SURF 0x10
-mat 3
 refs 3
 34 0.0349889 0.693316
 35 0.0375705 0.693316
@@ -1973,7 +1715,7 @@ OBJECT poly
 name "CanopyRail_1"
 data 8
 Mesh.030
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 104
 3.97186 0.347149 0.389698
 3.94347 0.60724 0.325533
@@ -2687,7 +2429,7 @@ OBJECT poly
 name "CarbHeatSticker"
 data 8
 Mesh.078
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 4
 3.70641 0.326726 -0.151366
 3.70641 0.326726 -0.120827
@@ -2711,7 +2453,7 @@ OBJECT poly
 name "CockpitFloor"
 data 8
 Mesh.079
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 9
 3.48484 -0.216046 -0.41212
 5.88294 -0.216046 -0.41212
@@ -2756,7 +2498,7 @@ OBJECT poly
 name "ConsolePanel"
 data 8
 Mesh.031
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 16
 3.51857 0.093009 -0.139396
 3.72512 0.093009 0.139532
@@ -2948,7 +2690,7 @@ OBJECT poly
 name "CoolantSticker"
 data 8
 Mesh.077
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 4
 3.70641 0.254899 -0.151366
 3.70641 0.254899 -0.120827
@@ -2972,7 +2714,7 @@ OBJECT poly
 name "Dash"
 data 8
 Mesh.005
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 28
 3.76325 0.60977 -0.17032
 3.92305 0.39136 -0.37659
@@ -3224,7 +2966,7 @@ OBJECT poly
 name "DashForward"
 data 8
 Mesh.063
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 10
 3.74096 0.630619 0.14139
 3.47197 0.561167 0.17845
@@ -3270,7 +3012,7 @@ OBJECT poly
 name "EjectSticker"
 data 8
 Mesh.067
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 4
 3.70641 0.465221 -0.048861
 3.70641 0.465221 0.04866
@@ -3307,7 +3049,7 @@ OBJECT poly
 name "FrontCockpitWall"
 data 8
 Mesh.006
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 9
 3.69376 0.051994 -0.367584
 3.69376 0.051994 0.367591
@@ -3473,7 +3215,7 @@ OBJECT poly
 name "Fuselage"
 data 8
 Mesh.068
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 510
 5.04577 -1.10057 -0.000593
 4.76659 -1.10871 -0.000593
@@ -7602,7 +7344,7 @@ OBJECT poly
 name "Fuselage.002"
 data 8
 Mesh.096
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 90
 3.50882 0.62027 -0.000454
 3.97115 0.357708 0.369615
@@ -8342,7 +8084,7 @@ OBJECT poly
 name "HeadRest"
 data 8
 Mesh.041
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 37
 4.58122 0.583995 0.001474
 4.58019 0.591339 0.037203
@@ -8963,7 +8705,7 @@ OBJECT poly
 name "LeftAileron"
 data 8
 Mesh.062
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-02.rgb"
+texture "p51d-jw-02.rgb"
 numvert 14
 4.77228 -0.363656 3.31901
 4.41415 -0.209385 5.47175
@@ -9115,7 +8857,7 @@ OBJECT poly
 name "LeftCockpitControlBox"
 data 8
 Mesh.010
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 23
 3.82665 -0.216866 0.299193
 3.88676 -0.216866 0.299193
@@ -9308,7 +9050,7 @@ OBJECT poly
 name "LeftCockpitWall"
 data 8
 Mesh.011
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 61
 3.71878 -0.220879 0.278095
 3.71878 0.117858 0.311502
@@ -9922,7 +9664,7 @@ OBJECT poly
 name "LeftElevator"
 data 8
 Mesh.046
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 15
 8.77367 0.295644 1.80013
 8.90802 0.307558 1.80013
@@ -10001,7 +9743,7 @@ OBJECT poly
 name "LeftElevatorEdge"
 data 8
 Mesh.016
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 12
 8.77367 0.36966 1.05123
 8.77367 0.36966 1.80013
@@ -10163,7 +9905,7 @@ OBJECT poly
 name "LeftFlap_1"
 data 8
 Mesh.061
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-02.rgb"
+texture "p51d-jw-02.rgb"
 numvert 54
 5.22977 -0.599215 0.61972
 5.13317 -0.54618 1.17822
@@ -10612,7 +10354,7 @@ OBJECT poly
 name "LeftFrontCockpitPanel"
 data 8
 Mesh.007
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 9
 3.53177 0.04354 0.311712
 3.75857 0.04354 0.311712
@@ -10657,7 +10399,7 @@ OBJECT poly
 name "LeftGearStrut"
 data 8
 Mesh.024
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 114
 2.79913 -1.96113 1.61639
 2.82298 -1.94365 1.61639
@@ -12039,7 +11781,7 @@ OBJECT poly
 name "LeftGearWheel"
 data 8
 Mesh.023
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 240
 2.68192 -2.12159 1.94325
 2.76302 -2.01635 1.91594
@@ -16211,7 +15953,7 @@ OBJECT poly
 name "LeftHstab"
 data 8
 Mesh.047
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 83
 8.29496 0.380712 0.263874
 8.0422 0.360399 0.263874
@@ -16810,7 +16552,7 @@ OBJECT poly
 name "LeftHstabEdgeElevator"
 data 8
 Mesh.017
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 8
 8.77367 0.36966 0.263875
 9.26681 0.332652 0.263875
@@ -16862,7 +16604,7 @@ OBJECT poly
 name "LeftInnerGearCover"
 data 8
 Mesh.029
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-02.rgb"
+texture "p51d-jw-02.rgb"
 numvert 18
 2.89806 -0.869128 -0.023576
 2.89806 -0.846498 0.038627
@@ -17187,7 +16929,7 @@ OBJECT poly
 name "LeftNavLightOff"
 data 8
 Mesh.092
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 37
 3.52229 -0.213845 5.64436
 3.5588 -0.211706 5.64436
@@ -17724,7 +17466,7 @@ OBJECT poly
 name "LeftOuterGearCover"
 data 8
 Mesh.022
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-02.rgb"
+texture "p51d-jw-02.rgb"
 numvert 12
 2.97586 -0.61932 1.90028
 2.84857 -1.08573 1.98252
@@ -17864,7 +17606,7 @@ OBJECT poly
 name "LeftPipes"
 data 8
 Mesh.045
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 116
 1.19488 0.06135 0.435675
 1.19177 0.078 0.458438
@@ -18682,7 +18424,7 @@ OBJECT poly
 name "LeftTailGearDoor"
 data 8
 Mesh.049
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 8
 7.44864 -0.476493 0.116431
 7.45051 -0.476493 0.107071
@@ -18770,7 +18512,7 @@ OBJECT poly
 name "LeftWing"
 data 8
 Mesh.060
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-02.rgb"
+texture "p51d-jw-02.rgb"
 numvert 125
 2.54709 -0.599435 0.61972
 2.65323 -0.678704 0.61972
@@ -19776,7 +19518,7 @@ OBJECT poly
 name "PanelMain"
 data 8
 Mesh.003
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 10
 3.7047 0.49132 -0.20999
 3.7047 0.491324 0.209933
@@ -19836,7 +19578,7 @@ OBJECT poly
 name "PanelOuter"
 data 8
 Mesh.002
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 27
 3.71332 0.472065 -0.26802
 3.71332 0.37317 -0.36572
@@ -20051,7 +19793,7 @@ OBJECT poly
 name "PropHub"
 data 8
 Mesh.054
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 97
 0.7012 0.256771 0.26196
 0.7012 0.335081 0.1415
@@ -20812,7 +20554,7 @@ OBJECT poly
 name "ReostatKnob"
 data 4
 Mesh
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 36
 3.75465 0.075717 -0.093355
 3.75465 0.078691 -0.088835
@@ -21060,7 +20802,7 @@ OBJECT poly
 name "ReostatPlate"
 data 8
 Mesh.001
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 4
 3.73386 0.093232 -0.114059
 3.73386 0.093232 -0.059048
@@ -21079,7 +20821,7 @@ OBJECT poly
 name "RightAileron"
 data 8
 Mesh.074
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-03.rgb"
+texture "p51d-jw-03.rgb"
 numvert 14
 4.46716 -0.453872 -3.29232
 4.19995 -0.25832 -5.44022
@@ -21231,7 +20973,7 @@ OBJECT poly
 name "RightCockpitPanel"
 data 8
 Mesh.009
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 9
 3.81461 0.305672 -0.337825
 4.42797 0.305672 -0.337825
@@ -21276,7 +21018,7 @@ OBJECT poly
 name "RightCockpitWall"
 data 8
 Mesh.012
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 61
 3.71878 -0.220729 -0.278095
 3.71878 0.118008 -0.311502
@@ -21890,7 +21632,7 @@ OBJECT poly
 name "RightElevator"
 data 8
 Mesh.021
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 15
 9.07428 0.332652 -1.80013
 9.16773 0.332652 -1.05123
@@ -21969,7 +21711,7 @@ OBJECT poly
 name "RightElevatorEdge"
 data 8
 Mesh.084
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 12
 8.77367 0.36966 -1.05123
 8.77367 0.36966 -1.80013
@@ -22131,7 +21873,7 @@ OBJECT poly
 name "RightFlap_1"
 data 8
 Mesh.069
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-03.rgb"
+texture "p51d-jw-03.rgb"
 numvert 54
 4.75016 -0.706351 -0.61972
 4.67767 -0.665627 -1.17822
@@ -22622,7 +22364,7 @@ OBJECT poly
 name "RightFrontCockpitPane"
 data 8
 Mesh.008
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 9
 3.53147 0.043185 -0.311267
 3.75827 0.043185 -0.311267
@@ -22667,7 +22409,7 @@ OBJECT poly
 name "RightGearStrut"
 data 8
 Mesh.026
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 114
 2.79913 -1.96113 -1.61639
 2.82298 -1.94365 -1.61639
@@ -24049,7 +23791,7 @@ OBJECT poly
 name "RightGearWheel"
 data 8
 Mesh.027
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 240
 2.68192 -2.12159 -1.94325
 2.76302 -2.01635 -1.91594
@@ -28221,7 +27963,7 @@ OBJECT poly
 name "RightHstab"
 data 8
 Mesh.085
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 83
 8.29496 0.380712 -0.263874
 8.0422 0.360399 -0.263874
@@ -28820,7 +28562,7 @@ OBJECT poly
 name "RightHstabEdgeElevato"
 data 8
 Mesh.018
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 8
 8.77367 0.36966 -0.263875
 9.26681 0.332652 -0.263875
@@ -28872,7 +28614,7 @@ OBJECT poly
 name "RightInnerGearCover"
 data 8
 Mesh.028
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-02.rgb"
+texture "p51d-jw-02.rgb"
 numvert 18
 2.89806 -0.869128 0.023576
 2.89806 -0.846498 -0.038627
@@ -29197,7 +28939,7 @@ OBJECT poly
 name "RightNavLightOff"
 data 8
 Mesh.091
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 37
 3.52229 -0.213844 -5.64436
 3.5588 -0.211706 -5.64436
@@ -29734,7 +29476,7 @@ OBJECT poly
 name "RightOuterGearCover"
 data 8
 Mesh.025
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-03.rgb"
+texture "p51d-jw-03.rgb"
 numvert 12
 2.97587 -0.61931 -1.90028
 2.84857 -1.08573 -1.98252
@@ -29874,7 +29616,7 @@ OBJECT poly
 name "RightPipes"
 data 8
 Mesh.044
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 116
 1.19488 0.06135 -0.435675
 1.19177 0.078 -0.458438
@@ -30692,7 +30434,7 @@ OBJECT poly
 name "RightTailGearDoor"
 data 8
 Mesh.048
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 8
 7.44864 -0.476493 -0.116431
 7.45051 -0.476493 -0.107071
@@ -30780,7 +30522,7 @@ OBJECT poly
 name "RightWing"
 data 8
 Mesh.059
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-03.rgb"
+texture "p51d-jw-03.rgb"
 numvert 125
 4.41415 -0.209385 -5.47174
 4.18042 -0.174856 -5.5417
@@ -31732,7 +31474,7 @@ OBJECT poly
 name "Rudder"
 data 8
 Mesh.020
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 48
 9.34209 0.791013 0.062642
 9.34209 1.67112 0.047039
@@ -32104,7 +31846,7 @@ OBJECT poly
 name "RudderEdge"
 data 8
 Mesh.075
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 8
 9.34209 1.67135 -0.04723
 9.34209 0.791237 -0.062833
@@ -32156,7 +31898,7 @@ OBJECT poly
 name "SeatBack"
 data 8
 Mesh.040
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 78
 4.62535 -0.211381 -0.211755
 4.62823 0.021656 -0.235303
@@ -32739,7 +32481,7 @@ OBJECT poly
 name "SeatBottom"
 data 8
 Mesh.039
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 50
 4.16004 -0.216955 -0.215014
 4.19194 -0.216955 -0.238562
@@ -33125,7 +32867,7 @@ OBJECT poly
 name "Stick"
 data 8
 Mesh.083
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 82
 3.95611 -0.216075 -3.3e-05
 3.95612 0.169734 -3.3e-05
@@ -33779,7 +33521,7 @@ OBJECT poly
 name "TailGearStrut"
 data 8
 Mesh.051
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 114
 7.95103 -0.808 0.087727
 7.94842 -0.79489 0.087727
@@ -35127,7 +34869,7 @@ OBJECT poly
 name "TailGearWheel"
 data 8
 Mesh.050
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 240
 7.95441 -0.86685 0.047971
 7.98067 -0.84422 0.047971
@@ -38147,7 +37889,7 @@ OBJECT poly
 name "TailNavLightOff"
 data 8
 Mesh.090
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 33
 9.96872 0.26409 -0.01895
 9.95507 0.266386 -0.020773
@@ -38660,7 +38402,7 @@ OBJECT poly
 name "Vstab"
 data 8
 Mesh.043
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 43
 8.92476 0.329659 0.105438
 9.33984 0.234261 0.06483
@@ -38947,7 +38689,7 @@ OBJECT poly
 name "VstabEdge"
 data 8
 Mesh.076
-texture "/home/jim/src/games/fgfs/FlightGear/data/Aircraft/p51d/Models/p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 numvert 13
 9.33391 1.74796 -0.001968
 9.33391 1.67178 0.049402
@@ -39119,4 +38861,263 @@ refs 3
 3 0.5 1
 5 0.166667 1
 4 0.333333 1
+kids 0
+OBJECT poly
+name "BeaconOn"
+loc 5.97406 6.94377 0.105825
+numvert 37
+-1.27052 -8.03536 -0.190293
+-1.23766 -8.03536 -0.183919
+-1.30339 -8.03536 -0.183919
+-1.29377 -8.07279 -0.183919
+-1.27052 -8.08241 -0.183919
+-1.24729 -8.07279 -0.183919
+-1.20981 -8.03536 -0.16577
+-1.33125 -8.03536 -0.16577
+-1.31347 -8.09246 -0.16577
+-1.27052 -8.10787 -0.16577
+-1.22759 -8.09246 -0.16577
+-1.1912 -8.03536 -0.138611
+-1.34986 -8.03536 -0.138611
+-1.32663 -8.10559 -0.138611
+-1.27052 -8.11702 -0.138611
+-1.21442 -8.10559 -0.138611
+-1.18465 -8.03536 -0.106571
+-1.35639 -8.03536 -0.106571
+-1.33125 -8.10787 -0.106571
+-1.27052 -8.12024 -0.106571
+-1.20981 -8.10787 -0.106571
+-1.1912 -8.03536 -0.0745315
+-1.34986 -8.03536 -0.0745315
+-1.32663 -8.10559 -0.0745315
+-1.27052 -8.11702 -0.0745315
+-1.21442 -8.10559 -0.0745315
+-1.20981 -8.03536 -0.0473704
+-1.33125 -8.03536 -0.0473704
+-1.31347 -8.09246 -0.0473704
+-1.27052 -8.10787 -0.0473704
+-1.22759 -8.09246 -0.0473704
+-1.23766 -8.03536 -0.0292219
+-1.30339 -8.03536 -0.0292219
+-1.29377 -8.07279 -0.0292219
+-1.27052 -8.08241 -0.0292219
+-1.24729 -8.07279 -0.0292219
+-1.27052 -8.03536 -0.022849
+numsurf 32
+SURF 0x10
+mat 17
+refs 3
+3 0.0324054 0.673543
+2 0.0313361 0.673543
+0 0.0349889 0.672728
+SURF 0x10
+mat 17
+refs 3
+4 0.0349889 0.673543
+3 0.0324054 0.673543
+0 0.0349889 0.672728
+SURF 0x10
+mat 17
+refs 3
+5 0.0375705 0.673543
+4 0.0349889 0.673543
+0 0.0349889 0.672728
+SURF 0x10
+mat 17
+refs 3
+1 0.0386407 0.673543
+5 0.0375705 0.673543
+0 0.0349889 0.672728
+SURF 0x10
+mat 17
+refs 4
+1 0.0386407 0.673543
+6 0.0417364 0.675863
+10 0.03976 0.675863
+5 0.0375705 0.673543
+SURF 0x10
+mat 17
+refs 4
+3 0.0324054 0.673543
+8 0.0302159 0.675863
+7 0.0282395 0.675863
+2 0.0313361 0.673543
+SURF 0x10
+mat 17
+refs 4
+4 0.0349889 0.673543
+9 0.0349889 0.675863
+8 0.0302159 0.675863
+3 0.0324054 0.673543
+SURF 0x10
+mat 17
+refs 4
+5 0.0375705 0.673543
+10 0.03976 0.675863
+9 0.0349889 0.675863
+4 0.0349889 0.673543
+SURF 0x10
+mat 17
+refs 4
+6 0.0417364 0.675863
+11 0.0438048 0.679334
+15 0.0412233 0.679334
+10 0.03976 0.675863
+SURF 0x10
+mat 17
+refs 4
+8 0.0302159 0.675863
+13 0.0287536 0.679334
+12 0.026172 0.679334
+7 0.0282395 0.675863
+SURF 0x10
+mat 17
+refs 4
+9 0.0349889 0.675863
+14 0.0349889 0.679334
+13 0.0287536 0.679334
+8 0.0302159 0.675863
+SURF 0x10
+mat 17
+refs 4
+10 0.03976 0.675863
+15 0.0412233 0.679334
+14 0.0349889 0.679334
+9 0.0349889 0.675863
+SURF 0x10
+mat 17
+refs 4
+11 0.0438048 0.679334
+16 0.044532 0.683429
+20 0.0417364 0.683429
+15 0.0412233 0.679334
+SURF 0x10
+mat 17
+refs 4
+13 0.0287536 0.679334
+18 0.0282395 0.683429
+17 0.0254459 0.683429
+12 0.026172 0.679334
+SURF 0x10
+mat 17
+refs 4
+14 0.0349889 0.679334
+19 0.0349889 0.683429
+18 0.0282395 0.683429
+13 0.0287536 0.679334
+SURF 0x10
+mat 17
+refs 4
+15 0.0412233 0.679334
+20 0.0417364 0.683429
+19 0.0349889 0.683429
+14 0.0349889 0.679334
+SURF 0x10
+mat 17
+refs 4
+16 0.044532 0.683429
+21 0.0438048 0.687525
+25 0.0412233 0.687525
+20 0.0417364 0.683429
+SURF 0x10
+mat 17
+refs 4
+18 0.0282395 0.683429
+23 0.0287536 0.687525
+22 0.026172 0.687525
+17 0.0254459 0.683429
+SURF 0x10
+mat 17
+refs 4
+19 0.0349889 0.683429
+24 0.0349889 0.687525
+23 0.0287536 0.687525
+18 0.0282395 0.683429
+SURF 0x10
+mat 17
+refs 4
+20 0.0417364 0.683429
+25 0.0412233 0.687525
+24 0.0349889 0.687525
+19 0.0349889 0.683429
+SURF 0x10
+mat 17
+refs 4
+21 0.0438048 0.687525
+26 0.0417364 0.690996
+30 0.03976 0.690996
+25 0.0412233 0.687525
+SURF 0x10
+mat 17
+refs 4
+23 0.0287536 0.687525
+28 0.0302159 0.690996
+27 0.0282395 0.690996
+22 0.026172 0.687525
+SURF 0x10
+mat 17
+refs 4
+24 0.0349889 0.687525
+29 0.0349889 0.690996
+28 0.0302159 0.690996
+23 0.0287536 0.687525
+SURF 0x10
+mat 17
+refs 4
+25 0.0412233 0.687525
+30 0.03976 0.690996
+29 0.0349889 0.690996
+24 0.0349889 0.687525
+SURF 0x10
+mat 17
+refs 4
+26 0.0417364 0.690996
+31 0.0386407 0.693316
+35 0.0375705 0.693316
+30 0.03976 0.690996
+SURF 0x10
+mat 17
+refs 4
+28 0.0302159 0.690996
+33 0.0324054 0.693316
+32 0.0313361 0.693316
+27 0.0282395 0.690996
+SURF 0x10
+mat 17
+refs 4
+29 0.0349889 0.690996
+34 0.0349889 0.693316
+33 0.0324054 0.693316
+28 0.0302159 0.690996
+SURF 0x10
+mat 17
+refs 4
+30 0.03976 0.690996
+35 0.0375705 0.693316
+34 0.0349889 0.693316
+29 0.0349889 0.690996
+SURF 0x10
+mat 17
+refs 3
+35 0.0375705 0.693316
+31 0.0386407 0.693316
+36 0.0349889 0.694131
+SURF 0x10
+mat 17
+refs 3
+32 0.0313361 0.693316
+33 0.0324054 0.693316
+36 0.0349889 0.694131
+SURF 0x10
+mat 17
+refs 3
+33 0.0324054 0.693316
+34 0.0349889 0.693316
+36 0.0349889 0.694131
+SURF 0x10
+mat 17
+refs 3
+34 0.0349889 0.693316
+35 0.0375705 0.693316
+36 0.0349889 0.694131
 kids 0
