@@ -9,11 +9,15 @@ This aerodynamic model is based on three-views, unauthoritative
 performance data, and wild guesses.  These sites provided particularly
 useful information or were simply fun to visit:
 
-Performance data:
+Peorformance data:
+http://www.wwiiaircraftperformance.org/mustang/mustangtest.html
 http://www.hq.nasa.gov/office/pao/History/SP-468/app-a2.htm
 http://www.olympicflightmuseum.com/aircraft_gallery/p51d_mustang.htm
 http://www.btinternet.com/~lee_mail/P51.html
 http://www.sprucegoose.org/pdfs/planes/P51Mustang.pdf
+
+Airfoil data:
+http://www.worldofkrauss.com/foils/1085
 
 Weight and balance:
 http://www.p51.wjackparker.com/P51_Additional_reference_material/x_maintenance.htm
@@ -70,9 +74,14 @@ flap drag not available
 </mstab>
 
 
+<!--
 <wing x="-4.012" y="1.521" z="-0.535" taper="0.57" incidence="1.0" twist="1.0"
       length="4.125" chord="2.307" sweep="-3.5" dihedral="5" camber="0.2">
   <stall aoa="13.0" width="7" peak="2.5"/>
+-->
+<wing x="-4.012" y="1.521" z="-0.535" taper="0.57" incidence="1.0" twist="-1.0"
+      length="4.125" chord="2.307" sweep="-3.5" dihedral="5" camber="0.123">
+  <stall aoa="10.5" width="6" peak="1.5"/>
   <flap0 start="0.0" end="0.48" lift="1.2" drag="2.2"/>
   <flap1 start="0.48" end="1.0" lift="1.3" drag="1.2"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
@@ -119,7 +128,7 @@ flap drag not available
   <actionpt x="-1.25" y="0" z="0"/>
   <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
   <piston-engine
-    eng-power="1695" eng-rpm="3000"
+    eng-power="1940" eng-rpm="3000"
     turbo-mul="5.75" wastegate-mp="85"
     displacement="1647" compression="6">
     <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
