@@ -1042,7 +1042,7 @@
   <type>translate</type>
   <object-name>LeftGearWheel</object-name>
   <object-name>LeftGearStrut</object-name>
-  <property>gear/gear[1]/compression-norm</property>
+  <property>gear/gear[0]/compression-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -1068,7 +1068,7 @@
   <type>translate</type>
   <object-name>RightGearWheel</object-name>
   <object-name>RightGearStrut</object-name>
-  <property>gear/gear[2]/compression-norm</property>
+  <property>gear/gear[1]/compression-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
