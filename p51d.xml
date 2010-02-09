@@ -10,19 +10,10 @@ performance data, and wild guesses.  These sites provided particularly
 useful information or were simply fun to visit:
 
 Performance data:
-http://www.wwiiaircraftperformance.org/mustang/mustangtest.html
 http://www.hq.nasa.gov/office/pao/History/SP-468/app-a2.htm
 http://www.olympicflightmuseum.com/aircraft_gallery/p51d_mustang.htm
 http://www.btinternet.com/~lee_mail/P51.html
 http://www.sprucegoose.org/pdfs/planes/P51Mustang.pdf
-http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19930092575_1993092575.pdf
-
-Airfoil data:
-http://www.worldofkrauss.com/foils/1085
-
-Merlin:
-
-http://en.wikipedia.org/wiki/Rolls-Royce_Merlin - has some info about exhaust thrust
 
 Weight and balance:
 http://www.p51.wjackparker.com/P51_Additional_reference_material/x_maintenance.htm
@@ -37,38 +28,23 @@ The reference datum for measurements is the nose.
 ************************************************************************
 -->
 
-<!-- Weight of everything but fuel  (7010 empty) also includes 180lb for pilot -->
-<airplane mass="7305">
+<!-- Weight of everything but fuel  (7010 empty) -->
+<airplane mass="7125">
 
-<!-- Approach configuration
-Full flaps
-95 knots indicated near sea level
-gear down
-2700 RPM
-enough power for level flight VSI = 0
-the aoa number was backed into by tuning it to get the correct stall speeds
--->
-<approach speed="95" aoa="1.9">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.132"/>
-  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.788"/>
-  <control-setting axis="/controls/engines/engine[0]/boost" value="0.45"/>
+<!-- Approach configuration -->
+<approach speed="90" aoa="14">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.8"/>
   <control-setting axis="/controls/flight/flaps" value="1.0"/>
   <control-setting axis="/controls/gear/gear-down" value="1"/>
 </approach>
 
 <!-- Cruise configuration -->
-<!--
-clean
-46 inHg
-2700 RPM
-Engine only - ignores exhaust thrust Adding exhaust thrust the speed up
-to about 365 kts true or about 305 kts indicated.
--->
-<cruise speed="342" alt="29400">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.927"/> 
-  <control-setting axis="/controls/engines/engine[0]/mixture" value="0.80"/>
-  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.788"/>
+<cruise speed="280" alt="28000">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="1.00"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.00"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
   <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
   <control-setting axis="/controls/flight/flaps" value="0.0"/>
   <control-setting axis="/controls/gear/gear-down" value="0"/>
@@ -77,41 +53,44 @@ to about 365 kts true or about 305 kts indicated.
 <!-- pilot's eyepoint -->
 <cockpit x="-4.495" y="0" z="0.689"/>
 
-<fuselage ax="0.0" ay="0.0" az="0.0" bx="-9.9" by="0.0" bz="0.0"
-          width="0.94" taper="0.38" midpoint="0.55" cx="2" cy="2"/>
+<fuselage ax="-0.1" ay="0.0" az="0.0" bx="-0.7" by="0.0" bz="0.0"
+          width="0.7" taper="0.2" midpoint="1.0"/>
+<fuselage ax="-0.7" ay="0.0" az="0.0" bx="-2.8" by="0.0" bz="-0.1"
+          width="1.3" taper="0.5" midpoint="1.0"/>
+<fuselage ax="-2.8" ay="0.0" az="-0.1" bx="-5.8" by="0.0" bz="-0.1"
+          width="1.3" taper="1.0" midpoint="1.0"/>
+<fuselage ax="-5.8" ay="0.0" az="-0.1" bx="-9.8" by="0.0" bz="0.1"
+          width="1.3" taper="0.2" midpoint="0.0"/>
+
+<fuselage ax="-3.6" ay="0.0" az="0.6" bx="-6.2" by="0.0" bz="0.4"
+          width="0.9" taper="0.3" midpoint="0.3"/>
+
+<fuselage ax="-4.3" ay="0.0" az="-0.9" bx="-6.8" by="0.0" bz="-0.5"
+          width="0.7" taper="0.5" midpoint="0.3"/>
 
 <!--
+stall aoa not available
 flap drag not available
 -->
-<!--
-<mstab x="-3.96" y="0.55" z="-0.60" taper="0.87" incidence="0.01"
-      length="0.97" chord="2.645" sweep="2.0" dihedral="5" camber="0.1" idrag="0.2">
+<mstab x="-3.96" y="0.55" z="-0.60" taper="0.87" incidence="0.0"
+      length="0.97" chord="2.645" sweep="2.0" dihedral="5" camber="0.13">
   <stall aoa="14" width="9" peak="1.9"/>
   <flap0 start="0.024" end="1.0" lift="1.2" drag="2.2"/>
+  <flap1 start="0.024" end="1.0" lift="1.0" drag="4.0"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+  <control-input axis="/position/altitude-ft" control="FLAP1"
+                 src0="0.0" src1="40000.0"
+                 dst0="0.0" dst1="1.0"/>
   <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
   <control-speed control="FLAP0" transition-time="5"/>
 </mstab>
--->
 
-<!--   
-Wing area should be 21.83 m^2 and total span should be 11.28m
-Since the chord is located at y=0.55 each wing needs to be 5.09m
-to have the correct span and the root chord needs to be about 2.146m
-to have the correct area.
 
-camber and aoa numbers are based on published data for the P51 root
-air foil.
-
-Flap and aileron lift and drag numbers are guesses.
-
--->
-
-<wing x="-4.25" y="0.55" z="-0.535" taper="0.57" incidence="1.0" twist="-1.0"
-      length="5.09" chord="2.146" sweep="-3.5" dihedral="5" camber="0.13" idrag="0.8">
-  <stall aoa="10.5" width="3.5" peak="1.2"/>
-  <flap0 start="0.0" end="0.48" lift="1.5" drag="2.2"/>
-  <flap1 start="0.48" end="1.0" lift="1.5" drag="1.2"/>
+<wing x="-4.012" y="1.521" z="-0.535" taper="0.57" incidence="0.0" twist="-1.25"
+      length="4.125" chord="2.307" sweep="-3.5" dihedral="5" camber="0.13">
+  <stall aoa="14.0" width="11" peak="2.5"/>
+  <flap0 start="0.0" end="0.48" lift="1.2" drag="2.2"/>
+  <flap1 start="0.48" end="1.0" lift="1.3" drag="1.2"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
   <control-speed control="FLAP0" transition-time="5"/>
@@ -119,18 +98,18 @@ Flap and aileron lift and drag numbers are guesses.
   <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
 </wing>
 
-<hstab x="-8.62" y="0.18" z="0.34" taper="0.639" camber="0.0"
-       length="1.99" chord="1.2" sweep="0" incidence="2.0" idrag="0.8">
+<hstab x="-8.62" y="0.18" z="0.34" taper="0.55" camber="0.0"
+       length="1.8" chord="1.3" sweep="2.5" >
   <stall aoa="15" width="8" peak="2.4"/>
-  <flap0 start="0.0" end="1.0" lift="2.8" drag="3.1"/>
+  <flap0 start="0.0" end="1.0" lift="2.3" drag="3.1"/>
   <control-input axis="/controls/flight/elevator" control="FLAP0"/>
   <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
 </hstab>
 
 <!-- rudder has to be able to counteract aileron drag -->
-<vstab x="-9.30" y="0" z="-0.37" taper="0.432" camber="0.0"
-       length="1.971" chord="1.5" sweep="25"  incidence="-0.58" idrag="0.8">
+<vstab x="-9.08" y="0" z="-0.05" taper="0.38" camber="0.0"
+       length="1.85" chord="1.8" sweep="10.5"  incidence="-0.58">
   <stall aoa="15" width="4" peak="2.4"/>
   <flap0 start="0" end="1" lift="1.5" drag="1.7"/>
   <control-input axis="/controls/flight/rudder" control="FLAP0" square="true" invert="true"/>
@@ -142,36 +121,24 @@ Flap and aileron lift and drag numbers are guesses.
 <!-- moment calculated using formula submitted by Donald Simon:
       MOI = # of Blades * (8.2*(10^-5))*(D^5), slug-ft^2
       then converted to kg-m^2 and finally square root to kg-m for torque value -->
-     
 <!-- FIXME: wastegate setting should not apply.  set here so that calculations would approximate.
-
-      Real Merlin's have waist gates.  Why should this not apply here?
-      100/150 octane Merlin's had an 85 inHg waste gate. Most P51Ds were
-      setup for 100/150 octane.
-     
-      YASim doesn't model gear supercharger.  Have read various figures (turbo-mul) 4.0 to 5.8 for
-      running the second stage blower.  The second stage should boost at 17000ft.
-     
-      Assumption - YASim probably assumes that eng-power is at the wastegate manifold pressure which
-      is 85inHg but actual WEP power for this power plant is at 80inHg (25PSI).  So the number below
-      has been corrected to 85inHg (IE. 85/80 * 1940).  In US units WEP was limited to 75inHg (8th Air
-      Force officially only allowed 72inHg but action reports by pilots indicated that 75inHg was common)
-      and only British units used 80inHg. -->
-     
+      YASim doesn't model gear supercharger.  Have read various figures (turbo-mul) 4.0 to 5.8 for 
+      running the second stage blower.  The second stage should boost at 17000ft. -->
 <!-- cruise-rpm roughly estimated from documented gear ratio of 0.479 -->
-<!-- mass for "propeller" includes 1690lb for merlin and 200lb for propeller - propeller weight is a guess-->
-<propeller   x="-1.9" y="0" z="0.689"
-           radius="1.75"
-           mass="1890" moment="94.5"
-           cruise-alt="4000" cruise-power="1180"
-           cruise-speed="200" cruise-rpm="1293"
+<propeller   x="-0.75" y="0" z="0"
+           radius="1.75" 
+           mass="1690" moment="94.5"
+           cruise-alt="2000" cruise-power="1180"
+           cruise-speed="230" cruise-rpm="1293"
            gear-ratio="0.479"
            min-rpm="766" max-rpm="1437" >
-  <actionpt x="-1.25" y="0" z="0.1"/>
+<dir x="1.0" y="0.0" z="0.04"/>
+  <actionpt x="-0.5" y="0" z="0"/>
   <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
   <piston-engine
-    eng-power="2061" eng-rpm="3000"
+    eng-power="1695" eng-rpm="3000"
     turbo-mul="5.75" wastegate-mp="85"
+		turbo-lag="0.1"
     displacement="1647" compression="6">
     <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
     <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
@@ -181,83 +148,17 @@ Flap and aileron lift and drag numbers are guesses.
   </piston-engine>
 
 </propeller>
-
-<!-- exhaust thrust  -->
-<!-- located at the engine center of gravity
-     should give approx. 70lb thrust at 300 MPH at 61" at 3000RPM the setup below has not been
-     verified to meet that  requirement.
-     
-     from http://en.wikipedia.org/wiki/Rolls-Royce_Merlin
-     
-     "Ejector exhausts
-
-     The Merlin consumed an enormous volume of air at full power (equivalent to the volume
-     of a single-decker bus per minute), and with the exhaust gases exiting at 1,300 miles
-     per hour (2,100 km/h) it was realised that useful thrust could be gained simply by
-     angling the gases backwards instead of venting sideways.
-
-     During tests, 70 pounds-force (32 kgf) thrust at 300 miles per hour (480 km/h), or roughly
-     70 horsepower (52 kW) was obtained which increased the level maximum speed of the Spitfire
-     by 10 miles per hour (16 km/h) to 360 miles per hour (580 km/h).[21] The first versions of
-     the ejector exhausts featured round outlets, while subsequent versions of the system used
-     "fishtail" style outlets which marginally increased thrust and reduced exhaust glare for
-     night flying.
-
-     In September 1937 the Spitfire prototype, K5054, was fitted with ejector type exhausts. Later
-     marks of the Spitfire used a variation of this exhaust system fitted with forward-facing intake
-     ducts to distribute hot air out to the wing-mounted guns to prevent freezing and stoppages at
-     high altitudes, replacing an earlier system that used heated air from the engine coolant radiator.
-     The latter system had become ineffective due to improvements to the Merlin itself which allowed
-     higher operating altitudes where air temperatures are lower.[22] Ejector exhausts were also fitted
-     to other Merlin-powered aircraft."
-     
-     It appears that the tests in 1937 would have been using engines with lower manifold pressures than
-     the engines used in the P51D.  This would have resulted in lower exhaust thrust than the more powerful
-     engines being modeled here.  90lb max thrust is however a guess. The assumption is that fuel flow is
-     proportional to the exhaust thrust.
-     -->
-<thruster x="-2.0" y="0" z="0.689" vx="1" vy="0" vz="0" thrust="90">
-  <control-input axis="/engines/engine/fuel-flow-gph" control="THROTTLE"
-           src0="10" src1="220" dst0="0" dst1="1.0"/>
+<!--
+<thruster x="-6.528" y="0" z="-0.758" vx="1" vy="0" vz="0" thrust="1000">
+  <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"
+           src0="0" src1="1" dst0="0" dst1="1"/>
 </thruster>
-
-<!-- cooling system drag/thrust correction -->
-<!-- located just aft of the rear wing root and slightly lower than the tail wheel
-
-     from http://www.ww2aircraft.net/forum/aviation/fw-190-dora-9-vs-p-51d-mustang-3151-11.html
-     "Generally speaking, the radiator thrust system negates between 90 and 100% of the P-51's
-     cooling system drag at speeds above about 200 mph IAS. To give pespective to this number,
-     at 85% of the P-51's mach rating (based upon 90% of cooling system drag being canceled by
-     radiator thrust):
-
-     1) At 400 mph TAS @ 25,000 feet the P-51 was using only about 40 HP to overcome cooling
-     system drag. The radiator thrust system was generating about 360 HP of engine equivalent
-     thrust.
-
-     2) At 25,000 feet at 445 mph TAS, which is 85% of the P-51's mach speed limit, the
-     radiator thrust generates approximately 530 HP of engine quivalent thrust.
-
-     3) At 15,000 feet at 454 mph TAS, again 85% of Mach limit, the P-51 generated about 630 HP
-     of engine equivalent thrust.
-
-     This is one of the reasons why the P-51's dive acceleration and zoom climb were so good.
-     The radiator thrust increases with the square of the speed, just like drag. So, as the
-     speed increases the amount of thrust increases in proportion to the drag. Other planes
-     must overcome this drag with engine power if they can, but even this is problematic because
-     at such high speeds the prop begines to encounter its own mach effects and becomes somewhat
-     useless as a source of additional thrust.
-
-     90% of cooling system thrust is not at all insignificant - the cooling system was responsible
-     for well over half the drag on a slick WWII fighter."
 -->
-<!--<thruster x="-4.5" y="0" z="-1.0" vx="1" vy="0" vz="0" thrust="1000">
-  <control-input axis="/instrumentation/airspeed-indicator/indicated-speed-kt" control="THROTTLE"
-     src0="50" src1="500" dst0="0" dst1="1.0" square="true"/>
-</thruster> -->
 
 
-<!-- left main -->
-<gear x="-2.79" y="1.81" z="-2.2" compression="0.5" spring="0.5" damp="15.0" >
+ <!-- left main -->
+<gear x="-2.79" y="1.81" z="-2.20" compression="0.2" spring="1.1" damp="15.0" 
+			initial-load="2" dfric="0.6" sfric="0.6">
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -265,8 +166,9 @@ Flap and aileron lift and drag numbers are guesses.
   <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
 </gear>
 
-<!-- right main -->
-<gear x="-2.79" y="-1.81" z="-2.2" compression="0.5" spring="0.5" damp="15.0" >
+ <!-- right main -->
+<gear x="-2.79" y="-1.81" z="-2.20" compression="0.2" spring="1.1" damp="15.0" 
+			initial-load="2" dfric="0.6" sfric="0.6">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -276,35 +178,32 @@ Flap and aileron lift and drag numbers are guesses.
 
 <!-- Tail wheel -->
 <!-- tail wheel "steerable" in p-51d (in stick back locked position it actually should be limited to 6deg +/-) -->
-<gear x="-7.90" y="0" z="-0.96" compression="0.2" damp="2.0" >
-  <control-input axis="/controls/flight/rudder" control="STEER" square="true"
+<gear x="-7.90" y="0" z="-0.96" compression="0.2" spring="0.8" damp="15.0">
+  <control-input axis="/controls/flight/rudder" control="STEER" square="true" 
                  src0="-1.0" src1="1.0"
                  dst0="0.5" dst1="-0.5"/>
 </gear>
 
 <!-- Guess on wing tank positions -->
-<tank x="-3.50" y="1.0" z="-0.61" capacity="726"/>
-<tank x="-3.50" y="-1.0" z="-0.61" capacity="726"/>
-<tank x="-6.50" y="0" z="0" capacity="671"/>
+<tank x="-3.50" y="1.0" z="-0.61" capacity="726"/> 
+<tank x="-3.50" y="-1.0" z="-0.61" capacity="726"/> 
+<tank x="-6.50" y="0" z="0" capacity="671"/> 
 
 <!-- pilot -->
-<!-- This is already added to the empty weight -->
 <ballast x="-4.495" y="0" z="0.689" mass="180"/>
 
 
-<!-- engine  -->
-<ballast x="-2.0" y="0" z="0.689" mass="1690"/>
+<ballast x="-2.0" y="0" z="0.689" mass="1380"/>
 
 <!-- armament -->
-<!--  Had too much weight I think...disable until stall speed fixed -->
-<!--  Stall speed is now OK and is very close to published data
-      see http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19930092575_1993092575.pdf
+<!--  Had too much weight I think...disable until stall speed fixed
+<ballast x="-3.20" y="0.7" z="-0.60" mass="800"/> 
+<ballast x="-3.20" y="-0.7" z="-0.60" mass="800"/> 
 -->
-<ballast x="-3.70" y="0.7" z="-0.60" mass="800"/>
-<ballast x="-3.70" y="-0.7" z="-0.60" mass="800"/>
 
-<!-- prop  -->
-
+<!-- prop -->
+<!--
 <ballast x="0.1" y="0" z="0.0" mass="200"/>
+-->
 
 </airplane>
