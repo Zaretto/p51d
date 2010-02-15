@@ -7,22 +7,22 @@
   <type>rotate</type>
   <object-name>NeedleOilTemp</object-name>
   <property>engines/engine[0]/oil-temperature-degf</property>
-  <min>-70</min>
-  <max>150</max>
+  <min>32</min>
+  <max>212</max>
   <interpolation>
    <entry>
-    <ind>-58</ind>
-    <dep>8</dep>
+    <ind>32</ind>
+    <dep>-30</dep>
    </entry>
    <entry>
-    <ind>302</ind>
-    <dep>118</dep>
+    <ind>212</ind>
+    <dep>123</dep>
    </entry>
   </interpolation>
   <center>
    <x-m>0</x-m>
    <y-m>0.0</y-m>
-   <z-m>0.007</z-m>
+   <z-m>0.0</z-m>
   </center>
   <axis>
    <x>-1</x>

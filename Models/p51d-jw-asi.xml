@@ -25,12 +25,44 @@
     <dep>0</dep>
    </entry>
    <entry>
-    <ind>86.95</ind>
-    <dep>26</dep>
+    <ind>43.45</ind>
+    <dep>13.26</dep>
    </entry>
    <entry>
-    <ind>608.69</ind>
-    <dep>334</dep>
+    <ind>86.89</ind>
+    <dep>41.29</dep>
+   </entry>
+   <entry>
+    <ind>130.34</ind>
+    <dep>87.5</dep>
+   </entry>
+   <entry>
+    <ind>173.8</ind>
+    <dep>137.31</dep>
+   </entry>
+   <entry>
+    <ind>217.24</ind>
+    <dep>181.0</dep>
+   </entry>
+   <entry>
+    <ind>260.69</ind>
+    <dep>231</dep>
+   </entry>
+   <entry>
+    <ind>347.59</ind>
+    <dep>259</dep>
+   </entry>
+   <entry>
+    <ind>434.49</ind>
+    <dep>285</dep>
+   </entry>
+   <entry>
+    <ind>521.39</ind>
+    <dep>313</dep>
+   </entry>
+   <entry>
+    <ind>608.28</ind>
+    <dep>340</dep>
    </entry>
   </interpolation>
   <axis>
