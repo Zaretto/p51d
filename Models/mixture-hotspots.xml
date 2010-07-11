@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>P51D Panel Hotspots elevator trim wheels</name>
+ <background>Aircraft/p51d/Models/transparent-bg.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+  <instrument>
+    <name>Throotle Quadrant Controls</name>
+    <x>512</x>
+    <y>384</y>
+    <w>1024</w>
+    <h>768</h>
+    <w-base>1024</w-base>
+    <h-base>1024</h-base>
+
+
+    <layers>
+        <layer>
+            <name>background</name>
+            <texture>
+                <path>Aircraft/p51d/Models/transparent-bg.rgb</path>
+                <x1>0.0</x1>
+                <y1>0.0</y1>
+                <x2>1.0</x2>
+                <y2>1.0</y2>
+            </texture>
+        </layer>
+    </layers>
+
+    <!-- define hotspot actions below -->
+
+    <actions>
+
+        <action>
+            <name>mixture lean cut off</name>
+            <button>0</button>
+            <x>-195</x>
+            <y>-0</y>
+            <w>35</w>
+            <h>35</h>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/mixture</property>
+                <value> 0 </value>
+            </binding>
+        </action>
+
+        <action>
+            <name>mixture run</name>
+            <button>0</button>
+            <x>-190</x>
+            <y>-35</y>
+            <w>35</w>
+            <h>35</h>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/mixture</property>
+                <value> 0.5 </value>
+            </binding>
+        </action>
+
+        <action>
+            <name>mixture lean cut off</name>
+            <button>0</button>
+            <x>-210</x>
+            <y>-70</y>
+            <w>35</w>
+            <h>35</h>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/mixture</property>
+                <value> 1.0 </value>
+            </binding>
+        </action>
+
+        <action>
+            <name>RPM UP</name>
+            <button>0</button>
+            <x>-470</x>
+            <y>70</y>
+            <w>90</w>
+            <h>50</h>
+            <binding>
+              <command>property-adjust</command>
+              <property>/controls/engines/engine/propeller-pitch</property>
+              <step>0.025</step>
+              <min>0</min>
+              <max>1</max>
+              <wrap>0</wrap>
+            </binding>
+        </action>
+
+        <action>
+            <name>RPM DOWN</name>
+            <button>0</button>
+            <x>-100</x>
+            <y>70</y>
+            <w>90</w>
+            <h>50</h>
+            <binding>
+              <command>property-adjust</command>
+              <property>/controls/engines/engine/propeller-pitch</property>
+              <step>-0.025</step>
+              <min>0</min>
+              <max>1</max>
+              <wrap>0</wrap>
+            </binding>
+        </action>
+
+    </actions>
+
+  </instrument>
+
+ </instruments>
+
+</PropertyList>

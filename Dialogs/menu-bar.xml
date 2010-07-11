@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+     <default>
+       <menu n="1000">
+          <label>P-51D</label>
+             <item>
+                <label>No External Stores</label>
+                <binding>
+                   <command>nasal</command>
+                   <script>p51d.setStores(0)</script>
+                </binding>
+             </item>
+             <item>
+                <label>Bombs Only</label>
+                 <binding>
+                   <command>nasal</command>
+                   <script>p51d.setStores(1)</script>
+                </binding>
+             </item>
+             <item>
+                <label>Rockets Only</label>
+               <binding>
+                   <command>nasal</command>
+                   <script>p51d.setStores(2)</script>
+                </binding>
+             </item>
+             <item>
+                <label>Bombs and Rockets</label>
+                <binding>
+                   <command>nasal</command>
+                   <script>p51d.setStores(3)</script>
+                </binding>
+             </item>
+             <item>
+                <label>Wing Tanks</label>
+                <binding>
+                   <command>nasal</command>
+                   <script>p51d.setStores(4)</script>
+                </binding>
+             </item>
+             <item>
+                <label>Wing Tanks and Rockets</label>
+                <binding>
+                   <command>nasal</command>
+                   <script>p51d.setStores(5)</script>
+                </binding>
+             </item>
+             <item>
+             <label>Load Guns</label>
+                <binding>
+                   <command>nasal</command>
+                   <script>p51d.loadGuns(1)</script>
+                </binding>
+             </item>
+             <item>
+             <label>Unload Guns</label>
+                <binding>
+                   <command>nasal</command>
+                   <script>p51d.loadGuns(0)</script>
+                </binding>
+             </item>
+             <item>
+             <label>Fuel</label>
+               <binding>
+                 <command>dialog-show</command>
+                 <dialog-name>P-51D-Fuel</dialog-name>
+               </binding>
+             </item>
+        </menu>
+     </default>
+
+</PropertyList>

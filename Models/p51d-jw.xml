@@ -1141,9 +1141,9 @@
   <object-name>CockpitFloor</object-name>
   <emission>
     <factor-prop>controls/lighting/instruments-norm</factor-prop>
-    <red>0.5</red>
-    <green>0.2</green>
-    <blue>0.2</blue>
+    <red>0.15</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
   </emission>
  </animation>
 

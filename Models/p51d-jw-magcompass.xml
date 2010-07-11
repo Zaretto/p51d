@@ -5,21 +5,21 @@
 
  <animation>
   <type>material</type>
-  <object-name>Compass</object-name>
+  <object-name>Compass.003</object-name>
   <emission>
     <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-    <red>0.5</red>
-    <green>0.25</green>
-    <blue>0.25</blue>
+    <red>0.35</red>
+    <green>0.35</green>
+    <blue>0.4</blue>
   </emission>
  </animation>
 
  <animation>
   <type>rotate</type>
-  <object-name>Compass</object-name>
+  <object-name>Compass.003</object-name>
   <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
   <center>
-   <x-m>-0.0219</x-m>
+   <x-m>-0.030</x-m>
    <y-m>0</y-m>
    <z-m>0</z-m>
   </center>

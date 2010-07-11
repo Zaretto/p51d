@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<system name="tail_wheel_control">
+
+ <property value="0.0">fcs/tail-wheel-lock-cmd-norm</property>
+
+ <channel name="tail wheel">
+
+    <switch name="systems/gear/tail-wheel-stick-forward">
+        <default value="0"/>
+        <test value="1">
+            fcs/elevator-cmd-norm GE 0.5
+        </test>
+        <output>fcs/tail-wheel-lock-cmd-norm</output>
+    </switch>
+
+    <switch name="fcs/tail-wheel-free">
+        <default value="0.0"/>
+        <test value="1.0">
+            fcs/tail-wheel-lock-cmd-norm GT 0.05
+        </test>
+        <output>gear/unit[2]/castered</output>
+    </switch>
+
+    <fcs_function name="fcs/tail-wheel-locked-deg">
+       <function>
+          <product>
+            <property> fcs/rudder-pos-norm </property>
+            <value> 0.2 </value>
+          </product>
+       </function>
+       <output>fcs/steer-pos-deg[2]</output>
+    </fcs_function>
+
+ </channel>
+
+</system>

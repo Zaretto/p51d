@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<system name="crash-detect">
+
+  <property value="0">systems/crash-detect/crashed</property>
+
+  <channel name="Over-G">
+
+     <fcs_function name="systems/wing-load">
+       <function>
+          <product>
+             <property>accelerations/Nz</property>
+             <property>inertia/weight-lbs</property>
+          </product>
+       </function>
+       <output>systems/crash-detect/wing-load</output>
+     </fcs_function>
+
+     <!--
+          Detect wing loads that exceed limits.
+          Operational limits are +64,000 lbs and
+          -32,000lbs.  IE. +8 or -4 Gs at 8,000 lbs
+          gross weight  This allows for a 10% margin
+          of safety before actual structural failure.
+          At higher gross weights the wing structure
+          will fail at lower G loadings.
+          -->
+     <switch name="systems/crash-detect/over-g-failure">
+          <test value="1">
+                systems/crash-detect/wing-load gt 70400
+          </test>
+          <test value="1">
+                systems/crash-detect/wing-load lt -35200
+          </test>
+          <output>systems/crash-detect/crashed</output>
+     </switch>
+
+     <switch name="systems/crash-detect/over-g">
+          <test value="1">
+                systems/crash-detect/wing-load gt 64000
+          </test>
+          <test value="1">
+                systems/crash-detect/wing-load lt -32000
+          </test>
+     </switch>
+
+  </channel>
+
+  <channel name="crashed">
+
+     <!-- end the sim if the aircraft is crashed -->
+     <switch name="systems/crash-detect/FG">
+        <test value="1">
+           systems/crash-detect/crashed == 1
+        </test>
+        <output>/sim/freeze/clock</output>
+        <output>/sim/freeze/main</output>
+        <output>/controls/engines/engine[0]/cutoff</output>
+     </switch>
+  
+  </channel>
+
+  <channel name="impact-ground">
+
+     <switch name="systems/crash-detect/impact">
+          <test logic="AND" value="1">
+                position/h-agl-ft lt 1.0
+                simulation/sim-time-sec gt 1.0
+          </test>
+          <output>systems/crash-detect/crashed</output>
+     </switch>
+
+  </channel>
+
+  <channel name="freeze">
+
+    <switch name="systems/crash-detect/switch1">
+          <default value="simulation/integrator/position/rotational"/>          
+          <test value="0">
+                systems/crash-detect/crashed eq 1
+          </test>
+          <output>simulation/integrator/position/rotational</output>
+    </switch>
+    <switch name="systems/crash-detect/switch2">
+          <default value="simulation/integrator/position/translational"/>          
+          <test value="0">
+                systems/crash-detect/crashed eq 1
+          </test>
+          <output>simulation/integrator/position/translational</output>
+    </switch>
+    <switch name="systems/crash-detect/switch3">
+          <default value="simulation/integrator/rate/rotational"/>          
+          <test value="0">
+                systems/crash-detect/crashed eq 1
+          </test>
+          <output>simulation/integrator/rate/rotational</output>
+    </switch>
+    <switch name="systems/crash-detect/switch4">
+          <default value="simulation/integrator/rate/translational"/>          
+          <test value="0">
+                systems/crash-detect/crashed eq 1
+          </test>
+          <output>simulation/integrator/rate/translational</output>
+    </switch>
+
+  </channel>
+
+</system>

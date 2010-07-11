@@ -12,7 +12,7 @@
 
  <instruments>
   <instrument>
-   <name>Flaps Control</name>
+   <name>Main Panel Controls</name>
    <x>512</x>
    <y>384</y>
    <w>1024</w>
@@ -262,76 +262,6 @@
    </binding>
   </action>
 
-  <!-- ingition switch hotspots -->
-  <action>
-   <name>switch up</name>
-   <button>0</button>
-   <x>-254</x>
-   <y>-230</y>
-   <w>64</w>
-   <h>81</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/controls/engines/engine[0]/magnetos</property>
-    <step>1</step>
-    <min>0</min>
-    <max>3</max>
-    <wrap>0</wrap>
-   </binding>
-  </action>
-
-  <action>
-   <name>switch down</name>
-   <button>0</button>
-   <x>-190</x>
-   <y>-230</y>
-   <w>64</w>
-   <h>81</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/controls/engines/engine[0]/magnetos</property>
-    <step>-1</step>
-    <min>0</min>
-    <max>3</max>
-    <wrap>0</wrap>
-   </binding>
-  </action>
-
-  <!--  cockpit light dimmer hotspots -->
-  <action>
-   <name>panel brighter</name>
-   <button>0</button>
-   <x>164</x>
-   <y>-180</y>
-   <w>64</w>
-   <h>81</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/controls[0]/lighting[0]/instruments-norm</property>
-    <step>0.1</step>
-    <min>0</min>
-    <max>1</max>
-    <wrap>0</wrap>
-   </binding>
-  </action>
-
-  <action>
-   <name>panel darker</name>
-   <button>0</button>
-   <x>100</x>
-   <y>-180</y>
-   <w>64</w>
-   <h>81</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/controls[0]/lighting[0]/instruments-norm</property>
-    <step>-0.1</step>
-    <min>0</min>
-    <max>1</max>
-    <wrap>0</wrap>
-   </binding>
-  </action>
-
   <!-- clock hotspots -->
   <action>
    <name>adjust left fine</name>
@@ -400,6 +330,7 @@
     <wrap>1</wrap>
    </binding>
   </action>
+
 
   <!-- flaps control -->
 <!--

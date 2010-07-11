@@ -19,6 +19,10 @@ March 2003 Jim Wilson, jimw@kelcomaine.com
   <flight-model>yasim</flight-model>
   <aero>p51d</aero>
   <fuel-fraction>0.50</fuel-fraction>
+  
+  <startup>
+     <splash-texture>Aircraft/p51d/P-51D-splash.png</splash-texture>
+  </startup>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
@@ -179,11 +183,11 @@ Excessive braking can cause you to nose over.  Some recommend raising flaps imme
       </engine>
    </engines>
  </controls>
-  <nasal>
-    <p51d>
+ <nasal>
+   <p51d>
       <file>Aircraft/p51d/Nasal/p51.nas</file>
-    </p51d>
-	</nasal>
+   </p51d>
+ </nasal>
 </PropertyList>
 
 

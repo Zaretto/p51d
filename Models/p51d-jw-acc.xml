@@ -9,9 +9,9 @@
   <object-name>Needle1</object-name>
   <emission>
     <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-    <red>0.4</red>
-    <green>0.20</green>
-    <blue>0.20</blue>
+    <red>0.35</red>
+    <green>0.35</green>
+    <blue>0.4</blue>
   </emission>
  </animation>
 

@@ -326,6 +326,43 @@
   </axis>
  </animation>
 
+  <animation>
+  <type>rotate</type>
+  <object-name>leg1.R</object-name>
+  <object-name>leg2.R</object-name>
+  <object-name>foot.R</object-name>
+  <property>sim/npc/limb[15]/x-deg</property>
+        <offset-deg>10</offset-deg>
+  <center>
+   <x-m>-0.021</x-m>
+   <y-m>0.1</y-m>
+   <z-m>0.035</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>leg2.R</object-name>
+  <object-name>foot.R</object-name>
+  <property>sim/npc/limb[16]/x-deg</property>
+        <offset-deg>350</offset-deg>
+  <center>
+   <x-m>-0.03</x-m>
+   <y-m>0.113</y-m>
+   <z-m>-0.405</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
 <!-- left leg -->
 
  <animation>
@@ -377,6 +414,60 @@
   <axis>
    <x>0.0</x>
    <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>leg1.L</object-name>
+  <object-name>leg2.L</object-name>
+  <object-name>foot.L</object-name>
+  <property>sim/npc/limb[17]/x-deg</property>
+        <offset-deg>-10</offset-deg>
+  <center>
+   <x-m>-0.021</x-m>
+   <y-m>-0.1</y-m>
+   <z-m>0.035</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>leg2.L</object-name>
+  <object-name>foot.L</object-name>
+  <property>sim/npc/limb[18]/x-deg</property>
+        <offset-deg>370</offset-deg>
+  <center>
+   <x-m>-0.03</x-m>
+   <y-m>-0.113</y-m>
+   <z-m>-0.405</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>foot.L</object-name>
+  <property>sim/npc/limb[19]/x-deg</property>
+        <offset-deg>350</offset-deg>
+  <center>
+   <x-m>0.023</x-m>
+   <y-m>-0.119</y-m>
+   <z-m>-0.854</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
    <z>0.0</z>
   </axis>
  </animation>
