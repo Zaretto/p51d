@@ -436,7 +436,7 @@ Hal V. Engel hvengel@astound.net
             </location>
             <capacity unit="LBS"> 607.21 </capacity>
             <contents unit="LBS"> 396 </contents>
-            <priority> 0 </priority>
+            <priority> 1 </priority>
         </tank>
         <tank type="FUEL">    <!-- Tank number 2 FUS-->
             <location unit="IN">
@@ -446,7 +446,7 @@ Hal V. Engel hvengel@astound.net
             </location>
             <capacity unit="LBS"> 561 </capacity>
             <contents unit="LBS"> 0 </contents>
-            <priority> 0 </priority>
+            <priority> 1 </priority>
         </tank>
         <tank type="FUEL">    <!-- Tank number 3 left drop -->
             <location unit="IN">
@@ -456,7 +456,7 @@ Hal V. Engel hvengel@astound.net
             </location>
             <capacity unit="LBS"> 495 </capacity>
             <contents unit="LBS"> 0 </contents>
-            <priority> 0 </priority>
+            <priority> 1 </priority>
         </tank>
         <tank type="FUEL">    <!-- Tank number 4 right drop -->
             <location unit="IN">
@@ -466,7 +466,7 @@ Hal V. Engel hvengel@astound.net
             </location>
             <capacity unit="LBS"> 495 </capacity>
             <contents unit="LBS"> 0 </contents>
-            <priority> 0 </priority>
+            <priority> 1 </priority>
         </tank>
     </propulsion>
 
