@@ -218,7 +218,7 @@ Hal V. Engel hvengel@astound.net
             <spring_coeff unit="LBS/FT"> 4100 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 4280 </damping_coeff>
             <steerability> STEERABLE </steerability>
-            <max_steer unit="DEG"> -6.0 </max_steer>
+            <max_steer unit="DEG"> 360.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>1</retractable>
         </contact>
@@ -478,6 +478,7 @@ Hal V. Engel hvengel@astound.net
     <system file="electrical"/>
     <system file="compressability"/>
     <system file="weapons-weight"/>
+    <system file="tail-wheel"/>
     <!-- <system file="lift"/> -->
 
     <flight_control name="FCS: P51D">
