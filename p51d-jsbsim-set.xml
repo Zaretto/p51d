@@ -225,7 +225,7 @@ Excessive braking can cause you to do a ground loop (nose over).  Some recommend
      <gun-heat> 0 </gun-heat>
    </anti-ice>
    <fuel>
-      <on>1</on>
+      <on>0</on>
       <tank-selector>0</tank-selector>
       <tank n="1">
          <to_tank>1</to_tank>

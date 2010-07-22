@@ -256,7 +256,7 @@
 
       <pure_gain name="tank0-selected">
             <input> systems/fuel/tank/selected </input>
-            <gain> 1.0 </gain>
+            <gain> /controls/fuel/on </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
@@ -266,7 +266,7 @@
 
       <pure_gain name="tank1-selected">
             <input> systems/fuel/tank[1]/selected </input>
-            <gain> 1.0 </gain>
+            <gain> /controls/fuel/on </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
@@ -276,7 +276,7 @@
          
       <pure_gain name="tank2-selected">
             <input> systems/fuel/tank[2]/selected </input>
-            <gain> 1.0 </gain>
+            <gain> /controls/fuel/on </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
@@ -286,7 +286,7 @@
 
         <pure_gain name="tank3-selected">
             <input> systems/fuel/tank[3]/selected </input>
-            <gain> 1.0 </gain>
+            <gain> /controls/fuel/on </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
@@ -296,7 +296,7 @@
 
         <pure_gain name="tank4-selected">
             <input> systems/fuel/tank[4]/selected </input>
-            <gain> 1.0 </gain>
+            <gain> /controls/fuel/on </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
