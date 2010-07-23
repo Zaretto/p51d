@@ -6,16 +6,16 @@
  <animation>
   <type>rotate</type>
   <object-name>NeedleOilTemp</object-name>
-  <property>engines/engine[0]/oil-temperature-degf</property>
-  <min>32</min>
-  <max>212</max>
+  <property>/fdm/jsbsim/systems/engine/oil-temp-degC</property>
+  <min>0</min>
+  <max>100</max>
   <interpolation>
    <entry>
-    <ind>32</ind>
+    <ind>0</ind>
     <dep>-30</dep>
    </entry>
    <entry>
-    <ind>212</ind>
+    <ind>100</ind>
     <dep>123</dep>
    </entry>
   </interpolation>
@@ -34,7 +34,7 @@
  <animation>
   <type>rotate</type>
   <object-name>NeedleOilPress</object-name>
-  <property>engines/engine[0]/oil-pressure-psi</property>
+  <property>/fdm/jsbsim/systems/engine/oil-pressure-psi</property>
   <min>0</min>
   <max>200</max>
   <interpolation>
@@ -62,7 +62,7 @@
  <animation>
   <type>rotate</type>
   <object-name>NeedleFuel</object-name>
-  <property>engines/engine/fuel-pump-psi</property>
+  <property>/fdm/jsbsim/systems/engine/fuel-pump-psi</property>
   <min>0</min>
   <max>25</max>
   <interpolation>
