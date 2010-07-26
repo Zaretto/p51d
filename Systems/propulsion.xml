@@ -134,6 +134,7 @@
           </function>
           <output>propulsion/engine/volumetric-efficiency</output>   
         </fcs_function>
+        
        
        <pure_gain name="systems/engine/throttle">
           <input> ap/throttle-cmd-norm </input>
