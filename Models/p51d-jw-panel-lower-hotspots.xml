@@ -341,8 +341,8 @@
   <action>
    <name>gear safe light check</name>
    <button>0</button>
-    <x>-184</x>
-    <y>-59</y>
+    <x>-170</x>
+    <y>-57</y>
     <w>35</w>
     <h>30</h>
     <binding>
@@ -362,8 +362,8 @@
   <action>
    <name>gear unsafe light check</name>
    <button>0</button>
-    <x>-120</x>
-    <y>-59</y>
+    <x>-105</x>
+    <y>-57</y>
     <w>35</w>
     <h>30</h>
     <binding>
@@ -427,6 +427,34 @@
     <binding>
       <command>property-assign</command>
       <property>/controls/engines/engine/supercharger-switch</property>
+      <value>0</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>boost pump on</name>
+   <button>0</button>
+    <x>-410</x>
+    <y>-75</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+      <value>1</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>boost pump off</name>
+   <button>0</button>
+    <x>-410</x>
+    <y>-105</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/fdm/jsbsim/propulsion/fuel_pump</property>
       <value>0</value>
     </binding>
   </action>

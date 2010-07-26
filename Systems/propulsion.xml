@@ -201,12 +201,40 @@
         </function>
       </fcs_function>
 
-    <switch name="systems/engine/fuel-pump-psi">
-        <default value="0.0"/>
-        <test value="18.0">
-            propulsion/engine/set-running GT 0.05
-        </test>
-     </switch>
+      <fcs_function name="systems/engine/fuel-pump-gain">
+        <function>
+            <sum>
+                <table>
+                    <independentVar lookup="row">propulsion/engine/propeller-rpm</independentVar>
+                    <tableData>
+                        0    0
+                        400  16
+                    </tableData>
+                </table>
+                <product>
+                    <value> 12 </value>
+                    <property> propulsion/fuel_pump </property>
+                </product>
+            </sum>
+        </function>
+      </fcs_function>
+
+     <pure_gain name="systems/engine/fuel-pump-psi">
+        <input> /controls/fuel/on  </input>
+        <gain> systems/engine/fuel-pump-gain </gain>
+        <clipto>
+             <min> 0 </min>
+             <max> 19 </max>
+        </clipto>
+      </pure_gain>
+
+      <switch name="systems/fuel-pressure">
+          <default value="0"/>
+          <test value="1">
+             systems/engine/fuel-pump-psi GT 8
+          </test>
+      </switch>
+
     </channel>
 
     <channel name="fuel_tank_selection">
@@ -254,7 +282,7 @@
 
       <pure_gain name="tank0-selected">
             <input> systems/fuel/tank/selected </input>
-            <gain> /controls/fuel/on </gain>
+            <gain> systems/fuel-pressure </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
@@ -264,7 +292,7 @@
 
       <pure_gain name="tank1-selected">
             <input> systems/fuel/tank[1]/selected </input>
-            <gain> /controls/fuel/on </gain>
+            <gain> /systems/fuel-pressure </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
@@ -274,7 +302,7 @@
          
       <pure_gain name="tank2-selected">
             <input> systems/fuel/tank[2]/selected </input>
-            <gain> /controls/fuel/on </gain>
+            <gain> systems/fuel-pressure </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
@@ -284,7 +312,7 @@
 
         <pure_gain name="tank3-selected">
             <input> systems/fuel/tank[3]/selected </input>
-            <gain> /controls/fuel/on </gain>
+            <gain> systems/fuel-pressure </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
@@ -294,7 +322,7 @@
 
         <pure_gain name="tank4-selected">
             <input> systems/fuel/tank[4]/selected </input>
-            <gain> /controls/fuel/on </gain>
+            <gain> systems/fuel-pressure </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>

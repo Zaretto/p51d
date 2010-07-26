@@ -119,6 +119,27 @@
         </axis>
     </animation>
 
+    <animation>
+        <type>rotate</type>
+        <object-name>fuel-pump-switch</object-name>
+        <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
  
  <animation>
   <type>material</type>
