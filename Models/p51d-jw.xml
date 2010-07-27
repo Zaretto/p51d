@@ -1225,4 +1225,158 @@
   </emission>
  </animation>
 
+  <!-- *********************** Weapons System Animations **************************** -->
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR1.left</object-name>
+  <condition>
+      <property>/controls/armament/gunsight/power-on</property>
+   </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR2.left</object-name>
+  <condition>
+      <property>/controls/armament/gunsight/power-on</property>
+   </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR3.left</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR4.left</object-name>
+  <condition>
+        <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR5.left</object-name>
+  <condition>
+      <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR1.right</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+  <animation>
+  <type>select</type>
+  <object-name>HVAR2.right</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR3.right</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR4.right</object-name>
+  <condition>
+     <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HVAR5.right</object-name>
+  <condition>
+      <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>bomb.left</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>bomb.right</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>drop-tanks</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>LBombPylon</object-name>
+  <condition>
+      <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>RBombPylon</object-name>
+  <condition>
+      <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>LPylons.outer</object-name>
+  <condition>
+     <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>RPylons.outer</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>LPylons.inner</object-name>
+  <condition>
+      <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>RPylons.inner</object-name>
+  <condition>
+      <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+ 
 </PropertyList>
