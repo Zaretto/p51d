@@ -442,26 +442,26 @@
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>95</dep>
+    <dep>0</dep>
    </entry>
    <entry>
     <ind>0.33</ind>
-    <dep>95</dep>
+    <dep>0</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
-    <dep>0.0</dep>
+    <dep>-93</dep>
    </entry>
   </interpolation>
   <center>
-   <x-m>3.10</x-m>
-   <y-m>-1.68</y-m>
-   <z-m>-0.45</z-m>
+   <x-m>3.08</x-m>
+   <y-m>-1.81</y-m>
+   <z-m>-0.59</z-m>
   </center>
   <axis>
    <x>1.0</x>
-   <y>0.0</y>
-   <z>-0.25</z>
+   <y>0.11</y>
+   <z>-0.16</z>
   </axis>
  </animation>
 
@@ -472,20 +472,20 @@
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>90</dep>
-   </entry>
-   <entry>
-    <ind>0.33</ind>
     <dep>0</dep>
    </entry>
    <entry>
+    <ind>0.33</ind>
+    <dep>-90</dep>
+   </entry>
+   <entry>
     <ind>1.00</ind>
-    <dep>0.0</dep>
+    <dep>-90</dep>
    </entry>
   </interpolation>
   <center>
    <x-m>3.10</x-m>
-   <y-m>-0.02</y-m>
+   <y-m>-0.07</y-m>
    <z-m>-0.85</z-m>
   </center>
   <axis>
@@ -606,26 +606,26 @@
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>95</dep>
+    <dep>0</dep>
    </entry>
    <entry>
     <ind>0.33</ind>
-    <dep>95</dep>
+    <dep>0</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
-    <dep>0.0</dep>
+    <dep>-93</dep>
    </entry>
   </interpolation>
   <center>
-   <x-m>3.10</x-m>
-   <y-m>1.68</y-m>
-   <z-m>-0.45</z-m>
+   <x-m>3.08</x-m>
+   <y-m>1.81</y-m>
+   <z-m>-0.59</z-m>
   </center>
   <axis>
    <x>-1.0</x>
-   <y>0.0</y>
-   <z>0.25</z>
+   <y>0.11</y>
+   <z>0.16</z>
   </axis>
  </animation>
 
@@ -636,20 +636,20 @@
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>90</dep>
-   </entry>
-   <entry>
-    <ind>0.33</ind>
     <dep>0</dep>
    </entry>
    <entry>
+    <ind>0.33</ind>
+    <dep>-90</dep>
+   </entry>
+   <entry>
     <ind>1.00</ind>
-    <dep>0.0</dep>
+    <dep>-90</dep>
    </entry>
   </interpolation>
   <center>
    <x-m>3.10</x-m>
-   <y-m>0.02</y-m>
+   <y-m>0.07</y-m>
    <z-m>-0.85</z-m>
   </center>
   <axis>
