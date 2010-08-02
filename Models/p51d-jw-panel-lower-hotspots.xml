@@ -469,19 +469,38 @@
     <h>40</h>
     <binding>
       <command>property-assign</command>
-      <property>/controls/engines/engine/starter</property>
+      <property>/fdm/jsbsim/systems/engine/starter</property>
       <value>1</value>
     </binding>
     <mod-up>
       <binding>
         <command>property-assign</command>
-        <property>/controls/engines/engine/starter</property>
+        <property>/fdm/jsbsim/systems/engine/starter</property>
         <value>0</value>
       </binding>
     </mod-up>  
   </action>
 
-
+  <action>
+   <name>primer switch on</name>
+   <button>0</button>
+    <x>-285</x>
+    <y>-95</y>
+    <w>35</w>
+    <h>40</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/engines/engine/primer-on</property>
+      <value>1</value>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine/primer-on</property>
+        <value>0</value>
+      </binding>
+    </mod-up>
+  </action>
 
  </actions>
 

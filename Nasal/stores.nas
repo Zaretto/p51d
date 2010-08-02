@@ -40,7 +40,8 @@ var bombsBoth = func() {
         getprop("controls/armament/User-Selected-Stores") == 3) {
         setprop("controls/armament/bomb-trigger-1", getprop("controls/armament/trigger2"));
         setprop("controls/armament/bomb-trigger-2", getprop("controls/armament/trigger2"));      }
-    else {
+    if (getprop("controls/armament/User-Selected-Stores") == 4 or
+        getprop("controls/armament/User-Selected-Stores") == 5) {
         setprop("controls/armament/drop-tank-release-1", getprop("controls/armament/trigger2"));
         setprop("controls/armament/drop-tank-release-2", getprop("controls/armament/trigger2"));
     }
@@ -55,11 +56,16 @@ var bombsTrain = func {
         else
            setprop("controls/armament/bomb-trigger-2", 1.0);
     }
-    else {
-        if (getprop("ai/submodels/submodel[20]/count") == 1)
+    if (getprop("controls/armament/User-Selected-Stores") == 4 or
+        getprop("controls/armament/User-Selected-Stores") == 5) {
+        if (getprop("ai/submodels/submodel[20]/count") == 1){
            setprop("controls/armament/drop-tank-release-1", 1.0);
-        else
+           setprop("controls/armament/drop-tank-released-1", 1.0);
+        }
+        else {
             setprop("controls/armament/drop-tank-release-2", 1.0);
+            setprop("controls/armament/drop-tank-released-2", 1.0);
+        }
     }
 }
 
@@ -164,6 +170,8 @@ var setStores = func(stores) {
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       setprop("consumables/fuel/tank[3]/level-gal_us", 75);
       setprop("consumables/fuel/tank[4]/level-gal_us", 75);
+      setprop("controls/armament/drop-tank-released-1", 0);
+      setprop("controls/armament/drop-tank-released-2", 0);
    }
    if (stores == 5) {
       # rockets
@@ -180,6 +188,8 @@ var setStores = func(stores) {
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       setprop("consumables/fuel/tank[3]/level-gal_us", 75);
       setprop("consumables/fuel/tank[4]/level-gal_us", 75);
+      setprop("controls/armament/drop-tank-released-1", 0);
+      setprop("controls/armament/drop-tank-released-2", 0);
    }
 }
 

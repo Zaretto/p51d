@@ -56,6 +56,35 @@
             </binding>
         </action>
 
+        <!-- Battery Disconect switch-->
+        <action>
+            <name>Battery Disconect Switch On</name>
+            <button>0</button>
+            <x>-10</x>
+            <y>-50</y>
+            <w>50</w>
+            <h>50</h>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/master-bat</property>
+                <value> 1 </value>
+            </binding>
+        </action>
+
+        <action>
+            <name>Battery Disconect Switch Off</name>
+            <button>0</button>
+            <x>-10</x>
+            <y>-90</y>
+            <w>50</w>
+            <h>50</h>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/master-bat</property>
+                <value> 0 </value>
+            </binding>
+        </action>
+
     </actions>
 
   </instrument>

@@ -117,6 +117,18 @@
   </axis>
  </animation>
 
+ <animation>
+  <type>translate</type>
+  <object-name>MicButton</object-name>
+  <property>/instrumentation/comm/ptt</property>
+  <factor>-0.007</factor>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
 </PropertyList>
 
 

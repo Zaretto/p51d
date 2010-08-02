@@ -337,6 +337,39 @@
             <output>/controls/engines/engine/feed_tank</output>
         </pure_gain>
 
+    </channel>
 
-    </channel>   
+    <channel name="Drop Tanks">
+
+       <switch name="propulsion/tank[3]/logical-contents-lbs">
+           <default value="propulsion/tank[3]/contents-lbs"/>
+           <test logic="OR" value="0">
+              /controls/armament/drop-tank-released-1 == 1
+              /controls/armament/User-Selected-Stores LT 4
+              /controls/armament/User-Selected-Stores GT 5
+           </test>
+       </switch>
+
+       <pure_gain name="left-drop-tank">
+            <input> propulsion/tank[3]/logical-contents-lbs </input>
+            <gain> 1.0 </gain>
+            <output>propulsion/tank[3]/contents-lbs</output>
+       </pure_gain>
+
+       <switch name="propulsion/tank[4]/logical-contents-lbs">
+           <default value="propulsion/tank[4]/contents-lbs"/>
+           <test logic="OR" value="0">
+              /controls/armament/drop-tank-released-2 == 1
+              /controls/armament/User-Selected-Stores LT 4
+              /controls/armament/User-Selected-Stores GT 5
+           </test>
+       </switch>
+
+       <pure_gain name="right-drop-tank">
+            <input> propulsion/tank[4]/logical-contents-lbs </input>
+            <gain> 1.0 </gain>
+            <output>propulsion/tank[4]/contents-lbs</output>
+       </pure_gain>
+           
+    </channel>
 </system>

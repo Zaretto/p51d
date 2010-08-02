@@ -72,7 +72,7 @@
     <animation>
         <type>rotate</type>
         <object-name>starter-switch</object-name>
-        <property>/controls/engines/engine/starter</property>
+        <property>/fdm/jsbsim/systems/engine/starter</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -93,7 +93,57 @@
     <animation>
         <type>rotate</type>
         <object-name>starter-sw-guard</object-name>
-        <property>/controls/engines/engine/starter</property>
+        <property>/fdm/jsbsim/systems/engine/starter</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-90</dep>
+            </entry>
+        </interpolation>
+        <center>
+          <x-m>0.002</x-m>
+          <y-m>-0.02</y-m>
+          <z-m>0.02</z-m>
+        </center>
+        <axis>
+            <x1-m>0.002</x1-m>
+            <y1-m>-0.20</y1-m>
+            <z1-m>0.02</z1-m>
+            <x2-m>-0.02</x2-m>
+            <y2-m>0.20</y2-m>
+            <z2-m>0.02</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>primer-switch</object-name>
+        <property>/controls/engines/engine/primer-on</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>primer-sw-guard</object-name>
+        <property>/controls/engines/engine/primer-on</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
