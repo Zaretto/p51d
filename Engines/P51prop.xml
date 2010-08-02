@@ -22,10 +22,10 @@
   <gearratio>2.38</gearratio>
   <minpitch>23</minpitch>
   <maxpitch>65</maxpitch>
-  <minrpm>756</minrpm> <!-- 1800 to 3000 engine RPM -->
+  <minrpm>675</minrpm> <!-- 1800 to 3000 engine RPM -->
   <maxrpm>1260</maxrpm>
-  <ct_factor> 1.2 </ct_factor>
-  <cp_factor> 0.95 </cp_factor>
+  <ct_factor> 1.1 </ct_factor>
+  <cp_factor> 0.85 </cp_factor>
  
   <table name="C_THRUST" type="internal">
       <tableData>
