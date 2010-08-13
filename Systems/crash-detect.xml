@@ -2,11 +2,11 @@
 
 <system name="crash-detect">
 
-  <property value="0">systems/crash-detect/crashed</property>
+ <!-- <property value="0">systems/crash-detect/crashed</property>-->
 
   <channel name="Over-G">
 
-     <fcs_function name="systems/wing-load">
+     <fcs_function name="wing-load">
        <function>
           <product>
              <property>accelerations/Nz</property>
@@ -20,28 +20,30 @@
           Detect wing loads that exceed limits.
           Operational limits are +64,000 lbs and
           -32,000lbs.  IE. +8 or -4 Gs at 8,000 lbs
-          gross weight  This allows for a 10% margin
-          of safety before actual structural failure.
-          At higher gross weights the wing structure
-          will fail at lower G loadings.
+          gross weight  This allows for a 40% engineering
+          margin of safety before actual structural
+          failure.   At higher gross weights the wing
+          structure will fail at lower G loadings.
           -->
-     <switch name="systems/crash-detect/over-g-failure">
+     <switch name="over-g-failure">
           <test value="1">
-                systems/crash-detect/wing-load gt 70400
+                systems/crash-detect/wing-load gt 89600
           </test>
           <test value="1">
-                systems/crash-detect/wing-load lt -35200
+                systems/crash-detect/wing-load lt -34800
           </test>
           <output>systems/crash-detect/crashed</output>
+          <output> systems/crash-detect/over-g-failure </output>
      </switch>
 
-     <switch name="systems/crash-detect/over-g">
+     <switch name="over-g">
           <test value="1">
                 systems/crash-detect/wing-load gt 64000
           </test>
           <test value="1">
                 systems/crash-detect/wing-load lt -32000
           </test>
+          <output> systems/crash-detect/over-g </output>
      </switch>
 
   </channel>
@@ -63,12 +65,13 @@
 
   <channel name="impact-ground">
 
-     <switch name="systems/crash-detect/impact">
+     <switch name="impact">
           <test logic="AND" value="1">
                 position/h-agl-ft lt 1.0
                 simulation/sim-time-sec gt 1.0
           </test>
           <output>systems/crash-detect/crashed</output>
+          <output> systems/crash-detect/impact </output>
      </switch>
 
   </channel>

@@ -4,10 +4,11 @@
 #  - extending gear above maximum gear extension speed
 #  - exceeding Vna
 #  - exceeding structural G limits
+#  - compressability onset
 
 var checkFlaps = func(n) {
 
-    var flapsetting = n.getValue();
+var flapsetting = n.getValue();
     if (flapsetting == 0)
         return;
 
@@ -28,7 +29,7 @@ var checkFlaps = func(n) {
         (flapsetting > 0.75 and flapsetting < 0.95 and airspeed > 172) or
         (flapsetting > 0.95 and airspeed > 157.7)) {
             screen.log.write("Flaps damaged!");
-            setprop("/sim/failute-manager/controls/flaps/serviceable", 0);
+            setprop("/sim/failute-manager/controls/flight/flaps/serviceable", 0);
         }
 }
 
@@ -66,56 +67,79 @@ var checkG = func (n) {
     }
 }
 
+var checkCompressability = func (n) {
+
+    if (getprop("/sim/freeze/replay-state"))
+       return;
+
+    var compressabilityStength = n.getValue();
+
+    if (compressabilityStength > 0.0) {
+        if (compressStength <= 0.3) {
+           msg = "Initial on set of compressability.";
+        }
+        else {
+            if (compressabilityStength <= 0.6) {
+                msg = "Moderate compressability.";
+            }
+            else {
+               if (compressabilityStength > 0.6 ) {
+                  msg = "Severe compressability - structural failure possible.";
+               }
+            }
+        }
+        screen.log.write(msg);
+    }
+}
+
 # Set the listeners
+setlistener("fdm/jsbsim/systems/compressabilty/strength", checkCompressability);
 setlistener("controls/flight/flaps", checkFlaps);
 setlistener("controls/gear/gear-down", checkGear);
 setlistener("fdm/jsbsim/systems/crash-detect/over-g", checkG);
 
 # ====== VNE exceeded =======
 
-var VNETime = 0;
-var VNETimePlus = 0;
+var VnePlusTime = 0;
 
 var checkVNE = func {
 
-    if (getprop("/sim/freeze/replay-state"))
-    return;
+     if (getprop("/sim/freeze/replay-state"))
+       return;
 
-    if ((getprop("instrumentation/airspeed-indicator/indicated-airspeed") != nil) and
-      (getprop("instrumentation/airspeed-indicator/indicated-airspeed") > 439)) {
-        if (VNETime == 0)
-           screen.log.write("Airspeed exceeds Vne!");        
-        if (getprop("instrumentation/airspeed-indicator/indicated-airspeed") > 483) {
-            # elevator fails after 2 seconds above VNE + 10%
-            if (VNETime == 4) {
-                screen.log.write("Elevator Failure");
-                setprop("/sim/failute-manager/controls/elevator/serviceable", 0);
-            }
-            # rudder fails after 3 seconds above VNE + 10%
-            if (VNETime == 6) {
-                screen.log.write("Rudder Failure");
-                setprop("/sim/failute-manager/controls/rudder/serviceable", 0);
-            }
-            # ailerons fails after 4 seconds above VNE + 10%
-            if (VNETime == 8) {
-                screen.log.write("Rudder Failure");
-                setprop("/sim/failute-manager/controls/aileron/serviceable", 0);
-            }
-            # complete structural failure after 5 seconds above VNE + 10%
-            if (VNETime > 10) {
-                screen.log.write("Structural Failure");
-                setptop("/fdm/jsbsim/systems/crash-detect/crashed", 1);
-            }
-            VNETimePlus = VNETimePlus + 1;
+     if (getprop("instrumentation/airspeed-indicator/indicated-airspeed") != nil and
+         getprop("instrumentation/airspeed-indicator/indicated-airspeed") > 439) {
+         screen.log.write("Airspeed exceeds Vne!");
+     }
+     else {
+        VnePlusTime = 0;
+     }
+    if (getprop("instrumentation/airspeed-indicator/indicated-airspeed") != nil and
+        getprop("instrumentation/airspeed-indicator/indicated-airspeed") > 483) {
+        # elevator fails after 2 seconds above VNE + 10%
+        if (VnePlusTime == 4) {
+            screen.log.write("Elevator Failure");
+            setprop("/sim/failure-manager/controls/flight/elevator/serviceable", 0);
         }
-        else {
-            VNETimePlus = 0;
-            VNETime = VNETime + 1;
+        # rudder fails after 3 seconds above VNE + 10%
+        if (VnePlusTime == 6) {
+            screen.log.write("Rudder Failure");
+            setprop("/sim/failure-manager/controls/flight/rudder/serviceable", 0);
         }
+        # ailerons fails after 4 seconds above VNE + 10%
+        if (VnePlusTime == 8) {
+            screen.log.write("Aileron Failure");
+            setprop("/sim/failure-manager/controls/flight/aileron/serviceable", 0);
+        }
+        # complete structural failure after 5 seconds above VNE + 10%
+        if (VnePlusTime >= 10) {
+           screen.log.write("Structural Failure");
+            setprop("/fdm/jsbsim/systems/crash-detect/crashed", 1);
+        }
+        VnePlusTime = VnePlusTime + 1;
     }
     else {
-        VNETimePlus = 0;
-        VNETime = 0;
+        VnePlusTime = 0
     }
     settimer(checkVNE, 0.5);
 }

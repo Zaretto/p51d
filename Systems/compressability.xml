@@ -2,13 +2,9 @@
 
 <system name="compressability">
 
-  <property>systems/compressabilty/hertz</property>
-  <property>systems/compressabilty/sine_wave</property>
-  <property>systems/compressabilty/enabled</property>
-
   <channel name="Compressabilty">
 
-    <switch name="compressabilty enable">
+    <switch name="compressabilty enabled">
         <default value="0"/>
         <test value="1">
             velocities/mach gt 0.7
@@ -16,7 +12,7 @@
         <output>systems/compressabilty/enabled</output>
     </switch>
 
-   <scheduled_gain name="Frequency">
+   <scheduled_gain name="compressabilty hertz">
       <input>systems/compressabilty/enabled</input>
       <table>
         <independentVar lookup="row">velocities/mach</independentVar>
@@ -24,7 +20,7 @@
            0         0.0
            0.76      0.0
            0.78      0.1
-           0.9       0.5
+           0.9       0.3
         </tableData>
       </table>
       <output>systems/compressabilty/hertz</output>
@@ -38,7 +34,7 @@
            0           0.0
            0.76        0.0
            0.78        0.3
-           0.9         10.0
+           0.9         2.0
         </tableData>
       </table>
       <output>systems/compressabilty/strength</output>
