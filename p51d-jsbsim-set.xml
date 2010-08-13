@@ -360,6 +360,7 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
       <file>Aircraft/p51d/Nasal/stores.nas</file>
       <file>Aircraft/p51d/Nasal/limits.nas</file>
       <file>Aircraft/p51d/Nasal/engine-start.nas</file>
+      <file>Aircraft/p51d/Nasal/sputter.nas</file>
       <!--<file>Aircraft/p51d/Nasal/gear-doors.nas</file>-->
     </p51d>
   </nasal>
