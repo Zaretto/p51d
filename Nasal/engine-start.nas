@@ -45,4 +45,33 @@ var primer = func {
     settimer(primerTimer, 1.5, 1);
 }
 
+var throttleState = 0;
+
+var throttleMessage = func (n) {
+    var throttlePos = n.getValue();
+
+    if (!getprop("/engines/engine/running")) {
+        if (throttlePos >= 0.14 and throttlePos <= 0.18 and throttleState != 1) {
+            screen.log.write("Throttle in START position.");
+            throttleState = 1;
+        }
+        else {
+            if (throttlePos < 0.14 and throttleState != 2) {
+               screen.log.write("Throttle below START position.");
+               throttleState = 2
+            }
+            else {
+                if (throttlePos > 0.18 and throttleState != 3) {
+                screen.log.write("Throttle above START position");
+                throttleState = 3;
+                }
+            }
+        }
+    }
+    else
+        throttleState = 0;
+}
+
 setlistener("controls/engines/engine/primer-on", primer);
+
+setlistener("/controls/engines/engine/throttle", throttleMessage);

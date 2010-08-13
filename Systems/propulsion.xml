@@ -331,7 +331,7 @@
             <output>propulsion/tank[4]/priority</output>
         </pure_gain>           
 
-        <pure_gain name="tank-selected">
+        <pure_gain name="propulsion/current_feed_tank">
             <input> /controls/fuel/tank-selector </input>
             <gain> 1.0 </gain>
             <output>/controls/engines/engine/feed_tank</output>

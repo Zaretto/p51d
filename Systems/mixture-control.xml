@@ -36,36 +36,28 @@ control mixture at all altitudes and power settings.
            <test logic="AND" value="1.0">
                /controls/engines/engine/primer-time GE 1.0
                /controls/engines/engine/primer-time LE 6.0            <!-- flooded -->
-               /fdm/jsbsim/systems/engine/coolant-temp-degC GE 40     <!-- hot engine -->
+               /fdm/jsbsim/systems/engine/coolant-temp-degC GT 40     <!-- hot engine -->
            </test>
         </switch>
               
         <switch name="mixture/position">
-            <default value= "10000" />
+            <default value= "10000" />  <!-- cut off -->
             <test logic="AND" value="atmosphere/delta">  <!-- emergency full rich -->
                 fcs/mixture-cmd-norm  GE 0.90
                 /engines/engine/running GT 0.90
-            </test> 
-            <!-- <test  logic="AND" value="10000"> --> <!-- cut off -->
-            <!--    fcs/throttle-cmd-norm  LE 0.1
-                fcs/mixture-cmd-norm  LE 0.1 
-            </test> -->
+                systems/engine/primed LE 0.10
+            </test>
             <test logic="AND" value="1.0"> <!-- startup -->
                 fcs/throttle-cmd-norm  GE 0.14
                 fcs/throttle-cmd-norm  LE 0.18
                 fcs/mixture-cmd-norm   LE 0.1
                 systems/engine/primed  GE 0.90
             </test>
-            <test logic="AND" value="1.053">  <!-- lean -->
-                fcs/mixture-cmd-norm  LE 0.1
-                fcs/throttle-cmd-norm  GT 0.1
-                /engines/engine/running GT 0.90
-            </test> -->
             <test logic="AND" value="1.0">    <!-- normal run -->
                 fcs/mixture-cmd-norm  LT 0.90
                 fcs/mixture-cmd-norm  GT 0.1
-                <!-- /engines/engine/running GT 0.90
-                systems/engine/primed LE 0.10 -->
+                /engines/engine/running GT 0.90
+                systems/engine/primed LE 0.10
             </test> 
         </switch>
 
@@ -83,5 +75,5 @@ control mixture at all altitudes and power settings.
         </fcs_function>
         
   </channel>
-    
+
 </system>
