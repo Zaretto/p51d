@@ -56,8 +56,8 @@ control mixture at all altitudes and power settings.
             <test logic="AND" value="1.0">    <!-- normal run -->
                 fcs/mixture-cmd-norm  LT 0.90
                 fcs/mixture-cmd-norm  GT 0.1
-                /engines/engine/running GT 0.90
-                systems/engine/primed LE 0.10
+               <!-- /engines/engine/running GT 0.90
+                systems/engine/primed LE 0.10 -->
             </test> 
         </switch>
 

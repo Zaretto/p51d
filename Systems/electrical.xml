@@ -8,6 +8,7 @@
     <property value="0">propulsion/tank[3]/priority</property>
     <property value="0">propulsion/tank[4]/priority</property>
     <property value="0">systems/right-flor-gain</property>
+    <property value="0.0">systems/gear/inner-doors</property>
 
     <channel name="gear doors">
 

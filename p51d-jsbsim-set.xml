@@ -17,6 +17,7 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 
   <description>P-51D (JSBSim)</description>
   <author>Jim Wilson, Jon Berndt and Hal V. Engel (JSBSim FDM)</author>
+  <status>early production</status>
    
   <flight-model>jsb</flight-model>
   <aero>p51d-jsbsim</aero>
@@ -95,18 +96,11 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
    </config>
   </view>
 
- <autopilot>
-   <config>
-     <min-climb-speed-kt type="float">120.0</min-climb-speed-kt>
-     <best-climb-speed-kt type="float">148.0</best-climb-speed-kt>
-     <target-climb-rate-fpm type="float">1000.0</target-climb-rate-fpm>
-     <target-descent-rate-fpm type="float">2000.0</target-descent-rate-fpm>
-     <elevator-adj-factor type="float">4000.0</elevator-adj-factor>
-     <integral-contribution type="float">0.01</integral-contribution>
-     <zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
-     <zero-pitch-trim-full-throttle type="float">0.14</zero-pitch-trim-full-throttle>
-   </config>
- </autopilot>
+  <systems>
+    <autopilot>
+        <path>Aircraft/p51d/Systems/autopilot.xml</path>
+    </autopilot>
+  </systems>
 
   <hud>
    <enable3d>false</enable3d>
@@ -361,7 +355,8 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
       <file>Aircraft/p51d/Nasal/limits.nas</file>
       <file>Aircraft/p51d/Nasal/engine-start.nas</file>
       <file>Aircraft/p51d/Nasal/sputter.nas</file>
-      <!--<file>Aircraft/p51d/Nasal/gear-doors.nas</file>-->
+      <file>Aircraft/p51d/Nasal/climbrate.nas</file>
+      <file>Aircraft/p51d/Nasal/gear-doors.nas</file>
     </p51d>
   </nasal>
 

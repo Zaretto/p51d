@@ -36,11 +36,11 @@
         <independentVar lookup="row">aero/alpha-deg</independentVar>
         <independentVar lookup="column">velocities/ve-kts</independentVar>
         <tableData>
-                       100   130    200
+                       100   120    140
            0           0.0   0.0    0.0
            10.4        0.0   0.0    0.0
-           10.5        0.3   0.01   0.0
-           16.0        1.5   0.05   0.0
+           10.5        0.2   0.001  0.0
+           16.0        0.5   0.002  0.0
         </tableData>
       </table>
       <output>systems/alpha_buffet/strength</output>

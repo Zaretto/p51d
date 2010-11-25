@@ -75,7 +75,7 @@ var checkCompressability = func (n) {
     var compressabilityStength = n.getValue();
 
     if (compressabilityStength > 0.0) {
-        if (compressStength <= 0.3) {
+        if (compressabilityStength <= 0.3) {
            msg = "Initial on set of compressability.";
         }
         else {

@@ -23,15 +23,15 @@
   <interpolation>
    <entry>
     <ind>-1.0</ind>
-    <dep>-50</dep>
+    <dep>-47</dep>
    </entry>
    <entry>
-    <ind>0</ind>
-    <dep>21</dep>
+    <ind>0.474</ind>
+    <dep>19</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
-    <dep>50</dep>
+    <dep>45</dep>
    </entry>
   </interpolation>
   <axis>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<!-- P-51D Mustang by Jim Wilson -->
+<!-- JSBSim based on YASim P-51D Mustang by Jim Wilson 
+     JSBSIm FDM by Hal V. Engel -->
 
 <PropertyList>
 
@@ -571,6 +572,61 @@
    <z>0.0</z>
   </axis>
  </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>Trigger2</object-name>
+  <property>controls/armament/trigger2</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>-0.01</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Trigger2</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>-10</factor>
+  <center>
+   <x-m>3.94</x-m>
+   <y-m>0.00</y-m>
+   <z-m>-0.22</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Trigger2</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-10</factor>
+  <center>
+   <x-m>3.94</x-m>
+   <y-m>0.00</y-m>
+   <z-m>-0.22</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation> 
 
  <animation>
   <type>rotate</type>
@@ -854,18 +910,14 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftInnerGearCover</object-name>
-  <property>gear/gear[0]/position-norm</property>
+  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>0</dep>
+    <dep>03</dep>
    </entry>
    <entry>
-    <ind>0.33</ind>
-    <dep>-90</dep>
-   </entry>
-   <entry>
-    <ind>1.00</ind>
+    <ind>1.0</ind>
     <dep>-90</dep>
    </entry>
   </interpolation>
@@ -1005,18 +1057,14 @@
  <animation>
   <type>rotate</type>
   <object-name>RightInnerGearCover</object-name>
-  <property>gear/gear[1]/position-norm</property>
+  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
     <dep>0</dep>
    </entry>
    <entry>
-    <ind>0.33</ind>
-    <dep>-90</dep>
-   </entry>
-   <entry>
-    <ind>1.00</ind>
+    <ind>1.0</ind>
     <dep>-90</dep>
    </entry>
   </interpolation>
@@ -1239,7 +1287,7 @@
   <object-name>LeftAileron</object-name>
   <object-name>LeftAileronEdge</object-name>
   <property>surface-positions/left-aileron-pos-norm</property>
-  <factor>15.0</factor>
+  <factor>10.0</factor>
 
   <center>
    <x-m>4.325000</x-m>

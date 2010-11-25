@@ -15,6 +15,7 @@ March 2003 Jim Wilson, jimw@kelcomaine.com
 
   <description>P-51D</description>
   <author>Jim Wilson</author>
+  <status>production depreciated</status>
   
   <flight-model>yasim</flight-model>
   <aero>p51d</aero>

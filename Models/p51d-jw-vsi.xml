@@ -26,15 +26,15 @@
    </entry>
    <entry>
     <ind>-4000</ind>
-    <dep>139</dep>
+    <dep>150</dep>
    </entry>
    <entry>
     <ind>-2000</ind>
-    <dep>83</dep>
+    <dep>120</dep>
    </entry>
    <entry>
     <ind>-1000</ind>
-    <dep>48</dep>
+    <dep>60</dep>
    </entry>
    <entry>
     <ind>0</ind>
@@ -42,15 +42,15 @@
    </entry>
    <entry>
     <ind>1000</ind>
-    <dep>-48</dep>
+    <dep>-60</dep>
    </entry>
    <entry>
     <ind>2000</ind>
-    <dep>-83</dep>
+    <dep>-120</dep>
    </entry>
    <entry>
     <ind>4000</ind>
-    <dep>-139</dep>
+    <dep>-150</dep>
    </entry>
    <entry>
     <ind>6000</ind>

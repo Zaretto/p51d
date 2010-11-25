@@ -14,7 +14,7 @@
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.074</delay>
+    <delay>0.072</delay>
     <count>300</count>
     <x-offset> -11.3 </x-offset>
     <y-offset>-6.6</y-offset>
