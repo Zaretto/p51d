@@ -10,7 +10,8 @@ var climbRate = func {
     pos = pos + 1;
     if (pos > 9)
        pos = 0;
-    total = total - rates[pos];
+    if (rates[pos] != nil)
+       total = total - rates[pos];
     rates[pos] = getprop("velocities/vertical-speed-fpm");
     if (rates[pos] != nil) {
        total = total + rates[pos];
