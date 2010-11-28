@@ -9,11 +9,11 @@
     <property value="0">propulsion/tank[4]/priority</property>
     <property value="0">systems/right-flor-gain</property>
     <property value="0.0">systems/gear/inner-doors</property>
-    <property> /controls/armament/User-Selected-Stores </property>
+    <!--  <property> /controls/armament/User-Selected-Stores </property> -->
     <property> /controls/engines/engine/blower-light-check </property>
     <property> /controls/lighting/left-flor-pos </property>
     <property> /controls/armament/trigger </property>
-    <property> /ai/submodels/submodel[8]/count </property>
+    <!-- <property> /ai/submodels/submodel[8]/count </property>
     <property> /ai/submodels/submodel[9]/count </property>
     <property> /ai/submodels/submodel[10]/count </property>
     <property> /ai/submodels/submodel[11]/count </property>
@@ -22,7 +22,7 @@
     <property> /ai/submodels/submodel[14]/count </property>
     <property> /ai/submodels/submodel[15]/count </property>
     <property> /ai/submodels/submodel[16]/count </property>
-    <property> /ai/submodels/submodel[17]/count </property>
+    <property> /ai/submodels/submodel[17]/count </property>  -->
     <property> /controls/armament/rocket[1]/trigger </property>
     <property> /controls/armament/rocket[2]/trigger </property>
     <property> /controls/armament/rocket[3]/trigger </property>
@@ -113,9 +113,32 @@
           </test>
        </switch>
 
+        <fcs_function name="systems/lighting/flor-instrument-right">
+          <function>
+              <product>
+                 <value> 0.5 </value>
+                 <property>systems/lighting/right-flor-switch-gain</property>
+              </product>
+          </function>
+          <output>/controls/lighting/instruments-norm</output>
+        </fcs_function>
+
+        <fcs_function name="systems/lighting/flor-instrument-left">
+          <function>
+              <product>
+                 <value> 0.5 </value>
+                 <property>systems/lighting/right-flor-switch-gain</property>
+              </product>
+          </function>
+          <output>/controls/lighting/instruments-norm</output>
+        </fcs_function>
+
         <fcs_function name="systems/lighting/flor-instrument">
           <function>
-              <property>systems/lighting/right-flor-switch-gain</property>
+              <product>
+                 <property> systems/lighting/flor-instrument-left </property>
+                 <property>systems/lighting/flor-instrument-right</property>
+              </product>
           </function>
           <output>/controls/lighting/instruments-norm</output>
         </fcs_function>
