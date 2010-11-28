@@ -15,6 +15,9 @@
     <property> ap/throttle-cmd-norm </property>
     <property value="0">/controls/fuel/tank-selector</property>
     <property> /controls/engines/engine/throttle </property>
+    <property> /controls/armament/drop-tank-released-1 </property>
+    <property> /controls/armament/drop-tank-released-2 </property>
+    <property> /controls/armament/User-Selected-Stores </property>
         
    <channel name="Boost">
    
@@ -296,7 +299,7 @@
 
       <pure_gain name="tank1-selected">
             <input> systems/fuel/tank[1]/selected </input>
-            <gain> /systems/fuel-pressure </gain>
+            <gain> systems/fuel-pressure </gain>
             <clipto>
               <min> 0</min>
               <max> 1</max>
