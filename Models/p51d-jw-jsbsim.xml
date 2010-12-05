@@ -1631,9 +1631,21 @@
   </emission>
  </animation>
 
+  <animation>
+  <type>material</type>
+  <object-name>ReostatPlate</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.25</red>
+    <green>0.12</green>
+    <blue>0.12</blue>
+  </emission>
+ </animation>
+
  <animation>
   <type>material</type>
   <object-name>Stick</object-name>
+  <object-name> Trigger2 </object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>
@@ -1861,5 +1873,54 @@
         <property>/fdm/jsbsim/systems/armament/inner-pylons</property>
   </condition>
  </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>CockpitFloor-black</object-name>
+  <condition>
+      <property>/sim/fdm-initialized</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>CockpitFloor-Wood</object-name>
+  <condition>
+     <not>
+       <property>/sim/fdm-initialized</property>
+     </not>
+  </condition>
+ </animation>
+
+ <!-- rain animations -->
+
+<!--    <animation>
+        <type>select</type>
+        <nopreview/>
+        <object-name>Canopy</object-name>
+        <object-name>CanopyRail_1</object-name>
+        <object-name>Windscreen</object-name>
+        <object-name>Windscreen-Frame</object-name>
+        <condition>
+            <greater-than>
+                <property>sim/model/rain/raining-norm</property>
+                <value>0.01</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>Canopy</object-name>
+        <object-name>CanopyRail_1</object-name>
+        <object-name>Windscreen</object-name>
+        <object-name>Windscreen-Frame</object-name>
+        <condition>
+            <less-than-equals>
+                <property>sim/model/rain/raining-norm</property>
+                <value>0.01</value>
+            </less-than-equals>
+        </condition>
+    </animation> -->
 
 </PropertyList>

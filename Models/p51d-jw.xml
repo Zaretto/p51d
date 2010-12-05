@@ -1433,5 +1433,23 @@
       <property>/controls/armament/gunsight/power-on</property>
   </condition>
  </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>CockpitFloor-Wood</object-name>
+  <condition>
+      <property>/sim/fdm-initialized</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>CockpitFloor-black</object-name>
+  <condition>
+      <not>
+         <property>/sim/fdm-initialized</property>
+      </not>
+  </condition>
+ </animation>
  
 </PropertyList>
