@@ -647,7 +647,75 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>BootTransition</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>-10</factor>
+  <center>
+   <x-m>3.94</x-m>
+   <y-m>0.00</y-m>
+   <z-m>-0.22</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>BootTop</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>-10</factor>
+  <center>
+   <x-m>3.94</x-m>
+   <y-m>0.00</y-m>
+   <z-m>-0.22</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>Stick</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-10</factor>
+  <center>
+   <x-m>3.94</x-m>
+   <y-m>0.00</y-m>
+   <z-m>-0.22</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>BootTransition</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-10</factor>
+  <center>
+   <x-m>3.94</x-m>
+   <y-m>0.00</y-m>
+   <z-m>-0.22</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>BootTop</object-name>
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
@@ -914,7 +982,7 @@
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>03</dep>
+    <dep>0.2</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
@@ -924,12 +992,12 @@
   <center>
    <x-m>3.10</x-m>
    <y-m>-0.07</y-m>
-   <z-m>-0.85</z-m>
+   <z-m>-0.8</z-m>
   </center>
   <axis>
    <x>-1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
+   <y>-0.02</y>
+   <z>0.05</z>
   </axis>
  </animation>
 
@@ -1065,18 +1133,18 @@
    </entry>
    <entry>
     <ind>1.0</ind>
-    <dep>-90</dep>
+    <dep>45</dep>
    </entry>
   </interpolation>
   <center>
    <x-m>3.10</x-m>
    <y-m>0.07</y-m>
-   <z-m>-0.85</z-m>
+   <z-m>-0.8</z-m>
   </center>
   <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
+   <x>-1.0</x>
+   <y>0.02</y>
+   <z>0.05</z>
   </axis>
  </animation>
 
@@ -1639,6 +1707,39 @@
     <red>0.25</red>
     <green>0.12</green>
     <blue>0.12</blue>
+  </emission>
+ </animation>
+
+  <animation>
+  <type>material</type>
+  <object-name>BootTransition</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.25</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>BootTop</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.25</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
+  <animation>
+  <type>material</type>
+  <object-name>BootBody</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.25</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
   </emission>
  </animation>
 
