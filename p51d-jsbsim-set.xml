@@ -17,7 +17,13 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 
   <description>P-51D (JSBSim)</description>
   <author>Jim Wilson, Jon Berndt and Hal V. Engel</author>
-  <status>FDM: 5, Systems: 4, Model: 3, Cockpit: 3</status>
+  <status>
+     <FDM type="int">5</FDM>
+     <systems type="int">4</systems>
+     <model type="int">3</model>
+     <cockpit type="int">3</cockpit>
+  </status>
+
    
   <flight-model>jsb</flight-model>
   <aero>p51d-jsbsim</aero>
