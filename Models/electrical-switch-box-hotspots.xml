@@ -42,8 +42,8 @@
         <action>
             <name>rotate right flor knob</name>
             <button>0</button>
-            <x>-120</x>
-            <y>60</y>
+            <x>-70</x>
+            <y>65</y>
             <w>180</w>
             <h>150</h>
             <binding>
@@ -60,7 +60,7 @@
         <action>
             <name>Battery Disconect Switch On</name>
             <button>0</button>
-            <x>-10</x>
+            <x>0</x>
             <y>-50</y>
             <w>50</w>
             <h>50</h>
@@ -74,7 +74,7 @@
         <action>
             <name>Battery Disconect Switch Off</name>
             <button>0</button>
-            <x>-10</x>
+            <x>0</x>
             <y>-90</y>
             <w>50</w>
             <h>50</h>

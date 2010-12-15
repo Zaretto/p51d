@@ -188,19 +188,19 @@
  <panel>
   <path>Aircraft/p51d/Models/electrical-switch-box-hotspots.xml</path>
   <bottom-left>
-   <x-m>3.80</x-m>
+   <x-m>3.75</x-m>
    <y-m>0.285</y-m>
-   <z-m>-0.0</z-m>
+   <z-m>-0.02</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>4.2</x-m>
+   <x-m>4.15</x-m>
    <y-m>0.29</y-m>
-   <z-m>-0.0</z-m>
+   <z-m>-0.02</z-m>
   </bottom-right>
   <top-left>
-   <x-m>3.80</x-m>
+   <x-m>3.75</x-m>
    <y-m>0.285</y-m>
-   <z-m> 0.45</z-m>
+   <z-m> 0.43</z-m>
   </top-left>
  </panel>
 
@@ -510,13 +510,23 @@
   </offsets>
  </model>
 
-  <model>
+ <model>
   <name>ELECTRICAL_PANEL</name>
   <path>Aircraft/p51d/Models/electrical-panel.xml</path>
   <offsets>
-   <x-m>4.08</x-m>
-   <y-m>0.29</y-m>
-   <z-m>0.18</z-m>
+   <x-m>4.03</x-m>
+   <y-m>0.31</y-m>
+   <z-m>0.12</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OX REGULATOR</name>
+  <path>Aircraft/Instruments-3d/A-14A-OxReg/A-14A.ac</path>
+  <offsets>
+   <x-m>3.41</x-m>
+   <y-m>0.35</y-m>
+   <z-m>0.22</z-m>
   </offsets>
  </model>
 
@@ -524,9 +534,9 @@
   <name>LEFT_SWITCH_PANEL</name>
   <path>Aircraft/p51d/Models/left-switch-box.xml</path>
   <offsets>
-   <x-m>4.1</x-m>
-   <y-m>-0.38</y-m>
-   <z-m>0.26</z-m>
+   <x-m>4.06</x-m>
+   <y-m>-0.4</y-m>
+   <z-m>0.22</z-m>
   </offsets>
  </model>
 

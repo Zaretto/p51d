@@ -19,8 +19,8 @@
         </interpolation>
         <center>
           <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
+          <y-m>0.017</y-m>
+          <z-m>0.037</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -45,8 +45,8 @@
         </interpolation>
         <center>
           <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
+          <y-m>0.017</y-m>
+          <z-m>0.037</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -71,8 +71,8 @@
         </interpolation>
         <center>
           <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
+          <y-m>0.017</y-m>
+          <z-m>0.037</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -97,8 +97,8 @@
         </interpolation>
         <center>
           <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
+          <y-m>0.017</y-m>
+          <z-m>0.037</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -127,8 +127,8 @@
         </interpolation>
         <center>
           <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
+          <y-m>0.017</y-m>
+          <z-m>0.037</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -157,8 +157,8 @@
         </interpolation>
         <center>
           <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
+          <y-m>0.017</y-m>
+          <z-m>0.037</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -188,7 +188,7 @@
         <center>
           <x-m>0.000</x-m>
           <y-m>0.015</y-m>
-          <z-m>-0.045</z-m>
+          <z-m>-0.023</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -218,7 +218,7 @@
         <center>
           <x-m>0.000</x-m>
           <y-m>0.015</y-m>
-          <z-m>-0.045</z-m>
+          <z-m>-0.023</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -248,7 +248,7 @@
         <center>
           <x-m>0.000</x-m>
           <y-m>0.015</y-m>
-          <z-m>-0.045</z-m>
+          <z-m>-0.023</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -280,7 +280,7 @@
             </entry>
         </interpolation>
         <center>
-          <x-m>-0.108</x-m>
+          <x-m>-0.125</x-m>
           <y-m>-0.0</y-m>
           <z-m>0.089</z-m>
         </center>
