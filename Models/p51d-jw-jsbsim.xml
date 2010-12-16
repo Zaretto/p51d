@@ -514,9 +514,9 @@
   <name>ELECTRICAL_PANEL</name>
   <path>Aircraft/p51d/Models/electrical-panel.xml</path>
   <offsets>
-   <x-m>4.03</x-m>
-   <y-m>0.31</y-m>
-   <z-m>0.12</z-m>
+   <x-m>4.028</x-m>
+   <y-m>0.32</y-m>
+   <z-m>0.13</z-m>
   </offsets>
  </model>
 
@@ -525,8 +525,18 @@
   <path>Aircraft/Instruments-3d/A-14A-OxReg/A-14A.ac</path>
   <offsets>
    <x-m>3.41</x-m>
-   <y-m>0.35</y-m>
-   <z-m>0.22</z-m>
+   <y-m>0.325</y-m>
+   <z-m>0.24</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>AN/APS-13 PANEL</name>
+  <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13.ac</path>
+  <offsets>
+   <x-m>4.103</x-m>
+   <y-m>0.335</y-m>
+   <z-m>0.13</z-m>
   </offsets>
  </model>
 
@@ -535,7 +545,7 @@
   <path>Aircraft/p51d/Models/left-switch-box.xml</path>
   <offsets>
    <x-m>4.06</x-m>
-   <y-m>-0.4</y-m>
+   <y-m>-0.395</y-m>
    <z-m>0.22</z-m>
   </offsets>
  </model>
@@ -1143,7 +1153,7 @@
    </entry>
    <entry>
     <ind>1.0</ind>
-    <dep>45</dep>
+    <dep>90</dep>
    </entry>
   </interpolation>
   <center>
@@ -1687,6 +1697,49 @@
 
  <animation>
   <type>material</type>
+  <object-name>right-frame-2</object-name>
+  <object-name>aps-13-mount</object-name>
+  <object-name>floor-center</object-name>
+  <object-name>Fuel-line</object-name>
+  <object-name>Floor-Center-base</object-name>
+  <object-name>LeftCockpitConsole</object-name>
+  <object-name>land-gear-placard</object-name>
+  <object-name>gear-forward-lever</object-name>
+  <object-name>gear-rear-lever</object-name>
+  <object-name>SeatBottom</object-name>
+  <object-name>SeatBack</object-name>
+  <object-name>RightRudder1</object-name>
+  <object-name>LeftRudder2</object-name>
+  <object-name>LeftRudder1</object-name>
+  <object-name>RightRudder2</object-name>
+  <object-name>accumlator</object-name>
+  <object-name>RFlourlLghtControl-1</object-name>
+  <object-name>breaker-reset</object-name>
+  <object-name>A14A-Ox-pipe</object-name>
+  <object-name>A14A-Body</object-name>
+  <object-name>A14A-Alt-selector</object-name>
+  <object-name>A14A-Hose-pipe</object-name>
+  <object-name>A14A-Connector-elbow</object-name>
+  <object-name>A14A-connector-ring</object-name>
+  <object-name>A14A-Ox-inlet-coupler</object-name>
+  <object-name>A14A-Ox-Con-nut</object-name>
+  <object-name>A14A-normal-100-pct</object-name>
+  <object-name>A14A-flang-3</object-name>
+  <object-name>A14A-flang-1</object-name>
+  <object-name>A14A-flang-2</object-name>
+  <object-name>A14A-Ox-inlet-flang</object-name>
+  <object-name>A14A-plug-flang</object-name>
+  <object-name>A14A-blink-con</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.25</red>
+    <green>0.12</green>
+    <blue>0.12</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
   <object-name>ReostatKnob</object-name>
   <object-name>Dash</object-name>
   <object-name>LeftCockpitWall</object-name>
@@ -1701,11 +1754,48 @@
   <object-name>CoolantSticker</object-name>
   <object-name>CarbHeatSticker</object-name>
   <object-name>CockpitFloor</object-name>
+  <object-name>APS-13-plate</object-name>
+  <object-name>aps-13-lamp</object-name>
+  <object-name>aps-13-power-sw</object-name>
+  <object-name>aps-13-test-sw-plate</object-name>
+  <object-name>asp-13-audio</object-name>
+  <object-name>aps-13-test-sw</object-name>
+  <object-name>aps-13-cable</object-name>
+  <object-name>aps-13-cable-hole</object-name>
+  <object-name>right-flor-body</object-name>
+  <object-name>right-flor-front</object-name>
+  <object-name>left-flor-body</object-name>
+  <object-name>left-flor-front</object-name>
+  <object-name>air-placard</object-name>
+  <object-name>hot-air</object-name>
+  <object-name>ram-air</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>
     <green>0.12</green>
     <blue>0.12</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>right-flor-bracket-2</object-name>
+  <object-name>right-flor-bracket-3</object-name>
+  <object-name>right-flor-bracket-1</object-name>
+  <object-name>right-flor-bracket-5</object-name>
+  <object-name>right-flor-bracket-4</object-name>
+  <object-name>rght-flor-cord</object-name>
+  <object-name>left-flor-bracket-2</object-name>
+  <object-name>left-flor-bracket-3</object-name>
+  <object-name>left-flor-bracket-1</object-name>
+  <object-name>left-flor-bracket-5</object-name>
+  <object-name>left-flor-bracket-4</object-name>
+  <object-name>left-flor-cord</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.06</red>
+    <green>0.03</green>
+    <blue>0.03</blue>
   </emission>
  </animation>
 
@@ -1756,7 +1846,7 @@
  <animation>
   <type>material</type>
   <object-name>Stick</object-name>
-  <object-name> Trigger2 </object-name>
+  <object-name>Trigger2</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>
