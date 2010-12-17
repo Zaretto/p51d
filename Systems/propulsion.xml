@@ -18,6 +18,7 @@
     <property> /controls/armament/drop-tank-released-1 </property>
     <property> /controls/armament/drop-tank-released-2 </property>
     <property> /controls/armament/User-Selected-Stores </property>
+    <property>ap/cooling-cmd-out</property>
         
    <channel name="Boost">
    
@@ -159,21 +160,16 @@
     -->
     
     <channel name="Engine Gauges">
-       
-       <fcs_function name="systems/engine/oil-temp-degC">
+
+      <fcs_function name="systems/engine/oil-temp-degC">
         <function>
-            <table>    
+            <table>
             <independentVar lookup="row">/engines/engine/oil-temperature-degf</independentVar>
                 <tableData>
                     32     0.0
-                    70     19
-                    100    37
-                    300    55
-                    400    65
-                    650    85
-                    750    105
+                    212    136
                 </tableData>
-            </table>  
+            </table>
         </function>
       </fcs_function>
     
@@ -200,10 +196,9 @@
                 <tableData>
                     -70    -56.7
                     32      0.0
-                    300     80
-                    500     100
-                    800     160 
-                </tableData>         
+                    450    120
+                    900    248
+                </tableData>
             </table>
         </function>
       </fcs_function>

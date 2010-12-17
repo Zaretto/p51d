@@ -34,7 +34,7 @@
  <animation>
   <type>rotate</type>
   <object-name>NeedleOilPress</object-name>
-  <property>/fdm/jsbsim/systems/engine/oil-pressure-psi</property>
+  <property>/engines/engine/oil-pressure-psi</property>
   <min>0</min>
   <max>200</max>
   <interpolation>

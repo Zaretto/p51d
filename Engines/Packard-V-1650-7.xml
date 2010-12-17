@@ -16,7 +16,7 @@
     <bore unit="IN"> 5.4  </bore> 
     <stroke unit="IN"> 6.0 </stroke>
     <cylinders> 12 </cylinders>
-    <cylinder-head-mass unit="LBS"> 40 </cylinder-head-mass>
+    <cylinder-head-mass unit="LBS"> 120 </cylinder-head-mass>
     <compression-ratio> 6 </compression-ratio>
     <sparkfaildrop> 0.1 </sparkfaildrop>
     

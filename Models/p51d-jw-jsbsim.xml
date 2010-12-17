@@ -1479,7 +1479,7 @@
   <type>rotate</type>
   <object-name>Shutter</object-name>
   <property>fdm/jsbsim/systems/cooling/radiator-door-pos</property>
-  <factor>20.0</factor>
+  <factor>15.0</factor>
   <center>
    <x-m>6.220</x-m>
    <y-m>0.000</y-m>
@@ -1496,7 +1496,7 @@
   <type>rotate</type>
   <object-name>OilShutter</object-name>
   <property>fdm/jsbsim/systems/cooling/oil-door-pos</property>
-  <factor>20.0</factor>
+  <factor>8v.0</factor>
   <center>
    <x-m>5.3</x-m>
    <y-m>0.000</y-m>
