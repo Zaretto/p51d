@@ -169,7 +169,7 @@
             <independentVar lookup="row">/engines/engine/oil-temperature-degf</independentVar>
                 <tableData>
                     32     0.0
-                    212    120
+                    212    125
                 </tableData>
             </table>
         </function>
@@ -198,8 +198,8 @@
                 <tableData>
                     -70    -56.7
                     32      0.0
-                    450    120
-                    900    248
+                    400    120
+                    800    248
                 </tableData>
             </table>
         </function>
