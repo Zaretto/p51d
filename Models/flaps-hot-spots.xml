@@ -4,7 +4,7 @@
 <!-- This part should be the same for any 3D panel.  Customize the actions section -->
 <PropertyList>
 
- <name>P51D Panel Hotspots elevator trim wheels</name>
+ <name>P51D Panel Hotspots flaps lever hotspots</name>
  <background>Aircraft/p51d/Models/transparent-bg.rgb</background>
  <w>1024</w>
  <h>768</h>
@@ -38,7 +38,7 @@
 
     <actions>
 
-        <!-- elevator trims-->
+        <!-- flaps lever -->
             <action>
               <name>flaps-down</name>
               <button>0</button>

@@ -19,6 +19,8 @@
     <property> /controls/armament/drop-tank-released-2 </property>
     <property> /controls/armament/User-Selected-Stores </property>
     <property>ap/cooling-cmd-out</property>
+    <property value="1">systems/engine/ram-air-control</property>
+    <property value="0">systems/engine/hot-air-control</property>
         
    <channel name="Boost">
    
@@ -167,7 +169,7 @@
             <independentVar lookup="row">/engines/engine/oil-temperature-degf</independentVar>
                 <tableData>
                     32     0.0
-                    212    136
+                    212    120
                 </tableData>
             </table>
         </function>
@@ -391,7 +393,23 @@
         </function>
         <output>/velocities/vertical-speed-fpm</output>
       </fcs_function>
-          
 
     </channel>
+
+    <channel name="Induction Air">
+
+       <pure_gain name="Ram-or-filterd-air">
+            <input> systems/engine/ram-air-control </input>
+            <gain> 0.993 </gain>
+            <output>propulsion/engine/ram-air-factor</output>
+       </pure_gain>
+
+       <!--<pure_gain name="Hot-Air">
+          <input>systems/engine/hot-air</input>
+          <gain>??? </gain>
+          <output>how knows?</output>
+       </pure_gain>-->
+
+    </channel>
+    
 </system>

@@ -166,6 +166,25 @@
   </top-left>
  </panel>
 
+  <panel>
+  <path>Aircraft/p51d/Models/induction-air-hotspots.xml</path>
+  <bottom-left>
+   <x-m>4.365</x-m>
+   <y-m>-0.357</y-m>
+   <z-m>0.0215</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>4.365</x-m>
+   <y-m>-0.307</y-m>
+   <z-m>0.0215</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>4.085</x-m>
+   <y-m>-0.347</y-m>
+   <z-m> 0.065</z-m>
+  </top-left>
+ </panel>
+
  <panel>
   <path>Aircraft/p51d/Models/fuel-system-hotspots.xml</path>
   <bottom-left>
@@ -1506,7 +1525,7 @@
   <type>rotate</type>
   <object-name>OilShutter</object-name>
   <property>fdm/jsbsim/systems/cooling/oil-door-pos</property>
-  <factor>8v.0</factor>
+  <factor>8.0</factor>
   <center>
    <x-m>5.3</x-m>
    <y-m>0.000</y-m>
@@ -1670,6 +1689,62 @@
    <z-m>-1.060</z-m>
   </center>
  </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>ram-air</object-name>
+  <property>fdm/jsbsim/systems/engine/ram-air-control</property>
+  <min>0</min>
+  <max>1</max>
+  <interpolation>
+   <entry>
+    <ind>1</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>40</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>4.17</x-m>
+   <y-m>0.000</y-m>
+   <z-m>-0.02</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>hot-air</object-name>
+  <property>controls/anti-ice/engine/inlet-heat</property>
+  <min>0</min>
+  <max>1</max>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>22</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>4.17</x-m>
+   <y-m>0.000</y-m>
+   <z-m>-0.02</z-m>
+  </center>
+ </animation> 
 
  <animation>
   <type>spin</type>
