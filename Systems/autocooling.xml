@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<autopilot name="Autocooling">
+
+    <!-- INTERFACE PROPERTIES -->
+    <property value="0.0">ap/ap_coolant_hold</property>
+
+    <!-- INITIAL GAIN and control VALUES -->
+
+    <property value="-0.6"> ap/coolant-gain </property>
+    <property value="101"> ap/target_coolant-temp </property>
+    <!-- <property> ap/coolant-error </property> -->
+
+    <!--
+         propulsion/engines/engine/cooling-factor should be
+         between 0.1 and 4.4
+    -->
+
+    <!--
+    =====================================================
+
+    Auto Coolant CHANNEL
+
+    Implements the P-51 coolant control system.
+
+    =====================================================
+    -->
+
+
+    <channel name="Auto Coolant Temp">
+
+        <summer name="ap/coolant-temp-error">
+            <input> ap/target_coolant-temp </input>
+            <input> -systems/engine/coolant-temp-degC </input>
+            <clipto>
+               <min>-10 </min>
+               <max> 10 </max>
+            </clipto>
+        </summer>
+
+
+        <switch name="ap/auto-coolant-switch">
+            <default value="0.0"/>
+            <test value="ap/coolant-temp-error">
+                ap/ap_coolant_hold == 0
+            </test>
+        </switch>
+
+        <pure_gain name="ap/cooling-cmd-out">
+            <input> ap/auto-coolant-switch </input>
+            <gain> ap/coolant-gain </gain>
+            <clipto>
+              <min> 0.1 </min>
+              <max> 4.4 </max>
+            </clipto>
+            <output>propulsion/engine/cooling-factor</output>
+        </pure_gain>
+
+       <pure_gain name="ap/cooling-door-pos">
+            <input>propulsion/engine/cooling-factor</input>
+            <gain>0.227272</gain>
+            <clipto>
+              <min> 0.0 </min>
+              <max> 1.0 </max>
+            </clipto>
+            <output>systems/cooling/radiator-door-pos</output>
+        </pure_gain>
+        
+        <pure_gain name="ap/oil-door-pos">
+            <input>propulsion/engine/cooling-factor</input>
+            <gain>0.227272</gain>
+            <clipto>
+              <min> 0.0 </min>
+              <max> 1.0 </max>
+            </clipto>
+            <output>systems/cooling/oil-door-pos</output>
+        </pure_gain>
+        
+   </channel>
+   
+</autopilot>
