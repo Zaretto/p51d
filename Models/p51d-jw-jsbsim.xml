@@ -531,6 +531,16 @@
  </model>
 
  <model>
+  <name>OX HOSE</name>
+  <path>Aircraft/p51d/Models/Ox-hose.ac</path>
+  <offsets>
+   <x-m>3.477</x-m>
+   <y-m>0.104</y-m>
+   <z-m>0.12</z-m>
+  </offsets>
+ </model>
+
+ <model>
   <name>AN/APS-13 PANEL</name>
   <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13.ac</path>
   <offsets>
@@ -1730,6 +1740,8 @@
   <object-name>A14A-Ox-inlet-flang</object-name>
   <object-name>A14A-plug-flang</object-name>
   <object-name>A14A-blink-con</object-name>
+  <object-name>Ox-Hose</object-name>
+  <object-name>Mask-Connector</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>
