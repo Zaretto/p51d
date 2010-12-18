@@ -1782,6 +1782,7 @@
 
  <animation>
   <type>material</type>
+  <object-name>right-frame-1</object-name>
   <object-name>right-frame-2</object-name>
   <object-name>aps-13-mount</object-name>
   <object-name>floor-center</object-name>

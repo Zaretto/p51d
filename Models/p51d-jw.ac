@@ -17,7 +17,7 @@ MATERIAL "ac3dmat13.010" rgb 0.53 0.53 0.53 amb 0.4 0.4 0.4 emis 0 0 0 spec 0 0 
 MATERIAL "ac3dmat5" rgb 1 1 0 amb 0.6 0.6 0.6 emis 0.666667 0.666667 0.666667 spec 0.502 0.502 0.502 shi 10 trans 0.498
 MATERIAL "ac3dmat6.001" rgb 0 1 0 amb 0.6 0.6 0.6 emis 0.333333 0.333333 0.333333 spec 0.502 0.502 0.502 shi 10 trans 0.498
 MATERIAL "ac3dmat3.003" rgb 1 0 0 amb 0.6 0.6 0.6 emis 0.333333 0.333333 0.333333 spec 0.502 0.502 0.502 shi 10 trans 0.498
-MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "DefaultWhite.001" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "DefaultWhite.023" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "ac3dmat3.004" rgb 0.396 0 0 amb 0.6 0.6 0.6 emis 0 0 0 spec 0.502 0.502 0.502 shi 10 trans 0
 MATERIAL "ac3dmat1.008" rgb 1 1 1 amb 0.6 0.6 0.6 emis 0.102 0.102 0.102 spec 0.502 0.502 0.502 shi 10 trans 0
@@ -28,7 +28,7 @@ MATERIAL "DefaultWhite.024" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 
 MATERIAL "ac3dmat6.002" rgb 0 0.396 0 amb 0.6 0.6 0.6 emis 0 0 0 spec 0.502 0.502 0.502 shi 10 trans 0
 MATERIAL "ac3dmat6.003" rgb 0 1 0 amb 0.6 0.6 0.6 emis 0.333333 0.333333 0.333333 spec 0.502 0.502 0.502 shi 10 trans 0
 MATERIAL "ac3dmat1.010" rgb 1 1 1 amb 0.6 0.6 0.6 emis 1 1 1 spec 0.502 0.502 0.502 shi 10 trans 0
-MATERIAL "DefaultWhite.001" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "DefaultWhite.002" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "DefaultWhite.025" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "ac3dmat13.012" rgb 0.533333 0.533333 0.533333 amb 0.5 0.5 0.5 emis 0 0 0 spec 0 0 0 shi 10 trans 0
 MATERIAL "ac3dmat1.011" rgb 1 1 1 amb 0.8 0.8 0.8 emis 0 0 0 spec 0 0 0 shi 10 trans 0
@@ -109532,7 +109532,7 @@ refs 4
 443 0.21474313736 0.628199219704
 kids 0
 OBJECT poly
-name "right-frame-2"
+name "right-frame-1"
 data 8
 Cube.025
 texture "p51d-jw-05.rgb"
@@ -109624,7 +109624,7 @@ refs 4
 11 0.541035413742 0.956373035908
 kids 0
 OBJECT poly
-name "right-frame-2.001"
+name "right-frame-2"
 data 8
 Cube.001
 texture "p51d-jw-05.rgb"
