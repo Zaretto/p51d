@@ -131,19 +131,19 @@
   <panel>
   <path>Aircraft/p51d/Models/p51d-elevator-trim-hotspots.xml</path>
   <bottom-left>
-   <x-m>4.08</x-m>
+   <x-m>4.115</x-m>
    <y-m>-0.33</y-m>
-   <z-m>-0.125</z-m>
+   <z-m>-0.11</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>4.08</x-m>
+   <x-m>4.115</x-m>
    <y-m>-0.26</y-m>
-   <z-m>-0.125</z-m>
+   <z-m>-0.11</z-m>
   </bottom-right>
   <top-left>
-   <x-m>3.905</x-m>
+   <x-m>3.95</x-m>
    <y-m>-0.33</y-m>
-   <z-m> -0.01</z-m>
+   <z-m> 0.025</z-m>
   </top-left>
  </panel>
 
@@ -302,7 +302,7 @@
   <offsets>
    <x-m>3.705</x-m>
    <y-m>0.21</y-m>
-   <z-m>0.33</z-m>
+   <z-m>0.335</z-m>
   </offsets>
  </model>
 
@@ -383,7 +383,7 @@
   <offsets>
    <x-m>3.718</x-m>
    <y-m>0.15</y-m>
-   <z-m>0.53</z-m>
+   <z-m>0.527</z-m>
   </offsets>
  </model>
 
@@ -472,9 +472,9 @@
   <name>TRIMWHEELELEVATOR</name>
   <path>Aircraft/p51d/Models/p51d-jw-trimwheelelevator.xml</path>
   <offsets>
-   <x-m>3.995</x-m>
+   <x-m>4.03</x-m>
    <y-m>-0.30</y-m>
-   <z-m>-0.067</z-m>
+   <z-m>-0.045</z-m>
   </offsets>
  </model>
 
@@ -533,8 +533,8 @@
   <name>ELECTRICAL_PANEL</name>
   <path>Aircraft/p51d/Models/electrical-panel.xml</path>
   <offsets>
-   <x-m>4.028</x-m>
-   <y-m>0.32</y-m>
+   <x-m>4.024</x-m>
+   <y-m>0.335</y-m>
    <z-m>0.13</z-m>
   </offsets>
  </model>
@@ -563,9 +563,19 @@
   <name>AN/APS-13 PANEL</name>
   <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13.ac</path>
   <offsets>
-   <x-m>4.103</x-m>
+   <x-m>4.099</x-m>
    <y-m>0.335</y-m>
    <z-m>0.13</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>AN/APS-13 bell box</name>
+  <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13-bell-box.ac</path>
+  <offsets>
+   <x-m>4.33</x-m>
+   <y-m>0.351</y-m>
+   <z-m>0.04</z-m>
   </offsets>
  </model>
 
@@ -1712,7 +1722,7 @@
    <z>0.0</z>
   </axis>
   <center>
-   <x-m>4.17</x-m>
+   <x-m>4.195</x-m>
    <y-m>0.000</y-m>
    <z-m>-0.02</z-m>
   </center>
@@ -1740,7 +1750,7 @@
    <z>0.0</z>
   </axis>
   <center>
-   <x-m>4.17</x-m>
+   <x-m>4.195</x-m>
    <y-m>0.000</y-m>
    <z-m>-0.02</z-m>
   </center>
@@ -1801,23 +1811,55 @@
   <object-name>accumlator</object-name>
   <object-name>RFlourlLghtControl-1</object-name>
   <object-name>breaker-reset</object-name>
-  <object-name>A14A-Ox-pipe</object-name>
-  <object-name>A14A-Body</object-name>
-  <object-name>A14A-Alt-selector</object-name>
-  <object-name>A14A-Hose-pipe</object-name>
-  <object-name>A14A-Connector-elbow</object-name>
-  <object-name>A14A-connector-ring</object-name>
-  <object-name>A14A-Ox-inlet-coupler</object-name>
-  <object-name>A14A-Ox-Con-nut</object-name>
-  <object-name>A14A-normal-100-pct</object-name>
-  <object-name>A14A-flang-3</object-name>
-  <object-name>A14A-flang-1</object-name>
-  <object-name>A14A-flang-2</object-name>
-  <object-name>A14A-Ox-inlet-flang</object-name>
-  <object-name>A14A-plug-flang</object-name>
-  <object-name>A14A-blink-con</object-name>
+  <object-name>A-14A-Ox-pipe</object-name>
+  <object-name>A-14A-Body</object-name>
+  <object-name>A-14A-Alt-selector</object-name>
+  <object-name>A-14A-Hose-pipe</object-name>
+  <object-name>A-14A-main-connector</object-name>
+  <object-name>A-14A-Connector-elbow</object-name>
+  <object-name>A-14A-connector-ring</object-name>
+  <object-name>A-14A-Ox-inlet-pipe</object-name>
+  <object-name>A-14A-Ox-inlet-flang</object-name>
+  <object-name>A-14A-Ox-Con-nut</object-name>
+  <object-name>A-14A-normal-100-pct</object-name>
+  <object-name>A-14A-flang-3</object-name>
+  <object-name>A-14A-flang-1</object-name>
+  <object-name>A-14A-flang-2</object-name>
+  <object-name>A-14A-plug-flang</object-name>
+  <object-name>A-14A-blink-con</object-name>
   <object-name>Ox-Hose</object-name>
   <object-name>Mask-Connector</object-name>
+  <object-name>emergency-handle</object-name>
+  <object-name>emergency-h-base</object-name>
+  <object-name>emergency-spring</object-name>
+  <object-name>emergency-washer</object-name>
+  <object-name>emergency-bolt</object-name>
+  <object-name>carb-heat-warn-plac</object-name>
+  <object-name>up-down-placard</object-name>
+  <object-name>gear-forward-lever</object-name>
+  <object-name>gear-lever-hardware</object-name>
+  <object-name>unlock-tailwheel-plac</object-name>
+  <object-name>brake-placard</object-name>
+  <object-name>naa-placard</object-name>
+  <object-name>speed-limits-placard</object-name>
+  <object-name>engine-limits-placard</object-name>
+  <object-name>MP-warning-placard</object-name>
+  <object-name>Ox-Dur-placard</object-name>
+  <object-name>gun-curcuit-protect</object-name>
+  <object-name>Canopy-crank-knob</object-name>
+  <object-name>Canopy-crank-handle</object-name>
+  <object-name>Canopy-crank-base</object-name>
+  <object-name>Canopy-crank-base-2</object-name>
+  <object-name>Canopy-crank-base-3</object-name>
+  <object-name>carb-h-plac-screw-1</object-name>
+  <object-name>carb-h-plac-screw-2</object-name>
+  <object-name>carb-h-plac-screw-3</object-name>
+  <object-name>carb-h-plac-screw-4</object-name>
+  <object-name>AN/APS-13-bell-panel</object-name>
+  <object-name>AN/APS-13-bell-base</object-name>
+  <object-name>AN/APS-13-bell</object-name>
+  <object-name>AN/APS-13-bell-bolt</object-name>
+  <object-name>AN/APS-13-bell-knob</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>
