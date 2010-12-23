@@ -570,6 +570,19 @@
  </model>
 
  <model>
+  <name>SCR-522C Control Box</name>
+  <path>Aircraft/Instruments-3d/SCR-522C/SCR-522C.ac</path>
+  <offsets>
+   <x-m>4.235</x-m>
+   <y-m>0.37</y-m>
+   <z-m>0.14</z-m>
+   <roll-deg>15.0</roll-deg>
+   <pitch-deg>0</pitch-deg>
+   <yaw-deg>0</yaw-deg>
+  </offsets>
+ </model>
+
+ <model>
   <name>AN/APS-13 bell box</name>
   <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13-bell-box.ac</path>
   <offsets>
