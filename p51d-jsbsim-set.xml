@@ -323,6 +323,8 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
      <triggerLast> 0 </triggerLast>
      <salvoCount> 1 </salvoCount>
      <trigger-released> 0 </trigger-released>
+     <salvo-right>0</salvo-right>
+     <salvo-left>0</salvo-left>
    </armament>
    <gear>
       <gear-safe-light-check>0</gear-safe-light-check>
