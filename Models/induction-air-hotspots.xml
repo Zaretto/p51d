@@ -2,7 +2,6 @@
 <!DOCTYPE PropertyList SYSTEM "panel.dtd">
 
 <!-- This part should be the same for any 3D panel.  Customize the actions section -->
-
 <PropertyList>
 
  <name>P51D Panel Hotspots Induction air controls</name>
