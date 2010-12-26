@@ -571,7 +571,7 @@
 
  <model>
   <name>SCR-522C Control Box</name>
-  <path>Aircraft/Instruments-3d/SCR-522C/SCR-522C.ac</path>
+  <path>Aircraft/Instruments-3d/SCR-522C/SCR-522C.xml</path>
   <offsets>
    <x-m>4.235</x-m>
    <y-m>0.37</y-m>
@@ -1822,6 +1822,8 @@
   <object-name>Fuel-line</object-name>
   <object-name>Floor-Center-base</object-name>
   <object-name>LeftCockpitConsole</object-name>
+  <object-name>left-frame-1</object-name>
+  <object-name>left-frame-2</object-name>
   <object-name>land-gear-placard</object-name>
   <object-name>gear-forward-lever</object-name>
   <object-name>gear-rear-lever</object-name>
@@ -1857,27 +1859,27 @@
   <object-name>emergency-spring</object-name>
   <object-name>emergency-washer</object-name>
   <object-name>emergency-bolt</object-name>
-  <object-name>carb-heat-warn-plac</object-name>
+  <object-name>carb-heat-warn</object-name>
   <object-name>up-down-placard</object-name>
   <object-name>gear-forward-lever</object-name>
   <object-name>gear-lever-hardware</object-name>
   <object-name>unlock-tailwheel-plac</object-name>
   <object-name>brake-placard</object-name>
   <object-name>naa-placard</object-name>
-  <object-name>speed-limits-placard</object-name>
-  <object-name>engine-limits-placard</object-name>
+  <object-name>speed-limits-plac</object-name>
+  <object-name>engine-limits-plac</object-name>
   <object-name>MP-warning-placard</object-name>
   <object-name>Ox-Dur-placard</object-name>
-  <object-name>gun-curcuit-protect</object-name>
+  <object-name>gun-circuit</object-name>
   <object-name>Canopy-crank-knob</object-name>
   <object-name>Canopy-crank-handle</object-name>
   <object-name>Canopy-crank-base</object-name>
   <object-name>Canopy-crank-base-2</object-name>
   <object-name>Canopy-crank-base-3</object-name>
-  <object-name>carb-h-plac-screw-1</object-name>
-  <object-name>carb-h-plac-screw-2</object-name>
-  <object-name>carb-h-plac-screw-3</object-name>
-  <object-name>carb-h-plac-screw-4</object-name>
+  <object-name>carbHP-plac-scrw1</object-name>
+  <object-name>carbHP-plac-scrw2</object-name>
+  <object-name>carbHP-plac-scrw3</object-name>
+  <object-name>carbHP-plac-scrw4</object-name>
   <object-name>AN/APS-13-bell-panel</object-name>
   <object-name>AN/APS-13-bell-base</object-name>
   <object-name>AN/APS-13-bell</object-name>
@@ -1922,6 +1924,7 @@
   <object-name>air-placard</object-name>
   <object-name>hot-air</object-name>
   <object-name>ram-air</object-name>
+  <object-name>CockpitFloor-black</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>

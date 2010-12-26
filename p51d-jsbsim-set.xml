@@ -335,11 +335,24 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
    <jsbsim>
       <systems>
         <engine>
-           <starter> 0 </starter>
+           <starter>0</starter>
         </engine>
       </systems>
    </jsbsim>
  </fdm>
+ <systems>
+   <comm>
+     <SCR-522C>
+      <frequencies>
+         <channel-selected type="int"> 0 </channel-selected>
+      </frequencies>
+      <tr type="int">0</tr>
+      <channel-dimmer type="float"> 1.0 </channel-dimmer>
+      <tr-dimmer type="float"> 1.0 </tr-dimmer>
+      
+     </SCR-522C>
+   </comm>
+ </systems>
 <!-- <ai>
    <submodels>
       <submodel n="8">

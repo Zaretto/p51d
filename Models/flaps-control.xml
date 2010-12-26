@@ -58,7 +58,7 @@
 
  <animation>
   <type>material</type>
-  <object-name>flap-knob</object-name>
+  <object-name>flaps-knob</object-name>
   <object-name>flaps-lever</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>

@@ -331,6 +331,12 @@
   <object-name>rec-lgt-gr-switch</object-name>
   <object-name>rec-lgt-amb-switch</object-name>
   <object-name>rec-lgt-amb-sw-body</object-name>
+  <object-name>amp-bezel</object-name>
+  <object-name>amp-bezel-2</object-name>
+  <object-name>inner-bezel</object-name>
+  <object-name>face</object-name>
+  <object-name>amp-needle</object-name>
+  <object-name>rt-signal-light-cable</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.2</red>

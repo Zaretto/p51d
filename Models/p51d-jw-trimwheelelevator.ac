@@ -1,7 +1,7 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 10 trans 0
-MATERIAL "DefaultWhite.003" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1 amb 0.6 0.6 0.6 emis 0 0 0 spec 0.5 0.5 0.5 shi 10 trans 0
+MATERIAL "DefaultWhite.003" rgb 1 1 1 amb 0.6 0.6 0.6 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 OBJECT world
 kids 6
 OBJECT poly
@@ -917,7 +917,7 @@ refs 3
 3 0.666666984558 0.33333298564
 kids 0
 OBJECT poly
-name "Sphere.002"
+name "screw"
 data 6
 Sphere
 texture "placards.rgb"
@@ -1424,7 +1424,7 @@ refs 4
 59 0.613631010056 0.281768411398
 kids 0
 OBJECT poly
-name "Sphere.003"
+name "screw2"
 data 10
 Sphere.001
 texture "placards.rgb"
