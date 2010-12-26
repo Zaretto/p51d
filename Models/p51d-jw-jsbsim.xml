@@ -429,7 +429,7 @@
   <name>GUNSIGHT-SWITCH</name>
   <path>Aircraft/p51d/Models/gun-switch.xml</path>
   <offsets>
-   <x-m>3.7399</x-m>
+   <x-m>3.7425</x-m>
    <y-m>-0.095</y-m>
    <z-m>-0.022</z-m>
   </offsets>
