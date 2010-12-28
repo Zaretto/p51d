@@ -3,6 +3,11 @@
 
  <path>p51d-jw-clock.ac</path>
 
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
 
  <animation>
   <type>material</type>

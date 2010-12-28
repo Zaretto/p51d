@@ -3,6 +3,12 @@
 
  <path>piper.ac</path>
 
+     <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
+
  <!-- pipper on/off -->
  <animation>
   <type>select</type>

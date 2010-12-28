@@ -2,6 +2,12 @@
   <PropertyList> 
     <path>pilot.ac</path>
 
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>30</max-m>
+    </animation>
+
 <!-- hip -->
 
  <animation>

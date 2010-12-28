@@ -7,6 +7,12 @@
 
  <path>p51d-jw.ac</path>
 
+     <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-property>sim/rendering/static-lod/bare</max-property>
+    </animation>
+
  <!-- Pilot -->
  <model>
    <path>Aircraft/p51d/Models/pilot.xml</path>
