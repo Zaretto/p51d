@@ -5,16 +5,10 @@
 <system name="Propulsion">
     
     <property>systems/engine/mp-inhg</property>
-    <property>/engines/engine[0]/mp-inhg</property>
-    <property> /engines/engine/oil-temperature-degf </property>
     <property>/engines/engine/cht-degf</property>
     <property>propulsion/fuel_pump</property>
     
-    <property>ap/ap_map_hold</property>
     <property>ap/throttle-cmd-out</property>
-    <property> ap/throttle-cmd-norm </property>
-    <property value="0">/controls/fuel/tank-selector</property>
-    <property> /controls/engines/engine/throttle </property>
     <property> /controls/armament/drop-tank-released-1 </property>
     <property> /controls/armament/drop-tank-released-2 </property>
     <property> /controls/armament/User-Selected-Stores </property>

@@ -9,7 +9,6 @@
 
     <property value="-0.6"> ap/coolant-gain </property>
     <property value="101"> ap/target_coolant-temp </property>
-    <!-- <property> ap/coolant-error </property> -->
 
     <!--
          propulsion/engines/engine/cooling-factor should be

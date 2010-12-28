@@ -2,11 +2,6 @@
 
 <system name="Electrictal">
 
-    <property value="1">propulsion/tank/priority</property>
-    <property value="0">propulsion/tank[1]/priority</property>
-    <property value="0">propulsion/tank[2]/priority</property>
-    <property value="0">propulsion/tank[3]/priority</property>
-    <property value="0">propulsion/tank[4]/priority</property>
     <property value="0">systems/right-flor-gain</property>
     <property value="0.0">systems/gear/inner-doors</property>
     <property> /controls/engines/engine/blower-light-check </property>

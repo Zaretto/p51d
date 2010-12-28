@@ -338,6 +338,9 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
            <starter>0</starter>
         </engine>
       </systems>
+      <ap>
+        <map-error type="float">0.0</map-error>
+     </ap>
    </jsbsim>
  </fdm>
  <systems>
@@ -349,26 +352,73 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
       <tr type="int">0</tr>
       <channel-dimmer type="float"> 1.0 </channel-dimmer>
       <tr-dimmer type="float"> 1.0 </tr-dimmer>
-      
      </SCR-522C>
    </comm>
  </systems>
-<!-- <ai>
+<ai>
    <submodels>
+      <submodel n="2">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="3">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="4">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="5">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="6">
+         <count>0</count>
+      </submodel>
+      <submodel n="7">
+         <count type="int">0</count>
+      </submodel>
       <submodel n="8">
-         <count>3</count>
+         <count type="int">0</count>
       </submodel>
       <submodel n="9">
-         <count>3</count>
+         <count type="int">0</count>
       </submodel>
       <submodel n="10">
-         <count>1</count>
+         <count type="int">0</count>
       </submodel>
       <submodel n="11">
-         <count>1</count>
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="12">
+         <count>0</count>
+      </submodel>
+      <submodel n="13">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="14">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="15">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="16">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="17">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="18">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="19">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="20">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="21">
+         <count type="int">0</count>
       </submodel>
    </submodels>
- </ai>-->
+ </ai>
 
   <nasal>
     <p51d>

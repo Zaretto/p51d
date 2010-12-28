@@ -1371,17 +1371,31 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>RightFlap</object-name>
   <object-name>RightFlapEdge</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <factor>47.0</factor>
-
    <center>
     <x-m>4.580000</x-m>
     <y-m>1.945000</y-m>
     <z-m>-0.585000</z-m>
   </center>
+  <axis>
+   <x>-0.125779</x>
+   <y>0.987738</y>
+   <z>0.092485</z>
+  </axis>
+ </animation>
 
+ <animation>
+  <type>rotate</type>
+  <object-name>RightFlap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>23.5</factor>
+   <center>
+    <x-m>4.580000</x-m>
+    <y-m>1.945000</y-m>
+    <z-m>-0.585000</z-m>
+  </center>
   <axis>
    <x>-0.125779</x>
    <y>0.987738</y>
@@ -1392,17 +1406,31 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>LeftFlap</object-name>
   <object-name>LeftFlapEdge</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <factor>47.0</factor>
-
   <center>
    <x-m>4.580000</x-m>
    <y-m>-1.945000</y-m>
    <z-m>-0.585000</z-m>
   </center>
+  <axis>
+   <x>0.125779</x>
+   <y>0.987738</y>
+   <z>-0.092485</z>
+  </axis>
+ </animation>
 
+  <animation>
+  <type>rotate</type>
+  <object-name>LeftFlap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>23.5</factor>
+  <center>
+   <x-m>4.580000</x-m>
+   <y-m>-1.945000</y-m>
+   <z-m>-0.585000</z-m>
+  </center>
   <axis>
    <x>0.125779</x>
    <y>0.987738</y>

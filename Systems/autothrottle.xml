@@ -14,7 +14,6 @@
     <property value="1"> ap/throttle-gain </property>
     <property value="25.0"> ap/lag_constant </property>
     <property value="75"> ap/max_MP </property>
-    <!-- <property> ap/map-error </property> -->
 
     <!--
     =====================================================
