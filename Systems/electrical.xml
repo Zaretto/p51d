@@ -427,4 +427,34 @@
 
      </channel>
 
+     <channel name="bomb-salvo">
+
+        <switch name="bomb salvo right">
+          <default value="0"/>
+          <test value="1">
+             /controls/armament/salvo-both == 1
+          </test>
+          <test value="1">
+             /controls/armament/salvo-right-hs == 1
+          </test>   
+          <output>/controls/armament/salvo-right</output>
+          <output>/controls/armament/bomb-trigger-2</output>
+          <output>/controls/armament/drop-tank-release-2</output>
+       </switch>
+
+       <switch name="bomb salvo left">
+          <default value="0"/>
+          <test value="1">
+             /controls/armament/salvo-both == 1
+          </test>
+          <test value="1">
+             /controls/armament/salvo-left-hs == 1
+          </test>
+          <output>/controls/armament/salvo-left</output>
+          <output>/controls/armament/bomb-trigger-1</output>
+          <output>/controls/armament/drop-tank-release-1</output>
+       </switch>
+
+     </channel>
+
 </system>
