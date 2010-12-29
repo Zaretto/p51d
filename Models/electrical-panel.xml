@@ -401,7 +401,7 @@
 
  <animation>
   <type>material</type>
-  <object-name>external-button</object-name>
+  <object-name>rec-lights-key</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>
