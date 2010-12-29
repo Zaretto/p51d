@@ -273,18 +273,25 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
       <engine n="0">
         <magnetos>0</magnetos>
         <supercharger-switch>0.0</supercharger-switch>
-        <primer-time> 0.0 </primer-time>
+        <primer-time type="float"> 0.0 </primer-time>
         <master-bat> 0 </master-bat>
       </engine>
    </engines>
    <lighting>
-      <tail-position-lights> 0 </tail-position-lights>
-      <wing-position-lights> 0 </wing-position-lights>
-      <red-rec-lights> 0 </red-rec-lights>
-      <green-rec-lights> 0 </green-rec-lights>
-      <amber-rec-lights> 0 </amber-rec-lights>
+      <tail-position-lights type="int"> 0 </tail-position-lights>
+      <wing-position-lights type="int"> 0 </wing-position-lights>
+      <red-rec-light> 0 </red-rec-light>
+      <green-rec-light> 0 </green-rec-light>
+      <amber-rec-light> 0 </amber-rec-light>
+      <red-rec-light-sw> 0 </red-rec-light-sw>
+      <green-rec-light-sw> 0 </green-rec-light-sw>
+      <amber-rec-light-sw> 0 </amber-rec-light-sw>
+      <rec-light-key>0</rec-light-key>
       <right-flor-pos> 0 </right-flor-pos>
    </lighting>
+   <electric>
+      <reset>0</reset>
+   </electric>
    <anti-ice>
      <pitot-heat> 0 </pitot-heat>
      <gun-heat> 0 </gun-heat>
@@ -308,9 +315,9 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
    <armament>
      <gunsight>
         <power-on>0</power-on>
-        <intensity>1.0</intensity>
+        <intensity type="float">1.0</intensity>
      </gunsight>
-     <next-RX>1</next-RX>
+     <next-RX type="int">1</next-RX>
      <instant>1</instant>
      <rockets> 0 </rockets>
      <bombs-train> 0 </bombs-train>

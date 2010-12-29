@@ -10,6 +10,54 @@
     </animation>
 
     <animation>
+       <type>translate</type>
+       <object-name>rec-lights-key</object-name>
+       <property>/controls/lighting/rec-light-key</property>
+       <interpolation>
+        <entry>
+            <ind>0.0</ind>
+            <dep>0</dep>
+        </entry>
+        <entry>
+            <ind>1.0</ind>
+            <dep>-0.005</dep>
+        </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+  </animation>
+
+  <animation>
+        <type>rotate</type>
+        <object-name>breaker-reset</object-name>
+        <property>/controls/electric/reset</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-5</dep>
+            </entry>
+        </interpolation>
+        <center>
+          <x-m>-0.15</x-m>
+          <y-m>0.03</y-m>
+          <z-m>0.0</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+       
+
+    <animation>
         <type>rotate</type>
         <object-name>gen-disc-switch</object-name>
         <property>/controls/engines/engine/master-alt</property>
@@ -176,7 +224,7 @@
     <animation>
         <type>rotate</type>
         <object-name>rec-lgt-red-switch</object-name>
-        <property>/controls/lighting/red-rec-lights</property>
+        <property>/controls/lighting/red-rec-light-sw</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -206,7 +254,7 @@
     <animation>
         <type>rotate</type>
         <object-name>rec-lgt-gr-switch</object-name>
-        <property>/controls/lighting/green-rec-lights</property>
+        <property>/controls/lighting/green-rec-light-sw</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -236,7 +284,7 @@
     <animation>
         <type>rotate</type>
         <object-name>rec-lgt-amb-switch</object-name>
-        <property>/controls/lighting/amber-rec-lights</property>
+        <property>/controls/lighting/amber-rec-light-sw</property>
         <interpolation>
             <entry>
                 <ind>0</ind>

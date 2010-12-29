@@ -36,6 +36,17 @@
    </condition>
  </animation>
 
+ <animation>
+  <type>material</type>
+  <object-name>pilot</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.25</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
  <!-- Front hotspots -->
  <panel>
   <path>Aircraft/p51d/Models/p51d-jw-panel-hotspots.xml</path>
@@ -213,19 +224,19 @@
  <panel>
   <path>Aircraft/p51d/Models/electrical-switch-box-hotspots.xml</path>
   <bottom-left>
-   <x-m>3.75</x-m>
-   <y-m>0.285</y-m>
-   <z-m>-0.02</z-m>
+   <x-m>3.712</x-m>
+   <y-m>0.33</y-m>
+   <z-m>-0.032</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>4.15</x-m>
-   <y-m>0.29</y-m>
-   <z-m>-0.02</z-m>
+   <x-m>4.112</x-m>
+   <y-m>0.335</y-m>
+   <z-m>-0.029</z-m>
   </bottom-right>
   <top-left>
-   <x-m>3.75</x-m>
-   <y-m>0.285</y-m>
-   <z-m> 0.43</z-m>
+   <x-m>3.712</x-m>
+   <y-m>0.33</y-m>
+   <z-m> 0.41</z-m>
   </top-left>
  </panel>
 
@@ -507,7 +518,7 @@
 
  <model>
   <name>GUNSIGHT</name>
-  <path>Aircraft/p51d/Models/p51d-jw-gunsight.ac</path>
+  <path>Aircraft/p51d/Models/p51d-jw-gunsight.xml</path>
   <offsets>
    <x-m>3.875</x-m>
    <y-m>0.0</y-m>
@@ -547,7 +558,7 @@
 
  <model>
   <name>OX REGULATOR</name>
-  <path>Aircraft/Instruments-3d/A-14A-OxReg/A-14A.ac</path>
+  <path>Aircraft/Instruments-3d/A-14A-OxReg/A-14A.xml</path>
   <offsets>
    <x-m>3.41</x-m>
    <y-m>0.325</y-m>
@@ -567,7 +578,7 @@
 
  <model>
   <name>AN/APS-13 PANEL</name>
-  <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13.ac</path>
+  <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13.xml</path>
   <offsets>
    <x-m>4.099</x-m>
    <y-m>0.335</y-m>
@@ -590,7 +601,7 @@
 
  <model>
   <name>AN/APS-13 bell box</name>
-  <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13-bell-box.ac</path>
+  <path>Aircraft/Instruments-3d/AN-APS-13/AN-APS-13-bell-box.xml</path>
   <offsets>
    <x-m>4.33</x-m>
    <y-m>0.351</y-m>
@@ -1606,40 +1617,143 @@
  </animation>
 
  <animation>
-  <type>select</type>
-  <object-name>LeftNavLightOff</object-name>
-  <object-name>RightNavLightOff</object-name>
-  <condition>
-   <not>
-    <property>controls/lighting/wing-position-lights</property>
-   </not>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>TailNavLightOff</object-name>
-  <condition>
-   <not>
-    <property>controls/lighting/tail-position-lights</property>
-   </not>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
+  <type>material</type>
   <object-name>LeftNavLightOn</object-name>
-  <object-name>RightNavLightOn</object-name>
+  <object-name>LeftNavLightOff</object-name>
+  <emission>
+    <red>0.9</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </emission>
   <condition>
-    <property>controls/lighting/wing-position-lights</property>
+     <equals>
+        <property>controls/lighting/wing-position-lights</property>
+        <value>1</value>
+     </equals>
   </condition>
  </animation>
 
  <animation>
-  <type>select</type>
-  <object-name>TailNavLightOn</object-name>
+  <type>material</type>
+  <object-name>RightNavLightOn</object-name>
+  <object-name>RightNavLightOff</object-name>
+  <emission>
+    <red>0.0</red>
+    <green>0.6</green>
+    <blue>0.0</blue>
+  </emission>
   <condition>
-    <property>controls/lighting/tail-position-lights</property>
+    <equals>
+        <property>controls/lighting/wing-position-lights</property>
+        <value>1</value>
+     </equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>LeftNavLightOn</object-name>
+  <object-name>LeftNavLightOff</object-name>
+  <emission>
+    <red>0.6</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </emission>
+  <condition>
+     <equals>
+        <property>controls/lighting/wing-position-lights</property>
+        <value>2</value>
+     </equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>RightNavLightOn</object-name>
+  <object-name>RightNavLightOff</object-name>
+  <emission>
+    <red>0.0</red>
+    <green>0.4</green>
+    <blue>0.0</blue>
+  </emission>
+  <condition>
+     <equals>
+        <property>controls/lighting/wing-position-lights</property>
+        <value>2</value>
+     </equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>IDRed</object-name>
+  <emission>
+    <red>0.6</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </emission>
+  <condition>
+     <property>controls/lighting/red-rec-light</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>IDGreen</object-name>
+  <emission>
+    <red>0.0</red>
+    <green>0.6</green>
+    <blue>0.0</blue>
+  </emission>
+  <condition>
+     <property>controls/lighting/green-rec-light</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>IDAmber</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.5</green>
+    <blue>0.0</blue>
+  </emission>
+  <condition>
+     <property>controls/lighting/amber-rec-light</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>TailNavLightOn</object-name>
+  <object-name>TailNavLightOff</object-name>
+  <emission>
+    <red>0.9</red>
+    <green>0.9</green>
+    <blue>0.9</blue>
+  </emission>
+  <condition>
+     <equals>
+        <property>controls/lighting/tail-position-lights</property>
+        <value>1</value>
+     </equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>TailNavLightOn</object-name>
+  <object-name>TailNavLightOff</object-name>
+  <emission>
+    <red>0.5</red>
+    <green>0.5</green>
+    <blue>0.5</blue>
+  </emission>
+  <condition>
+     <equals>
+        <property>controls/lighting/tail-position-lights</property>
+        <value>2</value>
+     </equals>
   </condition>
  </animation>
 
@@ -1655,7 +1769,7 @@
   <type>select</type>
   <object-name>BeaconFlasher</object-name>
   <condition>
-   <property>controls/lighting/beacon</property>
+    <property>controls/lighting/beacon</property>
   </condition>
  </animation>
 
@@ -1870,22 +1984,6 @@
   <object-name>accumlator</object-name>
   <object-name>RFlourlLghtControl-1</object-name>
   <object-name>breaker-reset</object-name>
-  <object-name>A-14A-Ox-pipe</object-name>
-  <object-name>A-14A-Body</object-name>
-  <object-name>A-14A-Alt-selector</object-name>
-  <object-name>A-14A-Hose-pipe</object-name>
-  <object-name>A-14A-main-connector</object-name>
-  <object-name>A-14A-Connector-elbow</object-name>
-  <object-name>A-14A-connector-ring</object-name>
-  <object-name>A-14A-Ox-inlet-pipe</object-name>
-  <object-name>A-14A-Ox-inlet-flang</object-name>
-  <object-name>A-14A-Ox-Con-nut</object-name>
-  <object-name>A-14A-normal-100-pct</object-name>
-  <object-name>A-14A-flang-3</object-name>
-  <object-name>A-14A-flang-1</object-name>
-  <object-name>A-14A-flang-2</object-name>
-  <object-name>A-14A-plug-flang</object-name>
-  <object-name>A-14A-blink-con</object-name>
   <object-name>Ox-Hose</object-name>
   <object-name>Mask-Connector</object-name>
   <object-name>emergency-handle</object-name>
@@ -1914,11 +2012,6 @@
   <object-name>carbHP-plac-scrw2</object-name>
   <object-name>carbHP-plac-scrw3</object-name>
   <object-name>carbHP-plac-scrw4</object-name>
-  <object-name>AN/APS-13-bell-panel</object-name>
-  <object-name>AN/APS-13-bell-base</object-name>
-  <object-name>AN/APS-13-bell</object-name>
-  <object-name>AN/APS-13-bell-bolt</object-name>
-  <object-name>AN/APS-13-bell-knob</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>
@@ -1943,14 +2036,6 @@
   <object-name>CoolantSticker</object-name>
   <object-name>CarbHeatSticker</object-name>
   <object-name>CockpitFloor</object-name>
-  <object-name>APS-13-plate</object-name>
-  <object-name>aps-13-lamp</object-name>
-  <object-name>aps-13-power-sw</object-name>
-  <object-name>aps-13-test-sw-plate</object-name>
-  <object-name>asp-13-audio</object-name>
-  <object-name>aps-13-test-sw</object-name>
-  <object-name>aps-13-cable</object-name>
-  <object-name>aps-13-cable-hole</object-name>
   <object-name>right-flor-body</object-name>
   <object-name>right-flor-front</object-name>
   <object-name>left-flor-body</object-name>

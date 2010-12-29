@@ -387,4 +387,44 @@
      
      </channel>
 
+     <channel name="Recognition lights">
+
+       <switch name="rec-light-red">
+          <default value="0"/>
+          <test logic="AND" value="1">
+             /controls/lighting/red-rec-light-sw == 1
+             /controls/lighting/rec-light-key GT 0
+          </test>
+          <test value="1">
+             /controls/lighting/red-rec-light-sw GT 1
+          </test>
+          <output>/controls/lighting/red-rec-light</output>
+       </switch>
+
+       <switch name="rec-light-green">
+          <default value="0"/>
+          <test logic="AND" value="1">
+             /controls/lighting/green-rec-light-sw == 1
+             /controls/lighting/rec-light-key GT 0
+          </test>
+          <test value="1">
+             /controls/lighting/green-rec-light-sw GT 1
+          </test>
+          <output>/controls/lighting/green-rec-light</output>
+       </switch>
+
+       <switch name="rec-light-amber">
+          <default value="0"/>
+          <test logic="AND" value="1">
+             /controls/lighting/amber-rec-light-sw == 1
+             /controls/lighting/rec-light-key GT 0
+          </test>
+          <test value="1">
+             /controls/lighting/amber-rec-light-sw GT 1
+          </test>
+          <output>/controls/lighting/amber-rec-light</output>
+       </switch>
+
+     </channel>
+
 </system>

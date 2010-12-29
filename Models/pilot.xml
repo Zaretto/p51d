@@ -478,4 +478,39 @@
   </axis>
  </animation>
 
+  <animation>
+  <type>material</type>
+  <object-name>head</object-name>
+  <object-name>headset1</object-name>
+  <object-name>headset2</object-name>
+  <object-name>hair</object-name>
+  <object-name>helmut</object-name>
+  <object-name>shades</object-name>
+  <object-name>arm1.R</object-name>
+  <object-name>arm2.R</object-name>
+  <object-name>hand.R</object-name>
+  <object-name>arm1.L</object-name>
+  <object-name>arm2.L</object-name>
+  <object-name>hand.L</object-name>
+  <object-name>chest</object-name>
+  <object-name>collar</object-name>
+  <object-name>leg1.R</object-name>
+  <object-name>leg2.R</object-name>
+  <object-name>foot.R</object-name>
+  <object-name>foot.L</object-name>
+  <object-name>leg2.L</object-name>
+  <object-name>leg1.L</object-name>
+  <object-name>arm1.R</object-name>
+  <object-name>arm2.R</object-name>
+  <object-name>hand.R</object-name>
+  <object-name>arm2.L</object-name>
+  <object-name>hand.L</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.25</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
   </PropertyList>
