@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <!--
 ************************************************************************
 P-51D simulation config. This files ties together all the components
@@ -331,6 +332,9 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
      <trigger-released> 0 </trigger-released>
      <salvo-right>0</salvo-right>
      <salvo-left>0</salvo-left>
+     <salvo-right-hs>0</salvo-right-hs>
+     <salvo-left-hs>0</salvo-left-hs>
+     <salvo-both>0</salvo-both>
    </armament>
    <gear>
       <gear-safe-light-check>0</gear-safe-light-check>
