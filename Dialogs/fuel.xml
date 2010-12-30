@@ -52,8 +52,8 @@
          <property>/consumables/fuel/tank[2]/level-gal_us</property>
        </input>
 
+   </group>
 
-  </group>
 
   <text>
     <label></label>
@@ -82,6 +82,7 @@
       <command>dialog-close</command>
     </binding>
    </button> -->
-
+   </group>
   </group>
+</group>
 </PropertyList>

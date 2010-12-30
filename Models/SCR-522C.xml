@@ -56,6 +56,7 @@
                 <ind>1</ind>
                 <dep>-30</dep>
             </entry>
+        </interpolation>
         <center>
           <x-m>-0.00</x-m>
           <y-m>0.0</y-m>
@@ -226,7 +227,7 @@
         <condition>
           <equals>
             <property>/systems/comm/SCR-522C/frequencies/channel-selected</property>
-            <value>1<value>
+            <value>1</value>
           </equals>
         </condition>
     </animation>
@@ -237,7 +238,7 @@
         <condition>
           <equals>
             <property>/systems/comm/SCR-522C/frequencies/channel-selected</property>
-            <value>2<value>
+            <value>2</value>
           </equals>
         </condition>
     </animation>
@@ -248,7 +249,7 @@
         <condition>
           <equals>
             <property>/systems/comm/SCR-522C/frequencies/channel-selected</property>
-            <value>3<value>
+            <value>3</value>
           </equals>
         </condition>
     </animation>
@@ -259,7 +260,7 @@
         <condition>
           <equals>
             <property>/systems/comm/SCR-522C/frequencies/channel-selected</property>
-            <value>4<value>
+            <value>4</value>
           </equals>
         </condition>
     </animation>
