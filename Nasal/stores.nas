@@ -11,7 +11,7 @@ var bombCount = 0;
 var resetRocketTriggers = func() {
 
     for (i=1; i < 11; i = i + 1)
-       setprop("controls/armament/rocket[" ~ i ~ "]/trigger", 0.0);
+       setprop("/controls/armament/rocket[" ~ i ~ "]/trigger", 0.0);
 }
 
 var rocketSalvo = func(id){
@@ -30,77 +30,28 @@ var rocketSalvo = func(id){
 
 var fireSingleRocket = func(){
     
-   lastRX = getprop("controls/armament/next-RX");
+   lastRX = getprop("/controls/armament/next-RX");
    setprop("/controls/armament/rocket[" ~ lastRX ~ "]/trigger", 1);
 }
 
-var bombsBoth = func() {
-
-    if (getprop("controls/armament/User-Selected-Stores") == 1 or
-        getprop("controls/armament/User-Selected-Stores") == 3) {
-        setprop("controls/armament/bomb-trigger-1", getprop("controls/armament/trigger2"));
-        setprop("controls/armament/bomb-trigger-2", getprop("controls/armament/trigger2"));      }
-    if (getprop("controls/armament/User-Selected-Stores") == 4 or
-        getprop("controls/armament/User-Selected-Stores") == 5) {
-        setprop("controls/armament/drop-tank-release-1", getprop("controls/armament/trigger2"));
-        setprop("controls/armament/drop-tank-release-2", getprop("controls/armament/trigger2"));
-    }
-}
-
-var bombsTrain = func {
-    
-    if (getprop("controls/armament/User-Selected-Stores") == 1 or
-        getprop("controls/armament/User-Selected-Stores") == 3) {
-        if (getprop("ai/submodels/submodel[18]/count") == 1)
-           setprop("controls/armament/bomb-trigger-1", 1);
-        else
-           setprop("controls/armament/bomb-trigger-2", 1.0);
-    }
-    if (getprop("controls/armament/User-Selected-Stores") == 4 or
-        getprop("controls/armament/User-Selected-Stores") == 5) {
-        if (getprop("ai/submodels/submodel[20]/count") == 1){
-           setprop("controls/armament/drop-tank-release-1", 1.0);
-           setprop("controls/armament/drop-tank-released-1", 1.0);
-        }
-        else {
-            setprop("controls/armament/drop-tank-release-2", 1.0);
-            setprop("controls/armament/drop-tank-released-2", 1.0);
-        }
-    }
-}
 
 var trigger2 = func {
 
-    triggerDown = getprop("controls/armament/trigger2");
+    triggerDown = getprop("/controls/armament/trigger2");
 
-    if (getprop("/controls/armament/bombs-both") == 1) {
-       bombsBoth();
-    }
-    if (getprop("/controls/armament/bombs-train") == 1) {
-        if (getprop("controls/armament/trigger2") > 0) {
-               bombsTrain();
-           }
-           else {
-              setprop("/controls/armament/bomb-trigger-1", 0.0);
-              setprop("/controls/armament/bomb-trigger-2", 0.0);
-              setprop("/controls/armament/drop-tank-release-1", 0.0);
-              setprop("/controls/armament/drop-tank-release-1", 0.0);
-           }
-    }
     if (getprop("/controls/armament/rockets") == 1 and
         getprop("/controls/armament/rocket-controler") > 0) {
         if (getprop("/controls/armament/rocket-controler") == 2)
             rocketSalvo(loopid);
-        else if (getprop("controls/armament/trigger2") > 0)
+        else if (getprop("/controls/armament/trigger2") == 1)
                fireSingleRocket();
    }
-   triggerLast = getprop("controls/armament/trigger2");
+   triggerLast = getprop("/controls/armament/trigger2");
 }
 
-setlistener("controls/armament/trigger2", trigger2);
+setlistener("/controls/armament/trigger2", trigger2);
 
 var setStores = func(stores) {
-   print("setStores");
    setprop("/controls/armament/User-Selected-Stores", stores);
    if (stores == 0) {
       # rockets
@@ -170,8 +121,8 @@ var setStores = func(stores) {
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       setprop("consumables/fuel/tank[3]/level-gal_us", 75);
       setprop("consumables/fuel/tank[4]/level-gal_us", 75);
-      setprop("controls/armament/drop-tank-released-1", 0);
-      setprop("controls/armament/drop-tank-released-2", 0);
+      setprop("/controls/armament/drop-tank-released-1", 0);
+      setprop("/controls/armament/drop-tank-released-2", 0);
    }
    if (stores == 5) {
       # rockets
@@ -188,13 +139,12 @@ var setStores = func(stores) {
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       setprop("consumables/fuel/tank[3]/level-gal_us", 75);
       setprop("consumables/fuel/tank[4]/level-gal_us", 75);
-      setprop("controls/armament/drop-tank-released-1", 0);
-      setprop("controls/armament/drop-tank-released-2", 0);
+      setprop("/controls/armament/drop-tank-released-1", 0);
+      setprop("/controls/armament/drop-tank-released-2", 0);
    }
 }
 
 var loadGuns = func (load) {
-   print("loadGuns");
    if (load == 0) {
       for (i=0; i < 8; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
@@ -209,18 +159,8 @@ var loadGuns = func (load) {
    }
 }
 
-var FillWingTanks = func () {
-    setprop("consumables/fuel/tank[0]/level-gal_us", 92);
-    setprop("consumables/fuel/tank[1]/level-gal_us", 92);
-}
-
-var FillFuseTank = func () {
-    setprop("consumables/fuel/tank[2]/level-gal_us", 85);
-}
-
 var L = setlistener("/sim/signals/fdm-initialized",
                      func {
-                        fuel_dialog = gui.Dialog.new("/sim/gui/dialogs/P-51D/fuel/dialog","Aircraft/p51d/Dialogs/P-51D-Fuel.xml");
                         setStores(0);
                         setprop("/controls/armament/salvo-count", 1);
                         resetRocketTriggers();

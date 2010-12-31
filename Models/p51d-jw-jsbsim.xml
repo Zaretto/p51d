@@ -70,12 +70,12 @@
   <panel>
   <path>Aircraft/p51d/Models/p51d-jw-panel-lower-hotspots.xml</path>
   <bottom-left>
-   <x-m>3.765</x-m>
+   <x-m>3.769</x-m>
    <y-m>-0.30</y-m>
    <z-m>-0.30</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>3.765</x-m>
+   <x-m>3.769</x-m>
    <y-m> 0.30</y-m>
    <z-m>-0.30</z-m>
   </bottom-right>
@@ -2315,9 +2315,17 @@
 
  <animation>
   <type>select</type>
-  <object-name>drop-tanks</object-name>
+  <object-name>drop-tanks-left</object-name>
   <condition>
     <property>ai/submodels/submodel[20]/count</property>
+  </condition>
+ </animation>
+
+  <animation>
+  <type>select</type>
+  <object-name>drop-tanks-right</object-name>
+  <condition>
+    <property>ai/submodels/submodel[21]/count</property>
   </condition>
  </animation>
 

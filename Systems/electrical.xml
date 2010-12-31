@@ -4,20 +4,6 @@
 
     <property value="0">systems/right-flor-gain</property>
     <property value="0.0">systems/gear/inner-doors</property>
-    <property> /controls/engines/engine/blower-light-check </property>
-    <property> /controls/lighting/left-flor-pos </property>
-    <property> /controls/armament/trigger </property>
-    <property> /controls/armament/rocket[1]/trigger </property>
-    <property> /controls/armament/rocket[2]/trigger </property>
-    <property> /controls/armament/rocket[3]/trigger </property>
-    <property> /controls/armament/rocket[4]/trigger </property>
-    <property> /controls/armament/rocket[5]/trigger </property>
-    <property> /controls/armament/rocket[6]/trigger </property>
-    <property> /controls/armament/rocket[7]/trigger </property>
-    <property> /controls/armament/rocket[8]/trigger </property>
-    <property> /controls/armament/rocket[9]/trigger </property>
-    <property> /controls/armament/rocket[10]/trigger </property>
-    <property> /gear/gear[1]/position-norm </property>
     
     <channel name="gear doors">
 
@@ -100,11 +86,10 @@
         <fcs_function name="systems/lighting/flor-instrument-right">
           <function>
               <product>
-                 <value> 1.0 </value>
+                 <value> 0.5 </value>
                  <property>systems/lighting/right-flor-switch-gain</property>
               </product>
           </function>
-          <output>/controls/lighting/instruments-norm</output>
         </fcs_function>
 
         <fcs_function name="systems/lighting/flor-instrument-left">
@@ -114,15 +99,14 @@
                  <property>systems/lighting/right-flor-switch-gain</property>
               </product>
           </function>
-          <output>/controls/lighting/instruments-norm</output>
         </fcs_function>
 
         <fcs_function name="systems/lighting/flor-instrument">
           <function>
-              <product>
+              <sum>
                  <property> systems/lighting/flor-instrument-left </property>
                  <property>systems/lighting/flor-instrument-right</property>
-              </product>
+              </sum>
           </function>
           <output>/controls/lighting/instruments-norm</output>
         </fcs_function>
@@ -136,25 +120,23 @@
         <switch name="systems/armament/rockets">
            <default value="0"/>
            <test value="1">
-              /controls/armament/weapons-select GT 2.9
+              /controls/armament/weapons-select == 3
            </test>
            <output>/controls/armament/rockets</output>
         </switch>
 
         <switch name="systems/armament/bombs-train">
            <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/weapons-select GT 1.9
-              /controls/armament/weapons-select LT 2.9
+           <test value="1">
+              /controls/armament/weapons-select == 2
           </test>
           <output>/controls/armament/bombs-train</output>
         </switch>
 
         <switch name="systems/armament/bombs-both">
            <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/weapons-select GT 0.9
-              /controls/armament/weapons-select LT 1.9
+           <test value="1">
+              /controls/armament/weapons-select == 1
           </test>
           <output>/controls/armament/bombs-both</output>
         </switch>
@@ -163,8 +145,8 @@
         <switch name="systems/armament/gun-trigger">
            <default value="0"/>
            <test logic="AND" value="1">
-              /controls/armament/trigger GT 0.9
-              /controls/armament/guns-enabled GT 0.9
+              /controls/armament/trigger == 1
+              /controls/armament/guns-enabled == 1
           </test>
           <output>/controls/armament/gun-trigger</output>
         </switch>
@@ -330,42 +312,6 @@
            </test>
         </switch>
 
-        <switch name="systems/armament/drop-tanks">
-           <default value="0"/>
-           <test logic="AND" value="1">
-               /controls/armament/User-Selected-Stores == 4
-               /ai/submodels/submodel[12]/count GT 0
-           </test>
-           <test logic="AND" value="1">
-               /controls/armament/User-Selected-Stores == 5
-               /ai/submodels/submodel[12]/count GT 0
-           </test>
-        </switch>
-
-        <switch name="systems/armament/right-bomb">
-           <default value="0"/>
-           <test logic="AND" value="1">
-               /controls/armament/User-Selected-Stores == 1
-               /ai/submodels/submodel[11]/count GT 0
-           </test>
-           <test logic="AND" value="1">
-               /controls/armament/User-Selected-Stores == 3
-               /ai/submodels/submodel[11]/count GT 0
-           </test>
-        </switch>
-
-        <switch name="systems/armament/left-bomb">
-           <default value="0"/>
-           <test logic="AND" value="1">
-               /controls/armament/User-Selected-Stores == 1
-               /ai/submodels/submodel[10]/count GT 0
-           </test>
-           <test logic="AND" value="1">
-               /controls/armament/User-Selected-Stores == 3
-               /ai/submodels/submodel[10]/count GT 0
-           </test>
-        </switch>
-
      </channel>
 
      <channel name="Switch Panel">
@@ -427,22 +373,28 @@
 
      </channel>
 
-     <channel name="bomb-salvo">
+     <channel name="bomb-controls">
 
-        <switch name="bomb salvo right">
+        <switch name="bomb right">
           <default value="0"/>
           <test value="1">
              /controls/armament/salvo-both == 1
           </test>
           <test value="1">
              /controls/armament/salvo-right-hs == 1
-          </test>   
+          </test>
+          <test value="1">
+              systems/armament/trigger-both == 1
+          </test>
+          <test value="1">
+               systems/armament/trigger-right == 1
+          </test>
           <output>/controls/armament/salvo-right</output>
           <output>/controls/armament/bomb-trigger-2</output>
           <output>/controls/armament/drop-tank-release-2</output>
        </switch>
 
-       <switch name="bomb salvo left">
+       <switch name="bomb left">
           <default value="0"/>
           <test value="1">
              /controls/armament/salvo-both == 1
@@ -450,10 +402,100 @@
           <test value="1">
              /controls/armament/salvo-left-hs == 1
           </test>
+          <test value="1">
+              systems/armament/trigger-both == 1
+          </test>
+          <test value="1">
+               systems/armament/trigger-left == 1
+          </test>
           <output>/controls/armament/salvo-left</output>
           <output>/controls/armament/bomb-trigger-1</output>
           <output>/controls/armament/drop-tank-release-1</output>
        </switch>
+
+      <switch name="systems/armament/trigger-both">
+          <default value="0"/>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 1
+             /controls/armament/bombs-both == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 3
+             /controls/armament/bombs-both == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 4
+             /controls/armament/bombs-both == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 5
+             /controls/armament/bombs-both == 1
+          </test>
+        </switch>
+
+         <switch name="systems/armament/trigger-left">
+           <default value="0"/>
+           <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 1
+             /ai/submodels/submodel[18]/count == 1
+             /controls/armament/bombs-train == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 3
+             /ai/submodels/submodel[18]/count == 1
+             /controls/armament/bombs-train == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 4
+             /ai/submodels/submodel[20]/count == 1
+             /controls/armament/bombs-train == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 5
+             /ai/submodels/submodel[20]/count == 1
+             /controls/armament/bombs-train == 1
+          </test>
+        </switch>
+        
+        <switch name="systems/armament/trigger-right">
+           <default value="0"/>
+           <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 1
+             /ai/submodels/submodel[18]/count == 0
+             /ai/submodels/submodel[19]/count == 1
+             /controls/armament/bombs-train == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 3
+             /ai/submodels/submodel[18]/count  == 0
+             /ai/submodels/submodel[19]/count == 1
+             /controls/armament/bombs-train == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 4
+             /ai/submodels/submodel[20]/count == 0
+             /ai/submodels/submodel[21]/count == 1
+             /controls/armament/bombs-train == 1
+          </test>
+          <test logic="AND" value="1">
+             /controls/armament/trigger2 == 1
+             /controls/armament/User-Selected-Stores == 5
+             /ai/submodels/submodel[20]/count == 0
+             /ai/submodels/submodel[21]/count == 1
+             /controls/armament/bombs-train == 1
+          </test>
+        </switch> 
 
      </channel>
 

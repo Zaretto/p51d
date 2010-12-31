@@ -268,85 +268,139 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
     </magnetic-compass>
  </instrumentation>
 
+ <gear>
+    <gear n="1">
+       <position-norm type="float">1</position-norm>
+    </gear>
+ </gear>
+
 <!-- initialize control properties -->
  <controls>
    <engines>
       <engine n="0">
-        <magnetos>0</magnetos>
-        <supercharger-switch>0.0</supercharger-switch>
+        <magnetos type="int">0</magnetos>
+        <supercharger-switch type="int">0</supercharger-switch>
         <primer-time type="float"> 0.0 </primer-time>
-        <master-bat> 0 </master-bat>
+        <master-bat type="int"> 0 </master-bat>
+      <blower-light-check type="int">0</blower-light-check>
       </engine>
    </engines>
    <lighting>
       <tail-position-lights type="int"> 0 </tail-position-lights>
       <wing-position-lights type="int"> 0 </wing-position-lights>
-      <red-rec-light> 0 </red-rec-light>
-      <green-rec-light> 0 </green-rec-light>
-      <amber-rec-light> 0 </amber-rec-light>
-      <red-rec-light-sw> 0 </red-rec-light-sw>
-      <green-rec-light-sw> 0 </green-rec-light-sw>
-      <amber-rec-light-sw> 0 </amber-rec-light-sw>
-      <rec-light-key>0</rec-light-key>
-      <right-flor-pos> 0 </right-flor-pos>
+      <red-rec-light type="int"> 0 </red-rec-light>
+      <green-rec-light type="int"> 0 </green-rec-light>
+      <amber-rec-light type="int"> 0 </amber-rec-light>
+      <red-rec-light-sw type="int"> 0 </red-rec-light-sw>
+      <green-rec-light-sw type="int"> 0 </green-rec-light-sw>
+      <amber-rec-light-sw type="int"> 0 </amber-rec-light-sw>
+      <rec-light-key type="int">0</rec-light-key>
+      <right-flor-pos type="int"> 0 </right-flor-pos>
+      <left-flor-pos type="int">0</left-flor-pos>
    </lighting>
    <electric>
-      <reset>0</reset>
+      <reset type="int">0</reset>
    </electric>
    <anti-ice>
-     <pitot-heat> 0 </pitot-heat>
-     <gun-heat> 0 </gun-heat>
+     <pitot-heat type="int"> 0 </pitot-heat>
+     <gun-heat type="int"> 0 </gun-heat>
    </anti-ice>
    <fuel>
       <on>0</on>
-      <tank-selector>0</tank-selector>
+      <tank-selector type="int">0</tank-selector>
       <tank n="1">
-         <to_tank>1</to_tank>
+         <to_tank type="int">1</to_tank>
       </tank>
       <tank n="2">
-         <to_tank>2</to_tank>
+         <to_tank type="int">2</to_tank>
       </tank>
       <tank n="3">
-         <to_tank>3</to_tank>
+         <to_tank type="int">3</to_tank>
       </tank>
       <tank n="4">
-         <to_tank>4</to_tank>
+         <to_tank type="int">4</to_tank>
       </tank>
    </fuel>
    <armament>
+     <User-Selected-Stores type="int">0</User-Selected-Stores>
      <gunsight>
-        <power-on>0</power-on>
+        <power-on type="int">0</power-on>
         <intensity type="float">1.0</intensity>
      </gunsight>
+     <weapons-select type="int">0</weapons-select>
      <next-RX type="int">1</next-RX>
-     <instant>1</instant>
-     <rockets> 0 </rockets>
-     <bombs-train> 0 </bombs-train>
-     <bombs-both> 0 </bombs-both>
-     <guns-enabled>0</guns-enabled>
-     <left-bomb-arm-chem-release>0</left-bomb-arm-chem-release>
-     <right-bomb-arm-chem-release>0</right-bomb-arm-chem-release>
-     <rocket-controler> 0 </rocket-controler>
-     <triggerLast> 0 </triggerLast>
-     <salvoCount> 1 </salvoCount>
-     <trigger-released> 0 </trigger-released>
-     <salvo-right>0</salvo-right>
-     <salvo-left>0</salvo-left>
-     <salvo-right-hs>0</salvo-right-hs>
-     <salvo-left-hs>0</salvo-left-hs>
-     <salvo-both>0</salvo-both>
+     <instant type="int">1</instant>
+     <rockets type="int"> 0 </rockets>
+     <bombs-train type="int"> 0 </bombs-train>
+     <bombs-both type="int"> 0 </bombs-both>
+     <guns-enabled type="int">0</guns-enabled>
+     <left-bomb-arm-chem-release type="int">0</left-bomb-arm-chem-release>
+     <right-bomb-arm-chem-release type="int">0</right-bomb-arm-chem-release>
+     <rocket-controler type="int"> 0 </rocket-controler>
+     <triggerLast type="int"> 0 </triggerLast>
+     <salvoCount type="int"> 1 </salvoCount>
+     <trigger-released type="int"> 0 </trigger-released>
+     <trigger type="int">0</trigger>
+     <guns-enabled type="int"> 0 </guns-enabled>
+     <trigger2 type="bool"> 0 </trigger2>
+     <bomb-trigger-1 type="int">0</bomb-trigger-1>
+     <bomb-trigger-2 type="int">0</bomb-trigger-2>
+     <drop-tank-release-2 type="int">0</drop-tank-release-2>
+     <drop-tank-release-1 type="int">0</drop-tank-release-1>
+     <salvo-right type="int">0</salvo-right>
+     <salvo-left type="int">0</salvo-left>
+     <salvo-right-hs type="int">0</salvo-right-hs>
+     <salvo-left-hs type="int">0</salvo-left-hs>
+     <salvo-both type="int">0</salvo-both>
+     <trigger type="int">0</trigger>
+     <rocket n="1">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="2">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="3">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="4">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="5">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="6">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="7">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="8">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="9">
+       <trigger type="int">0</trigger>
+     </rocket>
+     <rocket n="10">
+       <trigger type="int">0</trigger>
+     </rocket>
    </armament>
    <gear>
-      <gear-safe-light-check>0</gear-safe-light-check>
-      <gear-unsafe-light-check>0</gear-unsafe-light-check>
+      <gear-safe-light-check type="int">0</gear-safe-light-check>
+      <gear-unsafe-light-check type="int">0</gear-unsafe-light-check>
    </gear>
  </controls>
+ 
  <fdm>
    <jsbsim>
       <systems>
         <engine>
-           <starter>0</starter>
+           <starter type="int">0</starter>
         </engine>
+        <armament>
+           <trigger-both type="int">0</trigger-both>
+           <trigger-right type="int">0</trigger-right>
+           <trigger-left type="int">0</trigger-left>
+        </armament>
       </systems>
       <ap>
         <map-error type="float">0.0</map-error>
