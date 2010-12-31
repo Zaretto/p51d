@@ -1380,7 +1380,15 @@
 
  <animation>
   <type>select</type>
-  <object-name>drop-tanks</object-name>
+  <object-name>drop-tanks-right</object-name>
+  <condition>
+    <property>/controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>drop-tanks-left</object-name>
   <condition>
     <property>/controls/armament/gunsight/power-on</property>
   </condition>
