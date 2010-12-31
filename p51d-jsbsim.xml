@@ -528,7 +528,7 @@ Hal V. Engel hvengel@astound.net
 
             <summer name="Pitch Trim Offest Bias">
                 <input>fcs/pitch-trim-cmd-norm-scaled</input>
-                <bias>-0.2098</bias>
+                <bias>-0.2546</bias>
                 <clipto>
                     <min>-1.0</min>
                     <max>1.0</max>
