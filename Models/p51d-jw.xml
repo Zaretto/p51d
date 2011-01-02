@@ -109,7 +109,7 @@
   <offsets>
    <x-m>3.705</x-m>
    <y-m>0.21</y-m>
-   <z-m>0.33</z-m>
+   <z-m>0.335</z-m>
   </offsets>
  </model>
 
@@ -207,7 +207,7 @@
   <name>IGNITION</name>
   <path>Aircraft/p51d/Models/p51d-jw-ignition.xml</path>
   <offsets>
-   <x-m>3.730</x-m>
+   <x-m>3.735</x-m>
    <y-m>-0.10</y-m>
    <z-m>0.068</z-m>
   </offsets>
@@ -220,7 +220,7 @@
   <path>Aircraft/p51d/Models/p51d-jw-trimknobaileron.xml</path>
   <offsets>
    <x-m>3.955</x-m>
-   <y-m>-0.34</y-m>
+   <y-m>-0.35</y-m>
    <z-m>0.067</z-m>
    <pitch-deg>15.0</pitch-deg>
   </offsets>
@@ -231,7 +231,7 @@
   <path>Aircraft/p51d/Models/p51d-jw-trimknobrudder.xml</path>
   <offsets>
    <x-m>4.085</x-m>
-   <y-m>-0.34</y-m>
+   <y-m>-0.35</y-m>
    <z-m>0.047</z-m>
   </offsets>
  </model>
@@ -240,9 +240,19 @@
   <name>TRIMWHEELELEVATOR</name>
   <path>Aircraft/p51d/Models/p51d-jw-trimwheelelevator.xml</path>
   <offsets>
-   <x-m>3.995</x-m>
+   <x-m>4.03</x-m>
    <y-m>-0.30</y-m>
-   <z-m>-0.067</z-m>
+   <z-m>-0.045</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>FLAPS-LEVER</name>
+  <path>Aircraft/p51d/Models/flaps-control.xml</path>
+  <offsets>
+   <x-m>4.246</x-m>
+   <y-m>-0.4</y-m>
+   <z-m>-0.03</z-m>
   </offsets>
  </model>
 
@@ -263,6 +273,16 @@
    <x-m>3.875</x-m>
    <y-m>0.0</y-m>
    <z-m>0.60</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>SEAT</name>
+  <path>Aircraft/p51d/Models/wood-seat.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
   </offsets>
  </model>
 
@@ -432,16 +452,21 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>LeftGearStrut</object-name>
+  <object-name>LeftGearStrut1</object-name>
+  <object-name>LeftGearStrut2</object-name>
+  <object-name>LeftGearStrut3</object-name>
+  <object-name>LeftGearStrut4</object-name>
+  <object-name>LeftGearStrut5</object-name>
+  <object-name>LeftGearWheel</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>85</dep>
+    <dep>86.5</dep>
    </entry>
    <entry>
     <ind>0.33</ind>
-    <dep>85</dep>
+    <dep>86.5</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
@@ -449,14 +474,14 @@
    </entry>
   </interpolation>
   <center>
-   <x-m>3.10</x-m>
-   <y-m>-1.68</y-m>
-   <z-m>-0.45</z-m>
+   <x-m>3.11</x-m>
+   <y-m>-1.79</y-m>
+   <z-m>-0.52</z-m>
   </center>
   <axis>
    <x>1.0</x>
-   <y>0.0</y>
-   <z>-0.25</z>
+   <y>-0.11</y>
+   <z>-0.16</z>
   </axis>
  </animation>
 
@@ -552,7 +577,11 @@
 
  <animation>
   <type>select</type>
-  <object-name>LeftGearStrut</object-name>
+  <object-name>LeftGearStrut1</object-name>
+  <object-name>LeftGearStrut2</object-name>
+  <object-name>LeftGearStrut3</object-name>
+  <object-name>LeftGearStrut4</object-name>
+  <object-name>LeftGearStrut5</object-name>
   <condition>
    <greater-than>
     <property>gear/gear[0]/position-norm</property>
@@ -596,16 +625,21 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>RightGearStrut</object-name>
+  <object-name>RightGearStrut1</object-name>
+  <object-name>RightGearStrut2</object-name>
+  <object-name>RightGearStrut3</object-name>
+  <object-name>RightGearStrut4</object-name>
+  <object-name>RightGearStrut5</object-name>
+  <object-name>RightGearWheel</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>85</dep>
+    <dep>86.5</dep>
    </entry>
    <entry>
     <ind>0.33</ind>
-    <dep>85</dep>
+    <dep>86.5</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
@@ -613,14 +647,14 @@
    </entry>
   </interpolation>
   <center>
-   <x-m>3.10</x-m>
-   <y-m>1.68</y-m>
-   <z-m>-0.45</z-m>
+   <x-m>3.11</x-m>
+   <y-m>1.79</y-m>
+   <z-m>-0.52</z-m>
   </center>
   <axis>
    <x>-1.0</x>
-   <y>0.0</y>
-   <z>0.25</z>
+   <y>-0.11</y>
+   <z>0.16</z>
   </axis>
  </animation>
 
@@ -716,7 +750,11 @@
 
  <animation>
   <type>select</type>
-  <object-name>RightGearStrut</object-name>
+  <object-name>RightGearStrut1</object-name>
+  <object-name>RightGearStrut2</object-name>
+  <object-name>RightGearStrut3</object-name>
+  <object-name>RightGearStrut4</object-name>
+  <object-name>RightGearStrut5</object-name>
   <condition>
    <greater-than>
     <property>gear/gear[1]/position-norm</property>
