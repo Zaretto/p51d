@@ -576,6 +576,16 @@
  </model>
 
  <model>
+  <name>SEAT and ARMOR</name>
+  <path>Aircraft/p51d/Models/seat-vintage.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model>
+
+ <model>
   <name>OX REGULATOR</name>
   <path>Aircraft/Instruments-3d/A-14A-OxReg/A-14A.xml</path>
   <offsets>
@@ -1994,8 +2004,6 @@
   <object-name>land-gear-placard</object-name>
   <object-name>gear-forward-lever</object-name>
   <object-name>gear-rear-lever</object-name>
-  <object-name>SeatBottom</object-name>
-  <object-name>SeatBack</object-name>
   <object-name>RightRudder1</object-name>
   <object-name>LeftRudder2</object-name>
   <object-name>LeftRudder1</object-name>
@@ -2394,6 +2402,7 @@
      </not>
   </condition>
  </animation>
+
 
  <!-- rain animations -->
 
