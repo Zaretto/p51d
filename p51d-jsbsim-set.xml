@@ -404,11 +404,12 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
         </armament>
         <Ox>
            <blinker type="int">0</blinker>
+           <pressure type="float"> 400.0 </pressure>
         </Ox>
       </systems>
       <ap>
         <map-error type="float">0.0</map-error>
-     </ap>
+      </ap>
    </jsbsim>
  </fdm>
  <systems>

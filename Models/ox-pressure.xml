@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>blinker.ac</path>
+ <path>ox-pressure.ac</path>
 
     <animation>
         <type>range</type>
@@ -12,34 +12,34 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>blinker</object-name>
-  <property>/fdm/jsbsim/systems/Ox/blinker</property>
+  <object-name>Needle</object-name>
+  <property>/fdm/jsbsim/systems/Ox/pressure</property>
   <interpolation>
     <entry>
     <ind>0</ind>
-    <dep>00</dep>
+    <dep>0</dep>
    </entry>
    <entry>
-    <ind>1</ind>
-    <dep>49</dep>
+    <ind>500</ind>
+    <dep>180</dep>
    </entry>
   </interpolation>
    <center>
-   <x-m>-0.029</x-m>
+   <x-m>-0.0</x-m>
    <y-m>0.0</y-m>
    <z-m>0.0</z-m>
   </center>
   <axis>
-   <x>0</x>
+   <x>-1</x>
    <y>0</y>
-   <z>1</z>
+   <z>0</z>
   </axis>
  </animation>
 
  <animation>
   <type>material</type>
   <object-name>Face</object-name>
-  <object-name>blinker</object-name>
+  <object-name>Needle</object-name>
   <emission>
     <factor-prop>/controls/lighting/instruments-norm</factor-prop>
     <red>0.35</red>

@@ -445,8 +445,17 @@
   <path>Aircraft/p51d/Models/blinker.xml</path>
   <offsets>
    <x-m>3.715</x-m>
-   <y-m>0.19</y-m>
-   <z-m>0.10</z-m>
+   <y-m>0.20</y-m>
+   <z-m>0.09</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/ox-pressure.xml</path>
+  <offsets>
+   <x-m>3.715</x-m>
+   <y-m>0.27</y-m>
+   <z-m>0.09</z-m>
   </offsets>
  </model>
 
@@ -608,9 +617,9 @@
   <name>OX HOSE</name>
   <path>Aircraft/p51d/Models/Ox-hose.ac</path>
   <offsets>
-   <x-m>3.477</x-m>
-   <y-m>0.104</y-m>
-   <z-m>0.12</z-m>
+   <x-m>3.4735</x-m>
+   <y-m>0.1085</y-m>
+   <z-m>0.119</z-m>
   </offsets>
  </model>
 
