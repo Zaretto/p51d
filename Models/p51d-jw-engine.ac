@@ -1397,6 +1397,7 @@ refs 3
 89 0.03125 1
 kids 0
 OBJECT poly
+name "bezelBase"
 loc 0.0018589 -0.000242673 1.19067e-05
 texture "p51d-jw-large-bezel.rgb"
 numvert 36

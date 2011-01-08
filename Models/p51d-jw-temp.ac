@@ -1397,6 +1397,7 @@ refs 3
 89 0.03125 1
 kids 0
 OBJECT poly
+name "bezelBase"
 loc 0.00234067 -0.000174921 7.21076e-05
 texture "p51d-jw-med-bezel.rgb"
 numvert 36

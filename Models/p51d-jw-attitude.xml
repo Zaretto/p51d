@@ -12,13 +12,25 @@
  <animation>
   <type>material</type>
   <object-name>Face</object-name>
-  <object-name>plate</object-name>
   <object-name>bezelinside</object-name>
   <emission>
     <factor-prop>/controls/lighting/instruments-norm</factor-prop>
     <red>0.35</red>
     <green>0.35</green>
     <blue>0.4</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>bezeloutside</object-name>
+  <object-name>bezelBase</object-name>
+  <object-name>plate</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/cabin-norm</factor-prop>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
   </emission>
  </animation>
 

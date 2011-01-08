@@ -2412,6 +2412,7 @@ refs 3
 0 0.176986 0.274851
 kids 0
 OBJECT poly
+name "bezelBase"
 texture "p51d-jw-attitude-bezel.rgb"
 numvert 16
 0.00780001 -0.0528249 0.00109321

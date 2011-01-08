@@ -2057,6 +2057,8 @@
   <object-name>carbHP-plac-scrw2</object-name>
   <object-name>carbHP-plac-scrw3</object-name>
   <object-name>carbHP-plac-scrw4</object-name>
+  <object-name>unlockTailwheel</object-name>
+  <object-name>MP-warning</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>

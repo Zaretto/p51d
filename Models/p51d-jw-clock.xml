@@ -24,6 +24,18 @@
  </animation>
 
  <animation>
+  <type>material</type>
+  <object-name>bezeloutside</object-name>
+  <object-name>bezelBase</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/cabin-norm</factor-prop>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+  </emission>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>HourHand</object-name>
   <property>/instrumentation/clock/indicated-sec</property>
