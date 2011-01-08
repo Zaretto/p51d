@@ -442,6 +442,15 @@
  </model>
 
  <model>
+  <path>Aircraft/p51d/Models/blinker.xml</path>
+  <offsets>
+   <x-m>3.715</x-m>
+   <y-m>0.19</y-m>
+   <z-m>0.10</z-m>
+  </offsets>
+ </model>
+
+ <model>
  <name>engine-switch-panel</name>
   <path>Aircraft/p51d/Models/engine-switch-panel.xml</path>
   <offsets>

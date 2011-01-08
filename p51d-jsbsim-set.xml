@@ -402,6 +402,9 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
            <trigger-right type="int">0</trigger-right>
            <trigger-left type="int">0</trigger-left>
         </armament>
+        <Ox>
+           <blinker type="int">0</blinker>
+        </Ox>
       </systems>
       <ap>
         <map-error type="float">0.0</map-error>
