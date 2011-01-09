@@ -167,17 +167,17 @@
   <panel>
   <path>Aircraft/p51d/Models/bomb-salvo-hotspots.xml</path>
   <bottom-left>
-   <x-m>4.113</x-m>
+   <x-m>4.09</x-m>
    <y-m>-0.243</y-m>
    <z-m>0.2</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>4.113</x-m>
+   <x-m>4.09</x-m>
    <y-m>-0.193</y-m>
    <z-m>0.2</z-m>
   </bottom-right>
   <top-left>
-   <x-m>3.93</x-m>
+   <x-m>3.907</x-m>
    <y-m>-0.243</y-m>
    <z-m> 0.3</z-m>
   </top-left>
