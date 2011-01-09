@@ -486,7 +486,7 @@ Hal V. Engel hvengel@astound.net
     <system file="compressability"/>
     <system file="weapons-weight"/>
     <system file="tail-wheel"/>
-    <!-- <system file="lift"/> -->
+    <system file="hydraulic"/>
 
     <flight_control name="FCS: P51D">
 

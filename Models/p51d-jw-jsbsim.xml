@@ -584,6 +584,19 @@
  </model>
 
  <model>
+  <name>HYDRAULIC HANDLE AND PRESSURE GAGE</name>
+  <path>Aircraft/p51d/Models/hydraulic.xml</path>
+  <offsets>
+   <x-m>3.8</x-m>
+   <y-m>0.055</y-m>
+   <z-m>-0.175</z-m>
+   <roll-deg>0.0</roll-deg>
+   <pitch-deg>-52.5.0</pitch-deg>
+   <yaw-deg>0.0</yaw-deg>
+  </offsets>
+ </model>
+
+ <model>
   <name>ELECTRICAL_PANEL</name>
   <path>Aircraft/p51d/Models/electrical-panel.xml</path>
   <offsets>

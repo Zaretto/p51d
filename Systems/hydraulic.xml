@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<system name="Hydraulic">
+
+    <property value="0">systems/right-flor-gain</property>
+    <property value="0.0">systems/gear/inner-doors</property>
+    
+    <channel name="pressure">
+
+       <switch name="systems/hydraulic/pressure">
+          <default value="0.0"/>
+          <test value="1000.0">
+             propulsion/engine/set-running GE 0.1
+          </test>
+       </switch>
+
+    </channel>
+
+</system>
