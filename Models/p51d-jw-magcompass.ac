@@ -6,7 +6,7 @@ MATERIAL "ac3dmat0.001" rgb 0 0 0 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 10 t
 OBJECT world
 kids 5
 OBJECT poly
-name "Compass.003"
+name "Compass"
 data 8
 Mesh.048
 texture "p51d-jw-compass.rgb"
@@ -272,7 +272,7 @@ refs 3
 63 0.25 -0.25
 kids 0
 OBJECT poly
-name "Rim.001"
+name "Rim"
 data 8
 Mesh.032
 texture "p51d-jw-compass-bezel.rgb"
@@ -1018,7 +1018,7 @@ refs 3
 96 0.164061993361 0.13671900332
 kids 0
 OBJECT poly
-name "bezel"
+name "bezelBase"
 data 8
 Mesh.028
 texture "p51d-jw-med-bezel.rgb"
@@ -1352,7 +1352,7 @@ refs 3
 24 0.10931699723 0.290053009987
 kids 0
 OBJECT poly
-name "box.001"
+name "box"
 data 8
 Mesh.050
 crease 30.000000

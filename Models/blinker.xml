@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>p51d-jw-remote.ac</path>
+ <path>blinker.ac</path>
 
     <animation>
         <type>range</type>
@@ -9,11 +9,37 @@
         <max-m>7</max-m>
     </animation>
 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>blinker</object-name>
+  <property>/fdm/jsbsim/systems/Ox/blinker</property>
+  <interpolation>
+    <entry>
+    <ind>0</ind>
+    <dep>00</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>49</dep>
+   </entry>
+  </interpolation>
+   <center>
+   <x-m>-0.029</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
  <animation>
   <type>material</type>
   <object-name>Face</object-name>
-  <object-name>Needle1</object-name>
-  <object-name>Needle2</object-name>
+  <object-name>blinker</object-name>
   <emission>
     <factor-prop>/controls/lighting/instruments-norm</factor-prop>
     <red>0.35</red>
@@ -26,7 +52,6 @@
   <type>material</type>
   <object-name>bezeloutside</object-name>
   <object-name>bezelBase</object-name>
-  <object-name>knob</object-name>
   <emission>
     <factor-prop>/controls/lighting/cabin-norm</factor-prop>
     <red>0.2</red>
@@ -35,28 +60,4 @@
   </emission>
  </animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>Needle1</object-name>
-  <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
-  <axis>
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Needle2</object-name>
-  <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
-  <axis>
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
-
 </PropertyList>
-
-

@@ -11,7 +11,7 @@
 
  <animation>
   <type>material</type>
-  <object-name>Compass.003</object-name>
+  <object-name>Compass</object-name>
   <emission>
     <factor-prop>/controls/lighting/instruments-norm</factor-prop>
     <red>0.35</red>
@@ -21,8 +21,20 @@
  </animation>
 
  <animation>
+  <type>material</type>
+  <object-name>rim</object-name>
+  <object-name>bezelBase</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/cabin-norm</factor-prop>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+  </emission>
+ </animation>
+
+ <animation>
   <type>rotate</type>
-  <object-name>Compass.003</object-name>
+  <object-name>Compass</object-name>
   <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
   <center>
    <x-m>-0.030</x-m>
