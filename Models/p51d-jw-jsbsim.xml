@@ -499,6 +499,17 @@
   </offsets>
  </model>
 
+ <model>
+  <name>HORN-BUTTON</name>
+  <path>Aircraft/p51d/Models/horn-button.ac</path>
+  <offsets>
+   <x-m>3.727</x-m>
+   <y-m>0.113</y-m>
+   <z-m>0.0429</z-m>
+   <pitch-deg>-7.0</pitch-deg>
+  </offsets>
+ </model>
+
  <!-- non-panel models -->
 
  <model>
@@ -564,6 +575,19 @@
  </model>
 
  <model>
+  <name>GUNSIGHT-CONTROLER</name>
+  <path>Aircraft/p51d/Models/sight-controler.ac</path>
+  <offsets>
+   <x-m>3.75</x-m>
+   <y-m>-0.2</y-m>
+   <z-m>0.51</z-m>
+   <roll-deg>48.0</roll-deg>
+   <pitch-deg>-0.0</pitch-deg>
+   <yaw-deg>25.0</yaw-deg>
+  </offsets>
+ </model>
+
+ <model>
   <name>PIPER</name>
   <path>Aircraft/p51d/Models/gun-sight.xml</path>
   <offsets>
@@ -591,7 +615,7 @@
    <y-m>0.055</y-m>
    <z-m>-0.175</z-m>
    <roll-deg>0.0</roll-deg>
-   <pitch-deg>-52.5.0</pitch-deg>
+   <pitch-deg>-52.5</pitch-deg>
    <yaw-deg>0.0</yaw-deg>
   </offsets>
  </model>
