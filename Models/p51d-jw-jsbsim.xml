@@ -167,17 +167,17 @@
   <panel>
   <path>Aircraft/p51d/Models/bomb-salvo-hotspots.xml</path>
   <bottom-left>
-   <x-m>4.113</x-m>
+   <x-m>4.09</x-m>
    <y-m>-0.243</y-m>
    <z-m>0.2</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>4.113</x-m>
+   <x-m>4.09</x-m>
    <y-m>-0.193</y-m>
    <z-m>0.2</z-m>
   </bottom-right>
   <top-left>
-   <x-m>3.93</x-m>
+   <x-m>3.907</x-m>
    <y-m>-0.243</y-m>
    <z-m> 0.3</z-m>
   </top-left>
@@ -499,6 +499,17 @@
   </offsets>
  </model>
 
+ <model>
+  <name>HORN-BUTTON</name>
+  <path>Aircraft/p51d/Models/horn-button.ac</path>
+  <offsets>
+   <x-m>3.727</x-m>
+   <y-m>0.113</y-m>
+   <z-m>0.0429</z-m>
+   <pitch-deg>-7.0</pitch-deg>
+  </offsets>
+ </model>
+
  <!-- non-panel models -->
 
  <model>
@@ -564,6 +575,19 @@
  </model>
 
  <model>
+  <name>GUNSIGHT-CONTROLER</name>
+  <path>Aircraft/p51d/Models/sight-controler.ac</path>
+  <offsets>
+   <x-m>3.75</x-m>
+   <y-m>-0.2</y-m>
+   <z-m>0.51</z-m>
+   <roll-deg>48.0</roll-deg>
+   <pitch-deg>-0.0</pitch-deg>
+   <yaw-deg>25.0</yaw-deg>
+  </offsets>
+ </model>
+
+ <model>
   <name>PIPER</name>
   <path>Aircraft/p51d/Models/gun-sight.xml</path>
   <offsets>
@@ -584,6 +608,19 @@
  </model>
 
  <model>
+  <name>HYDRAULIC HANDLE AND PRESSURE GAGE</name>
+  <path>Aircraft/p51d/Models/hydraulic.xml</path>
+  <offsets>
+   <x-m>3.8</x-m>
+   <y-m>0.055</y-m>
+   <z-m>-0.175</z-m>
+   <roll-deg>0.0</roll-deg>
+   <pitch-deg>-52.5</pitch-deg>
+   <yaw-deg>0.0</yaw-deg>
+  </offsets>
+ </model>
+
+ <model>
   <name>ELECTRICAL_PANEL</name>
   <path>Aircraft/p51d/Models/electrical-panel.xml</path>
   <offsets>
@@ -598,6 +635,16 @@
   <path>Aircraft/p51d/Models/seat-vintage.xml</path>
   <offsets>
    <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>STICK_LOCK</name>
+  <path>Aircraft/p51d/Models/sticklock.ac</path>
+  <offsets>
+   <x-m>0.1</x-m>
    <y-m>0</y-m>
    <z-m>0</z-m>
   </offsets>
@@ -746,7 +793,7 @@
   <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
-   <x-m>3.94</x-m>
+   <x-m>4.01</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.22</z-m>
   </center>
@@ -763,7 +810,7 @@
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
-   <x-m>3.94</x-m>
+   <x-m>4.01</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.22</z-m>
   </center>
@@ -780,7 +827,7 @@
   <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
-   <x-m>3.94</x-m>
+   <x-m>4.01</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.22</z-m>
   </center>
@@ -797,7 +844,7 @@
   <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
-   <x-m>3.94</x-m>
+   <x-m>4.01</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.22</z-m>
   </center>
@@ -814,7 +861,7 @@
   <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
-   <x-m>3.94</x-m>
+   <x-m>4.01</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.22</z-m>
   </center>
@@ -831,7 +878,7 @@
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
-   <x-m>3.94</x-m>
+   <x-m>4.01</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.22</z-m>
   </center>
@@ -848,7 +895,7 @@
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
-   <x-m>3.94</x-m>
+   <x-m>4.01</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.22</z-m>
   </center>
@@ -865,7 +912,7 @@
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
-   <x-m>3.94</x-m>
+   <x-m>4.01</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.22</z-m>
   </center>

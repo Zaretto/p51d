@@ -62,7 +62,7 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
    <config>
     <x-offset-m archive="y" type="double">0.0</x-offset-m>
     <y-offset-m archive="y" type="double">0.730</y-offset-m>
-    <z-offset-m archive="y" type="double">4.495</z-offset-m>
+    <z-offset-m archive="y" type="double">4.422</z-offset-m>
     <pitch-offset-deg>-17.5</pitch-offset-deg>
    </config>
   </view>
@@ -406,6 +406,9 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
            <blinker type="int">0</blinker>
            <pressure type="float"> 400.0 </pressure>
         </Ox>
+        <hydraulic>
+           <pressure type="float"> 0.0 </pressure>
+        </hydraulic>
       </systems>
       <ap>
         <map-error type="float">0.0</map-error>
