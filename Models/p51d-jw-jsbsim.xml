@@ -659,7 +659,7 @@
 
  <model>
   <name>OX HOSE</name>
-  <path>Aircraft/p51d/Models/Ox-hose.ac</path>
+  <path>Aircraft/p51d/Models/Ox-hose.xml</path>
   <offsets>
    <x-m>3.4735</x-m>
    <y-m>0.1085</y-m>
@@ -687,6 +687,16 @@
    <roll-deg>15.0</roll-deg>
    <pitch-deg>0</pitch-deg>
    <yaw-deg>0</yaw-deg>
+  </offsets>
+ </model>
+
+  <model>
+  <name>SCR-695 Control Box</name>
+  <path>Aircraft/p51d/Models/SCR-695.xml</path>
+  <offsets>
+   <x-m>4.35</x-m>
+   <y-m>0.365</y-m>
+   <z-m>0.14</z-m>
   </offsets>
  </model>
 
@@ -2073,8 +2083,6 @@
   <object-name>accumlator</object-name>
   <object-name>RFlourlLghtControl-1</object-name>
   <object-name>breaker-reset</object-name>
-  <object-name>Ox-Hose</object-name>
-  <object-name>Mask-Connector</object-name>
   <object-name>emergency-handle</object-name>
   <object-name>emergency-h-base</object-name>
   <object-name>emergency-spring</object-name>
