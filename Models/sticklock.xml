@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>sticklock.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>stick-lock-knob</object-name>
+  <object-name>stick-lock-base</object-name>
+  <object-name>stick-lock</object-name>
+  <object-name>bolt-head.001</object-name>
+  <object-name>bolt-head.002</object-name>
+  <object-name>bolt-head.003</object-name>
+  <object-name>bolt-head</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/cabin-norm</factor-prop>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+  </emission>
+ </animation>
+
+</PropertyList>
+
+

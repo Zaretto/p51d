@@ -576,14 +576,11 @@
 
  <model>
   <name>GUNSIGHT-CONTROLER</name>
-  <path>Aircraft/p51d/Models/sight-controler.ac</path>
+  <path>Aircraft/p51d/Models/sight-controler.xml</path>
   <offsets>
-   <x-m>3.75</x-m>
-   <y-m>-0.2</y-m>
-   <z-m>0.51</z-m>
-   <roll-deg>48.0</roll-deg>
-   <pitch-deg>-0.0</pitch-deg>
-   <yaw-deg>25.0</yaw-deg>
+   <x-m>3.77</x-m>
+   <y-m>0.26</y-m>
+   <z-m>0.43</z-m>
   </offsets>
  </model>
 
@@ -642,7 +639,7 @@
 
  <model>
   <name>STICK_LOCK</name>
-  <path>Aircraft/p51d/Models/sticklock.ac</path>
+  <path>Aircraft/p51d/Models/sticklock.xml</path>
   <offsets>
    <x-m>0.1</x-m>
    <y-m>0</y-m>
@@ -727,9 +724,9 @@
   <name>LEFT-FLOR_LIGHT</name>
   <path>Aircraft/p51d/Models/flor-light-left.xml</path>
   <offsets>
-   <x-m>3.86</x-m>
-   <y-m>-0.272</y-m>
-   <z-m>0.41</z-m>
+   <x-m>3.87</x-m>
+   <y-m>-0.282</y-m>
+   <z-m>0.40</z-m>
    <roll-deg>-30.0</roll-deg>
    <pitch-deg>-10.0</pitch-deg>
    <yaw-deg>30.0</yaw-deg>
@@ -740,9 +737,9 @@
   <name>RIGHT-FLOR_LIGHT</name>
   <path>Aircraft/p51d/Models/flor-light-rt.xml</path>
   <offsets>
-   <x-m>3.85</x-m>
-   <y-m>0.272</y-m>
-   <z-m>0.40</z-m>
+   <x-m>3.87</x-m>
+   <y-m>0.29</y-m>
+   <z-m>0.38</z-m>
    <roll-deg>30.0</roll-deg>
    <pitch-deg>-1.0</pitch-deg>
    <yaw-deg>-30.0</yaw-deg>
