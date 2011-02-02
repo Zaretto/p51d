@@ -1148,6 +1148,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftOuterGearCover</object-name>
+  <object-name>LeftOuterGearCover_1</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
    <entry>
@@ -1165,7 +1166,7 @@
   </interpolation>
   <center>
    <x-m>3.08</x-m>
-   <y-m>-1.81</y-m>
+   <y-m>-1.83</y-m>
    <z-m>-0.59</z-m>
   </center>
   <axis>
@@ -1295,6 +1296,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RightOuterGearCover</object-name>
+  <object-name>RightOuterGearCover.1</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
@@ -1312,7 +1314,7 @@
   </interpolation>
   <center>
    <x-m>3.08</x-m>
-   <y-m>1.81</y-m>
+   <y-m>1.84</y-m>
    <z-m>-0.59</z-m>
   </center>
   <axis>
