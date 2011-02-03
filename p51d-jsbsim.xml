@@ -424,7 +424,7 @@ Hal V. Engel hvengel@astound.net
                 <y> -80 </y>
                 <z> -9.675 </z>
             </location>
-            <capacity unit="LBS"> 607.21 </capacity>
+            <capacity unit="LBS"> 553.84 </capacity>
             <contents unit="LBS"> 396 </contents>
             <priority> 1 </priority>
             <type> AVGAS </type> 
@@ -435,7 +435,7 @@ Hal V. Engel hvengel@astound.net
                 <y> 80 </y>
                 <z> -9.675 </z>
             </location>
-            <capacity unit="LBS"> 607.21 </capacity>
+            <capacity unit="LBS"> 553.84 </capacity>
             <contents unit="LBS"> 396 </contents>
             <priority> 1 </priority>
             <type> AVGAS </type>
@@ -446,7 +446,7 @@ Hal V. Engel hvengel@astound.net
                 <y> 0 </y>
                 <z> -3.0 </z>
             </location>
-            <capacity unit="LBS"> 561 </capacity>
+            <capacity unit="LBS"> 511.7 </capacity>
             <contents unit="LBS"> 0 </contents>
             <priority> 1 </priority>
             <type> AVGAS </type>
@@ -457,7 +457,7 @@ Hal V. Engel hvengel@astound.net
                 <y> -198 </y>
                 <z> -25 </z>
             </location>
-            <capacity unit="LBS"> 495 </capacity>
+            <capacity unit="LBS"> 451.5 </capacity>
             <contents unit="LBS"> 0 </contents>
             <priority> 1 </priority>
             <type> AVGAS </type>
@@ -468,7 +468,7 @@ Hal V. Engel hvengel@astound.net
                 <y> 198 </y>
                 <z> -25 </z>
             </location>
-            <capacity unit="LBS"> 495 </capacity>
+            <capacity unit="LBS"> 451.5 </capacity>
             <contents unit="LBS"> 0 </contents>
             <priority> 1 </priority>
             <type> AVGAS </type>
