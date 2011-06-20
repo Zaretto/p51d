@@ -20,10 +20,11 @@
    <nopreview/>
    <offsets>
      <x-m>4.4</x-m>
-     <y-m>0</y-m>
+     <y-m>-0.0</y-m>
      <z-m>0.0</z-m>
    </offsets>
  </model>
+ 
 
  <animation>
    <type>select</type>
@@ -679,11 +680,11 @@
 
  <model>
   <name>SCR-522C Control Box</name>
-  <path>Aircraft/Instruments-3d/SCR-522C/SCR-522C.xml</path>
+  <path>Aircraft/Instruments-3d/SCR-522C/BC-602-A.xml</path>
   <offsets>
-   <x-m>4.235</x-m>
+   <x-m>4.248</x-m>
    <y-m>0.37</y-m>
-   <z-m>0.14</z-m>
+   <z-m>0.13</z-m>
    <roll-deg>15.0</roll-deg>
    <pitch-deg>0</pitch-deg>
    <yaw-deg>0</yaw-deg>
@@ -694,7 +695,7 @@
   <name>SCR-695 Control Box</name>
   <path>Aircraft/p51d/Models/SCR-695.xml</path>
   <offsets>
-   <x-m>4.35</x-m>
+   <x-m>4.363</x-m>
    <y-m>0.365</y-m>
    <z-m>0.14</z-m>
   </offsets>
@@ -1147,8 +1148,8 @@
 -->
  <animation>
   <type>rotate</type>
-  <object-name>LeftOuterGearCover</object-name>
-  <object-name>LeftOuterGearCover_1</object-name>
+  <object-name>LeftOuterGearOC</object-name>
+  <object-name>LeftOuterGearIC</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
    <entry>
@@ -1179,6 +1180,8 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftInnerGearCover</object-name>
+  <object-name>LeftInnerGearCover1</object-name>
+  <object-name>LeftInnerGearCover2</object-name>
   <property>/fdm/jsbsim/systems/gear/inner-doors</property>
   <interpolation>
    <entry>
@@ -1321,6 +1324,32 @@
    <x>-1.0</x>
    <y>-0.11</y>
    <z>0.16</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>RightInnerGearCover1</object-name>
+  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>0.7</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>3.10</x-m>
+   <y-m>0.07</y-m>
+   <z-m>-0.8</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.02</y>
+   <z>0.05</z>
   </axis>
  </animation>
 

@@ -6,7 +6,7 @@
     <animation>
         <type>range</type>
         <min-m>0</min-m>
-        <max-m>7</max-m>
+        <max-property>/sim/rendering/static-lod/rough</max-property>
     </animation>
 
  <animation>
