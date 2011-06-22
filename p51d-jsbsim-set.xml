@@ -25,6 +25,9 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
      <cockpit type="int">4</cockpit>
   </rating>
 
+   <user>
+       <callsign>N5428V</callsign>
+   </user>
    
   <flight-model>jsb</flight-model>
   <aero>p51d-jsbsim</aero>
@@ -120,9 +123,10 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
     <line>Landing Speed: 100 mph</line>
     <line>Initial Climb Rate: 3475 feet per minute</line>
     <line>Sustained Climb Speed: 175 mph</line>
-    <line>Service Ceiling: 41,900 (with 2nd Stage booster)</line>
+    <line>Service Ceiling: 41,200</line>
     <line>Stall Speed (9000 lbs) Gear/Flaps Up: 102mph</line>
     <line>Stall Speed (9000 lbs) Gear/Flaps Down: 95mph</line>
+    <line>Crtl-D to drop bombs, external tanks or fire rockets</line>
     <text>    STARTING THE ENGINE___________________________________
 1. Set propeller control to full INCREASE.
 2. Ignition switch and battery-disconnect (second switch, top row of electrical box to pilots right) OFF.
@@ -228,7 +232,10 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 2. Because of the wide landing gear and locked tail wheel, landing characteristics are excellent on this aircraft.
 3. Minimize use of brakes during ground roll.
 4. At completion of the landing roll, clear runway as soon as possible.  Excessive braking can cause you to do a ground loop (nose over).  Some recommend raising flaps immediately after touchdown.
-    </text>
+    
+    SECOND TRIGGER_________________________________________
+Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to drop bombs, drop tanks and to fire rockets depending on how the weapons system related switches on the panel are set.  If you wish to use a joystick button for this (recommended) please see the README.p51d.jsbsim file for details on how to set this up.
+</text>
   </help>
   
 
@@ -258,10 +265,9 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
     </redout>
   </rendering>
 
-  <menubar include="Dialogs/menu-bar.xml"/>
+   <menubar include="Dialogs/menu-bar.xml" />
  </sim>
 
- <!-- set prop for the manual "bookmark" arrow on the remote compas -->
  <instrumentation>
     <magnetic-compass>
        <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
@@ -273,6 +279,26 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
        <position-norm type="float">1</position-norm>
     </gear>
  </gear>
+ 
+ <input>
+     <keyboard>
+      <key n="4">
+        <name>Ctrl-D</name>
+        <desc>Fire Rockets or Release Bombs or Release Drop Tanks</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger2", 1)</script>
+        </binding>
+        <mod-up>
+            <binding>
+                <command>nasal</command>
+                <script>setprop("/controls/armament/trigger2", 0)</script>
+            </binding>
+        </mod-up>
+      </key>
+    </keyboard>
+ </input>
 
 <!-- initialize control properties -->
  <controls>
@@ -409,24 +435,16 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
         <hydraulic>
            <pressure type="float"> 0.0 </pressure>
         </hydraulic>
+        <brakes>
+            <brake-scaling type="float">1.0</brake-scaling>
+        </brakes>
       </systems>
       <ap>
         <map-error type="float">0.0</map-error>
       </ap>
    </jsbsim>
  </fdm>
- <systems>
-   <comm>
-     <SCR-522C>
-      <frequencies>
-         <channel-selected type="int"> 0 </channel-selected>
-      </frequencies>
-      <tr type="int">0</tr>
-      <channel-dimmer type="float"> 1.0 </channel-dimmer>
-      <tr-dimmer type="float"> 1.0 </tr-dimmer>
-     </SCR-522C>
-   </comm>
- </systems>
+ 
 <ai>
    <submodels>
       <submodel n="2">
@@ -503,6 +521,9 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
       <file>Aircraft/p51d/Nasal/gear-doors.nas</file>
       <file>Aircraft/p51d/Nasal/gear-lever.nas</file>
     </p51d>
+    <SCR_522C>
+      <file>Aircraft/Instruments-3d/SCR-522C/Nasal/SCR-522C.nas</file>
+    </SCR_522C>
   </nasal>
 
 </PropertyList>

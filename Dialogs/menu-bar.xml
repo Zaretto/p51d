@@ -61,13 +61,6 @@
                    <script>p51d.loadGuns(0)</script>
                 </binding>
              </item>
-          <!--   <item>
-             <label>Fuel</label>
-               <binding>
-                 <command>dialog-show</command>
-                 <dialog-name>P-51D-Fuel</dialog-name>
-               </binding>
-             </item> -->
         </menu>
      </default>
 
