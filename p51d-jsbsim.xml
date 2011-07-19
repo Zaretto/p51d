@@ -30,7 +30,7 @@ Hal V. Engel hvengel@astound.net
         <vtailarea unit="FT2"> 20 </vtailarea>
         <vtailarm unit="FT"> 15 </vtailarm>
         <location name="AERORP" unit="IN">
-            <x> 99 </x>
+            <x> 98 </x>
             <y> 0 </y>
             <z> -26.5 </z>
         </location>
@@ -222,6 +222,45 @@ Hal V. Engel hvengel@astound.net
             <brake_group> NONE </brake_group>
             <retractable>1</retractable>
         </contact>
+        
+        <!-- Next three are jack stands for testing landing gear functionality -->
+        <!--  <contact type="STRUCTURE" name="LEFT_WING_TIP_JACK_STAND">
+              <location unit="IN">
+              <x> 80 </x>
+              <y> -222 </y>
+              <z>  -97 </z>
+              </location>
+              <static_friction>  0.80 </static_friction>
+              <dynamic_friction> 0.50 </dynamic_friction>
+              <spring_coeff unit="LBS/FT">       11000 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
+          </contact>
+
+            <contact type="STRUCTURE" name="RIGHT_WING_TIP_JACK_STAND">
+              <location unit="IN">
+              <x> 80 </x>
+              <y> 222 </y>
+              <z>  -97 </z>
+              </location>
+              <static_friction>  0.80 </static_friction>
+              <dynamic_friction> 0.50 </dynamic_friction>
+              <spring_coeff unit="LBS/FT">       11000 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
+          </contact>
+
+          <contact type="STRUCTURE" name="TAIL_JACK_STAND">
+              <location unit="IN">
+              <x> 300 </x>
+              <y> 0 </y>
+              <z>  -95 </z>
+              </location>
+              <static_friction>  0.80 </static_friction>
+              <dynamic_friction> 0.50 </dynamic_friction>
+              <spring_coeff unit="LBS/FT">       11000 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
+          </contact> -->
+          
+          <!-- Comment out the Jack stand section when not doing gear tests -->
 
           <contact type="STRUCTURE" name="LEFT_WING_TIP">
               <location unit="IN">
@@ -843,13 +882,13 @@ Hal V. Engel hvengel@astound.net
 	    <p> atmosphere/rho-slugs_ft3 </p>
 	    <pow>
 	      <sum>
-		<p> velocities/u-aero-fps </p>
-		<product>
-		  <p> propulsion/engine/prop-induced-velocity_fps </p>
-		  <v> 2.0 </v>
-		</product>
-	      </sum>
-	      <v> 2.0 </v>
+		     <p> velocities/u-aero-fps </p>
+             <product>
+                <p> propulsion/engine/prop-induced-velocity_fps </p>
+                <v> 2.0 </v>
+             </product>
+           </sum>
+           <v> 2.0 </v>
 	    </pow>
 	  </product>
 	</function>

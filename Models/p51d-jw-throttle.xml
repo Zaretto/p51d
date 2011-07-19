@@ -126,7 +126,7 @@
  <animation>
   <type>translate</type>
   <object-name>MicButton</object-name>
-  <property>/instrumentation/comm/ptt</property>
+  <property>instrumentation/comm/SCR-522C/remote-pushed</property>
   <factor>-0.007</factor>
   <axis>
    <x>0</x>

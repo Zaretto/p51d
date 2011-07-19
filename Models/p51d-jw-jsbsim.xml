@@ -1097,7 +1097,7 @@
    </entry>
    <entry>
     <ind>0.33</ind>
-    <dep>86.5</dep>
+    <dep>86.6</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
@@ -1115,37 +1115,7 @@
    <z>-0.16</z>
   </axis>
  </animation>
-<!--
- <animation>
-  <type>rotate</type>
-  <object-name>LeftGearWheel</object-name>
-  <property>gear/gear[0]/position-norm</property>
-  <interpolation>
-   <entry>
-    <ind>0.0</ind>
-    <dep>89</dep>
-   </entry>
-   <entry>
-    <ind>0.33</ind>
-    <dep>89</dep>
-   </entry>
-   <entry>
-    <ind>1.00</ind>
-    <dep>0.0</dep>
-   </entry>
-  </interpolation>
-  <center>
-   <x-m>3.10</x-m>
-   <y-m>-1.68</y-m>
-   <z-m>-0.45</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>-0.25</z>
-  </axis>
- </animation>
--->
+
  <animation>
   <type>rotate</type>
   <object-name>LeftOuterGearOC</object-name>
@@ -1226,7 +1196,7 @@
   <condition>
    <greater-than>
     <property>gear/gear[0]/position-norm</property>
-    <value>0.02</value>
+    <value>0.01</value>
    </greater-than>
   </condition>
  </animation>
@@ -1247,7 +1217,7 @@
    </entry>
    <entry>
     <ind>0.33</ind>
-    <dep>86.5</dep>
+    <dep>86.6</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
@@ -1265,37 +1235,7 @@
    <z>0.16</z>
   </axis>
  </animation>
-<!--
- <animation>
-  <type>rotate</type>
-  <object-name>RightGearWheel</object-name>
-  <property>gear/gear[1]/position-norm</property>
-  <interpolation>
-   <entry>
-    <ind>0.0</ind>
-    <dep>89</dep>
-   </entry>
-   <entry>
-    <ind>0.33</ind>
-    <dep>89</dep>
-   </entry>
-   <entry>
-    <ind>1.00</ind>
-    <dep>0.0</dep>
-   </entry>
-  </interpolation>
-  <center>
-   <x-m>3.10</x-m>
-   <y-m>1.68</y-m>
-   <z-m>-0.45</z-m>
-  </center>
-  <axis>
-   <x>-1.0</x>
-   <y>0.0</y>
-   <z>0.25</z>
-  </axis>
- </animation>
--->
+
  <animation>
   <type>rotate</type>
   <object-name>RightOuterGearCover</object-name>
@@ -1308,7 +1248,7 @@
    </entry>
    <entry>
     <ind>0.33</ind>
-    <dep>0</dep>
+    <dep>-0.1</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
@@ -1329,33 +1269,8 @@
  
  <animation>
   <type>rotate</type>
-  <object-name>RightInnerGearCover1</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
-  <interpolation>
-   <entry>
-    <ind>0.0</ind>
-    <dep>0</dep>
-   </entry>
-   <entry>
-    <ind>1.0</ind>
-    <dep>0.7</dep>
-   </entry>
-  </interpolation>
-  <center>
-   <x-m>3.10</x-m>
-   <y-m>0.07</y-m>
-   <z-m>-0.8</z-m>
-  </center>
-  <axis>
-   <x>-1.0</x>
-   <y>0.02</y>
-   <z>0.05</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
   <object-name>RightInnerGearCover</object-name>
+  <object-name>RightInnerGearCover1</object-name>
   <property>/fdm/jsbsim/systems/gear/inner-doors</property>
   <interpolation>
    <entry>
@@ -1400,7 +1315,7 @@
   <condition>
    <greater-than>
     <property>gear/gear[1]/position-norm</property>
-    <value>0.02</value>
+    <value>0.01</value>
    </greater-than>
   </condition>
  </animation>
