@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- Oil Pressure check -->
+<PropertyList>
+	<condition>
+		<greater-than>
+			<property>/engines/engine/oil-pressure-psi</property>
+			<value>50</value>
+		</greater-than>
+		<less-than>
+			<property>/engines/engine/oil-pressure-psi</property>
+			<value>90</value>
+		</less-than>
+	</condition>
+	<marker>
+    <x-m>3.7199</x-m>
+    <y-m>0.2009</y-m>
+    <z-m>0.2199</z-m>
+    <scale>3</scale>
+	</marker>
+</PropertyList>

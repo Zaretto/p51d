@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- Rudder Trim check -->
+<PropertyList>
+	<condition>
+		<and>
+			<greater-than-equals>
+				<property>/controls/flight/rudder-trim</property>
+				<value alias="../../../../min-trim"/>
+			</greater-than-equals>
+			<less-than-equals>
+				<property>/controls/flight/rudder-trim</property>
+				<value alias="../../../../max-trim"/>
+			</less-than-equals>
+		</and>
+	</condition>
+	<binding>
+		<command>property-assign</command>
+		<property>/controls/flight/rudder-trim</property>
+		<value alias="../../min-trim"/>
+	</binding>
+	<marker>
+    <x-m>4.0882</x-m>
+    <y-m>-0.3566</y-m>
+    <z-m>0.0808</z-m>
+    <scale>5</scale>
+	</marker>
+</PropertyList>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Carburetor RAM AIR -->
+<PropertyList>
+	<condition>
+		<greater-than>
+			<property>/fdm/jsbsim/propulsion/engine/ram-air-factor</property>
+			<value>0.5</value>
+		</greater-than>
+	</condition>
+	<marker>
+    <x-m>4.1699</x-m>
+    <y-m>-0.3367</y-m>
+    <z-m>0.0691</z-m>
+    <scale>2</scale>
+	</marker>
+</PropertyList>

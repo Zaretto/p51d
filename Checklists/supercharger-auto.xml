@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Supercharger AUTO-->
+<PropertyList>
+	<condition>
+		<equals>
+		<property>/controls/engines/engine/supercharger-switch</property>
+		<value>0</value>
+		</equals>
+	</condition>
+	<marker>
+    <x-m>3.7399</x-m>
+    <y-m>-0.2875</y-m>
+    <z-m>0.0857</z-m>
+    <scale>2.7833</scale>
+	</marker>
+</PropertyList>

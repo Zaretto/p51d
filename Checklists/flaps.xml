@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Flaps check -->
+<PropertyList>
+	 <condition>
+		<equals>
+			<property>/controls/flight/flaps</property>
+			<value alias="../../../../flaps"/>
+		</equals>
+	</condition>
+	<marker>
+    <x-m>4.2774</x-m>
+    <y-m>-0.3808</y-m>
+    <z-m>0.0416</z-m>
+    <scale>2.7833</scale>
+	</marker>
+</PropertyList>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Prop Full check -->
+<PropertyList>
+	<condition>
+		<greater-than>
+			<property>/controls/engines/engine/propeller-pitch</property>
+			<value>0.98</value>
+		</greater-than>
+	</condition>
+	<marker>
+		<x-m>3.8508</x-m>
+		<y-m>-0.2742</y-m>
+		<z-m>0.3000</z-m>
+		<scale>2</scale>
+	</marker>
+</PropertyList>

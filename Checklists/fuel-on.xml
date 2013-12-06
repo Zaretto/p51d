@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Fuel cutoff on check -->
+<PropertyList>
+	<condition>
+		<equals>
+		<property>/controls/fuel/on</property>
+		<value>1</value>
+		</equals>
+	</condition>
+	<marker>
+		<x-m>3.8258</x-m>
+		<y-m>-0.0875</y-m>
+		<z-m>-0.1392</z-m>
+		<scale>2</scale>
+	</marker>
+</PropertyList>

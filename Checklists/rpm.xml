@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- RPM check -->
+<PropertyList>
+	<condition>
+		<greater-than>
+			<property>/engines/engine/rpm</property>
+			<value alias="../../../../min-rpm"/>
+		</greater-than>
+		<less-than>
+			<property>/engines/engine/rpm</property>
+			<value alias="../../../../max-rpm"/>
+		</less-than>
+	</condition>
+	<marker>
+    <x-m>3.7190</x-m>
+    <y-m>0.2092</y-m>
+    <z-m>0.3349</z-m>
+    <scale>2.7833</scale>
+	</marker>
+</PropertyList>

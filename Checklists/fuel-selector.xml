@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Fuel selector check -->
+<PropertyList>
+	 <condition>
+		<equals>
+			<property>/controls/fuel/tank-selector</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<marker>
+    <x-m>3.8382</x-m>
+    <y-m>-0.0275</y-m>
+    <z-m>-0.1501</z-m>
+    <scale>2.7833</scale>
+	</marker>
+</PropertyList>

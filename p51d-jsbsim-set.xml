@@ -3,7 +3,7 @@
 <!--
 ************************************************************************
 P-51D simulation config. This files ties together all the components
-used by FGFS to represent the P-51D. Components include the flight data 
+used by FGFS to represent the P-51D. Components include the flight data
 model, instrument panel, and external 3D model.
 
 March 2003 Jim Wilson, jimw@kelcomaine.com
@@ -28,25 +28,25 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
    <user>
        <callsign>N5428V</callsign>
    </user>
-   
+
   <flight-model>jsb</flight-model>
   <aero>p51d-jsbsim</aero>
   <fuel-fraction>0.50</fuel-fraction>
-  
+
   <startup>
      <splash-texture>Aircraft/p51d/P-51D-splash.png</splash-texture>
   </startup>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
-  
+
   <sound>
    <audible>true</audible>
    <path>Aircraft/p51d/p51d-sound.xml</path>
    <volume type="double">0.26</volume>
   </sound>
 
-  <submodels> 
+  <submodels>
     <serviceable type="bool">true</serviceable>
     <path>Aircraft/p51d/submodels.xml</path>
   </submodels>
@@ -58,7 +58,7 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 
   <model>
    <path>Aircraft/p51d/Models/p51d-jw-jsbsim.xml</path>
-  </model> 
+  </model>
 
   <view n="0">
    <internal archive="y">true</internal>
@@ -232,12 +232,13 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 2. Because of the wide landing gear and locked tail wheel, landing characteristics are excellent on this aircraft.
 3. Minimize use of brakes during ground roll.
 4. At completion of the landing roll, clear runway as soon as possible.  Excessive braking can cause you to do a ground loop (nose over).  Some recommend raising flaps immediately after touchdown.
-    
+
     SECOND TRIGGER_________________________________________
 Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to drop bombs, drop tanks and to fire rockets depending on how the weapons system related switches on the panel are set.  If you wish to use a joystick button for this (recommended) please see the README.p51d.jsbsim file for details on how to set this up.
 </text>
   </help>
-  
+
+  <checklists include="Checklists/p51d-checklists.xml"/>
 
   <!-- multi-play bombable -->
   <multiplay>
@@ -279,7 +280,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
        <position-norm type="float">1</position-norm>
     </gear>
  </gear>
- 
+
  <input>
      <keyboard>
       <key n="4">
@@ -416,7 +417,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <leverPos type="float">0.0</leverPos>
    </gear>
  </controls>
- 
+
  <fdm>
    <jsbsim>
       <systems>
@@ -444,7 +445,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       </ap>
    </jsbsim>
  </fdm>
- 
+
 <ai>
    <submodels>
       <submodel n="2">

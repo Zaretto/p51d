@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- Mixture Idle check -->
+<PropertyList>
+	<condition>
+		<and>
+			<greater-than>
+				<property>/controls/engines/engine/mixture</property>
+				<value>0.05</value>
+			</greater-than>
+			<less-than>
+				<property>/controls/engines/engine/mixture</property>
+				<value>0.95</value>
+			</less-than>
+		</and>
+	</condition>
+	<marker>
+    <x-m>3.8499</x-m>
+    <y-m>-0.3608</y-m>
+    <z-m>0.1175</z-m>
+    <scale>2</scale>
+	</marker>
+</PropertyList>

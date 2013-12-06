@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- JSBSim based on YASim P-51D Mustang by Jim Wilson 
+<!-- JSBSim based on YASim P-51D Mustang by Jim Wilson
      JSBSIm FDM by Hal V. Engel -->
 
 <PropertyList>
@@ -24,7 +24,7 @@
      <z-m>0.0</z-m>
    </offsets>
  </model>
- 
+
 
  <animation>
    <type>select</type>
@@ -757,6 +757,12 @@
   </offsets>
  </model>
 
+ <!-- Marker model used by checklists -->
+ <model>
+   <path>Models/Aircraft/marker.xml</path>
+ </model>
+
+
  <animation>
   <type>rotate</type>
   <object-name>ReostatKnob</object-name>
@@ -773,7 +779,7 @@
    <z>0.0</z>
   </axis>
  </animation>
- 
+
  <animation>
   <type>translate</type>
   <object-name>Trigger2</object-name>
@@ -794,7 +800,7 @@
    <z>1.0</z>
   </axis>
  </animation>
- 
+
  <animation>
   <type>rotate</type>
   <object-name>Trigger2</object-name>
@@ -827,7 +833,7 @@
    <y>0.0</y>
    <z>0.0</z>
   </axis>
- </animation> 
+ </animation>
 
  <animation>
   <type>rotate</type>
@@ -957,7 +963,7 @@
    <x-m>3.644</x-m>
    <y-m>0</y-m>
    <z-m>-0.18</z-m>
-  </center>  
+  </center>
  </animation>
 
  <animation>
@@ -1266,7 +1272,7 @@
    <z>0.16</z>
   </axis>
  </animation>
- 
+
  <animation>
   <type>rotate</type>
   <object-name>RightInnerGearCover</object-name>
@@ -1972,7 +1978,7 @@
    <y-m>0.000</y-m>
    <z-m>-0.02</z-m>
   </center>
- </animation> 
+ </animation>
 
  <animation>
   <type>spin</type>
