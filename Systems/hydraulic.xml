@@ -2,7 +2,6 @@
 
 <system name="Hydraulic">
 
-    <property value="0">systems/right-flor-gain</property>
     <property value="0.0">systems/gear/inner-doors</property>
     
     <channel name="pressure">

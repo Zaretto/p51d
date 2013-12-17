@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<path>prop.ac</path>
+
+<animation>
+  <type>select</type>
+  <object-name>propBlade1</object-name>
+  <object-name>propBlade2</object-name>
+  <object-name>propBlade3</object-name>
+  <object-name>propBlade4</object-name>
+  <condition>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1500</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>propBlade1</object-name>
+  <object-name>propBlade2</object-name>
+  <object-name>propBlade3</object-name>
+  <object-name>propBlade4</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>-0.479</factor>
+  <center>
+   <x-m>-0.40</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>transparency</type>
+  <object-name>propBlade1</object-name>
+  <object-name>propBlade2</object-name>
+  <object-name>propBlade3</object-name>
+  <object-name>propBlade4</object-name>
+  <alpha-prop>engines/engine[0]/rpm</alpha-prop>
+  <interpolation>
+      <entry>
+         <ind>0</ind>
+         <dep>1.0</dep>
+      </entry>
+      <entry>
+         <ind>900</ind>
+         <dep>0.3</dep>
+      </entry>
+	  <entry>
+         <ind>1300</ind>
+         <dep>0.01</dep>
+      </entry>
+   </interpolation>
+ </animation>
+ 
+ <animation>
+  <type>blend</type>
+  <object-name>propBlade1</object-name>
+  <object-name>propBlade2</object-name>
+  <object-name>propBlade3</object-name>
+  <object-name>propBlade4</object-name>
+  <alpha-prop>engines/engine[0]/rpm</alpha-prop>
+  <factor>0.0000666</factor>
+  <min>0</min>
+  <max>1.0</max>
+ </animation>
+
+</PropertyList>

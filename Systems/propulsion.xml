@@ -5,14 +5,10 @@
 <system name="Propulsion">
     
     <property>systems/engine/mp-inhg</property>
-    <property>/engines/engine/cht-degf</property>
     <property>propulsion/fuel_pump</property>
     
-    <property>ap/throttle-cmd-out</property>
     <property> /controls/armament/drop-tank-released-1 </property>
     <property> /controls/armament/drop-tank-released-2 </property>
-    <!-- <property> /controls/armament/User-Selected-Stores </property> -->
-    <property>ap/cooling-cmd-out</property>
     <property value="1">systems/engine/ram-air-control</property>
     <property value="0">systems/engine/hot-air-control</property>
         

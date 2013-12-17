@@ -3,7 +3,6 @@
 <system name="Electrictal">
 
     <property value="0">systems/right-flor-gain</property>
-    <property value="0.0">systems/gear/inner-doors</property>
     
     <channel name="gear doors">
 
@@ -154,43 +153,43 @@
          <switch name="systems/armament/next-RX">
            <default value="0"/>
            <test logic="AND" value="1">
-              /ai/submodels/submodel[8]/count == 1
+              /ai/submodels/submodel[12]/count == 1
           </test>
           <test logic="AND" value="2">
-              /ai/submodels/submodel[8]/count == 0
-              /ai/submodels/submodel[9]/count == 1
+              /ai/submodels/submodel[12]/count == 0
+              /ai/submodels/submodel[13]/count == 1
            </test>
            <test logic="AND" value="3">
-               /ai/submodels/submodel[9]/count  == 0
-               /ai/submodels/submodel[10]/count == 1
+               /ai/submodels/submodel[13]/count  == 0
+               /ai/submodels/submodel[14]/count == 1
           </test>
           <test logic="AND" value="4">
-              /ai/submodels/submodel[10]/count  == 0
-              /ai/submodels/submodel[11]/count  == 1
-           </test>
-           <test logic="AND" value="5">
-              /ai/submodels/submodel[11]/count  == 0
-              /ai/submodels/submodel[12]/count  == 1
-          </test>
-          <test logic="AND" value="6">
-              /ai/submodels/submodel[12]/count  == 0
-              /ai/submodels/submodel[13]/count  == 1
-          </test>
-          <test logic="AND" value="7">
-              /ai/submodels/submodel[13]/count  == 0
-              /ai/submodels/submodel[14]/count  == 1
-           </test>
-           <test logic="AND" value="8">
               /ai/submodels/submodel[14]/count  == 0
               /ai/submodels/submodel[15]/count  == 1
-          </test>
-          <test logic="AND" value="9">
+           </test>
+           <test logic="AND" value="5">
               /ai/submodels/submodel[15]/count  == 0
               /ai/submodels/submodel[16]/count  == 1
           </test>
-          <test logic="AND" value="10">
+          <test logic="AND" value="6">
               /ai/submodels/submodel[16]/count  == 0
               /ai/submodels/submodel[17]/count  == 1
+          </test>
+          <test logic="AND" value="7">
+              /ai/submodels/submodel[17]/count  == 0
+              /ai/submodels/submodel[18]/count  == 1
+           </test>
+           <test logic="AND" value="8">
+              /ai/submodels/submodel[18]/count  == 0
+              /ai/submodels/submodel[19]/count  == 1
+          </test>
+          <test logic="AND" value="9">
+              /ai/submodels/submodel[19]/count  == 0
+              /ai/submodels/submodel[20]/count  == 1
+          </test>
+          <test logic="AND" value="10">
+              /ai/submodels/submodel[20]/count  == 0
+              /ai/submodels/submodel[21]/count  == 1
            </test>
            <output>/controls/armament/next-RX</output>
         </switch>
@@ -199,7 +198,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[1]/trigger GT 0
-              /ai/submodels/submodel[8]/count GT 0
+              /ai/submodels/submodel[12]/count GT 0
            </test>
        </switch>
 
@@ -207,7 +206,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[2]/trigger == 1
-              /ai/submodels/submodel[9]/count GT 0
+              /ai/submodels/submodel[13]/count GT 0
            </test>
        </switch>
 
@@ -215,7 +214,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[3]/trigger == 1
-              /ai/submodels/submodel[10]/count GT 0
+              /ai/submodels/submodel[14]/count GT 0
            </test>
        </switch>
 
@@ -223,7 +222,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[4]/trigger == 1
-              /ai/submodels/submodel[11]/count GT 0
+              /ai/submodels/submodel[15]/count GT 0
            </test>
        </switch>
 
@@ -231,7 +230,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[5]/trigger == 1
-              /ai/submodels/submodel[12]/count GT 0
+              /ai/submodels/submodel[16]/count GT 0
            </test>
        </switch>
 
@@ -239,7 +238,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[6]/trigger == 1
-              /ai/submodels/submodel[13]/count GT 0
+              /ai/submodels/submodel[17]/count GT 0
            </test>
        </switch>
 
@@ -247,7 +246,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[7]/trigger == 1
-              /ai/submodels/submodel[14]/count GT 0
+              /ai/submodels/submodel[18]/count GT 0
            </test>
        </switch>
 
@@ -255,7 +254,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[8]/trigger == 1
-              /ai/submodels/submodel[15]/count GT 0
+              /ai/submodels/submodel[19]/count GT 0
            </test>
        </switch>
 
@@ -263,7 +262,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[9]/trigger == 1
-              /ai/submodels/submodel[16]/count GT 0
+              /ai/submodels/submodel[20]/count GT 0
            </test>
        </switch>
 
@@ -271,7 +270,7 @@
            <default value="0"/>
            <test logic="AND" value="1">
               /controls/armament/rocket[10]/trigger == 1
-              /ai/submodels/submodel[17]/count GT 0
+              /ai/submodels/submodel[21]/count GT 0
            </test>
        </switch>
               
@@ -314,17 +313,16 @@
 
      </channel>
 
-     <channel name="Switch Panel">
-
-       <switch name="systems/engine/engage-starter">
+     <channel name="Switch Panel">         
+		 
+        <!-- <switch name="systems/engine/engage-starter">
          <default value="0"/>
          <test logic="AND" value="1">
             systems/engine/starter GT 0.9
             /controls/engines/engine/master-bat GT 0.9
          </test>
-         <!-- <output>/controls/engines/engine/starter</output> -->
-       </switch>
-         
+         <output>/controls/engines/engine/starter</output>
+       </switch> -->
      </channel>
 
      <channel name="SCR-522C">
@@ -442,25 +440,25 @@
            <test logic="AND" value="1">
              /controls/armament/trigger2 == 1
              /controls/armament/User-Selected-Stores == 1
-             /ai/submodels/submodel[18]/count == 1
+             /ai/submodels/submodel[22]/count == 1
              /controls/armament/bombs-train == 1
           </test>
           <test logic="AND" value="1">
              /controls/armament/trigger2 == 1
              /controls/armament/User-Selected-Stores == 3
-             /ai/submodels/submodel[18]/count == 1
+             /ai/submodels/submodel[22]/count == 1
              /controls/armament/bombs-train == 1
           </test>
           <test logic="AND" value="1">
              /controls/armament/trigger2 == 1
              /controls/armament/User-Selected-Stores == 4
-             /ai/submodels/submodel[20]/count == 1
+             /ai/submodels/submodel[24]/count == 1
              /controls/armament/bombs-train == 1
           </test>
           <test logic="AND" value="1">
              /controls/armament/trigger2 == 1
              /controls/armament/User-Selected-Stores == 5
-             /ai/submodels/submodel[20]/count == 1
+             /ai/submodels/submodel[24]/count == 1
              /controls/armament/bombs-train == 1
           </test>
         </switch>
@@ -470,29 +468,29 @@
            <test logic="AND" value="1">
              /controls/armament/trigger2 == 1
              /controls/armament/User-Selected-Stores == 1
-             /ai/submodels/submodel[18]/count == 0
-             /ai/submodels/submodel[19]/count == 1
+             /ai/submodels/submodel[22]/count == 0
+             /ai/submodels/submodel[23]/count == 1
              /controls/armament/bombs-train == 1
           </test>
           <test logic="AND" value="1">
              /controls/armament/trigger2 == 1
              /controls/armament/User-Selected-Stores == 3
-             /ai/submodels/submodel[18]/count  == 0
-             /ai/submodels/submodel[19]/count == 1
+             /ai/submodels/submodel[22]/count  == 0
+             /ai/submodels/submodel[23]count == 1
              /controls/armament/bombs-train == 1
           </test>
           <test logic="AND" value="1">
              /controls/armament/trigger2 == 1
              /controls/armament/User-Selected-Stores == 4
-             /ai/submodels/submodel[20]/count == 0
-             /ai/submodels/submodel[21]/count == 1
+             /ai/submodels/submodel[24]/count == 0
+             /ai/submodels/submodel[25]/count == 1
              /controls/armament/bombs-train == 1
           </test>
           <test logic="AND" value="1">
              /controls/armament/trigger2 == 1
              /controls/armament/User-Selected-Stores == 5
-             /ai/submodels/submodel[20]/count == 0
-             /ai/submodels/submodel[21]/count == 1
+             /ai/submodels/submodel[24]/count == 0
+             /ai/submodels/submodel[25]/count == 1
              /controls/armament/bombs-train == 1
           </test>
         </switch> 

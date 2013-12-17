@@ -7,6 +7,9 @@ var triggerLast = 0;
 var triggerDown = 0;
 var lastRX = 1;
 var bombCount = 0;
+var rocketsStart = 12;
+var bombsStart = 22;
+var tanksStart = 24;
 
 var resetRocketTriggers = func() {
 
@@ -53,89 +56,95 @@ setlistener("/controls/armament/trigger2", trigger2);
 
 var setStores = func(stores) {
    setprop("/controls/armament/User-Selected-Stores", stores);
+   # no external stores
    if (stores == 0) {
       # rockets
-      for (i=8; i < 18; i = i + 1)
+      for (i=rocketsStart; i < bombsStart; i = i + 1)
         setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # bombs
-      for (i=18; i < 20; i = i + 1)
+      for (i=bombsStart; i < tanksStart; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # tanks
-      for (i=20; i < 22; i = i + 1)
+      for (i=tanksStart; i < tanksStart + 2; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       setprop("consumables/fuel/tank[3]/level-gal_us", 0);
       setprop("consumables/fuel/tank[4]/level-gal_us", 0);
    }
+   # bombs only
    if (stores == 1) {
       # rockets
-      for (i=8; i < 18; i = i + 1)
+      for (i=rocketsStart; i < bombsStart; i = i + 1)
         setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # bombs
-      for (i=18; i < 20; i = i + 1)
+      for (i=bombsStart; i < tanksStart; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       # tanks
-      for (i=20; i < 22; i = i + 1)
+      for (i=tanksStart; i < tanksStart + 2; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       setprop("consumables/fuel/tank[3]/level-gal_us", 0);
       setprop("consumables/fuel/tank[4]/level-gal_us", 0);
    }
+   # rockets only
    if (stores == 2) {
       # rockets
-      for (i=8; i < 18; i = i + 1)
+      for (i=rocketsStart; i < bombsStart; i = i + 1)
         setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       resetRocketTriggers();
       # bombs
-      for (i=18; i < 20; i = i + 1)
+      for (i=bombsStart; i < tanksStart; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # tanks
-      for (i=20; i < 22; i = i + 1)
+      for (i=tanksStart; i < tanksStart + 2; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       setprop("consumables/fuel/tank[3]/level-gal_us", 0);
       setprop("consumables/fuel/tank[4]/level-gal_us", 0);
    }
+   # rockets and bombs
    if (stores == 3) {
       # rockets
       resetRocketTriggers();
-      for (i=8; i < 14; i = i + 1)
+      for (i = rocketsStart; i < rocketsStart + 7; i = i + 1)
         setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
-      for (i=14; i < 18; i = i + 1)
+      for (i=rocketsStart + 6; i < bombsStart; i = i + 1)
         setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # bombs
-      for (i=18; i < 20; i = i + 1)
+      for (i=bombsStart; i < tanksStart; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       # tanks
-      for (i=20; i < 22; i = i + 1)
+      for (i=tanksStart; i < tanksStart + 2; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       setprop("consumables/fuel/tank[3]/level-gal_us", 0);
       setprop("consumables/fuel/tank[4]/level-gal_us", 0);
    }
+   # tanks only
    if (stores == 4) {
       # rockets
-      for (i=8; i < 18; i = i + 1)
+      for (i=rocketsStart; i < bombsStart; i = i + 1)
         setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # bombs
-      for (i=18; i < 20; i = i + 1)
+      for (i=bombsStart; i < tanksStart; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # tanks
-      for (i=20; i < 22; i = i + 1)
+      for (i=tanksStart; i < tanksStart + 2; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       setprop("consumables/fuel/tank[3]/level-gal_us", 75);
       setprop("consumables/fuel/tank[4]/level-gal_us", 75);
       setprop("/controls/armament/drop-tank-released-1", 0);
       setprop("/controls/armament/drop-tank-released-2", 0);
    }
+   # rocket and tanks
    if (stores == 5) {
       # rockets
       resetRocketTriggers();
-      for (i=8; i < 14; i = i + 1)
+      for (i = rocketsStart; i < rocketsStart + 7; i = i + 1)
         setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
-      for (i=14; i < 18; i = i + 1) 
+      for (i=rocketsStart + 6; i < bombsStart; i = i + 1) 
         setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # bombs
-      for (i=18; i < 20; i = i + 1) 
+      for (i=bombsStart; i < tanksStart; i = i + 1) 
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
       # tanks
-      for (i=20; i < 22; i = i + 1)
+      for (i=tanksStart; i < tanksStart + 2; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 1);
       setprop("consumables/fuel/tank[3]/level-gal_us", 75);
       setprop("consumables/fuel/tank[4]/level-gal_us", 75);
@@ -145,17 +154,21 @@ var setStores = func(stores) {
 }
 
 var loadGuns = func (load) {
+   var tracerStart = 0;
+   var bulletsStart = 6;
    if (load == 0) {
-      for (i=0; i < 8; i = i + 1)
+      for (i=tracerStart; i < rocketsStart; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
    }
    else {
-      for (i=0; i < 2; i = i + 1)
-           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 300);
-      for (i=2; i < 4; i = i + 1) 
-           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 400);
-      for (i=4; i < 7; i = i + 1) 
-           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 270);
+      for (i=tracerStart; i < tracerStart + 2; i = i + 1)
+           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 80);
+      for (i=tracerStart + 2; i < bulletsStart; i = i + 1)
+           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 54);
+      for (i= bulletsStart; i < bulletsStart + 2; i = i + 1) 
+           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 320);
+      for (i=bulletsStart + 2; i < bulletsStart + 6; i = i + 1) 
+           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 216);
    }
 }
 

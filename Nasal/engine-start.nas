@@ -3,27 +3,11 @@
 
 var primerTime = 0.0;
 
-controls.startEngine = func(v = 1) {
-    if (!v)
-        setprop("fdm/jsbsim/systems/engine/starter", 0);
-    else
-        setprop("fdm/jsbsim/systems/engine/starter", 1);
+controls.startEngine = func(v) {
+    var starter = props.globals.getNode("/controls/engines/engine/starter");
+	var battery = getprop("/controls/engines/engine/master-bat");
+	starter.setBoolValue(v and battery == 1);
 }
-
-var engageStarter = func {
-    var starter = props.globals.getNode("controls/engines/engine/starter");
-    if (starter == nil)
-        screen.log.write("engageStarter getNode failed");
-    if (getprop("fdm/jsbsim/systems/engine/engage-starter") == 0){
-        starter.setBoolValue(0);
-    }
-    else {
-        starter.setBoolValue(1);
-    }
-    settimer(engageStarter, 0.1);
-}
-
-settimer(engageStarter, 0.1);
 
 var primerTimer = func {
     if (getprop("controls/engines/engine/primer-on") == 1) {
@@ -72,6 +56,23 @@ var throttleMessage = func (n) {
         throttleState = 0;
 }
 
-setlistener("controls/engines/engine/primer-on", primer);
+setlistener("/controls/engines/engine/primer-on", primer);
 
 setlistener("/controls/engines/engine/throttle", throttleMessage);
+
+#var init = func {
+#	var battery = props.globals.getNode("/controls/engines/engine/master-bat");
+#    battery.setBoolValue(0);
+#	var alt = props.globals.getNode("/controls/engines/engine/master-alt");
+#    alt.setBoolValue(0);
+#	removeListener(init_listener);
+#}
+
+var init_listener = setlistener("/sim/signals/fdm-initialized", func {	
+    	var battery = props.globals.getNode("/controls/engines/engine/master-bat");
+        battery.setBoolValue(0);
+    	var alt = props.globals.getNode("/controls/engines/engine/master-alt");
+        alt.setBoolValue(0);
+	    removelistener(init_listener);
+	  }
+	);

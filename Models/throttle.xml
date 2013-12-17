@@ -9,6 +9,88 @@
         <max-property>/sim/rendering/static-lod/rough</max-property>
     </animation>
 	 
+<!--   <animation>
+    <type>locked-track</type> 
+    <object-name>RangeCable1</object-name>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <lock-axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </lock-axis>
+    <track-axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </track-axis> 
+    <target-name>RangeCable2</target-name>
+    <target-center>
+      <x-m>3.569</x-m>
+      <y-m>-0.3449</y-m>
+      <z-m>0.2872</z-m>
+    </target-center> 
+  </animation> 
+  -->
+  
+  <!--    <x-m>3.895</x-m>
+   <y-m>-0.32</y-m>
+   <z-m>0.22</z-m> -->
+  
+ <!--   <animation>
+    <type>locked-track</type> 
+    <object-name>RangeCable2</object-name>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <lock-axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </lock-axis>
+    <track-axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </track-axis> 
+    <target-name>RangeCable3</target-name>
+    <target-center>
+      <x-m>-0.3260</x-m>
+      <y-m>-0.0249</y-m>
+      <z-m>0.0672</z-m>
+    </target-center> 
+  </animation>
+  
+   <animation>
+    <type>locked-track</type> 
+    <object-name><object-name>RangeCable3</object-name></object-name>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <lock-axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </lock-axis>
+    <track-axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </track-axis> 
+    <target-name>RangeCable4</target-name>
+    <target-center>
+      <x-m>-0.3260</x-m>
+      <y-m>-0.0249</y-m>
+      <z-m>0.0672</z-m>
+    </target-center> 
+  </animation> -->
 
  <animation>
   <type>rotate</type>
@@ -39,8 +121,9 @@
    <y>-1</y>
    <z>0</z>
   </axis>
- </animation>
-  
+ </animation> 
+ 
+ <animation>
   <type>rotate</type>
   <object-name>ThrottleGrip</object-name>
   <property>/controls/armament/gunsight/range</property>
@@ -66,7 +149,7 @@
   </axis>
  </animation>
 
- <animation>
+<!-- <animation>
   <type>rotate</type>
   <object-name>ThrottleLinkage</object-name>
   <property>/controls/engines/engine[0]/throttle</property>
@@ -115,11 +198,38 @@
    <y>1</y>
    <z>0</z>
   </axis>
- </animation>
+ </animation> -->
  
+<!--  <animation>
+    <type>locked-track</type> 
+    <object-name>RangeCable1</object-name>
+    <center>
+      <x-m>0.0604</x-m>
+      <y-m>0.0172</y-m>
+      <z-m>0.1292</z-m>
+    </center>
+    <lock-axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </lock-axis>
+    <track-axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </track-axis> 
+    <target-name>RangeCable2</target-name>
+    <target-center>
+      <x-m>3.569</x-m>
+      <y-m>-0.3449</y-m>
+      <z-m>0.2872</z-m>
+    </target-center> 
+  </animation> -->
+
  <animation>
   <type>rotate</type>
-  <object-name>Prop</object-name>
+  <object-name>PropHandle</object-name>
+  <object-name>PropKnob</object-name>aa
   <property>/controls/engines/engine[0]/propeller-pitch</property>
   <interpolation>
    <entry>
@@ -127,7 +237,7 @@
     <dep>-100</dep>
    </entry>
    <entry>
-    <ind>1.0</ind>aa
+    <ind>1.0</ind>
     <dep>0</dep>
    </entry>
   </interpolation>
@@ -140,7 +250,8 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>Mixture</object-name>
+  <object-name>MixtureHandle</object-name>
+  <object-name>MixtureKnob</object-name>
   <property>/controls/engines/engine[0]/mixture</property>
   <interpolation>
    <entry>

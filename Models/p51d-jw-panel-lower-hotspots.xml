@@ -468,16 +468,24 @@
     <w>35</w>
     <h>40</h>
     <binding>
+     <command>nasal</command>
+     <script>controls.startEngine(1)</script>
+    </binding>
+	<binding>
       <command>property-assign</command>
       <property>/fdm/jsbsim/systems/engine/starter</property>
       <value>1</value>
     </binding>
     <mod-up>
       <binding>
+        <command>nasal</command>
+        <script>controls.startEngine(0)</script>
+      </binding>
+	  <binding>
         <command>property-assign</command>
         <property>/fdm/jsbsim/systems/engine/starter</property>
         <value>0</value>
-      </binding>
+    </binding>
     </mod-up>  
   </action>
 

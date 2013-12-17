@@ -3,7 +3,7 @@
 <!--
 ************************************************************************
 P-51D simulation config. This files ties together all the components
-used by FGFS to represent the P-51D. Components include the flight data
+used by FGFS to represent the P-51D. Components include the flight data 
 model, instrument panel, and external 3D model.
 
 March 2003 Jim Wilson, jimw@kelcomaine.com
@@ -28,37 +28,38 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
    <user>
        <callsign>N5428V</callsign>
    </user>
-
+   
   <flight-model>jsb</flight-model>
   <aero>p51d-jsbsim</aero>
   <fuel-fraction>0.50</fuel-fraction>
-
+  
   <startup>
      <splash-texture>Aircraft/p51d/P-51D-splash.png</splash-texture>
   </startup>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
-  <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
-
-  <sound>
+  <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+  
+  <sound> 
    <audible>true</audible>
    <path>Aircraft/p51d/p51d-sound.xml</path>
    <volume type="double">0.26</volume>
   </sound>
 
-  <submodels>
+  <submodels> 
     <serviceable type="bool">true</serviceable>
     <path>Aircraft/p51d/submodels.xml</path>
   </submodels>
 
   <panel>
-  <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
-  <visibility>false</visibility>
+     <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
+     <visibility>false</visibility>
+	 <visibility archive="y">false</visibility>
   </panel>
 
   <model>
    <path>Aircraft/p51d/Models/p51d-jw-jsbsim.xml</path>
-  </model>
+  </model> 
 
   <view n="0">
    <internal archive="y">true</internal>
@@ -124,26 +125,30 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
     <line>Initial Climb Rate: 3475 feet per minute</line>
     <line>Sustained Climb Speed: 175 mph</line>
     <line>Service Ceiling: 41,200</line>
-    <line>Stall Speed (9000 lbs) Gear/Flaps Up: 102mph</line>
-    <line>Stall Speed (9000 lbs) Gear/Flaps Down: 95mph</line>
+    <line>Stall Speed (9000 lbs) Gear/Flaps Up: 102 mph</line>
+    <line>Stall Speed (9000 lbs) Gear/Flaps Down: 95 mph</line>
     <line>Crtl-D to drop bombs, external tanks or fire rockets</line>
     <text>    STARTING THE ENGINE___________________________________
 1. Set propeller control to full INCREASE.
-2. Ignition switch and battery-disconnect (second switch, top row of electrical box to pilots right) OFF.
-3. Mixture to IDLE CUTOFF. (In FG /controls/engines/engine/mixture less than 0.1)
-4. Have ground crew pull propeller through several revolutions.  (This can be ignored since it is not modeled).
-5. Fuel Cut Off valve ON.
-6. External power supply connected. (Battery-disconnect switch ON if external power supply not available.)
-7. Check throttle open approximately one inch (1500 rpm). (To start position on late airplanes.) (In FG /controls/engines/engine/throttle between 0.14 and 0.18)
-8. Oil and coolant radiator air controls switches at OPEN until flaps are fully opened; then release switches to OFF. (Can be ignored since this is not yet modeled.)
-9. Check propeller is clear.
-10. Hold start switch ON.
-11. Ignition switch to BOTH after 6 blades have passed.
-12. Fuel boost switch to ON.
-13. Primer switch ON 3 or 4 seconds when cold, one second when hot.
-14. When engine starts, move mixture control to RUN and release primer switch as engine smooths out.  Do not jockey throttle. If engine does not start after turning several revolutions, continue priming.
-15. Check oil pressure. If it is not at 50 psi withing 30 seconds after engine starts stop engine and investigate.
-16. Move battery-disconnect to ON after disconnecting external power supply.
+2. Ignition switch OFF.
+3. Battery-disconnect (second switch, top row of electrical box to pilots right) OFF.
+4. Mixture to IDLE CUTOFF. (In FG /controls/engines/engine/mixture less than 0.1)
+5. Have ground crew pull propeller through several revolutions.  (This can be ignored since it is not modeled).
+6. Fuel Cut Off valve ON.
+7. External power supply connected. (Battery-disconnect switch ON if external power supply not available.)
+8. Power up guns, camera and gun sight (left side lower central panel).
+9. Power up gun sight (gun sight controller just below left florescent light).
+10. Check throttle open approximately one inch (1500 RPM). (To start position on late air planes.) (In FG /controls/engines/engine/throttle between 0.14 and 0.18)
+11. Oil and coolant radiator air controls switches at OPEN until flaps are fully opened; then release switches to OFF. (Can be ignored since this is not yet modeled.)
+12. Check propeller is clear.
+13. Hold start switch ON.
+14. Ignition switch to BOTH after 6 blades have passed.
+15. Fuel boost switch to ON.
+16. Primer switch ON 3 or 4 seconds when cold, one second when hot.
+17. When engine starts, move mixture control to RUN and release primer switch as engine smooths out.  Do not jockey throttle. If engine does not start after turning several revolutions, continue priming.
+18. Check oil pressure. If it is not at 50 psi with in 30 seconds after engine starts stop engine and investigate.
+19. Move battery-disconnect to ON after disconnecting external power supply.
+20. Move generator-disconnect to ON.
 
    PREFLIGHT AIRPLANE CHECK_________________________________
 1. Primary Controls:
@@ -175,48 +180,50 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 
    PREFLIGHT ENGINE CHECK_________________________________
 1. Check propeller in full INCREASE.
-2. Power check - advance throttle to obtain 2300 rpm.  At this rpm, the manifold pressure should read 1/2 in. Hg less than field barometric pressure within +-1/2 in Hg.
-3. Ignition system check - at 2300 rpm, with propeller in full INCREASE, move ignition switch from BOTH to L, back to BOTH, then to R, and back to BOTH.  Let engine speed stabilize at BOTH between checks.  A maximum drop of 100 rpm is allowable for right magneto and 120 rpm for the left magneto.
-4. Idle speed check - idle engine at 650 to 700 rpm with throttle at idle stop.
-5. Acceleration and deceleration check - with mixture control at RUN,  advance throttle from idle to 2300 rpm.  Engine should accelerate and decelerate smoothly with not tendency to backfire.
-6. Set throttle for 1500 rpm for best cooling during prolonged ground operations.
+2. Power check - advance throttle to obtain 2300 RPM.  At this RPM, the manifold pressure should read 1/2 in. Hg less than field barometric pressure within +-1/2 in Hg.
+3. Ignition system check - at 2300 RPM, with propeller in full INCREASE, move ignition switch from BOTH to L, back to BOTH, then to R, and back to BOTH.  Let engine speed stabilize at BOTH between checks.  A maximum drop of 100 RPM is allowable for right magneto and 120 RPM for the left magneto.
+4. Idle speed check - idle engine at 650 to 700 RPM with throttle at idle stop.
+5. Acceleration and deceleration check - with mixture control at RUN,  advance throttle from idle to 2300 RPM.  Engine should accelerate and decelerate smoothly with not tendency to backfire.
+6. Set throttle for 1500 RPM for best cooling during prolonged ground operations.
 7. Carburetor ram-air control lever to RAM AIR. (UN-RAMMED FILTERED AIR or carburetor hot-air control lever at HOT_AIR only if required.) (not currently modeled.)
 8. Check mixture control at RUN.
 9. Check supercharger control switch at AUTO.
 10. Oil and coolant radiators air controls switches at AUTOMATIC. (not currently modeled.)
 
    TAKE OFF___________________________________________________
-1. Slowly increase throttle to 61 inHG Manifold Pressure as you pick up speed.
-2. Be ready to actuate rudder during the take off roll.
-3. At about 60 MPH indicated the tail will start to lift and the airplane will want to go to the left as the tail is coming up.
-4. As you gain speed the amount of rudder correction to the right will need to be decreased and you may need to use left rudder depending on how much right rudder trim you set.
-5. Stay on top of rudder and elevator with small adjustments and keep the nose down until rotation or you'll do a ground loop.
-6. Rotate at 150 mph if you have enough room but never below 120 mph (short field only).
-7. As you raise the gear the trim will change in a nose up direction.  Be careful to avoid stalling or loosing air speed as the gear is retracted.
-8. All of the take off trim settings will need to be adjusted as you pick up speed so this will contribute to a high pilot work load during the take off.  You will need to remove right rudder trim almost as soon as you leave the ground.
+1. Initially hold tail down with full aft stick.
+2. Slowly increase throttle to 40 inHG Manifold Pressure as you pick up speed.
+3. Be ready to actuate rudder during the take off roll.
+4. At about 50 MPH indicated start releasing stick back pressure. The tail will start to lift and the airplane will want to go to the left as the tail is coming up.
+5. Once the tail is up increase throttle to 61 inHG.
+6. As you gain speed the amount of rudder correction to the right will need to be decreased and you may need to use left rudder depending on how much right rudder trim you set.
+7. Stay on top of rudder and elevator with small adjustments and keep the nose down until rotation or you'll do a ground loop.
+8. Rotate at 150 mph if you have enough room but never below 120 mph (short field only).
+9. As you raise the gear the trim will change in a nose up direction.  Be careful to avoid stalling or loosing air speed as the gear is retracted.
+10. All of the take off trim settings will need to be adjusted as you pick up speed so this will contribute to a high pilot work load during the take off.  You will need to remove right rudder trim almost as soon as you leave the ground.
 
    CLIMB__________________________________________________
 1. Back off manifold pressure to 46 inHG.
-2. Adjust propeller pitch to 2700 rpm.
+2. Adjust propeller pitch to 2700 RPM.
 3. The throttle has automatic boost controls and will hold the manifold pressure setting as long as the supercharger has enough boost to provide the selected setting.  It will hold 46 inHg to about 30,000 feet.
 4. The mixture control is also automatic if it is set in the RUN position.
-5. If the supercharger speed switch is at AUTOMATIC the supercharger gear ratio will be controled by an automatic system.
+5. If the supercharger speed switch is at AUTOMATIC the supercharger gear ratio will be controlled by an automatic system.
 
     FLYING________________________________________________
-1. Trim and Cruise at between 2100 and 2400 rpm with between 30 and 36 inHg manifold pressure.
-2. Do not exceed 2700 rpm or 46 inHg sustained.
-3. Do not exceed 3000 rpm military power (aerobatics)
-4. Do not exceed 3500 rpm in dives.
-5. Do not exceed 61 inHG Manifold Pressure (military power), except 75 inHG for maximum of 7 minutes (war emergency power).Note that war emergency power is not for flying fast,  rather it is for dogfighting at &lt; 200mph.
+1. Trim and Cruise at between 2100 and 2400 RPM with between 30 and 36 inHg manifold pressure.
+2. Do not exceed 2700 RPM or 46 inHg sustained.
+3. Do not exceed 3000 RPM military power (aerobatics)
+4. Do not exceed 3500 RPM in dives.
+5. Do not exceed 61 inHG Manifold Pressure (military power), except 75 inHG for maximum of 7 minutes (war emergency power).
 
     PRE_TRAFFIC_PATTERN CHECK_____________________________
 1. Fuel tank selector handle on fullest internal tank.
 2. Check that fuel booster pump switch is ON.
 3. Check carburetor RAM and HOT-AIR control levers as needed.
 4. Mixture control at RUN.
-5. Propeller set at 2700 rpm.
+5. Propeller set at 2700 RPM.
 6. Oil and coolant radiator air control switch AUTOMATIC.
-7. Clean out engine at 3000 rpm and 61 in Hg for one minute.
+7. Clean out engine at 3000 RPM and 61 inHg for one minute.
 
     TRAFFIC_PATTERN CHECK_________________________________
 1. Landing gear handle DN below 170 MPH IAS.
@@ -225,20 +232,19 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 4. Recheck gear and flaps.
 5. Throttle closed when landing assured.
 6. Flaps full down at altitude of at least 400 feet.  (Below 165 MPH IAS.)
-7. 120 IAS at edge of field.
+7. 120 MPH IAS at edge of field.
 
     LANDING________________________________________________
 1. Use continuous back pressure on the stick to obtain an tail-low attitude for actual touch down.
 2. Because of the wide landing gear and locked tail wheel, landing characteristics are excellent on this aircraft.
 3. Minimize use of brakes during ground roll.
 4. At completion of the landing roll, clear runway as soon as possible.  Excessive braking can cause you to do a ground loop (nose over).  Some recommend raising flaps immediately after touchdown.
-
+    
     SECOND TRIGGER_________________________________________
 Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to drop bombs, drop tanks and to fire rockets depending on how the weapons system related switches on the panel are set.  If you wish to use a joystick button for this (recommended) please see the README.p51d.jsbsim file for details on how to set this up.
 </text>
   </help>
-
-  <checklists include="Checklists/p51d-checklists.xml"/>
+  
 
   <!-- multi-play bombable -->
   <multiplay>
@@ -249,12 +255,45 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
         <float n="1" type="float"/>
         <float n="2" type="float"/>
         <string n="9" type="string"/>
+		<int n="10" alias="controls/armament/trigger" />
+        <int n="11" alias="controls/armament/trigger2" />
+		<int n="12" alias="controls/armament/bomb-trigger-2" />
+		<int n="13" alias="controls/armament/bomb-trigger-2" />
+		<int n="14" alias="controls/armament/rocket[1]/trigger" />
+		<int n="15" alias="controls/armament/rocket[2]/trigger" />
+		<int n="16" alias="controls/armament/rocket[3]/trigger" />
+		<int n="17" alias="controls/armament/rocket[4]/trigger" />
+		<int n="18" alias="controls/armament/rocket[5]/trigger" />
+		<int n="19" alias="controls/armament/rocket[6]/trigger" />
+		<int n="20" alias="controls/armament/rocket[7]/trigger" />
+		<int n="21" alias="controls/armament/rocket[8]/trigger" />
+		<int n="22" alias="controls/armament/rocket[9]/trigger" />
+		<int n="23" alias="controls/armament/rocket[10]/trigger" />
+		<int n="24" alias="controls/armament/drop-tank-release-1" />
+		<int n="25" alias="controls/armament/drop-tank-release-2" />
+		<int n="26" alias="ai/submodels/submodel[12]/count" />
+		<int n="27" alias="ai/submodels/submodel[13]/count" />
+		<int n="28" alias="ai/submodels/submodel[14]/count" />
+		<int n="29" alias="ai/submodels/submodel[15]/count" />
+		<int n="30" alias="ai/submodels/submodel[16]/count" />
+		<int n="31" alias="ai/submodels/submodel[17]/count" />
+		<int n="32" alias="ai/submodels/submodel[18]/count" />
+		<int n="33" alias="ai/submodels/submodel[19]/count" />
+		<int n="34" alias="ai/submodels/submodel[20]/count" />
+		<int n="35" alias="ai/submodels/submodel[21]/count" />
+		<int n="36" alias="ai/submodels/submodel[22]/count" />
+		<int n="37" alias="ai/submodels/submodel[23]/count" />
+		<int n="38" alias="ai/submodels/submodel[24]/count" />
+		<int n="39" alias="ai/submodels/submodel[25]/count" />
+		<int n="40" alias="/fdm/jsbsim/systems/armament/bomb-pylons" />
+		<int n="41" alias="/fdm/jsbsim/systems/armament/inner-pylons" />
+		<int n="42" alias="/fdm/jsbsim/systems/armament/outer-pylons" />
     </generic>
   </multiplay>
 
   <!-- increase pilot g tolarance -->
-  <!-- this plane has g-suit spport so the pilot
-       can tollerate high G levels -->
+  <!-- this plane has g-suit support so the pilot
+       can tolerate high G levels -->
   <rendering>
     <redout>
        <parameters>
@@ -267,6 +306,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
   </rendering>
 
    <menubar include="Dialogs/menu-bar.xml" />
+   <checklists include="Checklists/p51d-checklists.xml"/>
  </sim>
 
  <instrumentation>
@@ -274,13 +314,13 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
        <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
     </magnetic-compass>
  </instrumentation>
-
- <gear>
+ 
+  <gear>
     <gear n="1">
        <position-norm type="float">1</position-norm>
     </gear>
  </gear>
-
+ 
  <input>
      <keyboard>
       <key n="4">
@@ -309,7 +349,8 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
         <supercharger-switch type="int">0</supercharger-switch>
         <primer-time type="float"> 0.0 </primer-time>
         <master-bat type="int"> 0 </master-bat>
-      <blower-light-check type="int">0</blower-light-check>
+		<starter type="int"> 0 </starter>
+        <blower-light-check type="int">0</blower-light-check>
       </engine>
    </engines>
    <lighting>
@@ -350,17 +391,59 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
    </fuel>
    <armament>
      <User-Selected-Stores type="int">0</User-Selected-Stores>
-     <gunsight>
-        <power-on type="int">0</power-on>
+     <gunsight>		
+		<!-- gunsight computer parameters -->
+        
+        <!-- start/stop the sight computer
+       	     the computer will be reinitialized if the power is cycled -->	
+        <computer-on type="int">0</computer-on>			 	
+        <!-- offset of guns below sight line in feet -->		
+		<z-offsetFeet type="float">3.125</z-offsetFeet>
+		<!-- average lateral offset of guns in feet relative to sight line -->
+        <y-offsetFeet type="float">0.0</y-offsetFeet>
+		<!-- elevation of guns relative to alpha in degrees -->
+        <gunElevationDegrees type="float">1.0</gunElevationDegrees>
+        <ballisticCoefficienct type="float">0.00136354</ballisticCoefficienct> <!-- 0.50 BMG -->
+        <muzzleVelocity type="float">2900.0</muzzleVelocity>  <!-- feet per second 0.50 BMG -->
+		<!-- distance where guns are bore sighted in feet -->
+        <gunHarminizationRangeFeet type="float">900.0</gunHarminizationRangeFeet>
+		<timeStep type="float">0.1</timeStep>  <!-- seconds -->
+		<!-- sight computer damping factor must be between 0.3 and 1.0 -->
+		<dampingFactor type="float">1.0</dampingFactor>	
+		<gunsight-computer-initialized type="int">0</gunsight-computer-initialized>
+		<maxAzimuth type="int">170</maxAzimuth>  <!-- maximum sight deflection in mils -->
+		<maxElevation type="int">170</maxElevation>
+		
+		<!-- K14 parameters -->
+		
+		<power-on type="int">0</power-on>
         <intensity type="float">1.0</intensity>
+		<mask-off type="int">1</mask-off>
+		<reticleSelectorPos type="int">0</reticleSelectorPos>
+		<rocketLadder type="int">1</rocketLadder>  <!-- set to 0 for K14 and 1 for other K14 models -->
+		
+		<!-- The next three are to setup the reticle to the correct starting values -->
+		<span type="int">30</span>
+		<mils type="float">0.0</mils>
+		<range type="float">1000.0</range> <!-- in feet -->
+		
+		<fixedReticleOn type="int">0</fixedReticleOn>
+		<zCenterLine type="float">0.7375</zCenterLine> <!-- sight line distance from model z axis in meters -->
+		<K14C type="int">0</K14C>  <!-- set to 1 for K14C -->
+		
+		<sunScreenDown type="int">1</sunScreenDown>
      </gunsight>
+	 <throttle>
+	    <twistCenterX type="float">0.0985 </twistCenterX>
+		<twistCenterZ type="float">0.0827 </twistCenterZ>
+	 </throttle>
      <weapons-select type="int">0</weapons-select>
      <next-RX type="int">1</next-RX>
      <instant type="int">1</instant>
      <rockets type="int"> 0 </rockets>
      <bombs-train type="int"> 0 </bombs-train>
      <bombs-both type="int"> 0 </bombs-both>
-     <guns-enabled type="int">0</guns-enabled>
+     <guns-enabled type="int">0</guns-enabled>p
      <left-bomb-arm-chem-release type="int">0</left-bomb-arm-chem-release>
      <right-bomb-arm-chem-release type="int">0</right-bomb-arm-chem-release>
      <rocket-controler type="int"> 0 </rocket-controler>
@@ -417,7 +500,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <leverPos type="float">0.0</leverPos>
    </gear>
  </controls>
-
+ 
  <fdm>
    <jsbsim>
       <systems>
@@ -445,7 +528,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       </ap>
    </jsbsim>
  </fdm>
-
+ 
 <ai>
    <submodels>
       <submodel n="2">
@@ -508,6 +591,18 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <submodel n="21">
          <count type="int">0</count>
       </submodel>
+	  <submodel n="22">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="23">
+         <count type="int">0</count>
+      </submodel>
+	  <submodel n="24">
+         <count type="int">0</count>
+      </submodel>
+      <submodel n="25">
+         <count type="int">0</count>
+      </submodel>
    </submodels>
  </ai>
 
@@ -525,6 +620,10 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
     <SCR_522C>
       <file>Aircraft/Instruments-3d/SCR-522C/Nasal/SCR-522C.nas</file>
     </SCR_522C>
+	<K14>
+	  <file>Aircraft/Instruments-3d/computing-gun-sights/Nasal/lead-computer.nas</file>
+	  <file>Aircraft/Instruments-3d/computing-gun-sights/K14/Nasal/K14-reticle.nas</file>
+	</K14>
   </nasal>
 
 </PropertyList>

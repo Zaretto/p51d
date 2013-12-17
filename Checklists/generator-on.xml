@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Generator Disconnect On check -->
+<PropertyList>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine/master-alt</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<marker>
+		<x-m>3.968</x-m>
+		<y-m>0.2842</y-m>
+		<z-m>0.243</z-m>
+		<scale>1</scale>
+	</marker>
+</PropertyList>

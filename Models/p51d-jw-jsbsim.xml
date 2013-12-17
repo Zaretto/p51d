@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- JSBSim based on YASim P-51D Mustang by Jim Wilson
+<!-- JSBSim based on YASim P-51D Mustang by Jim Wilson 
      JSBSIm FDM by Hal V. Engel -->
 
-<PropertyList>
+<PropertyList include="p51d-bombableinclude.xml">
 
  <path>p51d-jw.ac</path>
 
@@ -24,7 +24,17 @@
      <z-m>0.0</z-m>
    </offsets>
  </model>
-
+ 
+ <!-- propeller -->
+ <model>
+  <path>Aircraft/p51d/Models/prop.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model>
+ 
 
  <animation>
    <type>select</type>
@@ -48,7 +58,7 @@
   </emission>
  </animation>
 
- <!-- Front hotspots -->
+ <!-- Front hotspots --> 
  <panel>
   <path>Aircraft/p51d/Models/p51d-jw-panel-hotspots.xml</path>
   <bottom-left>
@@ -557,7 +567,7 @@
 
  <model>
   <name>THROTTLE</name>
-  <path>Aircraft/p51d/Models/p51d-jw-throttle.xml</path>
+  <path>Aircraft/p51d/Models/throttle.xml</path>
   <offsets>
    <x-m>3.895</x-m>
    <y-m>-0.32</y-m>
@@ -567,31 +577,34 @@
 
  <model>
   <name>GUNSIGHT</name>
-  <path>Aircraft/p51d/Models/p51d-jw-gunsight.xml</path>
+  <path>Aircraft/Instruments-3d/computing-gun-sights/K14/K14.xml</path>
   <offsets>
-   <x-m>3.875</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.60</z-m>
+   <x-m>4.02</x-m>
+   <y-m>0.00</y-m>
+   <z-m>0.646</z-m>
   </offsets>
  </model>
 
  <model>
   <name>GUNSIGHT-CONTROLER</name>
-  <path>Aircraft/p51d/Models/sight-controler.xml</path>
+  <path>Aircraft/Instruments-3d/computing-gun-sights/K14/sight-controler.xml</path>
   <offsets>
-   <x-m>3.77</x-m>
-   <y-m>0.26</y-m>
-   <z-m>0.43</z-m>
+   <x-m>3.82</x-m>
+   <y-m>-0.268</y-m>
+   <z-m>0.425</z-m>
+   <heading-deg>-10.0</heading-deg>
+   <roll-deg>-39.0</roll-deg>
+   <pitch-deg>46.0</pitch-deg>
   </offsets>
  </model>
 
  <model>
-  <name>PIPER</name>
-  <path>Aircraft/p51d/Models/gun-sight.xml</path>
+  <name>Gyro-gun-sight</name>
+  <path>Aircraft/Instruments-3d/computing-gun-sights/K14/K14-pipper.xml</path>
   <offsets>
-   <x-m>3.78</x-m>
-   <y-m>0.0005</y-m>
-   <z-m>0.528</z-m>
+   <x-m>4.03</x-m>
+   <y-m>0.000</y-m>
+   <z-m>0.7375</z-m>
   </offsets>
  </model>
 
@@ -735,12 +748,12 @@
   <name>LEFT-FLOR_LIGHT</name>
   <path>Aircraft/p51d/Models/flor-light-left.xml</path>
   <offsets>
-   <x-m>3.87</x-m>
-   <y-m>-0.282</y-m>
-   <z-m>0.40</z-m>
+   <x-m>3.83</x-m>
+   <y-m>-0.24</y-m>
+   <z-m>0.45</z-m>
    <roll-deg>-30.0</roll-deg>
    <pitch-deg>-10.0</pitch-deg>
-   <yaw-deg>30.0</yaw-deg>
+   <heading-deg>-20.0</heading-deg>
   </offsets>
  </model>
 
@@ -748,9 +761,9 @@
   <name>RIGHT-FLOR_LIGHT</name>
   <path>Aircraft/p51d/Models/flor-light-rt.xml</path>
   <offsets>
-   <x-m>3.87</x-m>
-   <y-m>0.29</y-m>
-   <z-m>0.38</z-m>
+   <x-m>3.83</x-m>
+   <y-m>0.24</y-m>
+   <z-m>0.43</z-m>
    <roll-deg>30.0</roll-deg>
    <pitch-deg>-1.0</pitch-deg>
    <yaw-deg>-30.0</yaw-deg>
@@ -779,7 +792,7 @@
    <z>0.0</z>
   </axis>
  </animation>
-
+ 
  <animation>
   <type>translate</type>
   <object-name>Trigger2</object-name>
@@ -800,7 +813,7 @@
    <z>1.0</z>
   </axis>
  </animation>
-
+ 
  <animation>
   <type>rotate</type>
   <object-name>Trigger2</object-name>
@@ -833,7 +846,7 @@
    <y>0.0</y>
    <z>0.0</z>
   </axis>
- </animation>
+ </animation> 
 
  <animation>
   <type>rotate</type>
@@ -963,7 +976,7 @@
    <x-m>3.644</x-m>
    <y-m>0</y-m>
    <z-m>-0.18</z-m>
-  </center>
+  </center>  
  </animation>
 
  <animation>
@@ -1031,18 +1044,6 @@
 
  <animation>
   <type>select</type>
-  <object-name>Propeller1</object-name>
-  <object-name>Propeller2</object-name>
-  <condition>
-   <less-than>
-    <property>engines/engine[0]/rpm</property>
-    <value>1000</value>
-   </less-than>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
   <object-name>PropellerDisk</object-name>
   <condition>
    <greater-than>
@@ -1050,24 +1051,6 @@
     <value>900</value>
    </greater-than>
   </condition>
- </animation>
-
- <animation>
-  <type>spin</type>
-  <object-name>Propeller1</object-name>
-  <object-name>Propeller2</object-name>
-  <property>engines/engine[0]/rpm</property>
-  <factor>-0.479</factor>
-  <center>
-   <x-m>-0.40</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.0</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
  </animation>
 
  <animation>
@@ -1272,7 +1255,7 @@
    <z>0.16</z>
   </axis>
  </animation>
-
+ 
  <animation>
   <type>rotate</type>
   <object-name>RightInnerGearCover</object-name>
@@ -1978,7 +1961,7 @@
    <y-m>0.000</y-m>
    <z-m>-0.02</z-m>
   </center>
- </animation>
+ </animation> 
 
  <animation>
   <type>spin</type>
@@ -2248,60 +2231,179 @@
  </animation>
 
  <!-- *********************** Weapons System Animations **************************** -->
-
+  <model>
+  <name>HVAR1.right</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+   <offsets>    
+   <roll-deg>5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>3.4097</y-m>
+   <z-m>-0.6722</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>HVAR2.right</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+  <offsets>    
+   <roll-deg>5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>3.0747</y-m>
+   <z-m>-0.7086</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>HVAR3.right</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+  <offsets>    
+   <roll-deg>5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>2.7297</y-m>
+   <z-m>-0.7500</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>HVAR4.right</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+  <offsets>    
+   <roll-deg>5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>2.3900</y-m>
+   <z-m>-0.7887</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>HVAR5.right</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+  <offsets>    
+   <roll-deg>5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>2.0526</y-m>
+   <z-m>-0.8126</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>HVAR1.left</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+   <offsets>    
+   <roll-deg>-5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>-3.4232</y-m>
+   <z-m>-0.6773</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>HVAR2.left</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+  <offsets>    
+   <roll-deg>-5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>-3.0858</y-m>
+   <z-m>-0.7122</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>HVAR3.left</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+  <offsets>    
+   <roll-deg>-5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>-2.7424</y-m>
+   <z-m>-0.7479</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>HVAR4.left</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+  <offsets>    
+   <roll-deg>-5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>-2.3997</y-m>
+   <z-m>-0.7823</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>HVAR5.left</name>
+  <path>Aircraft/p51d/Stores/HVAR/HVAR.ac</path>
+  <offsets>    
+   <roll-deg>-5.0</roll-deg>
+   <pitch-deg>1.5</pitch-deg>
+   <x-m>2.4677</x-m>
+   <y-m>-2.0654</y-m>
+   <z-m>-0.8155</z-m>
+  </offsets>
+ </model>
+ 
  <animation>
   <type>select</type>
   <object-name>HVAR1.left</object-name>
   <condition>
-      <property>ai/submodels/submodel[8]/count</property>
+      <property>ai/submodels/submodel[12]/count</property>
    </condition>
  </animation>
-
-  <animation>
+ 
+ <animation>
   <type>select</type>
   <object-name>HVAR2.left</object-name>
   <condition>
-            <property>ai/submodels/submodel[10]/count</property>
+     <property>ai/submodels/submodel[14]/count</property>
    </condition>
  </animation>
-
- <animation>
+ 
+  <animation>
   <type>select</type>
   <object-name>HVAR3.left</object-name>
   <condition>
-    <property>ai/submodels/submodel[12]/count</property>
+    <property>ai/submodels/submodel[16]/count</property>
   </condition>
  </animation>
-
+ 
  <animation>
   <type>select</type>
   <object-name>HVAR4.left</object-name>
   <condition>
-            <property>ai/submodels/submodel[14]/count</property>
+     <property>ai/submodels/submodel[18]/count</property>
   </condition>
  </animation>
-
+ 
  <animation>
   <type>select</type>
   <object-name>HVAR5.left</object-name>
   <condition>
-            <property>ai/submodels/submodel[16]/count</property>
+     <property>ai/submodels/submodel[20]/count</property>
   </condition>
  </animation>
-
+ 
  <animation>
   <type>select</type>
   <object-name>HVAR1.right</object-name>
   <condition>
-    <property>ai/submodels/submodel[9]/count</property>
+    <property>ai/submodels/submodel[13]/count</property>
   </condition>
  </animation>
-
-  <animation>
+ 
+ <animation>
   <type>select</type>
   <object-name>HVAR2.right</object-name>
   <condition>
-    <property>ai/submodels/submodel[11]/count</property>
+    <property>ai/submodels/submodel[15]/count</property>
   </condition>
  </animation>
 
@@ -2309,7 +2411,7 @@
   <type>select</type>
   <object-name>HVAR3.right</object-name>
   <condition>
-    <property>ai/submodels/submodel[13]/count</property>
+    <property>ai/submodels/submodel[17]/count</property>
   </condition>
  </animation>
 
@@ -2317,95 +2419,284 @@
   <type>select</type>
   <object-name>HVAR4.right</object-name>
   <condition>
-     <property>ai/submodels/submodel[15]/count</property>
+     <property>ai/submodels/submodel[19]/count</property>
   </condition>
  </animation>
-
+ 
  <animation>
   <type>select</type>
   <object-name>HVAR5.right</object-name>
   <condition>
-       <property>ai/submodels/submodel[17]/count</property>
+       <property>ai/submodels/submodel[21]/count</property>
   </condition>
  </animation>
+ 
+ <model>
+  <name>bomb.left</name>
+  <path>Aircraft/p51d/Stores/M64/m64.ac</path>
+  <roll-deg>5.0</roll-deg>
+  <offsets>
+   <x-m>3.51</x-m>
+   <y-m>-2.285</y-m>
+   <z-m>-0.95</z-m>
+  </offsets>
+ </model>
 
  <animation>
   <type>select</type>
   <object-name>bomb.left</object-name>
   <condition>
-    <property>ai/submodels/submodel[18]/count</property>
+    <property>ai/submodels/submodel[22]/count</property>
   </condition>
  </animation>
+ 
+ <model>
+  <name>bomb.right</name>
+  <path>Aircraft/p51d/Stores/M64/m64.ac</path>
+  <roll-deg>5.0</roll-deg>
+  <offsets>
+   <x-m>3.51</x-m>
+   <y-m>2.285</y-m>
+   <z-m>-0.95</z-m>
+  </offsets>
+ </model>
 
  <animation>
   <type>select</type>
   <object-name>bomb.right</object-name>
   <condition>
-    <property>ai/submodels/submodel[19]/count</property>
+    <property>ai/submodels/submodel[23]/count</property>
   </condition>
  </animation>
+ 
+ <model>
+  <name>drop-tanks-left-75G</name>
+  <path>Aircraft/p51d/Models/wingTank75.ac</path>
+  <roll-deg>5.0</roll-deg>
+  <offsets>
+   <x-m>2.61</x-m>
+   <y-m>-2.285</y-m>
+   <z-m>-1.055</z-m>
+  </offsets>
+ </model>
 
  <animation>
   <type>select</type>
-  <object-name>drop-tanks-left</object-name>
+  <object-name>drop-tanks-left-75G</object-name>
   <condition>
-    <property>ai/submodels/submodel[20]/count</property>
+    <property>ai/submodels/submodel[24]/count</property>
   </condition>
  </animation>
+ 
+ <model>
+  <name>drop-tanks-right-75G</name>
+  <path>Aircraft/p51d/Models/wingTank75.ac</path>
+  <roll-deg>5.0</roll-deg>
+  <offsets>
+   <x-m>2.61</x-m>
+   <y-m>2.285</y-m>
+   <z-m>-1.055</z-m>
+  </offsets>
+ </model>
 
   <animation>
   <type>select</type>
-  <object-name>drop-tanks-right</object-name>
+  <object-name>drop-tanks-right-75G</object-name>
   <condition>
-    <property>ai/submodels/submodel[21]/count</property>
+    <property>ai/submodels/submodel[25]/count</property>
   </condition>
  </animation>
+ 
+  <model>
+  <name>LBombRack</name>
+  <path>Aircraft/p51d/Models/leftBombRack.ac</path>
+  <roll-deg>5.0</roll-deg>
+  <offsets>
+   <x-m>3.13</x-m>
+   <y-m>-2.29</y-m>
+   <z-m>-0.652</z-m>
+  </offsets>
+ </model>
+ 
 
  <animation>
   <type>select</type>
-  <object-name>LBombPylon</object-name>
+  <object-name>LBombRack</object-name>
   <condition>
       <property>/fdm/jsbsim/systems/armament/bomb-pylons</property>
   </condition>
  </animation>
+ 
+ <model>
+  <name>RBombRack</name>
+  <path>Aircraft/p51d/Models/rightBombRack.ac</path>
+  <roll-deg>5.0</roll-deg>
+  <offsets>
+   <x-m>3.13</x-m>
+   <y-m>2.29</y-m>
+   <z-m>-0.652</z-m>
+  </offsets>
+ </model>
 
  <animation>
   <type>select</type>
-  <object-name>RBombPylon</object-name>
+  <object-name>RBombRack</object-name>
   <condition>
       <property>/fdm/jsbsim/systems/armament/bomb-pylons</property>
   </condition>
  </animation>
-
+ 
+ <model>
+  <name>frontHVARMount1.right</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>    
+   <roll-deg>6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>3.26</y-m>
+   <z-m>-0.475</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>frontHVARMount2.right</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>    
+   <roll-deg>6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>2.925</y-m>
+   <z-m>-0.513</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>frontHVARMount3.right</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>  
+   <roll-deg>6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>2.58</y-m>
+   <z-m>-0.548</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>frontHVARMount4.right</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>
+   <roll-deg>6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>2.24</y-m>
+   <z-m>-0.583</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>frontHVARMount5.right</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>
+   <roll-deg>6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>1.903</y-m>
+   <z-m>-0.618</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>frontHVARMount1.left</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>      
+   <roll-deg>-6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>-3.52</y-m>
+   <z-m>-0.447</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>frontHVARMount2.left</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>      
+   <roll-deg>-6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>-3.18</y-m>
+   <z-m>-0.485</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>frontHVARMount3.left</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>      
+   <roll-deg>-6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>-2.84</y-m>
+   <z-m>-0.52</z-m>
+  </offsets>
+ </model>
+ 
+   <model>
+  <name>frontHVARMount4.left</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>      
+   <roll-deg>-6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>-2.5</y-m>
+   <z-m>-0.56</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>frontHVARMount5.left</name>
+  <path>Aircraft/p51d/Models/frontRocketMount.ac</path>
+  <offsets>      
+   <roll-deg>-6.1</roll-deg>
+   <pitch-deg>-2.3</pitch-deg>
+   <x-m>3.22</x-m>
+   <y-m>-2.16</y-m>
+   <z-m>-0.59</z-m>
+  </offsets>
+ </model>
+ 
  <animation>
-  <type>select</type>
-  <object-name>LPylons.outer</object-name>
-  <condition>
-          <property>/fdm/jsbsim/systems/armament/outer-pylons</property>
-  </condition>
+  <name>rocketMounts.outer</name>
+  <object-name>frontHVARMount1.right</object-name>
+  <object-name>frontHVARMount2.right</object-name>
+  <object-name>frontHVARMount3.right</object-name>
+  <object-name>frontHVARMount1.left</object-name>
+  <object-name>frontHVARMount2.left</object-name>
+  <object-name>frontHVARMount3.left</object-name>
+ </animation>
+ 
+ <animation>
+  <name>rocketMounts.inner</name>
+  <object-name>frontHVARMount4.right</object-name>
+  <object-name>frontHVARMount5.right</object-name>  
+  <object-name>frontHVARMount4.left</object-name>
+  <object-name>frontHVARMount5.left</object-name>
  </animation>
 
  <animation>
   <type>select</type>
-  <object-name>RPylons.outer</object-name>
+  <object-name>rocketMounts.outer</object-name>
   <condition>
     <property>/fdm/jsbsim/systems/armament/outer-pylons</property>
   </condition>
  </animation>
-
+ 
  <animation>
   <type>select</type>
-  <object-name>LPylons.inner</object-name>
+  <object-name>rocketMounts.inner</object-name>
   <condition>
-        <property>/fdm/jsbsim/systems/armament/inner-pylons</property>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>RPylons.inner</object-name>
-  <condition>
-        <property>/fdm/jsbsim/systems/armament/inner-pylons</property>
+     <property>/fdm/jsbsim/systems/armament/inner-pylons</property>
   </condition>
  </animation>
 
@@ -2513,8 +2804,8 @@
         <z>0.0</z>
     </axis>
   </animation>
-
-
+ 
+  
  <!-- rain animations -->
 
 <!--    <animation>

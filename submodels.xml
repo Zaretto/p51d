@@ -14,38 +14,148 @@
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.072</delay>
-    <count>300</count>
+    <delay>0.245</delay>
+    <count>0</count>
     <x-offset> -11.3 </x-offset>
-    <y-offset>-6.6</y-offset>
+    <y-offset>-6.61</y-offset>
     <z-offset> -1.6</z-offset>
-    <yaw-offset>0.4</yaw-offset>
-    <pitch-offset>-0</pitch-offset>
-    <life>2.0</life>
+    <yaw-offset>0.8</yaw-offset>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
     <cd>0.2</cd>
     <eda>0.00136354</eda> 
+	<collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>	
   </submodel>
-
-   <submodel>
+  
+    <submodel>
     <name>right-gun1-tracers</name>
-    <model>Aircraft/p51d/Stores/guns/tracer.xml</model>
+    <model>Aircraft/p51d/Stores/guns/tracer.xml</model> 
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.072</delay>
-    <count>300</count>
+    <delay>0.245</delay>
+    <count>0</count>
     <x-offset> -11.3</x-offset>
-    <y-offset> 6.6</y-offset>
+    <y-offset> 6.61</y-offset>
     <z-offset> -1.6</z-offset>
-    <yaw-offset>-0.4</yaw-offset>
-    <pitch-offset>-0</pitch-offset>
-    <life>2.0</life>
+    <yaw-offset>-0.8</yaw-offset>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
     <cd>0.2</cd>
     <eda>0.00136354</eda>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>	
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+  
+  <submodel>
+    <name>left-gun2-tracers</name>
+    <model>Aircraft/p51d/Stores/guns/tracer.xml</model>
+    <trigger>controls/armament/gun-trigger</trigger>
+    <speed>2900.0</speed>
+    <repeat>true</repeat>
+    <delay>0.245</delay>
+    <count>0</count>
+    <x-offset>  -11.3</x-offset>
+    <y-offset> -7.31 </y-offset>
+    <z-offset>  -1.6 </z-offset>
+    <yaw-offset>0.45</yaw-offset>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
+    <wind>false</wind>
+    <weight>0.0991189</weight>
+    <cd>0.2</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+  
+  <submodel>
+    <name>right-gun2-tracers</name>
+    <model>Models/Geometry/tracer.xml</model>
+    <trigger>controls/armament/gun-trigger</trigger>
+    <speed>2900.0</speed>
+    <repeat>true</repeat>
+    <delay>0.245</delay>
+    <count>0</count>
+    <x-offset>  -11.3</x-offset>
+    <y-offset>  7.31 </y-offset>
+    <z-offset>  -1.6</z-offset>
+    <yaw-offset>-0.45</yaw-offset>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
+    <wind>false</wind>
+    <weight>0.0991189</weight>
+    <cd>0.2</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
+  </submodel> 
+  
+    <submodel>
+    <name>left-gun3-tracers</name>
+    <model>Models/Geometry/tracer.xml</model>
+    <trigger>controls/armament/gun-trigger</trigger>
+    <speed>2900.0</speed>
+    <repeat>true</repeat>
+    <delay>0.245</delay>
+    <count>0</count>
+    <x-offset>  -11.3</x-offset>
+    <y-offset> -8.01 </y-offset>
+    <z-offset>  -1.6</z-offset>
+    <yaw-offset>0.5</yaw-offset>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
+    <wind>false</wind>
+    <weight>0.0991189</weight>
+    <cd>0.2</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+  
+  <submodel>
+    <name>right-gun3-tracers</name>
+    <model>Models/Geometry/tracer.xml</model>
+    <trigger>controls/armament/gun-trigger</trigger>
+    <speed>2900.0</speed>
+    <repeat>true</repeat>
+    <delay>0.245</delay>
+    <count>0</count>
+    <x-offset>  -10</x-offset>
+    <y-offset>  8.01 </y-offset>
+    <z-offset>  -1.6</z-offset>
+    <yaw-offset>-0.5</yaw-offset>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
+    <wind>false</wind>
+    <weight>0.0991189</weight>
+    <cd>0.2</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
@@ -54,14 +164,14 @@
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.016</delay>
-    <count>400</count>
+    <delay>0.048</delay>
+    <count>0</count>
     <x-offset>  -11.3</x-offset>
     <y-offset> -6.6</y-offset>
     <z-offset>  -1.6</z-offset>
     <yaw-offset>0.4</yaw-offset>
-    <pitch-offset>-0</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
     <cd>0.2</cd>
@@ -79,14 +189,14 @@
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.015</delay>
-    <count>400</count>
+    <delay>0.048</delay>
+    <count>0</count>
     <x-offset>  -11.3</x-offset>
     <y-offset>  6.6</y-offset>
     <z-offset>  -1.6</z-offset>
     <yaw-offset>-0.4</yaw-offset>
-    <pitch-offset>-0</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
     <cd>0.2</cd>
@@ -97,21 +207,21 @@
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
     <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
   </submodel>
-
-  -<submodel>
+  
+  <submodel>
     <name>left-gun2-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.014</delay>
-    <count>270</count>
+    <delay>0.048</delay>
+    <count>0</count>
     <x-offset>  -11.3</x-offset>
     <y-offset> -7.3 </y-offset>
     <z-offset>  -1.6 </z-offset>
     <yaw-offset>0.45</yaw-offset>
-    <pitch-offset>-0</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
     <cd>0.2</cd>
@@ -123,21 +233,45 @@
     <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
   </submodel>
 
-  
   <submodel>
     <name>right-gun2-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.017</delay>
-    <count>270</count>
+    <delay>0.048</delay>
+    <count>0</count>
     <x-offset>  -11.3</x-offset>
     <y-offset>  7.3 </y-offset>
     <z-offset>  -1.6</z-offset>
     <yaw-offset>-0.45</yaw-offset>
-    <pitch-offset>-0</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
+    <wind>false</wind>
+    <weight>0.0991189</weight>
+    <cd>0.2</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
+  </submodel>  
+  
+  <submodel>
+    <name>left-gun3-bullets</name>
+    <model>Models/Geometry/null.ac</model>
+    <trigger>controls/armament/gun-trigger</trigger>
+    <speed>2900.0</speed>
+    <repeat>true</repeat>
+    <delay>0.048</delay>
+    <count>0</count>
+    <x-offset>  -11.3</x-offset>
+    <y-offset> -8.0 </y-offset>
+    <z-offset>  -1.6</z-offset>
+    <yaw-offset>0.5</yaw-offset>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
     <cd>0.2</cd>
@@ -149,46 +283,20 @@
     <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
   </submodel>
   
-
-  <submodel>
-    <name>left-gun3-bullets</name>
-    <model>Models/Geometry/null.ac</model>
-    <trigger>controls/armament/gun-trigger</trigger>
-    <speed>2900.0</speed>
-    <repeat>true</repeat>
-    <delay>0.013</delay>
-    <count>270</count>
-    <x-offset>  -11.3</x-offset>
-    <y-offset> -8.0 </y-offset>
-    <z-offset>  -1.6</z-offset>
-    <yaw-offset>0.5</yaw-offset>
-    <pitch-offset>-0</pitch-offset>
-    <life>2.0</life>
-    <wind>false</wind>
-    <weight>0.0991189</weight>
-    <cd>0.2</cd>
-    <eda>0.00136354</eda> 
-    <collision>true</collision>
-    <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
-    <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/guns/bullet-submodel.xml</submodel-path>
-  </submodel>
-
   <submodel>
     <name>right-gun3-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>controls/armament/gun-trigger</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.015</delay>
-    <count>270</count>
+    <delay>0.048</delay>
+    <count>0</count>
     <x-offset>  -10</x-offset>
     <y-offset>  8.0 </y-offset>
     <z-offset>  -1.6</z-offset>
     <yaw-offset>-0.5</yaw-offset>
-    <pitch-offset>-0</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>1.5</pitch-offset>
+    <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
     <cd>0.2</cd>
@@ -209,7 +317,7 @@
 
   <submodel>
     <name>fire rocket1</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[1]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -219,19 +327,20 @@
     <y-offset> -8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
     <collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket2</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[2]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -241,19 +350,20 @@
     <y-offset> 8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket3</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[3]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -263,19 +373,20 @@
     <y-offset> -8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket4</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[4]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -285,19 +396,20 @@
     <y-offset> 8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket5</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[5]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -307,19 +419,20 @@
     <y-offset> -8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket6</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[6]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -329,19 +442,20 @@
     <y-offset> 8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket7</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[7]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -351,19 +465,20 @@
     <y-offset> -8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket8</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[8]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -373,19 +488,20 @@
     <y-offset> 8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket9</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[9]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -395,19 +511,20 @@
     <y-offset> -8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
   <submodel>
     <name>fire rocket10</name>
-    <model>Aircraft/p51d/Stores/FFAR/rocket.xml</model>
+    <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[10]/trigger</trigger>
     <speed>1384.0</speed>
     <repeat>false</repeat>
@@ -417,14 +534,15 @@
     <y-offset> 8.8 </y-offset>
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.3</pitch-offset>
+    <pitch-offset>1.5</pitch-offset>
+	<life>3.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/FFAR/rocket-submodel.xml</submodel-path>
+    <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
   </submodel>
 
 
@@ -436,65 +554,65 @@
   <!-- ################################################### -->
 
   <submodel>
-    <name>drop bomb - left</name>
+    <name>drop bomb - left 500 pound</name>
     <model>Aircraft/p51d/Stores//M64/m64.ac</model>
     <trigger>controls/armament/bomb-trigger-1</trigger>
     <trigger-once>true</trigger-once>
     <speed> 0 </speed>
     <count>0</count>
     <x-offset>  -11.3</x-offset>
-    <y-offset> -8.0 </y-offset>
+    <y-offset> -7.5 </y-offset>
     <z-offset>  -2.8</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>-3</pitch-offset>
     <weight>500</weight>
     <cd>0.3</cd>
     <eda>1.0</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+    <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
     <submodel-path>Aircraft/p51d/Stores/M64/M64-submodels.xml</submodel-path>
   </submodel>
 
   <submodel>
-    <name>drop bomb - right</name>
+    <name>drop bomb - right 500 pound</name>
     <model>Aircraft/p51d/Stores//M64/m64.ac</model>
     <trigger>controls/armament/bomb-trigger-2</trigger>
     <trigger-once>true</trigger-once>
     <speed> 0 </speed>
     <count>0</count>
     <x-offset>  -11.3</x-offset>
-    <y-offset> 8.0 </y-offset>
+    <y-offset> 7.5 </y-offset>
     <z-offset>  -2.8</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>-3</pitch-offset>
     <weight>500</weight>
     <cd>0.3</cd>
     <eda>1.0</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
-    <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
+    <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
     <submodel-path>Aircraft/p51d/Stores/M64/M64-submodels.xml</submodel-path>
   </submodel>
 
     <submodel>
     <name>drop tank - left</name>
-    <model>Aircraft/p51d/Models/drop-tank.ac</model>
+    <model>Aircraft/p51d/Models/wingTank75.ac</model>
     <trigger>controls/armament/drop-tank-release-1</trigger>
     <trigger-once>true</trigger-once>
     <speed> 0 </speed>
     <count>0</count>
     <x-offset> -11.3</x-offset>
-    <y-offset> -8.0 </y-offset>
+    <y-offset> -7.5 </y-offset>
     <z-offset>  -2.8</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>-3</pitch-offset>
     <weight>50</weight>
     <cd>0.3</cd>
     <eda>1.0</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
@@ -503,20 +621,20 @@
 
   <submodel>
     <name>drop tank - right</name>
-    <model>Aircraft/p51d/Models/drop-tank.ac</model>
+    <model>Aircraft/p51d/Models/wingTank75.ac</model>
     <trigger>controls/armament/drop-tank-release-2</trigger>
     <trigger-once>true</trigger-once>
     <speed> 0 </speed>
-    <count>1</count>
+    <count>0</count>
     <x-offset> -11.3</x-offset>
-    <y-offset> 8.0 </y-offset>
+    <y-offset> 7.5 </y-offset>
     <z-offset> -2.8 </z-offset>
     <yaw-offset>0.0 </yaw-offset>
     <pitch-offset>-3 </pitch-offset>
     <weight>50</weight>
     <cd>0.3</cd>
     <eda>1.0</eda>
-    <collision>true</collision>
+	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/droptank</impact-report>
