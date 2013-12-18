@@ -128,6 +128,7 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
     <line>Stall Speed (9000 lbs) Gear/Flaps Up: 102 mph</line>
     <line>Stall Speed (9000 lbs) Gear/Flaps Down: 95 mph</line>
     <line>Crtl-D to drop bombs, external tanks or fire rockets</line>
+	<line>e to fire guns</line>
     <text>    STARTING THE ENGINE___________________________________
 1. Set propeller control to full INCREASE.
 2. Ignition switch OFF.
@@ -421,9 +422,9 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
         <gunElevationDegrees type="float">1.0</gunElevationDegrees>
         <ballisticCoefficienct type="float">0.00136354</ballisticCoefficienct> <!-- 0.50 BMG -->
         <muzzleVelocity type="float">2900.0</muzzleVelocity>  <!-- feet per second 0.50 BMG -->
-		<!-- distance where guns are bore sighted in feet -->
+		<!-- convergence distance in feet -->
         <gunHarminizationRangeFeet type="float">900.0</gunHarminizationRangeFeet>
-		<timeStep type="float">0.1</timeStep>  <!-- seconds -->
+		<timeStep type="float">0.1</timeStep>  <!-- cycle rate of gun sight computer in seconds -->
 		<!-- sight computer damping factor must be between 0.3 and 1.0 -->
 		<dampingFactor type="float">1.0</dampingFactor>	
 		<gunsight-computer-initialized type="int">0</gunsight-computer-initialized>
@@ -520,9 +521,6 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
  <fdm>
    <jsbsim>
       <systems>
-        <engine>
-           <starter type="int">0</starter>
-        </engine>
         <armament>
            <trigger-both type="int">0</trigger-both>
            <trigger-right type="int">0</trigger-right>
