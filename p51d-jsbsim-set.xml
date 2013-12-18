@@ -338,6 +338,21 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
             </binding>
         </mod-up>
       </key>
+	  <key n="101">
+        <name>e</name>
+        <desc>Gun Trigger</desc> 
+        <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger", 1)</script>
+        </binding>
+        <mod-up>
+            <binding>
+                <command>nasal</command>
+                <script>setprop("/controls/armament/trigger", 0)</script>
+            </binding>
+        </mod-up> 
+     </key>
     </keyboard>
  </input>
 
