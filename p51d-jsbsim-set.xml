@@ -240,7 +240,8 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 3. Minimize use of brakes during ground roll.
 4. At completion of the landing roll, clear runway as soon as possible.  Excessive braking can cause you to do a ground loop (nose over).  Some recommend raising flaps immediately after touchdown.
     
-    SECOND TRIGGER_________________________________________
+    TRIGGERS_______________________________________________
+The e key is mapped to the gun trigger.
 Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to drop bombs, drop tanks and to fire rockets depending on how the weapons system related switches on the panel are set.  If you wish to use a joystick button for this (recommended) please see the README.p51d.jsbsim file for details on how to set this up.
 </text>
   </help>
