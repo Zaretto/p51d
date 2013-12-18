@@ -138,7 +138,7 @@ Apr. 2010 Hal V. Engel hvengel@astound.net (JSBSim model)
 6. Fuel Cut Off valve ON.
 7. External power supply connected. (Battery-disconnect switch ON if external power supply not available.)
 8. Power up guns, camera and gun sight (left side lower central panel).
-9. Power up gun sight (gun sight controller just below left florescent light).
+9. Power up gun sight gyro to prevent damage from engine start up (gun sight controller just below left florescent light).
 10. Check throttle open approximately one inch (1500 RPM). (To start position on late air planes.) (In FG /controls/engines/engine/throttle between 0.14 and 0.18)
 11. Oil and coolant radiator air controls switches at OPEN until flaps are fully opened; then release switches to OFF. (Can be ignored since this is not yet modeled.)
 12. Check propeller is clear.
