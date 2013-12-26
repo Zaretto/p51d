@@ -11,10 +11,10 @@
 	 
 <!--   <animation>
     <type>locked-track</type> 
-    <object-name>RangeCable1</object-name>
+    <object-name>rangeCableHousing</object-name>
     <center>
       <x-m>0</x-m>
-      <y-m>0</y-m>
+      <y-m>0.0168</y-m>
       <z-m>0</z-m>
     </center>
     <lock-axis>
@@ -27,14 +27,70 @@
       <y>0</y>
       <z>0</z>
     </track-axis> 
-    <target-name>RangeCable2</target-name>
+    <slave-name>forwardRangeCableHousing</slave-name>
+	<slave-center>
+     <x-m>0.043</x-m>
+     <y-m>0.0167</y-m>
+     <z-m>0.1258</z-m>
+    </slave-center>
+	<target-name>trackObj</target-name>
     <target-center>
-      <x-m>3.569</x-m>
-      <y-m>-0.3449</y-m>
-      <z-m>0.2872</z-m>
+      <x-m>-0.3343</x-m>
+      <y-m>-0.0080</y-m>
+      <z-m>0.1172</z-m>
     </target-center> 
-  </animation> 
-  -->
+  </animation> -->
+  
+  <animation>
+  <type>translate</type>
+  <object-name>forwardRangeCableHousing</object-name>
+  <property>/controls/engines/engine[0]/throttle</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.3</ind>
+    <dep>-0.06</dep>
+   </entry>
+   <entry>
+    <ind>0.7</ind>
+    <dep>-0.17</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>forwardRangeCableHousing</object-name>
+  <property>/controls/engines/engine[0]/throttle</property>
+    <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.3</ind>
+    <dep>0.01</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>-0.1</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
   
   <!--    <x-m>3.895</x-m>
    <y-m>-0.32</y-m>
@@ -95,11 +151,12 @@
  <animation>
   <type>rotate</type>
   <object-name>ThrottleGrip</object-name>
-  <object-name>MicButton</object-name>
+  <object-name>micButton</object-name>
   <object-name>ThrottleLever</object-name>
   <object-name>ThrottleGripStop</object-name>
+  <object-name>rangeLever</object-name>
+  <object-name>rangeCableHousing</object-name>
   <object-name>RangeCableBracket</object-name>
-  <object-name>RangeCable1</object-name>
   <property>/controls/engines/engine[0]/throttle</property>
   <interpolation>
    <entry>
@@ -126,15 +183,16 @@
  <animation>
   <type>rotate</type>
   <object-name>ThrottleGrip</object-name>
+  <object-name>rangeLever</object-name>
   <property>/controls/armament/gunsight/range</property>
   <interpolation>
    <entry>
     <ind>200</ind>
-    <dep>0</dep>
+    <dep>10</dep>
    </entry>
    <entry>
     <ind>2400</ind>
-    <dep>60</dep>
+    <dep>40</dep>
    </entry>
   </interpolation>
   <center>
@@ -272,7 +330,7 @@
  
  <animation>
   <type>translate</type>
-  <object-name>MicButton</object-name>
+  <object-name>micButton</object-name>
   <property>instrumentation/comm/SCR-522C/remote-pushed</property>
   <factor>-0.007</factor>
   <axis>
