@@ -6,7 +6,7 @@
     <animation>
         <type>range</type>
         <min-m>0</min-m>
-        <max-property>/sim/rendering/static-lod/rough</max-property>
+        <max-property>sim/rendering/static-lod/rough</max-property>
     </animation>
 	 
 <!--   <animation>
@@ -41,7 +41,7 @@
     </target-center> 
   </animation> -->
   
-  <animation>
+<!--  <animation>
   <type>translate</type>
   <object-name>forwardRangeCableHousing</object-name>
   <property>/controls/engines/engine[0]/throttle</property>
@@ -89,7 +89,7 @@
    <y>0</y>
    <z>1</z>
   </axis>
- </animation>
+ </animation> -->
 
   
   <!--    <x-m>3.895</x-m>
@@ -155,6 +155,8 @@
   <object-name>ThrottleLever</object-name>
   <object-name>ThrottleGripStop</object-name>
   <object-name>rangeLever</object-name>
+  <object-name>rangeCable</object-name>
+  <object-name>rangeCableEnd</object-name>
   <object-name>rangeCableHousing</object-name>
   <object-name>RangeCableBracket</object-name>
   <property>/controls/engines/engine[0]/throttle</property>
@@ -165,7 +167,7 @@
    </entry>
    <entry>
     <ind>1.0</ind>
-    <dep>100</dep>
+    <dep>70</dep>
    </entry>
   </interpolation>  
   <center>
@@ -184,26 +186,155 @@
   <type>rotate</type>
   <object-name>ThrottleGrip</object-name>
   <object-name>rangeLever</object-name>
+  <object-name>rangeCableEnd</object-name>
+  <object-name>rangeCable</object-name>
   <property>/controls/armament/gunsight/range</property>
   <interpolation>
    <entry>
     <ind>200</ind>
-    <dep>10</dep>
+    <dep>30</dep>
    </entry>
    <entry>
     <ind>2400</ind>
-    <dep>40</dep>
+    <dep>0</dep>
    </entry>
   </interpolation>
-  <center>
-   <x-m>0.0984</x-m>
-   <y-m>0.0172</y-m>
-   <z-m>0.0821</z-m>
-  </center>
   <axis>
-   <x>0</x>
-   <y>-1</y>
+    <x1-m>0.0908</x1-m>
+    <y1-m>0.0262</y1-m>
+    <z1-m>0.1095</z1-m>
+	<x2-m>0.105</x2-m>
+    <y2-m>0.1087</y2-m>
+    <z2-m>0.135</z2-m>
+  </axis>
+ </animation>
+ 
+<animation>
+  <type>rotate</type>
+  <object-name>rangeCable</object-name>
+  <property>/controls/armament/gunsight/range</property>
+  <interpolation>
+   <entry>
+    <ind>200</ind>
+    <dep>-27</dep>
+   </entry>
+   <entry>
+    <ind>1500</ind>
+    <dep>-15</dep>
+   </entry>
+   <entry>
+    <ind>2400</ind>
+    <dep>0</dep>
+   </entry>
+  </interpolation>
+  <axis>
+    <x1-m>0.1024</x1-m>
+    <y1-m>0.01</y1-m>
+    <z1-m>0.1555</z1-m>
+	<x2-m>0.103</x2-m>
+    <y2-m>0.09</y2-m>
+    <z2-m>0.1555</z2-m>
+  </axis>
+ </animation>
+ 
+<animation>
+  <type>rotate</type>
+  <object-name>rangeCable</object-name>
+  <property>/controls/armament/gunsight/range</property>
+  <interpolation>
+   <entry>
+    <ind>200</ind>
+    <dep>-16</dep>
+   </entry>
+   <entry>
+    <ind>2400</ind>
+    <dep>0</dep>
+   </entry>
+  </interpolation>
+  <axis>
+    <x1-m>0.0921</x1-m>
+    <y1-m>0.0097</y1-m>
+    <z1-m>0.15</z1-m>
+	<x2-m>0.0921</x2-m>
+    <y2-m>0.0097</y2-m>
+    <z2-m>0.16</z2-m>
+  </axis>
+ </animation> 
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>RangleCableHousing</object-name>
+  <property>/controls/engines/engine[0]/throttle</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>0.115</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>0.205</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
    <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>RangleCableHousing</object-name>
+  <property>/controls/engines/engine[0]/throttle</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.1</ind>
+    <dep>-0.75</dep>
+   </entry>
+   <entry>
+    <ind>0.2</ind>
+    <dep>-1.2</dep>
+   </entry>
+   <entry>
+    <ind>0.25</ind>
+    <dep>-1.2</dep>
+   </entry>
+   <entry>
+    <ind>0.3</ind>
+    <dep>-1</dep>
+   </entry>
+   <entry>
+    <ind>0.4</ind>
+    <dep>-0.25</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>0.7</dep>
+   </entry>
+   <entry>
+    <ind>0.6</ind>
+    <dep>2</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>13</dep>
+   </entry>
+  </interpolation>
+  <axis>
+    <x1-m>-0.2616</x1-m>
+    <y1-m>0.0045</y1-m>
+    <z1-m>0.1275</z1-m>
+	<x2-m>-0.2616</x2-m>
+    <y2-m>0.0047</y2-m>
+    <z2-m>0.1275</z2-m>
   </axis>
  </animation>
 
@@ -292,11 +423,11 @@
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>-100</dep>
+    <dep>-80</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
-    <dep>0</dep>
+    <dep>-10</dep>
    </entry>
   </interpolation>
   <axis>
@@ -314,11 +445,11 @@
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>0</dep>
+    <dep>-10</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
-    <dep>60</dep>
+    <dep>70</dep>
    </entry>
   </interpolation>
   <axis>
