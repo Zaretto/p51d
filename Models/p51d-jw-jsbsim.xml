@@ -569,9 +569,9 @@
   <name>THROTTLE</name>
   <path>Aircraft/p51d/Models/throttle.xml</path>
   <offsets>
-   <x-m>3.915</x-m>
+   <x-m>3.9</x-m>
    <y-m>-0.32</y-m>
-   <z-m>0.20</z-m>
+   <z-m>0.2</z-m>
   </offsets>
  </model>
 
@@ -589,12 +589,12 @@
   <name>GUNSIGHT-CONTROLER</name>
   <path>Aircraft/Instruments-3d/computing-gun-sights/K14/sight-controler.xml</path>
   <offsets>
-   <x-m>3.80</x-m>
-   <y-m>-0.262</y-m>
-   <z-m>0.435</z-m>
-   <heading-deg>-9.0</heading-deg>
-   <roll-deg>-39.0</roll-deg>
-   <pitch-deg>46.0</pitch-deg>
+   <x-m>3.78</x-m>
+   <y-m>-0.254</y-m>
+   <z-m>0.4345</z-m>
+   <heading-deg>-15.0</heading-deg>
+   <roll-deg>-35.0</roll-deg>
+   <pitch-deg>52.0</pitch-deg>
   </offsets>
  </model>
 

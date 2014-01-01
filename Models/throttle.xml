@@ -159,6 +159,7 @@
   <object-name>rangeCableEnd</object-name>
   <object-name>rangeCableHousing</object-name>
   <object-name>RangeCableBracket</object-name>
+  <object-name>screw</object-name>
   <property>/controls/engines/engine[0]/throttle</property>
   <interpolation>
    <entry>
@@ -275,6 +276,10 @@
     <dep>0.115</dep>
    </entry>
    <entry>
+    <ind>0.8</ind>
+    <dep>0.180</dep>
+   </entry>
+   <entry>
     <ind>1</ind>
     <dep>0.205</dep>
    </entry>
@@ -321,7 +326,15 @@
    </entry>
    <entry>
     <ind>0.6</ind>
-    <dep>2</dep>
+    <dep>2.5</dep>
+   </entry>
+   <entry>
+    <ind>0.7</ind>
+    <dep>4.5</dep>
+   </entry>
+   <entry>
+    <ind>0.8</ind>
+    <dep>7</dep>
    </entry>
    <entry>
     <ind>1</ind>
@@ -463,7 +476,7 @@
   <type>translate</type>
   <object-name>micButton</object-name>
   <property>instrumentation/comm/SCR-522C/remote-pushed</property>
-  <factor>-0.007</factor>
+  <factor>-0.005</factor>
   <axis>
    <x>0</x>
    <y>1</y>
