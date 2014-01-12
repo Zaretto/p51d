@@ -176,7 +176,7 @@ Hal V. Engel hvengel@astound.net
     <ground_reactions>
         <contact type="BOGEY" name="LEFT_MLG">
             <location unit="IN">
-                <x> 78 </x>
+                <x> 77 </x>
                 <y> -71 </y>
                 <z> -89.5 </z>
             </location>
@@ -192,7 +192,7 @@ Hal V. Engel hvengel@astound.net
         </contact>
         <contact type="BOGEY" name="RIGHT_MLG">
             <location unit="IN">
-                <x> 78 </x>
+                <x> 77 </x>
                 <y> 71 </y>
                 <z> -89.5 </z>
             </location>
