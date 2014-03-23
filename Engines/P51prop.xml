@@ -8,7 +8,7 @@ JavaProp design tweaked with:
 Increase cord 200mm
 taper chord 0.4
 
-The above makes the JavaProp designed propeller look alot like
+The above makes the JavaProp designed propeller look a lot like
 a P-51D prop.
 
 Desity p: 0.45726 kg/m^2  (26000 ft)
@@ -23,7 +23,7 @@ This is 438 MPH at 26000 ft at 67 inHg and 3000 RPM.
 MH airfoils - beta 3 degrees at all stations.
 
 The JavaProp designed prop tables were tweaked in a spread sheet until
-the aircraft performed to publish data.
+the aircraft performed to published data.
 
 JavaProp calculated the optimal blade angle at the design point at
 54.6 degrees.  In flightGear at 26000 ft and 61 inHg and 3000 RPM
@@ -31,9 +31,9 @@ the P-51D will reach 376 knots with a blade angle of 54.8 degrees.
 Close enough.
 
 JavaProp only generates values for advance ratios that
-have positive numbers and stops after the first few negitive
-values.  Linear interupalation was used for the remaining
-negitive coefficients.
+have positive numbers and stops after the first few negative
+values.  Linear interpolation was used for the remaining
+negative coefficients.
 
  -->
 
