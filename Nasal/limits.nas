@@ -75,15 +75,15 @@ var checkCompressibility = func (n) {
     var compressabilityStength = n.getValue();
 
     if (compressabilityStength > 0.0) {
-        if (compressabilityStength <= 0.3) {
+        if (compressabilityStength <= 0.15) {
            msg = "Initial on set of compressibility.";
         }
         else {
-            if (compressabilityStength <= 0.6) {
+            if (compressabilityStength <= 0.4) {
                 msg = "Moderate compressibility.";
             }
             else {
-               if (compressabilityStength > 0.6 ) {
+               if (compressabilityStength > 0.4 ) {
                   msg = "Severe compressibility - structural failure possible.";
                }
             }
