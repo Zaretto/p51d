@@ -6,8 +6,11 @@
 
     <switch name="compressibility enabled">
         <default value="0"/>
-        <test value="1">
-            velocities/mach gt 0.775
+        <test logic="AND" value="1">
+             velocities/mach gt 0.775
+             /gear/gear/wow lt 0.1
+             /position/altitude-agl-ft gt 100
+             /position/altitude-ft gt 5000
         </test>
         <output>/fdm/jsbsim/systems/compressibility/enabled</output>
     </switch>
