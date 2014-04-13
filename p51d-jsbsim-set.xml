@@ -110,7 +110,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   <systems>
     <autopilot>
         <path>Aircraft/p51d/Systems/autopilot.xml</path>
-    </autopilot>
+    </autopilot>    
   </systems>
 
   <hud>
@@ -521,6 +521,13 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
  <fdm>
    <jsbsim>
       <systems>
+        <compressibility>
+           <hertz type="float">0.0</hertz>
+           <strength type="float">0.0</strength>
+        </compressibility>     
+        <crash-detect>
+          <wing-load type="float">0.0</wing-load>
+        </crash-detect> 
         <armament>
            <trigger-both type="int">0</trigger-both>
            <trigger-right type="int">0</trigger-right>

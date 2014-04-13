@@ -1856,14 +1856,14 @@ Hal V. Engel hvengel@astound.net
                 </product>
             </function>-->
 
-            <function name="aero/coefficient/Cm-mach-porpuse">
-                <description>Pitch_moment_due_mach_porpuse</description>
+            <function name="aero/coefficient/Cm-mach-porpoise">
+                <description>Pitch_moment_due_mach_porpoise</description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/cbarw-ft</property>
-                    <property>systems/compressabilty/sine_wave</property>
-                    <property>systems/compressabilty/strength</property>
+                    <property>/fdm/jsbsim/systems/compressibility/sine_wave</property>
+                    <property>/fdm/jsbsim/systems/compressibility/strength</property>
                     <value>0.1</value>
                 </product>
             </function>

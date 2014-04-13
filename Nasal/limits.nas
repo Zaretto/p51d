@@ -45,7 +45,7 @@ var checkGear = func(n) {
 }
 
 
-# ====== Structural failure load limt exceeded =======
+# ====== Structural failure load limit exceeded =======
 # This only prints a message actual failure is handled
 # by Systems/crash-detect.xml
 
@@ -67,7 +67,7 @@ var checkG = func (n) {
     }
 }
 
-var checkCompressability = func (n) {
+var checkCompressibility = func (n) {
 
     if (getprop("/sim/freeze/replay-state"))
        return;
@@ -76,15 +76,15 @@ var checkCompressability = func (n) {
 
     if (compressabilityStength > 0.0) {
         if (compressabilityStength <= 0.3) {
-           msg = "Initial on set of compressability.";
+           msg = "Initial on set of compressibility.";
         }
         else {
             if (compressabilityStength <= 0.6) {
-                msg = "Moderate compressability.";
+                msg = "Moderate compressibility.";
             }
             else {
                if (compressabilityStength > 0.6 ) {
-                  msg = "Severe compressability - structural failure possible.";
+                  msg = "Severe compressibility - structural failure possible.";
                }
             }
         }
@@ -93,7 +93,7 @@ var checkCompressability = func (n) {
 }
 
 # Set the listeners
-setlistener("fdm/jsbsim/systems/compressabilty/strength", checkCompressability);
+setlistener("fdm/jsbsim/systems/compressibility/strength", checkCompressibility);
 setlistener("controls/flight/flaps", checkFlaps);
 setlistener("controls/gear/gear-down", checkGear);
 setlistener("fdm/jsbsim/systems/crash-detect/over-g", checkG);
