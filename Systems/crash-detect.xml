@@ -9,11 +9,11 @@
      <fcs_function name="wing-load">
        <function>
           <product>
-             <property>accelerations/Nz</property>
-             <property>inertia/weight-lbs</property>
+             <property>/fdm/jsbsim/accelerations/Nz</property>
+             <property>/fdm/jsbsim/inertia/weight-lbs</property>
           </product>
        </function>
-       <output>systems/crash-detect/wing-load</output>
+       <output>/fdm/jsbsim/systems/crash-detect/wing-load</output>
      </fcs_function>
 
      <!--
@@ -27,23 +27,23 @@
           -->
      <switch name="over-g-failure">
           <test value="1">
-                systems/crash-detect/wing-load gt 89600
+                /fdm/jsbsim/systems/crash-detect/wing-load gt 89600
           </test>
           <test value="1">
-                systems/crash-detect/wing-load lt -34800
+                /fdm/jsbsim/systems/crash-detect/wing-load lt -34800
           </test>
-          <output>systems/crash-detect/crashed</output>
-          <output> systems/crash-detect/over-g-failure </output>
+          <output>/fdm/jsbsim/systems/crash-detect/crashed</output>
+          <output>/fdm/jsbsim/systems/crash-detect/over-g-failure </output>
      </switch>
 
      <switch name="over-g">
           <test value="1">
-                systems/crash-detect/wing-load gt 64000
+                /fdm/jsbsim/systems/crash-detect/wing-load gt 64000
           </test>
           <test value="1">
-                systems/crash-detect/wing-load lt -32000
+                /fdm/jsbsim/systems/crash-detect/wing-load lt -32000
           </test>
-          <output> systems/crash-detect/over-g </output>
+          <output> /fdm/jsbsim/systems/crash-detect/over-g </output>
      </switch>
 
   </channel>
@@ -53,7 +53,7 @@
      <!-- end the sim if the aircraft is crashed -->
      <switch name="systems/crash-detect/FG">
         <test value="1">
-           systems/crash-detect/crashed == 1
+           /fdm/jsbsim/systems/crash-detect/crashed == 1
         </test>
         <output>/sim/freeze/clock</output>
         <output>/sim/freeze/main</output>
@@ -67,11 +67,11 @@
 
      <switch name="impact">
           <test logic="AND" value="1">
-                position/h-agl-ft lt 1.0
-                simulation/sim-time-sec gt 1.0
+                /fdm/jsbsim/position/h-agl-ft lt 1.0
+                /fdm/jsbsim/simulation/sim-time-sec gt 1.0
           </test>
-          <output>systems/crash-detect/crashed</output>
-          <output> systems/crash-detect/impact </output>
+          <output>/fdm/jsbsim/systems/crash-detect/crashed</output>
+          <output>/fdm/jsbsim/systems/crash-detect/impact </output>
      </switch>
 
   </channel>

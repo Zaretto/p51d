@@ -567,7 +567,7 @@ Hal V. Engel hvengel@astound.net
 
             <summer name="Pitch Trim Offest Bias">
                 <input>fcs/pitch-trim-cmd-norm-scaled</input>
-                <bias>-0.2546</bias>
+                <bias>0.02546</bias>
                 <clipto>
                     <min>-1.0</min>
                     <max>1.0</max>
@@ -1875,7 +1875,7 @@ Hal V. Engel hvengel@astound.net
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/cbarw-ft</property>
                     <table>  <!-- control reversal -->
-                        <independentVar>velocities/mach</independentVar>
+                        <independentVar>/fdm/jsbsim/velocities/mach</independentVar>
                         <tableData>
                             0.0000        0.0
                             0.746         0.0
@@ -1894,7 +1894,7 @@ Hal V. Engel hvengel@astound.net
                     <property>metrics/cbarw-ft</property>
                     <property>fcs/elevator-pos-rad</property>
                     <table>
-                        <independentVar>velocities/mach</independentVar>
+                        <independentVar>/fdm/jsbsim/velocities/mach</independentVar>
                         <tableData>
                             0.0000        -0.90000
                             0.66          -.6

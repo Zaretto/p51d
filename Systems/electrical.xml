@@ -325,12 +325,6 @@
        </switch> -->
      </channel>
 
-     <channel name="SCR-522C">
-
-         
-     
-     </channel>
-
      <channel name="Recognition lights">
 
        <switch name="rec-light-red">
