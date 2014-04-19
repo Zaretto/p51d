@@ -26,22 +26,26 @@
           structure will fail at lower G loadings.
           -->
      <switch name="over-g-failure">
-          <test value="1">
+          <test logic = "AND" value="1">
                 /fdm/jsbsim/systems/crash-detect/wing-load gt 89600
+                /sim/signals/fdm-initialized > 0
           </test>
-          <test value="1">
+          <test logic = "AND" value="1">
                 /fdm/jsbsim/systems/crash-detect/wing-load lt -34800
+                /sim/signals/fdm-initialized > 0
           </test>
           <output>/fdm/jsbsim/systems/crash-detect/crashed</output>
           <output>/fdm/jsbsim/systems/crash-detect/over-g-failure </output>
      </switch>
 
      <switch name="over-g">
-          <test value="1">
+          <test logic = "AND" value="1">
                 /fdm/jsbsim/systems/crash-detect/wing-load gt 64000
+                /sim/signals/fdm-initialized > 0
           </test>
-          <test value="1">
+          <test logic = "AND" value="1">
                 /fdm/jsbsim/systems/crash-detect/wing-load lt -32000
+                /sim/signals/fdm-initialized > 0
           </test>
           <output> /fdm/jsbsim/systems/crash-detect/over-g </output>
      </switch>
