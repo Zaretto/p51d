@@ -15,7 +15,7 @@
         <output>/fdm/jsbsim/systems/compressibility/enabled</output>
     </switch>
 
-    <fsc_function name = "/fdm/jsbsim/systems/compressibility/hertz">
+    <fcs_function name = "/fdm/jsbsim/systems/compressibility/hertz">
       <function>
         <product>
         <property>/fdm/jsbsim/systems/compressibility/enabled</property>
@@ -31,9 +31,9 @@
         </product>
       </function>
       <output>/fdm/jsbsim/systems/compressibility/hertz</output>
-   </fsc_function>
+   </fcs_function>
 
-   <fsc_function name = "/fdm/jsbsim/systems/compressibility/strength">
+   <fcs_function name = "/fdm/jsbsim/systems/compressibility/strength">
       <function>
          <product>
             <property>/fdm/jsbsim/systems/compressibility/enabled</property>
@@ -49,17 +49,20 @@
          </product>
       </function>
       <output>/fdm/jsbsim/systems/compressibility/strength</output>
-   </fsc_function>
+   </fcs_function>
 
    <fcs_function name="Sine Wave Generator">
      <function>
-       <sin>
-         <product>
-           <property>/fdm/jsbsim/systems/compressibility/hertz</property>
-           <property>/fdm/jsbsim/simulation/sim-time-sec</property>
-           <value>6.283185307</value>
-         </product>
-       </sin>
+       <product>
+         <property>/fdm/jsbsim/systems/compressibility/enabled</property>
+           <sin>
+             <product>
+               <property>/fdm/jsbsim/systems/compressibility/hertz</property>
+               <property>/fdm/jsbsim/simulation/sim-time-sec</property>
+               <value>6.283185307</value>
+            </product>
+          </sin>
+       </product>
      </function>
      <output>/fdm/jsbsim/systems/compressibility/sine_wave</output>
    </fcs_function>
