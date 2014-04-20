@@ -11,6 +11,7 @@
              /gear/gear/wow lt 0.1
              /position/altitude-agl-ft gt 100
              /position/altitude-ft gt 5000
+             /fdm/jsbsim/propulsion/engine/starter-norm lt 0.1
         </test>
         <output>/fdm/jsbsim/systems/compressibility/enabled</output>
     </switch>
