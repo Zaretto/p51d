@@ -546,11 +546,11 @@
 
  <model>
   <name>TRIMWHEELELEVATOR</name>
-  <path>Aircraft/p51d/Models/p51d-jw-trimwheelelevator.xml</path>
+  <path>Aircraft/p51d/Models/Cockpit/trimwheelelevator.xml</path>
   <offsets>
    <x-m>4.03</x-m>
    <y-m>-0.30</y-m>
-   <z-m>-0.045</z-m>
+   <z-m>-0.03</z-m>
   </offsets>
  </model>
 

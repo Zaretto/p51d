@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>elevatorTrimWheel.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>elevatorTrimWheel</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <factor>1440</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <interpolation>
+   <entry>
+    <ind>-1.0</ind>
+    <dep>-50</dep>
+   </entry>
+   <entry>
+    <ind>-0.0</ind>
+    <dep>20</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>50</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+
+
