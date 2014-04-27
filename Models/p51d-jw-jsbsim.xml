@@ -525,7 +525,7 @@
 
  <model>
   <name>TRIMKNOBAILERON</name>
-  <path>Aircraft/p51d/Models/p51d-jw-trimknobaileron.xml</path>
+  <path>Aircraft/p51d/Models/Cockpit/trimknobaileron.xml</path>
   <offsets>
    <x-m>3.955</x-m>
    <y-m>-0.35</y-m>
@@ -536,7 +536,7 @@
 
  <model>
   <name>TRIMKNOBRUDDER</name>
-  <path>Aircraft/p51d/Models/p51d-jw-trimknobrudder.xml</path>
+  <path>Aircraft/p51d/Models/Cockpit/trimknobrudder.xml</path>
   <offsets>
    <x-m>4.085</x-m>
    <y-m>-0.355</y-m>

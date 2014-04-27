@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>p51d-jw-trimknobaileron.ac</path>
+ <path>rudderTrimKnob.ac</path>
 
     <animation>
         <type>range</type>
@@ -11,9 +11,8 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>KnobTop</object-name>
-  <object-name>Knob</object-name>
-  <property>controls/flight/aileron-trim</property>
+  <object-name>trimKnob</object-name>
+  <property>controls/flight/rudder-trim</property>
   <factor>1440</factor>
   <axis>
    <x>0</x>
@@ -25,7 +24,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Needle</object-name>
-  <property>controls/flight/aileron-trim</property>
+  <property>controls/flight/rudder-trim</property>
   <interpolation>
    <entry>
     <ind>-1.0</ind>
@@ -48,5 +47,3 @@
  </animation>
 
 </PropertyList>
-
-
