@@ -430,6 +430,8 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
 		<gunsight-computer-initialized type="int">0</gunsight-computer-initialized>
 		<maxAzimuth type="int">170</maxAzimuth>  <!-- maximum sight deflection in mils -->
 		<maxElevation type="int">170</maxElevation>
+        <SIG type="float">0.4</SIG>
+        <timeStep type="float">0.2</timeStep>
 		
 		<!-- K14 parameters -->
 		
