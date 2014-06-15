@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>P51D Panel Hotspots trim wheels 1</name>
+ <background>Aircraft/p51d/Models/transparent-bg.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+  <instrument>
+    <name>yaw and roll trim Controls</name>
+    <x>512</x>
+    <y>384</y>
+    <w>1024</w>
+    <h>768</h>
+    <w-base>1024</w-base>
+    <h-base>1024</h-base>
+
+
+    <layers>
+        <layer>
+            <name>background</name>
+            <texture>
+                <path>Aircraft/p51d/Models/transparent-bg.rgb</path>
+                <x1>0.0</x1>
+                <y1>0.0</y1>
+                <x2>1.0</x2>
+                <y2>1.0</y2>
+            </texture>
+        </layer>
+    </layers>
+
+<!-- define hotspot actions below -->
+
+    <actions>
+
+        <!-- aileron trims-->
+        <action>
+            <name>trim aileron left</name>
+            <button>0</button>
+            <x>-512</x>
+            <y>-50</y>
+            <w>500</w>
+            <h>415</h>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/aileron-trim</property>
+                <min type="double">-1.0</min> 
+                <step type="double">-0.001</step>
+            </binding>
+        </action>
+
+        <action>
+            <name>trim aileron right</name>
+            <button>0</button>
+            <x>0</x>
+            <y>-50</y>
+            <w>455</w>
+            <h>415</h>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/aileron-trim</property>
+                <max type="double">1.0</max>
+                <step type="double">0.001</step>
+            </binding>
+        </action>-->
+
+        <!-- rudder trim -->
+
+        <action>
+            <name>trim rudder left</name>
+            <button>0</button>
+            <x>-512</x>
+            <y>-450</y>
+            <w>500</w>
+            <h>355</h>
+            <binding> 
+                <command>property-adjust</command>
+                <property>/controls/flight/rudder-trim</property>
+                <min type="double">-1.0</min> 
+                <step type="double">-0.001</step>
+            </binding>
+         </action>
+
+        <action>
+            <name>trim rudder right</name>
+            <button>0</button>
+            <x>0</x>
+            <y>-450</y>
+            <w>455</w>
+            <h>355</h>
+            <binding> 
+                <command>property-adjust</command>
+                <property>/controls/flight/rudder-trim</property>
+                <max type="double">1.0</max>
+                <step type="double">0.001</step>
+            </binding>
+        </action>
+
+    </actions>
+
+  </instrument>
+
+ </instruments>
+
+</PropertyList>

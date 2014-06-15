@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>fuel-tank-selector.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
+
+
+ <!--
+     tanks are:
+      tank    left wing tank
+      tank[1] right wing tank
+      tank[2] fuselage tank
+      tank[3] left wing drop tank
+      tank[4] right wing drop tank
+  -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>handle</object-name>
+  <property>/controls/fuel/tank-selector</property>
+  <interpolation>
+    <entry>
+    <ind>0</ind>
+    <dep>109</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>252.6</dep>
+   </entry>
+   <entry>
+    <ind>2</ind>
+    <dep>180</dep>
+   </entry>
+   <entry>
+    <ind>3</ind>
+    <dep>328.5</dep>
+   </entry>
+   <entry>
+    <ind>4</ind>
+    <dep>31.4</dep>
+   </entry>
+  </interpolation>
+   <center>
+   <x-m>-0.001</x-m>
+   <y-m>0.0001</y-m>
+   <z-m>0.002</z-m>
+  </center>
+  <axis>
+   <x>0.72</x>
+   <y>0.03</y>
+   <z>0.95</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>FuelOffLever</object-name>
+  <property>/controls/fuel/on</property>
+  <interpolation>
+    <entry>
+    <ind>1</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>60</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>-0.03</x-m>
+   <y-m>0.00</y-m>
+   <z-m>-0.035</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+    <type>material</type>
+       <object-name>FuelOffLever</object-name>
+       <object-name>fuel-cutoff-face</object-name>
+       <object-name>fuel-cutoff-body</object-name>
+       <object-name>selector-body-1</object-name>
+       <object-name>selector-body-2</object-name>
+       <object-name>selector-body-3</object-name>
+       <object-name>selector-body-4</object-name>
+       <object-name>tank-selector-face</object-name>
+       <object-name>selector-body-6</object-name>
+       <object-name>selector-body-7</object-name>
+       <object-name>selector-body-8</object-name>
+       <object-name>handle</object-name>
+       <emission>
+          <factor-prop>controls/lighting/cabin-norm</factor-prop>
+             <red>0.20</red>
+             <green>0.1</green>
+             <blue>0.1</blue>
+       </emission>
+  </animation>
+
+</PropertyList>

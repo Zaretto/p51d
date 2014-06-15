@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>p51d-jw-vsi.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Needle1</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.35</red>
+    <green>0.35</green>
+    <blue>0.4</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>bezeloutside</object-name>
+  <object-name>bezelBase</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/cabin-norm</factor-prop>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle1</object-name>
+  <property>/velocities/vertical-speed-fpm</property>
+  <!-- <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property> -->
+  <interpolation>
+   <entry>
+    <ind>-6000</ind>
+    <dep>170</dep>
+   </entry>
+   <entry>
+    <ind>-4000</ind>
+    <dep>150</dep>
+   </entry>
+   <entry>
+    <ind>-2000</ind>
+    <dep>120</dep>
+   </entry>
+   <entry>
+    <ind>-1000</ind>
+    <dep>60</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1000</ind>
+    <dep>-60</dep>
+   </entry>
+   <entry>
+    <ind>2000</ind>
+    <dep>-120</dep>
+   </entry>
+   <entry>
+    <ind>4000</ind>
+    <dep>-150</dep>
+   </entry>
+   <entry>
+    <ind>6000</ind>
+    <dep>-170</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

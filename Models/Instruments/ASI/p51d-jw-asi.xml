@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>p51d-jw-asi.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Needle1</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.35</red>
+    <green>0.35</green>
+    <blue>0.4</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>bezeloutside</object-name>
+  <object-name>bezelBase</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/cabin-norm</factor-prop>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle1</object-name>
+  <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>43.45</ind>
+    <dep>13.26</dep>
+   </entry>
+   <entry>
+    <ind>86.89</ind>
+    <dep>41.29</dep>
+   </entry>
+   <entry>
+    <ind>130.34</ind>
+    <dep>87.5</dep>
+   </entry>
+   <entry>
+    <ind>173.8</ind>
+    <dep>137.31</dep>
+   </entry>
+   <entry>
+    <ind>217.24</ind>
+    <dep>181.0</dep>
+   </entry>
+   <entry>
+    <ind>260.69</ind>
+    <dep>231</dep>
+   </entry>
+   <entry>
+    <ind>347.59</ind>
+    <dep>259</dep>
+   </entry>
+   <entry>
+    <ind>434.49</ind>
+    <dep>285</dep>
+   </entry>
+   <entry>
+    <ind>521.39</ind>
+    <dep>313</dep>
+   </entry>
+   <entry>
+    <ind>608.28</ind>
+    <dep>340</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+
+

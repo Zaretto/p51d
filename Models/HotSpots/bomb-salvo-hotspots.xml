@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>P51D Panel Hotspots elevator trim wheels</name>
+ <background>Aircraft/p51d/Models/transparent-bg.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+  <instrument>
+    <name>pitch trim Controls</name>
+    <x>512</x>
+    <y>384</y>
+    <w>1024</w>
+    <h>768</h>
+    <w-base>1024</w-base>
+    <h-base>1024</h-base>
+
+
+    <layers>
+        <layer>
+            <name>background</name>
+            <texture>
+                <path>Aircraft/p51d/Models/transparent-bg.rgb</path>
+                <x1>0.0</x1>
+                <y1>0.0</y1>
+                <x2>1.0</x2>
+                <y2>1.0</y2>
+            </texture>
+        </layer>
+    </layers>
+
+    <!-- define hotspot actions below -->
+
+    <actions>
+
+        <!-- manual salvo controls-->
+            <action>
+              <name>salvo left</name>
+              <button>0</button>
+              <x>-512</x>
+              <y>0</y>
+              <w>384</w>
+              <h>64</h>
+              <binding>
+                <command>property-assign</command>
+                <property>/controls/armament/salvo-left-hs</property>
+                <value>1</value>
+              </binding>
+              <mod-up>
+                <binding>
+                 <command>property-assign</command>
+                 <property>/controls/armament/salvo-left-hs</property>
+                 <value>0</value>
+               </binding>
+               </mod-up>
+            </action>
+
+            <action>
+              <name>salvo both</name>
+              <button>0</button>
+              <x>-128</x>
+              <y>0</y>
+              <w>256</w>
+              <h>64</h>
+              <binding>
+                <command>property-assign</command>
+                <property>/controls/armament/salvo-both</property>
+                <value>1</value>
+              </binding>
+              <mod-up>
+                <binding>
+                 <command>property-assign</command>
+                 <property>/controls/armament/salvo-both</property>
+                 <value>0</value>
+                </binding>
+               </mod-up>
+            </action>
+
+            <action>
+              <name>salvo right</name>
+              <button>0</button>
+              <x>128</x>
+              <y>0</y>
+              <w>384</w>
+              <h>64</h>
+              <binding>
+                <command>property-assign</command>
+                <property>/controls/armament/salvo-right-hs</property>
+                <value>1</value>
+              </binding>
+              <mod-up>
+                <binding>
+                <command>property-assign</command>
+                <property>/controls/armament/salvo-right-hs</property>
+                <value>0</value>
+               </binding>
+               </mod-up>
+            </action>
+
+    </actions>
+
+  </instrument>
+
+ </instruments>
+
+</PropertyList>

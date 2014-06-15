@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>P51D Panel Hotspots lower panel</name>
+ <background>Aircraft/p51d/Models/transparent-bg.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+  <instrument>
+   <name>Lower Panel Controls</name>
+   <x>512</x>
+   <y>384</y>
+   <w>1024</w>
+   <h>768</h>
+   <w-base>1024</w-base>
+   <h-base>1024</h-base>
+
+
+ <layers>
+  <layer>
+   <name>background</name>
+   <texture>
+<!--
+     <path>Aircraft/p51d/Models/hotspotgrid.rgb</path>
+-->
+     <path>Aircraft/p51d/Models/transparent-bg.rgb</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+   </texture>
+  </layer>
+ </layers>
+
+<!-- define hotspot actions below -->
+
+ <actions>
+
+  <!-- ingition switch hotspots -->
+  <action>
+   <name>switch up</name>
+   <button>0</button>
+   <x>-235</x>
+   <y>-135</y>
+   <w>64</w>
+   <h>50</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls/engines/engine[0]/magnetos</property>
+    <step>1</step>
+    <min>0</min>
+    <max>3</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>switch down</name>
+   <button>0</button>
+   <x>-170</x>
+   <y>-135</y>
+   <w>64</w>
+   <h>50</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls/engines/engine[0]/magnetos</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>3</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+  
+  <!-- gun switch hotspots -->
+  <action>
+   <name>switch guns camera and sight</name>
+   <button>0</button>
+   <x>-193</x>
+   <y>-190</y>
+   <w>64</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/gunsight/power-on</property>
+    <value>1</value>
+    </binding>
+    <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/guns-enabled</property>
+    <value>1</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>switch off</name>
+   <button>0</button>
+   <x>-193</x>
+   <y>-210</y>
+   <w>64</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/gunsight/power-on</property>
+    <value>0</value>
+    </binding>
+    <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/guns-enabled</property>
+    <value>0</value>
+   </binding>
+  </action>
+  
+  <action>
+   <name>switch camera and sight</name>
+   <button>0</button>
+   <x>-193</x>
+   <y>-240</y>
+   <w>64</w>
+   <h>30</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/gunsight/power-on</property>
+    <value>-1</value>
+    </binding>
+    <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/guns-enabled</property>
+    <value>0</value>
+   </binding>
+  </action>
+
+  <!-- bomb or chem release arm -->
+
+  <action>
+   <name>right bomb arm chem release down</name>
+   <button>0</button>
+   <x>30</x>
+   <y>-138</y>
+   <w>48</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/right-bomb-arm-chem-release</property>
+    <value>-1</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>right bomb arm chem release mid</name>
+   <button>0</button>
+   <x>30</x>
+   <y>-118</y>
+   <w>48</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/right-bomb-arm-chem-release</property>
+    <value>0</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>right bomb arm chem release up</name>
+   <button>0</button>
+   <x>30</x>
+   <y>-98</y>
+   <w>48</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/right-bomb-arm-chem-release</property>
+    <value>1</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>left bomb arm chem release down</name>
+   <button>0</button>
+   <x>-20</x>
+   <y>-138</y>
+   <w>48</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/left-bomb-arm-chem-release</property>
+    <value>-1</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>left bomb arm chem release mid</name>
+   <button>0</button>
+   <x>-20</x>
+   <y>-118</y>
+   <w>48</w>
+   <h>20</h>
+   <binding>
+     <command>property-assign</command>
+     <property>/controls/armament/left-bomb-arm-chem-release</property>
+     <value>0</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>left bomb arm chem release up</name>
+   <button>0</button>
+   <x>-20</x>
+   <y>-98</y>
+   <w>48</w>
+   <h>20</h>
+   <binding>
+     <command>property-assign</command>
+     <property>/controls/armament/left-bomb-arm-chem-release</property>
+     <value>1</value>
+    </binding>
+  </action>
+
+  <!-- weapon select switch -->
+  <action>
+   <name>bombs both</name>
+   <button>0</button>
+   <x>-100</x>
+   <y>-138</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/weapons-select</property>
+    <value>1</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>bombs train</name>
+   <button>0</button>
+   <x>-70</x>
+   <y>-138</y>
+   <w>30</w>
+   <h>20</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/armament/weapons-select</property>
+    <value>2</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>bombs rockets off</name>
+   <button>0</button>
+   <x>-95</x>
+   <y>-118</y>
+   <w>48</w>
+   <h>20</h>
+   <binding>
+     <command>property-assign</command>
+     <property>/controls/armament/weapons-select</property>
+     <value>0</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>rockets on</name>
+   <button>0</button>
+   <x>-95</x>
+   <y>-98</y>
+   <w>48</w>
+   <h>20</h>
+   <binding>
+     <command>property-assign</command>
+     <property>/controls/armament/weapons-select</property>
+     <value>3</value>
+    </binding>
+  </action>
+
+  
+  
+
+  <!--  cockpit light dimmer hotspots -->
+  <action>
+   <name>panel brighter</name>
+   <button>0</button>
+   <x>152</x>
+   <y>-138</y>
+   <w>64</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls/lighting/cabin-norm</property>
+    <step>0.1</step>
+    <min>0</min>
+    <max>1</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>panel darker</name>
+   <button>0</button>
+   <x>87</x>
+   <y>-138</y>
+   <w>64</w>
+   <h>60</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls/lighting/cabin-norm</property>
+    <step>-0.1</step>
+    <min>0</min>
+    <max>1</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+    <!-- check indicator lights -->
+
+  <action>
+   <name>blower light check</name>
+   <button>0</button>
+    <x>-455</x>
+    <y>-75</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/engines/engine/blower-light-check</property>
+      <value>1</value>
+    </binding>
+   <mod-up>
+     <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine/blower-light-check</property>
+        <value>0</value>
+      </binding>
+   </mod-up>
+  </action>
+
+  <action>
+   <name>gear safe light check</name>
+   <button>0</button>
+    <x>-170</x>
+    <y>-57</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/gear/gear-safe-light-check</property>
+      <value>1</value>
+    </binding>
+   <mod-up>
+     <binding>
+        <command>property-assign</command>
+        <property>/controls/gear/gear-safe-light-check</property>
+        <value>0</value>
+      </binding>
+   </mod-up>
+  </action>
+  
+
+  <action>
+   <name>gear unsafe light check</name>
+   <button>0</button>
+    <x>-105</x>
+    <y>-57</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/gear/gear-unsafe-light-check</property>
+      <value>1</value>
+    </binding>
+   <mod-up>
+     <binding>
+        <command>property-assign</command>
+        <property>/controls/gear/gear-unsafe-light-check</property>
+        <value>0</value>
+      </binding>
+   </mod-up>
+  </action>
+
+  <!-- supercharger override switch -->
+
+  <action>
+   <name>supercharger switch high</name>
+   <button>0</button>
+    <x>-500</x>
+    <y>-60</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/engines/engine/supercharger-switch</property>
+      <value>1</value>
+    </binding>
+   <mod-up>
+     <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine/supercharger-switch</property>
+        <value>-1</value>
+      </binding>
+   </mod-up>
+  </action>
+
+  <action>
+   <name>supercharger switch low</name>
+   <button>0</button>
+    <x>-500</x>
+    <y>-90</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/engines/engine/supercharger-switch</property>
+      <value>-1</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>supercharger switch auto</name>
+   <button>0</button>
+    <x>-500</x>
+    <y>-120</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/engines/engine/supercharger-switch</property>
+      <value>0</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>boost pump on</name>
+   <button>0</button>
+    <x>-410</x>
+    <y>-75</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+      <value>1</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>boost pump off</name>
+   <button>0</button>
+    <x>-410</x>
+    <y>-105</y>
+    <w>35</w>
+    <h>30</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+      <value>0</value>
+    </binding>
+  </action>
+
+  <action>
+   <name>starter switch on</name>
+   <button>0</button>
+    <x>-323</x>
+    <y>-95</y>
+    <w>35</w>
+    <h>40</h>
+    <binding>
+     <command>nasal</command>
+     <script>controls.startEngine(1)</script>
+    </binding>
+	<binding>
+      <command>property-assign</command>
+      <property>/fdm/jsbsim/systems/engine/starter</property>
+      <value>1</value>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>nasal</command>
+        <script>controls.startEngine(0)</script>
+      </binding>
+	  <binding>
+        <command>property-assign</command>
+        <property>/fdm/jsbsim/systems/engine/starter</property>
+        <value>0</value>
+    </binding>
+    </mod-up>  
+  </action>
+
+  <action>
+   <name>primer switch on</name>
+   <button>0</button>
+    <x>-285</x>
+    <y>-95</y>
+    <w>35</w>
+    <h>40</h>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/engines/engine/primer-on</property>
+      <value>1</value>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine/primer-on</property>
+        <value>0</value>
+      </binding>
+    </mod-up>
+  </action>
+
+ </actions>
+
+  </instrument>
+
+ </instruments>
+
+</PropertyList>

@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <panel>
+  <path>Aircraft/p51d/Models/HotSpots/p51d-jw-panel-hotspots.xml</path>
+  <bottom-left>
+   <x-m>2.57</x-m>
+   <y-m>-0.30</y-m>
+   <z-m>-0.39</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>2.57</x-m>
+   <y-m> 0.30</y-m>
+   <z-m>-0.39</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.57</x-m>
+   <y-m>-0.30</y-m>
+   <z-m> 0.535</z-m>
+  </top-left>
+ </panel>
+
+  <panel>
+  <path>Aircraft/p51d/Models/HotSpots/p51d-jw-panel-lower-hotspots.xml</path>
+  <bottom-left>
+   <x-m>2.63</x-m>
+   <y-m>-0.295</y-m>
+   <z-m>-0.37</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>2.63</x-m>
+   <y-m> 0.29</y-m>
+   <z-m>-0.37</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.6</x-m>
+   <y-m>-0.295</y-m>
+   <z-m> 0.56</z-m>
+  </top-left>
+ </panel>
+
+ <panel>
+  <path>Aircraft/p51d/Models/HotSpots/rocket-control-panel-hotspots.xml</path>
+  <bottom-left>
+   <x-m>2.7</x-m>
+   <y-m>-0.27</y-m>
+   <z-m>-0.31</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>2.7</x-m>
+   <y-m> 0.27</y-m>
+   <z-m>-0.31</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.6</x-m>
+   <y-m>-0.27</y-m>
+   <z-m> 0.61</z-m>
+  </top-left>
+ </panel>
+
+ <panel>
+  <path>Aircraft/p51d/Models/HotSpots/p51d-trims-hotspots.xml</path>
+  <bottom-left>
+   <x-m>3.07</x-m>
+   <y-m>-0.376</y-m>
+   <z-m>0.046</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.01</x-m>
+   <y-m>-0.31</y-m>
+   <z-m>-0.056</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.8</x-m>
+   <y-m>-0.365</y-m>
+   <z-m> 0.082</z-m>
+  </top-left>
+ </panel>
+
+  <panel>
+  <path>Aircraft/p51d/Models/HotSpots/p51d-elevator-trim-hotspots.xml</path>
+  <bottom-left>
+   <x-m>2.975</x-m>
+   <y-m>-0.33</y-m>
+   <z-m>-0.205</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>2.975</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>-0.205</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.82</x-m>
+   <y-m>-0.33</y-m>
+   <z-m> -0.07</z-m>
+  </top-left>
+ </panel>
+
+  <panel>
+  <path>Aircraft/p51d/Models/HotSpots/bomb-salvo-hotspots.xml</path>
+  <bottom-left>
+   <x-m>2.83</x-m>
+   <y-m>-0.293</y-m>
+   <z-m>-0.0</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>2.83</x-m>
+   <y-m>-0.243</y-m>
+   <z-m>-0.0</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.73</x-m>
+   <y-m>-0.293</y-m>
+   <z-m> 0.1</z-m>
+  </top-left>
+ </panel>
+
+  <panel>
+  <path>Aircraft/p51d/Models/HotSpots/flaps-hot-spots.xml</path>
+  <bottom-left>
+   <x-m>3.25</x-m>
+   <y-m>-0.39</y-m>
+   <z-m>-0.23</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.25</x-m>
+   <y-m>-0.34</y-m>
+   <z-m>-0.235</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>3.13</x-m>
+   <y-m>-0.39</y-m>
+   <z-m> 0.03</z-m>
+  </top-left>
+ </panel>
+
+  <panel>
+  <path>Aircraft/p51d/Models/HotSpots/induction-air-hotspots.xml</path>
+  <bottom-left>
+   <x-m>3.291</x-m>
+   <y-m>-0.34</y-m>
+   <z-m>-0.01</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.291</x-m>
+   <y-m>-0.28</y-m>
+   <z-m>-0.01</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.988</x-m>
+   <y-m>-0.33</y-m>
+   <z-m> -0.005</z-m>
+  </top-left>
+ </panel>
+
+ <panel>
+  <path>Aircraft/p51d/Models/HotSpots/fuel-system-hotspots.xml</path>
+  <bottom-left>
+   <x-m>2.77</x-m>
+   <y-m>-0.12</y-m>
+   <z-m>-0.32</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>2.77</x-m>
+   <y-m>0.01</y-m>
+   <z-m>-0.32</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.64</x-m>
+   <y-m>-0.12</y-m>
+   <z-m> -0.195</z-m>
+  </top-left>
+ </panel>
+
+
+ <panel>
+  <path>Aircraft/p51d/Models/HotSpots/electrical-switch-box-hotspots.xml</path>
+  <bottom-left>
+   <x-m>2.58</x-m>
+   <y-m>0.31</y-m>
+   <z-m>-0.132</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>2.98</x-m>
+   <y-m>0.315</y-m>
+   <z-m>-0.129</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.58</x-m>
+   <y-m>0.31</y-m>
+   <z-m> 0.32</z-m>
+  </top-left>
+ </panel>
+
+  <panel>
+  <path>Aircraft/p51d/Models/HotSpots/mix-RPM-hotspots.xml</path>
+  <bottom-left>
+   <x-m>3.80</x-m>
+   <y-m>-0.290</y-m>
+   <z-m>0.0</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>4.2</x-m>
+   <y-m>-0.295</y-m>
+   <z-m>0.0</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>3.80</x-m>
+   <y-m>-0.290</y-m>
+   <z-m> 0.45</z-m>
+  </top-left>
+ </panel>
+
+</PropertyList>

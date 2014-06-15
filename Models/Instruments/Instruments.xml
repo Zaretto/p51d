@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!-- panel models -->
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/Altimeter/p51d-jw-alt.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>-0.21</y-m>
+   <z-m>0.135</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/Compass/p51d-jw-compass.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>-0.10</y-m>
+   <z-m>0.225</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/Attitude/p51d-jw-attitude.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.035</y-m>
+   <z-m>0.225</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/CarbAndCoolingTemp/p51d-jw-carbtemp.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.135</y-m>
+   <z-m>0.26</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/CarbAndCoolingTemp/p51d-jw-cooltemp-jsbsim.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.135</y-m>
+   <z-m>0.19</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/ASI/p51d-jw-asi.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>-0.21</y-m>
+   <z-m>0.235</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/Tachometer/p51d-jw-tach.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.21</y-m>
+   <z-m>0.24</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/EngineCluster/p51d-jw-engine-jsbsim.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.21</y-m>
+   <z-m>0.135</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/GMeter/p51d-jw-acc.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.027</y-m>
+   <z-m>0.105</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/VSI/p51d-jw-vsi.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.123</y-m>
+   <z-m>0.105</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/BankAndTurn/p51d-jw-turn.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>-0.10</y-m>
+   <z-m>0.105</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/RemoteCompass/p51d-jw-remote.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>-0.16</y-m>
+   <z-m>0.34</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/Vacuum/p51d-jw-vac.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.085</y-m>
+   <z-m>0.335</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/Clock/p51d-jw-clock.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>-0.085</y-m>
+   <z-m>0.335</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/ManifoldPressure/p51d-jw-man.xml</path>
+  <offsets>
+   <x-m>2.565</x-m>
+   <y-m>0.16</y-m>
+   <z-m>0.34</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/MagCompass/p51d-jw-magcompass.xml</path>
+  <offsets>
+   <x-m>2.59</x-m>
+   <y-m>0.15</y-m>
+   <z-m>0.452</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/GearWarning/p51d-jw-gearwarn.xml</path>
+  <offsets>
+   <x-m>2.5754</x-m>
+   <y-m>-0.08</y-m>
+   <z-m>0.035</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <path>Aircraft/p51d/Models/Instruments/OxBlinker/blinker.xml</path>
+  <offsets>
+   <x-m>2.58542</x-m>
+   <y-m>0.20</y-m>
+   <z-m>-0.005</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/p51d/Models/Instruments/OxPressure/ox-pressure.xml</path>
+  <offsets>
+   <x-m>2.58542</x-m>
+   <y-m>0.27</y-m>
+   <z-m>-0.005</z-m>
+  </offsets>
+ </model>
+ 
+ </PropertyList>

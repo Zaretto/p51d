@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>P51D Panel Hotspots elevator trim wheels</name>
+ <background>Aircraft/p51d/Models/transparent-bg.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+  <instrument>
+    <name>pitch trim Controls</name>
+    <x>512</x>
+    <y>384</y>
+    <w>1024</w>
+    <h>768</h>
+    <w-base>1024</w-base>
+    <h-base>1024</h-base>
+
+
+    <layers>
+        <layer>
+            <name>background</name>
+            <texture>
+                <path>Aircraft/p51d/Models/transparent-bg.rgb</path>
+                <x1>0.0</x1>
+                <y1>0.0</y1>
+                <x2>1.0</x2>
+                <y2>1.0</y2>
+            </texture>
+        </layer>
+    </layers>
+
+    <!-- define hotspot actions below -->
+
+    <actions>
+
+        <!-- elevator trims-->
+            <action>
+              <name>trim-wheel-elevator-up</name>
+              <button>0</button>
+              <x>-512</x>
+              <y>-0</y>
+              <w>1024</w>
+              <h>384</h>
+              <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/elevator-trim</property>
+                <max type="double">1.0</max>
+                <step type="double">0.001</step>
+              </binding>
+            </action>
+            <action>
+              <name>trim-wheel-elevator-down</name>
+              <button>0</button>
+              <x>-512</x>
+              <y>-384</y>
+              <w>1024</w>
+              <h>384</h>
+              <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/elevator-trim</property>
+                <min type="double">-1.0</min>
+                <step type="double">-0.001</step>
+              </binding>
+            </action>
+
+    </actions>
+
+  </instrument>
+
+ </instruments>
+
+</PropertyList>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>flor-light-left.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>left-bulb</object-name>
+  <emission>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+  </emission>
+ </animation>
+
+</PropertyList>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>p51d-jw-gearwarn.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>7</max-m>
+    </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>LeftBulb</object-name>
+  <condition>
+      <property>/controls/gear/safe-light-on</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>RightBulb</object-name>
+  <condition>
+     <property>/controls/gear/unsafe-light-on</property>
+  </condition>
+ </animation>
+
+  <animation>
+  <type>material</type>
+  <object-name>Backplate</object-name>
+  <emission>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.25</red>
+    <green>0.15</green>
+    <blue>0.15</blue>
+  </emission>
+ </animation>
+
+</PropertyList>
+
+
