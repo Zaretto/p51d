@@ -868,7 +868,8 @@
  <animation>
   <type>rotate</type>
   <object-name>elevator</object-name>
-  <object-name>elevatorTrimTabs</object-name>
+  <object-name>elevatorTrimTabLeft</object-name>
+  <object-name>elevatorTrimTabRight</object-name>
   <object-name>elevatorTrimTabRodLeft</object-name>
   <object-name>elevatorTrimTabRodRight</object-name>
   <property>surface-positions/elevator-pos-norm</property>
@@ -1224,6 +1225,166 @@
    <y-m>0.000</y-m>
    <z-m>-1.13986</z-m>
   </center>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>tailWheel</object-name>
+  <object-name>tailWheelKnuckle</object-name>
+  <property>/fdm/jsbsim/gear/unit[2]/steering-angle-deg</property>
+  <factor>1</factor>
+  <axis>   
+   <x1-m>6.71027</x1-m>
+   <y1-m>-0.00164087</y1-m>
+   <z1-m>-0.5428931</z1-m>
+   <x2-m>6.74277</x2-m>
+   <y2-m>-0.00351397</y2-m>
+   <z2-m>-0.6498853</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>elevatorTrimTabLeft</object-name>
+  <object-name>elevatorTrimTabRodleft</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <interpolation>
+   <entry>
+    <ind>-1</ind>
+    <dep>25.0</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>0.0</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>-10</dep>
+   </entry>
+  </interpolation>
+  <axis>   
+   <x1-m>8.0348</x1-m>
+   <y1-m>-1.15484</y1-m>
+   <z1-m>0.2919646</z1-m>
+   <x2-m>8.13146</x2-m>
+   <y2-m>-0.3428557</y2-m>
+   <z2-m>0.2912077</z2-m>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>elevatorTrimTabRodleft</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <interpolation>
+   <entry>
+    <ind>-1</ind>
+    <dep>-12.0</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>0.0</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>5</dep>
+   </entry>
+  </interpolation>
+  <axis>   
+   <x1-m>8.09107</x1-m>
+   <y1-m>-0.8529083</y1-m>
+   <z1-m>0.251202</z1-m>
+   <x2-m>8.0923</x2-m>
+   <y2-m>-0.8453384</y2-m>
+   <z2-m>0.250719</z2-m>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>elevatorTrimTabRight</object-name>
+  <object-name>elevatorTrimTabRodRight</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <interpolation>
+   <entry>
+    <ind>1</ind>
+    <dep>10.0</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>0.0</dep>
+   </entry>
+   <entry>
+    <ind>-1.00</ind>
+    <dep>-25</dep>
+   </entry>
+  </interpolation>
+  <axis>   
+   <x1-m>8.03512</x1-m>
+   <y1-m>1.15425</y1-m>
+   <z1-m>0.2922849</z1-m>
+   <x2-m>8.13132</x2-m>
+   <y2-m>0.3422153</y2-m>
+   <z2-m>0.2913586</z2-m>
+  </axis>
+ </animation>
+ 
+   <animation>
+  <type>rotate</type>
+  <object-name>elevatorTrimTabRodRight</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <interpolation>
+   <entry>
+    <ind>1</ind>
+    <dep>-5.0</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>0.0</dep>
+   </entry>
+   <entry>
+    <ind>-1.00</ind>
+    <dep>12</dep>
+   </entry>
+  </interpolation>
+  <axis>   
+   <x1-m>8.09311</x1-m>
+   <y1-m>0.8524648</y1-m>
+   <z1-m>0.3330533</z1-m>
+   <x2-m>8.09435</x2-m>
+   <y2-m>0.8448954</y2-m>
+   <z2-m>0.3335139</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>rudderTrimTab</object-name>
+  <property>/controls/flight/rudder-trim</property>
+  <factor>-10</factor>
+    <axis>   
+   <x1-m>8.74048</x1-m>
+   <y1-m>-0.00015213</y1-m>
+   <z1-m>0.7686898</z1-m>
+   <x2-m>8.6472</x2-m>
+   <y2-m>-0.00015161</y2-m>
+   <z2-m>1.31022</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>rudderTrimTabRod</object-name>
+  <property>/controls/flight/rudder-trim</property>
+  <factor>0.001</factor>
+    <axis>   
+   <x1-m>8.49452</x1-m>
+   <y1-m>0.0303467</y1-m>
+   <z1-m>0.7875517</z1-m>
+   <x2-m>8.75349</x2-m>
+   <y2-m>-0.00015161</y2-m>
+   <z2-m>0.786804</z2-m>
+  </axis>
  </animation>
 
  <animation>
