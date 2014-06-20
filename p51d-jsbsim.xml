@@ -611,6 +611,23 @@ Hal V. Engel hvengel@astound.net
                 </range>
                 <output>fcs/elevator-pos-norm</output>
             </aerosurface_scale>
+            
+          <fcs_function name="Elevator Position Animation">
+            <function>
+              <sum>
+                 <product>
+                   <value> 0.8 </value>
+                   <property>fcs/elevator-pos-norm</property>
+                   <value>57.2957795</value>
+                 </product>
+                 <product>
+                   <value> -13 </value>
+                   <property>/controls/flight/elevator-trim</property>
+                 </product>
+                </sum>
+                </function>
+                <output>fcs/elevator-pos-norm-animation</output>
+            </fcs_function>
 			
 	<fcs_function name="aero/pitch-moment-damping-factor">
 	<function>
@@ -683,12 +700,18 @@ Hal V. Engel hvengel@astound.net
         </channel>
         
         <channel name="Roll">
+            <pure_gain name="Roll Trim Scaled">
+                <input>fcs/roll-trim-cmd-norm</input>
+                <gain> 0.3 </gain>
+                <output>fcs/roll-trim-scaled</output>
+            </pure_gain>
+            
             <summer name="Roll Trim Sum">
                 <input>fcs/aileron-cmd-norm</input>
-                <input>fcs/roll-trim-cmd-norm</input>
+                <input>fcs/roll-trim-scaled</input>
                 <clipto>
-                    <min>-1</min>
-                    <max>1</max>
+                    <min>-1.3</min>
+                    <max>1.3</max>
                 </clipto>
             </summer>
 
@@ -735,6 +758,40 @@ Hal V. Engel hvengel@astound.net
                 </range>
                 <output>fcs/right-aileron-pos-norm</output>
             </aerosurface_scale>
+            
+          <fcs_function name="Aileron Position Animation Right">
+            <function>
+              <sum>
+                 <product>
+                   <value> 0.8 </value>
+                   <value>57.2957795</value>
+                   <property>fcs/right-aileron-pos-norm</property>
+                 </product>
+                 <product>
+                   <value> 12 </value>
+                   <property>/controls/flight/aileron-trim</property>
+                 </product>
+                </sum>
+                </function>
+                <output>fcs/right-aileron-pos-norm-animation</output>
+            </fcs_function>
+            
+         <fcs_function name="Aileron Position Animation Left">
+            <function>
+              <sum>
+                 <product>
+                   <value> -0.8 </value>
+                   <value>57.2957795</value>
+                   <property>fcs/right-aileron-pos-norm</property>
+                 </product>
+                 <product>
+                   <value> -12 </value>
+                   <property>/controls/flight/aileron-trim</property>
+                 </product>
+                </sum>
+                </function>
+                <output>fcs/left-aileron-pos-norm-animation</output>
+            </fcs_function>
 
         </channel>
         <channel name="Yaw">
@@ -778,6 +835,22 @@ Hal V. Engel hvengel@astound.net
                 </range>
                 <output>fcs/rudder-pos-norm</output>
             </aerosurface_scale>
+            
+          <fcs_function name="rudder Position Animation">
+            <function>
+              <sum>
+                 <product>
+                   <value> 1 </value>
+                   <property>fcs/rudder-pos-deg</property>
+                 </product>
+                 <product>
+                   <value> 10 </value>
+                   <property>/controls/flight/rudder-trim</property>
+                 </product>
+                </sum>
+                </function>
+                <output>fcs/rudder-pos-norm-animation</output>
+            </fcs_function>
 
         </channel>
 

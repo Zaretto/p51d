@@ -815,8 +815,8 @@
   <object-name>aileronRight</object-name>
   <object-name>aileronTrimTabRight</object-name>
   <object-name>aileronTrimTabLinkageRight</object-name>
-  <property>surface-positions/right-aileron-pos-norm</property>
-  <factor>15.0</factor>
+  <property>/fdm/jsbsim/fcs/right-aileron-pos-norm-animation</property>>
+  <factor>0.5</factor>
   <axis>   
    <x1-m>3.37</x1-m>
    <y1-m>3.317</y1-m>
@@ -832,8 +832,8 @@
   <object-name>aileronLeft</object-name>
   <object-name>aileronTrimTabLeft</object-name>
   <object-name>aileronTrimTabLinkageLeft</object-name>
-  <property>surface-positions/right-aileron-pos-norm</property>
-  <factor>15.0</factor>
+  <property>/fdm/jsbsim/fcs/left-aileron-pos-norm-animation</property>
+  <factor>-0.5</factor>
   <axis>   
    <x1-m>3.37</x1-m>
    <y1-m>-3.317</y1-m>
@@ -841,6 +841,37 @@
    <x2-m>3.14276</x2-m>
    <y2-m>-5.4262</y2-m>
    <z2-m>-0.225</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>aileronTrimTabLeft</object-name>
+  <object-name>aileronTrimTabLinkageLeft</object-name>
+  <property>/controls/flight/aileron-trim</property>
+  <factor>-10</factor>
+  <axis>   
+   <x1-m>3.47279</x1-m>
+   <y1-m>-4.15314</y1-m>
+   <z1-m>-0.3522498</z1-m>
+   <x2-m>3.57858</x2-m>
+   <y2-m>-3.49482</y2-m>
+   <z2-m>-0.4147907</z2-m>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>aileronTrimTabLinkageLeft</object-name>
+  <property>/controls/flight/aileron-trim</property>
+  <factor>7.0</factor>
+  <axis>   
+   <x1-m>3.5804</x1-m>
+   <y1-m>-3.51677</y1-m>
+   <z1-m>-0.4401955</z1-m>
+   <x2-m>3.58204</x2-m>
+   <y2-m>-3.50752</y2-m>
+   <z2-m>-0.4404708</z2-m>
   </axis>
  </animation>
 
@@ -853,8 +884,8 @@
   <object-name>rudderTrimLinkageFairing</object-name>
   <object-name>rudderTrimTabHorn</object-name>
   <object-name>rudderTrimTabRod</object-name>
-  <property>surface-positions/rudder-pos-norm</property>
-  <factor>-30.0</factor>
+  <property>/fdm/jsbsim/fcs/rudder-pos-norm-animation</property>
+  <factor>-1.0</factor>
   <axis>   
    <x1-m>8.32</x1-m>
    <y1-m>0</y1-m>
@@ -872,21 +903,7 @@
   <object-name>elevatorTrimTabRight</object-name>
   <object-name>elevatorTrimTabRodLeft</object-name>
   <object-name>elevatorTrimTabRodRight</object-name>
-  <property>surface-positions/elevator-pos-norm</property>
-  <interpolation>
-   <entry>
-    <ind>-1.0</ind>
-    <dep>30.0</dep>
-   </entry>
-   <entry>
-    <ind>0.0</ind>
-    <dep>0</dep>
-   </entry>
-   <entry>
-    <ind>1.00</ind>
-    <dep>-30.0</dep>
-   </entry>
-  </interpolation>
+  <property>/fdm/jsbsim/fcs/elevator-pos-norm-animation</property>
   <axis>   
    <x1-m>7.82</x1-m>
    <y1-m>2</y1-m>
