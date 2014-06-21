@@ -9,4 +9,64 @@
         <max-m>1000</max-m>
     </animation>
     
+ <animation>
+  <type>translate</type>  
+  <object-name>canopy</object-name>
+  <object-name>canopyLowerSkin</object-name>
+  <object-name>brace</object-name>
+  <object-name>exteriorWindshieldBow</object-name>
+  <object-name>frontDoublerRight</object-name>
+  <object-name>frontDoublerLeft</object-name>
+  <object-name>rearSelf</object-name>
+  <object-name>rearStructure</object-name>
+  <object-name>truckBracketLeft</object-name>
+  <object-name>truckBracketRight</object-name>
+  <object-name>upperCoverLeft</object-name>
+  <object-name>upperCoverRight</object-name>
+  <object-name>windshieldBow</object-name>  
+  <object-name>truckBodyLeft</object-name>
+  <object-name>truckBodyRight</object-name>
+  <object-name>canopyReleaseDogLeft</object-name>
+  <object-name>canopyReleaseDogRight</object-name>
+  <object-name>canopyReleaseBarRight</object-name>
+  <object-name>canopyReleaseBarLeft</object-name>
+  <object-name>truckPlacardRight</object-name>
+  <object-name>truckPlacardLeft</object-name>
+  <property>/controls/canopy/open</property>
+  <factor>0.45</factor>  
+  <axis>  
+   <x>0.87867</x>
+   <y>0</y>
+   <z>0.121327</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  
+  <object-name>canopyLowerSkin</object-name>
+  <object-name>brace</object-name>
+  <object-name>canopy</object-name>
+  <object-name>exteriorWindshieldBow</object-name>
+  <object-name>frontDoublerRight</object-name>
+  <object-name>frontDoublerLeft</object-name>
+  <object-name>rearSelf</object-name>
+  <object-name>rearStructure</object-name>
+  <object-name>truckBracketLeft</object-name>
+  <object-name>truckBracketRight</object-name>
+  <object-name>upperCoverLeft</object-name>
+  <object-name>upperCoverRight</object-name>
+  <object-name>windshieldBow</object-name>
+  <property>/controls/canopy/open</property>
+  <factor>-2.7</factor>
+  <axis>   
+   <x1-m>3.0375</x1-m>
+   <y1-m>1.0</y1-m>
+   <z1-m>0.3322224</z1-m>
+   <x2-m>3.0375</x2-m>
+   <y2-m>-1.0</y2-m>
+   <z2-m>0.3322224</z2-m>
+  </axis>
+ </animation>
+    
 </PropertyList>

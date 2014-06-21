@@ -321,6 +321,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
     <gear n="1">
        <position-norm type="float">1</position-norm>
     </gear>
+    <jackstandsZ type="float">0</jackstandsZ>
  </gear>
  
  <input>
@@ -390,6 +391,9 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
      <pitot-heat type="int"> 0 </pitot-heat>
      <gun-heat type="int"> 0 </gun-heat>
    </anti-ice>
+   <canopy>
+      <closed type="float">1.0</closed>
+   </canopy>
    <fuel>
       <on>0</on>
       <tank-selector type="int">0</tank-selector>

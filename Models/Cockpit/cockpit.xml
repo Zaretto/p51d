@@ -9,6 +9,7 @@
         <max-m>1000</max-m>
     </animation>
     
+   
  <animation>
   <type>rotate</type>
   <object-name>ReostatKnob</object-name>

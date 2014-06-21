@@ -702,7 +702,7 @@ Hal V. Engel hvengel@astound.net
         <channel name="Roll">
             <pure_gain name="Roll Trim Scaled">
                 <input>fcs/roll-trim-cmd-norm</input>
-                <gain> 0.3 </gain>
+                <gain> 0.5 </gain>
                 <output>fcs/roll-trim-scaled</output>
             </pure_gain>
             
@@ -768,7 +768,7 @@ Hal V. Engel hvengel@astound.net
                    <property>fcs/right-aileron-pos-norm</property>
                  </product>
                  <product>
-                   <value> 12 </value>
+                   <value> 22 </value>
                    <property>/controls/flight/aileron-trim</property>
                  </product>
                 </sum>
@@ -785,7 +785,7 @@ Hal V. Engel hvengel@astound.net
                    <property>fcs/right-aileron-pos-norm</property>
                  </product>
                  <product>
-                   <value> -12 </value>
+                   <value> -22 </value>
                    <property>/controls/flight/aileron-trim</property>
                  </product>
                 </sum>

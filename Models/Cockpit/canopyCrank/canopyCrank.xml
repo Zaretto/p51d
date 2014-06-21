@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<path>canopyCrank.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>canopyCrank</object-name>
+  <object-name>canopyCrankHandle</object-name>
+  <object-name>lockButton</object-name>
+  <object-name>lockLever</object-name>
+  <property>controls/canopy/open</property>
+  <factor>-1800</factor>
+  <axis>
+   <x1-m>2.94689</x1-m>
+   <y1-m>0.382323</y1-m>
+   <z1-m>0.2227337</z1-m>
+   <x2-m>2.94521</x2-m>
+   <y2-m>0.3043341</y2-m>
+   <z2-m>0.2185814</z2-m>
+  </axis>
+ </animation>
+  
+ <animation>
+  <type>pick</type>
+  <object-name>canopyCrankHandle</object-name>
+  <property>controls/canopy/open</property>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command> 
+        <property>/controls/canopy/open</property>
+        <value type="float">1.0</value> 
+        <rate>0.33</rate>        
+      </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command> 
+        <property>/controls/canopy/open</property>
+        <value type="float">0.0</value> 
+        <rate>0.33</rate>        
+      </binding>
+    </action>
+ </animation>
+ 
+ </PropertyList>
