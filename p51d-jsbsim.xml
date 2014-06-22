@@ -699,6 +699,26 @@ Hal V. Engel hvengel@astound.net
             
         </channel>
         
+        <channel name="guns">
+        
+           <switch name="systems/armament/innerGunsFiring">
+             <default value="0" />
+             <test logic="AND" value="1">
+                /controls/armament/gun-trigger > 0
+                /ai/submodels/submodel[6]/count > 0
+             </test>
+           </switch> 
+
+           <switch name="systems/armament/outerGunsFiring">
+             <default value="0" />
+             <test logic="AND" value="1">
+                /controls/armament/gun-trigger > 0
+                /ai/submodels/submodel[8]/count > 0
+             </test>
+           </switch>           
+           
+        </channel>
+        
         <channel name="Roll">
             <pure_gain name="Roll Trim Scaled">
                 <input>fcs/roll-trim-cmd-norm</input>

@@ -317,4 +317,14 @@
   </offsets>
  </model>
  
+ <model>
+  <name>Canopy Release</name>
+  <path>Aircraft/p51d/Models/Cockpit/canopyEmergencyRelease/canopy-release.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model>
+ 
 </PropertyList>

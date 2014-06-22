@@ -156,6 +156,7 @@ var setStores = func(stores) {
 var loadGuns = func (load) {
    var tracerStart = 0;
    var bulletsStart = 6;
+   var smokeStart = 26;
    if (load == 0) {
       for (i=tracerStart; i < rocketsStart; i = i + 1)
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 0);
@@ -169,6 +170,10 @@ var loadGuns = func (load) {
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 320);
       for (i=bulletsStart + 2; i < bulletsStart + 6; i = i + 1) 
            setprop("ai/submodels/submodel[" ~ i ~ "]/count", 216);
+      for (i= smokeStart; i < smokeStart + 2; i = i + 1) 
+           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 400);
+      for (i=smokeStart + 2; i < smokeStart + 6; i = i + 1) 
+           setprop("ai/submodels/submodel[" ~ i ~ "]/count", 270);
    }
 }
 

@@ -20,7 +20,7 @@
    <offsets>
      <x-m>3.2704</x-m>
      <y-m>-0.0</y-m>
-     <z-m>-0.0</z-m>
+     <z-m>-0.015</z-m>
    </offsets>
  </model>
  
@@ -91,6 +91,131 @@
  <model>
    <path>Models/Aircraft/marker.xml</path>
  </model>
+ 
+ <!-- start up smoke left -->
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.979708 </x-m>
+         <y-m> -0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> -30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.820108 </x-m>
+         <y-m> -0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> -30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.670036 </x-m>
+         <y-m> -0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> -30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.514009 </x-m>
+         <y-m> -0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> -30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.363938</x-m>
+         <y-m> -0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> -30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.205529 </x-m>
+         <y-m> -0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> -30 </heading-deg>
+       </offsets>
+  </model>
+
+  <!-- start up smoke right side -->
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.979708 </x-m>
+         <y-m> 0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> -30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.820108 </x-m>
+         <y-m> 0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> -30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.670036 </x-m>
+         <y-m> 0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> 30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.514009 </x-m>
+         <y-m> 0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> 30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.363938</x-m>
+         <y-m> 0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> 30 </heading-deg>
+       </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/p51d/Models/Effects/cranking/cranking.xml</path>
+       <offsets>
+         <x-m> 0.205529 </x-m>
+         <y-m> 0.478855 </y-m>
+         <z-m> 0.0023325 </z-m>
+         <heading-deg> 30 </heading-deg>
+       </offsets>
+  </model>
+ 
+ <!-- gear animations -->
  
  <animation>
   <type>rotate</type>
@@ -885,7 +1010,7 @@
   <object-name>rudderTrimTabHorn</object-name>
   <object-name>rudderTrimTabRod</object-name>
   <property>/fdm/jsbsim/fcs/rudder-pos-norm-animation</property>
-  <factor>-1.0</factor>
+  <factor>1.0</factor>
   <axis>   
    <x1-m>8.32</x1-m>
    <y1-m>0</y1-m>
@@ -904,6 +1029,7 @@
   <object-name>elevatorTrimTabRodLeft</object-name>
   <object-name>elevatorTrimTabRodRight</object-name>
   <property>/fdm/jsbsim/fcs/elevator-pos-norm-animation</property>
+  <factor>-1.0</factor>
   <axis>   
    <x1-m>7.82</x1-m>
    <y1-m>2</y1-m>
@@ -1547,8 +1673,65 @@
   </emission>
  </animation>
 
+ <model>
+   <path>Aircraft/p51d/Models/Effects/guns/fire-outside-guns.xml</path>
+   <offsets>
+      <x-m> 1.9024</x-m>
+      <y-m> -2.4074 </y-m>
+      <z-m> -0.491615 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+   </offsets>
+ </model>
  
-
+  <model>
+   <path>Aircraft/p51d/Models/Effects/guns/fire-outside-guns.xml</path>
+   <offsets>
+      <x-m> 1.8971</x-m>
+      <y-m> -2.2115 </y-m>
+      <z-m> -0.516539 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+   </offsets>
+ </model>
+ 
+  <model>
+   <path>Aircraft/p51d/Models/Effects/guns/fire.xml</path>
+   <offsets>
+      <x-m> 1.8971</x-m>
+      <y-m> -2.0094 </y-m>
+      <z-m> -0.534216 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+   </offsets>
+ </model>
+ 
+ <model>
+   <path>Aircraft/p51d/Models/Effects/guns/fire-outside-guns.xml</path>
+   <offsets>
+      <x-m> 1.9024</x-m>
+      <y-m> 2.4074 </y-m>
+      <z-m> -0.491615 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+   </offsets>
+ </model>
+ 
+  <model>
+   <path>Aircraft/p51d/Models/Effects/guns/fire-outside-guns.xml</path>
+   <offsets>
+      <x-m> 1.8971</x-m>
+      <y-m> 2.2115 </y-m>
+      <z-m> -0.516539 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+   </offsets>
+ </model>
+ 
+  <model>
+   <path>Aircraft/p51d/Models/Effects/guns/fire.xml</path>
+   <offsets>
+      <x-m> 1.8871</x-m>
+      <y-m> 2.0094 </y-m>
+      <z-m> -0.534216 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+   </offsets>
+ </model>  
   
  <!-- rain animations -->
 

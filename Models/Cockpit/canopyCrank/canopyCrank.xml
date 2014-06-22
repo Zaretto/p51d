@@ -9,8 +9,26 @@
   <object-name>canopyCrankHandle</object-name>
   <object-name>lockButton</object-name>
   <object-name>lockLever</object-name>
+  <object-name>bolt</object-name>
   <property>controls/canopy/open</property>
-  <factor>-1800</factor>
+  <interpolation>
+    <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.1</ind>
+    <dep>0</dep>    
+   </entry>
+   <entry>
+    <ind>0.9</ind>
+    <dep>-1800</dep>
+   </entry>
+      <entry>
+    <ind>1.0</ind>
+    <dep>-1800</dep>
+   </entry>
+  </interpolation>
   <axis>
    <x1-m>2.94689</x1-m>
    <y1-m>0.382323</y1-m>
@@ -18,6 +36,70 @@
    <x2-m>2.94521</x2-m>
    <y2-m>0.3043341</y2-m>
    <z2-m>0.2185814</z2-m>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>lockButton</object-name>
+  <property>controls/canopy/open</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.1</ind>
+    <dep>45</dep>
+   </entry>
+   <entry>
+    <ind>0.9</ind>
+    <dep>45</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>0</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x1-m>2.8154</x1-m>
+   <y1-m>0.242515</y1-m>
+   <z1-m>0.319781</z1-m>
+   <x2-m>3.1154</x2-m>
+   <y2-m>0.242515</y2-m>
+   <z2-m>0.319781</z2-m>
+  </axis>
+ </animation>
+ 
+   <animation>
+  <type>rotate</type>
+  <object-name>lockLever</object-name>
+  <property>controls/canopy/open</property>
+    <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.1</ind>
+    <dep>-15</dep>
+   </entry>
+   <entry>
+    <ind>0.9</ind>
+    <dep>-15</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>0</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x1-m>2.8154</x1-m>
+   <y1-m>0.287658</y1-m>
+   <z1-m>0.26652</z1-m>
+   <x2-m>3.1154</x2-m>
+   <y2-m>0.287658</y2-m>
+   <z2-m>0.26z652</z2-m>
   </axis>
  </animation>
   
@@ -32,7 +114,7 @@
         <command>property-interpolate</command> 
         <property>/controls/canopy/open</property>
         <value type="float">1.0</value> 
-        <rate>0.33</rate>        
+        <rate>0.15</rate>        
       </binding>
     </action>
     <action>
@@ -42,7 +124,7 @@
         <command>property-interpolate</command> 
         <property>/controls/canopy/open</property>
         <value type="float">0.0</value> 
-        <rate>0.33</rate>        
+        <rate>0.15</rate>        
       </binding>
     </action>
  </animation>

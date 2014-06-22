@@ -392,7 +392,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
      <gun-heat type="int"> 0 </gun-heat>
    </anti-ice>
    <canopy>
-      <closed type="float">1.0</closed>
+      <open type="float">1.0</open>
    </canopy>
    <fuel>
       <on>0</on>
