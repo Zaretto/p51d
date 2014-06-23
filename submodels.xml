@@ -647,12 +647,12 @@
   <submodel>
     <name>Left-gun1-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/innerGunsFiring</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
-    <delay>0.03</delay>
+    <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.67799 </x-offset>
+    <x-offset> -5.57799 </x-offset>
     <y-offset>-6.59178</y-offset>
     <z-offset> -1.75215</z-offset>
     <pitch-offset>-60</pitch-offset>
@@ -665,12 +665,12 @@
   <submodel>
     <name>Right-gun1-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/innerGunsFiring</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
-    <delay>0.031</delay>
+    <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.67799 </x-offset>
+    <x-offset> -5.57799 </x-offset>
     <y-offset>6.59178</y-offset>
     <z-offset> -1.75215</z-offset>
     <pitch-offset>-60</pitch-offset>
@@ -683,12 +683,12 @@
     <submodel>
     <name>Left-gun2-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/outerGunsFiring</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
-    <delay>0.031</delay>
+    <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.72684</x-offset>
+    <x-offset> -5.62684</x-offset>
     <y-offset> -7.25573 </y-offset>
     <z-offset>  -1.69407 </z-offset>
     <pitch-offset>-60</pitch-offset>
@@ -701,12 +701,12 @@
   <submodel>
     <name>Right-gun2-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/outerGunsFiring</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
-    <delay>0.031</delay>
+    <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.72684</x-offset>
+    <x-offset> -5.62684</x-offset>
     <y-offset> 7.25573 </y-offset>
     <z-offset>  -1.69407 </z-offset>
     <pitch-offset>-60</pitch-offset>
@@ -719,12 +719,12 @@
   <submodel>
     <name>Left-gun3-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/outerGunsFiring</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
-    <delay>0.031</delay>
+    <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.8</x-offset>
+    <x-offset> -5.7</x-offset>
     <y-offset> -7.91947 </y-offset>
     <z-offset>  -1.636</z-offset>
     <pitch-offset>-60</pitch-offset>
@@ -737,12 +737,12 @@
   <submodel>
     <name>Right-gun3-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/outerGunsFiring</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
-    <delay>0.031</delay>
+    <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.83735</x-offset>
+    <x-offset> -5.73735</x-offset>
     <y-offset> 7.91947 </y-offset>
     <z-offset>  -1.636</z-offset>
     <pitch-offset>-60</pitch-offset>
@@ -769,6 +769,7 @@
     <cd>0.8</cd>
     <eda>1.0</eda>
     <life>5</life>
+    <collision>true</collision>
   </submodel>
   
     <submodel>
@@ -788,6 +789,7 @@
     <cd>0.8</cd>
     <eda>1.0</eda>
     <life>5</life>
+    <collision>true</collision>
   </submodel>
   
     <submodel>
@@ -807,8 +809,10 @@
     <cd>0.8</cd>
     <eda>1.0</eda>
     <life>5</life>
+    <collision>true</collision>
   </submodel>
-    <submodel>
+  
+  <submodel>
     <name>shell case right #3</name>
     <model>Aircraft/p51d/Models/Effects/guns/50BMGCase.ac</model>
     <trigger>/fdm/jsbsim/systems/armament/outerGunsFiring</trigger>
@@ -825,9 +829,10 @@
     <cd>0.8</cd>
     <eda>1.0</eda>
     <life>5</life>
+    <collision>true</collision>
   </submodel>
   
-    <submodel>
+  <submodel>
     <name>shell case right #2</name>
     <model>Aircraft/p51d/Models/Effects/guns/50BMGCase.ac</model>
     <trigger>/fdm/jsbsim/systems/armament/outerGunsFiring</trigger>
@@ -844,9 +849,10 @@
     <cd>0.8</cd>
     <eda>1.0</eda>
     <life>5</life>
+    <collision>true</collision>
   </submodel>
   
-    <submodel>
+  <submodel>
     <name>shell case right #1</name>
     <model>Aircraft/p51d/Models/Effects/guns/50BMGCase.ac</model>
     <trigger>/fdm/jsbsim/systems/armament/innerGunsFiring</trigger>
@@ -863,6 +869,7 @@
     <cd>0.8</cd>
     <eda>1.0</eda>
     <life>5</life>
+    <collision>true</collision>
   </submodel>
   
 </PropertyList>

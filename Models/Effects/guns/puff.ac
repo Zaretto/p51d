@@ -1,17 +1,20 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 100  trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 OBJECT world
 kids 1
 OBJECT poly
 name "puff"
-loc 1.49012e-008 -7.45058e-009 0
+loc 0 -0 -0
+data 4
+puff
 texture "puff.png"
-crease 61.000000
+texrep 1.000000 1.000000
+crease 61.000003
 numvert 4
--0.25 -0.25 0
-0.25 -0.25 0
-0.25 0.25 0
--0.25 0.25 0
+-0.25 -0.25 -0
+0.25 -0.25 -0
+0.25 0.25 -0
+-0.25 0.25 -0
 numsurf 1
 SURF 0x30
 mat 0

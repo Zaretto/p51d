@@ -522,6 +522,9 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <gear-unsafe-light-check type="int">0</gear-unsafe-light-check>
       <leverPos type="float">0.0</leverPos>
    </gear>
+   <flight>
+      <flaps type="float">1.0</flaps>
+   </flight>   
  </controls>
  
  <fdm>
@@ -553,6 +556,9 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <ap>
         <map-error type="float">0.0</map-error>
       </ap>
+      <fcs>
+        <flap-cmd-norm type="float">1.0</flap-cmd-norm>
+      </fcs>  
    </jsbsim>
  </fdm>
  

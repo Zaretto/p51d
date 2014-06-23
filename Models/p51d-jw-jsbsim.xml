@@ -1676,7 +1676,7 @@
  <model>
    <path>Aircraft/p51d/Models/Effects/guns/fire-outside-guns.xml</path>
    <offsets>
-      <x-m> 1.9024</x-m>
+      <x-m> 1.9224</x-m>
       <y-m> -2.4074 </y-m>
       <z-m> -0.491615 </z-m>
       <pitch-deg> 180 </pitch-deg>
@@ -1686,7 +1686,7 @@
   <model>
    <path>Aircraft/p51d/Models/Effects/guns/fire-outside-guns.xml</path>
    <offsets>
-      <x-m> 1.8971</x-m>
+      <x-m> 1.9171</x-m>
       <y-m> -2.2115 </y-m>
       <z-m> -0.516539 </z-m>
       <pitch-deg> 180 </pitch-deg>
@@ -1696,7 +1696,7 @@
   <model>
    <path>Aircraft/p51d/Models/Effects/guns/fire.xml</path>
    <offsets>
-      <x-m> 1.8971</x-m>
+      <x-m> 1.8471</x-m>
       <y-m> -2.0094 </y-m>
       <z-m> -0.534216 </z-m>
       <pitch-deg> 180 </pitch-deg>
@@ -1706,7 +1706,7 @@
  <model>
    <path>Aircraft/p51d/Models/Effects/guns/fire-outside-guns.xml</path>
    <offsets>
-      <x-m> 1.9024</x-m>
+      <x-m> 1.9224</x-m>
       <y-m> 2.4074 </y-m>
       <z-m> -0.491615 </z-m>
       <pitch-deg> 180 </pitch-deg>
@@ -1716,7 +1716,7 @@
   <model>
    <path>Aircraft/p51d/Models/Effects/guns/fire-outside-guns.xml</path>
    <offsets>
-      <x-m> 1.8971</x-m>
+      <x-m> 1.9171</x-m>
       <y-m> 2.2115 </y-m>
       <z-m> -0.516539 </z-m>
       <pitch-deg> 180 </pitch-deg>
@@ -1726,7 +1726,7 @@
   <model>
    <path>Aircraft/p51d/Models/Effects/guns/fire.xml</path>
    <offsets>
-      <x-m> 1.8871</x-m>
+      <x-m> 1.8471</x-m>
       <y-m> 2.0094 </y-m>
       <z-m> -0.534216 </z-m>
       <pitch-deg> 180 </pitch-deg>
