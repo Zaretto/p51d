@@ -8,7 +8,7 @@
     <texture>smoke.png</texture>
 
     <condition>
-      <property>/fdm/jsbsim/systems/armament/innerGunsFiring</property>
+      <property>/fdm/jsbsim/systems/armament/muzzleFlashAnimatedInner</property>
     </condition>
 
     <emissive>true</emissive>
