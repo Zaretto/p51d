@@ -223,7 +223,7 @@ Hal V. Engel hvengel@astound.net
             <retractable>1</retractable>
         </contact>
         
-        <!-- Next three are jack stands for testing landing gear functionality 
+        <!-- Next three are jack stands for testing landing gear functionality
          <contact type="STRUCTURE" name="LEFT_WING_TIP_JACK_STAND">
               <location unit="IN">
               <x> 25 </x>
