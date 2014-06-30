@@ -56,6 +56,26 @@
     <blue>0.15</blue>
   </emission>
  </animation>
+ 
+<effect>
+    <inherits-from>Aircraft/p51d/Models/Effects/bumpSpecFus</inherits-from>
+    <object-name>cowl</object-name>
+    <object-name>wingFilletLeft</object-name>
+    <object-name>wingFilletRight</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>dogHouse</object-name>
+    <object-name>tailFaringLeft</object-name>
+    <object-name>tailFaringRight</object-name>
+    <object-name>spinner</object-name>
+    <object-name>tailWheelDoorRight</object-name>
+    <object-name>tailWheelDoorLeft</object-name>
+</effect> 
+
+<effect>
+    <inherits-from>Aircraft/p51d/Models/Effects/effectsWing1</inherits-from>
+    <object-name>mainWheelRight</object-name>
+    <object-name>mainWheelLeft</object-name>
+</effect>
 
 <model>
    <path>Aircraft/p51d/Models/HotSpots.xml</path>
