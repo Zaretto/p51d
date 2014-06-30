@@ -8,9 +8,9 @@
 		</equals>
 	</condition>
 	<marker>
-		<x-m>3.99</x-m>
-		<y-m>0.2842</y-m>
-		<z-m>0.24</z-m>
+		<x-m>2.825</x-m>
+		<y-m>0.29</y-m>
+		<z-m>0.1</z-m>
 		<scale>1</scale>
 	</marker>
 </PropertyList>

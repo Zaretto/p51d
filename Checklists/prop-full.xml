@@ -8,9 +8,9 @@
 		</greater-than>
 	</condition>
 	<marker>
-		<x-m>3.8508</x-m>
-		<y-m>-0.28</y-m>
-		<z-m>0.2850</z-m>
+		<x-m>2.72</x-m>
+		<y-m>-0.285</y-m>
+		<z-m>0.19</z-m>
 		<scale>2</scale>
 	</marker>
 </PropertyList>

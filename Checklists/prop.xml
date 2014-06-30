@@ -19,9 +19,9 @@
 			<value alias="../../min-prop"/>
 		</binding>
 		<marker>
-			<x-m>2.7725</x-m>
-			<y-m>0.2383</y-m>
-			<z-m>0.6433</z-m>
+			<x-m>2.7</x-m>
+			<y-m>0.265</y-m>
+			<z-m>0.7</z-m>
 			<scale>2</scale>
 		</marker>
 </PropertyList>
