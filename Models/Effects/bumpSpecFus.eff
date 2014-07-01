@@ -14,11 +14,11 @@
      </texture>   
      
      <reflection-enabled type="int">1</reflection-enabled>
-     <reflect-map-enabled type="int">0</reflect-map-enabled>
+     <reflect-map-enabled type="int">1</reflect-map-enabled>
      <reflection-correction type="float">0.1</reflection-correction>
      <reflection-dynamic type="int">1</reflection-dynamic>
      <texture n="4">
-        <image>Aircraft/p51d/Models/fus-texture.png</image>
+        <image>Aircraft/p51d/Models/Effects/textures/fusReflection.png</image>
         <filter>linear-mipmap-linear</filter>
         <wrap-s>clamp</wrap-s>
         <wrap-t>clamp</wrap-t>
@@ -36,13 +36,13 @@
             <negative-z>Aircraft/Generic/Effects/CubeMaps/real.blue-sky/fair-sky_nz.png</negative-z>
         </images>
     </texture>
-    <reflection-fresnel type="float">0.01</reflection-fresnel>
-    <reflection-rainbow type="float">0.05</reflection-rainbow>
-    <reflection-noise type="float">0.01</reflection-noise>
-    <ambient-correction type="float">0.0</ambient-correction>
-    <dirt-enabled type="int">0</dirt-enabled>
+    <reflection-fresnel type="float">0.05</reflection-fresnel>
+    <reflection-rainbow type="float">0.07</reflection-rainbow>
+    <reflection-noise type="float">0.05</reflection-noise>
+    <ambient-correction type="float">0.01</ambient-correction>
+    <dirt-enabled type="int">1</dirt-enabled>
     <dirt-color type="vec3d">1.0 1.0 1.0</dirt-color>
-    <dirt-factor type="float">0.5</dirt-factor>
+    <dirt-factor type="float">0.2</dirt-factor>
   </parameters>
   
   <!-- ####################

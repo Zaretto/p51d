@@ -75,6 +75,10 @@
     <inherits-from>Aircraft/p51d/Models/Effects/effectsWing1</inherits-from>
     <object-name>mainWheelRight</object-name>
     <object-name>mainWheelLeft</object-name>
+    <object-name>horizontalStabilizer</object-name>
+    <object-name>elevator</object-name>
+    <object-name>VerticalStab</object-name>
+    <object-name>dorsal</object-name>
 </effect>
 
 <model>
@@ -268,7 +272,7 @@
    <y1-m>-1.7550</y1-m>
    <z1-m>-0.5523</z1-m>
    <x2-m>2.49897</x2-m>
-   <y2-m>-1.79827</y2-m> <!-- -1.71179 -->
+   <y2-m>-1.79827</y2-m>
    <z2-m>-0.589755</z2-m>
   </axis>
  </animation>
@@ -309,7 +313,7 @@
    <z1-m>-0.62664</z1-m>
    <x2-m>2.2122</x2-m>
    <y2-m>-1.8646</y2-m>
-   <z2-m>-0.6585</z2-m>
+   <z2-m>-0.6575</z2-m>
   </axis>
  </animation>
  
