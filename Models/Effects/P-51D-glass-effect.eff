@@ -1,0 +1,17 @@
+ <PropertyList>
+ <name>P-51D-glass-effect</name>
+ <inherits-from>Effects/model-combined-transparent</inherits-from>
+ 
+ <!-- ####################
+### TRANSPARENCY INCLUDE ###
+######################### -->
+	<rendering-hint>transparent</rendering-hint>
+	<transparent>true</transparent>
+	<render-bin>
+		<bin-number>10</bin-number>
+		<bin-name>DepthSortedBin</bin-name>
+	</render-bin>
+<!-- ########################
+### END TRANSPARENCY INCLUDE ###
+############################# -->
+ </PropertyList>

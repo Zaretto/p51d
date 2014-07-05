@@ -61,24 +61,36 @@
     <inherits-from>Aircraft/p51d/Models/Effects/bumpSpecFus</inherits-from>
     <object-name>cowl</object-name>
     <object-name>wingFilletLeft</object-name>
-    <object-name>wingFilletRight</object-name>
-    <object-name>fuselage</object-name>
-    <object-name>dogHouse</object-name>
+    <object-name>wingFilletRight</object-name>    
     <object-name>tailFaringLeft</object-name>
     <object-name>tailFaringRight</object-name>
     <object-name>spinner</object-name>
     <object-name>tailWheelDoorRight</object-name>
     <object-name>tailWheelDoorLeft</object-name>
-</effect> 
+    <object-name>fuselage</object-name>
+    <object-name>dogHouse</object-name>
+    <object-name>coolingDoor</object-name>
+    <object-name>oilCoolerDoor</object-name>
+</effect>
 
 <effect>
     <inherits-from>Aircraft/p51d/Models/Effects/effectsWing1</inherits-from>
-    <object-name>mainWheelRight</object-name>
-    <object-name>mainWheelLeft</object-name>
     <object-name>horizontalStabilizer</object-name>
     <object-name>elevator</object-name>
     <object-name>VerticalStab</object-name>
     <object-name>dorsal</object-name>
+</effect>
+
+<effect>
+    <inherits-from>Aircraft/p51d/Models/Effects/effectsTires</inherits-from>
+    <object-name>mainWheelRight</object-name>
+    <object-name>mainWheelLeft</object-name>
+</effect>
+
+<effect>
+    <inherits-from>Aircraft/p51d/Models/Effects/effectsExhaustCovers</inherits-from>
+    <object-name>exhaustCoverLeft</object-name>
+    <object-name>exhaustCoverRight</object-name>
 </effect>
 
 <model>

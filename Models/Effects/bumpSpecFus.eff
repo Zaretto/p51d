@@ -2,9 +2,7 @@
   <name>Aircraft/p51d/Models/Effects/bumpSpecFus</name>
   <inherits-from>Effects/model-combined-deferred</inherits-from>
   <parameters>
-  
      <normalmap-enabled type="int">1</normalmap-enabled>
-     <normalmap-dds type="int">0</normalmap-dds>
      <texture n="2">
          <image>Aircraft/p51d/Models/Effects/textures/fusNormals.png</image>
          <filter>linear-mipmap-linear</filter>
@@ -15,7 +13,7 @@
      
      <reflection-enabled type="int">1</reflection-enabled>
      <reflect-map-enabled type="int">1</reflect-map-enabled>
-     <reflection-correction type="float">0.1</reflection-correction>
+     <reflection-correction type="float">0.005</reflection-correction>
      <reflection-dynamic type="int">1</reflection-dynamic>
      <texture n="4">
         <image>Aircraft/p51d/Models/Effects/textures/fusReflection.png</image>
@@ -28,22 +26,23 @@
      <texture n="5">
         <type>cubemap</type>
         <images>
-            <positive-x>Aircraft/Generic/Effects/CubeMaps/real.blue-sky/fair-sky_px.png</positive-x>
-            <negative-x>Aircraft/Generic/Effects/CubeMaps/real.blue-sky/fair-sky_nx.png</negative-x>
-            <positive-y>Aircraft/Generic/Effects/CubeMaps/real.blue-sky/fair-sky_py.png</positive-y>
-            <negative-y>Aircraft/Generic/Effects/CubeMaps/real.blue-sky/fair-sky_ny.png</negative-y>
-            <positive-z>Aircraft/Generic/Effects/CubeMaps/real.blue-sky/fair-sky_pz.png</positive-z>
-            <negative-z>Aircraft/Generic/Effects/CubeMaps/real.blue-sky/fair-sky_nz.png</negative-z>
+            <positive-x>Aircraft/Generic/Effects/CubeMaps/fgfs-sky/1.png</positive-x>
+            <negative-x>Aircraft/Generic/Effects/CubeMaps/fgfs-sky/4.png</negative-x>
+            <positive-y>Aircraft/Generic/Effects/CubeMaps/fgfs-sky/2.png</positive-y>
+            <negative-y>Aircraft/Generic/Effects/CubeMaps/fgfs-sky/3.png</negative-y>
+            <positive-z>Aircraft/Generic/Effects/CubeMaps/fgfs-sky/6.png</positive-z>
+            <negative-z>Aircraft/Generic/Effects/CubeMaps/fgfs-sky/5.png</negative-z>
         </images>
     </texture>
-    <reflection-fresnel type="float">0.05</reflection-fresnel>
-    <reflection-rainbow type="float">0.07</reflection-rainbow>
-    <reflection-noise type="float">0.05</reflection-noise>
-    <ambient-correction type="float">0.01</ambient-correction>
-    <dirt-enabled type="int">1</dirt-enabled>
+    <reflection-fresnel type="float">0.1</reflection-fresnel>
+    <reflection-rainbow type="float">0.01</reflection-rainbow>
+    <reflection-noise type="float">0.3</reflection-noise>
+    <ambient-correction type="float">0.15</ambient-correction>
+    <dirt-enabled type="int">0</dirt-enabled>
     <dirt-color type="vec3d">1.0 1.0 1.0</dirt-color>
-    <dirt-factor type="float">0.2</dirt-factor>
+    <dirt-factor type="float">0.5</dirt-factor>
   </parameters>
+  
   
   <!-- ####################
     ### NORMALMAP INCLUDE ###
@@ -101,4 +100,3 @@
     ### END NORMALMAP INCLUDE ###
     ############################# -->
 </PropertyList>
-

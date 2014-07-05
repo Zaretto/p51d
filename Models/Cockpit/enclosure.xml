@@ -102,5 +102,31 @@
    <z2-m>0.3322224</z2-m>
   </axis>
  </animation>
+ 
+<!-- <effect> 
+    does not work?
+    <inherits-from>Aircraft/p51d/Models/Effects/P-51D-glass-effect</inherits-from>
+    <object-name>canopy</object-name>
+    <object-name>windshieldLeft</object-name>
+    <object-name>windshieldRight</object-name>
+    <object-name>windshield</object-name>
+</effect> -->
+
+<effect> 
+  <inherits-from>Aircraft/p51d/Models/Effects/enclosureEffects</inherits-from>
+  <object-name>canopyLowerSkin</object-name>
+  <object-name>exteriorWindshieldBow</object-name>
+</effect>
+
+ <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>canopy</object-name>
+    <object-name>windshieldLeft</object-name>
+    <object-name>windshieldRight</object-name>
+    <object-name>windshield</object-name>
+  </effect>
     
 </PropertyList>
