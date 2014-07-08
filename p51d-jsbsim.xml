@@ -260,7 +260,7 @@ Hal V. Engel hvengel@astound.net
               <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
           </contact>
           
-         Comment out the Jack stand section when not doing gear tests -->
+        Comment out the Jack stand section when not doing gear tests -->
 
           <contact type="STRUCTURE" name="LEFT_WING_TIP">
               <location unit="IN">

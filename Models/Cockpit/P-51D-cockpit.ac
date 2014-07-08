@@ -16,13 +16,13 @@ MATERIAL "CabShinyUndercoat.001" rgb 1 0.9999 0.9999 amb 0.6 0.6 0.6 emis 0 0 0 
 MATERIAL "DefaultWhite.015" rgb 1 1 1 amb 0.6 0.6 0.6 emis 1 1 1 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "Untitled.001" rgb 1 1 1 amb 0.6 0.6 0.6 emis 0 0 0 spec 0 0 0 shi 128 trans 0
 OBJECT world
-kids 51
+kids 45
 OBJECT poly
 name "BootBody"
 loc 2.879821 -0.358361 -0.000246
 data 8
 BootBody
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\boot.png"
+texture "boot.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 1026
@@ -10787,7 +10787,7 @@ name "BootTop"
 loc 2.881413 -0.30366 0.000015
 data 7
 BootTop
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\boot.png"
+texture "boot.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 34
@@ -11136,7 +11136,7 @@ name "BootTransition"
 loc 2.882046 -0.317243 -0.000097
 data 14
 BootTransition
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\boot.png"
+texture "boot.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 34
@@ -11565,7 +11565,7 @@ name "CarbHeatSticker"
 loc 2.566317 0.22891 -0.136096
 data 15
 CarbHeatSticker
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 4
@@ -11592,7 +11592,7 @@ name "CockpitFloor-black"
 loc 3.520038 -0.377507 -0.004715
 data 18
 CockpitFloor-black
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 24
@@ -11624,94 +11624,94 @@ numsurf 12
 SURF 0x00
 mat 15
 refs 4
-8 0.348587572575 0.522440373898
-5 0.352329522371 0.522440373898
-9 0.352329522371 0.518640220165
-19 0.346730202436 0.519530236721
+8 0.350669264793 0.524394929409
+5 0.356461882591 0.524394929409
+9 0.356461882591 0.518512189388
+19 0.347794055939 0.519889950752
 SURF 0x00
 mat 15
 refs 4
-3 0.343103826046 0.522440373898
-23 0.348587572575 0.522440373898
-19 0.346730202436 0.519530236721
-10 0.343103826046 0.519594728947
+3 0.342180341482 0.524394929409
+23 0.350669264793 0.524394929409
+19 0.347794055939 0.519889950752
+10 0.342180341482 0.519989788532
 SURF 0x00
 mat 15
 refs 4
-11 0.359555006027 0.522440373898
-2 0.365038692951 0.522440373898
-12 0.365038692951 0.520549178123
-20 0.359555006027 0.520549178123
+11 0.367647081614 0.524394929409
+2 0.376135975122 0.524394929409
+12 0.376135975122 0.521467328072
+20 0.367647081614 0.521467328072
 SURF 0x00
 mat 15
 refs 4
-5 0.352329522371 0.522440373898
-11 0.359555006027 0.522440373898
-20 0.359555006027 0.520549178123
-9 0.352329522371 0.518640220165
+5 0.356461882591 0.524394929409
+11 0.367647081614 0.524394929409
+20 0.367647081614 0.521467328072
+9 0.356461882591 0.518512189388
 SURF 0x00
 mat 15
 refs 4
-20 0.359555006027 0.520549178123
-12 0.365038692951 0.520549178123
-6 0.365038692951 0.518657982349
-13 0.359555006027 0.518657982349
+20 0.367647081614 0.521467328072
+12 0.376135975122 0.521467328072
+6 0.376135975122 0.51853966713
+13 0.367647081614 0.51853966713
 SURF 0x00
 mat 15
 refs 4
-9 0.352329522371 0.518640220165
-20 0.359555006027 0.520549178123
-13 0.359555006027 0.518657982349
-4 0.352329522371 0.518657982349
+9 0.356461882591 0.518512189388
+20 0.367647081614 0.521467328072
+13 0.367647081614 0.51853966713
+4 0.356461882591 0.51853966713
 SURF 0x00
 mat 15
 refs 4
-13 0.359555006027 0.518657982349
-6 0.365038692951 0.518657982349
-14 0.365038692951 0.516766667366
-21 0.359555006027 0.516766667366
+13 0.367647081614 0.51853966713
+6 0.376135975122 0.51853966713
+14 0.376135975122 0.515611946583
+21 0.367647081614 0.515611946583
 SURF 0x00
 mat 15
 refs 4
-4 0.352329522371 0.518657982349
-13 0.359555006027 0.518657982349
-21 0.359555006027 0.516766667366
-16 0.352329522371 0.518637001514
+4 0.356461882591 0.51853966713
+13 0.367647081614 0.51853966713
+21 0.367647081614 0.515611946583
+16 0.356461882591 0.518507182598
 SURF 0x00
 mat 15
 refs 4
-21 0.359555006027 0.516766667366
-14 0.365038692951 0.516766667366
-1 0.365038692951 0.514875471592
-15 0.359555006027 0.514875471592
+21 0.367647081614 0.515611946583
+14 0.376135975122 0.515611946583
+1 0.376135975122 0.512684285641
+15 0.367647081614 0.512684285641
 SURF 0x00
 mat 15
 refs 4
-16 0.352329522371 0.518637001514
-21 0.359555006027 0.516766667366
-15 0.359555006027 0.514875471592
-7 0.352329522371 0.514875471592
+16 0.356461882591 0.518507182598
+21 0.367647081614 0.515611946583
+15 0.367647081614 0.512684285641
+7 0.356461882591 0.512684285641
 SURF 0x00
 mat 15
 refs 4
-17 0.348587572575 0.514875471592
-0 0.343103826046 0.514875471592
-18 0.343103826046 0.51777279377
-22 0.346730202436 0.51777279377
+17 0.350669264793 0.512684285641
+0 0.342180341482 0.512684285641
+18 0.342180341482 0.517169415951
+22 0.347794055939 0.517169415951
 SURF 0x00
 mat 15
 refs 4
-7 0.352329522371 0.514875471592
-17 0.348587572575 0.514875471592
-22 0.346730202436 0.51777279377
-16 0.352329522371 0.518637001514
+7 0.356461882591 0.512684285641
+17 0.350669264793 0.512684285641
+22 0.347794055939 0.517169415951
+16 0.356461882591 0.518507182598
 kids 0
 OBJECT poly
 name "ConsolePanel"
 loc 2.486252 -0.162088 0.001219
 data 12
 ConsolePanel
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 16
@@ -11906,7 +11906,7 @@ name "CoolantSticker"
 loc 2.566187 0.157083 -0.136096
 data 14
 CoolantSticker
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 4
@@ -11933,7 +11933,7 @@ name "EjectSticker"
 loc 2.575722 0.468112 0.000016
 data 12
 EjectSticker
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 4
@@ -11955,7 +11955,7 @@ name "Floor-Center-base"
 loc 2.798828 -0.387569 0.001971
 data 17
 Floor-Center-base
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\floor-center.png"
+texture "floor-center.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -12016,7 +12016,7 @@ name "Fuel-line"
 loc 2.640136 -0.331516 0.066461
 data 9
 Fuel-line
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\floor-center.png"
+texture "floor-center.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 26
@@ -12281,7 +12281,7 @@ name "LDG-fairing-plac"
 loc 2.594239 -0.150206 -0.096914
 data 16
 LDG-fairing-plac
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -12342,7 +12342,7 @@ name "LeftCockpitConsole"
 loc 3.121656 -0.077864 0.332354
 data 18
 LeftCockpitConsole
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 670
@@ -17309,7 +17309,7 @@ name "LeftRudderCarage"
 loc 2.507954 -0.168053 0.246788
 data 16
 LeftRudderCarage
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 60.000002
 numvert 123
@@ -18097,7 +18097,7 @@ name "LeftRudderPedal"
 loc 2.494926 -0.222148 0.223926
 data 15
 LeftRudderPedal
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\pedels.png"
+texture "pedels.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 191
@@ -19509,7 +19509,7 @@ name "MP-warning"
 loc 2.582935 0.349814 -0.270276
 data 10
 MP-warning
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -19570,7 +19570,7 @@ name "Ox-Dur-placard"
 loc 3.375653 0.242081 -0.305096
 data 14
 Ox-Dur-placard
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\ox-duration-placard.rgb"
+texture "ox-duration-placard.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -19631,7 +19631,7 @@ name "ReostatKnob"
 loc 2.586926 -0.027403 -0.087064
 data 11
 ReostatKnob
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\rocket-knob.rgb"
+texture "rocket-knob.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 59
@@ -19925,7 +19925,7 @@ name "ReostatPlate"
 loc 2.582657 -0.031582 -0.086487
 data 12
 ReostatPlate
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\cabin-light-plate.png"
+texture "cabin-light-plate.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 4
@@ -19947,7 +19947,7 @@ name "RightRudderCarage"
 loc 2.507952 -0.168051 -0.246789
 data 17
 RightRudderCarage
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 60.000002
 numvert 123
@@ -20735,7 +20735,7 @@ name "RightRudderPedal"
 loc 2.494927 -0.222148 -0.224258
 data 16
 RightRudderPedal
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\pedels.png"
+texture "pedels.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 191
@@ -22147,7 +22147,7 @@ name "Stick"
 loc 2.875535 -0.038231 -0.000035
 data 5
 Stick
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\p51d-jw-05.rgb"
+texture "p51d-jw-05.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 70
@@ -22696,7 +22696,7 @@ name "Trigger2"
 loc 2.842253 0.190274 0.000001
 data 8
 Trigger2
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\cabin-light-plate.png"
+texture "cabin-light-plate.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 34
@@ -23045,7 +23045,7 @@ name "accumlator"
 loc 2.645168 -0.34483 -0.037949
 data 10
 accumlator
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\canister.png"
+texture "canister.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 460
@@ -27037,7 +27037,7 @@ name "air-placard"
 loc 3.101566 -0.050557 0.321677
 data 11
 air-placard
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 24
@@ -27226,7 +27226,7 @@ name "brake-placard"
 loc 2.577046 0.024189 -0.110037
 data 13
 brake-placard
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -27287,7 +27287,7 @@ name "carb-heat-warn"
 loc 3.164752 -0.081536 0.324604
 data 14
 carb-heat-warn
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 16
@@ -27412,7 +27412,7 @@ name "carbHP-plac-scrw1"
 loc 3.175476 -0.092611 0.31731
 data 17
 carbHP-plac-scrw1
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 65
@@ -27920,7 +27920,7 @@ name "carbHP-plac-scrw2"
 loc 3.175409 -0.09252 0.330615
 data 17
 carbHP-plac-scrw2
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 65
@@ -28428,7 +28428,7 @@ name "carbHP-plac-scrw3"
 loc 3.154805 -0.068289 0.318215
 data 17
 carbHP-plac-scrw3
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 65
@@ -28936,7 +28936,7 @@ name "carbHP-plac-scrw4"
 loc 3.154882 -0.06837 0.331065
 data 17
 carbHP-plac-scrw4
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 65
@@ -29444,7 +29444,7 @@ name "engine-limits-plac"
 loc 3.155544 0.241035 -0.3067
 data 18
 engine-limits-plac
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\engine-limitations.rgb"
+texture "engine-limitations.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -29505,7 +29505,7 @@ name "floor-center"
 loc 2.790512 -0.38396 -0.001119
 data 12
 floor-center
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\floor-center.png"
+texture "floor-center.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 632
@@ -35662,7 +35662,7 @@ name "fuel-return-plac"
 loc 2.598412 -0.184588 0.087571
 data 16
 fuel-return-plac
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\fuel-return-placard.rgb"
+texture "fuel-return-placard.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -35723,7 +35723,7 @@ name "gearLeverForward"
 loc 2.761965 -0.22949 0.276866
 data 16
 gearLeverForward
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\landing-gear-lever.png"
+texture "landing-gear-lever.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 339
@@ -41822,7 +41822,7 @@ name "gearLeverRear"
 loc 2.847653 -0.255944 0.28221
 data 13
 gearLeverRear
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\landing-gear-lever.png"
+texture "landing-gear-lever.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 533
@@ -46150,7 +46150,7 @@ name "gun-circuit"
 loc 2.626338 0.001091 -0.339409
 data 11
 gun-circuit
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\gun-circuit-protectors.png"
+texture "gun-circuit-protectors.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -46211,7 +46211,7 @@ name "hot-air"
 loc 3.092171 -0.048397 0.303078
 data 7
 hot-air
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\air-controls.png"
+texture "air-controls.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 460
@@ -49932,7 +49932,7 @@ name "land-gear-placard"
 loc 2.786508 -0.102537 0.293232
 data 17
 land-gear-placard
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\landing-gear-placard.rgb"
+texture "landing-gear-placard.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -49993,7 +49993,7 @@ name "naa-placard"
 loc 3.184211 0.238782 0.316201
 data 11
 naa-placard
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -50054,7 +50054,7 @@ name "ram-air"
 loc 3.068798 -0.03844 0.330601
 data 7
 ram-air
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\air-controls.png"
+texture "air-controls.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 444
@@ -53647,7 +53647,7 @@ name "speed-limits-plac"
 loc 3.295126 0.240284 0.310925
 data 17
 speed-limits-plac
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\speed-restrction-placard.rgb"
+texture "speed-restrction-placard.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -53708,7 +53708,7 @@ name "unlockTailwheel"
 loc 2.567498 0.187337 -0.210467
 data 15
 unlockTailwheel
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "ox-duration-placard.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
@@ -53769,7 +53769,7 @@ name "up-down-placard"
 loc 2.821887 -0.210563 0.295449
 data 15
 up-down-placard
-texture "C:\Users\public2\fgdata\Aircraft\p51d\Models\placards.rgb"
+texture "placards.rgb"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 8
