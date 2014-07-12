@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<path>propDisk.ac</path>
+
+ <animation>
+  <type>select</type>
+  <object-name>spinner2</object-name>
+  <condition>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1199</value>
+   </greater-than>
+  </condition>
+ </animation>
+  
+ <animation>
+  <type>select</type>
+  <object-name>PropellerDisk</object-name>
+  <condition>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>1000</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>PropellerDisk</object-name>
+  <object-name>spinner2</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>0.1</factor>
+  <axis>   
+   <x1-m>-0.2119331</x1-m>
+   <y1-m>-0.00001957826</y1-m>
+   <z1-m>-0.0697053</z1-m>
+   <x2-m>-0.8283391</x2-m>
+   <y2-m>0.00003032945</y2-m>
+   <z2-m>-0.0882788</z2-m>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>transparency</type>
+  <object-name>PropellerDisk</object-name>
+  <alpha-prop>engines/engine[0]/rpm</alpha-prop>
+  <interpolation>
+      <entry>
+         <ind>0</ind>
+         <dep>0.0</dep>
+      </entry>
+      <entry>
+         <ind>1000</ind>
+         <dep>0.0</dep>
+      </entry>
+	  <entry>
+         <ind>1200</ind>
+         <dep>1.0</dep>
+      </entry>
+   </interpolation>
+ </animation>
+ 
+ <effect>
+    <inherits-from>Aircraft/p51d/Models/Effects/spinner</inherits-from>
+    <object-name>spinner2</object-name>
+</effect>
+
+</PropertyList>
