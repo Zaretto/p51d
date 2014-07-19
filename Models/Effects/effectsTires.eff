@@ -38,7 +38,7 @@
     </texture>
     <reflection-fresnel type="float">0.2</reflection-fresnel>
     <reflection-rainbow type="float">0.07</reflection-rainbow>
-    <reflection-noise type="float">0.2</reflection-noise>
+    <reflection-noise type="float">0.3</reflection-noise>
     <ambient-correction type="float">0.01</ambient-correction>
     <dirt-enabled type="int">1</dirt-enabled>
     <dirt-color type="vec3d">1.0 1.0 1.0</dirt-color>

@@ -28,9 +28,23 @@
  <animation>
   <type>spin</type>
   <object-name>PropellerDisk</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>0.01</factor>
+  <axis>   
+   <x1-m>-0.2119331</x1-m>
+   <y1-m>-0.00001957826</y1-m>
+   <z1-m>-0.0697053</z1-m>
+   <x2-m>-0.8283391</x2-m>
+   <y2-m>0.00003032945</y2-m>
+   <z2-m>-0.0882788</z2-m>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>spin</type>
   <object-name>spinner2</object-name>
   <property>engines/engine[0]/rpm</property>
-  <factor>0.1</factor>
+  <factor>0.03</factor>
   <axis>   
    <x1-m>-0.2119331</x1-m>
    <y1-m>-0.00001957826</y1-m>

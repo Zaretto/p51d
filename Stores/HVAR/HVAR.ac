@@ -9,7 +9,7 @@ name "Cylinder"
 loc 0.076805 0.001581 0.000049
 data 8
 Cylinder
-texture "C:\Program Files\FlightGear\data\Aircraft\p51d\Stores\HVAR\rocket-texure.png"
+texture "rocket-texure.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 59
@@ -403,7 +403,7 @@ name "Cylinder.001"
 loc 0.779125 0.237583 0.000049
 data 12
 Cylinder.001
-texture "C:\Program Files\FlightGear\data\Aircraft\p51d\Stores\HVAR\rocket-texure.png"
+texture "rocket-texure.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 87
@@ -993,7 +993,7 @@ name "fins"
 loc -0.053349 0 -0
 data 4
 fins
-texture "C:\Program Files\FlightGear\data\Aircraft\p51d\Stores\HVAR\rocket-texure.png"
+texture "rocket-texure.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 3718

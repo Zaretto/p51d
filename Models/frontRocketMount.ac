@@ -7,7 +7,7 @@ name "Cylinder"
 loc 0.117995 0.009969 -0.122739
 data 8
 Cylinder
-texture "C:\hvengels-fgdata-2013-07-26\Aircraft\p51d\WIP\75GTank.png"
+texture "75GTank.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 397
@@ -2972,7 +2972,7 @@ name "Cylinder.001"
 loc 1.156211 0.162407 -0.123961
 data 12
 Cylinder.001
-texture "C:\hvengels-fgdata-2013-07-26\Aircraft\p51d\WIP\75GTank.png"
+texture "75GTank.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 387

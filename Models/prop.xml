@@ -3,12 +3,13 @@
 
 <path>prop.ac</path>
 
-<animation>
+ <animation>
   <type>select</type>
   <object-name>propBlade1</object-name>
   <object-name>propBlade2</object-name>
   <object-name>propBlade3</object-name>
   <object-name>propBlade4</object-name>
+  <object-name>spinner</object-name>
   <condition>
    <less-than>
     <property>engines/engine[0]/rpm</property>
@@ -23,17 +24,16 @@
   <object-name>propBlade2</object-name>
   <object-name>propBlade3</object-name>
   <object-name>propBlade4</object-name>
+  <object-name>spinner</object-name>
   <property>engines/engine[0]/rpm</property>
-  <factor>-0.479</factor>
-  <center>
-   <x-m>-0.40</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.0</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
+  <factor>0.479</factor>
+  <axis>   
+   <x1-m>-0.2125359</x1-m>
+   <y1-m>-0.0004501</y1-m>
+   <z1-m>-0.0631098</z1-m>
+   <x2-m>-0.828942</x2-m>
+   <y2-m>0.00081717</y2-m>
+   <z2-m>-0.0816373</z2-m>
   </axis>
  </animation>
  
@@ -54,70 +54,15 @@
          <dep>0.3</dep>
       </entry>
 	  <entry>
-         <ind>1200</ind>
-         <dep>0.01</dep>
+         <ind>1100</ind>
+         <dep>0.0</dep>
       </entry>
    </interpolation>
- </animation>
- 
- <animation>
-  <type>blend</type>
-  <object-name>propBlade1</object-name>
-  <object-name>propBlade2</object-name>
-  <object-name>propBlade3</object-name>
-  <object-name>propBlade4</object-name>
-  <alpha-prop>engines/engine[0]/rpm</alpha-prop>
-  <factor>0.0000666</factor>
-  <min>0</min>
-  <max>1.0</max>
- </animation>
- 
-  <animation>
-  <type>select</type>
-  <object-name>PropellerDisk</object-name>
-  <condition>
-   <greater-than>
-    <property>engines/engine[0]/rpm</property>
-    <value>1000</value>
-   </greater-than>
-  </condition>
  </animation>
 
- <animation>
-  <type>spin</type>
-  <object-name>PropellerDisk</object-name>
-  <property>engines/engine[0]/rpm</property>
-  <factor>-.01</factor>
-  <center>
-   <x-m>-0.40</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.0</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
- 
-  <animation>
-  <type>transparency</type>
-  <object-name>PropellerDisk</object-name>
-  <alpha-prop>engines/engine[0]/rpm</alpha-prop>
-  <interpolation>
-      <entry>
-         <ind>0</ind>
-         <dep>0.0</dep>
-      </entry>
-      <entry>
-         <ind>1000</ind>
-         <dep>0.0</dep>
-      </entry>
-	  <entry>
-         <ind>1200</ind>
-         <dep>1.0</dep>
-      </entry>
-   </interpolation>
- </animation>
+ <effect>
+    <inherits-from>Aircraft/p51d/Models/Effects/spinner</inherits-from>
+    <object-name>spinner</object-name>
+</effect>
 
 </PropertyList>

@@ -8,7 +8,7 @@ name "PropellerDisk"
 loc -0.420964 -0.063477 -0.001461
 data 13
 PropellerDisk
-texture "propDiskSpinner.png"
+texture "..\..\Models\propDiskSpinner.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 48
@@ -289,7 +289,7 @@ name "spinner2"
 loc -0.206082 -0.074835 -0.015776
 data 8
 spinner2
-texture "propDiskSpinner.png"
+texture "..\..\Models\propDiskSpinner.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 640

@@ -176,14 +176,14 @@ Hal V. Engel hvengel@astound.net
     <ground_reactions>
         <contact type="BOGEY" name="LEFT_MLG">
             <location unit="IN">
-                <x> 75 </x>
+                <x> 75.25 </x>
                 <y> -72 </y>
-                <z> -85.0 </z>
+                <z> -85 </z>
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.1 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 9500 </spring_coeff>
+            <spring_coeff unit="LBS/FT"> 9800 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 2500 </damping_coeff>
             <damping_coeff_rebound unit="LBS/FT/SEC">6200</damping_coeff_rebound>
             <max_steer unit="DEG"> 0.0 </max_steer>
@@ -192,14 +192,14 @@ Hal V. Engel hvengel@astound.net
         </contact>
         <contact type="BOGEY" name="RIGHT_MLG">
             <location unit="IN">
-                <x> 75 </x>
+                <x> 75.25 </x>
                 <y> 72 </y>
                 <z> -85 </z>
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.1 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 9500 </spring_coeff>
+            <spring_coeff unit="LBS/FT"> 9800 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 2500 </damping_coeff>
             <damping_coeff_rebound unit="LBS/FT/SEC">6200</damping_coeff_rebound>
             <max_steer unit="DEG"> 0.0 </max_steer>
@@ -208,14 +208,14 @@ Hal V. Engel hvengel@astound.net
         </contact>
         <contact type="BOGEY" name="TAIL_LG">
             <location unit="IN">
-                <x> 272 </x>
+                <x> 270.2 </x>
                 <y> 0 </y>
-                <z> -37 </z>
+                <z> -37.5 </z>
             </location>
             <static_friction> 0.9 </static_friction>
             <dynamic_friction> 0.7 </dynamic_friction>
             <rolling_friction> 0.1 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 4100 </spring_coeff>
+            <spring_coeff unit="LBS/FT"> 3500 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 4280 </damping_coeff>
             <steerability> STEERABLE </steerability>
             <max_steer unit="DEG"> 360.0 </max_steer>
@@ -262,11 +262,11 @@ Hal V. Engel hvengel@astound.net
           
         Comment out the Jack stand section when not doing gear tests -->
 
-          <contact type="STRUCTURE" name="LEFT_WING_TIP">
+          <contact type="STRUCTURE" name="LEFT_WING_TIP_BOTTOM">
               <location unit="IN">
-              <x> 100 </x>
-              <y> -222 </y>
-              <z>  -7 </z>
+              <x> 103 </x>
+              <y> -217.5 </y>
+              <z>  -11.5 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -274,11 +274,59 @@ Hal V. Engel hvengel@astound.net
               <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
           </contact>
 
-            <contact type="STRUCTURE" name="RIGHT_WING_TIP">
+            <contact type="STRUCTURE" name="RIGHT_WING_TIP_BOTTOM">
               <location unit="IN">
-              <x> 100 </x>
-              <y> 222 </y>
-              <z>  -7 </z>
+              <x> 103 </x>
+              <y> 217.5 </y>
+              <z>  -11.5 </z>
+              </location>
+              <static_friction>  0.80 </static_friction>
+              <dynamic_friction> 0.50 </dynamic_friction>
+              <spring_coeff unit="LBS/FT">       11000 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
+          </contact>
+          
+          <contact type="STRUCTURE" name="LEFT_WING_TIP_TOP">
+              <location unit="IN">
+              <x> 103 </x>
+              <y> -217.5 </y>
+              <z>  -4.6 </z>
+              </location>
+              <static_friction>  0.80 </static_friction>
+              <dynamic_friction> 0.50 </dynamic_friction>
+              <spring_coeff unit="LBS/FT">       11000 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
+          </contact>
+
+          <contact type="STRUCTURE" name="RIGHT_WING_TIP_TOP">
+              <location unit="IN">
+              <x> 103 </x>
+              <y> 217.5 </y>
+              <z>  -4.6 </z>
+              </location>
+              <static_friction>  0.80 </static_friction>
+              <dynamic_friction> 0.50 </dynamic_friction>
+              <spring_coeff unit="LBS/FT">       11000 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
+          </contact>
+          
+                    <contact type="STRUCTURE" name="LEFT_WING_TIP_FRONT">
+              <location unit="IN">
+              <x> 84 </x>
+              <y> -222.5 </y>
+              <z>  -4.6 </z>
+              </location>
+              <static_friction>  0.80 </static_friction>
+              <dynamic_friction> 0.50 </dynamic_friction>
+              <spring_coeff unit="LBS/FT">       11000 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
+          </contact>
+
+          <contact type="STRUCTURE" name="RIGHT_WING_TIP_FRONT">
+              <location unit="IN">
+              <x> 84 </x>
+              <y> 222.5 </y>
+              <z>  -8 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -288,9 +336,9 @@ Hal V. Engel hvengel@astound.net
 
           <contact type="STRUCTURE" name="TAIL_BOTTOM">
               <location unit="IN">
-              <x> 300 </x>
+              <x> 327 </x>
               <y> 0 </y>
-              <z>  -25 </z>
+              <z>  -8.6 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -300,9 +348,9 @@ Hal V. Engel hvengel@astound.net
 
           <contact type="STRUCTURE" name="TAIL_TOP">
               <location unit="IN">
-              <x> 300 </x>
+              <x> 318 </x>
               <y> 0 </y>
-              <z>  50 </z>
+              <z>  65 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -312,9 +360,9 @@ Hal V. Engel hvengel@astound.net
 
           <contact type="STRUCTURE" name="NOSE_BOTTOM">
               <location unit="IN">
-              <x> 25 </x>
+              <x> 0 </x>
               <y> 0 </y>
-              <z>  -30 </z>
+              <z>  -25 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -324,9 +372,9 @@ Hal V. Engel hvengel@astound.net
 
           <contact type="STRUCTURE" name="NOSE_TOP">
               <location unit="IN">
-              <x> 15 </x>
+              <x> 0 </x>
               <y> 0 </y>
-              <z> 10 </z>
+              <z> 13 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -336,9 +384,9 @@ Hal V. Engel hvengel@astound.net
 
           <contact type="STRUCTURE" name="CANOPY">
               <location unit="IN">
-                <x> 110 </x>
+                <x> 133 </x>
                 <y> 0 </y>
-                <z> 30 </z>
+                <z> 34 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -348,9 +396,9 @@ Hal V. Engel hvengel@astound.net
             
            <contact type="STRUCTURE" name="BELLY">
               <location unit="IN">
-              <x> 85 </x>
+              <x> 52 </x>
               <y> 0 </y>
-              <z>  -27 </z>
+              <z>  -34 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -360,9 +408,9 @@ Hal V. Engel hvengel@astound.net
 
            <contact type="STRUCTURE" name="DOG_HOUSE">
               <location unit="IN">
-              <x> 185 </x>
+              <x> 143 </x>
               <y> 0 </y>
-              <z> -45 </z>
+              <z> -46 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
@@ -372,51 +420,63 @@ Hal V. Engel hvengel@astound.net
 
           <contact type="STRUCTURE" name="PROP_BOTTOM">
               <location unit="IN">
-              <x> 10 </x>
+              <x> -13.6 </x>
               <y> 0 </y>
-              <z> -67.5 </z>
+              <z> -70.4 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
-              <spring_coeff unit="LBS/FT">       50 </spring_coeff>
+              <spring_coeff unit="LBS/FT">       500 </spring_coeff>
               <damping_coeff unit="LBS/FT/SEC">  5000 </damping_coeff>
           </contact>
 
           <contact type="STRUCTURE" name="PROP_TOP">
               <location unit="IN">
-              <x> 10 </x>
+              <x> -17.7 </x>
               <y> 0 </y>
-              <z> -67.5 </z>
+              <z> 65.1 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
-              <spring_coeff unit="LBS/FT">       50 </spring_coeff>
+              <spring_coeff unit="LBS/FT">       500 </spring_coeff>
               <damping_coeff unit="LBS/FT/SEC">  5000 </damping_coeff>
           </contact>
 
           <contact type="STRUCTURE" name="PROP_LEFT">
               <location unit="IN">
-              <x> 10 </x>
-              <y> -67.5 </y>
-              <z> 0 </z>
+              <x> -15.5 </x>
+              <y> -67.76 </y>
+              <z> -3.4 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
-              <spring_coeff unit="LBS/FT">       50 </spring_coeff>
+              <spring_coeff unit="LBS/FT">       500 </spring_coeff>
               <damping_coeff unit="LBS/FT/SEC">  5000 </damping_coeff>
           </contact>
 
           <contact type="STRUCTURE" name="PROP_RIGHT">
               <location unit="IN">
-              <x> 10 </x>
-              <y> 67.5 </y>
-              <z> 0 </z>
+              <x> -15.5 </x>
+              <y> 67.76 </y>
+              <z> -3.4 </z>
               </location>
               <static_friction>  0.80 </static_friction>
               <dynamic_friction> 0.50 </dynamic_friction>
-              <spring_coeff unit="LBS/FT">       50 </spring_coeff>
-              <damping_coeff unit="LBS/FT/SEC">  5000 </damping_coeff>
+              <spring_coeff unit="LBS/FT">       500 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  5000 </damping_coeff>              
           </contact>
+          
+          <contact type="STRUCTURE" name="PROP_SPINNER">
+              <location unit="IN">
+              <x> -32.67 </x>
+              <y> 0 </y>
+              <z> -3.1265 </z>
+              </location>
+              <static_friction>  0.80 </static_friction>
+              <dynamic_friction> 0.50 </dynamic_friction>
+              <spring_coeff unit="LBS/FT">       5000 </spring_coeff>
+              <damping_coeff unit="LBS/FT/SEC">  5000 </damping_coeff>
+         </contact>
 
     </ground_reactions>
 
@@ -1786,7 +1846,10 @@ Hal V. Engel hvengel@astound.net
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
-                    <property>fcs/left-aileron-pos-rad</property>
+                    <sum>
+                       <property>fcs/left-aileron-pos-rad</property>
+                       <value>0.02</value>
+                    </sum>
                     <table>
                         <independentVar>velocities/mach</independentVar>
                         <tableData>

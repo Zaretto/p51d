@@ -14,13 +14,14 @@
 
  <!-- Pilot -->
  <model>
-   <path>Aircraft/p51d/Models/pilot.xml</path>
+   <!-- <path>Aircraft/p51d/Models/pilot.xml</path> -->
+   <path>Aircraft/Generic/Pilot/WWII/pilot.xml</path>
    <name>pilot</name>
    <nopreview/>
    <offsets>
-     <x-m>3.2704</x-m>
+     <x-m>2.99</x-m>
      <y-m>-0.0</y-m>
-     <z-m>-0.015</z-m>
+     <z-m>0.215</z-m>
    </offsets>
  </model>
  
@@ -28,12 +29,20 @@
  <model>
   <path>Aircraft/p51d/Models/prop.xml</path>
   <offsets>
-   <x-m>-0.85598</x-m>
+   <x-m>0</x-m>
    <y-m>0</y-m>
-   <z-m>-0.07</z-m>
+   <z-m>0</z-m>
   </offsets>
  </model>
  
+ <model>
+  <path>Aircraft/p51d/Models/propDisk.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model> 
 
  <animation>
    <type>select</type>
@@ -57,6 +66,7 @@
   </emission>
  </animation>
  
+ 
 <effect>
     <inherits-from>Aircraft/p51d/Models/Effects/bumpSpecFus</inherits-from>
     <object-name>cowl</object-name>
@@ -64,7 +74,6 @@
     <object-name>wingFilletRight</object-name>    
     <object-name>tailFaringLeft</object-name>
     <object-name>tailFaringRight</object-name>
-    <object-name>spinner</object-name>
     <object-name>tailWheelDoorRight</object-name>
     <object-name>tailWheelDoorLeft</object-name>
     <object-name>fuselage</object-name>
@@ -1565,17 +1574,33 @@
    <z2-m>0.786804</z2-m>
   </axis>
  </animation>
+ 
+  <animation>
+  <type>spin</type>
+  <object-name>mainWheelLeft</object-name>
+  <property>velocities/uBody-fps</property>
+  <factor>-1.5</factor>
+  <center>
+   <x-m>1.91262</x-m>
+   <y-m>-1.83774</y-m>
+   <z-m>-1.86667</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
 
  <animation>
   <type>spin</type>
-  <object-name>mainWheelLeft</object-name>
   <object-name>mainWheelRight</object-name>
   <property>velocities/uBody-fps</property>
   <factor>-1.5</factor>
   <center>
    <x-m>1.91262</x-m>
-   <y-m>0.0</y-m>
-   <z-m>-1.86</z-m>
+   <y-m>-1.83774</y-m>
+   <z-m>-1.86667</z-m>
   </center>
   <axis>
    <x>0.0</x>
