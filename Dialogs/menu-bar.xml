@@ -1,10 +1,32 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-
      <default>
+      <menu n="1100">
+          <label>Livery</label>
+          <enabled type="bool">true</enabled>
+          <item>
+             <label>Select Livery</label>
+             <binding>
+                 <command>nasal</command>
+                 <script>
+                     print("open livery dialog");
+                     aircraft.livery.dialog.open()
+                 </script>
+              </binding>
+          </item>
+       </menu>
        <menu n="1000">
           <label>P-51D</label>
+             <item>
+                <label>Pilot enable/disable always visible</label>
+                <binding>
+                 <command>property-cycle</command>
+                 <property>/fdm/jsbsim/systems/pilotAlwaysVisible</property>
+                 <value type="int">0</value>
+                 <value type="int">1</value>
+                </binding>
+             </item>
              <item>
                 <label>No External Stores</label>
                 <binding>

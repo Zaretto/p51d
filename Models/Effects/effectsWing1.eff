@@ -3,7 +3,7 @@
   <inherits-from>Effects/model-combined-deferred</inherits-from>
   <parameters>
   
-     <normalmap-enabled type="int">1</normalmap-enabled>
+     <normalmap-enabled type="int">0</normalmap-enabled>
      <normalmap-dds type="int">0</normalmap-dds>
      <texture n="2">
          <image>Aircraft/p51d/Models/Effects/textures/wing1Normals.png</image>
@@ -15,10 +15,10 @@
      
      <reflection-enabled type="int">1</reflection-enabled>
      <reflect-map-enabled type="int">1</reflect-map-enabled>
-     <reflection-correction type="float">0.25</reflection-correction>
+     <reflection-correction type="float">0.1</reflection-correction>
      <reflection-dynamic type="int">1</reflection-dynamic>
      <texture n="4">
-        <image>Aircraft/p51d/Models/Effects/textures/wingReflection.png</image>
+        <image>Aircraft/p51d/Models/Effects/textures/wing1ReflectionMap.png</image>
         <filter>linear-mipmap-linear</filter>
         <wrap-s>clamp</wrap-s>
         <wrap-t>clamp</wrap-t>
@@ -40,7 +40,7 @@
     <reflection-rainbow type="float">0.01</reflection-rainbow>
     <reflection-noise type="float">0.2</reflection-noise>
     <ambient-correction type="float">0.15</ambient-correction>
-    <dirt-enabled type="int">0</dirt-enabled>
+    <dirt-enabled type="int">1</dirt-enabled>
     <dirt-color type="vec3d">1.0 1.0 1.0</dirt-color>
     <dirt-factor type="float">0.1</dirt-factor>
   </parameters>

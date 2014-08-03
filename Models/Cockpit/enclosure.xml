@@ -44,11 +44,11 @@
    </entry>
    <entry>
     <ind>0.9</ind>
-    <dep>0.45</dep>
+    <dep>0.565</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
-    <dep>0.45</dep>
+    <dep>0.565</dep>
    </entry>
   </interpolation> 
   <axis>  
@@ -86,11 +86,11 @@
    </entry>
    <entry>
     <ind>0.9</ind>
-    <dep>-2.7</dep>
+    <dep>-3.2</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
-    <dep>-2.7</dep>
+    <dep>-3.2</dep>
    </entry>
   </interpolation>
   <axis>   
@@ -101,6 +101,15 @@
    <y2-m>-1.0</y2-m>
    <z2-m>0.3322224</z2-m>
   </axis>
+ </animation>
+ 
+ <animation>
+   <type>material</type>
+   <object-name>canopyLowerSkin</object-name>
+   <object-name>exteriorWindshieldBow</object-name>
+   <property-base>sim/model/livery</property-base>
+   <texture-prop>texture-enclosure</texture-prop>
+   <texture>../Liveries/DDenclosure.png</texture>
  </animation>
  
 <!-- <effect> 

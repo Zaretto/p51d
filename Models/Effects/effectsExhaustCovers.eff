@@ -18,7 +18,7 @@
      <reflection-correction type="float">0.9</reflection-correction>
      <reflection-dynamic type="int">1</reflection-dynamic>
      <texture n="4">
-        <image>Aircraft/p51d/Models/Effects/textures/fusReflection.png</image>
+        <image>Aircraft/p51d/Models/Effects/textures/wing2ReflectionMap.png</image>
         <filter>linear-mipmap-linear</filter>
         <wrap-s>clamp</wrap-s>
         <wrap-t>clamp</wrap-t>

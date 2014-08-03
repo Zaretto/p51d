@@ -13,7 +13,7 @@
      
      <reflection-enabled type="int">1</reflection-enabled>
      <reflect-map-enabled type="int">1</reflect-map-enabled>
-     <reflection-correction type="float">0.005</reflection-correction>
+     <reflection-correction type="float">0.01</reflection-correction>
      <reflection-dynamic type="int">1</reflection-dynamic>
      <texture n="4">
         <image>Aircraft/p51d/Models/Effects/textures/enclosureReflection.png</image>

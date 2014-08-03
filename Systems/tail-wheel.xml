@@ -9,7 +9,7 @@
     <switch name="systems/gear/tail-wheel-stick-forward">
         <default value="1"/>
         <test value="0">
-            fcs/elevator-cmd-norm GE 0.45
+            fcs/elevator-cmd-norm GE 0.49
         </test>
         <output>fcs/tail-wheel-lock-cmd-norm</output>
     </switch>

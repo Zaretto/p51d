@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+ 
+ <PropertyList>
+  <sim>
+   <model>
+    <livery>
+     <name type="string">Delivery Day - March 1944</name>
+     <texture-fuselage>Liveries/DDfuselage.png</texture-fuselage>
+     <texture-wing1>Liveries/DDwing1.png</texture-wing1>
+     <texture-wing2>Liveries/DDwing2.png</texture-wing2>
+     <texture-spinner>Liveries/DDspinner.png</texture-spinner>
+     <texture-spinner2>Liveries/DDspinner2.png</texture-spinner2>
+     <texture-enclosure>../Liveries/DDenclosure.png</texture-enclosure>
+    </livery>
+   </model>
+  </sim>
+ </PropertyList>

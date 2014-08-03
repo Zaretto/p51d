@@ -15,7 +15,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 
  <sim>
 
-  <description>North American Aviation P-51D-25NA</description>
+  <description>North American Aviation P-51D-25-NA</description>
   <author>Jim Wilson, Jon Berndt and Hal V. Engel</author>
   <status>production</status>
   <rating>
@@ -59,6 +59,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 
   <model>
    <path>Aircraft/p51d/Models/p51d-jw-jsbsim.xml</path>
+   <livery>
+     <file type="string">DD</file>
+   </livery>
   </model> 
 
   <view n="0">
@@ -307,8 +310,9 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
     </redout>
   </rendering>
 
-   <menubar include="Dialogs/menu-bar.xml" />
+ <menubar include="Dialogs/menu-bar.xml" />
    <checklists include="Checklists/p51d-checklists.xml"/>
+
  </sim>
 
  <instrumentation>
@@ -530,6 +534,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
  <fdm>
    <jsbsim>
       <systems>
+        <pilotAlwaysVisible type="int">0</pilotAlwaysVisible>
         <compressibility>
            <hertz type="float">0.0</hertz>
            <strength type="float">0.0</strength>
@@ -649,6 +654,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <file>Aircraft/p51d/Nasal/climbrate.nas</file>
       <file>Aircraft/p51d/Nasal/gear-doors.nas</file>
       <file>Aircraft/p51d/Nasal/gear-lever.nas</file>
+      <file>Aircraft/p51d/Nasal/liveries.nas</file>
     </p51d>
     <SCR_522C>
       <file>Aircraft/Instruments-3d/SCR-522C/Nasal/SCR-522C.nas</file>

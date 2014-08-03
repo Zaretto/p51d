@@ -13,12 +13,12 @@
          <internal-format>normalized</internal-format>
      </texture>   
      
-     <reflection-enabled type="int">0</reflection-enabled>
+     <reflection-enabled type="int">1</reflection-enabled>
      <reflect-map-enabled type="int">1</reflect-map-enabled>
-     <reflection-correction type="float">0.5</reflection-correction>
+     <reflection-correction type="float">0.00000000002</reflection-correction>
      <reflection-dynamic type="int">1</reflection-dynamic>
      <texture n="4">
-        <image>Aircraft/p51d/Models/Effects/textures/wingReflection.png</image>
+        <image>Aircraft/p51d/Models/Effects/textures/wing1ReflectionMap.png</image>
         <filter>linear-mipmap-linear</filter>
         <wrap-s>clamp</wrap-s>
         <wrap-t>clamp</wrap-t>

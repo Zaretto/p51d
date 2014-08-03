@@ -96,9 +96,9 @@
   <name>THROTTLE</name>
   <path>Aircraft/p51d/Models/Cockpit/Throttle/throttle.xml</path>
   <offsets>
-   <x-m>2.79</x-m>
+   <x-m>2.8542</x-m>
    <y-m>-0.32</y-m>
-   <z-m>0.125</z-m>
+   <z-m>0.115</z-m>
   </offsets>
  </model>
 
@@ -182,7 +182,7 @@
   <name>STICK_LOCK</name>
   <path>Aircraft/p51d/Models/Cockpit/StickLock/sticklock.xml</path>
   <offsets>
-   <x-m>-1.06</x-m>
+   <x-m>-1.02</x-m>
    <y-m>0</y-m>
    <z-m>-0.096</z-m>
   </offsets>

@@ -5,6 +5,19 @@
 <PropertyList include="p51d-bombableinclude.xml">
 
  <path>P-51D-25NA.ac</path>
+ 
+  <nasal>
+    <load>
+      var self = cmdarg();
+	  print("LOAD P-51D-25NA ", self.getPath());
+      var livery_update = aircraft.livery_update.new("Aircraft/p51d/Models/Liveries", 10);
+    </load>
+ 
+    <unload>
+      print("UNLOAD P-51D-25NA ", self.getPath());
+      livery_update.stop();
+    </unload>
+ </nasal>
 
      <animation>
         <type>range</type>
@@ -14,8 +27,7 @@
 
  <!-- Pilot -->
  <model>
-   <!-- <path>Aircraft/p51d/Models/pilot.xml</path> -->
-   <path>Aircraft/Generic/Pilot/WWII/pilot.xml</path>
+   <path>Aircraft/p51d/Models/pilot/pilotWWII.xml</path>
    <name>pilot</name>
    <nopreview/>
    <offsets>
@@ -48,12 +60,18 @@
    <type>select</type>
    <object-name>pilot</object-name>
    <condition>
-     <greater-than>
-       <property>sim/current-view/view-number</property>
-       <value>0.0</value>
-     </greater-than>
+   <or>
+       <greater-than>
+         <property>sim/current-view/view-number</property>
+         <value>0.0</value>
+       </greater-than>
+       <greater-than>
+         <property>/fdm/jsbsim/systems/pilotAlwaysVisible</property>
+         <value>0.0</value>
+       </greater-than>
+     </or>
    </condition>
- </animation>
+ </animation> 
 
  <animation>
   <type>material</type>
@@ -79,7 +97,8 @@
     <object-name>fuselage</object-name>
     <object-name>dogHouse</object-name>
     <object-name>coolingDoor</object-name>
-    <object-name>oilCoolerDoor</object-name>
+    <object-name>oilCoolerDoor</object-name>    
+    <object-name>rudderTrimTab</object-name>
 </effect>
 
 <effect>
@@ -88,6 +107,31 @@
     <object-name>elevator</object-name>
     <object-name>VerticalStab</object-name>
     <object-name>dorsal</object-name>
+    <object-name>wingLeft</object-name>
+    <object-name>aileronLeft</object-name>
+    <object-name>flapsLeft</object-name>
+    <object-name>aileronTrimTabLeft</object-name>
+    <object-name>upperStrutLeft</object-name>
+    <object-name>upperScissorsLeft</object-name>
+    <object-name>lowerScissorsLeft</object-name>
+    <object-name>forwardGearDoorLinkLeft</object-name>
+    <object-name>forwardGearDoorEyeBoltLeft</object-name>
+    <object-name>rearGearDoorLinkLeft</object-name>
+    <object-name>rearGearDoorEyeBoltLeft</object-name>
+    <object-name>lowerStrutLeft</object-name>    
+    <object-name>upperStrutRight</object-name>
+    <object-name>upperScissorsRight</object-name>
+    <object-name>lowerScissorsRight</object-name>
+    <object-name>forwardGearDoorLinkRight</object-name>
+    <object-name>forwardGearDoorEyeBoltRight</object-name>
+    <object-name>rearGearDoorLinkRight</object-name>
+    <object-name>rearGearDoorEyeBoltRight</object-name>
+    <object-name>lowerStrutRight</object-name>
+    <object-name>elevatorTrimTabLeft</object-name>
+    <object-name>elevatorTrimTabRight</object-name>
+    <object-name>centerWingFairing</object-name>
+    <object-name>innerGearDoorLeft</object-name>
+    <object-name>outerDoorLeft</object-name>
 </effect>
 
 <effect>
@@ -100,6 +144,19 @@
     <inherits-from>Aircraft/p51d/Models/Effects/effectsExhaustCovers</inherits-from>
     <object-name>exhaustCoverLeft</object-name>
     <object-name>exhaustCoverRight</object-name>
+</effect>
+
+<effect>
+    <inherits-from>Aircraft/p51d/Models/Effects/effectsWing2</inherits-from>
+    <object-name>wingRight</object-name>
+    <object-name>aileronRight</object-name>
+    <object-name>flapsRight</object-name>
+    <object-name>innerGearDoorRight</object-name>
+    <object-name>outerDoorRight</object-name>
+    <object-name>gunBastTubeFairingRight</object-name>
+    <object-name>wingTipLightBodyRight</object-name>
+    <object-name>aileronTrimTabRight</object-name>
+    <object-name>gunBastTubeFairingLeft</object-name>
 </effect>
 
 <model>
@@ -1071,7 +1128,7 @@
   <object-name>elevator</object-name>
   <object-name>elevatorTrimTabLeft</object-name>
   <object-name>elevatorTrimTabRight</object-name>
-  <object-name>elevatorTrimTabRodLeft</object-name>
+  <object-name>elevatorTrimTabRodleft</object-name>
   <object-name>elevatorTrimTabRodRight</object-name>
   <property>/fdm/jsbsim/fcs/elevator-pos-norm-animation</property>
   <factor>-1.0</factor>
@@ -1278,24 +1335,6 @@
   </condition>
  </animation>
 
- <!--
- <animation>
-  <name>BeaconFlasher</name>
-  <type>timed</type>
-  <object-name>BeaconOff</object-name>
-  <object-name>BeaconOn</object-name>
-  <duration-sec>1.0</duration-sec>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>BeaconFlasher</object-name>
-  <condition>
-    <property>controls/lighting/beacon</property>
-  </condition>
- </animation>
- -->
- 
 <animation>
   <type>translate</type>
   <object-name>tailWheel</object-name>
@@ -1793,7 +1832,64 @@
       <pitch-deg> 180 </pitch-deg>
    </offsets>
  </model>  
+ 
+ <animation>
+  <type>material</type>
+   <object-name>wingRight</object-name>
+   <object-name>flapsRight</object-name>
+   <object-name>aileronRight</object-name>
+   <object-name>aileronTrimTabRight</object-name>
+   <object-name>innerGearDoorRight</object-name>
+   <object-name>outerDoorRight</object-name>
+   <object-name>AN-104A</object-name>
+   <object-name>gunBastTubeFairingRight</object-name>
+   <object-name>gunBastTubeFairingLeft</object-name>
+   <property-base>sim/model/livery</property-base>
+   <texture-prop>texture-wing1</texture-prop>
+   <texture>Liveries/DDwing1.png</texture>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+   <object-name>wingLeft</object-name>
+   <object-name>flapsLeft</object-name>
+   <object-name>aileronLeft</object-name>
+   <object-name>aileronTrimTabLeft</object-name>
+   <object-name>innerGearDoorLeft</object-name>
+   <object-name>outerDoorLeft</object-name>
+   <object-name>tailLightfixture</object-name>
+   <object-name>rudder</object-name>
+   <object-name>rudderTrimTab</object-name>
+   <object-name>rudderTrimLinkageFairing</object-name>
+   <object-name>elevatorTrimTabLeft</object-name>   
+   <object-name>elevatorTrimTabRight</object-name>
+   <object-name>elevator</object-name>
+   <object-name>horizontalStabilizer</object-name>
+   <object-name>VerticalStab</object-name>
+   <object-name>dorsal</object-name>
+   <property-base>sim/model/livery</property-base>
+   <texture-prop>texture-wing2</texture-prop>
+   <texture>Liveries/DDwing2.png</texture>
+ </animation>
   
+ <animation>
+  <type>material</type>
+   <object-name>fuselage</object-name>
+   <object-name>wingFilletLeft</object-name>
+   <object-name>wingFilletRight</object-name>
+   <object-name>cowl</object-name>
+   <object-name>tailWheelDoorLeft</object-name>
+   <object-name>tailWheelDoorRight</object-name>
+   <object-name>coolingDoor</object-name>
+   <object-name>oilCoolerDoor</object-name>
+   <object-name>tailFaringLeft</object-name>
+   <object-name>tailFaringRight</object-name>
+   <object-name>dogHouse</object-name>
+   <property-base>sim/model/livery</property-base>
+   <texture-prop>texture-fuselage</texture-prop>
+   <texture>Liveries/DDfuselage.png</texture>
+ </animation>
+ 
  <!-- rain animations -->
 
 <!--    <animation>

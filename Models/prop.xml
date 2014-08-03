@@ -59,6 +59,15 @@
       </entry>
    </interpolation>
  </animation>
+ 
+  
+ <animation>
+  <type>material</type>
+   <object-name>spinner</object-name>
+   <property-base>sim/model/livery</property-base>
+   <texture-prop>texture-spinner</texture-prop>
+   <texture>Liveries/DDspinner.png</texture>
+ </animation>
 
  <effect>
     <inherits-from>Aircraft/p51d/Models/Effects/spinner</inherits-from>

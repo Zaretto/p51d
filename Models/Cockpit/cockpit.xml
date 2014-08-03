@@ -54,7 +54,7 @@
   <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
-   <x-m>2.88042</x-m>
+   <x-m>2.90042</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
@@ -71,7 +71,7 @@
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
-   <x-m>2.88042</x-m>
+   <x-m>2.90042</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
@@ -88,7 +88,7 @@
   <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
-   <x-m>2.88042</x-m>
+   <x-m>2.90042</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
@@ -105,7 +105,7 @@
   <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
-   <x-m>2.88042</x-m>
+   <x-m>2.90042</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
@@ -122,7 +122,7 @@
   <property>controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
-   <x-m>2.88042</x-m>
+   <x-m>2.90042</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
@@ -139,7 +139,7 @@
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
-   <x-m>2.88042</x-m>
+   <x-m>2.90042</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
@@ -156,7 +156,7 @@
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
-   <x-m>2.88042</x-m>
+   <x-m>2.90042</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
@@ -173,7 +173,7 @@
   <property>controls/flight/aileron</property>
   <factor>-10</factor>
   <center>
-   <x-m>2.8819</x-m>
+   <x-m>2.9019</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
@@ -188,7 +188,7 @@
   <type>translate</type>
   <object-name>LeftRudderPedal</object-name>
   <property>controls/flight/rudder</property>
-  <factor>0.06</factor>
+  <factor>0.04</factor>
   <axis>
    <x>1</x>
    <y>0</y>
@@ -200,7 +200,7 @@
   <type>rotate</type>
   <object-name>LeftRudderPedal</object-name>
   <property>controls/gear/brake-left</property>
-  <factor>-15.0</factor>
+  <factor>-5.0</factor>
   <axis>
    <x>0</x>
    <y>1</y>
@@ -217,7 +217,7 @@
   <type>translate</type>
   <object-name>RightRudderPedal</object-name>
   <property>controls/flight/rudder</property>
-  <factor>-0.06</factor>
+  <factor>-0.04</factor>
   <axis>
    <x>1</x>
    <y>0</y>
@@ -229,7 +229,7 @@
   <type>rotate</type>
   <object-name>RightRudderPedal</object-name>
   <property>controls/gear/brake-right</property>
-  <factor>-15.0</factor>
+  <factor>-5.0</factor>
   <axis>
    <x>0</x>
    <y>1</y>
@@ -246,7 +246,7 @@
   <type>rotate</type>
   <object-name>RightRudderCarage</object-name>
   <property>controls/flight/rudder</property>
-  <factor>13.45</factor>
+  <factor>8.45</factor>
   <axis>
    <x>0</x>
    <y>1</y>
@@ -263,7 +263,7 @@
   <type>rotate</type>
   <object-name>LeftRudderCarage</object-name>
   <property>controls/flight/rudder</property>
-  <factor>-13.45</factor>
+  <factor>-8.45</factor>
   <axis>
    <x>0</x>
    <y>1</y>
