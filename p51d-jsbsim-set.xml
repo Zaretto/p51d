@@ -309,6 +309,10 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
        </parameters>
     </redout>
   </rendering>
+  
+  <signals>
+    <fdm-initialized type="int">0</fdm-initialized>
+  </signals>
 
  <menubar include="Dialogs/menu-bar.xml" />
    <checklists include="Checklists/p51d-checklists.xml"/>
@@ -364,7 +368,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
  </input>
 
 <!-- initialize control properties -->
- <controls>
+ <controls>   
    <engines>
       <engine n="0">
         <magnetos type="int">0</magnetos>
@@ -397,6 +401,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
    </anti-ice>
    <canopy>
       <open type="float">1.0</open>
+      <open-command type="float">1.0</open-command>
    </canopy>
    <fuel>
       <on>0</on>
@@ -530,6 +535,26 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <flaps type="float">1.0</flaps>
    </flight>   
  </controls>
+ 
+ <consumables>
+   <fuel>
+      <tank n="0">
+         <name>Main Left Wing</name>
+      </tank>
+      <tank n="1">
+         <name>Main Right Wing</name>
+      </tank>
+      <tank n="2">
+         <name>Fuselage</name>
+      </tank>
+      <tank n="3">
+         <name>Combat Tank Left</name>
+      </tank>
+      <tank n="4">
+         <name>Combat Tank Right</name>
+      </tank>
+   </fuel>
+ </consumables>
  
  <fdm>
    <jsbsim>
