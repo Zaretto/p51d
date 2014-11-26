@@ -22,7 +22,7 @@
      <animation>
         <type>range</type>
         <min-m>0</min-m>
-        <max-property>sim/rendering/static-lod/bare</max-property>
+        <max-m>30000</max-m>
     </animation>
 
  <!-- Pilot -->
@@ -62,13 +62,18 @@
    <condition>
    <or>
        <greater-than>
-         <property>sim/current-view/view-number</property>
+         <property>/sim/current-view/view-number</property>
          <value>0.0</value>
        </greater-than>
        <greater-than>
          <property>/fdm/jsbsim/systems/pilotAlwaysVisible</property>
          <value>0.0</value>
        </greater-than>
+       <!-- so the pilot is always visible on multiplayer -->
+       <not-equals>
+         <property>/sim/aircraft</property>
+         <value>p51d-jsbsim</value>
+       </not-equals>           
      </or>
    </condition>
  </animation> 
@@ -470,7 +475,7 @@
  <animation>
   <type>rotate</type>
   <object-name>innerGearDoorLeft</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -495,7 +500,7 @@
   <type>rotate</type>
   <object-name>GearDoorHydralicBodyLeft</object-name>
   <object-name>GearDoorHydralicArmLeft</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -520,7 +525,8 @@
   <type>rotate</type>
   <object-name>GearDoorHydralicBodyLeft</object-name>
   <object-name>GearDoorHydralicArmLeft</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <property>sim/multiplay/generic/float[0]</property>
+  <!-- <property>/fdm/jsbsim/systems/gear/inner-doors</property> -->
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -560,7 +566,7 @@
   <animation>
   <type>translate</type>
   <object-name>GearDoorHydralicArmLeft</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -767,7 +773,7 @@
  <animation>
   <type>rotate</type>
   <object-name>innerGearDoorRight</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -792,7 +798,7 @@
   <type>rotate</type>
   <object-name>GearDoorHydralicBodyRight</object-name>
   <object-name>GearDoorHydralicArmRight</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -817,7 +823,7 @@
   <type>rotate</type>
   <object-name>GearDoorHydralicBodyRight</object-name>
   <object-name>GearDoorHydralicArmRight</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -857,7 +863,7 @@
   <animation>
   <type>translate</type>
   <object-name>GearDoorHydralicArmRight</object-name>
-  <property>/fdm/jsbsim/systems/gear/inner-doors</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -1042,8 +1048,8 @@
   <object-name>aileronRight</object-name>
   <object-name>aileronTrimTabRight</object-name>
   <object-name>aileronTrimTabLinkageRight</object-name>
-  <property>/fdm/jsbsim/fcs/right-aileron-pos-norm-animation</property>>
-  <factor>0.5</factor>
+  <property>surface-positions/right-aileron-pos-norm</property>>
+  <factor>10</factor>
   <axis>   
    <x1-m>3.37</x1-m>
    <y1-m>3.317</y1-m>
@@ -1059,8 +1065,8 @@
   <object-name>aileronLeft</object-name>
   <object-name>aileronTrimTabLeft</object-name>
   <object-name>aileronTrimTabLinkageLeft</object-name>
-  <property>/fdm/jsbsim/fcs/left-aileron-pos-norm-animation</property>
-  <factor>-0.5</factor>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-10</factor>
   <axis>   
    <x1-m>3.37</x1-m>
    <y1-m>-3.317</y1-m>
@@ -1090,7 +1096,7 @@
   <animation>
   <type>rotate</type>
   <object-name>aileronTrimTabLinkageLeft</object-name>
-  <property>/controls/flight/aileron-trim</property>
+  <property>controls/flight/aileron-trim</property>
   <factor>7.0</factor>
   <axis>   
    <x1-m>3.5804</x1-m>
@@ -1111,8 +1117,8 @@
   <object-name>rudderTrimLinkageFairing</object-name>
   <object-name>rudderTrimTabHorn</object-name>
   <object-name>rudderTrimTabRod</object-name>
-  <property>/fdm/jsbsim/fcs/rudder-pos-norm-animation</property>
-  <factor>1.0</factor>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-30.0</factor>
   <axis>   
    <x1-m>8.32</x1-m>
    <y1-m>0</y1-m>
@@ -1130,8 +1136,8 @@
   <object-name>elevatorTrimTabRight</object-name>
   <object-name>elevatorTrimTabRodleft</object-name>
   <object-name>elevatorTrimTabRodRight</object-name>
-  <property>/fdm/jsbsim/fcs/elevator-pos-norm-animation</property>
-  <factor>-1.0</factor>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>-30.0</factor>
   <axis>   
    <x1-m>7.82</x1-m>
    <y1-m>2</y1-m>
@@ -1145,7 +1151,7 @@
  <animation>
   <type>rotate</type>
   <object-name>coolingDoor</object-name>
-  <property>fdm/jsbsim/systems/cooling/radiator-door-pos</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <factor>-20.0</factor>
   <axis>   
    <x1-m>5.2255</x1-m>
@@ -1160,7 +1166,7 @@
   <animation>
   <type>translate</type>
   <object-name>coolingDoorActuatorRod</object-name>
-  <property>fdm/jsbsim/systems/cooling/radiator-door-pos</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -1188,7 +1194,7 @@
  <animation>
   <type>rotate</type>
   <object-name>oilCoolerDoor</object-name>
-  <property>fdm/jsbsim/systems/cooling/oil-door-pos</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <factor>-18.0</factor>
   <axis>   
    <x1-m>4.3892</x1-m>
@@ -1210,7 +1216,7 @@
   </emission>
   <condition>
      <equals>
-        <property>controls/lighting/wing-position-lights</property>
+        <property>sim/multiplay/generic/float[6]</property>
         <value>1</value>
      </equals>
   </condition>
@@ -1226,7 +1232,7 @@
   </emission>
   <condition>
     <equals>
-        <property>controls/lighting/wing-position-lights</property>
+        <property>sim/multiplay/generic/float[6]</property>
         <value>1</value>
      </equals>
   </condition>
@@ -1242,7 +1248,7 @@
   </emission>
   <condition>
      <equals>
-        <property>controls/lighting/wing-position-lights</property>
+        <property>sim/multiplay/generic/float[6]</property>
         <value>2</value>
      </equals>
   </condition>
@@ -1258,7 +1264,7 @@
   </emission>
   <condition>
      <equals>
-        <property>controls/lighting/wing-position-lights</property>
+        <property>sim/multiplay/generic/float[6]</property>
         <value>2</value>
      </equals>
   </condition>
@@ -1273,7 +1279,7 @@
     <blue>0.0</blue>
   </emission>
   <condition>
-     <property>controls/lighting/red-rec-light</property>
+     <property>sim/multiplay/generic/float[8]</property>
   </condition>
  </animation>
 
@@ -1286,7 +1292,7 @@
     <blue>0.0</blue>
   </emission>
   <condition>
-     <property>controls/lighting/green-rec-light</property>
+     <property>sim/multiplay/generic/float[9]</property>
   </condition>
  </animation>
 
@@ -1299,7 +1305,7 @@
     <blue>0.0</blue>
   </emission>
   <condition>
-     <property>controls/lighting/amber-rec-light</property>
+     <property>sim/multiplay/generic/float[10]</property>
   </condition>
  </animation>
 
@@ -1313,7 +1319,7 @@
   </emission>
   <condition>
      <equals>
-        <property>controls/lighting/tail-position-lights</property>
+        <property>sim/multiplay/generic/float[7]</property>
         <value>1</value>
      </equals>
   </condition>
@@ -1329,7 +1335,7 @@
   </emission>
   <condition>
      <equals>
-        <property>controls/lighting/tail-position-lights</property>
+        <property>sim/multiplay/generic/float[7]</property>
         <value>2</value>
      </equals>
   </condition>
@@ -1458,7 +1464,7 @@
   <type>rotate</type>
   <object-name>tailWheel</object-name>
   <object-name>tailWheelKnuckle</object-name>
-  <property>/fdm/jsbsim/gear/unit[2]/steering-angle-deg</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <factor>1</factor>
   <axis>   
    <x1-m>6.71027</x1-m>

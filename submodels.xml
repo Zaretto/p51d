@@ -11,11 +11,11 @@
   <submodel>
     <name>left-gun1-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
-    <count>0</count>
+    <count>500</count>
     <x-offset> 6.27799 </x-offset>
     <y-offset>-6.59178</y-offset>
     <z-offset> -1.75215</z-offset>
@@ -36,7 +36,7 @@
     <submodel>
     <name>right-gun1-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model> 
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -62,7 +62,7 @@
   <submodel>
     <name>left-gun2-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -87,7 +87,7 @@
   <submodel>
     <name>right-gun2-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -112,7 +112,7 @@
   <submodel>
     <name>left-gun3-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -137,7 +137,7 @@
   <submodel>
     <name>right-gun3-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -162,7 +162,7 @@
   <submodel>
     <name>left-gun1-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.048</delay>
@@ -187,7 +187,7 @@
  <submodel>
     <name>right-gun1-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.048</delay>
@@ -212,7 +212,7 @@
   <submodel>
     <name>left-gun2-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.048</delay>
@@ -237,7 +237,7 @@
   <submodel>
     <name>right-gun2-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.048</delay>
@@ -262,7 +262,7 @@
   <submodel>
     <name>left-gun3-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.048</delay>
@@ -287,7 +287,7 @@
   <submodel>
     <name>right-gun3-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>controls/armament/gun-trigger</trigger>
+    <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.048</delay>

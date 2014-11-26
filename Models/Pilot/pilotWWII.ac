@@ -8,7 +8,7 @@ name "Body"
 loc 0 0 -0
 data 4
 Body
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 355
@@ -3188,7 +3188,7 @@ name "Head"
 loc 0 0 -0
 data 4
 Head
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 1088
@@ -16213,7 +16213,7 @@ name "LeftFoot"
 loc 0.039573 0.013856 -0.016401
 data 8
 LeftFoot
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 51
@@ -16731,7 +16731,7 @@ name "LeftHand"
 loc 0.110431 -0.063706 0.050769
 data 8
 LeftHand
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 141
@@ -18503,7 +18503,7 @@ name "LeftLowerArm"
 loc 0.059802 -0.079613 0.049313
 data 12
 LeftLowerArm
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 42
@@ -18964,7 +18964,7 @@ name "LeftLowerLeg"
 loc 0.039481 0.014708 -0.012555
 data 12
 LeftLowerLeg
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 112
@@ -20263,7 +20263,7 @@ name "LeftUpperArm"
 loc 0.136706 -0.178841 0.021946
 data 12
 LeftUpperArm
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 32
@@ -20606,7 +20606,7 @@ name "LeftUpperLeg"
 loc -0.001826 -0.011549 -0.012132
 data 12
 LeftUpperLeg
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 30
@@ -20923,7 +20923,7 @@ name "RightFoot"
 loc -0.004859 -0.015575 0.010742
 data 9
 RightFoot
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 51
@@ -21441,7 +21441,7 @@ name "RightHand"
 loc 0.039157 0.07173 -0.131411
 data 9
 RightHand
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 141
@@ -23213,7 +23213,7 @@ name "RightLowerArm"
 loc 0.113517 -0.115905 0.10687
 data 13
 RightLowerArm
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 42
@@ -23674,7 +23674,7 @@ name "RightLowerLeg"
 loc -0.004859 -0.015575 0.010742
 data 13
 RightLowerLeg
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 112
@@ -24973,7 +24973,7 @@ name "RightUpperArm"
 loc 0.108817 -0.082001 0.094987
 data 13
 RightUpperArm
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 32
@@ -25316,7 +25316,7 @@ name "RightUpperLeg"
 loc -0.004859 -0.015575 0.010742
 data 13
 RightUpperLeg
-texture "..\..\..\Generic\Pilot\WWII\default.png"
+texture "pilotWWII.png"
 texrep 1.000000 1.000000
 crease 30.000001
 numvert 30

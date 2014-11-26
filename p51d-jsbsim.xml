@@ -586,6 +586,7 @@ Hal V. Engel hvengel@astound.net
     <system file="weapons-weight"/>
     <system file="tail-wheel"/>
     <system file="hydraulic"/>
+    <system file="mpanimation"/>
 
     <flight_control name="FCS: P51D">
 
@@ -686,7 +687,7 @@ Hal V. Engel hvengel@astound.net
                  </product>
                 </sum>
                 </function>
-                <output>fcs/elevator-pos-norm-animation</output>
+                <output>/surface-positions/elevator-pos-norm</output>
             </fcs_function>
 			
 	<fcs_function name="aero/pitch-moment-damping-factor">
@@ -903,7 +904,7 @@ Hal V. Engel hvengel@astound.net
                  </product>
                 </sum>
                 </function>
-                <output>fcs/right-aileron-pos-norm-animation</output>
+                <output>/surface-positions/right-aileron-pos-norm</output>
             </fcs_function>
             
          <fcs_function name="Aileron Position Animation Left">
@@ -920,7 +921,7 @@ Hal V. Engel hvengel@astound.net
                  </product>
                 </sum>
                 </function>
-                <output>fcs/left-aileron-pos-norm-animation</output>
+                <output>/surface-positions/left-aileron-pos-norm</output>
             </fcs_function>
 
         </channel>
@@ -979,7 +980,7 @@ Hal V. Engel hvengel@astound.net
                  </product>
                 </sum>
                 </function>
-                <output>fcs/rudder-pos-norm-animation</output>
+                <output>/surface-positions/rudder-pos-norm</output>
             </fcs_function>
 
         </channel>

@@ -126,7 +126,7 @@
   <type>select</type>
   <object-name>HVAR1.left</object-name>
   <condition>
-      <property>ai/submodels/submodel[12]/count</property>
+      <property>sim/multiplay/generic/int[4]</property>
    </condition>
  </animation>
  
@@ -134,7 +134,7 @@
   <type>select</type>
   <object-name>HVAR2.left</object-name>
   <condition>
-     <property>ai/submodels/submodel[14]/count</property>
+     <property>sim/multiplay/generic/int[6]</property>
    </condition>
  </animation>
  
@@ -142,7 +142,7 @@
   <type>select</type>
   <object-name>HVAR3.left</object-name>
   <condition>
-    <property>ai/submodels/submodel[16]/count</property>
+    <property>sim/multiplay/generic/int[8]</property>
   </condition>
  </animation>
  
@@ -150,7 +150,7 @@
   <type>select</type>
   <object-name>HVAR4.left</object-name>
   <condition>
-     <property>ai/submodels/submodel[18]/count</property>
+     <property>sim/multiplay/generic/int[10]</property>
   </condition>
  </animation>
  
@@ -158,7 +158,7 @@
   <type>select</type>
   <object-name>HVAR5.left</object-name>
   <condition>
-     <property>ai/submodels/submodel[20]/count</property>
+     <property>sim/multiplay/generic/int[12]</property>
   </condition>
  </animation>
  
@@ -166,7 +166,7 @@
   <type>select</type>
   <object-name>HVAR1.right</object-name>
   <condition>
-    <property>ai/submodels/submodel[13]/count</property>
+    <property>sim/multiplay/generic/int[5]</property>
   </condition>
  </animation>
  
@@ -174,7 +174,7 @@
   <type>select</type>
   <object-name>HVAR2.right</object-name>
   <condition>
-    <property>ai/submodels/submodel[15]/count</property>
+    <property>sim/multiplay/generic/int[7]</property>
   </condition>
  </animation>
 
@@ -182,7 +182,7 @@
   <type>select</type>
   <object-name>HVAR3.right</object-name>
   <condition>
-    <property>ai/submodels/submodel[17]/count</property>
+    <property>sim/multiplay/generic/int[9]</property>
   </condition>
  </animation>
 
@@ -190,7 +190,7 @@
   <type>select</type>
   <object-name>HVAR4.right</object-name>
   <condition>
-     <property>ai/submodels/submodel[19]/count</property>
+     <property>sim/multiplay/generic/int[11]</property>
   </condition>
  </animation>
  
@@ -198,7 +198,7 @@
   <type>select</type>
   <object-name>HVAR5.right</object-name>
   <condition>
-       <property>ai/submodels/submodel[21]/count</property>
+       <property>sim/multiplay/generic/int[13]</property>
   </condition>
  </animation>
 
@@ -217,7 +217,7 @@
   <type>select</type>
   <object-name>bomb.left</object-name>
   <condition>
-    <property>ai/submodels/submodel[22]/count</property>
+    <property>sim/multiplay/generic/int[14]</property>
   </condition>
  </animation>
  
@@ -236,7 +236,7 @@
   <type>select</type>
   <object-name>bomb.right</object-name>
   <condition>
-    <property>ai/submodels/submodel[23]/count</property>
+    <property>sim/multiplay/generic/int[15]</property>
   </condition>
  </animation>
  
@@ -255,7 +255,7 @@
   <type>select</type>
   <object-name>drop-tanks-left-75G</object-name>
   <condition>
-    <property>ai/submodels/submodel[24]/count</property>
+    <property>sim/multiplay/generic/int[16]</property>
   </condition>
  </animation>
  
@@ -274,7 +274,7 @@
   <type>select</type>
   <object-name>drop-tanks-right-75G</object-name>
   <condition>
-    <property>ai/submodels/submodel[25]/count</property>
+    <property>sim/multiplay/generic/int[17]</property>
   </condition>
  </animation>
  
@@ -294,7 +294,7 @@
   <type>select</type>
   <object-name>LBombRack</object-name>
   <condition>
-      <property>/fdm/jsbsim/systems/armament/bomb-pylons</property>
+      <property>sim/multiplay/generic/int[18]</property>
   </condition>
  </animation>
  
@@ -313,7 +313,7 @@
   <type>select</type>
   <object-name>RBombRack</object-name>
   <condition>
-      <property>/fdm/jsbsim/systems/armament/bomb-pylons</property>
+      <property>sim/multiplay/generic/int[18]</property>
   </condition>
  </animation>
 
@@ -446,7 +446,7 @@
     <object-name>frontHVARMount2.left</object-name>
     <object-name>frontHVARMount3.left</object-name>
   <condition>
-    <property>/fdm/jsbsim/systems/armament/outer-pylons</property>
+    <property>sim/multiplay/generic/int[19]</property>
   </condition>
  </animation>
  
@@ -457,7 +457,7 @@
     <object-name>frontHVARMount4.left</object-name>
     <object-name>frontHVARMount5.left</object-name>
   <condition>
-     <property>/fdm/jsbsim/systems/armament/inner-pylons</property>
+     <property>sim/multiplay/generic/int[20]</property>
   </condition>
  </animation>
  

@@ -17,9 +17,13 @@
           <property>engines/engine[0]/rpm</property>
           <value>30</value>
         </greater-than>
+        <less-than>
+          <property>engines/engine[0]/rpm</property>
+          <value>600</value>
+        </less-than>
         <equals>
-          <property>engines/engine[0]/cranking</property>
-          <value>true</value>
+          <property>sim/multiplay/generic/int[0]</property>
+          <value>1</value>
         </equals>
       </and>
     </condition>

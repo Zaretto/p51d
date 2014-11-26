@@ -254,45 +254,39 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
   <!-- multi-play bombable -->
   <multiplay>
     <generic>
-        <int n="0" type="int"/>
-        <int n="1" type="int"/>
-        <float n="0" type="float"/>
-        <float n="1" type="float"/>
-        <float n="2" type="float"/>
-        <string n="9" type="string"/>
-		<int n="10" alias="controls/armament/trigger" />
-        <int n="11" alias="controls/armament/trigger2" />
-		<int n="12" alias="controls/armament/bomb-trigger-2" />
-		<int n="13" alias="controls/armament/bomb-trigger-2" />
-		<int n="14" alias="controls/armament/rocket[1]/trigger" />
-		<int n="15" alias="controls/armament/rocket[2]/trigger" />
-		<int n="16" alias="controls/armament/rocket[3]/trigger" />
-		<int n="17" alias="controls/armament/rocket[4]/trigger" />
-		<int n="18" alias="controls/armament/rocket[5]/trigger" />
-		<int n="19" alias="controls/armament/rocket[6]/trigger" />
-		<int n="20" alias="controls/armament/rocket[7]/trigger" />
-		<int n="21" alias="controls/armament/rocket[8]/trigger" />
-		<int n="22" alias="controls/armament/rocket[9]/trigger" />
-		<int n="23" alias="controls/armament/rocket[10]/trigger" />
-		<int n="24" alias="controls/armament/drop-tank-release-1" />
-		<int n="25" alias="controls/armament/drop-tank-release-2" />
-		<int n="26" alias="ai/submodels/submodel[12]/count" />
-		<int n="27" alias="ai/submodels/submodel[13]/count" />
-		<int n="28" alias="ai/submodels/submodel[14]/count" />
-		<int n="29" alias="ai/submodels/submodel[15]/count" />
-		<int n="30" alias="ai/submodels/submodel[16]/count" />
-		<int n="31" alias="ai/submodels/submodel[17]/count" />
-		<int n="32" alias="ai/submodels/submodel[18]/count" />
-		<int n="33" alias="ai/submodels/submodel[19]/count" />
-		<int n="34" alias="ai/submodels/submodel[20]/count" />
-		<int n="35" alias="ai/submodels/submodel[21]/count" />
-		<int n="36" alias="ai/submodels/submodel[22]/count" />
-		<int n="37" alias="ai/submodels/submodel[23]/count" />
-		<int n="38" alias="ai/submodels/submodel[24]/count" />
-		<int n="39" alias="ai/submodels/submodel[25]/count" />
-		<int n="40" alias="/fdm/jsbsim/systems/armament/bomb-pylons" />
-		<int n="41" alias="/fdm/jsbsim/systems/armament/inner-pylons" />
-		<int n="42" alias="/fdm/jsbsim/systems/armament/outer-pylons" />
+        <int n="0" />  <!-- engine cranking -->
+        <int n="1" />  <!-- /controls/armament/trigger -->
+        <int n="2" />  <!-- /controls/armament/trigger2 --> 
+        <int n="4" />  <!-- /ai/submodels/submodel[12]/count -->
+		<int n="5" />  <!-- /ai/submodels/submodel[13]/count -->
+		<int n="6" />  <!-- /ai/submodels/submodel[14]/count -->
+		<int n="7" />  <!-- /ai/submodels/submodel[15]/count -->
+		<int n="8" />  <!-- /ai/submodels/submodel[16]/count -->
+		<int n="9" />  <!-- /ai/submodels/submodel[17]/count -->
+		<int n="10" />  <!-- /ai/submodels/submodel[18]/count -->
+		<int n="11" />  <!-- /ai/submodels/submodel[19]/count -->
+		<int n="12" />  <!-- /ai/submodels/submodel[20]/count -->
+		<int n="13" />  <!-- /ai/submodels/submodel[21]/count -->
+        <int n="14" />  <!-- /ai/submodels/submodel[22]/count -->
+		<int n="15" />  <!-- /ai/submodels/submodel[23]/count -->
+		<int n="16" />  <!-- /ai/submodels/submodel[24]/count -->
+		<int n="17" />  <!-- /ai/submodels/submodel[25]/count -->
+		<int n="18" />  <!-- /fdm/jsbsim/systems/armament/bomb-pylons -->
+        <int n="19" />  <!-- /fdm/jsbsim/systems/armament/outer-pylons -->
+		<int n="20" />  <!-- /fdm/jsbsim/systems/armament/inner-pylons -->
+		
+        <float n="0"/> <!-- inner gear door pos -->
+        <float n="1"/>
+        <float n="2"/>
+        <float n="3" /> <!-- /fdm/jsbsim/systems/cooling/radiator-door-pos -->
+        <float n="4" /> <!-- /fdm/jsbsim/systems/cooling/oil-door-pos -->
+        <float n="5" /> <!-- /fdm/jsbsim/gear/unit[2]/steering-angle-deg -->
+        <float n="6" /> <!-- /controls/lighting/wing-position-lights -->
+        <float n="7" /> <!-- /controls/lighting/tail-position-lights -->
+        <float n="8" /> <!-- /controls/lighting/red-rec-light -->
+        <float n="9" /> <!-- /controls/lighting/green-rec-light -->
+        <float n="10" /> <!-- /controls/lighting/amber-rec-light -->
+        <string n="0" type="string"/>
     </generic>
   </multiplay>
 
@@ -368,6 +362,9 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
  </input>
 
 <!-- initialize control properties -->
+ <canopy>
+      <position-norm type="float">1.0</position-norm>
+ </canopy>
  <controls>   
    <engines>
       <engine n="0">
@@ -400,7 +397,6 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
      <gun-heat type="int"> 0 </gun-heat>
    </anti-ice>
    <canopy>
-      <open type="float">1.0</open>
       <open-command type="float">1.0</open-command>
    </canopy>
    <fuel>

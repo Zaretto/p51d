@@ -811,7 +811,7 @@
   <property>surface-positions/elevator-pos-norm</property>
   <interpolation>
    <entry>
-    <ind>-1.0</ind>
+    <ind>1.0</ind>
     <dep>30.0</dep>
    </entry>
    <entry>
@@ -819,7 +819,7 @@
     <dep>0</dep>
    </entry>
    <entry>
-    <ind>1.00</ind>
+    <ind>-1.00</ind>
     <dep>-30.0</dep>
    </entry>
   </interpolation>

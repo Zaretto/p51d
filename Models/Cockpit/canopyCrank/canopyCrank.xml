@@ -10,7 +10,7 @@
   <object-name>lockButton</object-name>
   <object-name>lockLever</object-name>
   <object-name>bolt</object-name>
-  <property>controls/canopy/open</property>
+  <property>canopy/position-norm</property>
   <interpolation>
     <entry>
     <ind>0.0</ind>
@@ -42,7 +42,7 @@
   <animation>
   <type>rotate</type>
   <object-name>lockButton</object-name>
-  <property>controls/canopy/open</property>
+  <property>canopy/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -74,7 +74,7 @@
    <animation>
   <type>rotate</type>
   <object-name>lockLever</object-name>
-  <property>controls/canopy/open</property>
+  <property>canopy/position-norm</property>
     <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -106,13 +106,13 @@
  <animation>
   <type>pick</type>
   <object-name>canopyCrankHandle</object-name>
-  <property>controls/canopy/open</property>
+  <property>canopy/position-norm</property>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
         <command>property-interpolate</command> 
-        <property>/controls/canopy/open</property>
+        <property>/canopy/position-norm</property>
         <value type="float">1.0</value> 
         <rate>0.15</rate>        
       </binding>
@@ -122,7 +122,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-interpolate</command> 
-        <property>/controls/canopy/open</property>
+        <property>/canopy/position-norm</property>
         <value type="float">0.0</value> 
         <rate>0.15</rate>        
       </binding>

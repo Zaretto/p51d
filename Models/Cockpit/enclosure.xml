@@ -6,8 +6,16 @@
     <animation>
         <type>range</type>
         <min-m>0</min-m>
-        <max-m>1000</max-m>
+        <max-m>10000</max-m>
     </animation>
+    
+ <params>
+    <canopy>
+        <open>
+            <property>sim/multiplay/generic/float[3]</property>
+        </open>
+    </canopy>
+</params>
     
  <animation>
   <type>translate</type>  
@@ -32,7 +40,7 @@
   <object-name>canopyReleaseBarLeft</object-name>
   <object-name>truckPlacardRight</object-name>
   <object-name>truckPlacardLeft</object-name>
-  <property>/controls/canopy/open</property>
+  <property>canopy/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -74,7 +82,7 @@
   <object-name>upperCoverLeft</object-name>
   <object-name>upperCoverRight</object-name>
   <object-name>windshieldBow</object-name>
-  <property>/controls/canopy/open</property>
+  <property>canopy/position-norm</property>
     <interpolation>
    <entry>
     <ind>0.0</ind>
