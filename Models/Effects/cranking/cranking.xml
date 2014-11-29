@@ -35,12 +35,12 @@
     </placer>
 
     <shooter>
-      <theta-min-deg>  60 </theta-min-deg>
+      <theta-min-deg> 60 </theta-min-deg>
       <theta-max-deg> 120 </theta-max-deg>
       <phi-min-deg>   -10 </phi-min-deg>
       <phi-max-deg>    50 </phi-max-deg>
       <speed-mps>
-        <value>4</value>
+        <value>3</value>
         <spread>3</spread>
       </speed-mps>
       <rotation-speed>
@@ -55,7 +55,7 @@
 
     <counter>
       <particles-per-sec>
-        <value>40</value>
+        <value>0.25</value>
         <spread>20</spread>
       </particles-per-sec>
     </counter>
