@@ -31,7 +31,7 @@
     
     <maxhp> 1700 </maxhp>
     <cycles> 4 </cycles>
-    <idlerpm> 500.0 </idlerpm>
+    <idlerpm> 130.0 </idlerpm>
     <maxrpm> 3000.0 </maxrpm>
     
     <maxthrottle> 1.0 </maxthrottle>
@@ -52,7 +52,7 @@
     <ratedrpm2> 3000 </ratedrpm2>
     <ratedaltitude2> 16000 </ratedaltitude2>
     
-     <!-- <starter-torque> {number} </starter-torque> -->
-     <starter-rpm> 300 </starter-rpm> 
+     <starter-torque> 100 </starter-torque>
+     <starter-rpm> 500 </starter-rpm> 
     
 </piston_engine>
