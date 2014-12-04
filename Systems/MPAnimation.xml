@@ -2,7 +2,7 @@
 
 <system name="MPAnimation">
     
-    <channel name="enclosure">
+    <channel name="doors">
 
        <fcs_function name="fcs/innerGearDoorPosToMP">
           <function>

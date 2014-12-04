@@ -676,6 +676,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <file>Aircraft/p51d/Nasal/gear-doors.nas</file>
       <file>Aircraft/p51d/Nasal/gear-lever.nas</file>
       <file>Aircraft/p51d/Nasal/liveries.nas</file>
+      <file>Aircraft/p51d/Nasal/tyresmoke.nas</file>
     </p51d>
     <SCR_522C>
       <file>Aircraft/Instruments-3d/SCR-522C/Nasal/SCR-522C.nas</file>

@@ -4,21 +4,21 @@
 
  <fx>
  
-  <crank>
+<!--   <crank>
    <name>engstart</name>
-   <path>Sounds/engstart.wav</path>
-   <property>/engines/engine/cranking</property>
+   <path>Sounds/p51d_startup.wav</path>
+   <property>sim/multiplay/generic/int[0]</property>
    <volume>
     <offset>-0.4</offset>
    </volume>
-  </crank>
+  </crank> -->
 
   <crank>
    <name>crank</name>
    <mode>looped</mode>
    <path>Aircraft/p51d/Sounds/p51d_starter.wav</path>
    <condition>
-    <property>/engines/engine/cranking</property>
+    <property>sim/multiplay/generic/int[0]</property>
     <not>
      <property>/engines/engine/running</property>
     </not>
@@ -27,8 +27,8 @@
     <offset>-0.5</offset>
    </volume>
    <pitch>
-    <property>/engines/engine/cranking</property>
-    <factor>1.0</factor>
+    <property>engines/engine/rpm</property>
+    <factor>0.0033</factor>
    </pitch>
   </crank>
 
@@ -37,11 +37,11 @@
    <path>Aircraft/p51d/Sounds/p51d_startup.wav</path>
    <property>/engines/engine/running</property>
    <volume>
-    <offset>-0.50</offset>
+    <offset>0.15</offset>
    </volume>
    <pitch>
     <property>/engines/engine/running</property>
-    <factor>1.0</factor>
+    <factor>0.15</factor>
    </pitch>
   </crank>
   
@@ -57,27 +57,29 @@
     </less-than>
    </condition>
    <volume>
-    <property>/sim/current-view/internal</property>
-    <offset>1.0</offset>
-    <factor>-0.6</factor>
+      <property>fdm/jsbsim/propulsion/engine/enclosure-attenuation</property>
+      <!-- <min>0.5</min>
+      <max>1.0</max> -->
+      <offset>0.0</offset>
+      <factor>1.0</factor>
    </volume>
    <volume>
     <property>/engines/engine/mp-inhg</property>
     <offset>0.0</offset>
-    <factor>0.025</factor>  
-    <min>1.0</min>
-    <max>3.0</max>
+    <factor>0.02333</factor>  
+    <min>0.4</min>
+    <max>1.1</max>
    </volume>
    <volume>
     <property>/engines/engine/rpm</property>
-    <factor>0.00033</factor>
-    <min>0.2</min>
-    <max>1.0</max>
+    <factor>0.0004333</factor>
+    <min>0.4</min>
+    <max>1.1</max>
     <offset>0.0</offset>
    </volume>
    <pitch>
     <property>/engines/engine/rpm</property>
-    <factor>0.00033</factor>
+    <factor>0.00025</factor>
     <min>0.0</min>
     <max>1.0</max>
    </pitch>
@@ -95,29 +97,31 @@
     </greater-than>
    </condition>
    <volume>
-    <property>/sim/current-view/internal</property>
-    <offset>1.0</offset>
-    <factor>-0.6</factor>
+      <property>fdm/jsbsim/propulsion/engine/enclosure-attenuation</property>
+      <!-- <min>0.5</min>
+      <max>1.0</max> -->
+      <offset>0.0</offset>
+      <factor>1.0</factor>
    </volume>
    <volume>
     <property>/engines/engine/mp-inhg</property>
     <offset>0.0</offset>
-    <factor>0.025</factor>  
-    <min>1.0</min>
-    <max>3.0</max>
+    <factor>0.0009333</factor>  
+    <min>0.01</min>
+    <max>0.7</max>
    </volume>
    <volume>
     <property>/engines/engine/rpm</property>
-    <factor>0.00033</factor>
-    <min>0.0</min>
-    <max>1.00</max>
+    <factor>0.000233</factor>
+    <min>0.01</min>
+    <max>0.7</max>
     <offset>0.0</offset>
    </volume>
    <pitch>
     <property>/engines/engine/rpm</property>
-    <factor>0.00033</factor>
+    <factor>0.000233</factor>
     <min>0.0</min>
-    <max>1.0</max>
+    <max>0.70</max>
    </pitch>
   </engine>
 
@@ -222,7 +226,7 @@
   <wind-gear>
    <name>wind</name>
    <mode>looped</mode>
-   <path>Sounds/wind.wav</path>
+   <path>Sounds/wind-8khz.wav</path>
    <property>/gear/gear[0]/position-norm</property>
    <volume>
      <property>/velocities/airspeed-kt</property>
@@ -264,7 +268,7 @@
        <factor>1.2</factor>
        <max>1.0</max>
     </volume>
-  </guns>-->
+  </guns>
   
   <rockets1>
     <name>rocket1</name>
@@ -605,8 +609,8 @@
         <volume>
           <factor>1.0</factor>
         </volume>
-      </click>
-
+      </click> 
+ 
       <click>
         <name>mag off</name>
         <path>Sounds/click.wav</path>

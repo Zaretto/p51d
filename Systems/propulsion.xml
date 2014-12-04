@@ -145,10 +145,10 @@
     
     <!-- 
     Create plusible oil pressure, oil temp and coolant temps for this engine.  These are 
-    currently modeled in JSBSim for air cooled engines only (O-360) and these functions 
+    currently modelled in JSBSim for air cooled engines only (O-360) and these functions 
     use those numbers to guestimate the kinds of numbers a liquid cooled engine would have.
     
-    At best this is a cludge and will have to be redone as JSBSim's engine modeling improves.
+    At best this is a kludge and will have to be redone as JSBSim's engine modelling improves.
     -->
     
     <channel name="Engine Gauges">
@@ -159,7 +159,7 @@
             <independentVar lookup="row">/engines/engine/oil-temperature-degf</independentVar>
                 <tableData>
                     32     0.0
-                    212    125
+                    212    100
                 </tableData>
             </table>
         </function>
@@ -394,6 +394,37 @@
             <gain> 0.993 </gain>
             <output>propulsion/engine/ram-air-factor</output>
        </pure_gain>
+
+       <!--<pure_gain name="Hot-Air">
+          <input>systems/engine/hot-air</input>
+          <gain>??? </gain>
+          <output>how knows?</output>
+       </pure_gain>-->
+
+    </channel>
+    
+    <channel name="Engine Loudness">
+       
+       <switch name="propulsion/engine/enclosure-attenuation">
+          <default value="1"/>
+          <test value= "propulsion/engine/enclosure-attenuation-level">
+             /sim/current-view/internal GT 0.5
+          </test>
+      </switch>
+
+       <fcs_function name="enclosure attenuation">
+          <function>
+             <product>
+               <property>/canopy/position-norm</property>
+               <value>9.0</value>
+            </product>
+          </function>
+          <clipto>
+              <min> 0.5</min>
+              <max> 1.0 </max>
+            </clipto>
+          <output>propulsion/engine/enclosure-attenuation-level</output>
+       </fcs_function>
 
        <!--<pure_gain name="Hot-Air">
           <input>systems/engine/hot-air</input>

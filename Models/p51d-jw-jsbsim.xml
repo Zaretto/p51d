@@ -1920,6 +1920,36 @@
    <texture>Liveries/DDfuselage.png</texture>
  </animation>
  
+ <model>
+  <path>Aircraft/p51d/Models/Effects/ground/tyre-smoke-port.xml</path> <!-- gear/gear[0] -->
+  <name>tyre-smoke-port</name>
+  <offsets>
+   <x-m>1.9331</x-m>
+   <y-m>-1.8506</y-m>
+   <z-m>-2.2212</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/p51d/Models/Effects/ground/tyre-smoke-starboard.xml</path> <!-- gear/gear[1] -->
+  <name>tyre-smoke-starboard</name>
+  <offsets>
+   <x-m>1.9331</x-m>
+   <y-m>1.8506</y-m>
+   <z-m>-2.2212</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/p51d/Models/Effects/ground/tyre-smoke-tail.xml</path> <!-- gear/gear[2] -->
+  <name>tyre-smoke-tail</name>
+  <offsets>
+   <x-m>-6.8399</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.921178</z-m>
+  </offsets>
+ </model>
+ 
  <!-- rain animations -->
 
 <!--    <animation>
