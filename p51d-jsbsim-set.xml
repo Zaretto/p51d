@@ -254,8 +254,18 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
   <!-- multi-play bombable -->
   <multiplay>
     <generic>
+      <!--
+      needed triggers for bombable
+      controls/armament/rocket[1]/trigger through controls/armament/rocket[10]/trigger
+      controls/armament/bomb-trigger-1 and controls/armament/bomb-trigger-2
+      controls/armament/drop-tank-release-1 and controls/armament/drop-tank-release-2
+      /fdm/jsbsim/systems/armament/gun-SmokeAnimated/Inner 
+      /fdm/jsbsim/systems/armament/gun-SmokeAnimatedOuter
+      /fdm/jsbsim/systems/armament/ejectionAnimatedOuter
+      /fdm/jsbsim/systems/armament/ejectionAnimatedInner
+      -->
         <int n="0" />  <!-- engine cranking -->
-        <int n="1" />  <!-- /controls/armament/trigger -->
+        <int n="1" />  <!-- /controls/armament/gun-trigger -->
         <int n="2" />  <!-- /controls/armament/trigger2 --> 
         <int n="4" />  <!-- /ai/submodels/submodel[12]/count -->
 		<int n="5" />  <!-- /ai/submodels/submodel[13]/count -->

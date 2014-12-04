@@ -143,7 +143,7 @@
    </volume>
   </rumble>
 
-   <gear>
+  <gear>
    <name>gear</name>
    <mode>in-transit</mode>
    <path>Sounds/gear.wav</path>
@@ -270,124 +270,25 @@
     </volume>
   </guns>
   
-  <rockets1>
-    <name>rocket1</name>
+  <rockets>
+    <name>rocket sound</name>
     <mode>once</mode>
     <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound1</property>
+    <property>/fdm/jsbsim/systems/armament/rocket-sound</property>
     <volume>
        <factor>1.2</factor>
        <max>1.0</max>
     </volume>
-  </rockets1>
-
-  <rockets2>
-    <name>rocket2</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound2</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets2>
-
-  <rockets3>
-    <name>rocket3</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound3</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets3>
-
-  <rockets4>
-    <name>rocket4</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound4</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets4>
-
-  <rockets5>
-    <name>rocket5</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound5</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets5>
-
-  <rockets6>
-    <name>rocket6</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound6</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets6>
-
-  <rockets7>
-    <name>rocket7</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound7</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets7>
-
-  <rockets8>
-    <name>rocket8</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound8</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets8>
-
-  <rockets9>
-    <name>rocket9</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound9</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets9>
-
-  <rockets10>
-    <name>rocket10</name>
-    <mode>once</mode>
-    <path>Aircraft/p51d/Sounds/rockets.wav</path>
-    <property>/fdm/jsbsim/systems/armament/rocket-sound10</property>
-    <volume>
-       <factor>1.2</factor>
-       <max>1.0</max>
-    </volume>
-  </rockets10>
+  </rockets>
 
   <!--                  Toggle Switches                  -->
 
       <click>
         <name>guns and gun sight on</name>
         <path>Sounds/click.wav</path>
-        <property>
+        <condition>
              <property>/controls/armament/guns-enabled</property>
-        </property>
+        </condition>
         <volume>
           <factor>1.0</factor>
         </volume>
@@ -409,9 +310,9 @@
       <click>
         <name>guns and gun sight on</name>
         <path>Sounds/click.wav</path>
-        <property>
+        <condition>
              <property>/controls/armament/gunsight/power-on</property>
-        </property>
+        </condition>
         <volume>
           <factor>1.0</factor>
         </volume>
@@ -439,9 +340,9 @@
       <click>
         <name>Battery on</name>
         <path>Sounds/click.wav</path>
-        <property>
-          <property>controls/electric/battery-switch</property>
-        </property>
+        <condition>
+          <property>controls/engines/engine/master-bat</property>
+        </condition>
         <volume>
           <factor>1.0</factor>
         </volume>
@@ -451,7 +352,30 @@
         <path>Sounds/click.wav</path>
          <condition>
           <not>
-            <property>controls/electric/battery-switch</property>
+            <property>controls/engines/engine/master-bat</property>
+          </not>
+        </condition>
+        <volume>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+   
+      <click>
+        <name>Gen on</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+          <property>controls/engines/engine/master-alt</property>
+        </condition>
+        <volume>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+      <click>
+        <name>Gen off</name>
+        <path>Sounds/click.wav</path>
+         <condition>
+          <not>
+            <property>controls/engines/engine/master-alt</property>
           </not>
         </condition>
         <volume>
@@ -462,13 +386,14 @@
      <click>
         <name>Delay off</name>
         <path>Sounds/click.wav</path>
-        <property>
+        <condition>          
           <property>/controls/armament/instant</property>
-        </property>
+        </condition>
         <volume>
           <factor>1.0</factor>
         </volume>
       </click>
+      
       <click>
         <name>Delay on</name>
         <path>Sounds/click.wav</path>
@@ -500,10 +425,10 @@
         <name>right bomb arm</name>
         <path>Sounds/click.wav</path>
         <condition>
-           <more-than>
+           <greater-than>
              <property>/controls/armament/right-bomb-arm-chem-release</property>
              <value>0</value>
-           </more-than>
+           </greater-than>
         </condition>
         <volume>
           <factor>1.0</factor>
@@ -628,10 +553,16 @@
         <name>mag 1</name>
         <path>Sounds/click.wav</path>
         <condition>
-           <equeals>
-             <property>/controls/engines/engine/magnetos</property>
-             <value>1</value>
-           </equeals>
+             <and>
+              <greater-than>
+                <property>/controls/engines/engine/magnetos</property>
+                <value>0</value>
+              </greater-than>
+              <less-than>
+                <property>/controls/engines/engine/magnetos</property>
+                <value>2</value>
+              </less-than>
+           </and>
         </condition>
         <volume>
           <factor>1.0</factor>
@@ -642,10 +573,16 @@
         <name>mag 2</name>
         <path>Sounds/click.wav</path>
         <condition>
-           <equeals>
-             <property>/controls/engines/engine/magnetos</property>
-             <value>2</value>
-           </equeals>
+           <and>
+              <greater-than>
+                <property>/controls/engines/engine/magnetos</property>
+                <value>1</value>
+              </greater-than>
+              <less-than>
+                <property>/controls/engines/engine/magnetos</property>
+                <value>3</value>
+              </less-than>
+           </and>
         </condition>
         <volume>
           <factor>1.0</factor>
@@ -656,10 +593,10 @@
         <name>mag 3</name>
         <path>Sounds/click.wav</path>
         <condition>
-           <equeals>
+           <greater-than>
              <property>/controls/engines/engine/magnetos</property>
-             <value>3</value>
-           </equeals>
+             <value>2</value>
+           </greater-than>
         </condition>
         <volume>
           <factor>1.0</factor>
@@ -735,9 +672,9 @@
       <click>
         <name>fuel on</name>
         <path>Sounds/click.wav</path>
-        <property>
+        <condition>
              <property>/controls/fuel/on</property>
-        </property>
+        </condition>
         <volume>
           <factor>1.0</factor>
         </volume>
@@ -755,7 +692,6 @@
           <factor>1.0</factor>
         </volume>
       </click>
-
 
 </fx>
  

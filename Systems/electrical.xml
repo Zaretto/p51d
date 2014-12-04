@@ -194,86 +194,51 @@
            <output>/controls/armament/next-RX</output>
         </switch>
 
-        <switch name="systems/armament/rocket-sound1">
+       <switch name="systems/armament/rocket-sound">
            <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[1]/trigger GT 0
-              /ai/submodels/submodel[12]/count GT 0
+           <test logic="OR" value="1">
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[1]/trigger GT 0
+                 /ai/submodels/submodel[12]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[2]/trigger == 1
+                 /ai/submodels/submodel[13]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[3]/trigger == 1
+                 /ai/submodels/submodel[14]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[4]/trigger == 1
+                 /ai/submodels/submodel[15]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[5]/trigger == 1
+                 /ai/submodels/submodel[16]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[6]/trigger == 1
+                 /ai/submodels/submodel[17]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[7]/trigger == 1
+                 /ai/submodels/submodel[18]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[8]/trigger == 1
+                 /ai/submodels/submodel[19]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[9]/trigger == 1
+                 /ai/submodels/submodel[20]/count GT 0
+              </test>
+              <test logic="AND" value="1">
+                 /controls/armament/rocket[10]/trigger == 1
+                 /ai/submodels/submodel[21]/count GT 0
+              </test>
            </test>
        </switch>
-
-       <switch name="systems/armament/rocket-sound2">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[2]/trigger == 1
-              /ai/submodels/submodel[13]/count GT 0
-           </test>
-       </switch>
-
-       <switch name="systems/armament/rocket-sound3">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[3]/trigger == 1
-              /ai/submodels/submodel[14]/count GT 0
-           </test>
-       </switch>
-
-       <switch name="systems/armament/rocket-sound4">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[4]/trigger == 1
-              /ai/submodels/submodel[15]/count GT 0
-           </test>
-       </switch>
-
-       <switch name="systems/armament/rocket-sound5">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[5]/trigger == 1
-              /ai/submodels/submodel[16]/count GT 0
-           </test>
-       </switch>
-
-       <switch name="systems/armament/rocket-sound6">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[6]/trigger == 1
-              /ai/submodels/submodel[17]/count GT 0
-           </test>
-       </switch>
-
-       <switch name="systems/armament/rocket-sound7">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[7]/trigger == 1
-              /ai/submodels/submodel[18]/count GT 0
-           </test>
-       </switch>
-
-       <switch name="systems/armament/rocket-sound8">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[8]/trigger == 1
-              /ai/submodels/submodel[19]/count GT 0
-           </test>
-       </switch>
-
-       <switch name="systems/armament/rocket-sound9">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[9]/trigger == 1
-              /ai/submodels/submodel[20]/count GT 0
-           </test>
-       </switch>
-
-       <switch name="systems/armament/rocket-sound10">
-           <default value="0"/>
-           <test logic="AND" value="1">
-              /controls/armament/rocket[10]/trigger == 1
-              /ai/submodels/submodel[21]/count GT 0
-           </test>
-       </switch>
-              
 
         <switch name="systems/armament/outer-pylons">
            <default value="0"/>
@@ -309,7 +274,7 @@
            <test value="1">
                /controls/armament/User-Selected-Stores == 5
            </test>
-        </switch>
+        </switch> 
 
      </channel>
 
@@ -490,5 +455,5 @@
         </switch> 
 
      </channel>
-
+     
 </system>

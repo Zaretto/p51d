@@ -61,7 +61,7 @@
     </fcs_function>
 
        <switch name="systems/engine/boost-speed">
-           <!--<default value="0"/>-->
+           <default value="0"/>
            <test value="1">
               /controls/engines/engine/supercharger-switch GT 0.9
            </test>

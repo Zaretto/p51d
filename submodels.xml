@@ -9,7 +9,7 @@
   <!-- ################################################### -->
 
   <submodel>
-    <name>left-gun1-tracers</name>
+    <name>left-gun-1-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -34,7 +34,7 @@
   </submodel>
   
     <submodel>
-    <name>right-gun1-tracers</name>
+    <name>right-gun-1-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model> 
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -60,7 +60,7 @@
   
 
   <submodel>
-    <name>left-gun2-tracers</name>
+    <name>left-gun-2-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -85,7 +85,7 @@
   </submodel>
   
   <submodel>
-    <name>right-gun2-tracers</name>
+    <name>right-gun-2-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -110,7 +110,7 @@
   </submodel> 
   
   <submodel>
-    <name>left-gun3-tracers</name>
+    <name>left-gun-3-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -135,7 +135,7 @@
   </submodel>
   
   <submodel>
-    <name>right-gun3-tracers</name>
+    <name>right-gun-3-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -160,7 +160,7 @@
   </submodel>
   
   <submodel>
-    <name>left-gun1-bullets</name>
+    <name>left-gun-1-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -185,7 +185,7 @@
   </submodel>
 
  <submodel>
-    <name>right-gun1-bullets</name>
+    <name>right-gun-1-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -210,7 +210,7 @@
   </submodel>
   
   <submodel>
-    <name>left-gun2-bullets</name>
+    <name>left-gun-2-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -235,7 +235,7 @@
   </submodel>
 
   <submodel>
-    <name>right-gun2-bullets</name>
+    <name>right-gun-2-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -260,7 +260,7 @@
   </submodel>  
   
   <submodel>
-    <name>left-gun3-bullets</name>
+    <name>left-gun-3-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -285,7 +285,7 @@
   </submodel>
   
   <submodel>
-    <name>right-gun3-bullets</name>
+    <name>right-gun-3-bullets</name>
     <model>Models/Geometry/null.ac</model>
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
@@ -317,7 +317,7 @@
   <!-- ################################################### -->
 
   <submodel>
-    <name>fire rocket1</name>
+    <name>fire rocket 1</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[1]/trigger</trigger>
     <speed>1384.0</speed>
@@ -340,7 +340,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket2</name>
+    <name>fire rocket 2</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[2]/trigger</trigger>
     <speed>1384.0</speed>
@@ -363,7 +363,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket3</name>
+    <name>fire rocket 3</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[3]/trigger</trigger>
     <speed>1384.0</speed>
@@ -386,7 +386,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket4</name>
+    <name>fire rocket 4</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[4]/trigger</trigger>
     <speed>1384.0</speed>
@@ -409,7 +409,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket5</name>
+    <name>fire rocket 5</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[5]/trigger</trigger>
     <speed>1384.0</speed>
@@ -432,7 +432,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket6</name>
+    <name>fire rocket 6</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[6]/trigger</trigger>
     <speed>1384.0</speed>
@@ -455,7 +455,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket7</name>
+    <name>fire rocket 7</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[7]/trigger</trigger>
     <speed>1384.0</speed>
@@ -478,7 +478,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket8</name>
+    <name>fire rocket 8</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[8]/trigger</trigger>
     <speed>1384.0</speed>
@@ -501,7 +501,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket9</name>
+    <name>fire rocket 9</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[9]/trigger</trigger>
     <speed>1384.0</speed>
@@ -524,7 +524,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket10</name>
+    <name>fire rocket 10</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[10]/trigger</trigger>
     <speed>1384.0</speed>
@@ -599,7 +599,7 @@
   </submodel>
 
     <submodel>
-    <name>drop tank - left</name>
+    <name>drop tank left</name>
     <model>Aircraft/p51d/Models/wingTank75.ac</model>
     <trigger>controls/armament/drop-tank-release-1</trigger>
     <trigger-once>true</trigger-once>
@@ -621,7 +621,7 @@
   </submodel>
 
   <submodel>
-    <name>drop tank - right</name>
+    <name>drop tank right</name>
     <model>Aircraft/p51d/Models/wingTank75.ac</model>
     <trigger>controls/armament/drop-tank-release-2</trigger>
     <trigger-once>true</trigger-once>
@@ -642,12 +642,12 @@
     <contents>consumables/fuel/tank[4]/level-lbs</contents>
   </submodel>
   
-  <!-- gun smoke -->
+  <!-- gun- smoke -->
   
   <submodel>
-    <name>Left-gun1-smoke</name>
+    <name>Left-gun-1-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>/fdm/jsbsim/systems/armament/gunSmokeAnimated/Inner</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/gunsmokeAnimated/Inner</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
     <delay>0.035</delay>
@@ -663,9 +663,9 @@
   </submodel>
   
   <submodel>
-    <name>Right-gun1-smoke</name>
+    <name>Right-gun-1-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>/fdm/jsbsim/systems/armament/gunSmokeAnimatedInner</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/gunsmokeAnimatedInner</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
     <delay>0.035</delay>
@@ -681,9 +681,9 @@
   </submodel>
   
     <submodel>
-    <name>Left-gun2-smoke</name>
+    <name>Left-gun-2-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>/fdm/jsbsim/systems/armament/gunSmokeAnimatedInner</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/gunsmokeAnimatedInner</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
     <delay>0.035</delay>
@@ -699,9 +699,9 @@
   </submodel>
   
   <submodel>
-    <name>Right-gun2-smoke</name>
+    <name>Right-gun-2-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>/fdm/jsbsim/systems/armament/gunSmokeAnimatedOuter</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/gunsmokeAnimatedOuter</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
     <delay>0.035</delay>
@@ -717,9 +717,9 @@
   </submodel>
   
   <submodel>
-    <name>Left-gun3-smoke</name>
+    <name>Left-gun-3-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>/fdm/jsbsim/systems/armament/gunSmokeAnimatedOuter</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/gunsmokeAnimatedOuter</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
     <delay>0.035</delay>
@@ -735,9 +735,9 @@
   </submodel>
   
   <submodel>
-    <name>Right-gun3-smoke</name>
+    <name>Right-gun-3-smoke</name>
     <model>Aircraft/p51d/Models/Effects/guns/smoke.xml</model>
-    <trigger>/fdm/jsbsim/systems/armament/gunSmokeAnimatedOuter</trigger>
+    <trigger>/fdm/jsbsim/systems/armament/gunsmokeAnimatedOuter</trigger>
     <repeat>true</repeat>
     <speed>200</speed>
     <delay>0.035</delay>
