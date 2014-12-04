@@ -3,350 +3,231 @@
 <system name="MPAnimation">
     
     <channel name="doors">
-
-       <fcs_function name="fcs/innerGearDoorPosToMP">
-          <function>
-              <sum>
-                 <value> 0.0 </value>
-                 <property>/fdm/jsbsim/systems/gear/inner-doors</property>
-              </sum>
-          </function>
+    
+       <pure_gain name="innerGearDoorPosToMP">
+          <input>/fdm/jsbsim/systems/gear/inner-doors</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[0]</output>
-        </fcs_function>
+       </pure_gain>
 
     </channel>
     
     <channel name="engine">
-
-       <fcs_function name="fcs/crankingToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/engines/engine[0]/cranking</property>
-              </sum>
-          </function>
+    
+       <pure_gain name="crankingToMP">
+          <input>/engines/engine[0]/cranking</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[0]</output>
-        </fcs_function>
+       </pure_gain>
 
     </channel>
     
     <channel name="pilot">
-
-       <fcs_function name="fcs/pilotVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/engines/engine[0]/cranking</property>
-              </sum>
-          </function>
+    
+       <pure_gain name="pilotVisibleToMP">
+          <input>/engines/engine[0]/cranking</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[3]</output>
-        </fcs_function>
+       </pure_gain>
 
     </channel>
     
-        <channel name="rockets">
-
-       <fcs_function name="fcs/rockets1VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[12]/count</property>
-              </sum>
-          </function>
+    <channel name="rockets">
+    
+       <pure_gain name="rocket1VisibleToMP">
+          <input>/ai/submodels/submodel[12]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[4]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets2VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[13]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rocket2VisibleToMP">
+          <input>/ai/submodels/submodel[13]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[5]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets3VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[14]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rocket3VisibleToMP">
+          <input>/ai/submodels/submodel[14]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[6]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets4VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[15]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rocket4VisibleToMP">
+          <input>/ai/submodels/submodel[15]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[7]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets5VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[16]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rocket5VisibleToMP">
+          <input>/ai/submodels/submodel[16]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[8]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets6VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[17]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rocket6VisibleToMP">
+          <input>/ai/submodels/submodel[17]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[9]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets7VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[18]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rocket7VisibleToMP">
+          <input>/ai/submodels/submodel[18]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[10]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets8VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[19]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rocket8VisibleToMP">
+          <input>/ai/submodels/submodel[19]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[11]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets9VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[20]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rocket9VisibleToMP">
+          <input>/ai/submodels/submodel[20]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[12]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/rockets10VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[21]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="rockets10VisibleToMP">
+          <input>/ai/submodels/submodel[21]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[13]</output>
-        </fcs_function>
+       </pure_gain>
 
     </channel>
     
     <channel name="bombs">
-
-       <fcs_function name="fcs/bomb1VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[22]/count</property>
-              </sum>
-          </function>
+    
+       <pure_gain name="bomb1VisibleToMP">
+          <input>/ai/submodels/submodel[22]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[14]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/bomb2VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[23]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="bomb2VisibleToMP">
+          <input>/ai/submodels/submodel[23]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[15]</output>
-        </fcs_function>
+       </pure_gain>
         
      </channel>
      
      <channel name="tanks">
-
-       <fcs_function name="fcs/tank1VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[24]/count</property>
-              </sum>
-          </function>
+       
+       <pure_gain name="tank1VisibleToMP">
+          <input>/ai/submodels/submodel[24]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[16]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/tank2VisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/ai/submodels/submodel[25]/count</property>
-              </sum>
-          </function>
+        <pure_gain name="tank2VisibleToMP">
+          <input>/ai/submodels/submodel[25]/count</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[17]</output>
-        </fcs_function>
+       </pure_gain>
         
      </channel>
      
      <channel name="bombRacks">
-
-       <fcs_function name="fcs/bombRacksVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/fdm/jsbsim/systems/armament/bomb-pylons</property>
-              </sum>
-          </function>
+     
+       <pure_gain name="bombRacksVisibleToMP">
+          <input>/fdm/jsbsim/systems/armament/bomb-pylons</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[18]</output>
-        </fcs_function>
+       </pure_gain>
         
      </channel>
      
-     <channel name="brocketRacks">
-
-       <fcs_function name="fcs/outerRocketRacksVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/fdm/jsbsim/systems/armament/outer-pylons</property>
-              </sum>
-          </function>
+     <channel name="rocketRacks">
+     
+       <pure_gain name="outerRocketRacksVisibleToMP">
+          <input>/fdm/jsbsim/systems/armament/outer-pylons</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[19]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/innerRocketRacksVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/fdm/jsbsim/systems/armament/inner-pylons</property>
-              </sum>
-          </function>
+        <pure_gain name="innerRocketRacksVisibleToMP">
+          <input>/fdm/jsbsim/systems/armament/inner-pylons</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[20]</output>
-        </fcs_function>
+       </pure_gain>
         
      </channel>
         
      <channel name="coolingDoors">
-
-       <fcs_function name="fcs/radiatorDoorVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/fdm/jsbsim/systems/cooling/radiator-door-pos</property>
-              </sum>
-          </function>
+     
+       <pure_gain name="radiatorDoorVisibleToMP">
+          <input>/fdm/jsbsim/systems/cooling/radiator-door-pos</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[3]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/oilDoorVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/fdm/jsbsim/systems/cooling/oil-door-pos</property>
-              </sum>
-          </function>
+        <pure_gain name="oilDoorVisibleToMP">
+          <input>/fdm/jsbsim/systems/cooling/oil-door-pos</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[4]</output>
-        </fcs_function>
+       </pure_gain>
         
      </channel>
      
-     <channel name="coolingDoors">
-
-       <fcs_function name="fcs/tailWheelRotationVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/fdm/jsbsim/gear/unit[2]/steering-angle-deg</property>
-              </sum>
-          </function>
+     <channel name="tailWheelSteering">
+     
+       <pure_gain name="tailWheelSteeringVisibleToMP">
+          <input>/fdm/jsbsim/gear/unit[2]/steering-angle-deg</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[5]</output>
-        </fcs_function>
+       </pure_gain>
         
      </channel>
      
      <channel name="postionLights">
-
-       <fcs_function name="fcs/wingPoditionLightsVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/controls/lighting/wing-position-lights</property>
-              </sum>
-          </function>
+     
+       <pure_gain name="wingPoditionLightsVisibleToMP">
+          <input>/controls/lighting/wing-position-lights</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[6]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/tailPoditionLightsVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/controls/lighting/wing-position-lights</property>
-              </sum>
-          </function>
+        <pure_gain name="tailPoditionLightsVisibleToMP">
+          <input>/controls/lighting/wing-position-lights</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[7]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/redSingalLightVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/controls/lighting/red-rec-light</property>
-              </sum>
-          </function>
+        <pure_gain name="redSingalLightVisibleToMP">
+          <input>/controls/lighting/red-rec-light</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[8]</output>
-        </fcs_function>
-                
-        <fcs_function name="fcs/redSingalLightVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/controls/lighting/green-rec-light</property>
-              </sum>
-          </function>
-          <output>/sim/multiplay/generic/float[9]</output>
-        </fcs_function>
+       </pure_gain>
         
-        <fcs_function name="fcs/redSingalLightVisibleToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/controls/lighting/amber-rec-light</property>
-              </sum>
-          </function>
+        <pure_gain name="greenSingalLightVisibleToMP">
+          <input>/controls/lighting/green-rec-light</input>
+          <gain>1.0</gain>
+          <output>/sim/multiplay/generic/float[9]</output>
+       </pure_gain>
+        
+        <pure_gain name="amberSingalLightVisibleToMP">
+          <input>/controls/lighting/amber-rec-light</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[10]</output>
-        </fcs_function>
+       </pure_gain>
         
      </channel>    
    
     <channel name="triggers">
     
-       <fcs_function name="fcs/triggerToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/controls/armament/gun-trigger</property>
-              </sum>
-          </function>
+      <!-- FIXME trigger stuff needs more for for MP -->
+      <pure_gain name="triggerToMP">
+          <input>/controls/armament/gun-trigger</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[1]</output>
-        </fcs_function>
-
-       <fcs_function name="fcs/trigger2ToMP">
-          <function>
-              <sum>
-                 <value> 0 </value>
-                 <property>/controls/armament/bombs-both</property> <!-- fixme -->
-              </sum>
-          </function>
+       </pure_gain>
+        
+        <pure_gain name="trigger2ToMP">
+          <input>/controls/armament/bombs-both</input>
+          <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[2]</output>
-        </fcs_function>
+       </pure_gain>
 
     </channel>
 
