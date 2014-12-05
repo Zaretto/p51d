@@ -5,18 +5,30 @@
  <!-- <property value="0">systems/crash-detect/crashed</property>-->
 
   <channel name="Over-G">
+  
+  
+      <!-- Filter spikes in /fdm/jsbsim/accelerations/Nz 
+           so that these do not cause a crash -->
+      <summer name="/fdm/jsbsim/accelerations/Nz-clipped">
+        <input>/fdm/jsbsim/accelerations/Nz</input>
+        <value>0.0</value>
+        <clipto>
+          <min>-8.0</min>
+          <max>12.0</max>
+        </clipto>
+     </summer>
 
      <fcs_function name="wing-load">
        <function>
           <product>
-             <property>/fdm/jsbsim/accelerations/Nz</property>
+             <property>/fdm/jsbsim/accelerations/Nz-clipped</property>
              <property>/fdm/jsbsim/inertia/weight-lbs</property>
           </product>
        </function>
        <output>/fdm/jsbsim/systems/crash-detect/wing-load</output>
      </fcs_function>
-
-     <!--
+     
+      <!--
           Detect wing loads that exceed limits.
           Operational limits are +64,000 lbs and
           -32,000lbs.  IE. +8 or -4 Gs at 8,000 lbs
@@ -31,13 +43,13 @@
                 /fdm/jsbsim/systems/crash-detect/wing-load gt 89600
                 /sim/signals/fdm-initialized gt 0
                 /gear/gear/wow lt 0.1
-                /fdm/jsbsim/propulsion/engine/starter-norm lt 0.1
+                /fdm/jsbsim/propulsion/engine/starter-norm lt 0.01
           </test>
           <test logic = "AND" value="1">
                 /fdm/jsbsim/systems/crash-detect/wing-load lt -34800
                 /sim/signals/fdm-initialized gt 0
                 /gear/gear/wow lt 0.1
-                /fdm/jsbsim/propulsion/engine/starter-norm lt 0.1
+                /engines/engine[0]/cranking lt 0.01
           </test>
           <output>/fdm/jsbsim/systems/crash-detect/crashed</output>
           <output>/fdm/jsbsim/systems/crash-detect/over-g-failure </output>
@@ -49,13 +61,13 @@
                 /fdm/jsbsim/systems/crash-detect/wing-load gt 64000
                 /sim/signals/fdm-initialized gt 0
                 /gear/gear/wow lt 0.1
-                /fdm/jsbsim/propulsion/engine/starter-norm lt 0.1
+                /engines/engine[0]/cranking lt 0.01
           </test>
           <test logic = "AND" value="1">
                 /fdm/jsbsim/systems/crash-detect/wing-load lt -32000
                 /sim/signals/fdm-initialized gt 0
                 /gear/gear/wow lt 0.1
-                /fdm/jsbsim/propulsion/engine/starter-norm lt 0.1
+                /engines/engine[0]/cranking lt 0.01
           </test>
           <output> /fdm/jsbsim/systems/crash-detect/over-g </output>
      </switch>
@@ -68,7 +80,7 @@
      <switch name="systems/crash-detect/FG">
         <default value="0"/>
         <test logic="AND" value="1">
-           /fdm/jsbsim/propulsion/engine/starter-norm lt 0.1
+           /engines/engine[0]/cranking lt 0.1
            /fdm/jsbsim/systems/crash-detect/crashed == 1
         </test>
         <output>/sim/freeze/clock</output>
@@ -84,8 +96,10 @@
      <switch name="impact">
           <default value="0"/>
           <test logic="AND" value="1">
+                /engines/engine[0]/cranking lt 0.1
                 /fdm/jsbsim/position/h-agl-ft lt 1.0
                 /fdm/jsbsim/simulation/sim-time-sec gt 1.0
+                /fdm/jsbsim/systems/crash-detect/wing-load gt 89600
           </test>
           <output>/fdm/jsbsim/systems/crash-detect/crashed</output>
           <output>/fdm/jsbsim/systems/crash-detect/impact </output>

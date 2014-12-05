@@ -134,7 +134,7 @@ var checkVNE = func {
         # complete structural failure after 5 seconds above VNE + 10%
         if (VnePlusTime >= 10) {
            screen.log.write("Structural Failure");
-            setprop("/fdm/jsbsim/systems/crash-detect/crashed", 1);
+            # setprop("/fdm/jsbsim/systems/crash-detect/crashed", 1);
         }
         VnePlusTime = VnePlusTime + 1;
     }
