@@ -216,7 +216,7 @@
    
     <channel name="triggers">
     
-      <!-- FIXME trigger stuff needs more for for MP -->
+      <!-- FIXME trigger stuff needs more for for MP and bombable-->
       <pure_gain name="triggerToMP">
           <input>/controls/armament/gun-trigger</input>
           <gain>1.0</gain>
@@ -229,6 +229,28 @@
           <output>/sim/multiplay/generic/int[2]</output>
        </pure_gain>
 
+    </channel>
+    
+    <channel name="sound">
+    
+      <!-- to prevent sounds at system start -->
+      
+      <switch name="start up sound off">
+       <default value="0"/>
+       <test logic = "AND" value="1">
+          /fdm/jsbsim/simulation/sim-time-sec gt 1
+       </test>
+       <output>/fdm/jsbsim/simulation/soundOK</output>
+     </switch>
+     
+     <switch name="flaps start up sound off">
+       <default value="0"/>
+       <test logic = "AND" value="1">
+          /fdm/jsbsim/simulation/sim-time-sec gt 15
+       </test>
+       <output>/fdm/jsbsim/simulation/flapsSoundOK</output>
+     </switch>
+    
     </channel>
 
 </system>

@@ -414,15 +414,15 @@
 
        <fcs_function name="enclosure attenuation">
           <function>
-             <product>
-               <property>/canopy/position-norm</property>
-               <value>9.0</value>
-            </product>
+            <product>
+              <property>/canopy/position-norm</property>
+              <value>6.0</value>
+           </product>
           </function>
           <clipto>
-              <min> 0.5</min>
-              <max> 1.0 </max>
-            </clipto>
+            <min>0.1</min>
+            <max> 1.0 </max>
+          </clipto>
           <output>propulsion/engine/enclosure-attenuation-level</output>
        </fcs_function>
 
