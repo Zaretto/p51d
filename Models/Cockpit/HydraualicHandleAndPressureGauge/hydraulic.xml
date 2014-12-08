@@ -43,8 +43,7 @@
 
  <animation>
   <type>material</type>
-  <object-name>bezeloutside</object-name>
-  <object-name>plate</object-name>
+  <object-name>bezel</object-name>
   <emission>
     <factor-prop>/controls/lighting/cabin-norm</factor-prop>
     <red>0.2</red>

@@ -1717,28 +1717,6 @@
 
  <animation>
   <type>material</type>
-  <object-name>right-flor-bracket-2</object-name>
-  <object-name>right-flor-bracket-3</object-name>
-  <object-name>right-flor-bracket-1</object-name>
-  <object-name>right-flor-bracket-5</object-name>
-  <object-name>right-flor-bracket-4</object-name>
-  <object-name>rght-flor-cord</object-name>
-  <object-name>left-flor-bracket-2</object-name>
-  <object-name>left-flor-bracket-3</object-name>
-  <object-name>left-flor-bracket-1</object-name>
-  <object-name>left-flor-bracket-5</object-name>
-  <object-name>left-flor-bracket-4</object-name>
-  <object-name>left-flor-cord</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.06</red>
-    <green>0.03</green>
-    <blue>0.03</blue>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
   <object-name>THROTTLE</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>

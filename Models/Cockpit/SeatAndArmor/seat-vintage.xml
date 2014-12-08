@@ -5,15 +5,7 @@
 
  <animation>
   <type>material</type>
-  <object-name>HeadRest</object-name>
-  <object-name>HeadRestRing</object-name>
-  <object-name>armor-plate</object-name>
-  <object-name>SeatFrameBack</object-name>
-  <object-name>seat-back-cushaaion</object-name>
-  <object-name>RightBracket</object-name>
-  <object-name>LeftBracket</object-name>
-  <object-name>SeatBrace</object-name>
-  <object-name>SeatFrameBottom</object-name>
+  <object-name>seatAndArmor</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.28</red>

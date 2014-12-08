@@ -2,15 +2,14 @@
 <PropertyList>
 
  <path>flor-light-rt.ac</path>
-
+ 
  <animation>
   <type>material</type>
-  <object-name>right-bulb</object-name>
   <emission>
-    <factor-prop>controls/lighting/instruments-norm</factor-prop>
-    <red>1.0</red>
-    <green>1.0</green>
-    <blue>1.0</blue>
+    <factor-prop>controls/lighting/cabin-norm</factor-prop>
+    <red>0.06</red>
+    <green>0.03</green>
+    <blue>0.03</blue>
   </emission>
  </animation>
 

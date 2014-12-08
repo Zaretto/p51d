@@ -5,7 +5,6 @@
 
     <animation>
         <type>rotate</type>
-        <object-name>right-salvo-arm</object-name>
         <object-name>right-salvo</object-name>
         <property>/controls/armament/salvo-right</property>
         <interpolation>
@@ -32,7 +31,6 @@
 
         <animation>
         <type>rotate</type>
-        <object-name>left-salvo-arm</object-name>
         <object-name>left-salvo</object-name>
         <property>/controls/armament/salvo-left</property>
         <interpolation>
@@ -60,21 +58,10 @@
 
   <animation>
   <type>material</type>
-  <object-name>left-salvo-arm</object-name>
   <object-name>left-salvo</object-name>
-  <object-name>right-salvo-arm</object-name>
   <object-name>right-salvo</object-name>
+  <object-name>bracket</object-name>
   <object-name>lower-bolt</object-name>
-  <object-name>lower-bushing</object-name>
-  <object-name>cover-lop-lower</object-name>
-  <object-name>lower-upper-bolt</object-name>
-  <object-name>upper-upper-bolt</object-name>
-  <object-name>lower-upper-bushing</object-name>
-  <object-name>upper-upper-bushing</object-name>
-  <object-name>right-inner-bracket</object-name>
-  <object-name>right-outer-bracket</object-name>
-  <object-name>left-inner-bracket</object-name>
-  <object-name>left-outer-bracket</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.28</red>

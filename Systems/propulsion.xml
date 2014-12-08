@@ -5,7 +5,6 @@
 <system name="Propulsion">
     
     <property>systems/engine/mp-inhg</property>
-    <property>propulsion/fuel_pump</property>
     
     <property> /controls/armament/drop-tank-released-1 </property>
     <property> /controls/armament/drop-tank-released-2 </property>

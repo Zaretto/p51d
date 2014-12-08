@@ -79,16 +79,7 @@
  <animation>
     <type>material</type>
        <object-name>FuelOffLever</object-name>
-       <object-name>fuel-cutoff-face</object-name>
-       <object-name>fuel-cutoff-body</object-name>
-       <object-name>selector-body-1</object-name>
-       <object-name>selector-body-2</object-name>
-       <object-name>selector-body-3</object-name>
-       <object-name>selector-body-4</object-name>
-       <object-name>tank-selector-face</object-name>
-       <object-name>selector-body-6</object-name>
-       <object-name>selector-body-7</object-name>
-       <object-name>selector-body-8</object-name>
+       <object-name>tankSelectorBody</object-name>
        <object-name>handle</object-name>
        <emission>
           <factor-prop>controls/lighting/cabin-norm</factor-prop>
