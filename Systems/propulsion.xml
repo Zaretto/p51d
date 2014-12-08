@@ -24,9 +24,13 @@
                       1.0    75.05
                 </tableData>         
             </table>
+            <clipto>
+               <min> 0 </min>
+               <max> 75.05 </max>
+             </clipto>
         </scheduled_gain>   
    
-     <fcs_function name="systems/engine/boost-calc">
+    <fcs_function name="systems/engine/boost-calc">
         <function>
             <integer>
                 <table>
@@ -54,8 +58,12 @@
                         16250       1.1   1.25   1.5    1.75   1.9   1.99
                     </tableData>
                 </table>
-            </integer>
+            </integer>            
         </function>
+        <clipto>
+           <min> 0.01 </min>
+           <max> 1.99 </max>
+        </clipto>
         <output>systems/engine/boost-calculation</output>
     </fcs_function>
 
@@ -73,13 +81,13 @@
            </test>
        </switch>
 
-       <pure_gain name="systems/engine/boost-speed-gain">
+      <pure_gain name="systems/engine/boost-speed-gain">
           <input> systems/engine/boost-speed </input>
           <gain> 1.0 </gain>
-          <output> propulsion/engine/boost-speed </output>
+          <output> propulsion/engine/boost-speed </output>          
        </pure_gain>
         
-       <fcs_function name="systems/engine/MP-alt-bsfc-lbs_hphr-curve">
+      <fcs_function name="systems/engine/MP-alt-bsfc-lbs_hphr-curve">
           <function>
                 <table>
                     <independentVar lookup="row">atmosphere/density-altitude</independentVar>
@@ -113,10 +121,14 @@
                    </tableData>
                 </table>  
           </function>
+          <clipto>
+             <min> 0.3700 </min>
+             <max> 1.18 </max>
+           </clipto>
           <output>propulsion/engine/bsfc-lbs_hphr</output>   
         </fcs_function>
         
-        <fcs_function name="systems/engine/VE-MP-curve">
+       <fcs_function name="systems/engine/VE-MP-curve">
           <function>
                 <table>
                     <independentVar lookup="row">/engines/engine/mp-inhg</independentVar>
@@ -130,6 +142,10 @@
                     </tableData>
                 </table>  
           </function>
+          <clipto>
+             <min> 0.75 </min>
+             <max> 0.8259 </max>
+           </clipto>
           <output>propulsion/engine/volumetric-efficiency</output>   
         </fcs_function>
         

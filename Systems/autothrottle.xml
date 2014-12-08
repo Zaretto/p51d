@@ -11,7 +11,7 @@
     <property value="0.05"> ap/map-pid-kp </property>
     <property value="0.1"> ap/map-pid-ki </property>
     <property value="0.00625"> ap/map-pid-kd </property>
-    <property value="1"> ap/throttle-gain </property>
+    <property value="1.0"> ap/throttle-gain </property>
     <property value="25.0"> ap/lag_constant </property>
     <property value="75"> ap/max_MP </property>
 
