@@ -3,13 +3,6 @@
 
  <path>seat-vintage.ac</path>
 
-    <animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>50</max-m>
-    </animation>
-
-
  <animation>
   <type>material</type>
   <object-name>HeadRest</object-name>

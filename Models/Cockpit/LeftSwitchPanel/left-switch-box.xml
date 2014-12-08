@@ -4,12 +4,6 @@
  <path>left-switch-box.ac</path>
 
     <animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>100</max-m>
-    </animation>
-
-    <animation>
         <type>rotate</type>
         <object-name>landing-light-switch</object-name>
         <property>/controls/lighting/landing-lights</property>

@@ -3,12 +3,6 @@
     <path>gun-switch.ac</path>
 
     <animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>7</max-m>
-    </animation>
-
-    <animation>
         <type>rotate</type>
         <object-name>Switch</object-name>
         <property>/controls/armament/gunsight/power-on</property>

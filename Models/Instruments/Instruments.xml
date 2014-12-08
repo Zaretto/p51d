@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <PropertyList>
 
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>25</max-m>
+  </animation>
+
 <!-- panel models -->
  <model>
   <path>Aircraft/p51d/Models/Instruments/Altimeter/p51d-jw-alt.xml</path>

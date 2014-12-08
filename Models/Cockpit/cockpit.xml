@@ -7,8 +7,7 @@
         <type>range</type>
         <min-m>0</min-m>
         <max-m>1000</max-m>
-    </animation>
-    
+    </animation>    
    
  <animation>
   <type>rotate</type>

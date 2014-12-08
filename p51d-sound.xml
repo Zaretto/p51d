@@ -31,6 +31,11 @@
     <property>engines/engine/rpm</property>
     <factor>0.0033</factor>
    </pitch>
+   <position>
+     <x>0.5</x>
+     <y>0</y>
+     <z>-0.012</z>
+   </position>
   </crank>
 
   <crank>
@@ -44,6 +49,11 @@
     <property>/engines/engine/running</property>
     <factor>0.15</factor>
    </pitch>
+   <position>
+     <x>0.5</x>
+     <y>0</y>
+     <z>-0.012</z>
+   </position>
   </crank>
   
   <engine>
@@ -88,6 +98,11 @@
     <min>0.0</min>
     <max>1.0</max>
    </pitch>
+   <position>
+     <x>0.5</x>
+     <y>0</y>
+     <z>-0.012</z>
+   </position>
   </engine>
 
   <engine>
@@ -128,6 +143,11 @@
     <min>0.0</min>
     <max>0.70</max>
    </pitch>
+   <position>
+     <x>0.5</x>
+     <y>0</y>
+     <z>-0.012</z>
+   </position>
   </engine>
 
  <rumble>
@@ -146,6 +166,11 @@
     <type>log</type>
     <factor>0.25</factor>
    </volume>
+   <position>
+     <x>2.0</x>
+     <y>0</y>
+     <z>-1.0</z>
+   </position>
   </rumble>
 
   <gear>
@@ -153,6 +178,11 @@
    <mode>in-transit</mode>
    <path>Sounds/gear.wav</path>
    <property>/gear/gear[0]/position-norm</property>
+   <position>
+     <x>1.5</x>
+     <y>0</y>
+     <z>-1.0</z>
+   </position>
   </gear>
 
   <gear>
@@ -168,6 +198,11 @@
        <property>/gear/gear/wow</property>
      </not>
    </condition>
+   <position>
+     <x>1.5</x>
+     <y>0</y>
+     <z>-1.0</z>
+   </position>
   </gear>
 
   <squeal>
@@ -201,6 +236,11 @@
     <offset>0.5</offset>
     <max>1.0</max>
    </pitch>
+   <position>
+     <x>2.0</x>
+     <y>0</y>
+     <z>-1.0</z>
+   </position>
   </squeal>
  
   <flap>
@@ -212,6 +252,11 @@
     <property>/fdm/jsbsim/simulation/flapsSoundOK</property>
     <factor>0.15</factor>
    </volume>
+   <position>
+     <x>2.5</x>
+     <y>0</y>
+     <z>-1.0</z>
+   </position>
   </flap>
   
   <wind>
@@ -231,6 +276,11 @@
     <offset>0.5</offset>
     <max>1.0</max>
    </pitch>
+   <position>
+     <x>2.0</x>
+     <y>0</y>
+     <z>1.0</z>
+   </position>
   </wind>
   
   <wind-gear>
@@ -250,6 +300,11 @@
     <offset>0.5</offset>
     <max>1.0</max>
    </pitch>
+   <position>
+     <x>1.5</x>
+     <y>0</y>
+     <z>-1.0</z>
+   </position>
   </wind-gear>
   
  <!-- P-51 did not have a stall warning horn -->
@@ -305,7 +360,7 @@
         </volume>
       </click>
 
-    <click>
+      <click>
         <name>gun sight off</name>
         <path>Sounds/click.wav</path>
         <condition>

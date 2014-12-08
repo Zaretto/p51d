@@ -2,12 +2,6 @@
 <PropertyList>
 
  <path>throttle.ac</path>
-
-    <animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-property>sim/rendering/static-lod/rough</max-property>
-    </animation>
 	 
  <animation>
   <type>rotate</type>

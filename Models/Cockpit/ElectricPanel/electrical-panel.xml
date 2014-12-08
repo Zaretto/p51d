@@ -5,12 +5,6 @@
  <path>electrical-panel.ac</path>
 
     <animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>100</max-m>
-    </animation>
-
-    <animation>
        <type>translate</type>
        <object-name>rec-lights-key</object-name>
        <property>/controls/lighting/rec-light-key</property>

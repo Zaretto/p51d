@@ -3,13 +3,6 @@
 
  <path>fuel-tank-selector.ac</path>
 
-    <animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>7</max-m>
-    </animation>
-
-
  <!--
      tanks are:
       tank    left wing tank
