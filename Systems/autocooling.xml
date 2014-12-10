@@ -9,6 +9,7 @@
 
     <property value="-0.6"> ap/coolant-gain </property>
     <property value="101"> ap/target_coolant-temp </property>
+    <property value="0.0"> systems/cooling/radiator-door-pos </property>
 
     <!--
          propulsion/engines/engine/cooling-factor should be

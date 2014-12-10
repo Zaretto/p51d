@@ -322,7 +322,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
    <checklists include="Checklists/p51d-checklists.xml"/>
 
  </sim>
-
+ 
  <instrumentation>
     <magnetic-compass>
        <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
@@ -370,7 +370,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
      </key>
     </keyboard>
  </input>
-
+ 
 <!-- initialize control properties -->
  <canopy>
       <position-norm type="float">1.0</position-norm>
@@ -588,6 +588,10 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
         <brakes>
             <brake-scaling type="float">1.0</brake-scaling>
         </brakes>
+        <cooling>
+           <radiator-door-pos type="float"> 0.0 </radiator-door-pos>
+           <oil-door-pos type="float"> 0.0 </oil-door-pos>
+        </cooling>
       </systems>
       <ap>
         <map-error type="float">0.0</map-error>
