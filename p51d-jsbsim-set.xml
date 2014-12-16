@@ -264,7 +264,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       /fdm/jsbsim/systems/armament/ejectionAnimatedOuter
       /fdm/jsbsim/systems/armament/ejectionAnimatedInner
       -->
-        <int n="0" />  <!-- engine cranking -->
+        <int n="0" /> <!-- alias="/engines/engine[0]/cranking" -->
         <int n="1" />  <!-- /controls/armament/gun-trigger -->
         <int n="2" />  <!-- /controls/armament/trigger2 --> 
         <int n="4" />  <!-- /ai/submodels/submodel[12]/count -->
@@ -327,6 +327,9 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
     <magnetic-compass>
        <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
     </magnetic-compass>
+    <comm n="1">
+       <power-btn type="int">0</power-btn>
+    </comm> 
  </instrumentation>
  
   <gear>

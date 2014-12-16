@@ -223,7 +223,7 @@
           <output>/sim/multiplay/generic/int[1]</output>
        </pure_gain>
         
-        <pure_gain name="trigger2ToMP">
+     <pure_gain name="trigger2ToMP">
           <input>/controls/armament/bombs-both</input>
           <gain>1.0</gain>
           <output>/sim/multiplay/generic/int[2]</output>

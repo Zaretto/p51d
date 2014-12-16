@@ -2,7 +2,7 @@
 
 <!--
 
-Modified version of what was origianlly in FlightGear CVS.  This has 
+Modified version of what was originally in FlightGear CVS.  This has 
 been extensively modified by:
 
 Hal V. Engel hvengel@astound.net
@@ -180,9 +180,9 @@ Hal V. Engel hvengel@astound.net
                 <y> -72 </y>
                 <z> -85 </z>
             </location>
-            <static_friction> 0.8 </static_friction>
+            <static_friction> 0.55 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
-            <rolling_friction> 0.1 </rolling_friction>
+            <rolling_friction> 0.02 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 9800 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 2500 </damping_coeff>
             <damping_coeff_rebound unit="LBS/FT/SEC">6200</damping_coeff_rebound>
@@ -196,9 +196,9 @@ Hal V. Engel hvengel@astound.net
                 <y> 72 </y>
                 <z> -85 </z>
             </location>
-            <static_friction> 0.8 </static_friction>
+            <static_friction> 0.55 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
-            <rolling_friction> 0.1 </rolling_friction>
+            <rolling_friction> 0.02 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 9800 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 2500 </damping_coeff>
             <damping_coeff_rebound unit="LBS/FT/SEC">6200</damping_coeff_rebound>
@@ -212,9 +212,9 @@ Hal V. Engel hvengel@astound.net
                 <y> 0 </y>
                 <z> -37.5 </z>
             </location>
-            <static_friction> 0.9 </static_friction>
-            <dynamic_friction> 0.7 </dynamic_friction>
-            <rolling_friction> 0.1 </rolling_friction>
+            <static_friction> 0.66 </static_friction>
+            <dynamic_friction> 0.6 </dynamic_friction>
+            <rolling_friction> 0.02 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 3500 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 4280 </damping_coeff>
             <steerability> STEERABLE </steerability>
@@ -586,7 +586,7 @@ Hal V. Engel hvengel@astound.net
     <system file="weapons-weight"/>
     <system file="tail-wheel"/>
     <system file="hydraulic"/>
-    <system file="mpanimation"/>
+    <system file="MPAnimation"/>
 
     <flight_control name="FCS: P51D">
 

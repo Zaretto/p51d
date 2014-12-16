@@ -27,7 +27,7 @@
 
  <!-- Pilot -->
  <model>
-   <path>Aircraft/p51d/Models/pilot/pilotWWII.xml</path>
+   <path>Aircraft/p51d/Models/Pilot/pilotWWII.xml</path>
    <name>pilot</name>
    <nopreview/>
    <offsets>
