@@ -13,16 +13,14 @@
   <type>rotate</type>
   <object-name>ReostatKnob</object-name>
   <property>controls/lighting/cabin-norm</property>
-  <factor>-270</factor>
-  <center>
-   <x-m>2.588</x-m>
-   <y-m>0.086733</y-m>
-   <z-m>0.06892</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
+  <factor>270</factor>
+  <axis>   
+   <x1-m>2.5875</x1-m>
+   <y1-m>0.086829</y1-m>
+   <z1-m>-0.027584</z1-m>
+   <x2-m>2.5783</x2-m>
+   <y2-m>0.087026</y2-m>
+   <z2-m>-0.030676</z2-m>
   </axis>
  </animation>
  
