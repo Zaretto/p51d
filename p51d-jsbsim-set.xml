@@ -65,6 +65,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   </model> 
 
   <view n="0">
+   <name>Cockpit</name>
    <internal archive="y">true</internal>
    <config>
     <x-offset-m archive="y" type="double">0.0</x-offset-m>
@@ -371,6 +372,34 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
             </binding>
         </mod-up> 
      </key>
+     <key n="99">
+        <name>c</name>
+        <desc>Open/Close canopy</desc>
+        <binding>
+          <condition>
+            <less-than>
+              <property>/canopy/position-norm</property>
+              <value>0.01</value>
+            </less-than>
+          </condition>
+          <command>property-interpolate</command>
+          <property>/canopy/position-norm</property>
+          <value>1</value>
+          <rate>0.15</rate>
+        </binding>
+        <binding>
+          <condition>
+            <greater-than>
+              <property>/canopy/position-norm</property>
+              <value>0.99</value>
+            </greater-than>
+          </condition>
+          <command>property-interpolate</command>
+          <property>/canopy/position-norm</property>
+          <value>0</value>
+          <rate>0.15</rate>
+         </binding>
+      </key>
     </keyboard>
  </input>
  

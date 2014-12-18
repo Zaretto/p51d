@@ -106,26 +106,33 @@
  <animation>
   <type>pick</type>
   <object-name>canopyCrankHandle</object-name>
-  <property>canopy/position-norm</property>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
-        <command>property-interpolate</command> 
+        <condition>
+          <less-than>
+            <property>/canopy/position-norm</property>
+            <value>0.01</value>
+          </less-than>
+        </condition>
+        <command>property-interpolate</command>
         <property>/canopy/position-norm</property>
-        <value type="float">1.0</value> 
-        <rate>0.15</rate>        
+        <value>1</value>
+        <rate>0.15</rate>
       </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
       <binding>
-        <command>property-interpolate</command> 
+        <condition>
+          <greater-than>
+            <property>/canopy/position-norm</property>
+            <value>0.99</value>
+          </greater-than>
+        </condition>
+        <command>property-interpolate</command>
         <property>/canopy/position-norm</property>
-        <value type="float">0.0</value> 
-        <rate>0.15</rate>        
-      </binding>
+        <value>0</value>
+        <rate>0.15</rate>
+       </binding>
     </action>
  </animation>
  
