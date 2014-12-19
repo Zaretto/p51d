@@ -2,7 +2,7 @@
 
 <system name="Hydraulic">
 
-    <property value="0.0">systems/gear/inner-doors</property>
+    <property value="1.0">systems/gear/inner-doors</property>
     
     <channel name="pressure">
 

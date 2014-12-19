@@ -5,10 +5,10 @@ var pos = 0;
 var loopid = 0;
 var running = 0;
 var init=1;
-var state = 1;
+var engineStateChanging = 0;
 
 var changeState = func {
-    state = 1; 
+    engineStateChanging = 0;   
 } 
 
 var initGearDoorPos = func {
@@ -16,27 +16,29 @@ var initGearDoorPos = func {
 }
 
 var engineGearDoorPos = func() {
-  # engine just started and gear is down
-  if (getprop("engines/engine[0]/running") > 0.99 and 
-      getprop("gear/gear[0]/position-norm") > 0.99) { 
-    state = 0;        
-    interpolate("/fdm/jsbsim/systems/gear/inner-doors", 0.0, 4.0);
-    settimer(changeState, 4.0, 1);
-  }
-  # engine just stopped and gear down
-  if (getprop("engines/engine[0]/running") < 0.01 and 
-      getprop("gear/gear[0]/position-norm") > 0.99) {
-    interpolate("/fdm/jsbsim/systems/gear/inner-doors", 1.0, 4.0);
-    state = 1;
-  }
+  if (getprop("gear/gear[0]/position-norm") > 0.99) {
+     engineStateChanging = 1;
+     print ("engine just started");
+     # engine just started and gear is down
+     if (getprop("engines/engine[0]/running") > 0.99) {  
+       print ("close doors");     
+       interpolate("/fdm/jsbsim/systems/gear/inner-doors", 0.0, 4.0);
+     }
+     # engine just stopped and gear down
+     else if (getprop("engines/engine[0]/running") < 0.01) {
+       print ("open doors");
+       interpolate("/fdm/jsbsim/systems/gear/inner-doors", 1.0, 4.0);
+     }
+     settimer(changeState, 4.0);
+   }
 }
 
 
 initGearDoorPos();
-setlistener("/engines/engine[0]/running", engineGearDoorPos);
+setlistener("/engines/engine[0]/running", engineGearDoorPos, 0, 0);
 
 var gearPos = func () {
-  if (getprop("engines/engine[0]/running") > 0.99 and state == 1) {
+  if (getprop("engines/engine[0]/running") > 0.99 and engineStateChanging == 0) {
     if (getprop("gear/gear[0]/position-norm") < 0.33333333333) 
       pos = getprop("gear/gear[0]/position-norm") * 3;
     if (getprop("gear/gear[0]/position-norm") >= 0.33333333333 and getprop("gear/gear[0]/position-norm") < 0.666666) 

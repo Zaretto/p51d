@@ -1166,6 +1166,33 @@ Hal V. Engel hvengel@astound.net
             </product>
         </function>
 	
+  <!--   <fcs_function name="prop-induced-velocity_fps_clipped">
+      <function>
+        <sum>
+           <p>propulsion/engine/prop-induced-velocity_fps</p>
+           <v>0.0</v>
+        </sum>
+      </function>
+      <clipto>
+        <min>0.0</min>
+        <max>500.0</max>
+      </clipto>
+      <output>propulsion/engine/prop-induced-velocity_fps_clipped</output>
+	</fcs_function>  -->
+    
+    <fcs_function name="u-aero-fps_clipped">
+      <function>
+        <sum>
+           <p>velocities/u-aero-fps</p>
+           <v>0.0</v>
+        </sum>
+	  </function>    
+      <clipto>
+        <min>-3500.0</min> <!--max 40 mile per hour tail wind -->
+      </clipto>
+      <output>u-aero-fps_clipped</output>
+    </fcs_function>
+    
 	<function name="aero/thrust-qbar_psf">
 	  <description>Air_velocity_due_to_propwash</description>
 	  <product>
@@ -1173,7 +1200,7 @@ Hal V. Engel hvengel@astound.net
 	    <p> atmosphere/rho-slugs_ft3 </p>
 	    <pow>
 	      <sum>
-		     <p> velocities/u-aero-fps </p>
+		     <p>u-aero-fps_clipped</p>
              <product>
                 <p> propulsion/engine/prop-induced-velocity_fps </p>
                 <v> 2.0 </v>

@@ -596,6 +596,15 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
  
  <fdm>
    <jsbsim>
+      <u-aero-fps_clipped type="float">0.0</u-aero-fps_clipped>
+      <velocities>
+        <zero type="float">0.0</zero>
+      </velocities> 
+      <propulsion>
+        <engine>
+          <prop-induced-velocity_fps_clipped type="float">0.0</prop-induced-velocity_fps_clipped>
+        </engine>
+      </propulsion>        
       <systems>
         <pilotAlwaysVisible type="int">0</pilotAlwaysVisible>
         <compressibility>
