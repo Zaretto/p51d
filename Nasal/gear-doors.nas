@@ -18,15 +18,12 @@ var initGearDoorPos = func {
 var engineGearDoorPos = func() {
   if (getprop("gear/gear[0]/position-norm") > 0.99) {
      engineStateChanging = 1;
-     print ("engine just started");
      # engine just started and gear is down
-     if (getprop("engines/engine[0]/running") > 0.99) {  
-       print ("close doors");     
+     if (getprop("engines/engine[0]/running") > 0.99) {   
        interpolate("/fdm/jsbsim/systems/gear/inner-doors", 0.0, 4.0);
      }
      # engine just stopped and gear down
      else if (getprop("engines/engine[0]/running") < 0.01) {
-       print ("open doors");
        interpolate("/fdm/jsbsim/systems/gear/inner-doors", 1.0, 4.0);
      }
      settimer(changeState, 4.0);
