@@ -1200,7 +1200,7 @@ Hal V. Engel hvengel@astound.net
 	    <p> atmosphere/rho-slugs_ft3 </p>
 	    <pow>
 	      <sum>
-		     <p>u-aero-fps_clipped</p>
+		     <p>velocities/u-aero-fps</p>
              <product>
                 <p> propulsion/engine/prop-induced-velocity_fps </p>
                 <v> 2.0 </v>
