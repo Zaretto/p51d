@@ -388,6 +388,22 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
           <rate>0.15</rate>
         </binding>
       </key>
+      <key n="115">
+        <name>s</name>
+        <desc>starter switch</desc>        
+        <binding>
+          <command>property-assign</command>
+          <property>/fdm/jsbsim/systems/engine/starter</property>
+          <value>1</value>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-assign</command>
+            <property>/fdm/jsbsim/systems/engine/starter</property>
+            <value>0</value>
+          </binding>
+        </mod-up>
+      </key>
     </keyboard>
  </input>
  
