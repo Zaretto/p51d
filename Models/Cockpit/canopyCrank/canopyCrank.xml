@@ -71,7 +71,7 @@
   </axis>
  </animation>
  
-   <animation>
+ <animation>
   <type>rotate</type>
   <object-name>lockLever</object-name>
   <property>canopy/position-norm</property>
@@ -110,29 +110,17 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
-        <condition>
-          <less-than>
-            <property>/canopy/position-norm</property>
-            <value>0.01</value>
-          </less-than>
-        </condition>
-        <command>property-interpolate</command>
-        <property>/canopy/position-norm</property>
-        <value>1</value>
-        <rate>0.15</rate>
+          <command>property-cycle</command>
+          <property>/canopy/direction</property>
+          <value type="int">0</value>
+          <value type="int">1</value>
       </binding>
       <binding>
-        <condition>
-          <greater-than>
-            <property>/canopy/position-norm</property>
-            <value>0.99</value>
-          </greater-than>
-        </condition>
         <command>property-interpolate</command>
         <property>/canopy/position-norm</property>
-        <value>0</value>
+        <property>/canopy/direction</property>
         <rate>0.15</rate>
-       </binding>
+      </binding>
     </action>
  </animation>
  

@@ -376,29 +376,17 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
         <name>c</name>
         <desc>Open/Close canopy</desc>
         <binding>
-          <condition>
-            <less-than>
-              <property>/canopy/position-norm</property>
-              <value>0.01</value>
-            </less-than>
-          </condition>
-          <command>property-interpolate</command>
-          <property>/canopy/position-norm</property>
-          <value>1</value>
-          <rate>0.15</rate>
+          <command>property-cycle</command>
+          <property>/canopy/direction</property>
+          <value type="int">0</value>
+          <value type="int">1</value>
         </binding>
         <binding>
-          <condition>
-            <greater-than>
-              <property>/canopy/position-norm</property>
-              <value>0.99</value>
-            </greater-than>
-          </condition>
           <command>property-interpolate</command>
           <property>/canopy/position-norm</property>
-          <value>0</value>
+          <property>/canopy/direction</property>
           <rate>0.15</rate>
-         </binding>
+        </binding>
       </key>
     </keyboard>
  </input>
@@ -406,6 +394,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
 <!-- initialize control properties -->
  <canopy>
       <position-norm type="float">1.0</position-norm>
+      <direction type="int">1</direction>
  </canopy>
  <controls>   
    <engines>
