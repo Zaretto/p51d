@@ -280,14 +280,14 @@
 
      <channel name="Switch Panel">         
 		 
-        <!-- <switch name="systems/engine/engage-starter">
+        <switch name="systems/engine/engage-starter">
          <default value="0"/>
          <test logic="AND" value="1">
             systems/engine/starter GT 0.9
             /controls/engines/engine/master-bat GT 0.9
          </test>
          <output>/controls/engines/engine/starter</output>
-       </switch> -->
+       </switch>
      </channel>
 
      <channel name="Recognition lights">

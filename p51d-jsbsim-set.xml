@@ -390,19 +390,27 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       </key>
       <key n="115">
         <name>s</name>
-        <desc>starter switch</desc>        
-        <binding>
-          <command>property-assign</command>
-          <property>/fdm/jsbsim/systems/engine/starter</property>
-          <value>1</value>
+        <desc>starter switch</desc>  
+        <binding>        
+           <command>nasal</command>
+           <script>controls.startEngine(1)</script>
+        </binding>
+	    <binding>
+           <command>property-assign</command>
+           <property>/fdm/jsbsim/systems/engine/starter</property>
+           <value>1</value>
         </binding>
         <mod-up>
-          <binding>
-            <command>property-assign</command>
-            <property>/fdm/jsbsim/systems/engine/starter</property>
-            <value>0</value>
-          </binding>
-        </mod-up>
+           <binding>
+              <command>nasal</command>
+              <script>controls.startEngine(0)</script>
+           </binding>
+	       <binding>
+              <command>property-assign</command>
+              <property>/fdm/jsbsim/systems/engine/starter</property>
+              <value>0</value>
+           </binding>
+         </mod-up> 
       </key>
     </keyboard>
  </input>
@@ -601,7 +609,6 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
  
  <fdm>
    <jsbsim>
-      <u-aero-fps_clipped type="float">0.0</u-aero-fps_clipped>
       <velocities>
         <zero type="float">0.0</zero>
       </velocities> 
@@ -644,6 +651,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       </ap>
       <fcs>
         <flap-cmd-norm type="float">1.0</flap-cmd-norm>
+        <qbar-psf_clipped type="float">0.0</qbar-psf_clipped>
       </fcs>  
    </jsbsim>
  </fdm>

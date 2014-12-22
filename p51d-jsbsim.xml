@@ -1119,6 +1119,20 @@ Hal V. Engel hvengel@astound.net
             </fcs_function>
 
         </channel>
+        
+        <channel name="clipping">
+        
+           <pure_gain name="fcs/qbar-psf_clipped">
+	         <description>qbar-psf_clipped</description>
+	         <input>aero/qbar-psf</input> 
+             <gain>1.0</gain>             
+             <clipto>
+                <min>-1000.0</min>
+                <max>10000.0</max>
+             </clipto>         
+	      </pure_gain>
+        
+        </channel>
 
     </flight_control>
 
@@ -1165,7 +1179,7 @@ Hal V. Engel hvengel@astound.net
                   </table>
             </product>
         </function>
-	
+        
 	<function name="aero/thrust-qbar_psf">
 	  <description>Air_velocity_due_to_propwash</description>
       <sum>
