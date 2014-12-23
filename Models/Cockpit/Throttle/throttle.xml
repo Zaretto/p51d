@@ -316,6 +316,22 @@
     <dep>-10</dep>
    </entry>
    <entry>
+    <ind>0.1</ind>
+    <dep>-10</dep>
+   </entry>
+   <entry>
+    <ind>0.11</ind>
+    <dep>50</dep>
+   </entry>
+   <entry>
+    <ind>0.89</ind>
+    <dep>50</dep>
+   </entry>
+   <entry>
+    <ind>0.9</ind>
+    <dep>70</dep>
+   </entry>
+   <entry>
     <ind>1.0</ind>
     <dep>70</dep>
    </entry>
