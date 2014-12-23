@@ -63,6 +63,10 @@
             <name>Primer</name>
             <value>ON</value>
         </item>
+        <item include="starter-on.xml">
+            <name>Start Switch</name>
+            <value>ON</value>
+        </item>
         <item include="mixture-run.xml">
             <name>Mixture (after engine start)</name>
             <value>RUN</value>
