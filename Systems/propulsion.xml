@@ -61,7 +61,7 @@
             </integer>            
         </function>
         <clipto>
-           <min> 0.01 </min>
+           <min> 0.099 </min>
            <max> 1.99 </max>
         </clipto>
         <output>systems/engine/boost-calculation</output>
@@ -214,29 +214,57 @@
       <fcs_function name="systems/engine/fuel-pump-gain">
         <function>
             <sum>
-                <table>
-                    <independentVar lookup="row">propulsion/engine/propeller-rpm</independentVar>
-                    <tableData>
-                        0    0
-                        400  16
-                    </tableData>
-                </table>
+                <product>
+                   <table>
+                      <independentVar lookup="row">propulsion/engine/propeller-rpm</independentVar>
+                      <tableData>
+                          0    0
+                          400  16
+                      </tableData>
+                  </table>
+                  <property>/controls/fuel/on</property>
+                </product>
                 <product>
                     <value> 12 </value>
-                    <property> propulsion/fuel_pump </property>
+                    <property>propulsion/fuel_pump</property>
+                    <property>/controls/engines/engine/master-bat</property>
+                    <property>/controls/fuel/on</property>
                 </product>
             </sum>
         </function>
       </fcs_function>
 
-     <pure_gain name="systems/engine/fuel-pump-psi">
-        <input> /controls/fuel/on  </input>
-        <gain> systems/engine/fuel-pump-gain </gain>
+     <kinematic name="systems/engine/fuel-pump-psi">
+        <input>systems/engine/fuel-pump-gain</input>
+        <traverse>
+           <setting>
+             <position>0</position>
+             <time>1.0</time>
+           </setting>
+           <setting>
+             <position>12</position>
+             <time>1.0</time>
+          </setting>
+           <setting>
+             <position>19</position>
+             <time>0.5</time>
+          </setting>
+        </traverse>
+        <clipto>
+             <min> 0 </min>
+             <max>systems/engine/fuel-pump-gain</max>
+        </clipto>
+        <!-- <gain>systems/engine/fuel-pump-gain</gain> -->
+      </kinematic>
+      
+ <!--     <pure_gain name="systems/engine/fuel-pump-psi">
+        <input>systems/engine/fuel-pump-psi_lag</input>
+        <gain>systems/engine/fuel-pump-gain</gain>
         <clipto>
              <min> 0 </min>
              <max> 19 </max>
         </clipto>
-      </pure_gain>
+      </pure_gain> -->
 
       <switch name="systems/fuel-pressure">
           <default value="0"/>
