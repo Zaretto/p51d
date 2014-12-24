@@ -259,6 +259,72 @@
    </position>
   </flap>
   
+  <canopy>
+   <name>canopy-move</name>
+   <mode>in-transit</mode>
+   <path>Aircraft/p51d/Sounds/canopy-move.wav</path>
+   <condition>
+    <and>
+      <greater-than>
+        <property>canopy/position-norm</property>
+        <value>0.1</value>
+      </greater-than>
+      <less-than>
+        <property>canopy/position-norm</property>
+        <value>0.9</value>
+      </less-than>
+    </and>
+   </condition>
+   <volume>
+    <factor>0.7</factor>
+   </volume>
+   <position>
+     <x>1.5</x>
+     <y>0</y>
+     <z>0.0</z>
+   </position>
+  </canopy>
+  
+  <canopy>
+   <name>canopy-lock-open</name>
+   <path>Aircraft/p51d/Sounds/canopy-lock.wav</path>
+   <condition>   
+      <greater-than>
+        <property>canopy/position-norm</property>
+        <value>0.9</value>
+      </greater-than>
+   </condition>
+   <volume>
+    <property>/fdm/jsbsim/simulation/soundOK</property>
+    <factor>0.7</factor>
+   </volume>
+   <position>
+     <x>1.5</x>
+     <y>0</y>
+     <z>0.0</z>
+   </position>
+  </canopy>
+  
+  <canopy>
+   <name>canopy-lock-closed</name>
+   <path>Aircraft/p51d/Sounds/canopy-lock.wav</path>
+   <condition>
+      <less-than>
+        <property>canopy/position-norm</property>
+        <value>0.1</value>
+      </less-than>
+   </condition>
+   <volume>
+    <property>/fdm/jsbsim/simulation/soundOK</property>
+    <factor>0.7</factor>
+   </volume>
+   <position>
+     <x>1.5</x>
+     <y>0</y>
+     <z>0.0</z>
+   </position>
+  </canopy>
+  
   <wind>
    <name>wind</name>
    <mode>looped</mode>
