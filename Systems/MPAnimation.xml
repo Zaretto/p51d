@@ -252,5 +252,48 @@
      </switch>
     
     </channel>
+    
+    <channel name="wheelAnmimation">
+    
+      <switch name="wheelSpinWOW">
+         <default value="0"/>
+         <test logic="OR" value="1">
+            /gear/gear[0]/wow GT 0
+            /gear/gear[1]/wow GT 0
+            /gear/gear[2]/wow GT 0
+         </test>
+         <output>systems/wheelSpinWOW</output>
+      </switch>
+    
+    <fcs_function name="wheelSpining">
+        <function>
+           <product>
+             <property>/velocities/uBody-fps</property> 
+             <property>systems/wheelSpinWOW</property>
+             <value>1.0</value>             
+           </product>
+        </function>
+        <output>systems/wheelSpining</output>
+     </fcs_function>
+
+     <kinematic name="systems/wheelSpin">
+        <input>systems/wheelSpining</input>
+        <traverse>
+           <setting>
+             <position>0.0</position>
+             <time>5.0</time>
+           </setting>
+           <setting>
+             <position>-1.0</position>
+             <time>5.0</time>
+           </setting>
+        </traverse>
+        <clipto>
+             <min>systems/wheelSpining</min>
+             <max>0</max>
+        </clipto>
+      </kinematic>
+    
+    </channel>
 
 </system>

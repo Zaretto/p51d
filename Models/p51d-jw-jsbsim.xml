@@ -1647,7 +1647,7 @@
   <animation>
   <type>spin</type>
   <object-name>mainWheelLeft</object-name>
-  <property>velocities/uBody-fps</property>
+  <property>fdm/jsbsim/systems/wheelSpin</property>
   <factor>-1.5</factor>
   <center>
    <x-m>1.91262</x-m>
@@ -1664,7 +1664,7 @@
  <animation>
   <type>spin</type>
   <object-name>mainWheelRight</object-name>
-  <property>velocities/uBody-fps</property>
+  <property>fdm/jsbsim/systems/wheelSpin</property>
   <factor>-1.5</factor>
   <center>
    <x-m>1.91262</x-m>
