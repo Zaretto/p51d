@@ -174,10 +174,32 @@
   </rumble>
 
   <gear>
-   <name>gear</name>
-   <mode>in-transit</mode>
-   <path>Sounds/gear.wav</path>
-   <property>/gear/gear[0]/position-norm</property>
+   <name>gear up</name>
+   <path>Aircraft/p51d/Sounds/gear-up.wav</path>
+   <condition>
+   <not>
+       <property>/controls/gear/gear-down</property> 
+   </not> 
+   </condition>
+   <volume>
+    <property>/fdm/jsbsim/simulation/flapsSoundOK</property>
+    <factor>1.5</factor>
+   </volume>
+   <position>
+     <x>1.5</x>
+     <y>0</y>
+     <z>-1.0</z>
+   </position>
+  </gear>
+  
+  <gear>
+   <name>gear down</name>
+   <path>Aircraft/p51d/Sounds/gear-down.wav</path>
+   <property>/controls/gear/gear-down</property> 
+   <volume>
+    <property>/fdm/jsbsim/simulation/flapsSoundOK</property>
+    <factor>1.5</factor>
+   </volume>
    <position>
      <x>1.5</x>
      <y>0</y>
@@ -185,7 +207,7 @@
    </position>
   </gear>
 
-  <gear>
+ <!-- <gear>
    <name>gear-lock</name>
    <path>Sounds/gear-lck.wav</path>
    <condition>
@@ -203,7 +225,7 @@
      <y>0</y>
      <z>-1.0</z>
    </position>
-  </gear>
+  </gear> -->
 
   <squeal>
    <name>squeal</name>

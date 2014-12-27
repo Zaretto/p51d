@@ -464,7 +464,7 @@
   </axis>
  </animation>
  
-   <animation>
+ <animation>
   <type>rotate</type>
   <object-name>landingLight</object-name>
   <property>gear/gear[1]/position-norm</property>

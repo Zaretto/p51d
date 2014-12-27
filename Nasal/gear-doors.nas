@@ -1,11 +1,11 @@
 #
 # Nasal script to open and close main gear inner doors based on engine running state and landing gear position.
 
-var pos = 0;
-var loopid = 0;
-var running = 0;
-var init=1;
 var engineStateChanging = 0;
+var direction = 1;
+var pos = 1;
+
+setprop("/fdm/jsbsim/systems/gear/direction", "down");
 
 var changeState = func {
     engineStateChanging = 0;   
@@ -35,6 +35,15 @@ initGearDoorPos();
 setlistener("/engines/engine[0]/running", engineGearDoorPos, 0, 0);
 
 var gearPos = func () {
+  if (pos == 1 and getprop("gear/gear[0]/position-norm") > 0.9999) {
+     pos = 0;
+     direction = 0;
+  }
+  else if (pos == 0 and getprop("gear/gear[0]/position-norm") < 0.0001){
+     pos = 0;
+     direction = 0;
+  }
+  setprop("/fdm/jsbsim/systems/gear/direction", direction);
   if (getprop("engines/engine[0]/running") > 0.99 and engineStateChanging == 0) {
     if (getprop("gear/gear[0]/position-norm") < 0.33333333333) 
       pos = getprop("gear/gear[0]/position-norm") * 3;
@@ -46,4 +55,4 @@ var gearPos = func () {
   }
 }
 
-setlistener("/gear/gear[0]/position-norm", gearPos);
+setlistener("/gear/gear[0]/position-norm", gearPos, 0, 0);

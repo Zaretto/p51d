@@ -223,7 +223,7 @@ Hal V. Engel hvengel@astound.net
             <retractable>1</retractable>
         </contact>
         
-        <!-- Next three are jack stands for testing landing gear functionality
+        <!-- Next three are jack stands for testing landing gear functionality -->
          <contact type="STRUCTURE" name="LEFT_WING_TIP_JACK_STAND">
               <location unit="IN">
               <x> 25 </x>
@@ -260,7 +260,7 @@ Hal V. Engel hvengel@astound.net
               <damping_coeff unit="LBS/FT/SEC">  1179.23 </damping_coeff>
           </contact>
           
-        Comment out the Jack stand section when not doing gear tests -->
+        <!-- Comment out the Jack stand section when not doing gear tests -->
 
           <contact type="STRUCTURE" name="LEFT_WING_TIP_BOTTOM">
               <location unit="IN">
@@ -1031,7 +1031,7 @@ Hal V. Engel hvengel@astound.net
         </channel>
         
         <channel name="Landing Gear">
-            <kinematic name="Gear Control">
+            <kinematic name="Gear Control up">
                 <input>gear/gear-cmd-norm</input>
                 <traverse>
                     <setting>
@@ -1040,11 +1040,38 @@ Hal V. Engel hvengel@astound.net
                     </setting>
                     <setting>
                         <position>1</position>
-                        <time>12</time>
+                        <time>14.1</time>
                     </setting>
                 </traverse>
-                <output>gear/gear-pos-norm</output>
+                <output>gear/gear-pos-norm-up</output>
             </kinematic>
+            
+            <kinematic name="Gear Control down">
+                <input>gear/gear-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>8.1</time>
+                    </setting>
+                </traverse>
+                <output>gear/gear-pos-norm-down</output>
+            </kinematic>
+            
+            <switch name="gearPosTimed">
+              <default value="0.0"/>
+              <test value="gear/gear-pos-norm-up">
+                 gear/gear-cmd-norm == 0
+              </test>
+              <test value="gear/gear-pos-norm-down">
+                 gear/gear-cmd-norm == 1
+              </test>
+              <output>gear/gear-pos-norm</output>
+           </switch>       
+           
         </channel>
 
         <channel name="Brakes">

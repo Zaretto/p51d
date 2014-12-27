@@ -288,10 +288,6 @@
              <time>5.0</time>
            </setting>
         </traverse>
-        <clipto>
-             <min>systems/wheelSpining</min>
-             <max>0</max>
-        </clipto>
       </kinematic>
     
     </channel>
