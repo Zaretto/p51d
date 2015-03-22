@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<system name="Autocooling">
+<autopilot name="Autocooling">
 
     <!-- INTERFACE PROPERTIES -->
     <property value="0.0">ap/ap_coolant_hold</property>
@@ -78,4 +78,4 @@
         
    </channel>
    
-</system>
+</autopilot>
