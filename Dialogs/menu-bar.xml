@@ -83,6 +83,13 @@
                    <script>p51d.loadGuns(0)</script>
                 </binding>
              </item>
+             <item>
+             <label>Autostart</label>
+                 <binding>
+                   <command>nasal</command>
+                   <script>p51d.autostart(1)</script>
+                 </binding>
+             </item>
         </menu>
      </default>
 

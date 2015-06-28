@@ -52,7 +52,7 @@
     <ratedrpm2> 3000 </ratedrpm2>
     <ratedaltitude2> 16000 </ratedaltitude2>
     
-     <starter-torque> 100 </starter-torque>
+     <!-- <starter-torque> 100 </starter-torque> -->
      <starter-rpm> 500 </starter-rpm> 
     
 </piston_engine>

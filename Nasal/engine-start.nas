@@ -76,3 +76,41 @@ var init_listener = setlistener("/sim/signals/fdm-initialized", func {
 	    removelistener(init_listener);
 	  }
 	);
+
+var autostart_listener_id = 0;
+var autostart_listener_called = 0;
+var autostart_listener = func(n) {
+  if (! autostart_listener_called and n.getValue() > 800)
+  {
+    autostart_listener_called = 1;
+    # Hack to work around the inability to set a tied variable
+    # (/controls/engines/engine/starter) in a listener callback.
+    settimer(func { controls.startEngine(0) },0);
+    setprop("/fdm/jsbsim/systems/engine/starter", 0);
+    setprop("/fdm/jsbsim/propulsion/fuel_pump", 0);
+    settimer(func { setprop("/controls/engines/engine/throttle", 0) }, 1.5 );
+    removelistener(autostart_listener_id);
+    autostart_listener_called  = 0;
+  }
+}
+	
+var autostart = func (n) {
+    setprop("/controls/engines/engine/mixture", 0.5);
+    setprop("/controls/fuel/on", 1);
+    setprop("/controls/engines/engine/master-bat", 1);
+    setprop("/controls/armament/gunsight/power-on", 1);
+    setprop("/controls/armament/guns-enabled", 1);
+    setprop("/controls/armament/gunsight/computer-on", 1);
+    setprop("/controls/gear/brake-parking", 1);
+    setprop("/controls/engines/engine/magnetos", 3);
+    setprop("/controls/engines/engine/throttle", 0.15);
+    setprop("/fdm/jsbsim/propulsion/fuel_pump", 1);
+    setprop("/fdm/jsbsim/systems/engine/primed", 1);
+    setprop("/controls/engines/engine/primer-time", 17);
+
+    autostart_listener_id = setlistener("/engines/engine/rpm", autostart_listener);
+    setprop("/fdm/jsbsim/systems/engine/starter", 1);
+    setprop("/controls/engines/engine/starter", 1);
+    controls.startEngine(1);
+}
+
