@@ -196,7 +196,7 @@
 
  <!-- Marker model used by checklists -->
  <model>
-   <path>Models/Aircraft/marker.xml</path>
+   <path>Aircraft/Generic/marker.xml</path>
  </model>
  
  <!-- start up smoke left -->
