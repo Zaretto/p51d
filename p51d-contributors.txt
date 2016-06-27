@@ -1,0 +1,20 @@
+Written by Daniel Dubreuil (dany93), May 2016, with what I currently know.
+Feel free to amend it.
+
+About 2003: P51D Creation by Jim Wilson, with a YASim FDM.
+
+Around from 2010: Hal Van Engel improvements.
+Implementation (in collaboration with Jon S. Berndt) of the JSBSim FDM.
+During 2010 - 2014, Hal Van Engel made this aircraft one of the most wonderful, sophisticated in FlightGear:
+- FDM, stall and spin behavior (pionneer work, up to flat spin).
+- Systems
+- 3D
+..... ?
+
+Viewed from the FlightGear community, this aircraft was his "kid".
+
+Hal, we miss you very much...
+
+2015 - 2016:
+Autostart implementation by githlar.
+Some minor FDM modifications by Daniel Dubreuil.
