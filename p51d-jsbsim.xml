@@ -8,6 +8,8 @@ been extensively modified by:
 Hal V. Engel hvengel@astound.net
 
 -->
+<!-- In test, working file dany93. Some changes on stall and spin departure for takeoff and landing, spiraling propwash effect. 30 Nov 2015 -->
+
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
 <fdm_config name="P-51D (JSBSim)" version="2.0" release="BETA"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -16,7 +18,7 @@ Hal V. Engel hvengel@astound.net
     <fileheader>
         <author> Aeromatic / Jon Berndt / DATCOM / Hal V. Engel</author>
         <filecreationdate> 2001-01-01 </filecreationdate>
-        <version> $Revision: 1.15 $ </version>
+        <version> $Revision: 1.16 $ </version>
         <description> Advanced model of P-51D fighter </description>
     </fileheader>
 
@@ -490,7 +492,7 @@ Hal V. Engel hvengel@astound.net
             <orient unit="DEG">
                 <roll> -4.0 </roll>
                 <pitch> 2.5 </pitch>
-                <yaw> -6.0 </yaw>
+                <yaw> 0 </yaw>
             </orient>
             <feed>0</feed>
             <feed>1</feed>
@@ -506,7 +508,7 @@ Hal V. Engel hvengel@astound.net
                 <orient unit="DEG">
                     <roll> -4.0 </roll>
                     <pitch> 2.5 </pitch>
-                    <yaw> -6.0 </yaw>
+                    <yaw> 0 </yaw>
                 </orient>
                 <sense> 1 </sense>
                 <p_factor> 60 </p_factor>
@@ -1061,7 +1063,7 @@ Hal V. Engel hvengel@astound.net
                 <output>gear/gear-pos-norm-down</output>
             </kinematic>
             
-            <switch name="gearPosTimed">
+           <switch name="gearPosTimed">
               <default value="0.0"/>
               <test value="gear/gear-pos-norm-up">
                  gear/gear-cmd-norm == 0
@@ -1070,7 +1072,7 @@ Hal V. Engel hvengel@astound.net
                  gear/gear-cmd-norm == 1
               </test>
               <output>gear/gear-pos-norm</output>
-           </switch>       
+            </switch>
            
         </channel>
 
@@ -1207,27 +1209,25 @@ Hal V. Engel hvengel@astound.net
             </product>
         </function>
         
-	<function name="aero/thrust-qbar_psf">
-	  <description>Air_velocity_due_to_propwash</description>
-      <sum>
-	    <product>
-	      <v> 0.5 </v>
-	      <p>atmosphere/rho-slugs_ft3</p>
-          <pow>
+    <function name="aero/thrust-qbar_psf">
+        <description>Dynamic_pressure_including_backwash</description>
+        <sum>
             <product>
-              <p> propulsion/engine/prop-induced-velocity_fps </p>
-              <v> 2.0 </v>
+                <v> 0.5 </v>
+                <p>atmosphere/rho-slugs_ft3</p>
+                <pow>
+                    <product>
+                        <p> propulsion/engine/prop-induced-velocity_fps </p>
+                        <v> 2.0 </v>
+                    </product>
+                    <v> 2.0 </v>
+                </pow>        
             </product>
-            <v> 2.0 </v>
-   	      </pow>        
-	    </product>
-        <p>aero/qbar-psf</p>
-      </sum>      
-	</function>
-	
+            <p>aero/qbar-psf</p>
+        </sum>      
+    </function>
 
         <axis name="DRAG">
-
 
             <!--
                Add in parisitic drag for fuselage etc.  Since
@@ -1824,7 +1824,7 @@ Hal V. Engel hvengel@astound.net
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
                     <property>aero/beta-rad</property>
-                    <value>-0.10</value> -->
+                    <value>-0.10</value>
                     <!-- Asymmetric stall -->
                     <table>
                         <independentVar lookup="row">aero/alpha-deg</independentVar>
@@ -1832,12 +1832,22 @@ Hal V. Engel hvengel@astound.net
                         <tableData>
                                  0    90   140   180
                             -35  1    8     2    1
-                            -10  1   14     4    2
+                            -10  1    14    4    2
                             -8   1    1     1    1
                             10.2 1    1     1    1
-                            11   1   25     20   5
-                            25   1   25     20   3
-                            35   1   12     9    2
+                            14   1    2.5   2    1.5
+                            15   1    22.5  17.5 5
+                            25   1    25    20   3
+                            35   1    12    9    2
+                        </tableData> 
+                    </table>
+                    <table>
+                        <independentVar lookup="row">/gear/gear[0]/wow</independentVar>
+                        <independentVar lookup="column">/gear/gear[1]/wow</independentVar>
+                        <tableData>
+                                0   1
+                            0   1   0 
+                            1   0   0
                         </tableData>
                     </table>
                 </product>
@@ -1863,22 +1873,32 @@ Hal V. Engel hvengel@astound.net
                     <property>metrics/bw-ft</property>
                     <property>aero/bi2vel</property>
                     <property>velocities/r-aero-rad_sec</property>
-                    <value>0.07</value>-->
+                    <value>0.07</value>
                     <!-- Asymmetric stall -->
                     <table>
                         <independentVar lookup="row">aero/alpha-deg</independentVar>
                         <independentVar lookup="column">velocities/vc-kts</independentVar>
                         <tableData>
                                  0    90   140   180
-                            -35  1    6     2    1
-                            -10  1    8     3    1
+                            -35  1    8     2    1
+                            -10  1    14    4    2
                             -8   1    1     1    1
                             10.2 1    1     1    1
-                            11   1    20    18   4
+                            14   1    2.5   2    1.5
+                            15   1    20    18   4
                             25   1    20    18   3
                             35   1    12    8    2
                         </tableData>
                     </table> 
+                    <table>
+                        <independentVar lookup="row">/gear/gear[0]/wow</independentVar>
+                        <independentVar lookup="column">/gear/gear[1]/wow</independentVar>
+                        <tableData>
+                                0   1
+                            0   1   0 
+                            1   0   0
+                        </tableData>
+                    </table>
                 </product>
             </function>
             
@@ -1950,10 +1970,19 @@ Hal V. Engel hvengel@astound.net
                                -33.0      0.0     -0.005   -0.0025    -0.000025
                                 -9.0      0.0     -0.00025 -0.000125  -0.00000125
                                  0.0      0.0      0.0      0.0        0.0
-                                10.2      0.0      0.0      0.0        0.0
-                                10.35     0.0      0.0025   0.00125    0.00000125
-                                10.5      0.0     -0.00025 -0.000125  -0.000000125
+                                14        0.0      0.0      0.0        0.0
+                                14.15     0.0      0.0025   0.00125    0.00000125
+                                14.3      0.0     -0.00025 -0.000125  -0.000000125
                                 34.5      0.0     -0.0005  -0.00025   -0.00000025
+                        </tableData>
+                    </table>
+                    <table>
+                        <independentVar lookup="row">/gear/gear[0]/wow</independentVar>
+                        <independentVar lookup="column">/gear/gear[1]/wow</independentVar>
+                        <tableData>
+                                0   1
+                            0   1   0 
+                            1   0   0
                         </tableData>
                     </table>
                 </product>
@@ -2214,41 +2243,41 @@ Hal V. Engel hvengel@astound.net
                           -1.25       -0.3800
                           -0.25       -0.2600
                            0.75       -0.1300
-                          1.75         0.0000
-                          2.75         0.1300
-                          3.75         0.2600
-                          4.75         0.3800
-                          5.75         0.5000
-                          6.75         0.6000
-                          7.75         0.7000
-                          8.75         0.7900
-                          9.75         0.8700
-                          10.75        0.9300
-                          11.75        1.0000
-                          13.75        0.9500
-                          14.75        0.7800
-                          16.75        0.6800
-                          17.75        0.6000
-                          18.75        0.6000
-                          19.75        0.6200
-                          20.75        0.6500
-                          21.75        0.6800
-                          31.75        0.9200
-                          41.75        1.0800
-                          51.75        1.0900
-                          61.75        0.8900
-                          71.75        0.6300
-                          81.75        0.3650
-                          91.75        0.0500
-                          101.75      -0.2300
-                          111.75      -0.5000
-                          121.75      -0.7400
-                          131.75      -0.8900
-                          141.75      -0.8900
-                          151.75      -0.6200
-                          161.75      -0.6700
-                          171.75      -0.7800
-                          181.75       0.0000
+                          1.75        0
+                          3.25        0.13
+                          4.75        0.26
+                          6.25        0.38
+                          7.75        0.5
+                          9.25        0.6
+                          10.75       0.7
+                          12.25       0.79
+                          13.75       0.87
+                          15.25       0.93
+                          16.75       1
+                          18.625      0.95
+                          19.5625     0.78
+                          21.4375     0.68
+                          22.375      0.6
+                          23.3125     0.6
+                          24.25       0.62
+                          25.1875     0.65
+                          26.125      0.68
+                          35.5        0.92
+                          44.875      1.08
+                          54.25       1.09
+                          63.625      0.89
+                          73          0.63
+                          82.375      0.365
+                          91.75       0.05
+                          101.75      -0.23
+                          111.75      -0.5
+                          121.75      -0.74
+                          131.75      -0.89
+                          141.75      -0.89
+                          151.75      -0.62
+                          161.75      -0.67
+                          171.75      -0.78
+                          181.75      0
                       </tableData>
                   </table>
                 </product>
@@ -2267,7 +2296,25 @@ Hal V. Engel hvengel@astound.net
                     <value>0.1200</value>
                 </product>
             </function>
-            
+
+            <function name="aero/coefficient/Cnspw">
+                <description>Yaw_moment_due_to_spiraling_propwash</description>
+                <product>
+                    <property>metrics/Sw-sqft</property>
+                    <property>metrics/bw-ft</property>
+                    <property>propulsion/engine/thrust-lbs</property>
+                    <value>-0.00006</value>
+                    <table>
+                        <independentVar lookup="row">/velocities/airspeed-kt</independentVar>
+                        <tableData>
+                            0    1
+                            140  1
+                            190  0
+                        </tableData>
+                    </table>                    
+                </product>
+            </function>
+
             <function name="aero/coefficient/Cnr">
                 <description>Yaw_moment_due_to_yaw_rate</description>
                 <product>
