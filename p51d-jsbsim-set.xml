@@ -71,7 +71,8 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
     <x-offset-m archive="y" type="double">0.0</x-offset-m>
     <y-offset-m archive="y" type="double">0.675</y-offset-m>
     <z-offset-m archive="y" type="double">3.28972</z-offset-m>
-    <pitch-offset-deg>-15.5</pitch-offset-deg>
+    <pitch-offset-deg>-16</pitch-offset-deg>
+    <default-field-of-view-deg>80</default-field-of-view-deg>
    </config>
   </view>
 
@@ -150,7 +151,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 14. Ignition switch to BOTH after 6 blades have passed.
 15. Fuel boost switch to ON.
 16. Primer switch ON 3 or 4 seconds when cold, one second when hot.
-17. When engine starts, move mixture control to RUN and release primer switch as engine smooths out.  Do not jockey throttle. If engine does not start after turning several revolutions, continue priming.
+17. When engine starts (in principle, but do it anyway), move mixture control to RUN and release primer switch as engine smooths out.  Do not jockey throttle. If engine does not start after turning several revolutions, continue priming.
 18. Check oil pressure. If it is not at 50 psi with in 30 seconds after engine starts stop engine and investigate.
 19. Move battery-disconnect to ON after disconnecting external power supply.
 20. Move generator-disconnect to ON.
@@ -583,7 +584,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <leverPos type="float">0.0</leverPos>
    </gear>
    <flight>
-      <flaps type="float">1.0</flaps>
+      <flaps type="float">0.0</flaps>
    </flight>   
  </controls>
  

@@ -68,7 +68,7 @@
             <value>ON</value>
         </item>
         <item include="mixture-run.xml">
-            <name>Mixture (after engine start)</name>
+            <name>Mixture (in principle after engine start. Set it anyway)</name>
             <value>RUN</value>
         </item>
         <item include="primer-off.xml">
