@@ -84,7 +84,7 @@
   <path>Aircraft/p51d/Models/Instruments/GMeter/p51d-jw-acc.xml</path>
   <offsets>
    <x-m>2.565</x-m>
-   <y-m>0.02</y-m>
+   <y-m>0.123</y-m>
    <z-m>0.105</z-m>
   </offsets>
  </model>
@@ -93,7 +93,7 @@
   <path>Aircraft/p51d/Models/Instruments/VSI/p51d-jw-vsi.xml</path>
   <offsets>
    <x-m>2.565</x-m>
-   <y-m>0.123</y-m>
+   <y-m>0.02</y-m>
    <z-m>0.105</z-m>
   </offsets>
  </model>
