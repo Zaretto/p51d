@@ -112,11 +112,14 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
    </config>
   </view>
 
-  <systems>
-    <autopilot>
-        <path>Aircraft/p51d/Systems/autopilot.xml</path>
-    </autopilot>    
-  </systems>
+    <systems>
+        <autopilot>
+            <path>Aircraft/p51d/Systems/autopilot.xml</path>
+        </autopilot>
+        <property-rule n="100">
+            <path>Aircraft/p51d/Systems/views.xml</path>
+        </property-rule>
+    </systems>
 
   <hud>
    <enable3d>false</enable3d>
@@ -323,8 +326,22 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
  <menubar include="Dialogs/menu-bar.xml" />
    <checklists include="Checklists/p51d-checklists.xml"/>
 
- </sim>
+         <current-view>
+             <z-offset-dec-step type="double">0.0</z-offset-dec-step>
+             <z-offset-inc-step type="double">0.0</z-offset-inc-step>
+             <can-change-z-offset type="bool">false</can-change-z-offset>
  
+             <z-offset-min-m type="float">10.0</z-offset-min-m>
+             <z-offset-max-m type="float">300.0</z-offset-max-m>
+         </current-view>
+
+        <!-- Fix scrolling direction of knobs -->
+        <mouse>
+            <invert-mouse-wheel type="bool">true</invert-mouse-wheel>
+        </mouse>
+
+    </sim>
+
  <instrumentation>
     <magnetic-compass>
        <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
@@ -414,6 +431,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
          </mod-up> 
       </key>
     </keyboard>
+    <mice include="Sim/mice.xml"/>
  </input>
  
 <!-- initialize control properties -->
