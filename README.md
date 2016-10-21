@@ -1,9 +1,47 @@
-P-51D Information
-=============
+North American Aviation P-51D-25-NA
+===================================
 
-FLYING HINTS
+This is a model of the North American Aviation P-51D-25-NA for FlightGear made
+by Hal Van Engel.
 
-STARTING THE ENGINE
+It is based on the Github [FGMEMBERS/p51d][url-gh-fgmembers-p51d] repository,
+which is partially based on the old Gitorious git repository and partially
+on the official FGADDON svn [p51d][url-sf-fgaddon-p51d] repository.
+
+The `Resources/` folder has been removed with [The BFG Repo-Cleaner][url-bfg].
+This has reduced the size of the repository (including a checkout) from 1.6 GiB
+to 150 MiB. Please see one of the repositories above for the Blender files
+and blueprints in the `Resources/` folder.
+
+Authors
+=======
+
+2003
+----
+The original model with YASim FDM was created around 2003 by Jim Wilson.
+
+2010
+----
+
+Between 2010 and 2014 Hal Van Engel ([passed away in 2015][url-forum-engel])
+greatly improved the model by improving the JSBSim FDM (in collaboration with
+Jon S. Berndt) and systems, and creating new high quality 3D models of
+the cockpit and the exterior, turning the P51D model into one of the
+most wonderful and sophisticated models available for FlightGear.
+Viewed from the FlightGear community, this aircraft was his "kid".
+
+2015
+----
+Autostart implemented by githlar and some minor FDM modifications by
+Daniel Dubreuil (@dany93).
+
+Flying hints
+============
+
+For more information or the USAAF manual, see the [FlightGear wiki][url-wiki-p51d].
+
+Starting the engine
+-------------------
 
 1. Set propeller control to full INCREASE.
 2. Ignition switch and battery-disconnect (second switch, top row of electrical
@@ -27,11 +65,12 @@ STARTING THE ENGINE
 14. When engine starts, move mixture control to RUN and release primer switch as
     engine smooths out.  Do not jockey throttle. If engine does not start after
     turning several revolutions, continue priming.
-15. Check oil pressure. If it is not at 50 psi withing 30 seconds after engine
-    starts stop engine and investigate.
+15. Check oil pressure. If it is not at 50 psi within 30 seconds after engine
+    starts, stop engine and investigate.
 16. Move battery-disconnect to ON after disconnecting external power supply.
 
-PREFLIGHT AIRPLANE CHECK
+Preflight airplane check
+------------------------
 
 1. Primary Controls:
    Check surfaces for free movement.
@@ -62,7 +101,8 @@ detent.
 7. Check that cockpit enclosure in locked and that canopy emergency release
 handle is safetied.
 
-PREFLIGHT ENGINE CHECK
+Preflight engine check
+----------------------
 
 1. Check propeller in full INCREASE.
 2. Power check - advance throttle to obtain 2300 rpm.  At this rpm, the manifold
@@ -85,7 +125,8 @@ PREFLIGHT ENGINE CHECK
 9. Check supercharger control switch at AUTO.
 10. Oil and coolant radiators air controls switches at AUTOMATIC.
 
-TAKE OFF
+Take off
+--------
 
 1. Slowly increase throttle to 61 inHG Manifold Pressure as you pick up speed.
 2. Be ready to actuate rudder during the take off roll.
@@ -108,7 +149,8 @@ TAKE OFF
    You will need to remove right rudder trim almost as soon as you leave the
    ground.
 
-CLIMB
+Climb
+-----
 
 1. Back off manifold pressure to 46 inHG.
 2. Adjust propeller pitch to 2700 rpm.
@@ -119,7 +161,8 @@ setting.  It will hold 46 inHg to about 30,000 feet.
 5. If the supercharger speed switch is at AUTOMATIC the supercharger gear ratio
 will be controled by an automatic system.
 
-FLYING
+Flying
+------
 
 1. Trim and Cruise at between 2100 and 2400 rpm with between 30 and 36 inHg
    manifold pressure.
@@ -130,7 +173,8 @@ FLYING
    maximum of 7 minutes (war emergency power).Note that war emergency power is not
    for flying fast,  rather it is for dogfighting at 200mph.
 
-PRE_TRAFFIC_PATTERN CHECK
+Pre traffic pattern check
+-------------------------
 
 1. Fuel tank selector handle on fullest internal tank.
 2. Check that fuel booster pump switch is ON.
@@ -140,7 +184,8 @@ PRE_TRAFFIC_PATTERN CHECK
 6. Oil and coolant radiator air control switch AUTOMATIC.
 7. Clean out engine at 3000 rpm and 61 in Hg for one minute.
 
-TRAFFIC_PATTERN CHECK
+Traffic pattern check
+---------------------
 
 1. Landing gear handle DN below 170 MPH IAS.
 2. Check gear position by use of warning lights, horn and hydraulic pressure.
@@ -150,7 +195,8 @@ TRAFFIC_PATTERN CHECK
 6. Flaps full down at altitude of at least 400 feet.  (Below 165 MPH IAS.)
 7. 120 IAS at edge of field.
 
-LANDING
+Landing
+-------
 
 1. Use continuous back pressure on the stick to obtain an tail-low attitude for
    actual touch down.
@@ -161,7 +207,8 @@ LANDING
    Excessive braking can cause you to do a ground loop (nose over).  Some recommend
    raising flaps immediately after touchdown.
 
-PERFORMANCE
+Performance
+-----------
 
 This information is gleaned from various sources:
 
@@ -173,7 +220,8 @@ Sustained Climb Speed: 175 mph
 Service Ceiling: 41,200
 Stall Speed (9000lbs) Gear/Flaps Up: 102mph Gear/Flaps Down: 95mph
 
-KEYBOARD
+Keyboard
+--------
 
 Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to 
 drop bombs, drop tanks and to fire rockets depending on how the weapons system 
@@ -181,22 +229,30 @@ related switches on the panel are set.  If you wish to use a joystick button
 for this (recommended) then you will need to do something like this in your joystick 
 xml file:
 
- <button n="<your joystick button number>">
-  <desc>Fire Rockets or Release Bombs/Drop Tanks</desc>
+```xml
+<button n="<your joystick button number>">
+    <desc>Fire Rockets or Release Bombs/Drop Tanks</desc>
     <repeatable>false</repeatable>
-      <binding>
-       <command>nasal</command>
-       <script>setprop("/controls/armament/trigger2", 1)</script>
-      </binding>
+        <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger2", 1)</script>
+        </binding>
     <mod-up>
-      <binding>
-        <command>nasal</command>
-        <script>setprop("/controls/armament/trigger2", 0)</script>
-      </binding>
+        <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger2", 0)</script>
+        </binding>
     </mod-up>
-  </button>
-  
+</button>
+```
+
 You will need to change <your joystick button number> to the correct number for the button 
 you want to use.  On the P-51D this was the button on the top of the stick so it is 
 recommended that you map this to a joystick button that is under your thumb to simulate the 
 real controls.
+
+  [url-gh-fgmembers-p51d]: https://github.com/FGMEMBERS/p51d
+  [url-sf-fgaddon-p51d]: https://sourceforge.net/p/flightgear/fgaddon/HEAD/tree/trunk/Aircraft/p51d/
+  [url-bfg]: http://rtyley.github.io/bfg-repo-cleaner/
+  [url-wiki-p51d]: http://wiki.flightgear.org/North_American_P-51_Mustang
+  [url-forum-engel]: https://forum.flightgear.org/viewtopic.php?f=4&t=28279#p268713
