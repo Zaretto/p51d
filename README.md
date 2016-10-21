@@ -30,6 +30,8 @@ Installation
 New features
 ------------
 
+* Thunder sounds
+
 * Can be damaged by missiles
 
 * Zoom in or out using mouse scrollwheel, up to a distance of 300 meters

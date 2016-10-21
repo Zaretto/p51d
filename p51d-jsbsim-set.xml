@@ -113,8 +113,11 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   </view>
 
     <systems>
-        <autopilot>
+        <autopilot n="2">
             <path>Aircraft/p51d/Systems/autopilot.xml</path>
+        </autopilot>
+        <autopilot n="3">
+            <path>Aircraft/p51d/Systems/thunder.xml</path>
         </autopilot>
         <property-rule n="100">
             <path>Aircraft/p51d/Systems/views.xml</path>
@@ -765,6 +768,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <file>Aircraft/p51d/Nasal/liveries.nas</file>
       <file>Aircraft/p51d/Nasal/tyresmoke.nas</file>
       <file>Aircraft/p51d/Nasal/damage.nas</file>
+      <file>Aircraft/p51d/Nasal/sound.nas</file>
     </p51d>
     <SCR_522C>
       <file>Aircraft/Instruments-3d/SCR-522C/Nasal/SCR-522C.nas</file>

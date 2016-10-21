@@ -350,7 +350,7 @@
   <wind>
    <name>wind</name>
    <mode>looped</mode>
-   <path>Sounds/wind.wav</path>
+   <path>Sounds/wind1.wav</path>
    <property>/velocities/airspeed-kt</property>
    <volume>
      <property>/velocities/airspeed-kt</property>
@@ -1609,6 +1609,34 @@
            <z>0.115</z>
         </position>
       </click>
+
+    <thunder1>
+       <name>thunder1</name>
+       <mode>once</mode>
+       <path>Sounds/thunder1.wav</path>
+       <property>/sim/sound/thunder1</property>
+       <volume>
+           <property>/sim/sound/volume-thunder1</property>
+       </volume>
+    </thunder1>
+    <thunder2>
+       <name>thunder2</name>
+       <mode>once</mode>
+       <path>Sounds/thunder2.wav</path>
+       <property>/sim/sound/thunder2</property>
+       <volume>
+           <property>/sim/sound/volume-thunder2</property>
+       </volume>
+    </thunder2>
+    <thunder3>
+       <name>thunder3</name>
+       <mode>once</mode>
+       <path>Sounds/thunder3.wav</path>
+       <property>/sim/sound/thunder3</property>
+       <volume>
+           <property>/sim/sound/volume-thunder3</property>
+       </volume>
+    </thunder3>
 
 </fx>
  
