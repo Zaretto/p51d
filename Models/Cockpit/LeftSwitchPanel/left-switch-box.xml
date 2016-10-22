@@ -299,28 +299,26 @@
   </emission>
  </animation>
 
- <animation>
-  <type>pick</type>
-  <object-name>landing-light-switch</object-name>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-        <command>property-assign</command>
-        <property>/controls/lighting/landing-lights</property>
-        <value>1</value>
-    </binding>
-  </action>
-  <action>
-    <button>1</button>
-    <button>2</button>
-    <repeatable>false</repeatable>
-    <binding>
-        <command>property-assign</command>
-        <property>/controls/lighting/landing-lights</property>
-        <value>0</value>
-    </binding>
-  </action>
-</animation>
+    <animation>
+        <type>pick</type>
+        <object-name>landing-light-switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/lighting/landing-lights</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>landing-light-switch</tooltip-id>
+                <label>Landing lights: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/lighting/landing-lights</property>
+            </binding>
+        </hovered>
+    </animation>
 
 </PropertyList>
