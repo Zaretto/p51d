@@ -36,6 +36,8 @@ New features
 
 * Zoom in or out using mouse scrollwheel, up to a distance of 300 meters
 
+* ALS procedural lights for position lights
+
 Authors
 =======
 
