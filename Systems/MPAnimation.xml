@@ -182,14 +182,14 @@
      
      <channel name="postionLights">
      
-       <pure_gain name="wingPoditionLightsVisibleToMP">
+       <pure_gain name="wingPositionLightsVisibleToMP">
           <input>/controls/lighting/wing-position-lights</input>
           <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[6]</output>
        </pure_gain>
         
-        <pure_gain name="tailPoditionLightsVisibleToMP">
-          <input>/controls/lighting/wing-position-lights</input>
+        <pure_gain name="tailPositionLightsVisibleToMP">
+          <input>/controls/lighting/tail-position-lights</input>
           <gain>1.0</gain>
           <output>/sim/multiplay/generic/float[7]</output>
        </pure_gain>

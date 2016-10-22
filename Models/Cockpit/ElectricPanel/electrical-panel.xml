@@ -157,7 +157,10 @@
     </animation>
 
     <animation>
-        <type>rotate</type>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+
         <object-name>wing-pos-lgt-switch</object-name>
         <property>/controls/lighting/wing-position-lights</property>
         <interpolation>
@@ -184,10 +187,37 @@
             <y>0</y>
             <z>0</z>
         </axis>
+
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/wing-position-lights</property>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>wing-pos-lgt-switch</tooltip-id>
+                <label>Position lights wings: %s</label>
+                <property>/controls/lighting/wing-position-lights</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'BRIGHT', 'DIM'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
     </animation>
 
     <animation>
-        <type>rotate</type>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+
         <object-name>tail-pos-lgt-switch</object-name>
         <property>/controls/lighting/tail-position-lights</property>
         <interpolation>
@@ -214,6 +244,30 @@
             <y>0</y>
             <z>0</z>
         </axis>
+
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/tail-position-lights</property>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>tail-pos-lgt-switch</tooltip-id>
+                <label>Position light tail: %s</label>
+                <property>/controls/lighting/tail-position-lights</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'BRIGHT', 'DIM'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
     </animation>
 
     <animation>

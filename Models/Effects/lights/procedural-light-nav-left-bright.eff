@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+
+    <name>procedural-light-nav-left-bright</name>
+    <inherits-from>procedural-light-nav-left</inherits-from>
+
+    <parameters>
+        <intensity_scale type="float">0.9</intensity_scale>
+    </parameters>
+
+</PropertyList>

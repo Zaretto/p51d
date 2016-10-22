@@ -1,6 +1,21 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<!-- JSBSIm FDM by Hal V. Engel -->
+<!--
+    Copyright (c) 2010 - 2014 Hal V. Engel
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
 
 <PropertyList include="p51d-bombableinclude.xml">
 
@@ -1232,70 +1247,6 @@
 
  <animation>
   <type>material</type>
-  <object-name>wingTipLightLeft</object-name>
-  <emission>
-    <red>0.6</red>
-    <green>0.0</green>
-    <blue>0.0</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>sim/multiplay/generic/float[6]</property>
-        <value>1</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>wingTipLightRight</object-name>
-  <emission>
-    <red>0.0</red>
-    <green>0.6</green>
-    <blue>0.0</blue>
-  </emission>
-  <condition>
-    <equals>
-        <property>sim/multiplay/generic/float[6]</property>
-        <value>1</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>wingTipLightLeft</object-name>
-  <emission>
-    <red>0.4</red>
-    <green>0.0</green>
-    <blue>0.0</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>sim/multiplay/generic/float[6]</property>
-        <value>2</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>wingTipLightRight</object-name>
-  <emission>
-    <red>0.0</red>
-    <green>0.4</green>
-    <blue>0.0</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>sim/multiplay/generic/float[6]</property>
-        <value>2</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
   <object-name>signalLightFront</object-name>
   <emission>
     <red>0.6</red>
@@ -1330,38 +1281,6 @@
   </emission>
   <condition>
      <property>sim/multiplay/generic/float[10]</property>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>tailLight</object-name>
-  <emission>
-    <red>0.9</red>
-    <green>0.9</green>
-    <blue>0.9</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>sim/multiplay/generic/float[7]</property>
-        <value>1</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>tailLight</object-name>
-  <emission>
-    <red>0.5</red>
-    <green>0.5</green>
-    <blue>0.5</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>sim/multiplay/generic/float[7]</property>
-        <value>2</value>
-     </equals>
   </condition>
  </animation>
 
@@ -1958,5 +1877,154 @@
             </less-than-equals>
         </condition>
     </animation> -->
+
+    <!-- =============================================================== -->
+    <!-- ALS Navigation Lights                                           -->
+    <!-- =============================================================== -->
+
+    <!-- Red navigation light on port side (left) -->
+    <model>
+        <name>nav-light-left-dim</name>
+        <path>Effects/lights/procedural_light_nav_left.xml</path>
+        <offsets>
+            <x-m> 2.52125</x-m>
+            <y-m>-5.67153</y-m><!-- 0.01 extra offset away from fuselage -->
+            <z-m>-0.20485</z-m>
+        </offsets>
+    </model>
+    <model>
+        <name>nav-light-left-bright</name>
+        <path>Effects/lights/procedural_light_nav_left_bright.xml</path>
+        <offsets>
+            <x-m> 2.52125</x-m>
+            <y-m>-5.67153</y-m><!-- 0.01 extra offset away from fuselage -->
+            <z-m>-0.20485</z-m>
+        </offsets>
+    </model>
+
+    <!-- Green navigation light on starboard side (right) -->
+    <model>
+        <name>nav-light-right-dim</name>
+        <path>Effects/lights/procedural_light_nav_right.xml</path>
+        <offsets>
+            <x-m> 2.52371</x-m>
+            <y-m> 5.66931</y-m><!-- 0.01 extra offset away from fuselage -->
+            <z-m>-0.18933</z-m>
+        </offsets>
+    </model>
+    <model>
+        <name>nav-light-right-bright</name>
+        <path>Effects/lights/procedural_light_nav_right_bright.xml</path>
+        <offsets>
+            <x-m> 2.52371</x-m>
+            <y-m> 5.66931</y-m><!-- 0.01 extra offset away from fuselage -->
+            <z-m>-0.18933</z-m>
+        </offsets>
+    </model>
+
+    <!-- White navigation light on tail -->
+    <model>
+        <name>nav-light-tail-dim</name>
+        <path>Effects/lights/procedural_light_nav_tail.xml</path>
+        <offsets>
+            <x-m>9.03266</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.19977</z-m>
+        </offsets>
+    </model>
+    <model>
+        <name>nav-light-tail-bright</name>
+        <path>Effects/lights/procedural_light_nav_tail_bright.xml</path>
+        <offsets>
+            <x-m>9.03266</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.19977</z-m>
+        </offsets>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>nav-light-left-dim</object-name>
+        <object-name>nav-light-right-dim</object-name>
+        <nopreview/>
+        <condition>
+            <and>
+                <property>/sim/rendering/shaders/skydome</property>
+                <equals>
+                    <property>sim/multiplay/generic/float[6]</property>
+                    <value>2.0</value><!-- 1 = bright, 2 = dim -->
+                </equals>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>nav-light-left-bright</object-name>
+        <object-name>nav-light-right-bright</object-name>
+        <nopreview/>
+        <condition>
+            <and>
+                <property>/sim/rendering/shaders/skydome</property>
+                <equals>
+                    <property>sim/multiplay/generic/float[6]</property>
+                    <value>1.0</value><!-- 1 = bright, 2 = dim -->
+                </equals>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>wingTipLightLeft</object-name>
+        <object-name>wingTipLightRight</object-name>
+        <condition>
+            <or>
+                <not><property>/sim/rendering/shaders/skydome</property></not>
+                <not><property>sim/multiplay/generic/float[6]</property></not>
+            </or>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>nav-light-tail-dim</object-name>
+        <nopreview/>
+        <condition>
+            <and>
+                <property>/sim/rendering/shaders/skydome</property>
+                <equals>
+                    <property>sim/multiplay/generic/float[7]</property>
+                    <value>2.0</value><!-- 1 = bright, 2 = dim -->
+                </equals>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>nav-light-tail-bright</object-name>
+        <nopreview/>
+        <condition>
+            <and>
+                <property>/sim/rendering/shaders/skydome</property>
+                <equals>
+                    <property>sim/multiplay/generic/float[7]</property>
+                    <value>1.0</value><!-- 1 = bright, 2 = dim -->
+                </equals>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tailLight</object-name>
+        <condition>
+            <or>
+                <not><property>/sim/rendering/shaders/skydome</property></not>
+                <not><property>sim/multiplay/generic/float[7]</property></not>
+            </or>
+        </condition>
+    </animation>
 
 </PropertyList>
