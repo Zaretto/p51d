@@ -1562,12 +1562,17 @@
    <z2-m>0.786804</z2-m>
   </axis>
  </animation>
- 
+
+    <!--
+         Radius of main wheel is 0.704 / 2 = 0.352
+         Circumference is 2*pi*radius = 2.211681228
+         RPM = rollspeed-ms / 2.211681228 * 60.0
+    -->
   <animation>
   <type>spin</type>
   <object-name>mainWheelLeft</object-name>
-  <property>fdm/jsbsim/systems/wheelSpin</property>
-  <factor>-1.5</factor>
+  <property>/gear/gear[0]/rollspeed-ms</property>
+  <factor>-27.12868348</factor>
   <center>
    <x-m>1.91262</x-m>
    <y-m>-1.83774</y-m>
@@ -1583,8 +1588,8 @@
  <animation>
   <type>spin</type>
   <object-name>mainWheelRight</object-name>
-  <property>fdm/jsbsim/systems/wheelSpin</property>
-  <factor>-1.5</factor>
+  <property>/gear/gear[1]/rollspeed-ms</property>
+  <factor>-27.12868348</factor>
   <center>
    <x-m>1.91262</x-m>
    <y-m>-1.83774</y-m>
