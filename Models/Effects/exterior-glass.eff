@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2015 onox
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<PropertyList>
+
+    <name>external-glass</name>
+
+    <inherits-from>Effects/model-combined-transparent</inherits-from>
+
+    <parameters>
+        <reflection-enabled type="int">1</reflection-enabled>
+        <reflection-correction type="float">0.5</reflection-correction>
+        <reflect-map-enabled type="int">1</reflect-map-enabled>
+        <reflection-fresnel type="float">0.2</reflection-fresnel>
+        <reflection-rainbow type="float">0.6</reflection-rainbow>
+        <reflection-noise type="float">0.1</reflection-noise>
+        <reflection-dynamic type="int">1</reflection-dynamic>
+        <ambient-correction type="float">0.05</ambient-correction>
+
+        <rendering-hint>transparent</rendering-hint>
+        <transparent>true</transparent>
+        <rain-enabled type="int">1</rain-enabled>
+
+        <render-bin>
+            <bin-number>11</bin-number>
+            <bin-name>DepthSortedBin</bin-name>
+        </render-bin>
+    </parameters>
+
+</PropertyList>

@@ -8,18 +8,19 @@
         <min-m>0</min-m>
         <max-m>10000</max-m>
     </animation>
-    
- <params>
-    <canopy>
-        <open>
-            <property>sim/multiplay/generic/float[3]</property>
-        </open>
-    </canopy>
-</params>
-    
+
+    <params>
+        <canopy>
+            <open>
+                <property>sim/multiplay/generic/float[3]</property>
+            </open>
+        </canopy>
+    </params>
+
  <animation>
   <type>translate</type>  
   <object-name>canopy</object-name>
+  <object-name>canopy-interior</object-name>
   <object-name>canopyLowerSkin</object-name>
   <object-name>brace</object-name>
   <object-name>exteriorWindshieldBow</object-name>
@@ -72,6 +73,7 @@
   <object-name>canopyLowerSkin</object-name>
   <object-name>brace</object-name>
   <object-name>canopy</object-name>
+  <object-name>canopy-interior</object-name>
   <object-name>exteriorWindshieldBow</object-name>
   <object-name>frontDoublerRight</object-name>
   <object-name>frontDoublerLeft</object-name>
@@ -119,31 +121,42 @@
    <texture-prop>texture-enclosure</texture-prop>
    <texture>../Liveries/DDenclosure.png</texture>
  </animation>
- 
-<!-- <effect> 
-    does not work?
-    <inherits-from>Aircraft/p51d/Models/Effects/P-51D-glass-effect</inherits-from>
-    <object-name>canopy</object-name>
-    <object-name>windshieldLeft</object-name>
-    <object-name>windshieldRight</object-name>
-    <object-name>windshield</object-name>
-</effect> -->
 
-<effect> 
-  <inherits-from>Aircraft/p51d/Models/Effects/enclosureEffects</inherits-from>
-  <object-name>canopyLowerSkin</object-name>
-  <object-name>exteriorWindshieldBow</object-name>
-</effect>
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/exterior-glass</inherits-from>
+        <object-name>canopy</object-name>
+        <object-name>windshieldLeft</object-name>
+        <object-name>windshieldRight</object-name>
+        <object-name>windshield</object-name>
+    </effect>
 
- <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>/sim/rendering/rembrandt/enabled</property>
-    </condition>
-    <object-name>canopy</object-name>
-    <object-name>windshieldLeft</object-name>
-    <object-name>windshieldRight</object-name>
-    <object-name>windshield</object-name>
-  </effect>
-    
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/interior-glass</inherits-from>
+        <object-name>canopy-interior</object-name>
+        <object-name>windshieldLeft-interior</object-name>
+        <object-name>windshieldRight-interior</object-name>
+        <object-name>windshield-interior</object-name>
+    </effect>
+
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/enclosureEffects</inherits-from>
+        <object-name>canopyLowerSkin</object-name>
+        <object-name>exteriorWindshieldBow</object-name>
+    </effect>
+
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>/sim/rendering/rembrandt/enabled</property>
+        </condition>
+        <object-name>canopy</object-name>
+        <object-name>windshieldLeft</object-name>
+        <object-name>windshieldRight</object-name>
+        <object-name>windshield</object-name>
+        <object-name>canopy-interior</object-name>
+        <object-name>windshieldLeft-interior</object-name>
+        <object-name>windshieldRight-interior</object-name>
+        <object-name>windshield-interior</object-name>
+    </effect>
+
 </PropertyList>
