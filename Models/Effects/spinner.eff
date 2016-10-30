@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <PropertyList>
   <name>Aircraft/p51d/Models/Effects/Spinner</name>
-  <inherits-from>Effects/model-combined-deferred</inherits-from>
+  <inherits-from>Effects/model-combined-transparent</inherits-from>
   <parameters>
      <normalmap-enabled type="int">1</normalmap-enabled>
      <texture n="2">
@@ -41,7 +43,15 @@
     <dirt-enabled type="int">0</dirt-enabled>
     <dirt-color type="vec3d">1.0 1.0 1.0</dirt-color>
     <dirt-factor type="float">0.5</dirt-factor>
-  </parameters>
+
+        <rendering-hint>transparent</rendering-hint>
+        <transparent>true</transparent>
+
+        <render-bin>
+            <bin-number>1</bin-number>
+            <bin-name>DepthSortedBin</bin-name>
+        </render-bin>
+    </parameters>
   
   
   <!-- ####################
