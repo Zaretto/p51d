@@ -77,7 +77,7 @@
   <channel name="crashed">
 
      <!-- end the sim if the aircraft is crashed -->
-     <switch name="systems/crash-detect/FG">
+     <!--<switch name="systems/crash-detect/FG">
         <default value="0"/>
         <test logic="AND" value="1">
            /engines/engine[0]/cranking lt 0.1
@@ -87,7 +87,7 @@
         <output>/sim/freeze/main</output>
         <output>/controls/engines/engine[0]/cutoff</output>
         <output>/sim/crashed</output>
-     </switch>
+     </switch>-->
   
   </channel>
 
