@@ -66,6 +66,41 @@
   </axis>
  </animation>
 
+    <animation>
+        <type>knob</type>
+        <drag-direction>horizontal</drag-direction>
+        <drag-scale-px>10.0</drag-scale-px>
+        <object-name>Knob</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>100.0</factor>
+        <axis>
+            <x>-1</x>
+        </axis>
+        <center>
+            <x-m> 0.00756</x-m>
+            <y-m>-0.03288</y-m>
+            <z-m>-0.03190</z-m>
+        </center>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/instrumentation/altimeter/setting-inhg</property>
+                <factor>0.01</factor>
+                <min>28.0</min>
+                <max>31.3</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>altimeter-knob</tooltip-id>
+                <label>Altimeter: %.2f in HG</label>
+                <property>/instrumentation/altimeter/setting-inhg</property>
+            </binding>
+        </hovered>
+    </animation>
+
  <animation>
   <type>rotate</type>
   <object-name>PressureDial</object-name>
@@ -86,11 +121,7 @@
   </interpolation>
   <axis>
    <x>1</x>
-   <y>0</y>
-   <z>0</z>
   </axis>
  </animation>
 
 </PropertyList>
-
-

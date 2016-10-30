@@ -4,28 +4,10 @@
  <path>flaps-control.ac</path>
 
  <animation>
-  <type>rotate</type>
+  <type>knob</type>
+  <drag-direction>vertical</drag-direction>
+  <drag-scale-px>30.0</drag-scale-px>
   <object-name>flaps-lever</object-name>
-      <property>/controls/flight/flaps</property>
-  <interpolation>
-   <entry>
-    <ind>0</ind>
-    <dep>0</dep>
-   </entry>
-   <entry>
-    <ind>1.0</ind>
-    <dep>-55</dep>
-   </entry>
-  </interpolation>
-  <axis>
-   <x>0</x>
-   <y>-1</y>
-   <z>0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
   <object-name>flaps-knob</object-name>
       <property>/controls/flight/flaps</property>
   <interpolation>
@@ -39,10 +21,28 @@
    </entry>
   </interpolation>
   <axis>
-   <x>0</x>
    <y>-1</y>
-   <z>0</z>
   </axis>
+          <increase>
+              <binding>
+                  <command>nasal</command>
+                  <script>controls.flapsDown(-1)</script>
+              </binding>
+          </increase>
+          <decrease>
+              <binding>
+                  <command>nasal</command>
+                  <script>controls.flapsDown(1)</script>
+              </binding>
+          </decrease>
+          <hovered>
+              <binding>
+                  <command>set-tooltip</command>
+                  <tooltip-id>flaps-pos</tooltip-id>
+                  <label>Flap position: %.1f deg</label>
+                  <property>/fdm/jsbsim/fcs/flap-cmd-deg</property>
+              </binding>
+          </hovered>
  </animation>
 
   <animation>

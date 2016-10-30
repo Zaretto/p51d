@@ -74,6 +74,10 @@ var init_listener = setlistener("/sim/signals/fdm-initialized", func {
     	var alt = props.globals.getNode("/controls/engines/engine/master-alt");
         alt.setBoolValue(0);
 	    removelistener(init_listener);
+
+	    setlistener("/fdm/jsbsim/systems/engine/starter", func (node) {
+	        controls.startEngine(node.getBoolValue());
+	    });
 	  }
 	);
 

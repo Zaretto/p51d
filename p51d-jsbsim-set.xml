@@ -447,10 +447,13 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <engine n="0">
         <magnetos type="int">0</magnetos>
         <supercharger-switch type="int">0</supercharger-switch>
-        <primer-time type="float"> 0.0 </primer-time>
-        <master-bat type="int"> 0 </master-bat>
-		<starter type="int"> 0 </starter>
+        <supercharger-guard-switch type="bool">false</supercharger-guard-switch>
         <blower-light-check type="int">0</blower-light-check>
+        <primer-time type="float">0.0</primer-time>
+        <master-bat type="int">0</master-bat>
+		<starter type="int">0</starter>
+        <starter-guard-switch type="bool">false</starter-guard-switch>
+        <primer-guard-switch type="bool">false</primer-guard-switch>
       </engine>
    </engines>
    <lighting>
@@ -762,7 +765,6 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <file>Aircraft/p51d/Nasal/limits.nas</file>
       <file>Aircraft/p51d/Nasal/engine-start.nas</file>
       <file>Aircraft/p51d/Nasal/sputter.nas</file>
-      <file>Aircraft/p51d/Nasal/climbrate.nas</file>
       <file>Aircraft/p51d/Nasal/gear-doors.nas</file>
       <file>Aircraft/p51d/Nasal/gear-lever.nas</file>
       <file>Aircraft/p51d/Nasal/liveries.nas</file>
@@ -780,7 +782,3 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
   </nasal>
 
 </PropertyList>
-
-
-
-

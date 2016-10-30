@@ -30,6 +30,66 @@
   </emission>
  </animation>
 
+    <animation>
+        <type>pick</type>
+        <object-name>LeftButton</object-name>
+        <object-name>LeftBulb</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/gear/gear-safe-light-check</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/gear/gear-safe-light-check</property>
+                    <value>0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gear-safe-light-check</tooltip-id>
+                <label>Gear safe: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/gear/safe-light-on</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>RightButton</object-name>
+        <object-name>RightBulb</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/gear/gear-unsafe-light-check</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/gear/gear-unsafe-light-check</property>
+                    <value>0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gear-unsafe-light-check</tooltip-id>
+                <label>Gear unsafe: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/gear/unsafe-light-on</property>
+            </binding>
+        </hovered>
+    </animation>
+
 </PropertyList>
-
-

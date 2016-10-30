@@ -44,21 +44,41 @@
   </axis>
  </animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>OnOffKnob</object-name>
-  <property>/instrumentation/attitude-indicator/serviceable</property>
-  <factor>60.0</factor>
-  <center>
-     <x-m>0.00</x-m>
-     <y-m>0.041</y-m>
-     <z-m>-0.045</z-m>
-  </center>
-  <axis>
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>OnOffKnob</object-name>
+        <property>/instrumentation/attitude-indicator/serviceable</property>
+        <factor>60.0</factor>
+        <axis>
+            <x>-1</x>
+        </axis>
+        <center>
+            <x-m> 0.000</x-m>
+            <y-m> 0.041</y-m>
+            <z-m>-0.045</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>OnOffKnob</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/instrumentation/attitude-indicator/serviceable</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>ai-knob</tooltip-id>
+                <mapping>on-off</mapping>
+                <label>Enable/disable AI: %s</label>
+                <property>/instrumentation/attitude-indicator/serviceable</property>
+            </binding>
+        </hovered>
+    </animation>
 
 </PropertyList>

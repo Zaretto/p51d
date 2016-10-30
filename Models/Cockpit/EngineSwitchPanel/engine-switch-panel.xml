@@ -12,7 +12,42 @@
  </animation>
 
     <animation>
-        <type>rotate</type>
+        <type>pick</type>
+        <object-name>boost-switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>/controls/engines/engine/supercharger-switch</property>
+                        <value>-1</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/supercharger-switch</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <condition>
+                        <equals>
+                            <property>/controls/engines/engine/supercharger-switch</property>
+                            <value>1</value>
+                        </equals>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine/supercharger-switch</property>
+                    <value>-1</value>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
         <object-name>boost-switch</object-name>
         <property>/controls/engines/engine/supercharger-switch</property>
         <interpolation>
@@ -30,43 +65,58 @@
             </entry>
         </interpolation>
         <axis>
-            <x>0</x>
             <y>-1</y>
-            <z>0</z>
         </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/engines/engine/supercharger-switch</property>
+                <value type="int">0</value>
+                <value type="int">-1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>supercharger-switch</tooltip-id>
+                <label>Supercharger: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['LOW (better range at high altitude)', 'AUTO', 'HIGH'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/controls/engines/engine/supercharger-switch</property>
+            </binding>
+        </hovered>
     </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>boost-sw-guard</object-name>
-        <property>/controls/engines/engine/supercharger-switch</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>-1</ind>
-                <dep>-90</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-90</dep>
-            </entry>
-        </interpolation>
+        <property>/controls/engines/engine/supercharger-guard-switch</property>
+        <factor>-120.0</factor>
         <center>
-          <x-m>0.002</x-m>
-          <y-m>-0.06</y-m>
-          <y-m>0.02</y-m>
+            <x-m>0.0089</x-m>
+            <y-m>-0.05958</y-m>
+            <z-m>0.01860</z-m>
         </center>
         <axis>
-            <x1-m>0.002</x1-m>
-            <y1-m>-0.20</y1-m>
-            <z1-m>0.02</z1-m>
-            <x2-m>-0.02</x2-m>
-            <y2-m>0.20</y2-m>
-            <z2-m>0.02</z2-m>
+            <y>1</y>
         </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>boost-sw-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/engines/engine/supercharger-guard-switch</property>
+            </binding>
+        </action>
     </animation>
 
     <animation>
@@ -84,39 +134,58 @@
             </entry>
         </interpolation>
         <axis>
-            <x>0</x>
             <y>-1</y>
-            <z>0</z>
         </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>starter-switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/fdm/jsbsim/systems/engine/starter</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>starter-switch</tooltip-id>
+                <label>Starter: %s</label>
+                <mapping>on-off</mapping>
+                <property>/fdm/jsbsim/systems/engine/starter</property>
+            </binding>
+        </hovered>
     </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>starter-sw-guard</object-name>
-        <property>/fdm/jsbsim/systems/engine/starter</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-90</dep>
-            </entry>
-        </interpolation>
+        <property>/controls/engines/engine/starter-guard-switch</property>
+        <factor>-120.0</factor>
         <center>
-          <x-m>0.002</x-m>
-          <y-m>-0.02</y-m>
-          <z-m>0.02</z-m>
+            <x-m>0.0089</x-m>
+            <y-m>0.04512</y-m>
+            <z-m>0.01860</z-m>
         </center>
         <axis>
-            <x1-m>0.002</x1-m>
-            <y1-m>-0.20</y1-m>
-            <z1-m>0.02</z1-m>
-            <x2-m>-0.02</x2-m>
-            <y2-m>0.20</y2-m>
-            <z2-m>0.02</z2-m>
+            <y>1</y>
         </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>starter-sw-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/engines/engine/starter-guard-switch</property>
+            </binding>
+        </action>
     </animation>
 
     <animation>
@@ -134,41 +203,59 @@
             </entry>
         </interpolation>
         <axis>
-            <x>0</x>
             <y>-1</y>
-            <z>0</z>
         </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>primer-switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/engines/engine/primer-on</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>primer-switch</tooltip-id>
+                <label>Primer: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/engines/engine/primer-on</property>
+            </binding>
+        </hovered>
     </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>primer-sw-guard</object-name>
-        <property>/controls/engines/engine/primer-on</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-90</dep>
-            </entry>
-        </interpolation>
+        <property>/controls/engines/engine/primer-guard-switch</property>
+        <factor>-120.0</factor>
         <center>
-          <x-m>0.002</x-m>
-          <y-m>-0.02</y-m>
-          <z-m>0.02</z-m>
+            <x-m>0.0089</x-m>
+            <y-m>0.06843</y-m>
+            <z-m>0.01860</z-m>
         </center>
         <axis>
-            <x1-m>0.002</x1-m>
-            <y1-m>-0.20</y1-m>
-            <z1-m>0.02</z1-m>
-            <x2-m>-0.02</x2-m>
-            <y2-m>0.20</y2-m>
-            <z2-m>0.02</z2-m>
+            <y>1</y>
         </axis>
     </animation>
-    
+
+    <animation>
+        <type>pick</type>
+        <object-name>primer-sw-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/engines/engine/primer-guard-switch</property>
+            </binding>
+        </action>
+    </animation>
 
     <animation>
         <type>rotate</type>
@@ -185,12 +272,31 @@
             </entry>
         </interpolation>
         <axis>
-            <x>0</x>
             <y>-1</y>
-            <z>0</z>
         </axis>
     </animation>
 
+    <animation>
+        <type>pick</type>
+        <object-name>fuel-pump-switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>fuel-pump-switch</tooltip-id>
+                <label>Fuel pump: %s</label>
+                <mapping>on-off</mapping>
+                <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+            </binding>
+        </hovered>
+    </animation>
  
  <animation>
   <type>material</type>
@@ -236,5 +342,36 @@
     <blue>0.0</blue>
   </emission>
  </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>BoostBulb</object-name>
+        <object-name>BoostLightButton</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/blower-light-check</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine/blower-light-check</property>
+                    <value>0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>blower-light-check</tooltip-id>
+                <label>High blower: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/engines/engine/boost-light-on</property>
+            </binding>
+        </hovered>
+    </animation>
 
 </PropertyList>

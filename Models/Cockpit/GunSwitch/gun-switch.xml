@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
 <PropertyList>
+
     <path>gun-switch.ac</path>
 
     <animation>
-        <type>rotate</type>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
         <object-name>Switch</object-name>
         <property>/controls/armament/gunsight/power-on</property>
         <interpolation>
@@ -21,10 +24,39 @@
             </entry>
         </interpolation>
         <axis>
-            <x>0</x>
             <y>-1</y>
-            <z>0</z>
         </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/armament/gunsight/power-on</property>
+                <value type="int">-1</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    var modes = [0, 0, 1];
+                    var arg = getprop("/controls/armament/gunsight/power-on") + 1;
+                    setprop("/controls/armament/guns-enabled", modes[arg]);
+                </script>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gun-switch</tooltip-id>
+                <label>Guns: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['CAMERA AND SIGHT', 'OFF', 'GUNS, CAMERA, AND SIGHT'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/controls/armament/gunsight/power-on</property>
+            </binding>
+        </hovered>
     </animation>
 
     <animation>

@@ -1,42 +1,63 @@
 <?xml version="1.0"?>
 <PropertyList>
 
- <path>p51d-jw-ignition.ac</path>
+    <path>p51d-jw-ignition.ac</path>
 
- <animation>
-  <type>rotate</type>
-  <object-name>Handle</object-name>
-  <property>/controls/engines/engine[0]/magnetos</property>
-  <interpolation>
-   <entry>
-    <ind>0</ind>
-    <dep>0</dep>
-   </entry>
-   <entry>
-    <ind>1</ind>
-    <dep>25</dep>
-   </entry>
-   <entry>
-    <ind>2</ind>
-    <dep>55</dep>
-   </entry>
-   <entry>
-    <ind>3</ind>
-    <dep>80</dep>
-   </entry>
-  </interpolation>
-  <center>
-   <x-m>0.0</x-m>
-   <y-m>0</y-m>
-   <z-m>0.006</z-m>
-  </center>
-  <axis>
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>10.0</drag-scale-px>
+        <shift-repeat type="int">1</shift-repeat>
+        <object-name>Handle</object-name>
+        <property>/controls/engines/engine[0]/magnetos</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>55</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>80</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0</y-m>
+            <z-m>0.006</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/engines/engine[0]/magnetos</property>
+                <min>0</min>
+                <max>3</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>magnetos</tooltip-id>
+                <label>Magnetos: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'RIGHT', 'LEFT', 'BOTH'];
+                    return modes[arg[0]];
+                </script>
+                <property>/controls/engines/engine[0]/magnetos</property>
+            </binding>
+        </hovered>
+    </animation>
 
 </PropertyList>
-
-

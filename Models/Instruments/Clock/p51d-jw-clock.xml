@@ -64,5 +64,40 @@
     <z>0</z>
    </axis>
   </animation>
- 
- </PropertyList>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>horizontal</drag-direction>
+        <drag-scale-px>10.0</drag-scale-px>
+        <object-name>AdjustKnob</object-name>
+        <property>/instrumentation/clock/offset-sec</property>
+        <factor>6.0</factor><!-- 6 deg/s = 360 deg/min -->
+        <axis>
+            <x>-1</x>
+        </axis>
+        <center>
+            <x-m>0.00414</x-m>
+            <y-m>-0.02175</y-m>
+            <z-m>-0.02239</z-m>
+        </center>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/instrumentation/clock/offset-sec</property>
+                <factor>60</factor>
+                <min>0</min>
+                <max>43200</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>clock-knob</tooltip-id>
+                <label>Local time: %s</label>
+                <property>/instrumentation/clock/indicated-short-string</property>
+            </binding>
+        </hovered>
+    </animation>
+
+</PropertyList>

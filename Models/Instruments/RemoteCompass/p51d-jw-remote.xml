@@ -51,6 +51,42 @@
   </axis>
  </animation>
 
+    <animation>
+        <type>knob</type>
+        <drag-direction>horizontal</drag-direction>
+        <!-- Faster rate of change than the default -->
+        <drag-scale-px>4.0</drag-scale-px>
+        <shift-repeat type="int">5</shift-repeat>
+        <object-name>knob</object-name>
+        <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+        <factor>5.0</factor>
+        <axis>
+            <x>-1</x>
+        </axis>
+        <center>
+            <x-m> 0.00830</x-m>
+            <y-m>-0.03652</y-m>
+            <z-m>-0.03762</z-m>
+        </center>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+                <factor>1</factor>
+                <min>0</min>
+                <max>360</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>mag-compass-knob</tooltip-id>
+                <mapping>heading</mapping>
+                <label>Magnetic compass bug: %3d</label>
+                <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+            </binding>
+        </hovered>
+    </animation>
+
 </PropertyList>
-
-

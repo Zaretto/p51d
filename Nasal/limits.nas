@@ -29,7 +29,7 @@ var flapsetting = n.getValue();
         (flapsetting > 0.75 and flapsetting < 0.95 and airspeed > 172) or
         (flapsetting > 0.95 and airspeed > 157.7)) {
             screen.log.write("Flaps damaged!");
-            setprop("/sim/failute-manager/controls/flight/flaps/serviceable", 0);
+            setprop("/sim/failure-manager/controls/flight/flaps/serviceable", 0);
         }
 }
 
