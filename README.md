@@ -38,6 +38,12 @@ New features
 
 * ALS procedural lights for position lights
 
+* Exterior glass reflection
+
+* ALS glass effect for rain
+
+* Replaced hotspots with knob animations and added tooltips
+
 Authors
 =======
 
