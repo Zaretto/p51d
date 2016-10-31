@@ -893,70 +893,6 @@
 
  <animation>
   <type>material</type>
-  <object-name>wingTipLightLeft</object-name>
-  <emission>
-    <red>0.6</red>
-    <green>0.0</green>
-    <blue>0.0</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>controls/lighting/wing-position-lights</property>
-        <value>1</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>wingTipLightRight</object-name>
-  <emission>
-    <red>0.0</red>
-    <green>0.6</green>
-    <blue>0.0</blue>
-  </emission>
-  <condition>
-    <equals>
-        <property>controls/lighting/wing-position-lights</property>
-        <value>1</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>wingTipLightLeft</object-name>
-  <emission>
-    <red>0.4</red>
-    <green>0.0</green>
-    <blue>0.0</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>controls/lighting/wing-position-lights</property>
-        <value>2</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>wingTipLightRight</object-name>
-  <emission>
-    <red>0.0</red>
-    <green>0.4</green>
-    <blue>0.0</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>controls/lighting/wing-position-lights</property>
-        <value>2</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
   <object-name>signalLightFront</object-name>
   <emission>
     <red>0.6</red>
@@ -991,38 +927,6 @@
   </emission>
   <condition>
      <property>controls/lighting/amber-rec-light</property>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>tailLight</object-name>
-  <emission>
-    <red>0.9</red>
-    <green>0.9</green>
-    <blue>0.9</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>controls/lighting/tail-position-lights</property>
-        <value>1</value>
-     </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>tailLight</object-name>
-  <emission>
-    <red>0.5</red>
-    <green>0.5</green>
-    <blue>0.5</blue>
-  </emission>
-  <condition>
-     <equals>
-        <property>controls/lighting/tail-position-lights</property>
-        <value>2</value>
-     </equals>
   </condition>
  </animation>
 

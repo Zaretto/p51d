@@ -299,8 +299,8 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
         <float n="3" /> <!-- /fdm/jsbsim/systems/cooling/radiator-door-pos -->
         <float n="4" /> <!-- /fdm/jsbsim/systems/cooling/oil-door-pos -->
         <float n="5" /> <!-- /fdm/jsbsim/gear/unit[2]/steering-angle-deg -->
-        <float n="6" /> <!-- /controls/lighting/wing-position-lights -->
-        <float n="7" /> <!-- /controls/lighting/tail-position-lights -->
+        <float n="6" alias="/controls/lighting/wing-position-lights"/>
+        <float n="7" alias="/controls/lighting/tail-position-lights"/>
         <float n="8" /> <!-- /controls/lighting/red-rec-light -->
         <float n="9" /> <!-- /controls/lighting/green-rec-light -->
         <float n="10" /> <!-- /controls/lighting/amber-rec-light -->
@@ -457,8 +457,8 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       </engine>
    </engines>
    <lighting>
-      <tail-position-lights type="int"> 0 </tail-position-lights>
-      <wing-position-lights type="int"> 0 </wing-position-lights>
+      <tail-position-lights type="int">0</tail-position-lights>
+      <wing-position-lights type="int">0</wing-position-lights>
       <red-rec-light type="int"> 0 </red-rec-light>
       <green-rec-light type="int"> 0 </green-rec-light>
       <amber-rec-light type="int"> 0 </amber-rec-light>

@@ -5,8 +5,12 @@
     <nopreview/>
 
     <effect>
-        <inherits-from>procedural-light-nav-right-bright</inherits-from>
+        <inherits-from>procedural-light-nav-right</inherits-from>
         <object-name>procedural_light</object-name>
+
+        <parameters>
+            <intensity_scale type="float">0.9</intensity_scale>
+        </parameters>
     </effect>
 
 </PropertyList>
