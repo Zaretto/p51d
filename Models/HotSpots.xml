@@ -21,26 +21,6 @@
  </panel>
 
  <panel>
-  <path>Aircraft/p51d/Models/HotSpots/fuel-system-hotspots.xml</path>
-  <bottom-left>
-   <x-m>2.77</x-m>
-   <y-m>-0.12</y-m>
-   <z-m>-0.32</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>2.77</x-m>
-   <y-m>0.01</y-m>
-   <z-m>-0.32</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>2.64</x-m>
-   <y-m>-0.12</y-m>
-   <z-m> -0.195</z-m>
-  </top-left>
- </panel>
-
-
- <panel>
   <path>Aircraft/p51d/Models/HotSpots/electrical-switch-box-hotspots.xml</path>
   <bottom-left>
    <x-m>2.58</x-m>

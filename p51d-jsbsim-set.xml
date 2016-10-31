@@ -480,7 +480,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <open-command type="float">1.0</open-command>
    </canopy>
    <fuel>
-      <on>0</on>
+      <on type="bool">false</on>
       <tank-selector type="int">0</tank-selector>
       <tank n="1">
          <to_tank type="int">1</to_tank>
