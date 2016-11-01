@@ -114,9 +114,7 @@
     </animation>
 
     <animation>
-        <type>knob</type>
-        <drag-direction>vertical</drag-direction>
-        <drag-scale-px>30.0</drag-scale-px>
+        <type>rotate</type>
         <object-name>left-arm-switch</object-name>
         <property>/controls/armament/left-bomb-arm-chem-release</property>
         <interpolation>
@@ -141,6 +139,14 @@
         <axis>
             <y>-1</y>
         </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>left-arm-switch</object-name>
+        <object-name>left-arm-sw-base</object-name>
         <action>
             <binding>
                 <command>property-cycle</command>
@@ -167,9 +173,7 @@
     </animation>
 
     <animation>
-        <type>knob</type>
-        <drag-direction>vertical</drag-direction>
-        <drag-scale-px>30.0</drag-scale-px>
+        <type>rotate</type>
         <object-name>right-arm-switch</object-name>
         <property>/controls/armament/right-bomb-arm-chem-release</property>
         <interpolation>
@@ -194,6 +198,14 @@
         <axis>
             <y>-1</y>
         </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>right-arm-switch</object-name>
+        <object-name>right-arm-sw-base</object-name>
         <action>
             <binding>
                 <command>property-cycle</command>
@@ -220,9 +232,7 @@
     </animation>
 
     <animation>
-        <type>knob</type>
-        <drag-direction>horizontal</drag-direction>
-        <drag-scale-px>30.0</drag-scale-px>
+        <type>rotate</type>
         <object-name>instant-switch</object-name>
         <property>/controls/armament/instant</property>
         <interpolation>
@@ -243,13 +253,18 @@
         <axis>
             <z>-1</z>
         </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>instant-sw-body</object-name>
+        <object-name>instant-switch</object-name>
         <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
             <binding>
-                <command>property-cycle</command>
+                <command>property-toggle</command>
                 <property>/controls/armament/instant</property>
-                <value type="int">0</value>
-                <value type="int">1</value>
-                <wrap>false</wrap>
             </binding>
         </action>
         <hovered>
@@ -272,6 +287,7 @@
         <drag-direction>vertical</drag-direction>
         <drag-scale-px>30.0</drag-scale-px>
         <object-name>weapons-select-sw</object-name>
+        <object-name>weapons-sel-sw-base</object-name>
         <action>
             <binding>
                 <command>property-cycle</command>

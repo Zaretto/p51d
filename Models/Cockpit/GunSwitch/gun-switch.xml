@@ -4,9 +4,7 @@
     <path>gun-switch.ac</path>
 
     <animation>
-        <type>knob</type>
-        <drag-direction>vertical</drag-direction>
-        <drag-scale-px>30.0</drag-scale-px>
+        <type>rotate</type>
         <object-name>Switch</object-name>
         <property>/controls/armament/gunsight/power-on</property>
         <interpolation>
@@ -26,6 +24,15 @@
         <axis>
             <y>-1</y>
         </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>Switch</object-name>
+        <object-name>Base.001</object-name>
+        <object-name>cylinder.001</object-name>
         <action>
             <binding>
                 <command>property-cycle</command>

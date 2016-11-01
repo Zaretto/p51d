@@ -29,234 +29,6 @@
         </axis>
     </animation>
 
-<!--    <animation>
-        <type>rotate</type>
-        <object-name>bat-disc-switch</object-name>
-        <property>/controls/engines/engine/master-bat</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>25</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-25</dep>
-            </entry>
-        </interpolation>
-        <center>
-          <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>gun-heat-switch</object-name>
-        <property>/controls/anti-ice/gun-heat</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>25</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-25</dep>
-            </entry>
-        </interpolation>
-        <center>
-          <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>pitot-heat-switch</object-name>
-        <property>/controls/anti-ice/pitot-heat</property>
-        <interpolation>
-            <entry>
-                <ind>1</ind>
-                <dep>-25</dep>
-            </entry>
-            <entry>
-                <ind>0</ind>
-                <dep>25</dep>
-            </entry>
-        </interpolation>
-        <center>
-          <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>wing-pos-lgt-switch</object-name>
-        <property>/controls/lighting/wing-position-lights</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-25</dep>
-            </entry>
-            <entry>
-                <ind>2</ind>
-                <dep>25</dep>
-            </entry>
-        </interpolation>
-        <center>
-          <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>tail-pos-lgt-switch</object-name>
-        <property>/controls/lighting/tail-position-lights</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-25</dep>
-            </entry>
-            <entry>
-                <ind>2</ind>
-                <dep>25</dep>
-            </entry>
-        </interpolation>
-        <center>
-          <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>0.017</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>rec-lgt-red-switch</object-name>
-        <property>/controls/lighting/red-rec-lights</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-25</dep>
-            </entry>
-            <entry>
-                <ind>2</ind>
-                <dep>25</dep>
-            </entry>
-        </interpolation>
-        <center>
-          <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>-0.045</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>rec-lgt-gr-switch</object-name>
-        <property>/controls/lighting/green-rec-lights</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-25</dep>
-            </entry>
-            <entry>
-                <ind>2</ind>
-                <dep>25</dep>
-            </entry>
-        </interpolation>
-        <center>
-          <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>-0.045</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>rec-lgt-amb-switch</object-name>
-        <property>/controls/lighting/amber-rec-lights</property>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>-25</dep>
-            </entry>
-            <entry>
-                <ind>2</ind>
-                <dep>25</dep>
-            </entry>
-        </interpolation>
-        <center>
-          <x-m>0.000</x-m>
-          <y-m>0.015</y-m>
-          <z-m>-0.045</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>-->
-
  <animation>
   <type>material</type>
   <object-name>left-switch-box</object-name>
@@ -302,6 +74,7 @@
     <animation>
         <type>pick</type>
         <object-name>landing-light-switch</object-name>
+        <object-name>landing-light-sw-body</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
@@ -317,6 +90,64 @@
                 <label>Landing light: %s</label>
                 <mapping>on-off</mapping>
                 <property>/controls/lighting/landing-lights</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <object-name>left-flor-light</object-name>
+        <property>/controls/lighting/left-flor-pos</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>180</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>270</dep>
+            </entry>
+        </interpolation>
+        <center>
+          <x-m>-0.06018</x-m>
+          <y-m>0.05159</y-m>
+          <z-m>-0.00208</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+        </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/left-flor-pos</property>
+                <value type="int">0</value>
+                <value type="int">3</value>
+                <value type="int">2</value>
+                <value type="int">1</value>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>left-flor-light</tooltip-id>
+                <label>Left fluorescent light: %s</label>
+                <property>/controls/lighting/left-flor-pos</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'START', 'ON', 'DIM'];
+                    return modes[arg[0]];
+                </script>
             </binding>
         </hovered>
     </animation>

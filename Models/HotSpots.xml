@@ -20,25 +20,6 @@
   </top-left>
  </panel>
 
- <panel>
-  <path>Aircraft/p51d/Models/HotSpots/electrical-switch-box-hotspots.xml</path>
-  <bottom-left>
-   <x-m>2.58</x-m>
-   <y-m>0.31</y-m>
-   <z-m>-0.132</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>2.98</x-m>
-   <y-m>0.315</y-m>
-   <z-m>-0.129</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>2.58</x-m>
-   <y-m>0.31</y-m>
-   <z-m> 0.32</z-m>
-  </top-left>
- </panel>
-
   <panel>
   <path>Aircraft/p51d/Models/HotSpots/mix-RPM-hotspots.xml</path>
   <bottom-left>

@@ -50,31 +50,31 @@
             <y>0.03</y>
             <z>0.95</z>
         </axis>
-         <action>
-             <binding>
-                 <command>property-cycle</command>
-                 <property>/controls/fuel/tank-selector</property>
-                 <value type="int">1</value>
-                 <value type="int">2</value>
-                 <value type="int">0</value>
-                 <value type="int">4</value>
-                 <value type="int">3</value>
-                 <wrap>false</wrap>
-             </binding>
-         </action>
-         <hovered>
-             <binding>
-                 <command>set-tooltip</command>
-                 <tooltip-id>fuel-tank-selector</tooltip-id>
-                 <label>Selected fuel tank: %s</label>
-                 <mapping>nasal</mapping>
-                 <script>
-                     var modes = ['LEFT MAIN', 'RIGHT MAIN', 'FUSELAGE', 'LEFT DROP', 'RIGHT DROP'];
-                     return modes[arg[0]];
-                 </script>
-                 <property>/controls/fuel/tank-selector</property>
-             </binding>
-         </hovered>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/fuel/tank-selector</property>
+                <value type="int">1</value>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">4</value>
+                <value type="int">3</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>fuel-tank-selector</tooltip-id>
+                <label>Selected fuel tank: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['LEFT MAIN', 'RIGHT MAIN', 'FUSELAGE', 'LEFT DROP', 'RIGHT DROP'];
+                    return modes[arg[0]];
+                </script>
+                <property>/controls/fuel/tank-selector</property>
+            </binding>
+        </hovered>
     </animation>
 
     <animation>
@@ -102,23 +102,23 @@
             <y>1</y>
         </axis>
         <action>
-             <binding>
-                 <command>property-cycle</command>
-                 <property>/controls/fuel/on</property>
-                 <value type="bool">false</value>
-                 <value type="bool">true</value>
-                 <wrap>false</wrap>
-             </binding>
-         </action>
-         <hovered>
-             <binding>
-                 <command>set-tooltip</command>
-                 <tooltip-id>fuel-shut-off</tooltip-id>
-                 <label>Fuel shut off: %s</label>
-                 <mapping>on-off</mapping>
-                 <property>/controls/fuel/on</property>
-             </binding>
-         </hovered>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/fuel/on</property>
+                <value type="bool">false</value>
+                <value type="bool">true</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>fuel-shut-off</tooltip-id>
+                <label>Fuel shut off: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/fuel/on</property>
+            </binding>
+        </hovered>
     </animation>
 
     <animation>

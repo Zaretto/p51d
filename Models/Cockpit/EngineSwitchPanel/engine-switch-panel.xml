@@ -14,6 +14,7 @@
     <animation>
         <type>pick</type>
         <object-name>boost-switch</object-name>
+        <object-name>blower-speed-body</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
@@ -141,13 +142,22 @@
     <animation>
         <type>pick</type>
         <object-name>starter-switch</object-name>
+        <object-name>start-switch-body</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-                <command>property-toggle</command>
+                <command>property-assign</command>
                 <property>/fdm/jsbsim/systems/engine/starter</property>
+                <value type="bool">true</value>
             </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/engine/starter</property>
+                    <value type="bool">false</value>
+                </binding>
+            </mod-up>
         </action>
         <hovered>
             <binding>
@@ -210,13 +220,22 @@
     <animation>
         <type>pick</type>
         <object-name>primer-switch</object-name>
+        <object-name>primer-sw-body</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-                <command>property-toggle</command>
+                <command>property-assign</command>
                 <property>/controls/engines/engine/primer-on</property>
+                <value type="bool">true</value>
             </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine/primer-on</property>
+                    <value type="bool">false</value>
+                </binding>
+            </mod-up>
         </action>
         <hovered>
             <binding>
@@ -279,6 +298,7 @@
     <animation>
         <type>pick</type>
         <object-name>fuel-pump-switch</object-name>
+        <object-name>fuel-pump-body</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
