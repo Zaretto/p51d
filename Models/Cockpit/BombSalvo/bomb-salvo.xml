@@ -29,7 +29,35 @@
         </axis>
     </animation>
 
-        <animation>
+    <animation>
+        <type>pick</type>
+        <object-name>right-salvo</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/armament/salvo-right-hs</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/armament/salvo-right-hs</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>right-bomb-salvo</tooltip-id>
+                <label>Click to release right bomb</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
         <type>rotate</type>
         <object-name>left-salvo</object-name>
         <property>/controls/armament/salvo-left</property>
@@ -55,6 +83,33 @@
         </axis>
     </animation>
 
+    <animation>
+        <type>pick</type>
+        <object-name>left-salvo</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/armament/salvo-left-hs</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/armament/salvo-left-hs</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>left-bomb-salvo</tooltip-id>
+                <label>Click to release left bomb</label>
+            </binding>
+        </hovered>
+    </animation>
 
   <animation>
   <type>material</type>

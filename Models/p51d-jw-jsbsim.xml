@@ -179,10 +179,6 @@
     <object-name>gunBastTubeFairingLeft</object-name>
 </effect>
 
-<model>
-   <path>Aircraft/p51d/Models/HotSpots.xml</path>
-</model>
-   
  <model>
     <path>Aircraft/p51d/Models/Instruments/Instruments.xml</path>
  </model>
