@@ -11,17 +11,7 @@
        </pure_gain>
 
     </channel>
-    
-    <channel name="engine">
-    
-       <pure_gain name="crankingToMP">
-          <input>/engines/engine[0]/cranking</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[0]</output>
-       </pure_gain>
 
-    </channel>
-    
     <channel name="pilot">
     
        <pure_gain name="pilotVisibleToMP">

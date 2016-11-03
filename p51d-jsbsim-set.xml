@@ -119,6 +119,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <autopilot n="3">
             <path>Aircraft/p51d/Systems/thunder.xml</path>
         </autopilot>
+        <autopilot n="4">
+            <path>Aircraft/p51d/Systems/engine.xml</path>
+        </autopilot>
         <property-rule n="100">
             <path>Aircraft/p51d/Systems/views.xml</path>
         </property-rule>
@@ -272,7 +275,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       /fdm/jsbsim/systems/armament/ejectionAnimatedOuter
       /fdm/jsbsim/systems/armament/ejectionAnimatedInner
       -->
-        <int n="0" /> <!-- alias="/engines/engine[0]/cranking" -->
+        <int n="0" alias="/engines/engine[0]/cranking"/>
         <int n="1" />  <!-- /controls/armament/gun-trigger -->
         <int n="2" />  <!-- /controls/armament/trigger2 --> 
         <int n="4" />  <!-- /ai/submodels/submodel[12]/count -->
@@ -412,24 +415,16 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <key n="115">
         <name>s</name>
         <desc>starter switch</desc>  
-        <binding>        
-           <command>nasal</command>
-           <script>controls.startEngine(1)</script>
-        </binding>
 	    <binding>
            <command>property-assign</command>
-           <property>/fdm/jsbsim/systems/engine/starter</property>
-           <value>1</value>
+           <property>/controls/switches/starter</property>
+           <value type="bool">true</value>
         </binding>
         <mod-up>
-           <binding>
-              <command>nasal</command>
-              <script>controls.startEngine(0)</script>
-           </binding>
 	       <binding>
               <command>property-assign</command>
-              <property>/fdm/jsbsim/systems/engine/starter</property>
-              <value>0</value>
+              <property>/controls/switches/starter</property>
+              <value type="bool">false</value>
            </binding>
          </mod-up> 
       </key>
@@ -447,13 +442,9 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <engine n="0">
         <magnetos type="int">0</magnetos>
         <supercharger-switch type="int">0</supercharger-switch>
-        <supercharger-guard-switch type="bool">false</supercharger-guard-switch>
         <blower-light-check type="int">0</blower-light-check>
         <primer-time type="float">0.0</primer-time>
         <master-bat type="int">0</master-bat>
-		<starter type="int">0</starter>
-        <starter-guard-switch type="bool">false</starter-guard-switch>
-        <primer-guard-switch type="bool">false</primer-guard-switch>
       </engine>
    </engines>
    <lighting>
@@ -610,7 +601,15 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
    <flight>
       <flaps type="float">0.0</flaps>
    </flight>   
- </controls>
+        <switches>
+            <starter type="bool">false</starter>
+            <primer type="bool">false</primer>
+
+            <supercharger-guard-switch type="bool">false</supercharger-guard-switch>
+            <starter-guard-switch type="bool">false</starter-guard-switch>
+            <primer-guard-switch type="bool">false</primer-guard-switch>
+        </switches>
+    </controls>
  
  <consumables>
    <fuel>

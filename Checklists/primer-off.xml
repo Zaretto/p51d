@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
 <!-- Primer off check -->
 <PropertyList>
-	 <condition>
-		<equals>
-			<property>/controls/engines/engine/primer-on</property>
-			<value>0</value>
-		</equals>
-	</condition>
-	<marker>
-    <x-m>2.6024</x-m>
-    <y-m>-0.155</y-m>
-    <z-m>-0.0</z-m>
-    <scale>1.4333</scale>
-	</marker>
+
+    <condition>
+        <not>
+            <property>/controls/switches/primer</property>
+        </not>
+    </condition>
+    <marker>
+        <x-m>2.6024</x-m>
+        <y-m>-0.155</y-m>
+        <z-m>-0.0</z-m>
+        <scale>1.4333</scale>
+    </marker>
+
 </PropertyList>

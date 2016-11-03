@@ -1281,7 +1281,7 @@
         <path>Sounds/click.wav</path>
         <condition>
            <not>
-             <property>/fdm/jsbsim/systems/engine/starter</property>
+             <property>/controls/switches/starter</property>
            </not>
         </condition>
         <volume>
@@ -1294,7 +1294,7 @@
         <name>starter-switch-on</name>
         <path>Sounds/click.wav</path>
         <condition>
-          <property>/fdm/jsbsim/systems/engine/starter</property>
+          <property>/controls/switches/starter</property>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>
@@ -1307,7 +1307,7 @@
         <path>Sounds/click.wav</path>
         <condition>
            <not>
-             <property>/controls/engines/engine/primer-on</property>
+             <property>/controls/switches/primer</property>
            </not>
         </condition>
         <volume>
@@ -1320,7 +1320,7 @@
         <name>primer-on</name>
         <path>Sounds/click.wav</path>
         <condition>
-          <property>/controls/engines/engine/primer-on</property>
+          <property>/controls/switches/primer</property>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>

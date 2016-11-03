@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<system name="Electrictal">
+<system name="electrical">
 
     <property value="0">systems/right-flor-gain</property>
-    
+
     <channel name="gear doors">
 
        <switch name="systems/gear/doors">
@@ -12,6 +12,18 @@
              propulsion/engine/set-running LE 0.9
           </test>
        </switch>
+
+    </channel>
+
+    <channel name="switches">
+
+        <switch name="systems/electrical/starter">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /controls/switches/starter EQ 1
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+        </switch>
 
     </channel>
 
@@ -30,7 +42,7 @@
 
       <switch name="systems/gear/safe-light-on">
          <default value="0"/>
-         <test login="AND" value ="1">
+         <test logic="AND" value ="1">
              /controls/engines/engine[0]/throttle LT 0.25
              /gear/gear/position-norm GT 0.99
          </test>
@@ -42,7 +54,7 @@
 
       <switch name="systems/gear/unsafe-light-on">
          <default value="0"/>
-         <test login="AND" value ="1">
+         <test logic="AND" value ="1">
              /controls/engines/engine[0]/throttle LT 0.25
              /gear/gear/position-norm LT 0.99
          </test>
@@ -276,18 +288,6 @@
            </test>
         </switch> 
 
-     </channel>
-
-     <channel name="Switch Panel">         
-		 
-        <switch name="systems/engine/engage-starter">
-         <default value="0"/>
-         <test logic="AND" value="1">
-            systems/engine/starter GT 0.9
-            /controls/engines/engine/master-bat GT 0.9
-         </test>
-         <output>/controls/engines/engine/starter</output>
-       </switch>
      </channel>
 
      <channel name="Recognition lights">

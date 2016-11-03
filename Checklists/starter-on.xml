@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
 <!-- Starter on check -->
 <PropertyList>
-     <condition>
-			<equals>
-			  <property>/controls/engines/engine/starter</property>
-			  <value>1</value>
-			</equals>
-		</condition>
-		<marker>
-			<x-m>2.6424</x-m>
-			<y-m>-0.17</y-m>
-			<z-m>0.03</z-m>
-			<scale>1.4333</scale>
-		</marker>
+
+    <condition>
+        <property>/controls/switches/starter</property>
+    </condition>
+    <marker>
+        <x-m>2.6424</x-m>
+        <y-m>-0.17</y-m>
+        <z-m>0.03</z-m>
+        <scale>1.4333</scale>
+    </marker>
+
 </PropertyList>
