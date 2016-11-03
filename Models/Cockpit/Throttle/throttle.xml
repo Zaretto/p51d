@@ -2,7 +2,7 @@
 <PropertyList>
 
  <path>throttle.ac</path>
-	 
+
  <animation>
   <type>rotate</type>
   <object-name>ThrottleGrip</object-name>
@@ -206,87 +206,37 @@
   </axis>
  </animation>
 
-<!-- <animation>
-  <type>rotate</type>
-  <object-name>ThrottleLinkage</object-name>
-  <property>/controls/engines/engine[0]/throttle</property>
-  <interpolation>
-   <entry>
-    <ind>0.0</ind>
-    <dep>-3</dep>
-   </entry>
-   <entry>
-    <ind>1.0</ind>
-    <dep>107</dep>
-   </entry>
-  </interpolation>
-  <axis>
-   <x>0</x>
-   <y>-1</y>
-   <z>0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>ThrottleLinkage</object-name>
-  <property>/controls/engines/engine[0]/throttle</property>
-  <interpolation>
-   <entry>
-    <ind>0.0</ind>
-    <dep>0</dep>
-   </entry>
-   <entry>
-    <ind>0.5</ind>
-    <dep>30</dep>
-   </entry>
-   <entry>
-    <ind>1.0</ind>
-    <dep>80</dep>
-   </entry>
-  </interpolation>
-  <center>
-   <x-m>0.10</x-m>
-   <y-m>0.01</y-m>
-   <z-m>0.08</z-m>
-  </center>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation> -->
- 
-<!--  <animation>
-    <type>locked-track</type> 
-    <object-name>RangeCable1</object-name>
-    <center>
-      <x-m>0.0604</x-m>
-      <y-m>0.0172</y-m>
-      <z-m>0.1292</z-m>
-    </center>
-    <lock-axis>
-      <x>0</x>
-      <y>1</y>
-      <z>0</z>
-    </lock-axis>
-    <track-axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </track-axis> 
-    <target-name>RangeCable2</target-name>
-    <target-center>
-      <x-m>3.569</x-m>
-      <y-m>-0.3449</y-m>
-      <z-m>0.2872</z-m>
-    </target-center> 
-  </animation> -->
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>5</drag-scale-px>
+        <object-name>ThrottleGrip</object-name>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/engines/engine[0]/throttle</property>
+                <factor>0.01</factor>
+                <min>0.0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>throttle-grip</tooltip-id>
+                <label>Throttle: %3d %%</label>
+                <label>Throttle: 100 %</label>
+                <property>/controls/engines/engine[0]/throttle</property>
+                <mapping>percent</mapping>
+            </binding>
+        </hovered>
+    </animation>
 
  <animation>
   <type>rotate</type>
   <object-name>PropHandle</object-name>
-  <object-name>PropKnob</object-name>aa
+  <object-name>PropKnob</object-name>
   <property>/controls/engines/engine[0]/propeller-pitch</property>
   <interpolation>
    <entry>
@@ -304,6 +254,33 @@
    <z>0</z>
   </axis>
  </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>5</drag-scale-px>
+        <object-name>PropKnob</object-name>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/engines/engine[0]/propeller-pitch</property>
+                <factor>0.02</factor>
+                <min>0.0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>propeller-knob</tooltip-id>
+                <label>Propeller: %3d %%</label>
+                <label>Propeller: 100 %</label>
+                <property>/controls/engines/engine[0]/propeller-pitch</property>
+                <mapping>percent</mapping>
+            </binding>
+        </hovered>
+    </animation>
 
  <animation>
   <type>rotate</type>
@@ -342,7 +319,34 @@
    <z>0</z>
   </axis>
  </animation>
- 
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>2</drag-scale-px>
+        <object-name>MixtureKnob</object-name>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/engines/engine[0]/mixture</property>
+                <factor>0.01</factor>
+                <min>0.0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>mixture-knob</tooltip-id>
+                <label>Mixture: %3d %%</label>
+                <label>Mixture: 100 %</label>
+                <property>/controls/engines/engine[0]/mixture</property>
+                <mapping>percent</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
  <animation>
   <type>translate</type>
   <object-name>micButton</object-name>
@@ -355,6 +359,30 @@
   </axis>
  </animation>
 
+    <animation>
+        <type>pick</type>
+        <object-name>micButton</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>controls.ptt(1)</script>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.ptt(0)</script>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>mic-button</tooltip-id>
+                <label>Push to talk over radio</label>
+            </binding>
+        </hovered>
+    </animation>
+
 </PropertyList>
-
-

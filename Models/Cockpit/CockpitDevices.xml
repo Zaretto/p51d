@@ -65,7 +65,7 @@
   <name>TRIMKNOBAILERON</name>
   <path>Aircraft/p51d/Models/Cockpit/Trims/trimknobaileron.xml</path>
   <offsets>
-   <x-m>2.8254</x-m>
+   <x-m>2.8604</x-m><!-- +0.035 (guessed using photo on page 10 of manual) -->
    <y-m>-0.35</y-m>
    <z-m>-0.028</z-m>
    <pitch-deg>15.0</pitch-deg>
@@ -76,7 +76,7 @@
   <name>TRIMKNOBRUDDER</name>
   <path>Aircraft/p51d/Models/Cockpit/Trims/trimknobrudder.xml</path>
   <offsets>
-   <x-m>2.9554</x-m>
+   <x-m>2.9954</x-m><!-- +0.04 (guessed using photo on page 10 of manual) -->
    <y-m>-0.355</y-m>
    <z-m>-0.048</z-m>
   </offsets>
@@ -86,7 +86,7 @@
   <name>TRIMWHEELELEVATOR</name>
   <path>Aircraft/p51d/Models/Cockpit/Trims/trimwheelelevator.xml</path>
   <offsets>
-   <x-m>2.9004</x-m>
+   <x-m>2.9254</x-m><!-- +0.025 (guessed using photo on page 10 of manual) -->
    <y-m>-0.297</y-m>
    <z-m>-0.13</z-m>
   </offsets>
@@ -96,7 +96,7 @@
   <name>THROTTLE</name>
   <path>Aircraft/p51d/Models/Cockpit/Throttle/throttle.xml</path>
   <offsets>
-   <x-m>2.8542</x-m>
+   <x-m>2.8342</x-m><!-- -0.02 (guessed using photo on page 10 of manual) -->
    <y-m>-0.32</y-m>
    <z-m>0.115</z-m>
   </offsets>
@@ -255,7 +255,7 @@
   <name>LEFT_SWITCH_PANEL</name>
   <path>Aircraft/p51d/Models/Cockpit/LeftSwitchPanel/left-switch-box.xml</path>
   <offsets>
-   <x-m>2.95</x-m>
+   <x-m>2.98</x-m><!-- +0.03 (guessed using photo on page 10 of manual) -->
    <y-m>-0.366</y-m>
    <z-m>0.118</z-m>
   </offsets>
