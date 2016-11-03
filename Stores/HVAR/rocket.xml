@@ -4,7 +4,7 @@
 
 <PropertyList>
 
- <path>rocket.ac</path>
+ <path>HVAR.ac</path>
 
   <!-- Smoke -->
   <model>
@@ -15,5 +15,14 @@
       <z-m>  0 </z-m>
     </offsets>
   </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>Cylinder</object-name>
+        <object-name>Cylinder.001</object-name>
+        <condition>
+            <false/>
+        </condition>
+    </animation>
 
 </PropertyList>
