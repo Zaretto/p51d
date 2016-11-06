@@ -34,7 +34,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   <fuel-fraction>0.50</fuel-fraction>
   
   <startup>
-     <splash-texture>Aircraft/p51d/P-51D-splash.png</splash-texture>
+     <splash-texture>Aircraft/p51d/Splashs/splash1.png</splash-texture>
+     <splash-texture>Aircraft/p51d/Splashs/splash2.png</splash-texture>
+     <splash-texture>Aircraft/p51d/Splashs/splash3.png</splash-texture>
   </startup>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
