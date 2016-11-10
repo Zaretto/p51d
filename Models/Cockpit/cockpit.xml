@@ -3,6 +3,12 @@
 
 <path>P-51D-cockpit.ac</path>
 
+    <params>
+        <aileron>/fdm/jsbsim/fcs/aileron-cmd-norm-filtered</aileron>
+        <elevator>/fdm/jsbsim/fcs/elevator-cmd-norm-filtered</elevator>
+        <rudder>/fdm/jsbsim/fcs/rudder-cmd-norm-filtered</rudder>
+    </params>
+
     <animation>
         <type>range</type>
         <min-m>0</min-m>
@@ -70,7 +76,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Trigger2</object-name>
-  <property>controls/flight/elevator</property>
+  <property alias="/params/elevator"/>
   <factor>-10</factor>
   <center>
    <x-m>2.90042</x-m>
@@ -87,7 +93,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Trigger2</object-name>
-  <property>controls/flight/aileron</property>
+  <property alias="/params/aileron"/>
   <factor>-10</factor>
   <center>
    <x-m>2.90042</x-m>
@@ -104,7 +110,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <property>controls/flight/elevator</property>
+  <property alias="/params/elevator"/>
   <factor>-10</factor>
   <center>
    <x-m>2.90042</x-m>
@@ -121,7 +127,7 @@
  <animation>
   <type>rotate</type>
   <object-name>BootTransition</object-name>
-  <property>controls/flight/elevator</property>
+  <property alias="/params/elevator"/>
   <factor>-10</factor>
   <center>
    <x-m>2.90042</x-m>
@@ -138,7 +144,7 @@
  <animation>
   <type>rotate</type>
   <object-name>BootTop</object-name>
-  <property>controls/flight/elevator</property>
+  <property alias="/params/elevator"/>
   <factor>-10</factor>
   <center>
    <x-m>2.90042</x-m>
@@ -155,7 +161,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <property>controls/flight/aileron</property>
+  <property alias="/params/aileron"/>
   <factor>-10</factor>
   <center>
    <x-m>2.90042</x-m>
@@ -172,7 +178,7 @@
   <animation>
   <type>rotate</type>
   <object-name>BootTransition</object-name>
-  <property>controls/flight/aileron</property>
+  <property alias="/params/aileron"/>
   <factor>-10</factor>
   <center>
    <x-m>2.90042</x-m>
@@ -189,7 +195,7 @@
  <animation>
   <type>rotate</type>
   <object-name>BootTop</object-name>
-  <property>controls/flight/aileron</property>
+  <property alias="/params/aileron"/>
   <factor>-10</factor>
   <center>
    <x-m>2.9019</x-m>
@@ -206,7 +212,7 @@
  <animation>
   <type>translate</type>
   <object-name>LeftRudderPedal</object-name>
-  <property>controls/flight/rudder</property>
+  <property alias="/params/rudder"/>
   <factor>0.04</factor>
   <axis>
    <x>1</x>
@@ -235,7 +241,7 @@
  <animation>
   <type>translate</type>
   <object-name>RightRudderPedal</object-name>
-  <property>controls/flight/rudder</property>
+  <property alias="/params/rudder"/>
   <factor>-0.04</factor>
   <axis>
    <x>1</x>
@@ -264,7 +270,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RightRudderCarage</object-name>
-  <property>controls/flight/rudder</property>
+  <property alias="/params/rudder"/>
   <factor>8.45</factor>
   <axis>
    <x>0</x>
@@ -281,7 +287,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LeftRudderCarage</object-name>
-  <property>controls/flight/rudder</property>
+  <property alias="/params/rudder"/>
   <factor>-8.45</factor>
   <axis>
    <x>0</x>
@@ -303,14 +309,8 @@
     <binding>
         <command>nasal</command>
         <script>
-            if (getprop("/controls/gear/gear-down") == 0)
-            {
-                setprop("/controls/gear/gear-down", 1);
-            }
-            else
-            {
-                setprop("/controls/gear/gear-down", 0);
-            }
+            var state = getprop("/controls/gear/gear-down");
+            setprop("/controls/gear/gear-down", !state);
         </script>
     </binding>
    </action>

@@ -618,7 +618,20 @@ Hal V. Engel hvengel@astound.net
 
         </channel>
 
-        <channel name="Pitch">		
+        <channel name="Pitch">
+            <kinematic name="fcs/elevator-cmd-norm-filtered">
+                <input>fcs/elevator-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>-1</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>0.15</time>
+                    </setting>
+                </traverse>
+            </kinematic>
 
             <aerosurface_scale name="Elevator Control">
                 <input>fcs/pitch-trim-cmd-norm</input>
@@ -640,7 +653,7 @@ Hal V. Engel hvengel@astound.net
             </summer>
             
             <summer name="Pitch Trim Sum Not Scaled">
-                <input>fcs/elevator-cmd-norm</input>
+                <input>fcs/elevator-cmd-norm-filtered</input>
                 <input>fcs/pitch-trim-cmd-norm-offset-biased</input>
                 <clipto>
                     <min>-1.7</min>
@@ -760,7 +773,6 @@ Hal V. Engel hvengel@astound.net
        </clipto>
 	  <output>aero/pitch-moment-damping-factor</output>
 	</fcs_function>
-            
         </channel>
         
         <channel name="guns">
@@ -834,6 +846,20 @@ Hal V. Engel hvengel@astound.net
         </channel>
         
         <channel name="Roll">
+            <kinematic name="fcs/aileron-cmd-norm-filtered">
+                <input>fcs/aileron-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>-1</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>0.15</time>
+                    </setting>
+                </traverse>
+            </kinematic>
+
             <pure_gain name="Roll Trim Scaled">
                 <input>fcs/roll-trim-cmd-norm</input>
                 <gain> 0.5 </gain>
@@ -841,7 +867,7 @@ Hal V. Engel hvengel@astound.net
             </pure_gain>
             
             <summer name="Roll Trim Sum">
-                <input>fcs/aileron-cmd-norm</input>
+                <input>fcs/aileron-cmd-norm-filtered</input>
                 <input>fcs/roll-trim-scaled</input>
                 <clipto>
                     <min>-1.3</min>
@@ -926,9 +952,22 @@ Hal V. Engel hvengel@astound.net
                 </function>
                 <output>/surface-positions/left-aileron-pos-norm</output>
             </fcs_function>
-
         </channel>
+
         <channel name="Yaw">
+            <kinematic name="fcs/rudder-cmd-norm-filtered">
+                <input>fcs/rudder-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>-1</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>0.15</time>
+                    </setting>
+                </traverse>
+            </kinematic>
 
             <aerosurface_scale name="yaw trim scaled">
                 <input>fcs/yaw-trim-cmd-norm</input>
@@ -940,7 +979,7 @@ Hal V. Engel hvengel@astound.net
             </aerosurface_scale>
             
             <summer name="Rudder Command Sum">
-                <input>fcs/rudder-cmd-norm</input>
+                <input>fcs/rudder-cmd-norm-filtered</input>
                 <input>fcs/yaw-trim-scaled</input>
                 <clipto>
                     <min>-1</min>

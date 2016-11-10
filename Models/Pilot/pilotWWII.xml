@@ -8,21 +8,21 @@
 		<texture type="string">pilorWWII.png</texture>
 		<head>
 			<roll-animation>
-				<property type="string">controls/flight/aileron</property>
+				<property type="string">/fdm/jsbsim/fcs/aileron-cmd-norm-filtered</property>
 				<factor type="float">-10</factor>
 				<offset-deg type="float">0</offset-deg>
 				<min type="float">-10</min>
 				<max type="float">10</max>
 			</roll-animation>
 			<pitch-animation>
-				<property type="string">controls/flight/elevator</property>
+				<property type="string">/fdm/jsbsim/fcs/elevator-cmd-norm-filtered</property>
 				<factor type="float">-15</factor>
 				<offset-deg type="float">0</offset-deg>
 				<min type="float">-15</min>
 				<max type="float">15</max>
 			</pitch-animation>
 			<yaw-animation>
-				<property type="string">controls/flight/rudder</property>
+				<property type="string">/fdm/jsbsim/fcs/rudder-cmd-norm-filtered</property>
 				<factor type="float">-25</factor>
 				<offset-deg type="float">0</offset-deg>
 				<min type="float">-25</min>
@@ -31,25 +31,25 @@
 		</head>
 		<arms>
 			<upper-animation-pitch>
-				<property type="string">controls/flight/elevator</property>
+				<property type="string">/fdm/jsbsim/fcs/elevator-cmd-norm-filtered</property>
 				<offset-deg type="float">0</offset-deg>
 				<min type="float">-120</min>
 				<max type="float">120</max>
 			</upper-animation-pitch>
 			<lower-animation-pitch>
-				<property type="string">controls/flight/elevator</property>
+				<property type="string">/fdm/jsbsim/fcs/elevator-cmd-norm-filtered</property>
 				<offset-deg type="float">0</offset-deg>
 				<min type="float">-120</min>
 				<max type="float">120</max>
 			</lower-animation-pitch>
             <upper-animation-roll>
-				<property type="string">controls/flight/aileron</property>
+				<property type="string">/fdm/jsbsim/fcs/aileron-cmd-norm-filtered</property>
 				<offset-deg type="float">0</offset-deg>
 				<min type="float">-120</min>
 				<max type="float">120</max>
 			</upper-animation-roll>
 			<lower-animation-roll>
-				<property type="string">controls/flight/aileron</property>
+				<property type="string">/fdm/jsbsim/fcs/aileron-cmd-norm-filtered</property>
 				<offset-deg type="float">0</offset-deg>
 				<min type="float">-120</min>
 				<max type="float">120</max>
@@ -69,7 +69,7 @@
 		</arms>
 		<legs>
 			<upper-animation>
-				<property type="string">controls/flight/rudder</property>
+				<property type="string">/fdm/jsbsim/fcs/rudder-cmd-norm-filtered</property>
 				<rightFactor type="float">-10</rightFactor>
                 <leftFactor type="float">10</leftFactor>
 				<offset-deg type="float">87</offset-deg>
@@ -77,7 +77,7 @@
 				<max type="float">120</max>
 			</upper-animation>
 			<lower-animation>
-				<property type="string">controls/flight/rudder</property>
+				<property type="string">/fdm/jsbsim/fcs/rudder-cmd-norm-filtered</property>
 				<rightFactor type="float">20</rightFactor>
                 <leftFactor type="float">-20</leftFactor>
 				<offset-deg type="float">-35</offset-deg>
