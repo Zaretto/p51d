@@ -628,7 +628,7 @@ Hal V. Engel hvengel@astound.net
                     </setting>
                     <setting>
                         <position>1</position>
-                        <time>0.15</time>
+                        <time>0.20</time>
                     </setting>
                 </traverse>
             </kinematic>
@@ -855,7 +855,7 @@ Hal V. Engel hvengel@astound.net
                     </setting>
                     <setting>
                         <position>1</position>
-                        <time>0.15</time>
+                        <time>0.20</time>
                     </setting>
                 </traverse>
             </kinematic>
@@ -964,7 +964,7 @@ Hal V. Engel hvengel@astound.net
                     </setting>
                     <setting>
                         <position>1</position>
-                        <time>0.15</time>
+                        <time>0.20</time>
                     </setting>
                 </traverse>
             </kinematic>

@@ -1,574 +1,869 @@
-<?xml version="1.0"?>
- 
-<!-- Generic Autopilot Configuration -->
+<?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Each component is evaluated in the order specified.  You can make up -->
-<!-- property names to pass the result of one component on to a subsequent -->
-<!-- component. -->
+<!--
+    Copyright (c) 2016 onox
 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
 
 <PropertyList>
 
-  <!-- =============================================================== -->
-  <!-- Roll Axis Modes                                                 -->
-  <!-- =============================================================== -->
+    <!-- ================================================================== -->
+    <!-- Ground Contact Logic                                               -->
+    <!-- ================================================================== -->
 
-  <!-- Wing leveler --> 
-  <pid-controller>
-    <name>Wing Leveler (Turn Coordinator based)</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>wing-leveler</value>
-    </enable>
-    <input>
-      <prop>/instrumentation/turn-indicator/indicated-turn-rate</prop>
-    </input>
-    <reference>
-      <value>0.0</value>
-    </reference>
-    <output>
-      <prop>/controls/flight/aileron</prop>
-    </output>
-    <config>
-      <Kp>0.3</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+    <logic>
+        <name>A/P Can Roll Switcher</name>
+        <input>
+            <and>
+                <greater-than>
+                    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                    <value>60.0</value>
+                </greater-than>
+                <not>
+                    <and>
+                        <property>/gear/gear[0]/wow</property>
+                        <property>/gear/gear[1]/wow</property>
+                    </and>
+                </not>
+            </and>
+        </input>
+        <output>
+            <property>/aircraft/afcs/internal/can-roll</property>
+        </output>
+    </logic>
 
-  <!-- Heading Bug Hold.  2 stage cascade controller. -->
+    <logic>
+        <name>A/P Roll Hold Switcher</name>
+        <input>
+            <and>
+                <or>
+                    <property>/aircraft/afcs/locks/roll</property>
+                    <property>/aircraft/afcs/locks/wings-level-vs-hold</property>
+                </or>
+                <property>/aircraft/afcs/internal/can-roll</property>
+            </and>
+        </input>
+        <output>
+            <property>/aircraft/afcs/active/roll</property>
+        </output>
+    </logic>
 
-  <!-- Stage #1 sets target roll based on diff between current heading -->
-  <!-- and heading bug. -->
-  <pid-controller>
-    <name>Heading Bug Hold (DG based) Stage 1</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>dg-heading-hold</value>
-    </enable>
-    <input>
-      <prop>/autopilot/internal/heading-bug-error-deg</prop>
-    </input>
-    <reference>
-      <value>0.0</value>
-    </reference>
-    <output>
-      <prop>/autopilot/internal/target-roll-deg</prop>
-    </output>
-    <config>
-      <Kp>-1.0</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>     <!-- derivator time -->
-      <u_min>-20.0</u_min> <!-- minimum output clamp -->
-      <u_max>20.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+    <logic>
+        <name>A/P Tail On Ground Switcher</name>
+        <input>
+            <and>
+                <property>/aircraft/afcs/locks/tail</property>
+                <condition>
+                    <smaller-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>60.0</value>
+                    </smaller-than>
+                </condition>
+                <property>/gear/gear[0]/wow</property>
+                <property>/gear/gear[1]/wow</property>
+            </and>
+        </input>
+        <output>
+            <property>/aircraft/afcs/active/tail</property>
+        </output>
+    </logic>
 
-  <!-- Stage #2 drives the ailerons to achieve the desired roll deg. -->
-  <pid-controller>
-    <name>Heading Bug Hold (DG based) Stage 2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>dg-heading-hold</value>
-    </enable>
-    <input>
-      <prop>/orientation/roll-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/internal/target-roll-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/aileron</prop>
-    </output>
-    <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+    <logic>
+        <name>A/P Can Takeoff Switcher</name>
+        <input>
+            <and>
+                <less-than>
+                    <property>/velocities/groundspeed-kt</property>
+                    <value>10.0</value>
+                </less-than>
+                <property>/gear/gear[0]/wow</property>
+                <property>/gear/gear[1]/wow</property>
+            </and>
+        </input>
+        <output>
+            <property>/aircraft/afcs/internal/can-takeoff</property>
+        </output>
+    </logic>
 
-  <!-- True Heading hold.  2 stage cascade controller. -->
+    <flipflop>
+        <name>A/P Takeoff Switcher</name>
+        <type>RS</type>
+        <S>
+            <and>
+                <property>/aircraft/afcs/locks/takeoff</property>
+                <property>/aircraft/afcs/internal/can-takeoff</property>
+            </and>
+        </S>
+        <R>
+            <not>
+                <property>/aircraft/afcs/locks/takeoff</property>
+            </not>
+        </R>
+        <output>
+            <property>/aircraft/afcs/active/takeoff</property>
+        </output>
+    </flipflop>
 
-  <!-- Stage #1 sets target roll based on diff between current heading -->
-  <!-- and target heading. -->
-  <pid-controller>
-    <name>True Heading Hold (DG based) Stage 1</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>true-heading-hold</value>
-    </enable>
-    <input>
-      <prop>/autopilot/internal/true-heading-error-deg</prop>
-    </input>
-    <reference>
-      <value>0.0</value>
-    </reference>
-    <output>
-      <prop>/autopilot/internal/target-roll-deg</prop>
-    </output>
-    <config>
-      <Kp>-1.0</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>     <!-- derivator time -->
-      <u_min>-20.0</u_min> <!-- minimum output clamp -->
-      <u_max>20.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+    <logic>
+        <name>A/P Vertical Speed Hold Switcher</name>
+        <input>
+            <and>
+                <property>/aircraft/afcs/locks/wings-level-vs-hold</property>
+                <not>
+                    <or>
+                        <property>/gear/gear[0]/wow</property>
+                        <property>/gear/gear[1]/wow</property>
+                        <property>/gear/gear[2]/wow</property>
+                    </or>
+                </not>
+            </and>
+        </input>
+        <output>
+            <property>/aircraft/afcs/active/vs</property>
+        </output>
+    </logic>
 
-  <!-- Stage #2 drives the ailerons to achieve the desired roll deg. -->
-  <pid-controller>
-    <name>True Heading Hold (DG based) Stage 2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>true-heading-hold</value>
-    </enable>
-    <input>
-      <prop>/orientation/roll-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/internal/target-roll-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/aileron</prop>
-    </output>
-    <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+    <logic>
+        <name>A/P Pitch Hold Switcher</name>
+        <input>
+            <or>
+                <property>/aircraft/afcs/active/vs</property>
+                <and>
+                    <property>/aircraft/afcs/locks/pitch</property>
+                    <greater-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>60.0</value>
+                    </greater-than>
+                </and>
+            </or>
+        </input>
+        <output>
+            <property>/aircraft/afcs/active/pitch</property>
+        </output>
+    </logic>
 
-  <!-- Nav1 hold.  2 stage cascade controller. -->
+    <!-- ================================================================== -->
+    <!-- State Machines                                                     -->
+    <!-- ================================================================== -->
 
-  <!-- Stage #1 sets target roll based on diff between current heading -->
-  <!-- and target heading. -->
-  <pid-controller>
-    <name>Nav1 Hold Stage 1</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>nav1-hold</value>
-    </enable>
-    <input>
-      <prop>/autopilot/internal/nav1-heading-error-deg</prop>
-    </input>
-    <reference>
-      <value>0.0</value>
-    </reference>
-    <output>
-      <prop>/autopilot/internal/target-roll-deg</prop>
-    </output>
-    <config>
-      <Kp>-1.0</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>     <!-- derivator time -->
-      <u_min>-20.0</u_min> <!-- minimum output clamp -->
-      <u_max>20.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+    <state-machine>
+        <branch>/aircraft/afcs/logic/takeoff</branch>
 
-  <!-- Stage #2 drives the ailerons to achieve the desired roll deg. -->
-  <pid-controller>
-    <name>Nav1 Hold Stage 2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>nav1-hold</value>
-    </enable>
-    <input>
-      <prop>/orientation/roll-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/internal/target-roll-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/aileron</prop>
-    </output>
-    <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+        <state>
+            <name>init</name>
 
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/takeoff</property>
+                <value type="bool">false</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/tail</property>
+                <value type="bool">false</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/rudder</property>
+                <value type="bool">false</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/speed</property>
+                <value type="bool">false</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/roll</property>
+                <value type="bool">false</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/pitch</property>
+                <value type="bool">false</value>
+            </enter>
+        </state>
 
- <!-- =============================================================== -->
- <!-- Pitch Axis Modes                                                -->
- <!-- =============================================================== -->
+        <state>
+            <name>align</name>
 
- <!-- Simple pitch hold --> 
- <pid-controller>
-    <name>Pitch hold</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>pitch-hold</value>
-    </enable>
-    <input>
-      <prop>/orientation/pitch-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-pitch-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevato-trimr</prop>
-    </output>
-    <config>
-      <Kp>-0.05</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>1.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-   </pid-controller>
+            <enter>
+                <command>property-assign</command>
+                <property>/controls/flight/aileron</property>
+                <value type="double">0.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/propeller-pitch</property>
+                <value type="double">1.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/controls/gear/brake-parking</property>
+                <value type="bool">false</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/tail</property>
+                <value type="bool">true</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/heading-deg</property>
+                <property>/orientation/heading-magnetic-deg</property>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/rudder</property>
+                <value type="bool">true</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/speed-kt</property>
+                <value type="double">10.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/speed</property>
+                <value type="bool">true</value>
+            </enter>
+        </state>
 
- <!-- Simple angle of attack hold --> 
- <pid-controller>
-    <name>AOA hold</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>aoa-hold</value>
-    </enable>
-    <input>
-      <prop>/orientation/alpha-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-aoa-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.05</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>0.5</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+        <state>
+            <name>moving</name>
 
-  <!-- Altitude hold.  2 stage cascade controller. -->
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/speed-kt</property>
+                <value type="double">80.0</value>
+            </enter>
+        </state>
 
-  <!-- Stage #1 sets target rate of climb based on diff between current alt -->
-  <!-- and target altitude. -->
-  <pi-simple-controller>
-    <name>Altitude Hold (Altimeter based) Stage 1</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>altitude-hold</value>
-    </enable>
-    <input>
-      <prop>/position/altitude-ft</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-altitude-ft</prop>
-    </reference>
-    <output>
-      <prop>/autopilot/internal/target-climb-rate-fps</prop>
-    </output>
-    <config>
-      <Kp>0.3</Kp>          <!-- proportional gain -->
-      <Ki>0.0</Ki>          <!-- integral gain -->
-      <u_min>-16.67</u_min> <!-- minimum output clamp -->
-      <u_max>8.33</u_max>   <!-- maximum output clamp -->
-    </config>
-  </pi-simple-controller>
+        <state>
+            <name>lift-tail</name>
 
-  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
-  <pid-controller>
-    <name>Altitude Hold (Altimeter based) Stage 2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>altitude-hold</value>
-    </enable>
-    <input>
-      <prop>/velocities/vertical-speed-fps</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/internal/target-climb-rate-fps</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.01</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+            <enter>
+                <command>property-assign</command>
+                <property>/controls/flight/aileron</property>
+                <value type="double">0.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/roll-deg</property>
+                <value type="double">0.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/roll</property>
+                <value type="bool">true</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/tail</property>
+                <value type="bool">false</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/speed-kt</property>
+                <value type="double">160.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/pitch-deg</property>
+                <value type="double">2.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/pitch</property>
+                <value type="bool">true</value>
+            </enter>
+        </state>
 
-  <!-- AGL hold.  2 stage cascade controller. -->
+        <state>
+            <name>rotate</name>
 
-  <!-- Stage #1 sets target rate of climb based on diff between current agl -->
-  <!-- and target agl. -->
-  <pi-simple-controller>
-    <name>AGL Hold (Altimeter based) Stage 1</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>agl-hold</value>
-    </enable>
-    <input>
-      <prop>/position/altitude-agl-ft</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-agl-ft</prop>
-    </reference>
-    <output>
-      <prop>/autopilot/internal/target-climb-rate-fps</prop>
-    </output>
-    <config>
-      <Kp>0.3</Kp>          <!-- proportional gain -->
-      <Ki>0.0</Ki>          <!-- integral gain -->
-      <u_min>-16.67</u_min> <!-- minimum output clamp -->
-      <u_max>8.33</u_max>   <!-- maximum output clamp -->
-    </config>
-  </pi-simple-controller>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/pitch-deg</property>
+                <value type="double">5.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/speed-kt</property>
+                <value type="double">230.0</value>
+            </enter>
+        </state>
 
-  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
-  <pid-controller>
-    <name>AGL Hold (Altimeter based) Stage 2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>agl-hold</value>
-    </enable>
-    <input>
-      <prop>/velocities/vertical-speed-fps</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/internal/target-climb-rate-fps</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.01</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+        <state>
+            <name>climb</name>
 
-  <!-- Glideslope hold. -->
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/locks/rudder</property>
+                <value type="bool">false</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/controls/flight/rudder</property>
+                <value type="double">0.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/pitch-deg</property>
+                <value type="double">10.0</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/controls/gear/gear-down</property>
+                <value type="bool">false</value>
+            </enter>
+        </state>
 
-  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
-  <pid-controller>
-    <name>Glideslop Hold</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>gs1-hold</value>
-    </enable>
-    <input>
-      <prop>/velocities/vertical-speed-fps</prop>
-    </input>
-    <reference>
-      <prop>/instrumentation/nav[0]/gs-rate-of-climb</prop>
-    </reference>
-     <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.01</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+        <transition>
+            <name>start-takeoff</name>
+            <source>init</source>
+            <target>align</target>
+            <condition>
+                <property>/aircraft/afcs/active/takeoff</property>
+            </condition>
+        </transition>
 
-  <!-- vertical speed hold -->
-  <pid-controller>
-    <name>Vertical Speed Hold</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>vertical-speed-hold</value>
-    </enable>
-    <input>
-      <prop>/velocities/vertical-speed-fps</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/vertical-speed-fpm</prop>
-      <scale>0.01667</scale>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.005</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.0001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+        <transition>
+            <name>start-moving</name>
+            <source>align</source>
+            <target>moving</target>
+            <condition>
+                <greater-than>
+                    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                    <value>9.0</value>
+                </greater-than>
+                <!-- TODO And on center of runway and aircraft heading = runway heading -->
+            </condition>
+        </transition>
 
+        <transition>
+            <name>raise-tail-lower-nose</name>
+            <source>moving</source>
+            <target>lift-tail</target>
+            <condition>
+                <greater-than>
+                    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                    <value>65.0</value>
+                </greater-than>
+            </condition>
+        </transition>
 
- <!-- =============================================================== -->
- <!-- Velocity Modes                                                  -->
- <!-- =============================================================== -->
+        <transition>
+            <name>lift-nose</name>
+            <source>lift-tail</source>
+            <target>rotate</target>
+            <condition>
+                <and>
+                    <less-than>
+                        <property>/orientation/pitch-deg</property>
+                        <value>3.5</value>
+                    </less-than>
+                    <greater-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>130.0</value>
+                    </greater-than>
+                </and>
+            </condition>
+        </transition>
 
- <!-- Auto throttle --> 
- <pid-controller>
-    <name>Auto Throttle (5 sec lookahead)</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>speed-with-throttle</value>
-    </enable>
-    <input>
-      <!-- <prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop> -->
-      <prop>/velocities/airspeed-kt</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-speed-kt</prop>
-    </reference>
-    <output>
-      <prop>/controls/engines/engine[0]/throttle</prop>
-    </output>
-    <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>0.0</u_min>  <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+        <transition>
+            <name>start-climbing</name>
+            <source>rotate</source>
+            <target>climb</target>
+            <condition>
+                <and>
+                    <not>
+                        <property>/gear/gear[0]/wow</property>
+                    </not>
+                    <not>
+                        <property>/gear/gear[1]/wow</property>
+                    </not>
+                    <greater-than>
+                        <property>/position/altitude-agl-ft</property>
+                        <value>20.0</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>/orientation/pitch-deg</property>
+                        <value>4.5</value>
+                    </greater-than>
+                </and>
+            </condition>
+        </transition>
 
- <!-- Hold speed by varying pitch trim (Two stage cascading controller) --> 
- <pid-controller>
-    <name>Speed hold (vary pitch trim) Stage #1</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>speed-with-pitch-trim</value>
-    </enable>
-    <input>
-      <prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-speed-kt</prop>
-    </reference>
-    <output>
-      <prop>/autopilot/settings/target-pitch-deg</prop>
-    </output>
-    <config>
-      <Kp>-1.0</Kp>     <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>6.0</Ti>        <!-- integrator time -->
-      <Td>0.001</Td>        <!-- derivator time -->
-      <u_min>-10.0</u_min><!-- minimum output clamp -->
-      <u_max>25.0</u_max> <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+        <transition>
+            <name>finish-takeoff</name>
+            <source>climb</source>
+            <target>init</target>
+            <condition>
+                <or>
+                    <and>
+                        <greater-than>
+                            <property>/orientation/pitch-deg</property>
+                            <value>9.5</value>
+                        </greater-than>
+                        <greater-than>
+                            <property>/velocities/vertical-speed-fps</property>
+                            <value>500.0</value>
+                        </greater-than>
+                    </and>
+                    <greater-than>
+                        <property>/aircraft/afcs/logic/takeoff/elapsed-time-msec</property>
+                        <value>10000.0</value>
+                    </greater-than>
+                </or>
+            </condition>
+        </transition>
 
- <pid-controller>
-    <name>Speed hold (vary pitch trim) Stage #2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>speed-with-pitch-trim</value>
-    </enable>
-    <input>
-      <prop>/orientation/pitch-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-pitch-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.05</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>1.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
+        <transition>
+            <name>disable-takeoff</name>
+            <source>align</source>
+            <source>moving</source>
+            <source>lift-tail</source>
+            <source>rotate</source>
+            <source>climb</source>
+            <target>init</target>
+            <condition>
+                <not>
+                    <property>/aircraft/afcs/locks/takeoff</property>
+                </not>
+            </condition>
+        </transition>
+    </state-machine>
+
+    <logic>
+        <name>A/P Vertical Speed Small</name>
+        <input>
+            <less-than-equals>
+                <expression>
+                    <abs>
+                        <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+                    </abs>
+                </expression>
+                <value>150.0</value>
+            </less-than-equals>
+        </input>
+        <output>
+            <property>/aircraft/afcs/internal/vs-small</property>
+        </output>
+    </logic>
+
+    <state-machine>
+        <branch>/aircraft/afcs/logic/vs</branch>
+
+        <state>
+            <name>init</name>
+        </state>
+
+        <state>
+            <name>active</name>
+
+            <enter>
+                <condition>
+                    <not>
+                        <property>/aircraft/afcs/internal/vs-small</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/vs-fpm</property>
+                <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+            </enter>
+            <enter>
+                <condition>
+                    <property>/aircraft/afcs/internal/vs-small</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/afcs/target/vs-fpm</property>
+                <value type="double">0.0</value>
+            </enter>
+        </state>
+
+        <transition>
+            <name>enable-vs</name>
+            <source>init</source>
+            <target>active</target>
+            <condition>
+                <property>/aircraft/afcs/active/vs</property>
+            </condition>
+        </transition>
+
+        <transition>
+            <name>disable-vs</name>
+            <source>active</source>
+            <target>init</target>
+            <condition>
+                <not>
+                    <property>/aircraft/afcs/active/vs</property>
+                </not>
+            </condition>
+        </transition>
+    </state-machine>
+
+    <!-- ================================================================== -->
+    <!-- Rudder Axis Modes                                                  -->
+    <!-- ================================================================== -->
+
+    <filter>
+        <name>A/P Auto Rudder Kp Computer</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <not>
+                    <property>/gear/gear[2]/wow</property>
+                </not>
+            </condition>
+            <value>1.5</value>
+        </input>
+        <input>
+            <value>0.25</value>
+        </input>
+        <output>
+            <property>/aircraft/afcs/internal/rudder-kp</property>
+        </output>
+    </filter>
+
+    <filter>
+        <name>A/P Auto Rudder Ti Computer</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <not>
+                    <property>/gear/gear[2]/wow</property>
+                </not>
+            </condition>
+            <value>0.5</value>
+        </input>
+        <input>
+            <value>1.5</value>
+        </input>
+        <output>
+            <property>/aircraft/afcs/internal/rudder-ti</property>
+        </output>
+    </filter>
+
+    <filter>
+        <name>A/P Auto Rudder Td Computer</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <not>
+                    <property>/gear/gear[2]/wow</property>
+                </not>
+            </condition>
+            <value>0.1</value>
+        </input>
+        <input>
+            <value>0.0</value>
+        </input>
+        <output>
+            <property>/aircraft/afcs/internal/rudder-td</property>
+        </output>
+    </filter>
+
+    <pid-controller>
+        <name>A/P Auto Rudder</name>
+        <debug>false</debug>
+        <enable>
+            <condition>
+                <and>
+                    <property>/aircraft/afcs/locks/rudder</property>
+                    <greater-than>
+                        <property>/velocities/groundspeed-kt</property>
+                        <value>0.5</value>
+                    </greater-than>
+                </and>
+            </condition>
+        </enable>
+        <input>
+            <property>/orientation/heading-magnetic-deg</property>
+        </input>
+        <reference>
+            <property>/aircraft/afcs/target/heading-deg</property>
+        </reference>
+        <output>
+            <property>/controls/flight/rudder</property>
+        </output>
+        <config>
+            <Kp>
+                <property>/aircraft/afcs/internal/rudder-kp</property>
+            </Kp>
+            <Ti>
+                <property>/aircraft/afcs/internal/rudder-ti</property>
+            </Ti>
+            <Td>
+                <property>/aircraft/afcs/internal/rudder-td</property>
+            </Td>
+            <u_min>-1.0</u_min>
+            <u_max>1.0</u_max>
+        </config>
+    </pid-controller>
+
+    <!-- ================================================================== -->
+    <!-- Roll Axis Modes                                                    -->
+    <!-- ================================================================== -->
+
+    <!-- Tracks a bank angle (phi). The roll is limited to be within the
+         roll hold limit so that the pilot can never make the aircraft
+         bank more than this limit allows.
+
+         Stage #1 for Roll Hold.
+    -->
+    <pid-controller>
+        <name>A/P Roll Hold</name>
+        <debug>false</debug>
+        <enable>
+            <property>/aircraft/afcs/active/roll</property>
+        </enable>
+        <input>
+            <property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+        </input>
+        <reference>
+            <property>/aircraft/afcs/target/roll-deg</property>
+            <min>
+                <property>/aircraft/afcs/settings/roll-hold-limit</property>
+                <scale>-1.0</scale>
+            </min>
+            <max>
+                <property>/aircraft/afcs/settings/roll-hold-limit</property>
+            </max>
+        </reference>
+        <reference>
+            <property>/aircraft/afcs/target/roll-deg</property>
+        </reference>
+        <output>
+            <property>/aircraft/afcs/target/roll-rate-degps</property>
+        </output>
+        <config>
+            <Kp>0.73</Kp>
+            <Ti>3.75</Ti>
+            <Td>0.014</Td>
+            <u_min>
+                <property>/aircraft/afcs/settings/roll-rate-limit</property>
+                <scale>-1.0</scale>
+            </u_min>
+            <u_max>
+                <property>/aircraft/afcs/settings/roll-rate-limit</property>
+            </u_max>
+        </config>
+    </pid-controller>
+
+    <!-- Tracks a given roll rate (p). The target roll rate is limited to
+         be no greater than the roll rate limit.
+
+         Also acts as stage #2 for Roll Hold.
+    -->
+    <pid-controller>
+        <name>A/P Roll Rate</name>
+        <debug>false</debug>
+        <enable>
+            <property>/aircraft/afcs/active/roll</property>
+        </enable>
+        <input>
+            <property>/orientation/roll-rate-degps</property>
+        </input>
+        <reference>
+            <property>/aircraft/afcs/target/roll-rate-degps</property>
+            <min>
+                <property>/aircraft/afcs/settings/roll-rate-limit</property>
+                <scale>-1.0</scale>
+            </min>
+            <max>
+                <property>/aircraft/afcs/settings/roll-rate-limit</property>
+            </max>
+        </reference>
+        <output>
+            <property>/controls/flight/aileron</property>
+        </output>
+        <config>
+            <Kp>0.032</Kp>
+            <Ti>0.5</Ti>
+            <Td>0.0002</Td>
+            <u_min>-1.0</u_min>
+            <u_max>1.0</u_max>
+        </config>
+    </pid-controller>
+
+    <!-- ================================================================== -->
+    <!-- Pitch Axis Modes                                                   -->
+    <!-- ================================================================== -->
+
+    <!-- Tracks a given vertical speed (in fps) by controlling the pitch
+         of the aircraft.
+    -->
+    <pid-controller>
+        <name>A/P Vertical Speed Hold</name>
+        <debug>false</debug>
+        <enable>
+            <property>/aircraft/afcs/active/vs</property>
+        </enable>
+        <input>
+            <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+            <scale>0.01666666</scale>
+        </input>
+        <reference>
+            <property>/aircraft/afcs/target/vs-fpm</property>
+            <scale>0.01666666</scale>
+        </reference>
+        <output>
+            <property>/aircraft/afcs/target/pitch-deg</property>
+        </output>
+        <config>
+            <Kp>0.062</Kp>
+            <Ti>4.0</Ti>
+            <Td>0.0</Td>
+            <u_min>
+                <property>/aircraft/afcs/settings/pitch-hold-min</property>
+            </u_min>
+            <u_max>
+                <property>/aircraft/afcs/settings/pitch-hold-max</property>
+            </u_max>
+        </config>
+    </pid-controller>
+
+    <filter>
+        <name>A/P Pitch Deg Filter</name>
+        <type>noise-spike</type>
+        <max-rate-of-change>1.0</max-rate-of-change>
+        <input>
+            <property>/aircraft/afcs/target/pitch-deg</property>
+        </input>
+        <output>
+            <property>/aircraft/afcs/target/pitch-deg-filtered</property>
+        </output>
+    </filter>
+
+    <!-- Tracks a pitch angle (theta). The pitch is limited to be greater
+         than the minimum pitch limit and less than the maximum pitch limit.
+
+         Stage #1 for Pitch Hold.
+    -->
+    <pid-controller>
+        <name>A/P Pitch Hold</name>
+        <debug>false</debug>
+        <enable>
+            <property>/aircraft/afcs/active/pitch</property>
+        </enable>
+        <input>
+            <property>/orientation/pitch-deg</property>
+        </input>
+        <reference>
+            <property>/aircraft/afcs/target/pitch-deg-filtered</property>
+            <min>
+                <property>/aircraft/afcs/settings/pitch-hold-min</property>
+            </min>
+            <max>
+                <property>/aircraft/afcs/settings/pitch-hold-max</property>
+            </max>
+        </reference>
+        <output>
+            <property>/aircraft/afcs/target/pitch-rate-degps</property>
+        </output>
+        <config>
+            <Kp>1.75</Kp>
+            <Ti>15.0</Ti>
+            <Td>0.0</Td>
+            <u_min>
+                <property>/aircraft/afcs/settings/pitch-rate-limit</property>
+                <scale>-1.0</scale>
+            </u_min>
+            <u_max>
+                <property>/aircraft/afcs/settings/pitch-rate-limit</property>
+            </u_max>
+        </config>
+    </pid-controller>
+
+    <!-- Tracks a given pitch rate (q). The pitch rate can be no greater
+         than the pitch rate limit.
+
+         Also acts as stage #2 for Pitch Hold.
+    -->
+    <pid-controller>
+        <name>A/P Pitch Rate</name>
+        <debug>false</debug>
+        <enable>
+            <property>/aircraft/afcs/active/pitch</property>
+        </enable>
+        <input>
+            <property>/orientation/pitch-rate-degps</property>
+        </input>
+        <reference>
+            <property>/aircraft/afcs/target/pitch-rate-degps</property>
+            <min>
+                <property>/aircraft/afcs/settings/pitch-rate-limit</property>
+                <scale>-1.0</scale>
+            </min>
+            <max>
+                <property>/aircraft/afcs/settings/pitch-rate-limit</property>
+            </max>
+        </reference>
+        <output>
+            <property>/controls/flight/elevator</property>
+        </output>
+        <config>
+            <Kp>-0.035</Kp>
+            <Ti>0.028</Ti>
+            <Td>0.03</Td>
+            <u_min>-1.0</u_min>
+            <u_max>1.0</u_max>
+        </config>
+    </pid-controller>
+
+    <filter>
+        <name>A/P Tail On Ground Hold</name>
+        <type>gain</type>
+        <enable>
+            <property>/aircraft/afcs/active/tail</property>
+        </enable>
+        <input>
+            <value>-1.0</value>
+        </input>
+        <output>
+            <property>/controls/flight/elevator</property>
+        </output>
+    </filter>
+
+    <!-- ================================================================== -->
+    <!-- Velocity Modes                                                     -->
+    <!-- ================================================================== -->
+
+    <pid-controller>
+        <name>A/P Speed Hold</name>
+        <debug>false</debug>
+        <enable>
+            <property>/aircraft/afcs/locks/speed</property>
+        </enable>
+        <input>
+            <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+        </input>
+        <reference>
+            <property>/aircraft/afcs/target/speed-kt</property>
+        </reference>
+        <output>
+            <property>/controls/engines/engine/throttle</property>
+        </output>
+        <config>
+            <Kp>0.4</Kp>
+            <Ti>4.5</Ti>
+            <Td>0.0</Td>
+            <u_min>0.03</u_min>
+            <u_max>0.6</u_max>
+        </config>
+    </pid-controller>
 
 </PropertyList>

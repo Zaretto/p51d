@@ -115,13 +115,13 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   </view>
 
     <systems>
-        <autopilot n="2">
+        <autopilot n="0">
             <path>Aircraft/p51d/Systems/autopilot.xml</path>
         </autopilot>
-        <autopilot n="3">
+        <autopilot n="1">
             <path>Aircraft/p51d/Systems/thunder.xml</path>
         </autopilot>
-        <autopilot n="4">
+        <autopilot n="2">
             <path>Aircraft/p51d/Systems/engine.xml</path>
         </autopilot>
         <property-rule n="100">
@@ -383,6 +383,72 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
             </binding>
         </mod-up>
       </key>
+      <key n="262">
+        <name>F6</name>
+        <desc>Toggle auto-rudder</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <condition>
+                <not>
+                    <property>/aircraft/afcs/locks/rudder</property>
+                </not>
+            </condition>
+            <command>property-assign</command>
+            <property>/aircraft/afcs/target/heading-deg</property>
+            <property>/orientation/heading-magnetic-deg</property>
+        </binding>
+        <binding>
+            <condition>
+                <not>
+                    <property>/aircraft/afcs/active/takeoff</property>
+                </not>
+            </condition>
+            <command>property-toggle</command>
+            <property>/aircraft/afcs/locks/rudder</property>
+        </binding>
+	  </key>
+      <key n="263">
+        <name>F7</name>
+        <desc>Toggle wings-level and vs-hold</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <condition>
+                <and>
+                    <not>
+                        <property>/aircraft/afcs/active/takeoff</property>
+                    </not>
+                    <or>
+                        <property>/aircraft/afcs/internal/can-roll</property>
+                        <property>/aircraft/afcs/locks/wings-level-vs-hold</property>
+                    </or>
+                </and>
+            </condition>
+            <command>property-toggle</command>
+            <property>/aircraft/afcs/locks/wings-level-vs-hold</property>
+        </binding>
+	  </key>
+      <key n="264">
+        <name>F8</name>
+        <desc>Toggle auto-takeoff</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <condition>
+                <or>
+                    <property>/aircraft/afcs/internal/can-takeoff</property>
+                    <property>/aircraft/afcs/locks/takeoff</property>
+                </or>
+            </condition>
+            <command>property-toggle</command>
+            <property>/aircraft/afcs/locks/takeoff</property>
+        </binding>
+	  </key>
+      <key n="267">
+        <name>F11</name>
+        <binding>
+            <command>nasal</command>
+            <script></script>
+        </binding>
+	  </key>
 	  <key n="101">
         <name>e</name>
         <desc>Gun Trigger</desc> 
@@ -612,7 +678,39 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
             <primer-guard-switch type="bool">false</primer-guard-switch>
         </switches>
     </controls>
- 
+    <aircraft>
+        <afcs>
+            <locks>
+                <roll type="bool">false</roll>
+                <pitch type="bool">false</pitch>
+                <speed type="bool">false</speed>
+                <rudder type="bool">false</rudder>
+                <tail type="bool">false</tail>
+                <takeoff type="bool">false</takeoff>
+                <wings-level-vs-hold type="bool">false</wings-level-vs-hold>
+            </locks>
+            <target>
+                <heading-deg type="float">0.0</heading-deg>
+                <speed-kt type="float">80.0</speed-kt>
+                <pitch-deg type="float">2.0</pitch-deg>
+                <roll-deg type="float">0.0</roll-deg>
+                <vs-fpm type="float">0.0</vs-fpm>
+
+                <pitch-rate-degps type="float">0.0</pitch-rate-degps>
+                <roll-rate-degps type="float">0.0</roll-rate-degps>
+            </target>
+            <settings>
+                <roll-rate-limit type="double">60.0</roll-rate-limit>
+                <pitch-rate-limit type="double">10.0</pitch-rate-limit>
+
+                <roll-hold-limit type="double">25.0</roll-hold-limit>
+
+                <pitch-hold-min type="double">-3.0</pitch-hold-min>
+                <pitch-hold-max type="double">15.0</pitch-hold-max>
+            </settings>
+        </afcs>
+    </aircraft>
+
  <consumables>
    <fuel>
       <tank n="0">
@@ -772,6 +870,7 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <file>Aircraft/p51d/Nasal/tyresmoke.nas</file>
       <file>Aircraft/p51d/Nasal/damage.nas</file>
       <file>Aircraft/p51d/Nasal/sound.nas</file>
+      <file>Aircraft/p51d/Nasal/autopilot.nas</file>
     </p51d>
     <SCR_522C>
       <file>Aircraft/Instruments-3d/SCR-522C/Nasal/SCR-522C.nas</file>
