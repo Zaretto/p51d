@@ -31,10 +31,10 @@ setlistener("/aircraft/afcs/locks/wings-level-vs-hold", func (node) {
 
 setlistener("/aircraft/afcs/target/vs-fpm", func (node) {
     if (getprop("/aircraft/afcs/locks/wings-level-vs-hold")) {
-        var format = "Wing leveler and V/S (%.0f fpm) hold disabled";
+        var format = "Wing leveler and V/S (%.0f fpm) hold enabled";
         logger.screen.green(sprintf(format, node.getValue()));
     }
-}, 0, 0);
+}, 0, 1);
 
 setlistener("/aircraft/afcs/active/takeoff", func (node) {
     if (node.getBoolValue())
