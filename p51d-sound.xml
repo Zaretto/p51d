@@ -659,19 +659,28 @@
       </click>
 
       <click>
-        <name>weapons select bombs</name>
+        <name>weapons select bombs both</name>
         <path>Sounds/click.wav</path>
         <condition>
-           <greater-than>
+           <equals>
              <property>/controls/armament/weapons-select</property>
-             <value>0</value>
-           </greater-than>
+             <value>1</value>
+           </equals>
         </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+
+    <click>
+        <name>weapons select bombs train</name>
+        <path>Sounds/click.wav</path>
         <condition>
-           <less-than>
+           <equals>
              <property>/controls/armament/weapons-select</property>
-             <value>3</value>
-           </less-than>
+             <value>2</value>
+           </equals>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>
@@ -683,10 +692,10 @@
         <name>weapons select rockets</name>
         <path>Sounds/click.wav</path>
         <condition>
-           <greater-than>
+           <equals>
              <property>/controls/armament/weapons-select</property>
-             <value>2</value>
-           </greater-than>
+             <value>3</value>
+           </equals>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>
@@ -695,12 +704,13 @@
       </click>
 
       <click>
-        <name>weapons select guns</name>
+        <name>weapons select safe</name>
         <path>Sounds/click.wav</path>
         <condition>
-          <not>
+           <equals>
              <property>/controls/armament/weapons-select</property>
-          </not>
+             <value>0</value>
+           </equals>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>
@@ -715,6 +725,131 @@
            <not>
              <property>/controls/engines/engine/magnetos</property>
            </not>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+
+      <click>
+        <name>landing light on</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <property>/controls/lighting/landing-lights</property>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+
+      <click>
+        <name>landing light off</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <not>
+                <property>/controls/lighting/landing-lights</property>
+            </not>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+
+      <click>
+        <name>supercharcher guard on</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <property>/controls/switches/supercharger-guard-switch</property>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+      <click>
+        <name>supercharcher guard off</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <not>
+                <property>/controls/switches/supercharger-guard-switch</property>
+            </not>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+      <click>
+        <name>primer guard on</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <property>/controls/switches/primer-guard-switch</property>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+      <click>
+        <name>primer guard off</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <not>
+                <property>/controls/switches/primer-guard-switch</property>
+            </not>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+      <click>
+        <name>starter guard on</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <property>/controls/switches/starter-guard-switch</property>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+      <click>
+        <name>starter guard off</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <not>
+                <property>/controls/switches/starter-guard-switch</property>
+            </not>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+
+     <click>
+        <name>AI on</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <property>/instrumentation/attitude-indicator/serviceable</property>
+        </condition>
+        <volume>
+          <property>/fdm/jsbsim/simulation/soundOK</property>
+          <factor>1.0</factor>
+        </volume>
+      </click>
+
+      <click>
+        <name>AI off</name>
+        <path>Sounds/click.wav</path>
+        <condition>
+            <not>
+                <property>/instrumentation/attitude-indicator/serviceable</property>
+            </not>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>
@@ -1239,9 +1374,10 @@
         <name>supercharger-auto</name>
         <path>Sounds/click.wav</path>
         <condition>
-           <not>
-             <property>/controls/engines/engine/supercharger-switch</property>
-           </not>
+            <equals>
+                <property>/controls/engines/engine/supercharger-switch</property>
+                <value>0</value>
+            </equals>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>
@@ -1253,10 +1389,10 @@
         <name>supercharger-manual-low</name>
         <path>Sounds/click.wav</path>
         <condition>
-           <less-than>
-             <property>/controls/engines/engine/supercharger-switch</property>
-             <value>0</value>
-           </less-than>
+            <equals>
+                <property>/controls/engines/engine/supercharger-switch</property>
+                <value>-1</value>
+            </equals>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>
@@ -1268,7 +1404,10 @@
         <name>supercharger-manual-high</name>
         <path>Sounds/click.wav</path>
         <condition>
-          <property>/controls/engines/engine/supercharger-switch</property>
+            <equals>
+                <property>/controls/engines/engine/supercharger-switch</property>
+                <value>1</value>
+            </equals>
         </condition>
         <volume>
           <property>/fdm/jsbsim/simulation/soundOK</property>
