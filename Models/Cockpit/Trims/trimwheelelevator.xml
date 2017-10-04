@@ -8,18 +8,18 @@
   <drag-direction>vertical</drag-direction>
   <drag-scale-px>10.0</drag-scale-px>
   <object-name>elevatorTrimWheel</object-name>
-  <property>/controls/flight/elevator-trim</property>
+  <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
   <factor>1440</factor>
   <axis>
-   <y>-1</y>
+   <y>1</y>
   </axis>
          <action>
              <binding>
                  <command>property-adjust</command>
                  <property>/controls/flight/elevator-trim</property>
-                 <factor>0.002</factor>
-                 <min>-1</min>
-                 <max>1</max>
+                 <factor>-0.0004</factor>
+                 <min>-0.4</min>
+                 <max>1.0</max>
                  <wrap>0</wrap>
              </binding>
          </action>
@@ -27,8 +27,14 @@
              <binding>
                  <command>set-tooltip</command>
                  <tooltip-id>elevator-trim</tooltip-id>
-                 <label>Elevator trim: %.3f</label>
-                 <property>/controls/flight/elevator-trim</property>
+                 <measure-text>Elevator trim: -25.00 deg</measure-text>
+                 <label>Elevator trim: %.2f deg</label>
+                 <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+                 <mapping>nasal</mapping>
+                 <script>
+                     var max_elevator_trim = -25.0;
+                     return arg[0] * max_elevator_trim;
+                 </script>
              </binding>
          </hovered>
      </animation>
@@ -36,28 +42,12 @@
  <animation>
   <type>rotate</type>
   <object-name>Needle</object-name>
-  <property>/controls/flight/elevator-trim</property>
-  <interpolation>
-   <entry>
-    <ind>-1.0</ind>
-    <dep>-50</dep>
-   </entry>
-   <entry>
-    <ind>-0.0</ind>
-    <dep>20</dep>
-   </entry>
-   <entry>
-    <ind>1.0</ind>
-    <dep>50</dep>
-   </entry>
-  </interpolation>
+  <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+  <factor>70.0</factor>
+  <offset-deg>-20.0</offset-deg>
   <axis>
-   <x>0</x>
-   <y>-1</y>
-   <z>0</z>
+   <y>1</y>
   </axis>
  </animation>
 
 </PropertyList>
-
-

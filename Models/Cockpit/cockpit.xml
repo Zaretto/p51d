@@ -4,9 +4,9 @@
 <path>P-51D-cockpit.ac</path>
 
     <params>
-        <aileron>/fdm/jsbsim/fcs/aileron-cmd-norm-filtered</aileron>
-        <elevator>/fdm/jsbsim/fcs/elevator-cmd-norm-filtered</elevator>
-        <rudder>/fdm/jsbsim/fcs/rudder-cmd-norm-filtered</rudder>
+        <aileron>/aircraft/surface-positions/aileron-pos-norm</aileron>
+        <elevator>/aircraft/surface-positions/elevator-pos-norm</elevator>
+        <rudder>/aircraft/surface-positions/rudder-pos-norm</rudder>
     </params>
 
     <animation>
@@ -76,23 +76,9 @@
  <animation>
   <type>rotate</type>
   <object-name>Trigger2</object-name>
-  <property alias="/params/elevator"/>
-  <factor>-10</factor>
-  <center>
-   <x-m>2.90042</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.34</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Trigger2</object-name>
+  <object-name>Stick</object-name>
+  <object-name>BootTransition</object-name>
+  <object-name>BootTop</object-name>
   <property alias="/params/aileron"/>
   <factor>-10</factor>
   <center>
@@ -102,110 +88,26 @@
   </center>
   <axis>
    <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
   </axis>
  </animation> 
 
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <property alias="/params/elevator"/>
-  <factor>-10</factor>
-  <center>
-   <x-m>2.90042</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.34</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
+  <object-name>Trigger2</object-name>
   <object-name>BootTransition</object-name>
-  <property alias="/params/elevator"/>
-  <factor>-10</factor>
-  <center>
-   <x-m>2.90042</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.34</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
   <object-name>BootTop</object-name>
   <property alias="/params/elevator"/>
-  <factor>-10</factor>
+  <factor>-20</factor>
+  <!-- In forward position, hand grip will be two inches from instrument panel (maintenance manual, section IV, page 94) -->
+  <offset-deg>-10.0</offset-deg>
   <center>
    <x-m>2.90042</x-m>
    <y-m>0.00</y-m>
    <z-m>-0.34</z-m>
   </center>
   <axis>
-   <x>0.0</x>
    <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Stick</object-name>
-  <property alias="/params/aileron"/>
-  <factor>-10</factor>
-  <center>
-   <x-m>2.90042</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.34</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
-  <animation>
-  <type>rotate</type>
-  <object-name>BootTransition</object-name>
-  <property alias="/params/aileron"/>
-  <factor>-10</factor>
-  <center>
-   <x-m>2.90042</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.34</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>BootTop</object-name>
-  <property alias="/params/aileron"/>
-  <factor>-10</factor>
-  <center>
-   <x-m>2.9019</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.34</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
   </axis>
  </animation>
 
@@ -307,11 +209,8 @@
     <action>
     <button>0</button>
     <binding>
-        <command>nasal</command>
-        <script>
-            var state = getprop("/controls/gear/gear-down");
-            setprop("/controls/gear/gear-down", !state);
-        </script>
+        <command>property-toggle</command>
+        <property>/controls/gear/gear-down</property>
     </binding>
    </action>
   </animation>
@@ -320,7 +219,7 @@
     <type>rotate</type>
       <object-name>gearLeverForward</object-name>
       <object-name>gearLeverHardware</object-name>
-    <property>/controls/gear/leverPos</property>
+    <property>/aircraft/controls/lever-pos-norm</property>
     <interpolation>
     <entry>
         <ind>0.0</ind>
@@ -345,8 +244,6 @@
         <z-m>-0.2437</z-m>
     </center>
     <axis>
-        <x>0.0</x>
-        <y>0.0</y>
         <z>-1.0</z>
     </axis>
   </animation>
@@ -356,17 +253,16 @@
     <object-name>gearLeverForward</object-name>
     <object-name>gearLeverHardware</object-name>
     <object-name>gearLeverRear</object-name>
-    <property>/controls/gear/leverPos</property>
-    <factor>38</factor>
+    <property>/aircraft/controls/lever-pos-norm</property>
+    <factor>-38</factor>
+    <offset-deg>38</offset-deg>
     <center>
         <x-m>2.8769</x-m>
         <y-m>-0.287185</y-m>
         <z-m>-0.26492</z-m>
     </center>
     <axis>
-        <x>0.0</x>
         <y>1.0</y>
-        <z>0.0</z>
     </axis>
   </animation>
   
