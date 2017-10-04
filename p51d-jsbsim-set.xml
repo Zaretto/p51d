@@ -54,7 +54,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   </submodels>
 
   <panel>
-     <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
+     <path/>
      <visibility>false</visibility>
 	 <visibility archive="y">false</visibility>
   </panel>
@@ -115,6 +115,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   </view>
 
     <systems>
+        <path>Aircraft/p51d/Systems/systems.xml</path>
         <autopilot n="0">
             <path>Aircraft/p51d/Systems/autopilot.xml</path>
         </autopilot>
@@ -865,7 +866,6 @@ Ctrl-D is mapped to the second trigger on top of the stick.  This can be used to
       <file>Aircraft/p51d/Nasal/engine-start.nas</file>
       <file>Aircraft/p51d/Nasal/sputter.nas</file>
       <file>Aircraft/p51d/Nasal/gear-doors.nas</file>
-      <file>Aircraft/p51d/Nasal/gear-lever.nas</file>
       <file>Aircraft/p51d/Nasal/liveries.nas</file>
       <file>Aircraft/p51d/Nasal/tyresmoke.nas</file>
       <file>Aircraft/p51d/Nasal/damage.nas</file>

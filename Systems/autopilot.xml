@@ -297,7 +297,7 @@
             <enter>
                 <command>property-assign</command>
                 <property>/aircraft/afcs/target/pitch-deg</property>
-                <value type="double">5.0</value>
+                <value type="double">10.0</value>
             </enter>
             <enter>
                 <command>property-assign</command>
@@ -318,11 +318,6 @@
                 <command>property-assign</command>
                 <property>/controls/flight/rudder</property>
                 <value type="double">0.0</value>
-            </enter>
-            <enter>
-                <command>property-assign</command>
-                <property>/aircraft/afcs/target/pitch-deg</property>
-                <value type="double">10.0</value>
             </enter>
             <enter>
                 <command>property-assign</command>
@@ -373,7 +368,7 @@
                 <and>
                     <less-than>
                         <property>/orientation/pitch-deg</property>
-                        <value>3.5</value>
+                        <value>4.5</value>
                     </less-than>
                     <greater-than>
                         <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
@@ -609,8 +604,8 @@
             <Td>
                 <property>/aircraft/afcs/internal/rudder-td</property>
             </Td>
-            <u_min>-1.0</u_min>
-            <u_max>1.0</u_max>
+            <u_min>-0.5</u_min>
+            <u_max>0.5</u_max>
         </config>
     </pid-controller>
 
@@ -819,8 +814,8 @@
             <Kp>-0.035</Kp>
             <Ti>0.028</Ti>
             <Td>0.03</Td>
-            <u_min>-1.0</u_min>
-            <u_max>1.0</u_max>
+            <u_min>-0.5</u_min>
+            <u_max>0.5</u_max>
         </config>
     </pid-controller>
 

@@ -43,11 +43,10 @@
       <switch name="systems/gear/safe-light-on">
          <default value="0"/>
          <test logic="AND" value ="1">
-             /controls/engines/engine[0]/throttle LT 0.25
-             /gear/gear/position-norm GT 0.99
+             /gear/gear/position-norm EQ 1
          </test>
          <test value="1">
-            /controls/gear/gear-safe-light-check GT 0.9
+            /controls/gear/gear-safe-light-check EQ 1
          </test>
          <output>/controls/gear/safe-light-on</output>
       </switch>
@@ -55,13 +54,31 @@
       <switch name="systems/gear/unsafe-light-on">
          <default value="0"/>
          <test logic="AND" value ="1">
-             /controls/engines/engine[0]/throttle LT 0.25
-             /gear/gear/position-norm LT 0.99
+             /controls/engines/engine[0]/throttle LT 0.20
+             systems/gear/inner-doors EQ 0
+             /gear/gear/position-norm LT 1
+         </test>
+         <test logic="AND" value ="1">
+             systems/gear/inner-doors GT 0
+             /gear/gear/position-norm LT 1
          </test>
          <test value="1">
-            /controls/gear/gear-unsafe-light-check GT 0.9
+            /controls/gear/gear-unsafe-light-check EQ 1
          </test>
          <output>/controls/gear/unsafe-light-on</output>
+      </switch>
+
+    </channel>
+
+    <channel name="horn">
+
+      <switch name="systems/gear/horn-blowing">
+         <default value="0"/>
+         <!-- 22 in Hg at full RPM -->
+         <test logic="AND" value ="1">
+             /controls/engines/engine[0]/throttle LT 0.20
+             /gear/gear/position-norm EQ 0
+         </test>
       </switch>
 
     </channel>
