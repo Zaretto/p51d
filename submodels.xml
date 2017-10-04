@@ -316,6 +316,12 @@
   <!-- #                                                 # -->
   <!-- ################################################### -->
 
+    <params>
+        <rocket>
+            <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+        </rocket>
+    </params>
+
   <submodel>
     <name>fire rocket 1</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -329,14 +335,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
     <collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -352,14 +358,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -375,14 +381,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -398,14 +404,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -421,14 +427,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -444,14 +450,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -467,14 +473,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -490,14 +496,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -513,14 +519,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
   <submodel>
@@ -536,14 +542,14 @@
     <z-offset> -2.6</z-offset>
     <yaw-offset>-0.01</yaw-offset>
     <pitch-offset>0.0</pitch-offset>
-	<life>3.5</life>
+	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
 	<collision>true</collision>
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/HVAR/rocket-submodel.xml</submodel-path>
+    <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
 
