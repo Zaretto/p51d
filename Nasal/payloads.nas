@@ -126,7 +126,7 @@ var hitBullets = func {
 
 var hitRockets = func {
     # HVAR warhead 7.5 lbs
-    message = "R-60 hit: " ~ callsign_rockets ~ ": " ~ hit_count_rockets ~ " hits";
+    message = "HVAR hit: " ~ callsign_rockets ~ ": " ~ hit_count_rockets ~ " hits";
 
     hit_count_rockets = 0;
     callsign_rockets = "";
