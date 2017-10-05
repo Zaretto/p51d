@@ -17,6 +17,8 @@ References:
 [2] https://en.wikipedia.org/wiki/M2_Browning#AN.2FM2
 [3] https://en.wikipedia.org/wiki/High_Velocity_Aircraft_Rocket
 
+Note: Positions of the 3D models are defined in Models/weapons.xml
+
 -->
 
 <PropertyList>
@@ -35,11 +37,13 @@ References:
     <repeat>true</repeat>
     <delay>0.245</delay>
     <count>500</count>
-    <x-offset> 6.27799 </x-offset>
-    <y-offset>-6.59178</y-offset>
-    <z-offset> -1.75215</z-offset>
-    <yaw-offset>0.8</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.9135313520000001</x-m>
+        <y-m>-2.009174544</y-m>
+        <z-m>-0.5340553200000001</z-m>
+        <heading-deg>0.8</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -60,11 +64,13 @@ References:
     <repeat>true</repeat>
     <delay>0.245</delay>
     <count>0</count>
-    <x-offset> 6.27799 </x-offset>
-    <y-offset> 6.59178</y-offset>
-    <z-offset> -1.75215</z-offset>
-    <yaw-offset>-0.8</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.9135313520000001</x-m>
+        <y-m> 2.009174544</y-m>
+        <z-m>-0.5340553200000001</z-m>
+        <heading-deg>-0.8</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -86,11 +92,13 @@ References:
     <repeat>true</repeat>
     <delay>0.245</delay>
     <count>0</count>
-    <x-offset>  6.02684</x-offset>
-    <y-offset> -7.25573 </y-offset>
-    <z-offset>  -1.69407 </z-offset>
-    <yaw-offset>0.45</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.836980832</x-m>
+        <y-m>-2.211546504</y-m>
+        <z-m>-0.516352536</z-m>
+        <heading-deg>0.45</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -111,11 +119,13 @@ References:
     <repeat>true</repeat>
     <delay>0.245</delay>
     <count>0</count>
-    <x-offset>  6.02684</x-offset>
-    <y-offset> 7.25573 </y-offset>
-    <z-offset>  -1.69407 </z-offset>
-    <yaw-offset>-0.45</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.836980832</x-m>
+        <y-m>2.211546504</y-m>
+        <z-m>-0.516352536</z-m>
+        <heading-deg>-0.45</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -136,11 +146,13 @@ References:
     <repeat>true</repeat>
     <delay>0.245</delay>
     <count>0</count>
-    <x-offset> 6.03735</x-offset>
-    <y-offset> -7.91947 </y-offset>
-    <z-offset>  -1.636</z-offset>
-    <yaw-offset>0.5</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>1.8401842800000001</x-m>
+        <y-m>-2.413854456</y-m>
+        <z-m>-0.4986528</z-m>
+        <heading-deg>0.5</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -161,11 +173,13 @@ References:
     <repeat>true</repeat>
     <delay>0.245</delay>
     <count>0</count>
-    <x-offset> 6.03735</x-offset>
-    <y-offset> 7.91947 </y-offset>
-    <z-offset>  -1.636</z-offset>
-    <yaw-offset>-0.5</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>1.8401842800000001</x-m>
+        <y-m>2.413854456</y-m>
+        <z-m>-0.4986528</z-m>
+        <heading-deg>-0.5</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -186,11 +200,13 @@ References:
     <repeat>true</repeat>
     <delay>0.075</delay>
     <count>0</count>
-    <x-offset> 6.27799 </x-offset>
-    <y-offset>-6.59178</y-offset>
-    <z-offset> -1.75215</z-offset>
-    <yaw-offset>0.4</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.9135313520000001</x-m>
+        <y-m>-2.009174544</y-m>
+        <z-m>-0.5340553200000001</z-m>
+        <heading-deg>0.4</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -211,11 +227,13 @@ References:
     <repeat>true</repeat>
     <delay>0.075</delay>
     <count>0</count>
-    <x-offset> 6.27799 </x-offset>
-    <y-offset> 6.59178</y-offset>
-    <z-offset> -1.75215</z-offset>
-    <yaw-offset>-0.4</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.9135313520000001</x-m>
+        <y-m>2.009174544</y-m>
+        <z-m>-0.5340553200000001</z-m>
+        <heading-deg>-0.4</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -236,11 +254,13 @@ References:
     <repeat>true</repeat>
     <delay>0.075</delay>
     <count>0</count>
-    <x-offset>  6.02684</x-offset>
-    <y-offset> -7.25573 </y-offset>
-    <z-offset>  -1.69407 </z-offset>
-    <yaw-offset>0.45</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.836980832</x-m>
+        <y-m>-2.211546504</y-m>
+        <z-m>-0.516352536</z-m>
+        <heading-deg>0.45</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -261,11 +281,13 @@ References:
     <repeat>true</repeat>
     <delay>0.075</delay>
     <count>0</count>
-    <x-offset>  6.02684</x-offset>
-    <y-offset> 7.25573 </y-offset>
-    <z-offset>  -1.69407 </z-offset>
-    <yaw-offset>-0.45</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.836980832</x-m>
+        <y-m>2.211546504</y-m>
+        <z-m>-0.516352536</z-m>
+        <heading-deg>-0.45</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -286,11 +308,13 @@ References:
     <repeat>true</repeat>
     <delay>0.075</delay>
     <count>0</count>
-    <x-offset> 6.03735</x-offset>
-    <y-offset> -7.91947 </y-offset>
-    <z-offset>  -1.636</z-offset>
-    <yaw-offset>0.5</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.8401842800000001</x-m>
+        <y-m>-2.413854456</y-m>
+        <z-m>-0.4986528</z-m>
+        <heading-deg>0.5</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -311,11 +335,13 @@ References:
     <repeat>true</repeat>
     <delay>0.075</delay>
     <count>0</count>
-    <x-offset> 6.03735</x-offset>
-    <y-offset> 7.91947 </y-offset>
-    <z-offset>  -1.636</z-offset>
-    <yaw-offset>-0.5</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>-1.8401842800000001</x-m>
+        <y-m>2.413854456</y-m>
+        <z-m>-0.4986528</z-m>
+        <heading-deg>-0.5</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+    </offsets>
     <life>3.0</life>
     <wind>false</wind>
     <weight>0.0991189</weight>
@@ -341,6 +367,7 @@ References:
         </rocket>
     </params>
 
+  <!-- Left 1 -->
   <submodel>
     <name>fire-rocket-1</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -349,11 +376,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> -8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>-3.3632</y-m>
+        <z-m>-0.6773</z-m>
+        <heading-deg>0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -364,6 +393,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Right 1 -->
   <submodel>
     <name>fire-rocket-2</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -372,11 +402,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> 8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>3.3597</y-m>
+        <z-m>-0.6722</z-m>
+        <heading-deg>-0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -387,6 +419,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Left 2 -->
   <submodel>
     <name>fire-rocket-3</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -395,11 +428,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> -8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>-3.0358</y-m>
+        <z-m>-0.7122</z-m>
+        <heading-deg>0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -410,6 +445,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Right 2 -->
   <submodel>
     <name>fire-rocket-4</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -418,11 +454,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> 8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>3.0347</y-m>
+        <z-m>-0.7086</z-m>
+        <heading-deg>-0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -433,6 +471,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Left 3 -->
   <submodel>
     <name>fire-rocket-5</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -441,11 +480,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> -8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>-2.7124</y-m>
+        <z-m>-0.7479</z-m>
+        <heading-deg>0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -456,6 +497,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Right 3 -->
   <submodel>
     <name>fire-rocket-6</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -464,11 +506,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> 8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>2.7197</y-m>
+        <z-m>-0.7500</z-m>
+        <heading-deg>-0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -479,6 +523,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Left 4 -->
   <submodel>
     <name>fire-rocket-7</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -487,11 +532,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> -8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>-2.3897</y-m>
+        <z-m>-0.7823</z-m>
+        <heading-deg>0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -502,6 +549,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Right 4 -->
   <submodel>
     <name>fire-rocket-8</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -510,11 +558,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> 8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>2.4100</y-m>
+        <z-m>-0.7887</z-m>
+        <heading-deg>-0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -525,6 +575,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Left 5 -->
   <submodel>
     <name>fire-rocket-9</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -533,11 +584,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> -8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>-2.1054</y-m>
+        <z-m>-0.8155</z-m>
+        <heading-deg>0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -548,6 +601,7 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
+  <!-- Right 5 -->
   <submodel>
     <name>fire-rocket-10</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
@@ -556,11 +610,13 @@ References:
     <repeat>false</repeat>
     <count>0</count>
     <delay>0.0</delay>
-    <x-offset> -10.0</x-offset>
-    <y-offset> 8.8 </y-offset>
-    <z-offset> -2.6</z-offset>
-    <yaw-offset>-0.01</yaw-offset>
-    <pitch-offset>0.0</pitch-offset>
+    <offsets>
+        <x-m>2.4677</x-m>
+        <y-m>2.1026</y-m>
+        <z-m>-0.8126</z-m>
+        <heading-deg>-0.01</heading-deg>
+        <pitch-deg>1.5</pitch-deg>
+    </offsets>
 	<life>30.5</life>
     <weight>140</weight>
     <eda>0.01</eda>
@@ -571,8 +627,6 @@ References:
     <submodel-path alias="/params/rocket/submodel-path"/>
   </submodel>
 
-
-
   <!-- ################################################### -->
   <!-- #                                                 # -->
   <!-- #   Bombs,  500lb x 2                             # -->
@@ -580,17 +634,19 @@ References:
   <!-- ################################################### -->
 
   <submodel>
-    <name>drop bomb - left 500 pound</name>
-    <model>Aircraft/p51d/Stores//M64/m64.ac</model>
+    <name>drop-bomb-left</name>
+    <model>Aircraft/p51d/Stores/M64/bomb.xml</model>
     <trigger>controls/armament/bomb-trigger-1</trigger>
     <trigger-once>true</trigger-once>
     <speed> 0 </speed>
     <count>0</count>
-    <x-offset>  -11.3</x-offset>
-    <y-offset> -7.5 </y-offset>
-    <z-offset>  -2.8</z-offset>
-    <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>-3</pitch-offset>
+    <offsets>
+        <x-m>3.51</x-m>
+        <y-m>-2.285</y-m>
+        <z-m>-0.95</z-m>
+        <heading-deg>0.0</heading-deg>
+        <pitch-deg>-3.0</pitch-deg>
+    </offsets>
     <weight>500</weight>
     <cd>0.3</cd>
     <eda>1.0</eda>
@@ -602,17 +658,19 @@ References:
   </submodel>
 
   <submodel>
-    <name>drop bomb - right 500 pound</name>
-    <model>Aircraft/p51d/Stores//M64/m64.ac</model>
+    <name>drop-bomb-right</name>
+    <model>Aircraft/p51d/Stores/M64/bomb.xml</model>
     <trigger>controls/armament/bomb-trigger-2</trigger>
     <trigger-once>true</trigger-once>
     <speed> 0 </speed>
     <count>0</count>
-    <x-offset>  -11.3</x-offset>
-    <y-offset> 7.5 </y-offset>
-    <z-offset>  -2.8</z-offset>
-    <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>-3</pitch-offset>
+    <offsets>
+        <x-m>3.51</x-m>
+        <y-m>2.285</y-m>
+        <z-m>-0.95</z-m>
+        <heading-deg>0.0</heading-deg>
+        <pitch-deg>-3.0</pitch-deg>
+    </offsets>
     <weight>500</weight>
     <cd>0.3</cd>
     <eda>1.0</eda>
@@ -624,17 +682,19 @@ References:
   </submodel>
 
     <submodel>
-    <name>drop tank left</name>
+    <name>drop-tank-left</name>
     <model>Aircraft/p51d/Models/wingTank75.ac</model>
     <trigger>controls/armament/drop-tank-release-1</trigger>
     <trigger-once>true</trigger-once>
     <speed> 0 </speed>
     <count>0</count>
-    <x-offset> -11.3</x-offset>
-    <y-offset> -7.5 </y-offset>
-    <z-offset>  -2.8</z-offset>
-    <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>-3</pitch-offset>
+    <offsets>
+        <x-m>2.61</x-m>
+        <y-m>-2.285</y-m>
+        <z-m>-1.055</z-m>
+        <heading-deg>0.0</heading-deg>
+        <pitch-deg>-3.0</pitch-deg>
+    </offsets>
     <weight>50</weight>
     <cd>0.3</cd>
     <eda>1.0</eda>
@@ -646,17 +706,19 @@ References:
   </submodel>
 
   <submodel>
-    <name>drop tank right</name>
+    <name>drop-tank-right</name>
     <model>Aircraft/p51d/Models/wingTank75.ac</model>
     <trigger>controls/armament/drop-tank-release-2</trigger>
     <trigger-once>true</trigger-once>
     <speed> 0 </speed>
     <count>0</count>
-    <x-offset> -11.3</x-offset>
-    <y-offset> 7.5 </y-offset>
-    <z-offset> -2.8 </z-offset>
-    <yaw-offset>0.0 </yaw-offset>
-    <pitch-offset>-3 </pitch-offset>
+    <offsets>
+        <x-m>2.61</x-m>
+        <y-m>2.285</y-m>
+        <z-m>-1.055</z-m>
+        <heading-deg>0.0</heading-deg>
+        <pitch-deg>-3.0</pitch-deg>
+    </offsets>
     <weight>50</weight>
     <cd>0.3</cd>
     <eda>1.0</eda>
@@ -677,10 +739,12 @@ References:
     <speed>200</speed>
     <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.57799 </x-offset>
-    <y-offset>-6.59178</y-offset>
-    <z-offset> -1.75215</z-offset>
-    <pitch-offset>-60</pitch-offset>
+    <offsets>
+        <x-m>1.700171352</x-m>
+        <y-m>-2.009174544</y-m>
+        <z-m>-0.5340553200000001</z-m>
+        <pitch-deg>-60.0</pitch-deg>
+    </offsets>
     <eda>10</eda>
     <wind>true</wind>
     <buoyancy>33</buoyancy>
@@ -695,10 +759,12 @@ References:
     <speed>200</speed>
     <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.57799 </x-offset>
-    <y-offset>6.59178</y-offset>
-    <z-offset> -1.75215</z-offset>
-    <pitch-offset>-60</pitch-offset>
+    <offsets>
+        <x-m>1.700171352</x-m>
+        <y-m>2.009174544</y-m>
+        <z-m>-0.5340553200000001</z-m>
+        <pitch-deg>-60.0</pitch-deg>
+    </offsets>
     <eda>10</eda>
     <wind>true</wind>
     <buoyancy>33</buoyancy>
@@ -713,10 +779,12 @@ References:
     <speed>200</speed>
     <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.62684</x-offset>
-    <y-offset> -7.25573 </y-offset>
-    <z-offset>  -1.69407 </z-offset>
-    <pitch-offset>-60</pitch-offset>
+    <offsets>
+        <x-m>1.715060832</x-m>
+        <y-m>-2.211546504</y-m>
+        <z-m>-0.516352536</z-m>
+        <pitch-deg>-60.0</pitch-deg>
+    </offsets>
     <eda>10</eda>
     <wind>true</wind>
     <buoyancy>33</buoyancy>
@@ -731,10 +799,12 @@ References:
     <speed>200</speed>
     <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.62684</x-offset>
-    <y-offset> 7.25573 </y-offset>
-    <z-offset>  -1.69407 </z-offset>
-    <pitch-offset>-60</pitch-offset>
+    <offsets>
+        <x-m>1.715060832</x-m>
+        <y-m>2.211546504</y-m>
+        <z-m>-0.516352536</z-m>
+        <pitch-deg>-60.0</pitch-deg>
+    </offsets>
     <eda>10</eda>
     <wind>true</wind>
     <buoyancy>33</buoyancy>
@@ -749,10 +819,12 @@ References:
     <speed>200</speed>
     <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.7</x-offset>
-    <y-offset> -7.91947 </y-offset>
-    <z-offset>  -1.636</z-offset>
-    <pitch-offset>-60</pitch-offset>
+    <offsets>
+        <x-m>1.7373600000000002</x-m>
+        <y-m>-2.413854456</y-m>
+        <z-m>-0.4986528</z-m>
+        <pitch-deg>-60.0</pitch-deg>
+    </offsets>
     <eda>10</eda>
     <wind>true</wind>
     <buoyancy>33</buoyancy>
@@ -767,10 +839,12 @@ References:
     <speed>200</speed>
     <delay>0.035</delay>
     <count>0</count>
-    <x-offset> -5.73735</x-offset>
-    <y-offset> 7.91947 </y-offset>
-    <z-offset>  -1.636</z-offset>
-    <pitch-offset>-60</pitch-offset>
+    <offsets>
+        <x-m>1.7373600000000002</x-m>
+        <y-m>2.413854456</y-m>
+        <z-m>-0.4986528</z-m>
+        <pitch-deg>-60.0</pitch-deg>
+    </offsets>
     <eda>10</eda>
     <wind>true</wind>
     <buoyancy>33</buoyancy>
@@ -785,11 +859,11 @@ References:
     <delay>0.031</delay>
     <speed> 0 </speed>
     <count>10000</count>
-    <x-offset> -10.023 </x-offset>
-    <y-offset> -7.9759 </y-offset>
-    <z-offset> -1.8207 </z-offset>
-    <yaw-offset>0.0 </yaw-offset>
-    <pitch-offset>0 </pitch-offset>
+    <offsets>
+        <x-m>3.0550104</x-m>
+        <y-m>-2.4310543200000003</y-m>
+        <z-m>-0.5549493600000001</z-m>
+    </offsets>
     <weight>.03</weight>
     <cd>0.8</cd>
     <eda>1.0</eda>
@@ -805,11 +879,11 @@ References:
     <delay>0.031</delay>
     <speed> 0 </speed>
     <count>10000</count>
-    <x-offset> -9.9315 </x-offset>
-    <y-offset> -7.3238 </y-offset>
-    <z-offset> -1.8851 </z-offset>
-    <yaw-offset>0.0 </yaw-offset>
-    <pitch-offset>0 </pitch-offset>
+    <offsets>
+        <x-m>3.0271212000000003</x-m>
+        <y-m>-2.2322942400000003</y-m>
+        <z-m>-0.57457848</z-m>
+    </offsets>
     <weight>.03</weight>
     <cd>0.8</cd>
     <eda>1.0</eda>
@@ -825,11 +899,11 @@ References:
     <delay>0.031</delay>
     <speed> 0 </speed>
     <count>10000</count>
-    <x-offset> -9.9813 </x-offset>
-    <y-offset> -6.6509 </y-offset>
-    <z-offset> -1.9719 </z-offset>
-    <yaw-offset>0.0 </yaw-offset>
-    <pitch-offset>0 </pitch-offset>
+    <offsets>
+        <x-m>3.04230024</x-m>
+        <y-m>-2.02719432</y-m>
+        <z-m>-0.60103512</z-m>
+    </offsets>
     <weight>.03</weight>
     <cd>0.8</cd>
     <eda>1.0</eda>
@@ -845,11 +919,11 @@ References:
     <delay>0.031</delay>
     <speed> 0 </speed>
     <count>10000</count>
-    <x-offset> -10.023 </x-offset>
-    <y-offset> 7.9759 </y-offset>
-    <z-offset> -1.8207 </z-offset>
-    <yaw-offset>0.0 </yaw-offset>
-    <pitch-offset>0 </pitch-offset>
+    <offsets>
+        <x-m>3.0550104</x-m>
+        <y-m>2.4310543200000003</y-m>
+        <z-m>-0.5549493600000001</z-m>
+    </offsets>
     <weight>.03</weight>
     <cd>0.8</cd>
     <eda>1.0</eda>
@@ -865,11 +939,11 @@ References:
     <delay>0.031</delay>
     <speed> 0 </speed>
     <count>10000</count>
-    <x-offset> -9.9315 </x-offset>
-    <y-offset> 7.3238 </y-offset>
-    <z-offset> -1.8851 </z-offset>
-    <yaw-offset>0.0 </yaw-offset>
-    <pitch-offset>0 </pitch-offset>
+    <offsets>
+        <x-m>3.0271212000000003</x-m>
+        <y-m>2.2322942400000003</y-m>
+        <z-m>-0.57457848</z-m>
+    </offsets>
     <weight>.03</weight>
     <cd>0.8</cd>
     <eda>1.0</eda>
@@ -885,11 +959,11 @@ References:
     <delay>0.031</delay>
     <speed> 0 </speed>
     <count>10000</count>
-    <x-offset> -9.9813 </x-offset>
-    <y-offset> 6.6509 </y-offset>
-    <z-offset> -1.9719 </z-offset>
-    <yaw-offset>0.0 </yaw-offset>
-    <pitch-offset>0 </pitch-offset>
+    <offsets>
+        <x-m>3.04230024</x-m>
+        <y-m>2.02719432</y-m>
+        <z-m>-0.60103512</z-m>
+    </offsets>
     <weight>.03</weight>
     <cd>0.8</cd>
     <eda>1.0</eda>
