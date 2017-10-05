@@ -1,5 +1,24 @@
 <?xml version="1.0"?>
 
+<!--
+
+Armament [1]:
+    - Guns: 6 x 0.50 caliber (12.7 mm) AN/M2 Browning machine guns with
+      1,840 total rounds (380 rounds for each on the inboard pair and 270
+      rounds for each of the outer two pair)
+    - Rockets: 6 or 10 x 5.0 in (127 mm) T64 H.V.A.R rockets (P-51D-25, P-51K-10 on)
+    - Bombs: 1,000 lb (453 kg) total on two wing hardpoints
+
+Guns had rate of fire of ~ 800 RPM [2]
+
+References:
+
+[1] https://en.wikipedia.org/wiki/North_American_P-51_Mustang
+[2] https://en.wikipedia.org/wiki/M2_Browning#AN.2FM2
+[3] https://en.wikipedia.org/wiki/High_Velocity_Aircraft_Rocket
+
+-->
+
 <PropertyList>
 
   <!-- ################################################### -->
@@ -165,7 +184,7 @@
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.048</delay>
+    <delay>0.075</delay>
     <count>0</count>
     <x-offset> 6.27799 </x-offset>
     <y-offset>-6.59178</y-offset>
@@ -190,7 +209,7 @@
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.048</delay>
+    <delay>0.075</delay>
     <count>0</count>
     <x-offset> 6.27799 </x-offset>
     <y-offset> 6.59178</y-offset>
@@ -215,7 +234,7 @@
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.048</delay>
+    <delay>0.075</delay>
     <count>0</count>
     <x-offset>  6.02684</x-offset>
     <y-offset> -7.25573 </y-offset>
@@ -240,7 +259,7 @@
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.048</delay>
+    <delay>0.075</delay>
     <count>0</count>
     <x-offset>  6.02684</x-offset>
     <y-offset> 7.25573 </y-offset>
@@ -265,7 +284,7 @@
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.048</delay>
+    <delay>0.075</delay>
     <count>0</count>
     <x-offset> 6.03735</x-offset>
     <y-offset> -7.91947 </y-offset>
@@ -290,7 +309,7 @@
     <trigger>sim/multiplay/generic/int[1]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
-    <delay>0.048</delay>
+    <delay>0.075</delay>
     <count>0</count>
     <x-offset> 6.03735</x-offset>
     <y-offset> 7.91947 </y-offset>
@@ -323,7 +342,7 @@
     </params>
 
   <submodel>
-    <name>fire rocket 1</name>
+    <name>fire-rocket-1</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[1]/trigger</trigger>
     <speed>1384.0</speed>
@@ -346,7 +365,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 2</name>
+    <name>fire-rocket-2</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[2]/trigger</trigger>
     <speed>1384.0</speed>
@@ -369,7 +388,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 3</name>
+    <name>fire-rocket-3</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[3]/trigger</trigger>
     <speed>1384.0</speed>
@@ -392,7 +411,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 4</name>
+    <name>fire-rocket-4</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[4]/trigger</trigger>
     <speed>1384.0</speed>
@@ -415,7 +434,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 5</name>
+    <name>fire-rocket-5</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[5]/trigger</trigger>
     <speed>1384.0</speed>
@@ -438,7 +457,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 6</name>
+    <name>fire-rocket-6</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[6]/trigger</trigger>
     <speed>1384.0</speed>
@@ -461,7 +480,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 7</name>
+    <name>fire-rocket-7</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[7]/trigger</trigger>
     <speed>1384.0</speed>
@@ -484,7 +503,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 8</name>
+    <name>fire-rocket-8</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[8]/trigger</trigger>
     <speed>1384.0</speed>
@@ -507,7 +526,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 9</name>
+    <name>fire-rocket-9</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[9]/trigger</trigger>
     <speed>1384.0</speed>
@@ -530,7 +549,7 @@
   </submodel>
 
   <submodel>
-    <name>fire rocket 10</name>
+    <name>fire-rocket-10</name>
     <model>Aircraft/p51d/Stores/HVAR/rocket.xml</model>
     <trigger>controls/armament/rocket[10]/trigger</trigger>
     <speed>1384.0</speed>
