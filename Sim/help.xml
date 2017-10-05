@@ -7,7 +7,7 @@
         <desc>Open or close canopy</desc>
     </key>
     <key>
-        <name>Ctrl-D</name>
+        <name>Ctrl-d</name>
         <desc>Fire rockets or release bombs or external tanks</desc>
     </key>
     <key>
@@ -15,11 +15,11 @@
         <desc>Fire guns</desc>
     </key>
     <key>
-        <name>Q</name>
+        <name>Shift-q</name>
         <desc>Reset view</desc>
     </key>
     <key>
-        <name>Ctrl-Q</name>
+        <name>Ctrl-q</name>
         <desc>Move view closer to the HUD</desc>
     </key>
     <key>
