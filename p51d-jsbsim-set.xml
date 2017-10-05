@@ -15,6 +15,8 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 
  <sim include="Sim/views.xml">
 
+  <minimum-fg-version>2017.3.1</minimum-fg-version>
+
   <description>North American Aviation P-51D-25-NA</description>
   <author>Jim Wilson, Jon Berndt and Hal V. Engel</author>
   <status>production</status>
