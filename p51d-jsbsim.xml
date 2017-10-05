@@ -775,7 +775,7 @@ Hal V. Engel hvengel@astound.net
            <switch name="systems/armament/ejectionAnimatedOuter">
              <default value="0" />
              <test logic="AND" value="1">
-                /sim/frame-rate > 30
+                /sim/frame-rate > 50
                 systems/armament/outerGunsFiring > 0
                 /sim/current-view/internal == 0
              </test>
@@ -784,7 +784,7 @@ Hal V. Engel hvengel@astound.net
            <switch name="systems/armament/ejectionAnimatedInner">
              <default value="0" />
              <test logic="AND" value="1">
-                /sim/frame-rate > 30
+                /sim/frame-rate > 50
                 systems/armament/innerGunsFiring > 0
                 /sim/current-view/internal == 0
              </test>
@@ -793,7 +793,6 @@ Hal V. Engel hvengel@astound.net
            <switch name="systems/armament/gunSmokeAnimatedInner">
              <default value="0" />
              <test logic="AND" value="1">
-                /sim/frame-rate > 27
                 systems/armament/innerGunsFiring > 0
              </test>
            </switch>   
@@ -801,7 +800,6 @@ Hal V. Engel hvengel@astound.net
            <switch name="systems/armament/gunSmokeAnimatedOuter">
              <default value="0" />
              <test logic="AND" value="1">
-                /sim/frame-rate > 27
                 systems/armament/outerGunsFiring > 0
              </test>
            </switch>           
@@ -809,7 +807,6 @@ Hal V. Engel hvengel@astound.net
            <switch name="systems/armament/muzzleFlashAnimatedOuter">
              <default value="0" />
              <test logic="AND" value="1">
-                /sim/frame-rate > 25
                 systems/armament/outerGunsFiring > 0
              </test>
            </switch>
@@ -817,7 +814,6 @@ Hal V. Engel hvengel@astound.net
            <switch name="systems/armament/muzzleFlashAnimatedInner">
              <default value="0" />
              <test logic="AND" value="1">
-                /sim/frame-rate > 25
                 systems/armament/innerGunsFiring > 0
              </test>
            </switch>
