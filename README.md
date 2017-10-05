@@ -34,6 +34,10 @@ New features
 
 * Can be damaged by missiles
 
+* OPRF combat system for rockets and bullets
+
+* Use HD model of rocket for submodels
+
 * Zoom in or out using mouse scrollwheel, up to a distance of 300 meters
 
 * ALS procedural lights for position lights
@@ -43,6 +47,16 @@ New features
 * ALS glass effect for rain
 
 * Replaced hotspots with knob animations and added tooltips
+
+* Make animation of cockpit controls smooth instead of instant
+
+* Various auto pilots:
+
+    - Heading hold using rudder (F6)
+
+    - Wing leveler + V/S hold (F7)
+
+    - Automatic takeoff (F8)
 
 Authors
 =======
