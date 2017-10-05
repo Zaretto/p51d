@@ -83,7 +83,7 @@
                 <command>set-tooltip</command>
                 <tooltip-id>mag-compass-knob</tooltip-id>
                 <mapping>heading</mapping>
-                <label>Magnetic compass bug: %3d</label>
+                <label>Remote compass bug: %3d</label>
                 <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
             </binding>
         </hovered>
