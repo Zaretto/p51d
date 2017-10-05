@@ -121,6 +121,24 @@
         </binding>
     </key>
 
+    <key n="81">
+        <name>Q</name>
+        <desc>Reset view</desc>
+        <binding>
+            <command>nasal</command>
+            <script>p51d.pilot_view()</script>
+        </binding>
+    </key>
+
+    <key n="17">
+        <name>Ctrl-Q</name>
+        <desc>Move view closer to the HUD</desc>
+        <binding>
+            <command>nasal</command>
+            <script>p51d.hud_view()</script>
+        </binding>
+    </key>
+
     <key n="115">
         <name>s</name>
         <desc>starter switch</desc>
