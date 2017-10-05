@@ -95,15 +95,20 @@ var autostart = func (n) {
     setprop("/controls/engines/engine/mixture", 0.5);
     setprop("/controls/fuel/on", 1);
     setprop("/controls/engines/engine/master-bat", 1);
+    setprop("/controls/engines/engine/master-alt", 1);
     setprop("/controls/armament/gunsight/power-on", 1);
     setprop("/controls/armament/guns-enabled", 1);
     setprop("/controls/armament/gunsight/computer-on", 1);
+    setprop("/controls/armament/gunsight/reticleSelectorPos", 1);
     setprop("/controls/gear/brake-parking", 1);
     setprop("/controls/engines/engine/magnetos", 3);
     setprop("/controls/engines/engine/throttle", 0.15);
     setprop("/fdm/jsbsim/propulsion/fuel_pump", 1);
     setprop("/fdm/jsbsim/systems/engine/primed", 1);
     setprop("/controls/engines/engine/primer-time", 17);
+
+    setprop("/controls/lighting/wing-position-lights", 1);
+    setprop("/controls/lighting/tail-position-lights", 1);
 
     if (autostart_listener_id != 0) {
         removelistener(autostart_listener_id);
