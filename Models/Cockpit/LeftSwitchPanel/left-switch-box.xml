@@ -152,4 +152,60 @@
         </hovered>
     </animation>
 
+     <animation>
+         <type>rotate</type>
+         <object-name>coolant-switch-guard</object-name>
+         <property>/controls/switches/coolant-guard-switch</property>
+         <factor>-120.0</factor>
+         <center>
+             <x-m>0.09189</x-m>
+             <y-m>0.04916</y-m>
+             <z-m>-0.02432</z-m>
+         </center>
+         <axis>
+             <x>1</x>
+         </axis>
+     </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>coolant-switch-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/coolant-guard-switch</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+         <type>rotate</type>
+         <object-name>oil-switch-guard</object-name>
+         <property>/controls/switches/oil-guard-switch</property>
+         <factor>-120.0</factor>
+         <center>
+             <x-m>0.03438</x-m>
+             <y-m>0.04916</y-m>
+             <z-m>-0.02432</z-m>
+         </center>
+         <axis>
+             <x>1</x>
+         </axis>
+     </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>oil-switch-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/oil-guard-switch</property>
+            </binding>
+        </action>
+    </animation>
+
 </PropertyList>

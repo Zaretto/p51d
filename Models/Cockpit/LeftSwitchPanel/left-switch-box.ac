@@ -604,7 +604,7 @@ refs 4
 17 0.988512992859 0.0293854996562
 kids 0
 OBJECT poly
-name "coolant-switch-gu"
+name "oil-switch-guard"
 data 8
 Cube.001
 texture "engine-switch-panel.rgb"
