@@ -152,6 +152,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
          <redout-complete-g type="double">-3.5</redout-complete-g>
        </parameters>
     </redout>
+    <als-secondary-lights>
+        <landing-light3-offset-deg type="double">0.0</landing-light3-offset-deg>
+    </als-secondary-lights>
   </rendering>
   
   <signals>

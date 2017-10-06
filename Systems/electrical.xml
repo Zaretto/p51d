@@ -4,7 +4,7 @@
 
     <property value="0">systems/right-flor-gain</property>
 
-    <channel name="gear doors">
+    <channel name="gear">
 
        <switch name="systems/gear/doors">
           <default value="/gear/gear[1]/position-norm"/>
@@ -12,6 +12,18 @@
              propulsion/engine/set-running LE 0.9
           </test>
        </switch>
+
+        <switch name="systems/gear/landing-light">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /controls/engines/engine/master-bat EQ 1
+                /controls/lighting/landing-lights EQ 1
+                /sim/current-view/internal EQ 1
+                /gear/gear/position-norm GT 0.5
+            </test>
+            <output>/sim/rendering/als-secondary-lights/use-landing-light</output>
+            <output>/sim/rendering/als-secondary-lights/use-alt-landing-light</output>
+        </switch>
 
     </channel>
 
