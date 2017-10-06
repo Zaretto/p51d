@@ -570,6 +570,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
       <file>Aircraft/p51d/Nasal/autopilot.nas</file>
       <file>Aircraft/p51d/Nasal/payloads.nas</file>
       <file>Aircraft/p51d/Nasal/views.nas</file>
+      <file>Aircraft/p51d/Nasal/miscellaneous.nas</file>
     </p51d>
     <SCR_522C>
       <file>Aircraft/Instruments-3d/SCR-522C/Nasal/SCR-522C.nas</file>

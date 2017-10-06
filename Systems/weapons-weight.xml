@@ -151,4 +151,20 @@
 
     </channel>
 
+    <channel name="reloading">
+        <switch name="gear/on-ground-at-rest">
+            <default value="0"/>
+            <output>/gear/on-ground-at-rest</output>
+
+            <test logic="AND" value="1">
+                gear/unit[0]/WOW EQ 1
+                gear/unit[1]/WOW EQ 1
+                gear/unit[2]/WOW EQ 1
+                gear/unit[0]/wheel-speed-fps LT 1
+                gear/unit[1]/wheel-speed-fps LT 1
+                gear/unit[2]/wheel-speed-fps LT 1
+            </test>
+        </switch>
+    </channel>
+
 </system>

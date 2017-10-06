@@ -2,6 +2,7 @@
 
 <PropertyList>
      <default>
+
       <menu n="1100">
           <label>Livery</label>
           <enabled type="bool">true</enabled>
@@ -16,10 +17,11 @@
               </binding>
           </item>
        </menu>
+
        <menu n="1000">
           <label>P-51D</label>
              <item>
-                <label>Pilot enable/disable always visible</label>
+                <label>Show/Hide Pilot In Cockpit View</label>
                 <binding>
                  <command>property-cycle</command>
                  <property>/fdm/jsbsim/systems/pilotAlwaysVisible</property>
@@ -27,7 +29,14 @@
                  <value type="int">1</value>
                 </binding>
              </item>
+
+            <item>
+                <label>-----------------------</label>
+                <enabled>false</enabled>
+            </item>
+
              <item>
+                <name>p51d-stores-none</name>
                 <label>No External Stores</label>
                 <binding>
                    <command>nasal</command>
@@ -35,6 +44,7 @@
                 </binding>
              </item>
              <item>
+                <name>p51d-stores-bombs</name>
                 <label>Bombs Only</label>
                  <binding>
                    <command>nasal</command>
@@ -42,13 +52,15 @@
                 </binding>
              </item>
              <item>
+                <name>p51d-stores-rockets</name>
                 <label>Rockets Only</label>
-               <binding>
+                <binding>
                    <command>nasal</command>
                    <script>p51d.setStores(2)</script>
                 </binding>
              </item>
              <item>
+                <name>p51d-stores-bombs-rockets</name>
                 <label>Bombs and Rockets</label>
                 <binding>
                    <command>nasal</command>
@@ -56,6 +68,7 @@
                 </binding>
              </item>
              <item>
+                <name>p51d-stores-tanks</name>
                 <label>Wing Tanks</label>
                 <binding>
                    <command>nasal</command>
@@ -63,6 +76,7 @@
                 </binding>
              </item>
              <item>
+                <name>p51d-stores-tanks-rockets</name>
                 <label>Wing Tanks and Rockets</label>
                 <binding>
                    <command>nasal</command>
@@ -70,27 +84,37 @@
                 </binding>
              </item>
              <item>
-             <label>Load Guns</label>
+                <name>p51d-stores-load-guns</name>
+                <label>Load Guns</label>
                 <binding>
                    <command>nasal</command>
                    <script>p51d.loadGuns(1)</script>
                 </binding>
              </item>
              <item>
-             <label>Unload Guns</label>
+                <name>p51d-stores-unload-guns</name>
+                <label>Unload Guns</label>
                 <binding>
                    <command>nasal</command>
                    <script>p51d.loadGuns(0)</script>
                 </binding>
              </item>
+
              <item>
-             <label>Autostart</label>
+                <label>-----------------------</label>
+                 <enabled>false</enabled>
+             </item>
+
+             <item>
+                <name>p51d-autostart</name>
+                <label>Autostart</label>
                  <binding>
                    <command>nasal</command>
                    <script>p51d.autostart(1)</script>
                  </binding>
              </item>
         </menu>
+
      </default>
 
 </PropertyList>
