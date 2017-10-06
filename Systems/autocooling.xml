@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<autopilot name="Autocooling">
+<system name="Autocooling">
 
     <!-- INTERFACE PROPERTIES -->
     <property value="0.0">ap/ap_coolant_hold</property>
@@ -9,7 +9,6 @@
 
     <property value="-0.6"> ap/coolant-gain </property>
     <property value="101"> ap/target_coolant-temp </property>
-    <property value="0.0"> systems/cooling/radiator-door-pos </property>
 
     <!--
          propulsion/engines/engine/cooling-factor should be
@@ -78,4 +77,4 @@
         
    </channel>
    
-</autopilot>
+</system>

@@ -578,8 +578,8 @@ Hal V. Engel hvengel@astound.net
     </propulsion>
 
     <system file="propulsion"/>
-    <autopilot file="Systems/autothrottle"/>
-    <autopilot file="Systems/autocooling"/>
+    <system file="autothrottle"/>
+    <system file="autocooling"/>
     <system file="mixture-control"/>
     <system file="alpha-buffet"/>
     <system file="crash-detect"/>
