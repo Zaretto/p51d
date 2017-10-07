@@ -136,6 +136,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <float n="8" /> <!-- /controls/lighting/red-rec-light -->
         <float n="9" /> <!-- /controls/lighting/green-rec-light -->
         <float n="10" /> <!-- /controls/lighting/amber-rec-light -->
+        <float n="11" alias="/aircraft/lighting/landing-light"/>
         <string n="0" type="string"/>
     </generic>
   </multiplay>
@@ -153,6 +154,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
        </parameters>
     </redout>
     <als-secondary-lights>
+        <!-- Adjustable up to 6 deg according to maintenance manual -->
         <landing-light3-offset-deg type="double">0.0</landing-light3-offset-deg>
     </als-secondary-lights>
   </rendering>

@@ -18,8 +18,16 @@
             <test logic="AND" value="1">
                 /controls/engines/engine/master-bat EQ 1
                 /controls/lighting/landing-lights EQ 1
+                /gear/gear/position-norm GT 0.38
+            </test>
+            <output>/aircraft/lighting/landing-light</output>
+        </switch>
+
+        <switch name="systems/gear/landing-light-internal">
+            <default value="0"/>
+            <test logic="AND" value="1">
                 /sim/current-view/internal EQ 1
-                /gear/gear/position-norm GT 0.5
+                systems/gear/landing-light EQ 1
             </test>
             <output>/sim/rendering/als-secondary-lights/use-landing-light</output>
             <output>/sim/rendering/als-secondary-lights/use-alt-landing-light</output>

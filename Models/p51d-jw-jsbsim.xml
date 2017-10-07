@@ -19,6 +19,12 @@
 
 <PropertyList include="p51d-bombableinclude.xml">
 
+    <params>
+        <wing-position-lights>sim/multiplay/generic/float[6]</wing-position-lights>
+        <tail-position-light>sim/multiplay/generic/float[7]</tail-position-light>
+        <landing-light>sim/multiplay/generic/float[11]</landing-light>
+    </params>
+
  <path>P-51D-25NA.ac</path>
  
   <nasal>
@@ -1956,7 +1962,7 @@
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
                 <equals>
-                    <property>sim/multiplay/generic/float[6]</property>
+                    <property alias="/params/wing-position-lights"/>
                     <value>2.0</value><!-- 1 = bright, 2 = dim -->
                 </equals>
             </and>
@@ -1972,7 +1978,7 @@
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
                 <equals>
-                    <property>sim/multiplay/generic/float[6]</property>
+                    <property alias="/params/wing-position-lights"/>
                     <value>1.0</value><!-- 1 = bright, 2 = dim -->
                 </equals>
             </and>
@@ -1986,7 +1992,7 @@
         <condition>
             <or>
                 <not><property>/sim/rendering/shaders/skydome</property></not>
-                <not><property>sim/multiplay/generic/float[6]</property></not>
+                <not><property alias="/params/wing-position-lights"/></not>
             </or>
         </condition>
     </animation>
@@ -1999,7 +2005,7 @@
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
                 <equals>
-                    <property>sim/multiplay/generic/float[7]</property>
+                    <property alias="/params/tail-position-light"/>
                     <value>2.0</value><!-- 1 = bright, 2 = dim -->
                 </equals>
             </and>
@@ -2014,7 +2020,7 @@
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
                 <equals>
-                    <property>sim/multiplay/generic/float[7]</property>
+                    <property alias="/params/tail-position-light"/>
                     <value>1.0</value><!-- 1 = bright, 2 = dim -->
                 </equals>
             </and>
@@ -2027,7 +2033,7 @@
         <condition>
             <or>
                 <not><property>/sim/rendering/shaders/skydome</property></not>
-                <not><property>sim/multiplay/generic/float[7]</property></not>
+                <not><property alias="/params/tail-position-light"/></not>
             </or>
         </condition>
     </animation>
@@ -2046,6 +2052,32 @@
             <y2-m>0</y2-m>
             <z2-m>-1</z2-m>
         </axis>
+    </animation>
+
+    <!-- =============================================================== -->
+    <!-- ALS Landing Light                                               -->
+    <!-- =============================================================== -->
+
+    <model>
+        <name>landing-light</name>
+        <path>Effects/lights/procedural_landing_light.xml</path>
+        <offsets>
+            <x-m> 2.4</x-m>
+            <y-m>-0.88</y-m><!-- 0.01 extra offset away from fuselage -->
+            <z-m>-0.8</z-m>
+        </offsets>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>landing-light</object-name>
+        <nopreview/>
+        <condition>
+            <and>
+                <property>/sim/rendering/shaders/skydome</property>
+                <property alias="/params/landing-light"/>
+            </and>
+        </condition>
     </animation>
 
 </PropertyList>
