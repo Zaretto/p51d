@@ -161,7 +161,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>left-bomb-arm</tooltip-id>
-                <label>Left bomb chemical release: %s</label>
+                <label>Left bomb/chemical: %s</label>
                 <mapping>nasal</mapping>
                 <script>
                     var modes = ['ARM', 'OFF', 'RELEASE'];
@@ -220,7 +220,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>right-bomb-arm</tooltip-id>
-                <label>Right bomb chemical release: %s</label>
+                <label>Right bomb/chemical: %s</label>
                 <mapping>nasal</mapping>
                 <script>
                     var modes = ['ARM', 'OFF', 'RELEASE'];
