@@ -180,6 +180,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             <invert-mouse-wheel type="bool">true</invert-mouse-wheel>
         </mouse>
 
+        <instrumentation>
+            <path>Systems/instrumentation.xml</path>
+        </instrumentation>
+
     </sim>
 
  <instrumentation>

@@ -4,6 +4,30 @@
 
     <property value="0">systems/right-flor-gain</property>
 
+    <channel name="instruments">
+
+        <!-- Vacuum-based instruments use gyro norm power = suction / 5,
+             but electrical-based instruments use gyro norm power = voltage / 12
+
+             Turn coordinator in FG is electrical-based, but the one in the P-51D
+             is vacuum-based.
+        -->
+        <pure_gain name="systems/turn-coordinator/suction-to-power">
+            <input>/systems/vacuum/suction-inhg</input>
+            <gain>2.4</gain>
+            <output>/systems/electrical/outputs/turn-coordinator</output>
+        </pure_gain>
+
+        <switch name="systems/remote-compass/voltage-norm">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+            <output>/systems/electrical/outputs/DG</output>
+        </switch>
+
+    </channel>
+
     <channel name="gear">
 
        <switch name="systems/gear/doors">
@@ -161,7 +185,7 @@
 
      </channel>
 
-    <channel name="Weapons">
+    <channel name="weapons">
 
        <!-- support animating the weapons selector switch -->
 
@@ -327,7 +351,7 @@
 
      </channel>
 
-     <channel name="Recognition lights">
+     <channel name="recognition lights">
 
        <switch name="rec-light-red">
           <default value="0"/>

@@ -32,7 +32,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Needle1</object-name>
-  <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
+  <property>/instrumentation/remote-compass-indicator/indicated-heading-deg</property>
   <axis>
    <x>-1</x>
    <y>0</y>
