@@ -2,11 +2,15 @@ var closest_distance = 50;
 
 var hit_count_bullets = 0;
 var hit_count_rockets = 0;
+var hit_count_bombs = 0;
+
 var callsign_bullets = "";
 var callsign_rockets = "";
+var callsign_bombs = "";
 
 var hit_timer_bullets = 0;
 var hit_timer_rockets = 0;
+var hit_timer_bombs = 0;
 
 var impact_types_bullets = [
     "left-gun-1-bullets",
@@ -30,6 +34,11 @@ var impact_types_rockets = [
     "fire-rocket-10",
 ];
 
+var impact_types_bombs = [
+    "drop-bomb-left",
+    "drop-bomb-right",
+];
+
 var isBulletImpact = func (name) {
     foreach (type; impact_types_bullets) {
         if (type == name) {
@@ -48,6 +57,14 @@ var isRocketImpact = func (name) {
     return 0;
 };
 
+var isBombImpact = func (name) {
+    foreach (type; impact_types_bombs) {
+        if (type == name) {
+            return 1;
+        }
+    }
+    return 0;
+};
 
 setlistener("/ai/models/model-impact", func (node) {
     var ballistic_name = node.getValue();
@@ -110,6 +127,21 @@ setlistener("/ai/models/model-impact", func (node) {
                     settimer(hitRockets, 1);
                 }
             }
+
+            if (isBombImpact(name)) {
+                if (callsign == callsign_bombs) {
+                    hit_count_bombs += 1;
+                }
+                else {
+                    callsign_bombs = callsign;
+                    hit_count_bombs = 0;
+                }
+
+                if (hit_timer_bombs == 0) {
+                    hit_timer_bombs = 1;
+                    settimer(hitBombs, 1);
+                }
+            }
         }
     }
 });
@@ -133,6 +165,17 @@ var hitRockets = func {
 
     defeatSpamFilter(message);
     hit_timer_rockets = 0;
+};
+
+var hitBombs = func {
+    # 500 lbs bombs
+    message = "GBU12 hit: " ~ callsign_bombs ~ ": " ~ hit_count_bombs ~ " hits";
+
+    hit_count_bombs = 0;
+    callsign_bombs = "";
+
+    defeatSpamFilter(message);
+    hit_timer_bombs = 0;
 };
 
 var spams = 0;
