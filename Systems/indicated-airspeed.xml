@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2017 onox
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<system name="indicated-airspeed">
+
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+
+    <channel name="indicated airspeed">
+
+        <fcs_function name="systems/asi/indicated-airspeed">
+            <output>/instrumentation/airspeed-indicator/ias-kt</output>
+            <function>
+                <table>
+                    <!-- Apply installation error correction to IAS. Using
+                         figure A-1 on page 96 of F-51D handbook.
+                         indicated-speed-kt assumes perfect pitot and therefore
+                         acts as CAS.
+
+                         Figure A-1 does not contain data for > 170 IAS with gear
+                         down. Values are guessed for higher speeds with gear down.
+                    -->
+                    <independentVar lookup="row">/instrumentation/airspeed-indicator/indicated-speed-kt</independentVar>
+                    <independentVar lookup="column">/gear/gear/position-norm</independentVar>
+                    <tableData>
+                              0     1
+                        0     0     0
+                        80    75    80
+                        91    86    90
+                        101   96    100
+                        105   100   105
+                        109   104   110
+                        118   113   120
+                        125   120   128
+                        127   122   130
+                        144   140   148
+                        146   142   150
+                        164   160   168
+                        166   162   170
+                        183   180   186
+                        203   200   206
+                        222   220   224
+                        242   240   244
+                        262   260   264
+                        282   280   284
+                        302   300   304
+                        353   350   356
+                        404   400   408
+                        704   700   708
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
+
+    </channel>
+
+</system>

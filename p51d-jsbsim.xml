@@ -10,6 +10,23 @@ Hal V. Engel hvengel@astound.net
 -->
 <!-- In test, working file dany93. Some changes on stall and spin departure for takeoff and landing, spiraling propwash effect. 30 Nov 2015 -->
 
+<!--
+     Control surfaces:
+       - ailerons: 10, 12, or 15 deg
+       - flaps: 47 deg
+       - elevator:
+           - up: 30 deg
+           - down: 20 deg
+       - rudder: 30 deg
+
+     Trim tabs:
+       - ailerons: 10 deg
+       - elevator:
+           - up: 10 deg
+           - down: 25 deg
+       - rudder: 10 deg
+-->
+
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
 <fdm_config name="P-51D (JSBSim)" version="2.0" release="BETA"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -577,16 +594,17 @@ Hal V. Engel hvengel@astound.net
 
     </propulsion>
 
+    <system file="indicated-airspeed"/>
     <system file="propulsion"/>
     <system file="autothrottle"/>
     <system file="autocooling"/>
     <system file="mixture-control"/>
     <system file="alpha-buffet"/>
     <system file="crash-detect"/>
-    <system file="electrical"/>
     <system file="compressability"/>
     <system file="weapons-weight"/>
     <system file="tail-wheel"/>
+    <system file="electrical"/>
     <system file="hydraulic"/>
     <system file="MPAnimation"/>
     <system file="effects"/>
