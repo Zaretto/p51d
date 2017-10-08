@@ -2,22 +2,6 @@
 
 <PropertyList>
 
-    <key n="4">
-        <name>Ctrl-d</name>
-        <desc>Fire Rockets or Release Bombs or Release Drop Tanks</desc>
-        <repeatable>false</repeatable>
-        <binding>
-            <command>nasal</command>
-            <script>setprop("/controls/armament/trigger2", 1)</script>
-        </binding>
-        <mod-up>
-            <binding>
-                <command>nasal</command>
-                <script>setprop("/controls/armament/trigger2", 0)</script>
-            </binding>
-        </mod-up>
-    </key>
-
     <key n="262">
         <name>F6</name>
         <desc>Toggle auto-rudder</desc>
@@ -97,20 +81,21 @@
         </binding>
     </key>
 
-    <key n="101">
-        <name>e</name>
-        <desc>Gun Trigger</desc>
-        <repeatable>false</repeatable>
+    <!-- Disable speed-up -->
+    <key n="97">
+        <name>a</name>
         <binding>
             <command>nasal</command>
-            <script>setprop("/controls/armament/trigger", 1)</script>
+            <script/>
         </binding>
-        <mod-up>
-            <binding>
-                <command>nasal</command>
-                <script>setprop("/controls/armament/trigger", 0)</script>
-            </binding>
-        </mod-up>
+    </key>
+
+    <key n="65">
+        <name>A</name>
+        <binding>
+            <command>nasal</command>
+            <script/>
+        </binding>
     </key>
 
     <key n="99">
@@ -128,6 +113,38 @@
             <property>/canopy/direction</property>
             <rate>0.15</rate>
         </binding>
+    </key>
+
+    <key n="4">
+        <name>Ctrl-d</name>
+        <desc>Fire Rockets or Release Bombs or Release Drop Tanks</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger2", 1)</script>
+        </binding>
+        <mod-up>
+            <binding>
+                <command>nasal</command>
+                <script>setprop("/controls/armament/trigger2", 0)</script>
+            </binding>
+        </mod-up>
+    </key>
+
+    <key n="101">
+        <name>e</name>
+        <desc>Gun Trigger</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger", 1)</script>
+        </binding>
+        <mod-up>
+            <binding>
+                <command>nasal</command>
+                <script>setprop("/controls/armament/trigger", 0)</script>
+            </binding>
+        </mod-up>
     </key>
 
     <key n="81">
