@@ -141,6 +141,43 @@
         </axis>
     </animation>
 
+    <!-- Spring-loaded for RELEASE position (page 63 of F-51D handbook) -->
+    <animation>
+        <type>pick</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>left-arm-switch</object-name>
+        <object-name>left-arm-sw-base</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>/controls/armament/left-bomb-arm-chem-release</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/controls/armament/left-bomb-arm-chem-release</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <condition>
+                        <equals>
+                            <property>/controls/armament/left-bomb-arm-chem-release</property>
+                            <value>1</value>
+                        </equals>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>/controls/armament/left-bomb-arm-chem-release</property>
+                    <value>0</value>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
     <animation>
         <type>knob</type>
         <drag-direction>vertical</drag-direction>
@@ -153,7 +190,6 @@
                 <property>/controls/armament/left-bomb-arm-chem-release</property>
                 <value type="int">-1</value>
                 <value type="int">0</value>
-                <value type="int">1</value>
                 <wrap>false</wrap>
             </binding>
         </action>
@@ -200,6 +236,43 @@
         </axis>
     </animation>
 
+    <!-- Spring-loaded for RELEASE position (page 63 of F-51D handbook) -->
+    <animation>
+        <type>pick</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>right-arm-switch</object-name>
+        <object-name>right-arm-sw-base</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>/controls/armament/right-bomb-arm-chem-release</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/controls/armament/right-bomb-arm-chem-release</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <condition>
+                        <equals>
+                            <property>/controls/armament/right-bomb-arm-chem-release</property>
+                            <value>1</value>
+                        </equals>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>/controls/armament/right-bomb-arm-chem-release</property>
+                    <value>0</value>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
     <animation>
         <type>knob</type>
         <drag-direction>vertical</drag-direction>
@@ -212,7 +285,6 @@
                 <property>/controls/armament/right-bomb-arm-chem-release</property>
                 <value type="int">-1</value>
                 <value type="int">0</value>
-                <value type="int">1</value>
                 <wrap>false</wrap>
             </binding>
         </action>
@@ -271,7 +343,7 @@
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>rockets-release</tooltip-id>
-                <label>Rockets release: %s</label>
+                <label>Rocket fuse: %s</label>
                 <mapping>nasal</mapping>
                 <script>
                     var modes = ['DELAY', 'INSTANT'];
