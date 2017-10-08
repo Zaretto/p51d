@@ -26,6 +26,12 @@
             <output>/systems/electrical/outputs/DG</output>
         </switch>
 
+        <summer name="systems/clock/local-sec">
+            <input>/instrumentation/clock/indicated-sec</input>
+            <input>/sim/time/local-offset</input>
+            <output>/instrumentation/clock/local-sec</output>
+        </summer>
+
     </channel>
 
     <channel name="gear">

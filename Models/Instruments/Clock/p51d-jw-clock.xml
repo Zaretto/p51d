@@ -32,7 +32,7 @@
  <animation>
   <type>rotate</type>
   <object-name>HourHand</object-name>
-  <property>/instrumentation/clock/indicated-sec</property>
+  <property>/instrumentation/clock/local-sec</property>
   <factor>0.00833333333333333</factor>
   <axis>
    <x>-1</x>
@@ -44,7 +44,7 @@
  <animation>
   <type>rotate</type>
   <object-name>MinuteHand</object-name>
-  <property>/instrumentation/clock/indicated-sec</property>
+  <property>/instrumentation/clock/local-sec</property>
   <factor>0.1</factor>
   <axis>
    <x>-1</x>
@@ -56,7 +56,7 @@
  <animation>
   <type>rotate</type>
   <object-name>SecondHand</object-name>
-  <property>/instrumentation/clock/indicated-sec</property>
+  <property>/instrumentation/clock/local-sec</property>
   <factor>6</factor>
   <axis>
    <x>-1</x>
@@ -95,7 +95,7 @@
                 <command>set-tooltip</command>
                 <tooltip-id>clock-knob</tooltip-id>
                 <label>Local time: %s</label>
-                <property>/instrumentation/clock/indicated-short-string</property>
+                <property>/instrumentation/clock/local-short-string</property>
             </binding>
         </hovered>
     </animation>
