@@ -34,13 +34,13 @@ New features
 
 * Can be damaged by missiles
 
-* OPRF combat system for rockets and bullets
+* OPRF combat system for bullets, rockets, and bombs
 
 * Use HD model of rocket for submodels
 
 * Zoom in or out using mouse scrollwheel, up to a distance of 300 meters
 
-* ALS procedural lights for position lights
+* ALS procedural lights for position lights and landing light
 
 * Exterior glass reflection
 
@@ -57,6 +57,10 @@ New features
     - Wing leveler + V/S hold (F7)
 
     - Automatic takeoff (F8)
+
+* Fix remote compass indicator and turn coordinator
+
+* Added pitot tube cover
 
 Authors
 =======
