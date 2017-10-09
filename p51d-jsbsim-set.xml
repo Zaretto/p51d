@@ -416,6 +416,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <pitch-hold-max type="double">15.0</pitch-hold-max>
             </settings>
         </afcs>
+        <securing>
+            <!-- RBF: pitot cover "remove before flight" -->
+            <pitot-cover-visible type="bool">false</pitot-cover-visible>
+        </securing>
     </aircraft>
 
  <consumables>

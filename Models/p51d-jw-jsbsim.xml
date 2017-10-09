@@ -23,6 +23,9 @@
         <wing-position-lights>sim/multiplay/generic/float[6]</wing-position-lights>
         <tail-position-light>sim/multiplay/generic/float[7]</tail-position-light>
         <landing-light>sim/multiplay/generic/float[11]</landing-light>
+        <securing>
+            <pitot-cover>sim/multiplay/generic/boolean[0]</pitot-cover>
+        </securing>
     </params>
 
  <path>P-51D-25NA.ac</path>
@@ -2078,6 +2081,107 @@
                 <property alias="/params/landing-light"/>
             </and>
         </condition>
+    </animation>
+
+    <!-- =============================================================== -->
+    <!-- Securing                                                        -->
+    <!-- =============================================================== -->
+
+    <!-- Pitot tube cover "remove before flight" -->
+    <model>
+        <name>rbf-pitot</name>
+        <path>Exterior/rbf/rbf.xml</path>
+        <offsets>
+            <x-m>2.89226</x-m>
+            <y-m>3.23346</y-m>
+            <z-m>-0.6600</z-m>
+        </offsets>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>rbf-pitot</object-name>
+        <condition>
+            <property alias="/params/securing/pitot-cover"/>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>rbf-pitot</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <property>/aircraft/securing/pitot-cover-removable</property>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property alias="/params/securing/pitot-cover"/>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <and>
+                        <property>/aircraft/securing/pitot-cover-removable</property>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                    </and>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-pitot-tube-cap</tooltip-id>
+                <label>Remove pitot tube cover</label>
+            </binding>
+        </hovered>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>pitotTube</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <property>/aircraft/securing/pitot-cover-addable</property>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property alias="/params/securing/pitot-cover"/>
+                <value>true</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                <value>0.0</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <and>
+                        <property>/aircraft/securing/pitot-cover-addable</property>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                    </and>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>put-pitot-tube-cap</tooltip-id>
+                <label>Add pitot tube cover</label>
+            </binding>
+        </hovered>
     </animation>
 
 </PropertyList>
