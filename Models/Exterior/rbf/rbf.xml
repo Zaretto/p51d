@@ -5,4 +5,18 @@
     <path>rbf.ac</path>
     <nopreview/>
 
+    <animation>
+        <type>rotate</type>
+        <object-name>tape</object-name>
+        <property>orientation/pitch-deg</property>
+        <axis>
+            <y>-1</y>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>-0.0093</z-m>
+        </center>
+    </animation>
+
 </PropertyList>

@@ -92,6 +92,8 @@ var autostart = func (n) {
         return;
     }
 
+    setprop("/aircraft/securing/pitot-cover-visible", 0);
+
     setprop("/controls/engines/engine/mixture", 0.5);
     setprop("/controls/fuel/on", 1);
     setprop("/controls/engines/engine/master-bat", 1);
