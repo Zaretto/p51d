@@ -95,4 +95,26 @@
 
     </channel>
 
+    <channel name="securing">
+
+        <switch name="systems/pitot-cover/addable">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /aircraft/securing/pitot-cover-visible EQ 0
+                gear/on-ground-at-rest EQ 1
+            </test>
+            <output>/aircraft/securing/pitot-cover-addable</output>
+        </switch>
+
+        <switch name="systems/pitot-cover/removable">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /aircraft/securing/pitot-cover-visible EQ 1
+                gear/on-ground-at-rest EQ 1
+            </test>
+            <output>/aircraft/securing/pitot-cover-removable</output>
+        </switch>
+
+    </channel>
+
 </system>

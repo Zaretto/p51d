@@ -138,6 +138,8 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <float n="10" /> <!-- /controls/lighting/amber-rec-light -->
         <float n="11" alias="/aircraft/lighting/landing-light"/>
         <string n="0" type="string"/>
+
+        <boolean n="0" alias="/aircraft/securing/pitot-cover-visible"/>
     </generic>
   </multiplay>
 
@@ -174,6 +176,11 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
              <z-offset-min-m type="float">10.0</z-offset-min-m>
              <z-offset-max-m type="float">300.0</z-offset-max-m>
          </current-view>
+
+        <!-- Save some properties when the simulator is shut down -->
+        <aircraft-data>
+            <path>/aircraft/securing/pitot-cover-visible</path>
+        </aircraft-data>
 
         <!-- Fix scrolling direction of knobs -->
         <mouse>

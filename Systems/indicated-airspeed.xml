@@ -21,7 +21,7 @@
 
     <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
 
-    <channel name="indicated airspeed">
+    <channel name="indicated-airspeed">
 
         <fcs_function name="systems/asi/indicated-airspeed">
             <output>/instrumentation/airspeed-indicator/ias-kt</output>
@@ -66,6 +66,15 @@
                 </table>
             </function>
         </fcs_function>
+
+        <switch name="systems/asi/pitot-serviceable">
+            <output>/systems/pitot/serviceable</output>
+            <default value="1"/>
+
+            <test logic="AND" value="0">
+                /aircraft/securing/pitot-cover-visible EQ 1
+            </test>
+        </switch>
 
     </channel>
 
