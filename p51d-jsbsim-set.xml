@@ -137,9 +137,14 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <float n="9" /> <!-- /controls/lighting/green-rec-light -->
         <float n="10" /> <!-- /controls/lighting/amber-rec-light -->
         <float n="11" alias="/aircraft/lighting/landing-light"/>
+
         <string n="0" type="string"/>
 
-        <boolean n="0" alias="/aircraft/securing/pitot-cover-visible"/>
+        <bool n="0" alias="/aircraft/securing/pitot-cover-visible"/>
+        <bool n="1" alias="/aircraft/securing/left-tiedown-visible"/>
+        <bool n="2" alias="/aircraft/securing/right-tiedown-visible"/>
+        <bool n="3" alias="/aircraft/securing/tail-left-tiedown-visible"/>
+        <bool n="4" alias="/aircraft/securing/tail-right-tiedown-visible"/>
     </generic>
   </multiplay>
 
@@ -180,6 +185,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <!-- Save some properties when the simulator is shut down -->
         <aircraft-data>
             <path>/aircraft/securing/pitot-cover-visible</path>
+            <path>/aircraft/securing/left-tiedown-visible</path>
+            <path>/aircraft/securing/right-tiedown-visible</path>
+            <path>/aircraft/securing/tail-left-tiedown-visible</path>
+            <path>/aircraft/securing/tail-right-tiedown-visible</path>
         </aircraft-data>
 
         <!-- Fix scrolling direction of knobs -->
@@ -192,6 +201,30 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         </instrumentation>
 
     </sim>
+
+    <!-- Transmitted as short floats in 2017.2 protocol -->
+    <engines>
+        <engine n="1">
+            <n1 alias="/aircraft/tiedowns/left/heading-deg"/>
+            <n2 alias="/aircraft/tiedowns/left/pitch-deg"/>
+            <rpm alias="/aircraft/tiedowns/left/length-m"/>
+        </engine>
+        <engine n="2">
+            <n1 alias="/aircraft/tiedowns/right/heading-deg"/>
+            <n2 alias="/aircraft/tiedowns/right/pitch-deg"/>
+            <rpm alias="/aircraft/tiedowns/right/length-m"/>
+        </engine>
+        <engine n="3">
+            <n1 alias="/aircraft/tiedowns/tail-left/heading-deg"/>
+            <n2 alias="/aircraft/tiedowns/tail-left/pitch-deg"/>
+            <rpm alias="/aircraft/tiedowns/tail-left/length-m"/>
+        </engine>
+        <engine n="4">
+            <n1 alias="/aircraft/tiedowns/tail-right/heading-deg"/>
+            <n2 alias="/aircraft/tiedowns/tail-right/pitch-deg"/>
+            <rpm alias="/aircraft/tiedowns/tail-right/length-m"/>
+        </engine>
+    </engines>
 
  <instrumentation>
     <magnetic-compass>
@@ -423,9 +456,52 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <pitch-hold-max type="double">15.0</pitch-hold-max>
             </settings>
         </afcs>
+
+        <tiedowns>
+            <left>
+                <pitch-deg type="double">0.0</pitch-deg>
+                <heading-deg type="double">0.0</heading-deg>
+                <length-m type="double">0.0</length-m>
+                <ref-length-m type="double">0.0</ref-length-m>
+                <x type="double">-3.5</x>
+                <y type="double">-4.5</y>
+            </left>
+            <right>
+                <pitch-deg type="double">0.0</pitch-deg>
+                <heading-deg type="double">0.0</heading-deg>
+                <length-m type="double">0.0</length-m>
+                <ref-length-m type="double">0.0</ref-length-m>
+                <x type="double">-3.5</x>
+                <y type="double">4.5</y>
+            </right>
+            <tail-left>
+                <pitch-deg type="double">0.0</pitch-deg>
+                <heading-deg type="double">0.0</heading-deg>
+                <length-m type="double">0.0</length-m>
+                <ref-length-m type="double">0.0</ref-length-m>
+                <x type="double">-6.2</x>
+                <y type="double">-0.7</y>
+            </tail-left>
+            <tail-right>
+                <pitch-deg type="double">0.0</pitch-deg>
+                <heading-deg type="double">0.0</heading-deg>
+                <length-m type="double">0.0</length-m>
+                <ref-length-m type="double">0.0</ref-length-m>
+                <x type="double">-6.2</x>
+                <y type="double">0.7</y>
+            </tail-right>
+        </tiedowns>
+
         <securing>
             <!-- RBF: pitot cover "remove before flight" -->
             <pitot-cover-visible type="bool">false</pitot-cover-visible>
+
+            <!-- Tie-downs attached to the wings and tail used to secure plane -->
+            <left-tiedown-visible type="bool">false</left-tiedown-visible>
+            <right-tiedown-visible type="bool">false</right-tiedown-visible>
+
+            <tail-left-tiedown-visible type="bool">false</tail-left-tiedown-visible>
+            <tail-right-tiedown-visible type="bool">false</tail-right-tiedown-visible>
         </securing>
     </aircraft>
 
@@ -495,6 +571,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <flap-cmd-norm type="float">1.0</flap-cmd-norm>
         <qbar-psf_clipped type="float">0.0</qbar-psf_clipped>
       </fcs>  
+      <damage>
+        <repairing type="bool">false</repairing>
+      </damage>
    </jsbsim>
  </fdm>
  
@@ -575,7 +654,13 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
    </submodels>
  </ai>
 
-  <nasal>
+    <nasal>
+        <math_ext>
+            <file>Aircraft/c172p/Nasal/generic/math_ext.nas</file>
+        </math_ext>
+        <updateloop>
+            <file>Aircraft/Generic/updateloop.nas</file>
+        </updateloop>
     <p51d>
       <file>Aircraft/p51d/Nasal/over-ride-flaps.nas</file>
       <file>Aircraft/p51d/Nasal/stores.nas</file>
@@ -591,6 +676,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
       <file>Aircraft/p51d/Nasal/payloads.nas</file>
       <file>Aircraft/p51d/Nasal/views.nas</file>
       <file>Aircraft/p51d/Nasal/miscellaneous.nas</file>
+      <file>Nasal/tiedowns.nas</file>
     </p51d>
     <SCR_522C>
       <file>Aircraft/Instruments-3d/SCR-522C/Nasal/SCR-522C.nas</file>
@@ -599,6 +685,6 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 	  <file>Aircraft/Instruments-3d/computing-gun-sights/Nasal/lead-computer.nas</file>
 	  <file>Aircraft/Instruments-3d/computing-gun-sights/K14/Nasal/K14-reticle.nas</file>
 	</K14>
-  </nasal>
+    </nasal>
 
 </PropertyList>

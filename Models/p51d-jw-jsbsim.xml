@@ -24,7 +24,11 @@
         <tail-position-light>sim/multiplay/generic/float[7]</tail-position-light>
         <landing-light>sim/multiplay/generic/float[11]</landing-light>
         <securing>
-            <pitot-cover>sim/multiplay/generic/boolean[0]</pitot-cover>
+            <pitot-cover>sim/multiplay/generic/bool[0]</pitot-cover>
+            <left-tiedown>sim/multiplay/generic/bool[1]</left-tiedown>
+            <right-tiedown>sim/multiplay/generic/bool[2]</right-tiedown>
+            <tail-left-tiedown>sim/multiplay/generic/bool[3]</tail-left-tiedown>
+            <tail-right-tiedown>sim/multiplay/generic/bool[4]</tail-right-tiedown>
         </securing>
     </params>
 
@@ -2180,6 +2184,250 @@
                 <command>set-tooltip</command>
                 <tooltip-id>put-pitot-tube-cap</tooltip-id>
                 <label>Add pitot tube cover</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Left Tiedowns -->
+    <model>
+        <name>left-tiedown</name>
+        <path>Exterior/tiedowns/tiedown.xml</path>
+        <offsets>
+            <x-m>2.8000</x-m>
+            <y-m>-4.0000</y-m>
+            <z-m>-0.4500</z-m>
+            <heading-deg>-90.0</heading-deg>
+        </offsets>
+        <overlay>
+            <params>
+                <heading-deg>engines/engine[1]/n1</heading-deg>
+                <pitch-deg>engines/engine[1]/n2</pitch-deg>
+                <length-m>engines/engine[1]/rpm</length-m>
+            </params>
+        </overlay>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>left-tiedown</object-name>
+        <condition>
+            <property alias="/params/securing/left-tiedown"/>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-tiedown</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <not>
+                        <property>/sim/current-view/internal</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property alias="/params/securing/left-tiedown"/>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <and>
+                        <property alias="/params/securing/left-tiedown"/>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                    </and>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-left-tiedown</tooltip-id>
+                <label>Remove tie-down</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Right Tiedowns -->
+    <model>
+        <name>right-tiedown</name>
+        <path>Exterior/tiedowns/tiedown.xml</path>
+        <offsets>
+            <x-m>2.8000</x-m>
+            <y-m>4.0000</y-m>
+            <z-m>-0.4500</z-m>
+            <heading-deg>90.0</heading-deg>
+        </offsets>
+        <overlay>
+            <params>
+                <heading-deg>engines/engine[2]/n1</heading-deg>
+                <pitch-deg>engines/engine[2]/n2</pitch-deg>
+                <length-m>engines/engine[2]/rpm</length-m>
+            </params>
+        </overlay>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>right-tiedown</object-name>
+        <condition>
+            <property alias="/params/securing/right-tiedown"/>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-tiedown</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <not>
+                        <property>/sim/current-view/internal</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property alias="/params/securing/right-tiedown"/>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <and>
+                        <property alias="/params/securing/right-tiedown"/>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                    </and>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-right-tiedown</tooltip-id>
+                <label>Remove tie-down</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Tail left tie-down -->
+    <model>
+        <name>tail-left-tiedown</name>
+        <path>Exterior/tiedowns/tiedown.xml</path>
+        <offsets>
+            <x-m>6.4800</x-m>
+            <y-m>-0.2600</y-m>
+            <z-m>-0.4220</z-m>
+            <heading-deg>-90.0</heading-deg>
+        </offsets>
+        <overlay>
+            <params>
+                <heading-deg>engines/engine[3]/n1</heading-deg>
+                <pitch-deg>engines/engine[3]/n2</pitch-deg>
+                <length-m>engines/engine[3]/rpm</length-m>
+            </params>
+        </overlay>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>tail-left-tiedown</object-name>
+        <condition>
+            <property alias="/params/securing/tail-left-tiedown"/>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>tail-left-tiedown</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <not>
+                        <property>/sim/current-view/internal</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property alias="/params/securing/tail-left-tiedown"/>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <and>
+                        <property alias="/params/securing/tail-left-tiedown"/>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                    </and>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-tail-left-tiedown</tooltip-id>
+                <label>Remove tie-down</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- Tail right tie-down -->
+    <model>
+        <name>tail-right-tiedown</name>
+        <path>Exterior/tiedowns/tiedown.xml</path>
+        <offsets>
+            <x-m>6.4800</x-m>
+            <y-m>0.2600</y-m>
+            <z-m>-0.4220</z-m>
+            <heading-deg>90.0</heading-deg>
+        </offsets>
+        <overlay>
+            <params>
+                <heading-deg>engines/engine[4]/n1</heading-deg>
+                <pitch-deg>engines/engine[4]/n2</pitch-deg>
+                <length-m>engines/engine[4]/rpm</length-m>
+            </params>
+        </overlay>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>tail-right-tiedown</object-name>
+        <condition>
+            <property alias="/params/securing/tail-right-tiedown"/>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>tail-right-tiedown</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <not>
+                        <property>/sim/current-view/internal</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property alias="/params/securing/tail-right-tiedown"/>
+                <value>false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <condition>
+                    <and>
+                        <property alias="/params/securing/tail-right-tiedown"/>
+                        <not>
+                            <property>/sim/current-view/internal</property>
+                        </not>
+                    </and>
+                </condition>
+                <command>set-tooltip</command>
+                <tooltip-id>remove-tail-right-tiedown</tooltip-id>
+                <label>Remove tie-down</label>
             </binding>
         </hovered>
     </animation>

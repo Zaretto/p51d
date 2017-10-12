@@ -1203,20 +1203,73 @@ Hal V. Engel hvengel@astound.net
     </flight_control>
 
     <external_reactions>
-    
+
         <force name="exhaust-thrust" frame="BODY">
             <location unit="IN">
-            <x>  36  </x> <!-- center of engine -->
-            <y>    0.0 </y>
-            <z>    0.0 </z>
+                <x>36.0</x> <!-- center of engine -->
+                <y> 0.0</y>
+                <z> 0.0</z>
             </location>
             <direction>
-            <x>    1.0 </x> <!-- straight down the aircraft longitudinal axis -->
-            <y>    0.0 </y>
-            <z>    0.0 </z>
+                <x>1.0</x> <!-- straight down the aircraft longitudinal axis -->
+                <y>0.0</y>
+                <z>0.0</z>
             </direction>
         </force>
-    
+
+        <!-- Tiedowns use body frame (x positive forward, y positive
+             right, z positive down).
+        -->
+        <force name="tiedown-left" frame="BODY">
+            <location unit="M">
+                <x> 2.8000</x>
+                <y>-4.0000</y>
+                <z>-0.4500</z>
+            </location>
+            <direction>
+                <x>0.0</x>
+                <y>0.0</y>
+                <z>1.0</z>
+            </direction>
+        </force>
+        <force name="tiedown-right" frame="BODY">
+            <location unit="M">
+                <x> 2.8000</x>
+                <y> 4.0000</y>
+                <z>-0.4500</z>
+            </location>
+            <direction>
+                <x>0.0</x>
+                <y>0.0</y>
+                <z>1.0</z>
+            </direction>
+        </force>
+
+        <force name="tiedown-tail-left" frame="BODY">
+            <location unit="M">
+                <x> 6.4800</x>
+                <y>-0.2600</y>
+                <z>-0.4220</z>
+            </location>
+            <direction>
+                <x>0.0</x>
+                <y>0.0</y>
+                <z>1.0</z>
+            </direction>
+        </force>
+        <force name="tiedown-tail-right" frame="BODY">
+            <location unit="M">
+                <x> 6.4800</x>
+                <y> 0.2600</y>
+                <z>-0.4220</z>
+            </location>
+            <direction>
+                <x>0.0</x>
+                <y>0.0</y>
+                <z>1.0</z>
+            </direction>
+        </force>
+
     </external_reactions>
 
 
