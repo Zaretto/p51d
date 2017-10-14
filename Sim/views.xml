@@ -18,6 +18,7 @@
 
     <view n="1">
         <config>
+            <z-offset-m archive="y" type="double">-10.0</z-offset-m>
             <target-z-offset-m archive="y" type="double">3.949</target-z-offset-m>
             <default-field-of-view-deg>80</default-field-of-view-deg>
         </config>
