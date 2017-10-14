@@ -1777,6 +1777,20 @@
        </volume>
     </thunder3>
 
+    <engine-repair>
+        <name>engine-repair</name>
+        <type>avionics</type>
+        <mode>once</mode>
+        <path>Sounds/repair.wav</path>
+        <condition>
+            <property>/aircraft/sounds/engine-repair</property>
+        </condition>
+        <volume>
+            <property>/fdm/jsbsim/simulation/soundOK</property>
+            <factor>2.0</factor>
+        </volume>
+    </engine-repair>
+
 </fx>
  
 </PropertyList>

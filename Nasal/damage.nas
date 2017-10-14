@@ -18,3 +18,27 @@ io.include("Aircraft/ExpansionPack/Nasal/init.nas");
 with("damage");
 
 check_version("damage", 1, 0);
+
+# Duration in which no damage will occur. Assumes the aircraft has
+# stabilized within this duration.
+var repair_timeout = 3.0;
+
+var repair_damage = func {
+    setprop("/fdm/jsbsim/damage/repairing", 1);
+    sounds.play("engine-repair", 6.0);
+
+    # Repair all damage
+    # TODO
+
+    # Reset circuit breakers and recharge battery
+    #electrical.reset_battery_and_circuit_breakers();
+
+    repair_timer.restart(repair_timeout);
+};
+
+# This timer object is used to enable damage again a short time after
+# changing to the last bush kit option.
+var repair_timer = maketimer(repair_timeout, func {
+    setprop("/fdm/jsbsim/damage/repairing", 0);
+});
+repair_timer.singleShot = 1;

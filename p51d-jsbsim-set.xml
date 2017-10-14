@@ -184,6 +184,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 
         <!-- Save some properties when the simulator is shut down -->
         <aircraft-data>
+            <path>/fdm/jsbsim/settings/damage</path>
             <path>/aircraft/pilot/always-visible</path>
             <path>/aircraft/securing/pitot-cover-visible</path>
             <path>/aircraft/securing/left-tiedown-visible</path>
@@ -665,6 +666,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <updateloop>
             <file>Aircraft/Generic/updateloop.nas</file>
         </updateloop>
+        <sounds>
+            <file>Nasal/sound.nas</file>
+        </sounds>
     <p51d>
       <file>Aircraft/p51d/Nasal/over-ride-flaps.nas</file>
       <file>Aircraft/p51d/Nasal/stores.nas</file>
@@ -675,7 +679,6 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
       <file>Aircraft/p51d/Nasal/liveries.nas</file>
       <file>Aircraft/p51d/Nasal/tyresmoke.nas</file>
       <file>Aircraft/p51d/Nasal/damage.nas</file>
-      <file>Aircraft/p51d/Nasal/sound.nas</file>
       <file>Aircraft/p51d/Nasal/autopilot.nas</file>
       <file>Aircraft/p51d/Nasal/payloads.nas</file>
       <file>Aircraft/p51d/Nasal/views.nas</file>

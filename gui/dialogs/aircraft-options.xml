@@ -79,16 +79,13 @@
                             <value>1.0</value>
                         </less-than>
                         <property>/gear/on-ground-at-rest</property>
+                        <property>/fdm/jsbsim/settings/damage</property>
                     </and>
                 </enable>
                 <binding>
                     <command>nasal</command>
                     <script>
-                        # Repair damage
-                        # Reset circuit breakers and recharge battery
-                        #p51d.repair_damage();
-                        #electrical.reset_battery_and_circuit_breakers();
-                        #sounds.click("engine-repair", 6.0);
+                        p51d.repair_damage();
                     </script>
                 </binding>
             </button>
