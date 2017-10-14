@@ -112,18 +112,18 @@
   </offsets>
  </model>
 
- <model>
-  <name>GUNSIGHT-CONTROLER</name>
-  <path>Aircraft/Instruments-3d/computing-gun-sights/K14/sight-controler.xml</path>
-  <offsets>
-   <x-m>2.6504</x-m>
-   <y-m>-0.254</y-m>
-   <z-m>0.3395</z-m>
-   <heading-deg>-15.0</heading-deg>
-   <roll-deg>-35.0</roll-deg>
-   <pitch-deg>52.0</pitch-deg>
-  </offsets>
- </model>
+    <model>
+        <name>gunsight-controller</name>
+        <path>K14/sight-controller.xml</path>
+        <offsets>
+            <x-m>2.6504</x-m>
+            <y-m>-0.254</y-m>
+            <z-m>0.3395</z-m>
+            <heading-deg>-15.0</heading-deg>
+            <roll-deg>-35.0</roll-deg>
+            <pitch-deg>52.0</pitch-deg>
+        </offsets>
+    </model>
 
  <model>
   <name>Gyro-gun-sight</name>
