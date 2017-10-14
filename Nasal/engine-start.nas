@@ -112,6 +112,8 @@ var autostart = func (n) {
     setprop("/controls/lighting/wing-position-lights", 1);
     setprop("/controls/lighting/tail-position-lights", 1);
 
+    setprop("/controls/flight/aileron-trim", -0.55);
+
     if (autostart_listener_id != 0) {
         removelistener(autostart_listener_id);
     }
