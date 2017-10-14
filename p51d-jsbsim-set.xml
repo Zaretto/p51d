@@ -170,7 +170,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
     <fdm-initialized type="int">0</fdm-initialized>
   </signals>
 
- <menubar include="Dialogs/menu-bar.xml" />
+ <menubar include="gui/dialogs/menu-bar.xml" />
    <checklists include="Checklists/p51d-checklists.xml"/>
 
          <current-view>
@@ -184,6 +184,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 
         <!-- Save some properties when the simulator is shut down -->
         <aircraft-data>
+            <path>/aircraft/pilot/always-visible</path>
             <path>/aircraft/securing/pitot-cover-visible</path>
             <path>/aircraft/securing/left-tiedown-visible</path>
             <path>/aircraft/securing/right-tiedown-visible</path>
@@ -503,6 +504,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             <tail-left-tiedown-visible type="bool">false</tail-left-tiedown-visible>
             <tail-right-tiedown-visible type="bool">false</tail-right-tiedown-visible>
         </securing>
+
+        <pilot>
+            <always-visible type="bool">false</always-visible>
+        </pilot>
     </aircraft>
 
  <consumables>
@@ -536,7 +541,6 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         </engine>
       </propulsion>        
       <systems>
-        <pilotAlwaysVisible type="int">0</pilotAlwaysVisible>
         <compressibility>
            <hertz type="float">0.0</hertz>
            <strength type="float">0.0</strength>

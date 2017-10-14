@@ -89,14 +89,11 @@
    <object-name>pilot</object-name>
    <condition>
    <or>
-       <greater-than>
+       <not-equals>
          <property>/sim/current-view/view-number</property>
-         <value>0.0</value>
-       </greater-than>
-       <greater-than>
-         <property>/fdm/jsbsim/systems/pilotAlwaysVisible</property>
-         <value>0.0</value>
-       </greater-than>
+         <value>0</value>
+       </not-equals>
+       <property>/aircraft/pilot/always-visible</property>
        <!-- so the pilot is always visible on multiplayer -->
        <not-equals>
          <property>/sim/aircraft</property>

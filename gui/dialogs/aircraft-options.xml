@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <name>aircraft-options</name>
+    <layout>vbox</layout>
+    <resizable>false</resizable>
+    <modal>false</modal>
+    <draggable>true</draggable>
+
+    <group>
+        <layout>hbox</layout>
+
+        <empty><stretch>true</stretch></empty>
+        <text>
+            <label>Aircraft Options</label>
+        </text>
+        <empty><stretch>true</stretch></empty>
+
+        <button>
+            <legend/>
+            <key>Esc</key>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+
+    <hrule/>
+
+    <group>
+        <layout>vbox</layout>
+        <padding>6</padding>
+
+        <group>
+            <layout>vbox</layout>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Show pilot in Cockpit View</label>
+                <property>/aircraft/pilot/always-visible</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+
+        </group>
+
+        <hrule/>
+
+        <group>
+            <layout>hbox</layout>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Damage</label>
+                <property>/fdm/jsbsim/settings/damage</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+
+            <button>
+                <halign>right</halign>
+                <legend>Repair</legend>
+                <pref-width>60</pref-width>
+                <pref-height>28</pref-height>
+                <enable>
+                    <and>
+                        <not>
+                            <property>/sim/freeze/replay-state</property>
+                        </not>
+                        <less-than>
+                            <property>/engines/engine[0]/rpm</property>
+                            <value>1.0</value>
+                        </less-than>
+                        <property>/gear/on-ground-at-rest</property>
+                    </and>
+                </enable>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        # Repair damage
+                        # Reset circuit breakers and recharge battery
+                        #p51d.repair_damage();
+                        #electrical.reset_battery_and_circuit_breakers();
+                        #sounds.click("engine-repair", 6.0);
+                    </script>
+                </binding>
+            </button>
+        </group>
+
+        <hrule/>
+
+        <group>
+            <layout>vbox</layout>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Add cover to pitot tube</label>
+                <property>/aircraft/securing/pitot-cover-visible</property>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <enable>
+                    <property>/gear/on-ground-at-rest</property>
+                </enable>
+            </checkbox>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Add tie-down to left wing</label>
+                <property>/aircraft/securing/left-tiedown-visible</property>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <enable>
+                    <property>/gear/on-ground-at-rest</property>
+                </enable>
+            </checkbox>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Add tie-down to right wing</label>
+                <property>/aircraft/securing/right-tiedown-visible</property>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <enable>
+                    <property>/gear/on-ground-at-rest</property>
+                </enable>
+            </checkbox>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Add tie-down to left part of tail</label>
+                <property>/aircraft/securing/tail-left-tiedown-visible</property>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <enable>
+                    <property>/gear/on-ground-at-rest</property>
+                </enable>
+            </checkbox>
+
+            <checkbox>
+                <halign>left</halign>
+                <label>Add tie-down to right part of tail</label>
+                <property>/aircraft/securing/tail-right-tiedown-visible</property>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+                <enable>
+                    <property>/gear/on-ground-at-rest</property>
+                </enable>
+            </checkbox>
+
+        </group>
+
+    </group>
+
+    <hrule/>
+
+    <group>
+        <layout>hbox</layout>
+        <default-padding>6</default-padding>
+
+        <empty><stretch>true</stretch></empty>
+
+        <button>
+            <legend>Close</legend>
+            <equal>true</equal>
+            <key>Esc</key>
+            <default>true</default>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+
+</PropertyList>

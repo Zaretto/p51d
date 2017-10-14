@@ -21,21 +21,6 @@
        <menu n="1000">
           <label>P-51D</label>
              <item>
-                <label>Show/Hide Pilot In Cockpit View</label>
-                <binding>
-                 <command>property-cycle</command>
-                 <property>/fdm/jsbsim/systems/pilotAlwaysVisible</property>
-                 <value type="int">0</value>
-                 <value type="int">1</value>
-                </binding>
-             </item>
-
-            <item>
-                <label>-----------------------</label>
-                <enabled>false</enabled>
-            </item>
-
-             <item>
                 <name>p51d-stores-none</name>
                 <label>No External Stores</label>
                 <binding>
@@ -100,21 +85,30 @@
                 </binding>
              </item>
 
-             <item>
+            <item>
                 <label>-----------------------</label>
-                 <enabled>false</enabled>
-             </item>
+                <enabled>false</enabled>
+            </item>
 
-             <item>
+            <item>
+                <name>p51d-options</name>
+                <label>Aircraft Options...</label>
+                <binding>
+                    <command>dialog-show</command>
+                    <dialog-name>aircraft-options</dialog-name>
+                </binding>
+            </item>
+
+            <item>
                 <name>p51d-autostart</name>
                 <label>Autostart</label>
-                 <binding>
-                   <command>nasal</command>
-                   <script>p51d.autostart(1)</script>
-                 </binding>
-             </item>
+                <binding>
+                    <command>nasal</command>
+                    <script>p51d.autostart(1)</script>
+                </binding>
+            </item>
         </menu>
 
-     </default>
+    </default>
 
 </PropertyList>
