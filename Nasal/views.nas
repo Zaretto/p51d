@@ -25,7 +25,9 @@ var reset_view = func (dt) {
     var x_offset = getprop("sim/view[0]/config/x-offset-m");
     var y_offset = getprop("sim/view[0]/config/y-offset-m");
 
-    if (heading_deg > 180.0) heading_deg += 360.0;
+    var current_heading_deg = getprop("sim/current-view/heading-offset-deg");
+
+    if (current_heading_deg > 180.0) heading_deg += 360.0;
 
     interpolate("sim/current-view/field-of-view", fow, dt);
     interpolate("sim/current-view/heading-offset-deg", heading_deg, dt);
