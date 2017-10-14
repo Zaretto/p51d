@@ -28,7 +28,9 @@ var repair_damage = func {
     sounds.play("engine-repair", 6.0);
 
     # Repair all damage
-    # TODO
+    foreach (var mode_id; keys(FailureMgr._failmgr.failure_modes)) {
+        FailureMgr.set_failure_level(mode_id, 0);
+    }
 
     # Reset circuit breakers and recharge battery
     #electrical.reset_battery_and_circuit_breakers();
