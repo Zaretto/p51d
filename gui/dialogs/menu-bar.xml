@@ -1,24 +1,10 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-     <default>
 
-      <menu n="1100">
-          <label>Livery</label>
-          <enabled type="bool">true</enabled>
-          <item>
-             <label>Select Livery</label>
-             <binding>
-                 <command>nasal</command>
-                 <script>
-                     print("open livery dialog");
-                     aircraft.livery.dialog.open()
-                 </script>
-              </binding>
-          </item>
-       </menu>
+    <default>
 
-       <menu n="1000">
+        <menu n="1000">
           <label>P-51D</label>
              <item>
                 <name>p51d-stores-none</name>
@@ -88,6 +74,17 @@
             <item>
                 <label>-----------------------</label>
                 <enabled>false</enabled>
+            </item>
+
+            <item>
+                <name>p51d-livery</name>
+                <label>Select Livery...</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        aircraft.livery.dialog.open()
+                    </script>
+                </binding>
             </item>
 
             <item>
