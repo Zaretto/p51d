@@ -103,8 +103,8 @@
  </model>
 
  <model>
-  <name>GUNSIGHT</name>
-  <path>Aircraft/Instruments-3d/computing-gun-sights/K14/K14.xml</path>
+  <name>gunsight</name>
+  <path>K14/gunsight.xml</path>
   <offsets>
    <x-m>2.89042</x-m>
    <y-m>0.00</y-m>
