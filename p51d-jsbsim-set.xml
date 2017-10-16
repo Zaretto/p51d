@@ -226,6 +226,11 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             <n2 alias="/aircraft/tiedowns/tail-right/pitch-deg"/>
             <rpm alias="/aircraft/tiedowns/tail-right/length-m"/>
         </engine>
+
+        <engine n="5">
+            <n1 alias="/aircraft/pilot/heading-deg"/>
+            <n2 alias="/aircraft/pilot/pitch-deg"/>
+        </engine>
     </engines>
 
  <instrumentation>
@@ -508,6 +513,11 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 
         <pilot>
             <always-visible type="bool">false</always-visible>
+
+            <head>
+                <heading-deg type="double">0.0</heading-deg>
+                <pitch-deg type="double">0.0</pitch-deg>
+            </head>
         </pilot>
     </aircraft>
 
@@ -682,6 +692,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
       <file>Aircraft/p51d/Nasal/autopilot.nas</file>
       <file>Aircraft/p51d/Nasal/payloads.nas</file>
       <file>Aircraft/p51d/Nasal/views.nas</file>
+      <file>Aircraft/p51d/Nasal/pilot.nas</file>
       <file>Aircraft/p51d/Nasal/miscellaneous.nas</file>
       <file>Nasal/tiedowns.nas</file>
     </p51d>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2017 onox
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<system name="pilot">
+
+    <channel name="head">
+
+        <!-- Used for external looking-at camera -->
+        <summer name="systems/pilot/heading-deg">
+            <input>/aircraft/pilot/head/heading-deg</input>
+        </summer>
+
+        <summer name="systems/pilot/pitch-deg">
+            <input>/aircraft/pilot/head/pitch-deg</input>
+        </summer>
+
+        <pure_gain name="systems/pilot/rudder-heading-deg">
+            <input>fcs/rudder-cmd-norm-actuator</input>
+            <gain>25.0</gain>
+        </pure_gain>
+
+        <!-- Right halve for internal looking-from camera -->
+        <aerosurface_scale name="systems/pilot/right-heading-deg">
+            <input>/sim/current-view/heading-offset-deg</input>
+            <zero_centered>false</zero_centered>
+            <domain>
+                <min>180.0</min>
+                <max>360.0</max>
+            </domain>
+            <range>
+                <min>-180.0</min>
+                <max>   0.0</max>
+            </range>
+        </aerosurface_scale>
+
+        <!-- Used for internal looking-from camera -->
+        <switch name="systems/pilot/internal-heading-deg">
+            <default value="/sim/current-view/heading-offset-deg"/>
+
+            <test logic="AND" value="systems/pilot/right-heading-deg">
+                /sim/current-view/heading-offset-deg GE 180.0
+            </test>
+        </switch>
+
+        <switch name="systems/pilot/in-air">
+            <default value="0"/>
+
+            <test logic="AND" value="1">
+                <!-- Horizontal constraints -->
+                <test logic="OR" value="1">
+                    <test logic="AND" value="1">
+                        systems/pilot/heading-deg GE  35.0
+                        systems/pilot/heading-deg LT  75.0
+                    </test>
+                    <test logic="AND" value="1">
+                        systems/pilot/heading-deg LE -35.0
+                        systems/pilot/heading-deg GT -75.0
+                    </test>
+
+                    <test logic="AND" value="1">
+                        systems/pilot/heading-deg LT  35.0
+                        systems/pilot/heading-deg GT -35.0
+                        systems/pilot/pitch-deg GT 30.0
+                    </test>
+                </test>
+
+                <!-- Vertical constraints -->
+                <test logic="AND" value="1">
+                    systems/pilot/pitch-deg GT -10.0
+                    systems/pilot/pitch-deg LT  50.0
+                </test>
+
+                <test logic="AND" value="1">
+                    gear/wow EQ 0
+                    position/h-agl-ft GE 500.0
+                </test>
+            </test>
+        </switch>
+
+        <switch name="systems/pilot/heading-cmd-deg">
+            <default value="0"/>
+
+            <!-- External camera -->
+            <test logic="AND" value="systems/pilot/heading-deg">
+                systems/pilot/in-air EQ 1
+                /sim/current-view/internal EQ 0
+            </test>
+
+            <test logic="AND" value="systems/pilot/rudder-heading-deg">
+                gear/wow EQ 1
+                /sim/current-view/internal EQ 0
+            </test>
+
+            <!-- Internal cockpit view -->
+            <test logic="AND" value="systems/pilot/internal-heading-deg">
+                /sim/current-view/internal EQ 1
+            </test>
+        </switch>
+
+        <switch name="systems/pilot/pitch-cmd-deg">
+            <default value="0"/>
+
+            <!-- External camera -->
+            <test logic="AND" value="systems/pilot/pitch-deg">
+                systems/pilot/in-air EQ 1
+                /sim/current-view/internal EQ 0
+            </test>
+
+            <!-- Internal cockpit view -->
+            <test logic="AND" value="systems/pilot/pitch-deg">
+                /sim/current-view/internal EQ 1
+            </test>
+        </switch>
+
+        <actuator name="systems/pilot/heading-pos-deg">
+            <input>systems/pilot/heading-cmd-deg</input>
+            <rate_limit>70.0</rate_limit>
+            <output>/aircraft/pilot/heading-deg</output>
+        </actuator>
+
+        <actuator name="systems/pilot/pitch-pos-deg">
+            <input>systems/pilot/pitch-cmd-deg</input>
+            <rate_limit>70.0</rate_limit>
+            <output>/aircraft/pilot/pitch-deg</output>
+        </actuator>
+
+    </channel>
+
+</system>

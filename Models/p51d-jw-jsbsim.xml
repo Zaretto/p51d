@@ -1662,7 +1662,7 @@
 
  <animation>
   <type>material</type>
-  <object-name>GUNSIGHT</object-name>
+  <object-name>gunsight</object-name>
   <emission>
     <factor-prop>controls/lighting/cabin-norm</factor-prop>
     <red>0.25</red>

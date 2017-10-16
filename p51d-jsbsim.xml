@@ -608,6 +608,7 @@ Hal V. Engel hvengel@astound.net
     <system file="hydraulic"/>
     <system file="MPAnimation"/>
     <system file="effects"/>
+    <system file="pilot"/>
 
     <flight_control name="FCS: P51D">
 

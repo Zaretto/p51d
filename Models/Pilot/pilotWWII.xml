@@ -11,23 +11,9 @@
 				<property type="string">/fdm/jsbsim/fcs/aileron-cmd-norm-actuator</property>
 				<factor type="float">-10</factor>
 				<offset-deg type="float">0</offset-deg>
-				<min type="float">-10</min>
-				<max type="float">10</max>
 			</roll-animation>
-			<pitch-animation>
-				<property type="string">/fdm/jsbsim/fcs/elevator-cmd-norm-actuator</property>
-				<factor type="float">-15</factor>
-				<offset-deg type="float">0</offset-deg>
-				<min type="float">-15</min>
-				<max type="float">15</max>
-			</pitch-animation>
-			<yaw-animation>
-				<property type="string">/fdm/jsbsim/fcs/rudder-cmd-norm-actuator</property>
-				<factor type="float">-25</factor>
-				<offset-deg type="float">0</offset-deg>
-				<min type="float">-25</min>
-				<max type="float">25</max>
-			</yaw-animation>
+			<yaw-animation>/engines/engine[5]/n1</yaw-animation>
+			<pitch-animation>/engines/engine[5]/n2</pitch-animation>
 		</head>
 		<arms>
 			<upper-animation-pitch>
@@ -100,14 +86,12 @@
 		<max-m>10000</max-m>
 	</animation>
     
-	<animation>
+	<!-- <animation>
 		<type>rotate</type>
 		<object-name>Head</object-name>
 		<property alias="../../params/head/roll-animation/property" />
 		<factor alias="../../params/head/roll-animation/factor" />
 		<offset-deg alias="../../params/head/roll-animation/offset-deg" />
-		<min alias="../../params/head/roll-animation/min" />
-		<max alias="../../params/head/roll-animation/max" />
 		<center>
 			<x-m>0.3</x-m>
 			<y-m>0</y-m>
@@ -115,46 +99,34 @@
 		</center>
 		<axis>
 			<x>1</x>
-			<y>0</y>
-			<z>0</z>
 		</axis>
-	</animation> 
+	</animation> -->
+
 	<animation>
 		<type>rotate</type>
 		<object-name>Head</object-name>
-		<property alias="../../params/head/pitch-animation/property" />
-		<factor alias="../../params/head/pitch-animation/factor" />
-		<offset-deg alias="../../params/head/pitch-animation/offset-deg" />
-		<min alias="../../params/head/pitch-animation/min" />
-		<max alias="../../params/head/pitch-animation/max" />
+		<property alias="/params/head/yaw-animation" />
 		<center>
 			<x-m>0.3</x-m>
 			<y-m>0</y-m>
 			<z-m>0.307</z-m>
 		</center>
 		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
+			<z>1</z>
 		</axis>
 	</animation>
-	<animation>
+
+    <animation>
 		<type>rotate</type>
 		<object-name>Head</object-name>
-		<property alias="../../params/head/yaw-animation/property" />
-		<factor alias="../../params/head/yaw-animation/factor" />
-		<offset-deg alias="../../params/head/yaw-animation/offset-deg" />
-		<min alias="../../params/head/yaw-animation/min" />
-		<max alias="../../params/head/yaw-animation/max" />
+		<property alias="/params/head/pitch-animation" />
 		<center>
 			<x-m>0.3</x-m>
 			<y-m>0</y-m>
 			<z-m>0.307</z-m>
 		</center>
 		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
+			<y>1</y>
 		</axis>
 	</animation>
 
