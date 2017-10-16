@@ -81,7 +81,7 @@
    <object-name>spinner2</object-name>
    <property-base>sim/model/livery</property-base>
    <texture-spinner2>texture-spinner</texture-spinner2>
-   <texture>Liveries/DDspinner2.png</texture>
+   <texture>DDspinner2.png</texture>
  </animation>
  
  <effect>

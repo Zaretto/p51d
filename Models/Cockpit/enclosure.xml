@@ -119,7 +119,7 @@
    <object-name>exteriorWindshieldBow</object-name>
    <property-base>sim/model/livery</property-base>
    <texture-prop>texture-enclosure</texture-prop>
-   <texture>../Liveries/DDenclosure.png</texture>
+   <texture>DDenclosure.png</texture>
  </animation>
 
     <effect>

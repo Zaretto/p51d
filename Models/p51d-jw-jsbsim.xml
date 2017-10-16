@@ -1788,7 +1788,7 @@
    <object-name>gunBastTubeFairingLeft</object-name>
    <property-base>sim/model/livery</property-base>
    <texture-prop>texture-wing1</texture-prop>
-   <texture>Liveries/DDwing1.png</texture>
+   <texture>DDwing1.png</texture>
  </animation>
  
  <animation>
@@ -1811,7 +1811,7 @@
    <object-name>dorsal</object-name>
    <property-base>sim/model/livery</property-base>
    <texture-prop>texture-wing2</texture-prop>
-   <texture>Liveries/DDwing2.png</texture>
+   <texture>DDwing2.png</texture>
  </animation>
   
  <animation>
@@ -1829,7 +1829,7 @@
    <object-name>dogHouse</object-name>
    <property-base>sim/model/livery</property-base>
    <texture-prop>texture-fuselage</texture-prop>
-   <texture>Liveries/DDfuselage.png</texture>
+   <texture>DDfuselage.png</texture>
  </animation>
  
  <model>
