@@ -69,7 +69,7 @@
         <desc>Popup Fuel and Payload Settings dialog</desc>
         <binding>
             <command>nasal</command>
-            <script>gui.showWeightDialog()</script>
+            <script>if (getprop("/gear/on-ground-at-rest")) gui.showWeightDialog()</script>
         </binding>
     </key>
 
@@ -92,6 +92,15 @@
 
     <key n="65">
         <name>A</name>
+        <binding>
+            <command>nasal</command>
+            <script/>
+        </binding>
+    </key>
+
+    <!-- Disable generic HUD -->
+    <key n="104">
+        <name>h</name>
         <binding>
             <command>nasal</command>
             <script/>
