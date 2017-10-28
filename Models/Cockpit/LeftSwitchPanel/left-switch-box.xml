@@ -168,6 +168,109 @@
      </animation>
 
     <animation>
+        <type>rotate</type>
+        <object-name>coolant-door-switch</object-name>
+        <property>/aircraft/switches/coolant</property>
+        <factor>25.0</factor>
+        <center>
+            <x-m>0.09128</x-m>
+            <y-m>0.04511</y-m>
+            <z-m>-0.0030</z-m>
+        </center>
+        <axis>
+            <z>1</z>
+        </axis>
+        <condition>
+            <not-equals>
+                <property>/aircraft/switches/coolant</property>
+                <value>2</value>
+            </not-equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>coolant-door-switch</object-name>
+        <object-name>coolant-door-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <property>devices/status/keyboard/shift</property>
+                        <equals>
+                            <property>/aircraft/switches/coolant</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">-1</value>
+            </binding>
+            <binding>
+                <condition>
+                    <and>
+                        <not><property>devices/status/keyboard/shift</property></not>
+                        <equals>
+                            <property>/aircraft/switches/coolant</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/aircraft/switches/coolant</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <equals>
+                            <property>/aircraft/switches/coolant</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">-1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/aircraft/switches/coolant</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>coolant-switch</tooltip-id>
+                <label>Coolant: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['CLOSED', 'OFF (close guard for AUTOMATIC)', 'OPEN', 'AUTOMATIC'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/aircraft/switches/coolant</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
         <type>pick</type>
         <object-name>coolant-switch-guard</object-name>
         <action>
@@ -177,23 +280,144 @@
                 <command>property-toggle</command>
                 <property>/controls/switches/coolant-guard-switch</property>
             </binding>
+            <binding>
+                <condition>
+                    <not>
+                        <property>/controls/switches/coolant-guard-switch</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">2</value>
+            </binding>
+            <binding>
+                <condition>
+                    <property>/controls/switches/coolant-guard-switch</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">0</value>
+            </binding>
         </action>
     </animation>
 
     <animation>
-         <type>rotate</type>
-         <object-name>oil-switch-guard</object-name>
-         <property>/controls/switches/oil-guard-switch</property>
-         <factor>-120.0</factor>
-         <center>
-             <x-m>0.03438</x-m>
-             <y-m>0.04916</y-m>
-             <z-m>-0.02432</z-m>
-         </center>
-         <axis>
-             <x>1</x>
-         </axis>
-     </animation>
+        <type>rotate</type>
+        <object-name>oil-switch-guard</object-name>
+        <property>/controls/switches/oil-guard-switch</property>
+        <factor>-120.0</factor>
+        <center>
+            <x-m>0.03438</x-m>
+            <y-m>0.04916</y-m>
+            <z-m>-0.02432</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>oil-door-switch</object-name>
+        <property>/aircraft/switches/oil</property>
+        <factor>25.0</factor>
+        <center>
+            <x-m>0.03351</x-m>
+            <y-m>0.04361</y-m>
+            <z-m>-0.0031</z-m>
+        </center>
+        <axis>
+            <z>1</z>
+        </axis>
+        <condition>
+            <not-equals>
+                <property>/aircraft/switches/oil</property>
+                <value>2</value>
+            </not-equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>oil-door-switch</object-name>
+        <object-name>oil-door-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <property>devices/status/keyboard/shift</property>
+                        <equals>
+                            <property>/aircraft/switches/oil</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">-1</value>
+            </binding>
+            <binding>
+                <condition>
+                    <and>
+                        <not><property>devices/status/keyboard/shift</property></not>
+                        <equals>
+                            <property>/aircraft/switches/oil</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/aircraft/switches/oil</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <equals>
+                            <property>/aircraft/switches/oil</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">-1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/aircraft/switches/oil</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>oil-switch</tooltip-id>
+                <label>Oil: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['CLOSED', 'OFF (close guard for AUTOMATIC)', 'OPEN', 'AUTOMATIC'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/aircraft/switches/oil</property>
+            </binding>
+        </hovered>
+    </animation>
 
     <animation>
         <type>pick</type>
@@ -204,6 +428,24 @@
             <binding>
                 <command>property-toggle</command>
                 <property>/controls/switches/oil-guard-switch</property>
+            </binding>
+            <binding>
+                <condition>
+                    <not>
+                        <property>/controls/switches/oil-guard-switch</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">2</value>
+            </binding>
+            <binding>
+                <condition>
+                    <property>/controls/switches/oil-guard-switch</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">0</value>
             </binding>
         </action>
     </animation>

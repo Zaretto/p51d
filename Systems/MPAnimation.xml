@@ -144,22 +144,6 @@
         
      </channel>
         
-     <channel name="coolingDoors">
-     
-       <pure_gain name="radiatorDoorVisibleToMP">
-          <input>/fdm/jsbsim/systems/cooling/radiator-door-pos</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/float[3]</output>
-       </pure_gain>
-        
-        <pure_gain name="oilDoorVisibleToMP">
-          <input>/fdm/jsbsim/systems/cooling/oil-door-pos</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/float[4]</output>
-       </pure_gain>
-        
-     </channel>
-     
      <channel name="tailWheelSteering">
      
        <pure_gain name="tailWheelSteeringVisibleToMP">

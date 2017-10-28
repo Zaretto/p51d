@@ -124,12 +124,12 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 		<int n="18" />  <!-- /fdm/jsbsim/systems/armament/bomb-pylons -->
         <int n="19" />  <!-- /fdm/jsbsim/systems/armament/outer-pylons -->
 		<int n="20" />  <!-- /fdm/jsbsim/systems/armament/inner-pylons -->
-		
+
         <float n="0"/> <!-- inner gear door pos -->
         <float n="1"/>
         <float n="2"/>
-        <float n="3" /> <!-- /fdm/jsbsim/systems/cooling/radiator-door-pos -->
-        <float n="4" /> <!-- /fdm/jsbsim/systems/cooling/oil-door-pos -->
+        <float n="3" alias="/aircraft/cooling/coolant-pos-norm" />
+        <float n="4" alias="/aircraft/cooling/oil-pos-norm" />
         <float n="5" /> <!-- /fdm/jsbsim/gear/unit[2]/steering-angle-deg -->
         <float n="6" alias="/controls/lighting/wing-position-lights"/>
         <float n="7" alias="/controls/lighting/tail-position-lights"/>
@@ -463,6 +463,14 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <pitch-hold-max type="double">15.0</pitch-hold-max>
             </settings>
         </afcs>
+
+        <switches>
+            <!-- Coolant and oil radiator controls are set to AUTOMATIC,
+                 because their guard switches are closed after FG has started
+            -->
+            <coolant type="int">2</coolant>
+            <oil type="int">2</oil>
+        </switches>
 
         <tiedowns>
             <left>

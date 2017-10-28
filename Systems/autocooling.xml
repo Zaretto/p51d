@@ -1,80 +1,206 @@
 <?xml version="1.0"?>
 
-<system name="Autocooling">
+<system name="autocooling">
 
-    <!-- INTERFACE PROPERTIES -->
-    <property value="0.0">ap/ap_coolant_hold</property>
-
-    <!-- INITIAL GAIN and control VALUES -->
-
-    <property value="-0.6"> ap/coolant-gain </property>
-    <property value="101"> ap/target_coolant-temp </property>
-
-    <!--
-         propulsion/engines/engine/cooling-factor should be
-         between 0.1 and 4.4
+    <!-- Minimum control temperature is 98 C for the coolant
+         and 68 C for the oil. (page 305 of maintenance manual
+         AN 01-60JE-2)
     -->
 
     <!--
-    =====================================================
-
-    Auto Coolant CHANNEL
-
-    Implements the P-51 coolant control system.
-
-    =====================================================
+         Aftercooling system is given 1/3 of the radiator surface. Engine
+         cooling system is given 2/3 of the surface. (page 228 of maintenance
+         manual AN 01-60JE-2)
     -->
+    <channel name="coolant">
 
+        <!-- ================================================================== -->
+        <!-- Radiator Door Position                                             -->
+        <!-- ================================================================== -->
 
-    <channel name="Auto Coolant Temp">
+        <!--
+             - flap closed: 102.8 C (217 F) - 104.4 C (220 F)
+             - flap open:   132.2 C (270 F) - 133.9 C (273 F)
 
-        <summer name="ap/coolant-temp-error">
-            <input> ap/target_coolant-temp </input>
-            <input> -systems/engine/coolant-temp-degC </input>
+             I think I got these numbers from a maintenance manual
+             of some P-51 (might not be the -D version) that contained
+             also numbers of electrical amperes of equipment.
+        -->
+        <summer name="systems/cooling/coolant-clipped-temp-degC">
+            <input>systems/engine/coolant-temp-degC</input>
             <clipto>
-               <min>-10 </min>
-               <max> 10 </max>
+                <min>102.8</min>
+                <max>132.2</max>
             </clipto>
         </summer>
 
+        <aerosurface_scale name="systems/cooling/coolant-cmd-norm">
+            <input>systems/cooling/coolant-clipped-temp-degC</input>
+            <zero_centered>false</zero_centered>
+            <domain>
+                <min>102.8</min>
+                <max>132.2</max>
+            </domain>
+            <range>
+                <min>0.0</min>
+                <max>1.0</max>
+            </range>
+        </aerosurface_scale>
 
-        <switch name="ap/auto-coolant-switch">
+        <switch name="systems/cooling/coolant-cmd-out">
             <default value="0.0"/>
-            <test value="ap/coolant-temp-error">
-                ap/ap_coolant_hold == 0
+
+            <test logic="AND" value="systems/cooling/coolant-cmd-norm">
+                /aircraft/switches/coolant == 2
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+
+            <test logic="AND" value="1.0">
+                /aircraft/switches/coolant == 1
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+
+            <test logic="AND" value="0.0">
+                /aircraft/switches/coolant == -1
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+
+            <test value="systems/cooling/coolant-pos-norm">
+                /aircraft/switches/coolant == 0
             </test>
         </switch>
 
-        <pure_gain name="ap/cooling-cmd-out">
-            <input> ap/auto-coolant-switch </input>
-            <gain> ap/coolant-gain </gain>
+        <actuator name="systems/cooling/coolant-pos-norm">
+            <input>systems/cooling/coolant-cmd-out</input>
+            <rate_limit>0.05</rate_limit><!-- 20.0 s (page 48 of T.O. No. 1F-51D-1 handbook) -->
+            <output>/aircraft/cooling/coolant-pos-norm</output>
+        </actuator>
+
+        <!-- ================================================================== -->
+        <!-- Engine Cooling                                                     -->
+        <!-- ================================================================== -->
+
+        <!--
+             Original code said: ``propulsion/engines/engine/cooling-factor
+             should be between 0.1 and 4.4''
+        -->
+        <pure_gain name="systems/cooling/ram-pressure-gain">
+            <input>aero/thrust-qbar_psf</input>
+            <gain>0.15</gain>
             <clipto>
-              <min> 0.1 </min>
-              <max> 4.4 </max>
+                <min>0.0</min>
+                <max>6.0</max>
             </clipto>
+        </pure_gain>
+
+        <aerosurface_scale name="systems/cooling/cooling-door-gain">
+            <input>systems/cooling/coolant-pos-norm</input>
+            <zero_centered>false</zero_centered>
+            <domain>
+                <min>0.0</min>
+                <max>1.0</max>
+            </domain>
+            <range>
+                <min>0.1</min>
+                <max>1.0</max>
+            </range>
+        </aerosurface_scale>
+
+        <pure_gain name="systems/cooling/engine-cooling-factor">
+            <input>systems/cooling/ram-pressure-gain</input>
+            <gain>systems/cooling/cooling-door-gain</gain>
             <output>propulsion/engine/cooling-factor</output>
         </pure_gain>
 
-       <pure_gain name="ap/cooling-door-pos">
-            <input>propulsion/engine/cooling-factor</input>
-            <gain>0.227272</gain>
+    </channel>
+
+    <!--
+        Oil:
+            - add (54.4 C (130 F) - actual_temp) / 5 C (10 F) * 0.5 C (1 F)
+            - bypass closes between 32.0/37.7 to 54.5 C
+    -->
+    <channel name="oil">
+
+        <!-- ================================================================== -->
+        <!-- Radiator Door Position                                             -->
+        <!-- ================================================================== -->
+
+        <summer name="systems/cooling/oil-clipped-temp-degC">
+            <input>systems/engine/oil-temp-degC</input>
             <clipto>
-              <min> 0.0 </min>
-              <max> 1.0 </max>
+                <min>72.8</min>
+                <max>102.2</max>
             </clipto>
-            <output>systems/cooling/radiator-door-pos</output>
+        </summer>
+
+        <aerosurface_scale name="systems/cooling/oil-cmd-norm">
+            <input>systems/cooling/oil-clipped-temp-degC</input>
+            <zero_centered>false</zero_centered>
+            <domain>
+                <min>72.8</min>
+                <max>102.2</max>
+            </domain>
+            <range>
+                <min>0.0</min>
+                <max>1.0</max>
+            </range>
+        </aerosurface_scale>
+
+        <switch name="systems/cooling/oil-cmd-out">
+            <default value="0.0"/>
+
+            <test logic="AND" value="systems/cooling/oil-cmd-norm">
+                /aircraft/switches/oil == 2
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+
+            <test logic="AND" value="1.0">
+                /aircraft/switches/oil == 1
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+
+            <test logic="AND" value="0.0">
+                /aircraft/switches/oil == -1
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+
+            <test value="systems/cooling/oil-pos-norm">
+                /aircraft/switches/oil == 0
+            </test>
+        </switch>
+
+        <actuator name="systems/cooling/oil-pos-norm">
+            <input>systems/cooling/oil-cmd-out</input>
+            <rate_limit>0.05</rate_limit><!-- 20.0 s (page 48 of T.O. No. 1F-51D-1 handbook) -->
+            <output>/aircraft/cooling/oil-pos-norm</output>
+        </actuator>
+
+        <!-- ================================================================== -->
+        <!-- Oil Cooling                                                        -->
+        <!-- ================================================================== -->
+
+        <aerosurface_scale name="systems/cooling/oil-door-gain">
+            <input>systems/cooling/oil-pos-norm</input>
+            <zero_centered>false</zero_centered>
+            <domain>
+                <min>0.0</min>
+                <max>1.0</max>
+            </domain>
+            <range>
+                <min>0.1</min>
+                <max>1.0</max>
+            </range>
+        </aerosurface_scale>
+
+        <pure_gain name="systems/cooling/engine-cooling-factor">
+            <input>systems/cooling/ram-pressure-gain</input>
+            <gain>systems/cooling/oil-door-gain</gain>
+            <output>propulsion/engine/oil-cooling-factor</output>
+            <!-- TODO Currently JSBSim does not support a property
+                 that controls the cooling of the oil
+            -->
         </pure_gain>
-        
-        <pure_gain name="ap/oil-door-pos">
-            <input>propulsion/engine/cooling-factor</input>
-            <gain>0.227272</gain>
-            <clipto>
-              <min> 0.0 </min>
-              <max> 1.0 </max>
-            </clipto>
-            <output>systems/cooling/oil-door-pos</output>
-        </pure_gain>
-        
-   </channel>
-   
+
+    </channel>
+
 </system>

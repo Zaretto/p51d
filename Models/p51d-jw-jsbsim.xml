@@ -23,6 +23,10 @@
         <wing-position-lights>sim/multiplay/generic/float[6]</wing-position-lights>
         <tail-position-light>sim/multiplay/generic/float[7]</tail-position-light>
         <landing-light>sim/multiplay/generic/float[11]</landing-light>
+        <doors>
+            <coolant>sim/multiplay/generic/float[3]</coolant>
+            <oil>sim/multiplay/generic/float[4]</oil>
+        </doors>
         <securing>
             <pitot-cover>sim/multiplay/generic/bool[0]</pitot-cover>
             <left-tiedown>sim/multiplay/generic/bool[1]</left-tiedown>
@@ -1200,7 +1204,7 @@
  <animation>
   <type>rotate</type>
   <object-name>coolingDoor</object-name>
-  <property>sim/multiplay/generic/float[3]</property>
+  <property alias="/params/doors/coolant" />
   <factor>-20.0</factor>
   <axis>   
    <x1-m>5.2255</x1-m>
@@ -1215,7 +1219,7 @@
   <animation>
   <type>translate</type>
   <object-name>coolingDoorActuatorRod</object-name>
-  <property>sim/multiplay/generic/float[3]</property>
+  <property alias="/params/doors/coolant" />
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -1243,7 +1247,7 @@
  <animation>
   <type>rotate</type>
   <object-name>oilCoolerDoor</object-name>
-  <property>sim/multiplay/generic/float[4]</property>
+  <property alias="/params/doors/oil" />
   <factor>-18.0</factor>
   <axis>   
    <x1-m>4.3892</x1-m>
