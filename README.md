@@ -60,7 +60,11 @@ New features
 
 * Fix remote compass indicator and turn coordinator
 
-* Added pitot tube cover
+* Fix the spinner making some objects behind it transparent
+
+* Added pitot tube cover and tie-downs
+
+* Implemented coolant and oil radiator controls
 
 Authors
 =======
@@ -75,7 +79,7 @@ The original model with YASim FDM was created around 2003 by Jim Wilson.
 Between 2010 and 2014 Hal Van Engel ([passed away in 2015][url-forum-engel])
 greatly improved the model by improving the JSBSim FDM (in collaboration with
 Jon S. Berndt) and systems, and creating new high quality 3D models of
-the cockpit and the exterior, turning the P51D model into one of the
+the cockpit and the exterior, turning the P-51D model into one of the
 most wonderful and sophisticated models available for FlightGear.
 Viewed from the FlightGear community, this aircraft was his "kid".
 
