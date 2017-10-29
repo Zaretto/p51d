@@ -43,6 +43,19 @@ setlistener("/aircraft/afcs/active/takeoff", func (node) {
         logger.screen.red("Automatic takeoff cancelled");
 }, 0, 0);
 
+setlistener("/aircraft/brakes/parking-cmd", func (node) {
+    # Unset internal command if set
+    if (node.getBoolValue())
+        node.setBoolValue(0);
+}, 0, 0);
+
+setlistener("/aircraft/brakes/parking-set", func (node) {
+    if (node.getBoolValue())
+        logger.screen.green("Parking brakes enabled (tap brakes to release)");
+    else
+        logger.screen.red("Parking brakes released");
+}, 0, 0);
+
 # The P-51D has no autopilot or GPS, so disable the menu
 gui.menuEnable("autopilot", 0);
 gui.menuEnable("gps", 0);

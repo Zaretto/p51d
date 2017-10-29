@@ -594,6 +594,7 @@ Hal V. Engel hvengel@astound.net
 
     </propulsion>
 
+    <system file="parking-brake"/>
     <system file="indicated-airspeed"/>
     <system file="propulsion"/>
     <system file="autothrottle"/>
@@ -1118,7 +1119,7 @@ Hal V. Engel hvengel@astound.net
 
            <summer name="systems/brakes/brake-left">
                 <input>/controls/gear/brake-left</input>
-                <input>/controls/gear/brake-parking</input>
+                <input>systems/brakes/brake-parking-cmd-out</input>
                 <clipto>
                     <min>0</min>
                     <max>1</max>
@@ -1127,7 +1128,7 @@ Hal V. Engel hvengel@astound.net
 
             <summer name="systems/brakes/brake-right">
                 <input>/controls/gear/brake-right</input>
-                <input>/controls/gear/brake-parking</input>
+                <input>systems/brakes/brake-parking-cmd-out</input>
                 <clipto>
                     <min>0</min>
                     <max>1</max>
@@ -1169,7 +1170,7 @@ Hal V. Engel hvengel@astound.net
                <function>
                    <product>
                       <property>systems/brakes/brake-left</property>
-                      <property>systems/brakes//brake-scaling</property>
+                      <property>systems/brakes/brake-scaling</property>
                    </product>
                </function>
                <output>fcs/left-brake-cmd-norm</output>
@@ -1179,7 +1180,7 @@ Hal V. Engel hvengel@astound.net
                <function>
                    <product>
                       <property>systems/brakes/brake-right</property>
-                      <property>systems/brakes//brake-scaling</property>
+                      <property>systems/brakes/brake-scaling</property>
                    </product>
                </function>
                <output>fcs/right-brake-cmd-norm</output>

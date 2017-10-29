@@ -216,6 +216,11 @@
             </enter>
             <enter>
                 <command>property-assign</command>
+                <property>/aircraft/brakes/release-parking</property>
+                <value type="bool">true</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
                 <property>/aircraft/afcs/locks/tail</property>
                 <value type="bool">true</value>
             </enter>
@@ -239,6 +244,12 @@
                 <property>/aircraft/afcs/locks/speed</property>
                 <value type="bool">true</value>
             </enter>
+
+            <exit>
+                <command>property-assign</command>
+                <property>/aircraft/brakes/release-parking</property>
+                <value type="bool">false</value>
+            </exit>
         </state>
 
         <state>

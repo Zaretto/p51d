@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2017 onox
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<system name="parking-brake">
+
+    <property value="0">systems/brakes/parking-state</property>
+
+    <channel name="brake">
+
+        <actuator name="systems/brakes/brake-lever">
+            <input>/controls/gear/brake-parking</input>
+            <rate_limit>4.0</rate_limit>
+            <output>systems/brakes/brake-parking-cmd-norm</output>
+        </actuator>
+
+        <switch name="systems/brakes/parking-state">
+            <default value="systems/brakes/parking-state"/>
+
+            <test logic="AND" value="1">
+                systems/brakes/parking-state EQ 0
+                systems/brakes/brake-parking-cmd-norm EQ 1.0
+                /controls/gear/brake-left EQ 1.0
+                /controls/gear/brake-right EQ 1.0
+            </test>
+
+            <test logic="AND" value="2">
+                systems/brakes/parking-state EQ 1
+                systems/brakes/brake-parking-cmd-norm EQ 1.0
+                /controls/gear/brake-left LE 0.5
+                /controls/gear/brake-right LE 0.5
+            </test>
+
+            <test logic="AND" value="0">
+                systems/brakes/parking-state EQ 1
+                systems/brakes/brake-parking-cmd-norm LT 1.0
+            </test>
+
+            <test logic="AND" value="0">
+                systems/brakes/parking-state EQ 2
+                /controls/gear/brake-left GE 0.5
+                /controls/gear/brake-right GE 0.5
+            </test>
+
+            <test logic="AND" value="0">
+                /aircraft/brakes/release-parking EQ 1
+            </test>
+        </switch>
+
+        <switch name="systems/brakes/brake-parking-cmd-out">
+            <value>0</value>
+
+            <test logic="AND" value="1">
+                systems/brakes/parking-state EQ 2
+            </test>
+
+            <output>/aircraft/brakes/parking-set</output>
+        </switch>
+
+    </channel>
+
+</system>

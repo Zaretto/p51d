@@ -464,6 +464,11 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             </settings>
         </afcs>
 
+        <brakes>
+            <release-parking type="bool">false</release-parking>
+            <parking-set type="bool">false</parking-set>
+        </brakes>
+
         <switches>
             <!-- Coolant and oil radiator controls are set to AUTOMATIC,
                  because their guard switches are closed after FG has started
