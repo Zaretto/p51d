@@ -198,6 +198,7 @@
  </model>
  
  <model>
+    <usage>interior</usage>
     <path>Aircraft/p51d/Models/Cockpit/CockpitDevices.xml</path>
  </model>
 
