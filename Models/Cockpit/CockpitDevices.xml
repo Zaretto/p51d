@@ -190,7 +190,7 @@
 
  <model>
   <name>OX REGULATOR</name>
-  <path>Aircraft/Instruments-3d/A-14A-OxReg/A-14A.xml</path>
+  <path>Aircraft/p51d/Models/Cockpit/A-14A-OxReg/A-14A.xml</path>
   <offsets>
    <x-m>2.3</x-m>
    <y-m>0.305</y-m>
