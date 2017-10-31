@@ -18,7 +18,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   <minimum-fg-version>2017.3.1</minimum-fg-version>
 
   <description>North American Aviation P-51D-25-NA</description>
-  <author>Jim Wilson, Jon Berndt and Hal V. Engel</author>
+  <author>Jim Wilson, Jon Berndt, Hal V. Engel, and onox</author>
   <status>production</status>
   <rating>
      <FDM type="int">5</FDM>
@@ -35,11 +35,33 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   <aero>p51d-jsbsim</aero>
   <fuel-fraction>0.50</fuel-fraction>
   
-  <startup>
-     <splash-texture>Aircraft/p51d/Splashs/splash1.png</splash-texture>
-     <splash-texture>Aircraft/p51d/Splashs/splash2.png</splash-texture>
-     <splash-texture>Aircraft/p51d/Splashs/splash3.png</splash-texture>
-  </startup>
+        <previews>
+            <preview>
+                <type>exterior</type>
+                <path>Splashs/splash1.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splashs/splash2.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splashs/splash3.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splashs/splash4.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splashs/splash5.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+        </previews>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
