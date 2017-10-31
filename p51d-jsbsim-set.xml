@@ -84,7 +84,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   </panel>
 
   <model>
-   <path>Aircraft/p51d/Models/p51d-jw-jsbsim.xml</path>
+   <path>Aircraft/p51d/Models/P-51D-25-NA.xml</path>
    <livery>
      <file type="string">DD</file>
    </livery>
