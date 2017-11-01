@@ -1,20 +1,23 @@
 <?xml version="1.0"?>
 
-<!-- 5inch HVAR rocket --> 
-
+<!-- 5inch HVAR rocket -->
 <PropertyList>
 
- <path>HVAR.ac</path>
+    <path>HVAR.ac</path>
 
-  <!-- Smoke -->
-  <model>
-    <path>Aircraft/p51d/Stores/HVAR/smoke.xml</path>
-    <offsets>
-      <x-m>  2.0 </x-m>
-      <y-m>  0.0 </y-m>
-      <z-m>  0 </z-m>
-    </offsets>
-  </model>
+    <!-- Smoke -->
+    <model>
+        <path>Aircraft/p51d/Stores/HVAR/smoke.xml</path>
+        <offsets>
+            <x-m>  2.0 </x-m>
+            <y-m>  0.0 </y-m>
+            <z-m>  0 </z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>flame.xml</path>
+    </model>
 
     <animation>
         <type>select</type>
