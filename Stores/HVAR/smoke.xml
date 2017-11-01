@@ -50,8 +50,8 @@
 
     <counter>
       <particles-per-sec>
-        <value>100</value>
-        <spread>1</spread>
+        <value>500</value>
+        <spread>10</spread>
       </particles-per-sec>
     </counter>
 
@@ -91,7 +91,7 @@
     <program>
       <fluid>air</fluid>         <!-- air / water -->
       <gravity>false</gravity>
-      <wind>true</wind>
+      <wind>false</wind>
     </program>
      
   </particlesystem>
