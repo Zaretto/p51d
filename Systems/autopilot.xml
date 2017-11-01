@@ -206,6 +206,11 @@
             </enter>
             <enter>
                 <command>property-assign</command>
+                <property>/controls/flight/rudder-trim</property>
+                <value type="double">0.6</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
                 <property>/controls/engines/engine/propeller-pitch</property>
                 <value type="double">1.0</value>
             </enter>
@@ -299,6 +304,11 @@
                 <command>property-assign</command>
                 <property>/aircraft/afcs/locks/pitch</property>
                 <value type="bool">true</value>
+            </enter>
+            <enter>
+                <command>property-assign</command>
+                <property>/controls/flight/rudder-trim</property>
+                <value type="double">0.0</value>
             </enter>
         </state>
 
