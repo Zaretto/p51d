@@ -27,6 +27,11 @@
             <coolant>sim/multiplay/generic/float[3]</coolant>
             <oil>sim/multiplay/generic/float[4]</oil>
         </doors>
+        <gear>
+            <rollspeed-left>sim/multiplay/generic/float[12]</rollspeed-left>
+            <rollspeed-right>sim/multiplay/generic/float[13]</rollspeed-right>
+            <rollspeed-tail>sim/multiplay/generic/float[14]</rollspeed-tail>
+        </gear>
         <securing>
             <pitot-cover>sim/multiplay/generic/bool[0]</pitot-cover>
             <left-tiedown>sim/multiplay/generic/bool[1]</left-tiedown>
@@ -1586,7 +1591,7 @@
   <animation>
   <type>spin</type>
   <object-name>mainWheelLeft</object-name>
-  <property>/gear/gear[0]/rollspeed-ms</property>
+  <property alias="/params/gear/rollspeed-left"/>
   <factor>-27.12868348</factor>
   <center>
    <x-m>1.91262</x-m>
@@ -1603,7 +1608,7 @@
  <animation>
   <type>spin</type>
   <object-name>mainWheelRight</object-name>
-  <property>/gear/gear[1]/rollspeed-ms</property>
+  <property alias="/params/gear/rollspeed-right"/>
   <factor>-27.12868348</factor>
   <center>
    <x-m>1.91262</x-m>
@@ -1616,6 +1621,27 @@
    <z>0.0</z>
   </axis>
  </animation>
+
+    <!--
+         Radius of tail wheel is 0.248 / 2 = 0.124
+         Circumference is 2*pi*radius = 0.779114978
+         RPM = rollspeed-ms / 0.779114978 * 60.0
+    -->
+
+    <animation>
+        <type>spin</type>
+        <object-name>tailWheel</object-name>
+        <property alias="/params/gear/rollspeed-tail"/>
+        <factor>-77.01045633</factor>
+        <center>
+            <x-m> 6.86282</x-m>
+            <y-m>-0.00356</y-m>
+            <z-m>-0.79865</z-m>
+        </center>
+        <axis>
+            <y>1.0</y>
+        </axis>
+    </animation>
 
  <animation>
   <type>material</type>

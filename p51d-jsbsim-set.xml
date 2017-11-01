@@ -160,6 +160,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <float n="10" /> <!-- /controls/lighting/amber-rec-light -->
         <float n="11" alias="/aircraft/lighting/landing-light"/>
 
+        <float n="12" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="13" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="14" alias="/gear/gear[2]/rollspeed-ms"/>
+
         <string n="0" type="string"/>
 
         <bool n="0" alias="/aircraft/securing/pitot-cover-visible"/>
