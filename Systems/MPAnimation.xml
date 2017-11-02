@@ -1,218 +1,72 @@
 <?xml version="1.0"?>
 
 <system name="MPAnimation">
-    
+
     <channel name="doors">
-    
-       <pure_gain name="innerGearDoorPosToMP">
-          <input>/fdm/jsbsim/systems/gear/inner-doors</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/float[0]</output>
-       </pure_gain>
+
+        <pure_gain name="innerGearDoorPosToMP">
+            <input>/fdm/jsbsim/systems/gear/inner-doors</input>
+            <gain>1.0</gain>
+            <output>/sim/multiplay/generic/float[0]</output>
+        </pure_gain>
 
     </channel>
 
-    <channel name="pilot">
-    
-       <pure_gain name="pilotVisibleToMP">
-          <input>/engines/engine[0]/cranking</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[3]</output>
-       </pure_gain>
+    <channel name="bombRacks">
+
+        <pure_gain name="bombRacksVisibleToMP">
+            <input>/fdm/jsbsim/systems/armament/bomb-pylons</input>
+            <gain>1.0</gain>
+            <output>/sim/multiplay/generic/int[18]</output>
+        </pure_gain>
 
     </channel>
-    
-    <channel name="rockets">
-    
-       <pure_gain name="rocket1VisibleToMP">
-          <input>/ai/submodels/submodel[12]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[4]</output>
-       </pure_gain>
-        
-        <pure_gain name="rocket2VisibleToMP">
-          <input>/ai/submodels/submodel[13]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[5]</output>
-       </pure_gain>
-        
-        <pure_gain name="rocket3VisibleToMP">
-          <input>/ai/submodels/submodel[14]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[6]</output>
-       </pure_gain>
-        
-        <pure_gain name="rocket4VisibleToMP">
-          <input>/ai/submodels/submodel[15]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[7]</output>
-       </pure_gain>
-        
-        <pure_gain name="rocket5VisibleToMP">
-          <input>/ai/submodels/submodel[16]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[8]</output>
-       </pure_gain>
-        
-        <pure_gain name="rocket6VisibleToMP">
-          <input>/ai/submodels/submodel[17]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[9]</output>
-       </pure_gain>
-        
-        <pure_gain name="rocket7VisibleToMP">
-          <input>/ai/submodels/submodel[18]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[10]</output>
-       </pure_gain>
-        
-        <pure_gain name="rocket8VisibleToMP">
-          <input>/ai/submodels/submodel[19]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[11]</output>
-       </pure_gain>
-        
-        <pure_gain name="rocket9VisibleToMP">
-          <input>/ai/submodels/submodel[20]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[12]</output>
-       </pure_gain>
-        
-        <pure_gain name="rockets10VisibleToMP">
-          <input>/ai/submodels/submodel[21]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[13]</output>
-       </pure_gain>
 
-    </channel>
-    
-    <channel name="bombs">
-    
-       <pure_gain name="bomb1VisibleToMP">
-          <input>/ai/submodels/submodel[22]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[14]</output>
-       </pure_gain>
-        
-        <pure_gain name="bomb2VisibleToMP">
-          <input>/ai/submodels/submodel[23]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[15]</output>
-       </pure_gain>
-        
-     </channel>
-     
-     <channel name="tanks">
-       
-       <pure_gain name="tank1VisibleToMP">
-          <input>/ai/submodels/submodel[24]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[16]</output>
-       </pure_gain>
-        
-        <pure_gain name="tank2VisibleToMP">
-          <input>/ai/submodels/submodel[25]/count</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[17]</output>
-       </pure_gain>
-        
-     </channel>
-     
-     <channel name="bombRacks">
-     
-       <pure_gain name="bombRacksVisibleToMP">
-          <input>/fdm/jsbsim/systems/armament/bomb-pylons</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[18]</output>
-       </pure_gain>
-        
-     </channel>
-     
-     <channel name="rocketRacks">
-     
-       <pure_gain name="outerRocketRacksVisibleToMP">
-          <input>/fdm/jsbsim/systems/armament/outer-pylons</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[19]</output>
-       </pure_gain>
-        
+    <channel name="rocketRacks">
+
+        <pure_gain name="outerRocketRacksVisibleToMP">
+            <input>/fdm/jsbsim/systems/armament/outer-pylons</input>
+            <gain>1.0</gain>
+            <output>/sim/multiplay/generic/int[19]</output>
+        </pure_gain>
+
         <pure_gain name="innerRocketRacksVisibleToMP">
-          <input>/fdm/jsbsim/systems/armament/inner-pylons</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[20]</output>
-       </pure_gain>
-        
-     </channel>
-        
-     <channel name="tailWheelSteering">
-     
-       <pure_gain name="tailWheelSteeringVisibleToMP">
-          <input>/fdm/jsbsim/gear/unit[2]/steering-angle-deg</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/float[5]</output>
-       </pure_gain>
-        
-     </channel>
-     
-     <channel name="postionLights">
-     
-        <pure_gain name="redSingalLightVisibleToMP">
-          <input>/controls/lighting/red-rec-light</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/float[8]</output>
-       </pure_gain>
-        
-        <pure_gain name="greenSingalLightVisibleToMP">
-          <input>/controls/lighting/green-rec-light</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/float[9]</output>
-       </pure_gain>
-        
-        <pure_gain name="amberSingalLightVisibleToMP">
-          <input>/controls/lighting/amber-rec-light</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/float[10]</output>
-       </pure_gain>
-        
-     </channel>    
-   
-    <channel name="triggers">
-    
-      <!-- FIXME trigger stuff needs more for for MP and bombable-->
-      <pure_gain name="triggerToMP">
-          <input>/controls/armament/gun-trigger</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[1]</output>
-       </pure_gain>
-        
-     <pure_gain name="trigger2ToMP">
-          <input>/controls/armament/bombs-both</input>
-          <gain>1.0</gain>
-          <output>/sim/multiplay/generic/int[2]</output>
-       </pure_gain>
+            <input>/fdm/jsbsim/systems/armament/inner-pylons</input>
+            <gain>1.0</gain>
+            <output>/sim/multiplay/generic/int[20]</output>
+        </pure_gain>
 
     </channel>
-    
-    <channel name="sound">
-    
-      <!-- to prevent sounds at system start -->
-      
-      <switch name="start up sound off">
-       <default value="0"/>
-       <test logic = "AND" value="1">
-          /fdm/jsbsim/simulation/sim-time-sec gt 1
-       </test>
-       <output>/fdm/jsbsim/simulation/soundOK</output>
-     </switch>
-     
-     <switch name="flaps start up sound off">
-       <default value="0"/>
-       <test logic = "AND" value="1">
-          /fdm/jsbsim/simulation/sim-time-sec gt 15
-       </test>
-       <output>/fdm/jsbsim/simulation/flapsSoundOK</output>
-     </switch>
-    
+
+    <channel name="tailWheelSteering">
+
+        <pure_gain name="tailWheelSteeringVisibleToMP">
+            <input>/fdm/jsbsim/gear/unit[2]/steering-angle-deg</input>
+            <gain>1.0</gain>
+            <output>/sim/multiplay/generic/float[5]</output>
+        </pure_gain>
+
     </channel>
-    
+
+    <channel name="sound">
+
+        <!-- To prevent sounds at system start -->
+        <switch name="start up sound off">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /fdm/jsbsim/simulation/sim-time-sec gt 1
+            </test>
+            <output>/fdm/jsbsim/simulation/soundOK</output>
+        </switch>
+
+        <switch name="flaps start up sound off">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /fdm/jsbsim/simulation/sim-time-sec gt 15
+            </test>
+            <output>/fdm/jsbsim/simulation/flapsSoundOK</output>
+        </switch>
+
+    </channel>
+
 </system>
