@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!-- Coolant radiator in AUTOMATIC position -->
+<PropertyList>
+    <condition>
+        <equals>
+            <property>/aircraft/switches/coolant</property>
+            <value>2</value>
+        </equals>
+    </condition>
+    <marker>
+        <x-m>3.07</x-m>
+        <y-m>-0.326</y-m>
+        <z-m>0.118</z-m>
+        <scale>2</scale>
+    </marker>
+</PropertyList>

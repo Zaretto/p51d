@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
+
 <!-- Magneto both check -->
 <PropertyList>
-	 <condition>
-		<equals>
-			<property>/controls/engines/engine/magnetos</property>
-			<value>3</value>
-		</equals>
-	</condition>
-	<marker>
-		<x-m>2.6</x-m>
-		<y-m>-0.0941</y-m>
-		<z-m>0.0</z-m>
-		<scale>3</scale>
-	</marker>
+    <condition>
+        <equals>
+            <property>/controls/engines/engine/magnetos</property>
+            <value>3</value>
+        </equals>
+    </condition>
+    <marker>
+        <x-m>2.6</x-m>
+        <y-m>-0.0941</y-m>
+        <z-m>0.0</z-m>
+        <scale>3</scale>
+    </marker>
 </PropertyList>

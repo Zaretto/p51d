@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<!-- Parking brakes -->
+<PropertyList>
+    <condition>
+        <not>
+            <property>/aircraft/brakes/parking-set</property>
+        </not>
+    </condition>
+</PropertyList>

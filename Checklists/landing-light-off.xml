@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- Landing light -->
+<PropertyList>
+    <condition>
+        <not>
+            <property>/controls/lighting/landing-lights</property>
+        </not>
+    </condition>
+    <marker>
+        <x-m>2.96</x-m>
+        <y-m>-0.326</y-m>
+        <z-m>0.118</z-m>
+        <scale>2</scale>
+    </marker>
+</PropertyList>

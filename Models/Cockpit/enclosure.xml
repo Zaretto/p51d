@@ -9,14 +9,6 @@
         <max-m>10000</max-m>
     </animation>
 
-    <params>
-        <canopy>
-            <open>
-                <property>sim/multiplay/generic/float[3]</property>
-            </open>
-        </canopy>
-    </params>
-
  <animation>
   <type>translate</type>  
   <object-name>canopy</object-name>

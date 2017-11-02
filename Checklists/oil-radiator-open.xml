@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!-- Oil radiator in fully open position -->
+<PropertyList>
+    <condition>
+        <and>
+            <equals>
+                <property>/aircraft/switches/oil</property>
+                <value>0</value>
+            </equals>
+            <equals>
+                <property>/aircraft/cooling/oil-pos-norm</property>
+                <value type="double">1.0</value>
+            </equals>
+        </and>
+    </condition>
+    <marker>
+        <x-m>3.02</x-m>
+        <y-m>-0.326</y-m>
+        <z-m>0.118</z-m>
+        <scale>2</scale>
+    </marker>
+</PropertyList>

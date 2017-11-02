@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<!-- Canopy closed -->
+<PropertyList>
+    <condition>
+        <equals>
+            <property>/canopy/position-norm</property>
+            <value>0.0</value>
+        </equals>
+    </condition>
+</PropertyList>
