@@ -112,81 +112,83 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 
   <help include="Sim/help.xml"/>
   
+        <!-- multi-play bombable -->
+        <multiplay>
+            <generic>
+            <!--
+            needed triggers for bombable
+            controls/armament/rocket[1]/trigger through controls/armament/rocket[10]/trigger
+            controls/armament/bomb-trigger-1 and controls/armament/bomb-trigger-2
+            controls/armament/drop-tank-release-1 and controls/armament/drop-tank-release-2
+            /fdm/jsbsim/systems/armament/gun-SmokeAnimated/Inner
+            /fdm/jsbsim/systems/armament/gun-SmokeAnimatedOuter
+            /fdm/jsbsim/systems/armament/ejectionAnimatedOuter
+            /fdm/jsbsim/systems/armament/ejectionAnimatedInner
+            -->
+                <!-- int[0..17] unused -->
 
-  <!-- multi-play bombable -->
-  <multiplay>
-    <generic>
-      <!--
-      needed triggers for bombable
-      controls/armament/rocket[1]/trigger through controls/armament/rocket[10]/trigger
-      controls/armament/bomb-trigger-1 and controls/armament/bomb-trigger-2
-      controls/armament/drop-tank-release-1 and controls/armament/drop-tank-release-2
-      /fdm/jsbsim/systems/armament/gun-SmokeAnimated/Inner 
-      /fdm/jsbsim/systems/armament/gun-SmokeAnimatedOuter
-      /fdm/jsbsim/systems/armament/ejectionAnimatedOuter
-      /fdm/jsbsim/systems/armament/ejectionAnimatedInner
-      -->
-        <int n="0" alias="/engines/engine[0]/cranking"/>
-        <int n="1" alias="/controls/armament/gun-trigger"/>
-        <int n="2" alias="/controls/armament/bombs-both"/>
+                <int n="18" />  <!-- /fdm/jsbsim/systems/armament/bomb-pylons -->
+                <int n="19" />  <!-- /fdm/jsbsim/systems/armament/outer-pylons -->
+                <int n="20" />  <!-- /fdm/jsbsim/systems/armament/inner-pylons -->
 
-        <!-- Rockets -->
-        <int n="4" alias="/ai/submodels/submodel[12]/count"/>
-		<int n="5" alias="/ai/submodels/submodel[13]/count"/>
-		<int n="6" alias="/ai/submodels/submodel[14]/count"/>
-		<int n="7" alias="/ai/submodels/submodel[15]/count"/>
-		<int n="8" alias="/ai/submodels/submodel[16]/count"/>
-		<int n="9" alias="/ai/submodels/submodel[17]/count"/>
-		<int n="10" alias="/ai/submodels/submodel[18]/count"/>
-		<int n="11" alias="/ai/submodels/submodel[19]/count"/>
-		<int n="12" alias="/ai/submodels/submodel[20]/count"/>
-		<int n="13" alias="/ai/submodels/submodel[21]/count"/>
+                <float n="0"/> <!-- inner gear door pos -->
+                <float n="1"/>
+                <float n="2"/>
+                <float n="3" alias="/aircraft/cooling/coolant-pos-norm" />
+                <float n="4" alias="/aircraft/cooling/oil-pos-norm" />
+                <float n="5" /> <!-- /fdm/jsbsim/gear/unit[2]/steering-angle-deg -->
 
-        <!-- Bombs -->
-        <int n="14" alias="/ai/submodels/submodel[22]/count"/>
-		<int n="15" alias="/ai/submodels/submodel[23]/count"/>
+                <!-- Position lights -->
+                <float n="6" alias="/controls/lighting/wing-position-lights"/>
+                <float n="7" alias="/controls/lighting/tail-position-lights"/>
 
-        <!-- External tanks -->
-		<int n="16" alias="/ai/submodels/submodel[24]/count"/>
-		<int n="17" alias="/ai/submodels/submodel[25]/count"/>
+                <!-- float[8..11] unused -->
 
-		<int n="18" />  <!-- /fdm/jsbsim/systems/armament/bomb-pylons -->
-        <int n="19" />  <!-- /fdm/jsbsim/systems/armament/outer-pylons -->
-		<int n="20" />  <!-- /fdm/jsbsim/systems/armament/inner-pylons -->
+                <float n="12" alias="/gear/gear[0]/rollspeed-ms"/>
+                <float n="13" alias="/gear/gear[1]/rollspeed-ms"/>
+                <float n="14" alias="/gear/gear[2]/rollspeed-ms"/>
 
-        <float n="0"/> <!-- inner gear door pos -->
-        <float n="1"/>
-        <float n="2"/>
-        <float n="3" alias="/aircraft/cooling/coolant-pos-norm" />
-        <float n="4" alias="/aircraft/cooling/oil-pos-norm" />
-        <float n="5" /> <!-- /fdm/jsbsim/gear/unit[2]/steering-angle-deg -->
+                <string n="0" type="string"/>
 
-        <!-- Position lights -->
-        <float n="6" alias="/controls/lighting/wing-position-lights"/>
-        <float n="7" alias="/controls/lighting/tail-position-lights"/>
+                <!-- Securing -->
+                <bool n="0" alias="/aircraft/securing/pitot-cover-visible"/>
+                <bool n="1" alias="/aircraft/securing/left-tiedown-visible"/>
+                <bool n="2" alias="/aircraft/securing/right-tiedown-visible"/>
+                <bool n="3" alias="/aircraft/securing/tail-left-tiedown-visible"/>
+                <bool n="4" alias="/aircraft/securing/tail-right-tiedown-visible"/>
 
-        <!-- Recognition lights -->
-        <float n="8" alias="/controls/lighting/red-rec-light"/>
-        <float n="9" alias="/controls/lighting/green-rec-light"/>
-        <float n="10" alias="/controls/lighting/amber-rec-light"/>
+                <!-- Landing light -->
+                <bool n="5" alias="/aircraft/lighting/landing-light"/>
 
-        <!-- Landing light -->
-        <float n="11" alias="/aircraft/lighting/landing-light"/>
+                <!-- Recognition lights on right wing -->
+                <bool n="6" alias="/controls/lighting/red-rec-light"/>
+                <bool n="7" alias="/controls/lighting/green-rec-light"/>
+                <bool n="8" alias="/controls/lighting/amber-rec-light"/>
 
-        <float n="12" alias="/gear/gear[0]/rollspeed-ms"/>
-        <float n="13" alias="/gear/gear[1]/rollspeed-ms"/>
-        <float n="14" alias="/gear/gear[2]/rollspeed-ms"/>
+                <bool n="9" alias="/engines/engine[0]/cranking"/>
+                <bool n="10" alias="/controls/armament/gun-trigger"/>
 
-        <string n="0" type="string"/>
+                <!-- Rockets -->
+                <bool n="11" alias="/ai/submodels/submodel[12]/count"/>
+                <bool n="12" alias="/ai/submodels/submodel[13]/count"/>
+                <bool n="13" alias="/ai/submodels/submodel[14]/count"/>
+                <bool n="14" alias="/ai/submodels/submodel[15]/count"/>
+                <bool n="15" alias="/ai/submodels/submodel[16]/count"/>
+                <bool n="16" alias="/ai/submodels/submodel[17]/count"/>
+                <bool n="17" alias="/ai/submodels/submodel[18]/count"/>
+                <bool n="18" alias="/ai/submodels/submodel[19]/count"/>
+                <bool n="19" alias="/ai/submodels/submodel[20]/count"/>
+                <bool n="20" alias="/ai/submodels/submodel[21]/count"/>
 
-        <!-- Securing -->
-        <bool n="0" alias="/aircraft/securing/pitot-cover-visible"/>
-        <bool n="1" alias="/aircraft/securing/left-tiedown-visible"/>
-        <bool n="2" alias="/aircraft/securing/right-tiedown-visible"/>
-        <bool n="3" alias="/aircraft/securing/tail-left-tiedown-visible"/>
-        <bool n="4" alias="/aircraft/securing/tail-right-tiedown-visible"/>
-    </generic>
-  </multiplay>
+                <!-- Bombs -->
+                <bool n="21" alias="/ai/submodels/submodel[22]/count"/>
+                <bool n="22" alias="/ai/submodels/submodel[23]/count"/>
+
+                <!-- External tanks -->
+                <bool n="23" alias="/ai/submodels/submodel[24]/count"/>
+                <bool n="24" alias="/ai/submodels/submodel[25]/count"/>
+            </generic>
+        </multiplay>
 
   <!-- increase pilot g tolarance -->
   <!-- this plane has g-suit support so the pilot

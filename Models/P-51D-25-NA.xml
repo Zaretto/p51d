@@ -20,9 +20,6 @@
 <PropertyList include="p51d-bombableinclude.xml">
 
     <params>
-        <wing-position-lights>sim/multiplay/generic/float[6]</wing-position-lights>
-        <tail-position-light>sim/multiplay/generic/float[7]</tail-position-light>
-        <landing-light>sim/multiplay/generic/float[11]</landing-light>
         <doors>
             <coolant>sim/multiplay/generic/float[3]</coolant>
             <oil>sim/multiplay/generic/float[4]</oil>
@@ -32,6 +29,17 @@
             <rollspeed-right>sim/multiplay/generic/float[13]</rollspeed-right>
             <rollspeed-tail>sim/multiplay/generic/float[14]</rollspeed-tail>
         </gear>
+        <lighting>
+            <landing-light>sim/multiplay/generic/bool[5]</landing-light>
+
+            <wing-position>sim/multiplay/generic/float[6]</wing-position>
+            <tail-position>sim/multiplay/generic/float[7]</tail-position>
+
+            <!-- Recognition lights on right wing -->
+            <red-rec>sim/multiplay/generic/bool[6]</red-rec>
+            <green-rec>sim/multiplay/generic/bool[7]</green-rec>
+            <amber-rec>sim/multiplay/generic/bool[8]</amber-rec>
+        </lighting>
         <securing>
             <pitot-cover>sim/multiplay/generic/bool[0]</pitot-cover>
             <left-tiedown>sim/multiplay/generic/bool[1]</left-tiedown>
@@ -1274,7 +1282,7 @@
     <blue>0.0</blue>
   </emission>
   <condition>
-     <property>sim/multiplay/generic/float[8]</property>
+     <property alias="/params/lighting/red-rec"/>
   </condition>
  </animation>
 
@@ -1287,7 +1295,7 @@
     <blue>0.0</blue>
   </emission>
   <condition>
-     <property>sim/multiplay/generic/float[9]</property>
+     <property alias="/params/lighting/green-rec"/>
   </condition>
  </animation>
 
@@ -1300,7 +1308,7 @@
     <blue>0.0</blue>
   </emission>
   <condition>
-     <property>sim/multiplay/generic/float[10]</property>
+     <property alias="/params/lighting/amber-rec"/>
   </condition>
  </animation>
 
@@ -1997,7 +2005,7 @@
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
                 <equals>
-                    <property alias="/params/wing-position-lights"/>
+                    <property alias="/params/lighting/wing-position"/>
                     <value>2.0</value><!-- 1 = bright, 2 = dim -->
                 </equals>
             </and>
@@ -2013,7 +2021,7 @@
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
                 <equals>
-                    <property alias="/params/wing-position-lights"/>
+                    <property alias="/params/lighting/wing-position"/>
                     <value>1.0</value><!-- 1 = bright, 2 = dim -->
                 </equals>
             </and>
@@ -2027,7 +2035,7 @@
         <condition>
             <or>
                 <not><property>/sim/rendering/shaders/skydome</property></not>
-                <not><property alias="/params/wing-position-lights"/></not>
+                <not><property alias="/params/lighting/wing-position"/></not>
             </or>
         </condition>
     </animation>
@@ -2040,7 +2048,7 @@
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
                 <equals>
-                    <property alias="/params/tail-position-light"/>
+                    <property alias="/params/lighting/tail-position"/>
                     <value>2.0</value><!-- 1 = bright, 2 = dim -->
                 </equals>
             </and>
@@ -2055,7 +2063,7 @@
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
                 <equals>
-                    <property alias="/params/tail-position-light"/>
+                    <property alias="/params/lighting/tail-position"/>
                     <value>1.0</value><!-- 1 = bright, 2 = dim -->
                 </equals>
             </and>
@@ -2068,7 +2076,7 @@
         <condition>
             <or>
                 <not><property>/sim/rendering/shaders/skydome</property></not>
-                <not><property alias="/params/tail-position-light"/></not>
+                <not><property alias="/params/lighting/tail-position"/></not>
             </or>
         </condition>
     </animation>
@@ -2110,7 +2118,7 @@
         <condition>
             <and>
                 <property>/sim/rendering/shaders/skydome</property>
-                <property alias="/params/landing-light"/>
+                <property alias="/params/lighting/landing-light"/>
             </and>
         </condition>
     </animation>

@@ -126,7 +126,7 @@
   <type>select</type>
   <object-name>HVAR1.left</object-name>
   <condition>
-      <property>sim/multiplay/generic/int[4]</property>
+      <property>sim/multiplay/generic/bool[11]</property>
    </condition>
  </animation>
  
@@ -134,7 +134,7 @@
   <type>select</type>
   <object-name>HVAR2.left</object-name>
   <condition>
-     <property>sim/multiplay/generic/int[6]</property>
+     <property>sim/multiplay/generic/bool[13]</property>
    </condition>
  </animation>
  
@@ -142,7 +142,7 @@
   <type>select</type>
   <object-name>HVAR3.left</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[8]</property>
+    <property>sim/multiplay/generic/bool[15]</property>
   </condition>
  </animation>
  
@@ -150,7 +150,7 @@
   <type>select</type>
   <object-name>HVAR4.left</object-name>
   <condition>
-     <property>sim/multiplay/generic/int[10]</property>
+     <property>sim/multiplay/generic/bool[17]</property>
   </condition>
  </animation>
  
@@ -158,7 +158,7 @@
   <type>select</type>
   <object-name>HVAR5.left</object-name>
   <condition>
-     <property>sim/multiplay/generic/int[12]</property>
+     <property>sim/multiplay/generic/bool[19]</property>
   </condition>
  </animation>
  
@@ -166,7 +166,7 @@
   <type>select</type>
   <object-name>HVAR1.right</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[5]</property>
+    <property>sim/multiplay/generic/bool[12]</property>
   </condition>
  </animation>
  
@@ -174,7 +174,7 @@
   <type>select</type>
   <object-name>HVAR2.right</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[7]</property>
+    <property>sim/multiplay/generic/bool[14]</property>
   </condition>
  </animation>
 
@@ -182,7 +182,7 @@
   <type>select</type>
   <object-name>HVAR3.right</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[9]</property>
+    <property>sim/multiplay/generic/bool[16]</property>
   </condition>
  </animation>
 
@@ -190,7 +190,7 @@
   <type>select</type>
   <object-name>HVAR4.right</object-name>
   <condition>
-     <property>sim/multiplay/generic/int[11]</property>
+     <property>sim/multiplay/generic/bool[18]</property>
   </condition>
  </animation>
  
@@ -198,7 +198,7 @@
   <type>select</type>
   <object-name>HVAR5.right</object-name>
   <condition>
-       <property>sim/multiplay/generic/int[13]</property>
+       <property>sim/multiplay/generic/bool[20]</property>
   </condition>
  </animation>
 
@@ -217,7 +217,7 @@
   <type>select</type>
   <object-name>bomb.left</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[14]</property>
+    <property>sim/multiplay/generic/bool[21]</property>
   </condition>
  </animation>
  
@@ -236,7 +236,7 @@
   <type>select</type>
   <object-name>bomb.right</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[15]</property>
+    <property>sim/multiplay/generic/bool[22]</property>
   </condition>
  </animation>
  
@@ -255,7 +255,7 @@
   <type>select</type>
   <object-name>drop-tanks-left-75G</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[16]</property>
+    <property>sim/multiplay/generic/bool[23]</property>
   </condition>
  </animation>
  
@@ -274,7 +274,7 @@
   <type>select</type>
   <object-name>drop-tanks-right-75G</object-name>
   <condition>
-    <property>sim/multiplay/generic/int[17]</property>
+    <property>sim/multiplay/generic/bool[24]</property>
   </condition>
  </animation>
  

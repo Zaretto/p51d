@@ -4,22 +4,12 @@
 
  <fx>
  
-<!--   <crank>
-   <name>engstart</name>
-   <path>Sounds/p51d_startup.wav</path>
-   <property>sim/multiplay/generic/int[0]</property>
-   <volume>
-    <offset>-0.4</offset>
-   </volume>
-  </crank> -->
-
-  
   <crank>
    <name>crank</name>
    <mode>looped</mode>
    <path>Aircraft/p51d/Sounds/p51d_starter.wav</path>
    <condition>
-    <property>sim/multiplay/generic/int[0]</property>
+    <property>sim/multiplay/generic/bool[9]</property>
     <not>
      <property>/engines/engine/running</property>
     </not>

@@ -32,7 +32,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>left-gun-1-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -59,7 +59,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
     <submodel>
     <name>right-gun-1-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model> 
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -87,7 +87,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>left-gun-2-tracers</name>
     <model>Aircraft/p51d/Stores/guns/tracer.xml</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -114,7 +114,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>right-gun-2-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -141,7 +141,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>left-gun-3-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -168,7 +168,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>right-gun-3-tracers</name>
     <model>Models/Geometry/tracer.xml</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.245</delay>
@@ -195,7 +195,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>left-gun-1-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.075</delay>
@@ -222,7 +222,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
  <submodel>
     <name>right-gun-1-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.075</delay>
@@ -249,7 +249,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>left-gun-2-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.075</delay>
@@ -276,7 +276,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>right-gun-2-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.075</delay>
@@ -303,7 +303,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>left-gun-3-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.075</delay>
@@ -330,7 +330,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
   <submodel>
     <name>right-gun-3-bullets</name>
     <model>Models/Geometry/null.ac</model>
-    <trigger>sim/multiplay/generic/int[1]</trigger>
+    <trigger>sim/multiplay/generic/bool[10]</trigger>
     <speed>2900.0</speed>
     <repeat>true</repeat>
     <delay>0.075</delay>

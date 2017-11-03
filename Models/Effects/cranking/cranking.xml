@@ -21,10 +21,7 @@
           <property>engines/engine[0]/rpm</property>
           <value>600</value>
         </less-than>
-        <equals>
-          <property>sim/multiplay/generic/int[0]</property>
-          <value>1</value>
-        </equals>
+        <property>sim/multiplay/generic/bool[9]</property>
       </and>
     </condition>
 
