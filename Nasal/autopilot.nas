@@ -55,7 +55,3 @@ setlistener("/aircraft/brakes/parking-set", func (node) {
     else
         logger.screen.red("Parking brakes released");
 }, 0, 0);
-
-# The P-51D has no autopilot or GPS, so disable the menu
-gui.menuEnable("autopilot", 0);
-gui.menuEnable("gps", 0);

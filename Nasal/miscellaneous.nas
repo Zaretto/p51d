@@ -33,3 +33,10 @@ setlistener("/gear/on-ground-at-rest", func (node) {
         gui.menuEnable(menuitem, on_ground);
     }
 }, 1, 0);
+
+# The P-51D has no autopilot or GPS, so disable the menu
+gui.menuEnable("autopilot", 0);
+gui.menuEnable("gps", 0);
+
+gui.menuEnable("adjust-hud", 0);
+gui.menuEnable("jetway", 0);
