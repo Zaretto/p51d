@@ -187,6 +187,8 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <!-- External tanks -->
                 <bool n="23" alias="/ai/submodels/submodel[24]/count"/>
                 <bool n="24" alias="/ai/submodels/submodel[25]/count"/>
+
+                <bool n="25" alias="/sim/failure-manager/engines/engine/serviceable"/>
             </generic>
         </multiplay>
 

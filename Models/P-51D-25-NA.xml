@@ -1933,6 +1933,30 @@
     </animation> -->
 
     <!-- =============================================================== -->
+    <!-- Damage                                                          -->
+    <!-- =============================================================== -->
+
+    <model>
+        <path>Effects/fire/smoke.xml</path>
+        <name>engine-smoke</name>
+        <offsets>
+            <x-m> 0.0</x-m>
+            <y-m> 0.0</y-m>
+            <z-m>-0.4</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Effects/fire/fire.xml</path>
+        <name>engine-fire</name>
+        <offsets>
+            <x-m> 0.0</x-m>
+            <y-m> 0.0</y-m>
+            <z-m>-0.4</z-m>
+        </offsets>
+    </model>
+
+    <!-- =============================================================== -->
     <!-- ALS Navigation Lights                                           -->
     <!-- =============================================================== -->
 
