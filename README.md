@@ -36,9 +36,11 @@ New features
 
 * OPRF combat system for bullets, rockets, and bombs
 
-* Use HD model of rocket for submodels
+* Use HD model of rocket for submodels with ALS flame effect and thicker smoke
 
 * Zoom in or out using mouse scrollwheel, up to a distance of 300 meters
+
+* Reset cockpit view with Shift + Q, move closer to gunsight with Ctrl + Q
 
 * ALS procedural lights for position lights and landing light
 
@@ -46,9 +48,15 @@ New features
 
 * ALS glass effect for rain
 
+* TODO Exterior shadow
+
+* Engine fire when engine fails
+
+* Spark effect when fuselage or wings make contact with the ground
+
 * Replaced hotspots with knob animations and added tooltips
 
-* Make animation of cockpit controls smooth instead of instant
+* Made animation of cockpit controls smooth instead of instant
 
 * Various auto pilots:
 
@@ -58,13 +66,39 @@ New features
 
     - Automatic takeoff (F8)
 
-* Fix remote compass indicator and turn coordinator
+* Fixed remote compass indicator and turn coordinator
 
-* Fix the spinner making some objects behind it transparent
+* Fixed the spinner making some objects behind it transparent
 
 * Added pitot tube cover and tie-downs
 
+* TODO Wheel chocks
+
+* Improved check lists
+
 * Implemented coolant and oil radiator controls
+
+* Implemented parking brakes (pull lever and tap brakes)
+
+* TODO Implemented vacuum system and fixed suction gauge
+
+* TODO Implemented climate control
+
+* TODO Implemented oxygen system
+
+* TODO Implemented hydraulics
+
+* TODO Implemented electrical system
+
+* TODO Implemented rear radar warning receiver
+
+* TODO Fixed blade angle of propeller
+
+* TODO Crash detection: coolant fluid leak
+
+* TODO Fuel boost pumps needed for sufficient fuel flow above 8500 ft
+
+* TODO External fuel tanks need vacuum pressure for fuel flow
 
 Authors
 =======
