@@ -44,3 +44,20 @@ var repair_timer = maketimer(repair_timeout, func {
     setprop("/fdm/jsbsim/damage/repairing", 0);
 });
 repair_timer.singleShot = 1;
+
+setlistener("/fdm/jsbsim/systems/crash-detect/impact", func (n) {
+    if (n.getBoolValue())
+        # Engine
+        setprop("/sim/failure-manager/engines/engine/serviceable", 0);
+
+        # Engine driven vacuum pump (TODO fail sometimes)
+        setprop("/sim/failure-manager/systems/vacuum/serviceable", 0);
+        # TODO set cooling factor to 0
+
+        # Pitot tube under right wing
+        setprop("/sim/failure-manager/systems/pitot/serviceable", 0);
+
+        # TODO fail coolant + oil radiator doors
+        # TODO fail gear
+        # TODO fail flaps (sometimes)
+}, 0, 0);

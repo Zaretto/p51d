@@ -7,11 +7,9 @@
 #  - compressability onset
 
 var checkFlaps = func(n) {
-
-var flapsetting = n.getValue();
+    var flapsetting = n.getValue();
     if (flapsetting == 0)
         return;
-
 
     var airspeed = getprop("velocities/airspeed-kt");
 
@@ -35,7 +33,6 @@ var flapsetting = n.getValue();
 
 
 var checkGear = func(n) {
-
     if (!n.getValue())
         return;
 
@@ -50,13 +47,10 @@ var checkGear = func(n) {
 # by Systems/crash-detect.xml
 
 var checkG = func (n) {
-
     if (getprop("/sim/freeze/replay-state"))
-       return;
+        return;
 
-    var overG = n.getValue();
-
-    if (overG > 0){
+    if (n.getValue()) {
         if (getprop("/fdm/jsbsim/accelerations/Nz") > 0) {
             msg = "Airframe structural positive load limit exceeded!";
         }
@@ -96,14 +90,13 @@ var checkCompressibility = func (n) {
 setlistener("fdm/jsbsim/systems/compressibility/strength", checkCompressibility);
 setlistener("controls/flight/flaps", checkFlaps);
 setlistener("controls/gear/gear-down", checkGear);
-setlistener("fdm/jsbsim/systems/crash-detect/over-g", checkG);
+setlistener("fdm/jsbsim/systems/crash-detect/over-g", checkG, 0, 0);
 
 # ====== VNE exceeded =======
 
 var VnePlusTime = 0;
 
 var checkVNE = func {
-
      if (getprop("/sim/freeze/replay-state"))
        return;
 
@@ -141,8 +134,7 @@ var checkVNE = func {
     else {
         VnePlusTime = 0
     }
-    settimer(checkVNE, 0.5);
 }
 
-checkVNE();
-
+var vne_timer = maketimer(0.5, checkVNE);
+vne_timer.start();

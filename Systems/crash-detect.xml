@@ -74,23 +74,6 @@
 
   </channel>
 
-  <channel name="crashed">
-
-     <!-- end the sim if the aircraft is crashed -->
-     <!--<switch name="systems/crash-detect/FG">
-        <default value="0"/>
-        <test logic="AND" value="1">
-           /engines/engine[0]/cranking lt 0.1
-           /fdm/jsbsim/systems/crash-detect/crashed == 1
-        </test>
-        <output>/sim/freeze/clock</output>
-        <output>/sim/freeze/main</output>
-        <output>/controls/engines/engine[0]/cutoff</output>
-        <output>/sim/crashed</output>
-     </switch>-->
-  
-  </channel>
-
   <channel name="impact-ground">
 
      <switch name="impact">
