@@ -95,4 +95,85 @@
 
     </channel>
 
+    <channel name="sparks">
+
+        <switch name="contact/unit[7]/spark">
+            <default value="0"/>
+            <output>/gear/gear[7]/spark</output>
+
+            <test logic="AND" value="1">
+                ground/solid EQ 1
+                contact/unit[7]/WOW EQ 1
+                /gear/gear[7]/rollspeed-ms GT 1.0
+            </test>
+        </switch>
+
+        <switch name="contact/unit[8]/spark">
+            <default value="0"/>
+            <output>/gear/gear[8]/spark</output>
+
+            <test logic="AND" value="1">
+                ground/solid EQ 1
+                contact/unit[8]/WOW EQ 1
+                /gear/gear[8]/rollspeed-ms GT 1.0
+            </test>
+        </switch>
+
+        <switch name="contact/unit[9]/spark">
+            <default value="0"/>
+            <output>/gear/gear[9]/spark</output>
+
+            <test logic="AND" value="1">
+                ground/solid EQ 1
+                contact/unit[9]/WOW EQ 1
+                /gear/gear[9]/rollspeed-ms GT 1.0
+            </test>
+        </switch>
+
+        <switch name="contact/unit[10]/spark">
+            <default value="0"/>
+            <output>/gear/gear[10]/spark</output>
+
+            <test logic="AND" value="1">
+                ground/solid EQ 1
+                contact/unit[10]/WOW EQ 1
+                /gear/gear[10]/rollspeed-ms GT 1.0
+            </test>
+        </switch>
+
+        <switch name="contact/unit[12]/spark">
+            <default value="0"/>
+            <output>/gear/gear[12]/spark</output>
+
+            <test logic="AND" value="1">
+                ground/solid EQ 1
+                contact/unit[12]/WOW EQ 1
+                /gear/gear[12]/rollspeed-ms GT 1.0
+            </test>
+        </switch>
+
+        <switch name="contact/unit[14]/spark">
+            <default value="0"/>
+            <output>/gear/gear[14]/spark</output>
+
+            <test logic="AND" value="1">
+                ground/solid EQ 1
+                contact/unit[14]/WOW EQ 1
+                /gear/gear[14]/rollspeed-ms GT 1.0
+            </test>
+        </switch>
+
+        <switch name="contact/unit[15]/spark">
+            <default value="0"/>
+            <output>/gear/gear[15]/spark</output>
+
+            <test logic="AND" value="1">
+                ground/solid EQ 1
+                contact/unit[15]/WOW EQ 1
+                /gear/gear[15]/rollspeed-ms GT 1.0
+            </test>
+        </switch>
+
+    </channel>
+
 </system>

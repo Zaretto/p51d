@@ -189,6 +189,15 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <bool n="24" alias="/ai/submodels/submodel[25]/count"/>
 
                 <bool n="25" alias="/sim/failure-manager/engines/engine/serviceable"/>
+
+                <!-- Contact sparks: wings, tail, nose, belly, dog house -->
+                <bool n="26" alias="/gear/gear[7]/spark"/>
+                <bool n="27" alias="/gear/gear[8]/spark"/>
+                <bool n="28" alias="/gear/gear[9]/spark"/>
+                <bool n="29" alias="/gear/gear[10]/spark"/>
+                <bool n="30" alias="/gear/gear[12]/spark"/>
+                <bool n="31" alias="/gear/gear[14]/spark"/>
+                <bool n="32" alias="/gear/gear[15]/spark"/>
             </generic>
         </multiplay>
 
@@ -286,12 +295,40 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
     </comm> 
  </instrumentation>
  
-  <gear>
-    <gear n="1">
-       <position-norm type="float">1</position-norm>
+    <gear>
+        <gear n="1">
+            <position-norm type="float">1</position-norm>
+        </gear>
+        <gear n="7">
+            <spark type="bool">false</spark>
+            <rollspeed-ms type="double">0.0</rollspeed-ms>
+        </gear>
+        <gear n="8">
+            <spark type="bool">false</spark>
+            <rollspeed-ms type="double">0.0</rollspeed-ms>
+        </gear>
+        <gear n="9">
+            <spark type="bool">false</spark>
+            <rollspeed-ms type="double">0.0</rollspeed-ms>
+        </gear>
+        <gear n="10">
+            <spark type="bool">false</spark>
+            <rollspeed-ms type="double">0.0</rollspeed-ms>
+        </gear>
+        <gear n="12">
+            <spark type="bool">false</spark>
+            <rollspeed-ms type="double">0.0</rollspeed-ms>
+        </gear>
+        <gear n="14">
+            <spark type="bool">false</spark>
+            <rollspeed-ms type="double">0.0</rollspeed-ms>
+        </gear>
+        <gear n="15">
+            <spark type="bool">false</spark>
+            <rollspeed-ms type="double">0.0</rollspeed-ms>
+        </gear>
+        <jackstandsZ type="float">0</jackstandsZ>
     </gear>
-    <jackstandsZ type="float">0</jackstandsZ>
- </gear>
  
  <input>
      <keyboard include="Sim/keyboard.xml"/>

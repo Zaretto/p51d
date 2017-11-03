@@ -1933,7 +1933,7 @@
     </animation> -->
 
     <!-- =============================================================== -->
-    <!-- Damage                                                          -->
+    <!-- Engine Fire                                                     -->
     <!-- =============================================================== -->
 
     <model>
@@ -1954,6 +1954,115 @@
             <y-m> 0.0</y-m>
             <z-m>-0.4</z-m>
         </offsets>
+    </model>
+
+    <!-- =============================================================== -->
+    <!-- Contact Sparks                                                  -->
+    <!-- =============================================================== -->
+
+    <!-- Wing left -->
+    <model>
+        <path>Models/Effects/damage/left.xml</path>
+        <offsets>
+            <x-m> 2.1336</x-m>
+            <y-m>-5.6515</y-m>
+            <z-m>-0.11684</z-m>
+        </offsets>
+        <overlay>
+            <params>
+                <enabled>sim/multiplay/generic/bool[26]</enabled>
+            </params>
+        </overlay>
+    </model>
+
+    <!-- Wing right -->
+    <model>
+        <path>Models/Effects/damage/right.xml</path>
+        <offsets>
+            <x-m> 2.1336</x-m>
+            <y-m> 5.6015</y-m>
+            <z-m>-0.21684</z-m>
+        </offsets>
+        <overlay>
+            <params>
+                <enabled>sim/multiplay/generic/bool[27]</enabled>
+            </params>
+        </overlay>
+    </model>
+
+    <!-- Tail bottom -->
+    <model>
+        <path>Models/Effects/damage/center.xml</path>
+        <offsets>
+            <x-m> 8.3058</x-m>
+            <y-m> 0.0000</y-m>
+            <z-m>-0.2184</z-m>
+        </offsets>
+        <overlay>
+            <params>
+                <enabled>sim/multiplay/generic/bool[28]</enabled>
+            </params>
+        </overlay>
+    </model>
+
+    <!-- Tail top -->
+    <model>
+        <path>Models/Effects/damage/center.xml</path>
+        <offsets>
+            <x-m>8.0772</x-m>
+            <y-m>0.0000</y-m>
+            <z-m>1.6510</z-m>
+        </offsets>
+        <overlay>
+            <params>
+                <enabled>sim/multiplay/generic/bool[29]</enabled>
+            </params>
+        </overlay>
+    </model>
+
+    <!-- Nose -->
+    <model>
+        <path>Models/Effects/damage/center.xml</path>
+        <offsets>
+            <x-m>0.0000</x-m>
+            <y-m>0.0000</y-m>
+            <z-m>0.3302</z-m>
+        </offsets>
+        <overlay>
+            <params>
+                <enabled>sim/multiplay/generic/bool[30]</enabled>
+            </params>
+        </overlay>
+    </model>
+
+    <!-- Belly -->
+    <model>
+        <path>Models/Effects/damage/center.xml</path>
+        <offsets>
+            <x-m> 1.3208</x-m>
+            <y-m> 0.0000</y-m>
+            <z-m>-0.8636</z-m>
+        </offsets>
+        <overlay>
+            <params>
+                <enabled>sim/multiplay/generic/bool[31]</enabled>
+            </params>
+        </overlay>
+    </model>
+
+    <!-- Dog house -->
+    <model>
+        <path>Models/Effects/damage/center.xml</path>
+        <offsets>
+            <x-m> 3.6322</x-m>
+            <y-m> 0.0000</y-m>
+            <z-m>-1.1684</z-m>
+        </offsets>
+        <overlay>
+            <params>
+                <enabled>sim/multiplay/generic/bool[32]</enabled>
+            </params>
+        </overlay>
     </model>
 
     <!-- =============================================================== -->
