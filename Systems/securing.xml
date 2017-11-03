@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2017 onox
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<system name="securing">
+
+    <property value="20000.0">tiedowns/wing-kp</property>
+    <property value="12000.0">tiedowns/wing-ki</property>
+    <property value="500.0">tiedowns/wing-kd</property>
+
+    <property value="12000.0">tiedowns/tail-kp</property>
+    <property value="4000.0">tiedowns/tail-ki</property>
+    <property value="50.0">tiedowns/tail-kd</property>
+
+    <channel name="securing">
+
+        <switch name="systems/pitot-cover/addable">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /aircraft/securing/pitot-cover-visible EQ 0
+                gear/on-ground-at-rest EQ 1
+            </test>
+            <output>/aircraft/securing/pitot-cover-addable</output>
+        </switch>
+
+        <switch name="systems/pitot-cover/removable">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /aircraft/securing/pitot-cover-visible EQ 1
+                gear/on-ground-at-rest EQ 1
+            </test>
+            <output>/aircraft/securing/pitot-cover-removable</output>
+        </switch>
+
+    </channel>
+
+    <channel name="tie-down-left">
+
+        <fcs_function name="tiedown-left-x">
+            <output>external_reactions/tiedown-left/x</output>
+            <function>
+                <sin>
+                    <toradians>
+                        <property>/aircraft/tiedowns/left/heading-deg</property>
+                    </toradians>
+                </sin>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="tiedown-left-y">
+            <output>external_reactions/tiedown-left/y</output>
+            <function>
+                <product>
+                    <value>-1</value>
+                    <cos>
+                        <toradians>
+                            <property>/aircraft/tiedowns/left/heading-deg</property>
+                        </toradians>
+                    </cos>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="tiedown-left-z">
+            <output>external_reactions/tiedown-left/z</output>
+            <function>
+                <product>
+                    <value>-1</value>
+                    <sin>
+                        <toradians>
+                            <property>/aircraft/tiedowns/left/pitch-deg</property>
+                        </toradians>
+                    </sin>
+                </product>
+            </function>
+        </fcs_function>
+
+        <summer name="fcs/tiedown-left-mag-error">
+            <input>/aircraft/tiedowns/left/length-m</input>
+            <input>-/aircraft/tiedowns/left/ref-length-m</input>
+        </summer>
+
+        <pid name="fcs/tiedown-left-magnitude-pid">
+            <input>fcs/tiedown-left-mag-error</input>
+            <kp>tiedowns/wing-kp</kp>
+            <ki>tiedowns/wing-ki</ki>
+            <kd>tiedowns/wing-kd</kd>
+            <clipto>
+                <min>-50</min>
+                <max>5000</max>
+            </clipto>
+        </pid>
+
+        <switch name="fcs/tiedown-left-magnitude">
+            <output>external_reactions/tiedown-left/magnitude</output>
+            <default value="0"/>
+
+            <test logic="AND" value="fcs/tiedown-left-magnitude-pid">
+                /aircraft/securing/left-tiedown-visible EQ 1
+                /fdm/jsbsim/damage/repairing EQ 0
+            </test>
+        </switch>
+
+    </channel>
+
+    <channel name="tie-down-right">
+
+        <fcs_function name="tiedown-right-x">
+            <output>external_reactions/tiedown-right/x</output>
+            <function>
+                <product>
+                    <value>-1</value>
+                    <sin>
+                        <toradians>
+                            <property>/aircraft/tiedowns/right/heading-deg</property>
+                        </toradians>
+                    </sin>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="tiedown-right-y">
+            <output>external_reactions/tiedown-right/y</output>
+            <function>
+                <cos>
+                    <toradians>
+                        <property>/aircraft/tiedowns/right/heading-deg</property>
+                    </toradians>
+                </cos>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="tiedown-right-z">
+            <output>external_reactions/tiedown-right/z</output>
+            <function>
+                <product>
+                    <value>-1</value>
+                    <sin>
+                        <toradians>
+                            <property>/aircraft/tiedowns/right/pitch-deg</property>
+                        </toradians>
+                    </sin>
+                </product>
+            </function>
+        </fcs_function>
+
+        <summer name="fcs/tiedown-right-mag-error">
+            <input>/aircraft/tiedowns/right/length-m</input>
+            <input>-/aircraft/tiedowns/right/ref-length-m</input>
+        </summer>
+
+        <pid name="fcs/tiedown-right-magnitude-pid">
+            <input>fcs/tiedown-right-mag-error</input>
+            <kp>tiedowns/wing-kp</kp>
+            <ki>tiedowns/wing-ki</ki>
+            <kd>tiedowns/wing-kd</kd>
+            <clipto>
+                <min>-50</min>
+                <max>5000</max>
+            </clipto>
+        </pid>
+
+        <switch name="fcs/tiedown-right-magnitude">
+            <output>external_reactions/tiedown-right/magnitude</output>
+            <default value="0"/>
+
+            <test logic="AND" value="fcs/tiedown-right-magnitude-pid">
+                /aircraft/securing/right-tiedown-visible EQ 1
+                /fdm/jsbsim/damage/repairing EQ 0
+            </test>
+        </switch>
+
+    </channel>
+
+    <channel name="tie-down-tail-left">
+
+        <fcs_function name="tiedown-tail-left-x">
+            <output>external_reactions/tiedown-tail-left/x</output>
+            <function>
+                <sin>
+                    <toradians>
+                        <property>/aircraft/tiedowns/tail-left/heading-deg</property>
+                    </toradians>
+                </sin>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="tiedown-tail-left-y">
+            <output>external_reactions/tiedown-tail-left/y</output>
+            <function>
+                <product>
+                    <value>-1</value>
+                    <cos>
+                        <toradians>
+                            <property>/aircraft/tiedowns/tail-left/heading-deg</property>
+                        </toradians>
+                    </cos>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="tiedown-tail-left-z">
+            <output>external_reactions/tiedown-tail-left/z</output>
+            <function>
+                <product>
+                    <value>-1</value>
+                    <sin>
+                        <toradians>
+                            <property>/aircraft/tiedowns/tail-left/pitch-deg</property>
+                        </toradians>
+                    </sin>
+                </product>
+            </function>
+        </fcs_function>
+
+        <summer name="fcs/tiedown-tail-left-mag-error">
+            <input>/aircraft/tiedowns/tail-left/length-m</input>
+            <input>-/aircraft/tiedowns/tail-left/ref-length-m</input>
+        </summer>
+
+        <pid name="fcs/tiedown-tail-left-magnitude-pid">
+            <input>fcs/tiedown-tail-left-mag-error</input>
+            <kp>tiedowns/tail-kp</kp>
+            <ki>tiedowns/tail-ki</ki>
+            <kd>tiedowns/tail-kd</kd>
+            <clipto>
+                <min>-1000</min>
+                <max>1000</max>
+            </clipto>
+        </pid>
+
+        <switch name="fcs/tiedown-tail-left-magnitude">
+            <output>external_reactions/tiedown-tail-left/magnitude</output>
+            <default value="0"/>
+
+            <test logic="AND" value="fcs/tiedown-tail-left-magnitude-pid">
+                /aircraft/securing/tail-left-tiedown-visible EQ 1
+                /fdm/jsbsim/damage/repairing EQ 0
+            </test>
+        </switch>
+
+    </channel>
+
+    <channel name="tie-down-tail-right">
+
+        <fcs_function name="tiedown-tail-right-x">
+            <output>external_reactions/tiedown-tail-right/x</output>
+            <function>
+                <sin>
+                    <toradians>
+                        <property>/aircraft/tiedowns/tail-right/heading-deg</property>
+                    </toradians>
+                </sin>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="tiedown-tail-right-y">
+            <output>external_reactions/tiedown-tail-right/y</output>
+            <function>
+                <product>
+                    <value>-1</value>
+                    <cos>
+                        <toradians>
+                            <property>/aircraft/tiedowns/tail-right/heading-deg</property>
+                        </toradians>
+                    </cos>
+                </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="tiedown-tail-right-z">
+            <output>external_reactions/tiedown-tail-right/z</output>
+            <function>
+                <product>
+                    <value>-1</value>
+                    <sin>
+                        <toradians>
+                            <property>/aircraft/tiedowns/tail-right/pitch-deg</property>
+                        </toradians>
+                    </sin>
+                </product>
+            </function>
+        </fcs_function>
+
+        <summer name="fcs/tiedown-tail-right-mag-error">
+            <input>/aircraft/tiedowns/tail-right/length-m</input>
+            <input>-/aircraft/tiedowns/tail-right/ref-length-m</input>
+        </summer>
+
+        <pid name="fcs/tiedown-tail-right-magnitude-pid">
+            <input>fcs/tiedown-tail-right-mag-error</input>
+            <kp>tiedowns/tail-kp</kp>
+            <ki>tiedowns/tail-ki</ki>
+            <kd>tiedowns/tail-kd</kd>
+            <clipto>
+                <!-- Right tail tie-down is weaker than the left one to
+                     prevent pushing the tail to the left.
+                -->
+                <min>-500</min>
+                <max>500</max>
+            </clipto>
+        </pid>
+
+        <switch name="fcs/tiedown-tail-right-magnitude">
+            <output>external_reactions/tiedown-tail-right/magnitude</output>
+            <default value="0"/>
+
+            <test logic="AND" value="fcs/tiedown-tail-right-magnitude-pid">
+                /aircraft/securing/tail-right-tiedown-visible EQ 1
+                /fdm/jsbsim/damage/repairing EQ 0
+            </test>
+        </switch>
+
+    </channel>
+
+</system>
