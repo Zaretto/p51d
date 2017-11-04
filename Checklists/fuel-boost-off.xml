@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Starter on check -->
+<PropertyList>
+	 <condition>
+		<equals>
+			<property>/fdm/jsbsim/propulsion/fuel_pump</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<marker>
+    <x-m>2.5924</x-m>
+    <y-m>-0.2350</y-m>
+    <z-m>-0.0209</z-m>
+    <scale>2</scale>
+	</marker>
+</PropertyList>

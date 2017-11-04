@@ -585,4 +585,58 @@
         </item>
     </checklist>
 
+    <checklist>
+        <title>After Landing</title>
+
+        <item include="rpm.xml">
+            <name>Throttle</name>
+            <value>1000 RPM</value>
+            <min-rpm>950</min-rpm>
+            <max-rpm>1050</max-rpm>
+        </item>
+        <item include="canopy-open.xml">
+            <name>Canopy</name>
+            <value>OPEN</value>
+        </item>
+        <item include="coolant-radiator-open.xml">
+            <name>Coolant radiator</name>
+            <value>OPEN</value>
+        </item>
+        <item include="oil-radiator-open.xml">
+            <name>Oil radiator</name>
+            <value>OPEN</value>
+        </item>
+        <item include="flaps.xml">
+            <name>Flaps</name>
+            <value>UP</value>
+            <flaps>0</flaps>
+        </item>
+        <item include="trim-rudder.xml">
+            <name>Rudder Trim</name>
+            <value>0 degrees right</value>
+            <min-trim>0.05</min-trim>
+            <max-trim>0.05</max-trim>
+        </item>
+        <item include="trim-aileron.xml">
+            <name>Aileron Trim</name>
+            <value>0 degrees</value>
+            <min-trim>-0.05</min-trim>
+            <max-trim>0.05</max-trim>
+        </item>
+        <item include="trim-elevator.xml">
+            <name>Elevator Trim</name>
+            <value>0 degrees</value>
+            <min-trim>-0.05</min-trim>
+            <max-trim>0.05</max-trim>
+        </item>
+        <item include="prop-full.xml">
+            <name>Propeller control</name>
+            <value>FULL INCREASE</value>
+        </item>
+        <item include="fuel-boost-off.xml">
+            <name>Fuel Boost</name>
+            <value>OFF</value>
+        </item>
+    </checklist>
+
 </PropertyList>
