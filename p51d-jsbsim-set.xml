@@ -461,8 +461,6 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
      <drop-tank-release-1 type="int">0</drop-tank-release-1>
      <salvo-right type="int">0</salvo-right>
      <salvo-left type="int">0</salvo-left>
-     <salvo-right-hs type="int">0</salvo-right-hs>
-     <salvo-left-hs type="int">0</salvo-left-hs>
      <salvo-both type="int">0</salvo-both>
      <trigger type="int">0</trigger>
      <rocket n="1">

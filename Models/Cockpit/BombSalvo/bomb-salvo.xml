@@ -37,13 +37,13 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/controls/armament/salvo-right-hs</property>
+                <property>/controls/armament/salvo-right</property>
                 <value type="int">1</value>
             </binding>
             <mod-up>
                 <binding>
                     <command>property-assign</command>
-                    <property>/controls/armament/salvo-right-hs</property>
+                    <property>/controls/armament/salvo-right</property>
                     <value type="int">0</value>
                 </binding>
             </mod-up>
@@ -91,13 +91,13 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-assign</command>
-                <property>/controls/armament/salvo-left-hs</property>
+                <property>/controls/armament/salvo-left</property>
                 <value type="int">1</value>
             </binding>
             <mod-up>
                 <binding>
                     <command>property-assign</command>
-                    <property>/controls/armament/salvo-left-hs</property>
+                    <property>/controls/armament/salvo-left</property>
                     <value type="int">0</value>
                 </binding>
             </mod-up>
