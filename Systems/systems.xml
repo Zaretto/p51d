@@ -34,6 +34,9 @@
         <stall-deg>60</stall-deg>
     </pitot>
 
+    <!-- The two static ports are behind the VHF antenna near the tail.
+         (page 246 of maintenance manual AN 01-60JE-2)
+    -->
     <static>
         <name>static</name>
         <number>0</number>

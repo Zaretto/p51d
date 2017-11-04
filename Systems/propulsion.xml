@@ -469,12 +469,6 @@
           <output>propulsion/engine/enclosure-attenuation-level</output>
        </fcs_function>
 
-       <!--<pure_gain name="Hot-Air">
-          <input>systems/engine/hot-air</input>
-          <gain>??? </gain>
-          <output>how knows?</output>
-       </pure_gain>-->
-
     </channel>
-    
+
 </system>
