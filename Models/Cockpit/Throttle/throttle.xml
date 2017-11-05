@@ -37,7 +37,13 @@
    <z>0</z>
   </axis>
  </animation> 
- 
+
+    <!--
+         Pulling the cable by turning the range control grip counter-
+         clockwise, increases the range. (See Figure 439B on page 383 of
+         AN 01-60JE-2 maintenance manual)
+    -->
+
  <animation>
   <type>rotate</type>
   <object-name>ThrottleGrip</object-name>
@@ -47,11 +53,11 @@
   <property>/controls/armament/gunsight/range</property>
   <interpolation>
    <entry>
-    <ind>200</ind>
+    <ind>2400</ind>
     <dep>30</dep>
    </entry>
    <entry>
-    <ind>2400</ind>
+    <ind>200</ind>
     <dep>0</dep>
    </entry>
   </interpolation>
@@ -71,7 +77,7 @@
   <property>/controls/armament/gunsight/range</property>
   <interpolation>
    <entry>
-    <ind>200</ind>
+    <ind>2400</ind>
     <dep>-27</dep>
    </entry>
    <entry>
@@ -79,7 +85,7 @@
     <dep>-15</dep>
    </entry>
    <entry>
-    <ind>2400</ind>
+    <ind>200</ind>
     <dep>0</dep>
    </entry>
   </interpolation>
@@ -99,11 +105,11 @@
   <property>/controls/armament/gunsight/range</property>
   <interpolation>
    <entry>
-    <ind>200</ind>
+    <ind>2400</ind>
     <dep>-16</dep>
    </entry>
    <entry>
-    <ind>2400</ind>
+    <ind>200</ind>
     <dep>0</dep>
    </entry>
   </interpolation>
