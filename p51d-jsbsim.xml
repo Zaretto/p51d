@@ -852,8 +852,18 @@ Hal V. Engel hvengel@astound.net
                 <output>/aircraft/surface-positions/aileron-pos-norm</output>
             </actuator>
 
-            <actuator name="fcs/roll-trim-cmd-norm-actuator">
+            <!--
+                 Aileron trim servo tab goes up/down when aileron goes down/up.
+                 See video "P-51D Mustang - Part 1 / Walkaround Tour - Kermie Cam"
+                 at https://youtu.be/jzKFkYLHq3Q?t=284
+            -->
+            <summer name="fcs/roll-trim-balance-norm">
                 <input>fcs/roll-trim-cmd-norm</input>
+                <input>-fcs/aileron-cmd-norm-actuator</input>
+            </summer>
+
+            <actuator name="fcs/roll-trim-cmd-norm-actuator">
+                <input>fcs/roll-trim-balance-norm</input>
                 <rate_limit>5.0</rate_limit><!-- 0.2 s -->
                 <clipto>
                     <min>-1.0</min><!-- -10.0 deg -->
@@ -932,8 +942,19 @@ Hal V. Engel hvengel@astound.net
                 <output>/aircraft/surface-positions/rudder-pos-norm</output>
             </actuator>
 
-            <actuator name="fcs/yaw-trim-cmd-norm-actuator">
+            <!--
+                 Rudder trim anti-servo tab moves in same direction when
+                 rudder goes left/right.
+                 See video "P-51D Mustang - Part 1 / Walkaround Tour - Kermie Cam"
+                 at https://youtu.be/jzKFkYLHq3Q?t=462
+            -->
+            <summer name="fcs/yaw-trim-boost-norm">
                 <input>fcs/yaw-trim-cmd-norm</input>
+                <input>fcs/rudder-cmd-norm-actuator</input>
+            </summer>
+
+            <actuator name="fcs/yaw-trim-cmd-norm-actuator">
+                <input>fcs/yaw-trim-boost-norm</input>
                 <rate_limit>5.0</rate_limit><!-- 0.2 s -->
                 <clipto>
                     <min>-1.0</min><!-- -10.0 deg -->

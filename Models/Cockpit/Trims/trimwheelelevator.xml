@@ -8,7 +8,7 @@
   <drag-direction>vertical</drag-direction>
   <drag-scale-px>10.0</drag-scale-px>
   <object-name>elevatorTrimWheel</object-name>
-  <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+  <property>/controls/flight/elevator-trim</property>
   <factor>1440</factor>
   <axis>
    <y>1</y>
@@ -29,7 +29,7 @@
                  <tooltip-id>elevator-trim</tooltip-id>
                  <measure-text>Elevator trim: -25.00 deg</measure-text>
                  <label>Elevator trim: %.2f deg</label>
-                 <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+                 <property>/controls/flight/elevator-trim</property>
                  <mapping>nasal</mapping>
                  <script>
                      var max_elevator_trim = -25.0;
@@ -42,7 +42,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Needle</object-name>
-  <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+  <property>/controls/flight/elevator-trim</property>
   <factor>70.0</factor>
   <offset-deg>-20.0</offset-deg>
   <axis>

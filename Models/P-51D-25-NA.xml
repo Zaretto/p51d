@@ -1148,7 +1148,7 @@
   <type>rotate</type>
   <object-name>aileronTrimTabLeft</object-name>
   <object-name>aileronTrimTabLinkageLeft</object-name>
-  <property>/controls/flight/aileron-trim</property>
+  <property>/aircraft/surface-positions/roll-trim-pos-norm</property>
   <factor>10</factor><!-- 10 deg -->
   <axis>
    <x1-m>3.47279</x1-m>
@@ -1163,7 +1163,7 @@
  <animation>
   <type>rotate</type>
   <object-name>aileronTrimTabLinkageLeft</object-name>
-  <property>controls/flight/aileron-trim</property>
+  <property>/aircraft/surface-positions/roll-trim-pos-norm</property>
   <factor>-7.0</factor>
   <axis>
    <x1-m>3.5804</x1-m>

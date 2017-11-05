@@ -8,10 +8,10 @@
   <drag-direction>horizontal</drag-direction>
   <drag-scale-px>10.0</drag-scale-px>
   <object-name>trimKnob</object-name>
-  <property>/aircraft/surface-positions/yaw-trim-pos-norm</property>
+  <property>/controls/flight/rudder-trim</property>
   <factor>1440</factor>
   <axis>
-   <z>1</z>
+   <z>-1</z>
   </axis>
          <action>
              <binding>
@@ -29,10 +29,10 @@
                  <tooltip-id>rudder-trim</tooltip-id>
                  <measure-text>Rudder trim: -10.00 deg</measure-text>
                  <label>Rudder trim: %.2f deg</label>
-                 <property>/aircraft/surface-positions/yaw-trim-pos-norm</property>
+                 <property>/controls/flight/rudder-trim</property>
                  <mapping>nasal</mapping>
                  <script>
-                    var max_rudder_trim = -10.0;
+                    var max_rudder_trim = 10.0;
                     return arg[0] * max_rudder_trim;
                  </script>
              </binding>
@@ -42,10 +42,10 @@
  <animation>
   <type>rotate</type>
   <object-name>Needle</object-name>
-  <property>/aircraft/surface-positions/yaw-trim-pos-norm</property>
+  <property>/controls/flight/rudder-trim</property>
   <factor>36.0</factor>
   <axis>
-   <z>1</z>
+   <z>-1</z>
   </axis>
  </animation>
 
