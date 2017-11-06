@@ -65,6 +65,26 @@
 
     </channel>
 
+    <channel name="lighting">
+
+        <switch name="systems/lighting/wing-position-light">
+            <default value="0"/>
+            <test logic="AND" value="/controls/lighting/wing-position-lights">
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+            <output>/aircraft/lighting/wing-position-lights</output>
+        </switch>
+
+        <switch name="systems/lighting/tail-position-light">
+            <default value="0"/>
+            <test logic="AND" value="/controls/lighting/tail-position-lights">
+                /controls/engines/engine/master-bat EQ 1
+            </test>
+            <output>/aircraft/lighting/tail-position-lights</output>
+        </switch>
+
+    </channel>
+
     <channel name="switches">
 
         <switch name="systems/electrical/starter">

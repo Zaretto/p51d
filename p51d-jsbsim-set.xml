@@ -139,8 +139,8 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <float n="5" /> <!-- /fdm/jsbsim/gear/unit[2]/steering-angle-deg -->
 
                 <!-- Position lights -->
-                <float n="6" alias="/controls/lighting/wing-position-lights"/>
-                <float n="7" alias="/controls/lighting/tail-position-lights"/>
+                <float n="6" alias="/aircraft/lighting/wing-position-lights"/>
+                <float n="7" alias="/aircraft/lighting/tail-position-lights"/>
 
                 <!-- float[8..11] unused -->
 
@@ -547,6 +547,12 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             <release-parking type="bool">false</release-parking>
             <parking-set type="bool">false</parking-set>
         </brakes>
+
+        <lighting>
+            <landing-light type="bool">false</landing-light>
+            <wing-position-lights type="int">0</wing-position-lights>
+            <tail-position-lights type="int">0</tail-position-lights>
+        </lighting>
 
         <switches>
             <!-- Coolant and oil radiator controls are set to AUTOMATIC,
