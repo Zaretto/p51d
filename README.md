@@ -80,7 +80,7 @@ New features
 
 * Implemented parking brakes (pull lever and tap brakes)
 
-* TODO Implemented vacuum system and fixed suction gauge
+* Implemented vacuum system and fixed suction gage
 
 * TODO Implemented climate control
 

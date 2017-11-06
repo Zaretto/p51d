@@ -13,7 +13,7 @@
              is vacuum-based.
         -->
         <pure_gain name="systems/turn-coordinator/suction-to-power">
-            <input>/systems/vacuum/suction-inhg</input>
+            <input>/systems/vacuum/scaled-suction-inhg</input>
             <gain>2.4</gain>
             <output>/systems/electrical/outputs/turn-coordinator</output>
         </pure_gain>

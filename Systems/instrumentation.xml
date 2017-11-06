@@ -29,14 +29,14 @@
     <attitude-indicator>
         <name>attitude-indicator</name>
         <number>0</number>
-        <suction>/systems/vacuum/suction-inhg</suction>
+        <suction>/systems/vacuum/scaled-suction-inhg</suction>
     </attitude-indicator>
 
     <!-- Directional Gyro left of AI -->
     <heading-indicator>
         <name>heading-indicator</name>
         <number>0</number>
-        <suction>/systems/vacuum/suction-inhg</suction>
+        <suction>/systems/vacuum/scaled-suction-inhg</suction>
     </heading-indicator>
 
     <!-- Remote Compass Indicator -->

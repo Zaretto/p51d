@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2017 onox
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<system name="vacuum-system">
+
+    <channel name="vacuum">
+
+        <switch name="systems/vacuum/pump-cmd-rpm">
+            <default value="0.0"/>
+            <test logic="AND" value="/engines/engine[0]/rpm">
+                /systems/vacuum/serviceable EQ 1
+            </test>
+        </switch>
+
+        <actuator name="systems/vacuum/pump-rpm">
+            <input>systems/vacuum/pump-cmd-rpm</input>
+            <rate_limit>500.0</rate_limit>
+        </actuator>
+
+        <!--
+             Vacuum pump provides >= 4.5 in Hg @ 1500 RPM
+
+             (See page 242 of AN 01-60JE-2 maintenance manual)
+
+             Solving 4.5 = 29.92 - 29.92 * 1500.0 / (1500.0 + x)
+             gives x = 265.54
+
+             This gives very low suction at < 1400 RPM. At 1000 RPM we
+             want to get about 3.2 in Hg.
+             Solving 3.2 = 29.92 - 29.92 * 1500.0 / (1000.0 + x + 265.54)
+             gives x = 414.10.
+
+             x / (1500.0 - 1000.0) = 0.83
+        -->
+        <fcs_function name="systems/vacuum/pump-suction-inhg">
+            <function>
+                <!-- pressure - pressure * 1500.0 / (rpm + 265.54) -->
+                <difference>
+                    <property>/environment/pressure-inhg</property>
+                    <quotient>
+                        <product>
+                            <property>/environment/pressure-inhg</property>
+                            <value>1500.0</value>
+                        </product>
+                        <sum>
+                            <property>systems/vacuum/pump-rpm</property>
+                            <product>
+                                <value>0.8282035457016732</value>
+                                <max>
+                                    <value>0.0</value>
+                                    <difference>
+                                        <value>1500.0</value>
+                                        <property>systems/vacuum/pump-rpm</property>
+                                    </difference>
+                                </max>
+                            </product>
+                            <value>265.53894571203773</value>
+                        </sum>
+                    </quotient>
+                </difference>
+            </function>
+        </fcs_function>
+
+        <!--
+             Vacuum relieve valve regulates pressure to:
+
+             3.75 @ 1000 RPM
+             4.25 @ 3000 RPM
+
+             (See page 242 of AN 01-60JE-2 maintenance manual)
+        -->
+        <fcs_function name="systems/vacuum/relieve-suction-inhg">
+            <function>
+                <ifthen>
+                    <gt>
+                        <property>systems/vacuum/pump-rpm</property>
+                        <value>0.0</value>
+                    </gt>
+
+                    <!-- 4.50 - 1.0 / (rpm * 0.00131) -->
+                    <difference>
+                        <value>4.5</value>
+                        <quotient>
+                            <value>1.0</value>
+                            <product>
+                                <property>systems/vacuum/pump-rpm</property>
+                                <value>0.00131</value>
+                            </product>
+                        </quotient>
+                    </difference>
+
+                    <value>0.0</value>
+                </ifthen>
+            </function>
+        </fcs_function>
+
+        <summer name="systems/vacuum/suction-inhg">
+            <input>systems/vacuum/pump-suction-inhg</input>
+            <output>/systems/vacuum/suction-inhg</output>
+            <clipto>
+                <min>0.0</min>
+                <max>systems/vacuum/relieve-suction-inhg</max>
+            </clipto>
+        </summer>
+
+        <!-- Most FlightGear instruments assume normal suction is 5 in Hg -->
+        <pure_gain name="systems/vacuum/scaled-suction-inhg">
+            <input>systems/vacuum/suction-inhg</input>
+            <gain>1.25</gain><!-- 5/4 -->
+            <output>/systems/vacuum/scaled-suction-inhg</output>
+        </pure_gain>
+
+    </channel>
+
+</system>

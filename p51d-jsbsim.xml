@@ -594,6 +594,7 @@ Hal V. Engel hvengel@astound.net
 
     </propulsion>
 
+    <system file="vacuum-system"/>
     <system file="parking-brake"/>
     <system file="indicated-airspeed"/>
     <system file="propulsion"/>

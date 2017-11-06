@@ -48,11 +48,4 @@
         <error-factor>0.2</error-factor>
     </static>
 
-    <vacuum>
-        <name>vacuum</name>
-        <number>0</number>
-        <rpm>/engines/engine[0]/rpm</rpm>
-        <scale>1.0</scale>
-    </vacuum>
-
 </PropertyList>
