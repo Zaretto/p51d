@@ -40,3 +40,24 @@ gui.menuEnable("gps", 0);
 
 gui.menuEnable("adjust-hud", 0);
 gui.menuEnable("jetway", 0);
+
+# It would be much easier for everyone if the fgms servers just enforced
+# everyone to use the same protocol. Then FG would simply show only
+# servers that require the 2017.2 protocol.
+setlistener("/sim/multiplay/online", func (n) {
+    if (n.getBoolValue() and getprop("/sim/multiplay/protocol-version") != 2) {
+        canvas.MessageBox.warning(
+            "2017.2 multiplayer protocol required",
+            "Using this model over multiplayer requires using the 2017.2 protocol. Do you want to switch the compatibility to 'Visible to only 2017+'?",
+            func (sel) {
+                if (sel != canvas.MessageBox.Ok) {
+                    return;
+                }
+                setprop("/sim/multiplay/protocol-version", 2);
+            },
+            canvas.MessageBox.Ok
+            | canvas.MessageBox.Cancel
+            | canvas.MessageBox.DontShowAgain
+        );
+    }
+}, 0, 0);
