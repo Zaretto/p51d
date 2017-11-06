@@ -35,7 +35,16 @@ have positive numbers and stops after the first few negative
 values.  Linear interpolation was used for the remaining
 negative coefficients.
 
- -->
+Gear ratio is 2.38 for the V-1650-7 (derived from Merlin 61)
+
+"I believe that 0.42 is correct for the V-1650-7 since a lower ratio would
+result in lower prop tip speeds and for faster the aircraft this will allow
+for more of the speed envelope to be below a prop tip speed of 1000 FPM which
+is the point where efficiency starts to drop off." - Hal V. Engel [1]
+
+[1] https://ww2aircraft.net/forum/threads/p-51d-propeller-technical-data-request.24166/
+
+-->
 
 <propeller name="prop">
   <!-- <ixx>23.6164 </ixx> -->
