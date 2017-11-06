@@ -161,9 +161,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <bool n="5" alias="/aircraft/lighting/landing-light"/>
 
                 <!-- Recognition lights on right wing -->
-                <bool n="6" alias="/controls/lighting/red-rec-light"/>
-                <bool n="7" alias="/controls/lighting/green-rec-light"/>
-                <bool n="8" alias="/controls/lighting/amber-rec-light"/>
+                <bool n="6" alias="/aircraft/lighting/red-rec-light"/>
+                <bool n="7" alias="/aircraft/lighting/green-rec-light"/>
+                <bool n="8" alias="/aircraft/lighting/amber-rec-light"/>
 
                 <bool n="9" alias="/engines/engine[0]/cranking"/>
                 <bool n="10" alias="/controls/armament/gun-trigger"/>
@@ -353,9 +353,6 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
    <lighting>
       <tail-position-lights type="int">0</tail-position-lights>
       <wing-position-lights type="int">0</wing-position-lights>
-      <red-rec-light type="int"> 0 </red-rec-light>
-      <green-rec-light type="int"> 0 </green-rec-light>
-      <amber-rec-light type="int"> 0 </amber-rec-light>
       <red-rec-light-sw type="int"> 0 </red-rec-light-sw>
       <green-rec-light-sw type="int"> 0 </green-rec-light-sw>
       <amber-rec-light-sw type="int"> 0 </amber-rec-light-sw>
@@ -552,6 +549,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             <landing-light type="bool">false</landing-light>
             <wing-position-lights type="int">0</wing-position-lights>
             <tail-position-lights type="int">0</tail-position-lights>
+
+            <red-rec-light type="bool">false</red-rec-light>
+            <green-rec-light type="bool">false</green-rec-light>
+            <amber-rec-light type="bool">false</amber-rec-light>
         </lighting>
 
         <switches>
