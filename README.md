@@ -36,6 +36,8 @@ New features
 
 * OPRF combat system for bullets, rockets, and bombs
 
+* Fixed bomb release ordering and require arming for explosion animation
+
 * Use HD model of rocket for submodels with ALS flame effect and thicker smoke
 
 * Zoom in or out using mouse scrollwheel, up to a distance of 300 meters
@@ -70,6 +72,8 @@ New features
 
 * Fixed the spinner making some objects behind it transparent
 
+* Animate blade angle of propeller
+
 * Added pitot tube cover and tie-downs
 
 * TODO Wheel chocks
@@ -92,13 +96,21 @@ New features
 
 * TODO Implemented rear radar warning receiver
 
-* TODO Fixed blade angle of propeller
-
 * TODO Crash detection: coolant fluid leak
 
 * TODO Fuel boost pumps needed for sufficient fuel flow above 8500 ft
 
 * TODO External fuel tanks need vacuum pressure for fuel flow
+
+* TODO Improved guard switches of coolant and oil radiator controls
+
+* TODO Added wing fuel tank gages on floor
+
+* TODO Added windshield defroster, hot and cold air control on floor
+
+* TODO Added fuselage fuel tank in cockpit
+
+* TODO Implemented fluorescent lights
 
 Authors
 =======
