@@ -346,13 +346,15 @@
                /controls/armament/User-Selected-Stores == 3
                /controls/armament/User-Selected-Stores == 5
            </test>
+           <output>/aircraft/armament/outer-pylons</output>
         </switch>
 
         <switch name="systems/armament/inner-pylons">
            <default value="0"/>
-           <test value="1">
+           <test logic="OR" value="1">
                /controls/armament/User-Selected-Stores == 2
            </test>
+           <output>/aircraft/armament/inner-pylons</output>
         </switch>
 
         <switch name="systems/armament/bomb-pylons">
@@ -363,6 +365,7 @@
                /controls/armament/User-Selected-Stores == 4
                /controls/armament/User-Selected-Stores == 5
            </test>
+           <output>/aircraft/armament/bomb-pylons</output>
         </switch> 
 
      </channel>

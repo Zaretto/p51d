@@ -12,32 +12,6 @@
 
     </channel>
 
-    <channel name="bombRacks">
-
-        <pure_gain name="bombRacksVisibleToMP">
-            <input>/fdm/jsbsim/systems/armament/bomb-pylons</input>
-            <gain>1.0</gain>
-            <output>/sim/multiplay/generic/int[18]</output>
-        </pure_gain>
-
-    </channel>
-
-    <channel name="rocketRacks">
-
-        <pure_gain name="outerRocketRacksVisibleToMP">
-            <input>/fdm/jsbsim/systems/armament/outer-pylons</input>
-            <gain>1.0</gain>
-            <output>/sim/multiplay/generic/int[19]</output>
-        </pure_gain>
-
-        <pure_gain name="innerRocketRacksVisibleToMP">
-            <input>/fdm/jsbsim/systems/armament/inner-pylons</input>
-            <gain>1.0</gain>
-            <output>/sim/multiplay/generic/int[20]</output>
-        </pure_gain>
-
-    </channel>
-
     <channel name="tailWheelSteering">
 
         <pure_gain name="tailWheelSteeringVisibleToMP">

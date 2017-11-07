@@ -32,8 +32,8 @@
         <lighting>
             <landing-light>sim/multiplay/generic/bool[5]</landing-light>
 
-            <wing-position>sim/multiplay/generic/float[6]</wing-position>
-            <tail-position>sim/multiplay/generic/float[7]</tail-position>
+            <wing-position>sim/multiplay/generic/short[0]</wing-position>
+            <tail-position>sim/multiplay/generic/short[1]</tail-position>
 
             <!-- Recognition lights on right wing -->
             <red-rec>sim/multiplay/generic/bool[6]</red-rec>
