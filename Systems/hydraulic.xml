@@ -6,6 +6,47 @@
     
     <channel name="pressure">
 
+        <!--
+             Flow chart of hydraulic system on page 264 of maintenance
+             manual AN 01-60JE-2.
+
+             2000 RPM should give 1100 - 1250 psi of system pressure.
+             Accumulator pressure is 1000 - 1100 psi.
+
+             Using hydraulic equipment reduces pressure in accumulator.
+             Unloader valve cuts in and starts building system pressure
+             at 800 - 850 psi.
+
+             Unloading valve should stay unloaded for 5 minutes before
+             systems starts building pressure again.
+
+             Fluid flow is 3.5 gpm.
+
+             Hydraulic pressure gage has lag of no more than 2 seconds.
+
+             Temperature changes causes a difference of up to 100 psi
+             of air in accumulator. Air pressure in accumulator is
+             375 - 425 psi when engine pump is inoperative and system
+             pressure is exhausted.
+
+             When hydraulic equipment is being used, system pressure drops.
+             When it gets to 800 - 850 psi, fluid will flow from the
+             accumulator to the system. The system pressure remains at
+             800 - 850 psi, but the accumulator pressure starts dropping.
+             When the accumulator pressure reaches 800 - 850 psi too, the
+             engine pump starts increasing pressure in the accumulator
+             and system again.
+
+             Reservoir has 1.209 gallons volume with 0.5^3 inch reserved
+             for brakes.
+
+             pump -> C -> D -> system
+                     | \
+                     /  \
+                    B    E
+             reservoir   accumulator
+        -->
+
        <switch name="systems/hydraulic/pressure">
           <default value="0.0"/>
           <test value="1000.0">
