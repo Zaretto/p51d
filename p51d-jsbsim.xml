@@ -606,8 +606,8 @@ Hal V. Engel hvengel@astound.net
     <system file="compressability"/>
     <system file="weapons-weight"/>
     <system file="tail-wheel"/>
-    <system file="electrical"/>
     <system file="hydraulic"/>
+    <system file="electrical"/>
     <system file="MPAnimation"/>
     <system file="effects"/>
     <system file="securing"/>

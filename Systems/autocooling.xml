@@ -2,6 +2,9 @@
 
 <system name="autocooling">
 
+    <property value="0.0">systems/cooling/coolant-pos-norm</property>
+    <property value="0.0">systems/cooling/oil-pos-norm</property>
+
     <!-- Minimum control temperature is 98 C for the coolant
          and 68 C for the oil. (page 305 of maintenance manual
          AN 01-60JE-2)
@@ -192,7 +195,7 @@
             </range>
         </aerosurface_scale>
 
-        <pure_gain name="systems/cooling/engine-cooling-factor">
+        <pure_gain name="systems/cooling/oil-cooling-factor">
             <input>systems/cooling/ram-pressure-gain</input>
             <gain>systems/cooling/oil-door-gain</gain>
             <output>propulsion/engine/oil-cooling-factor</output>

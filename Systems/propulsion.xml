@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
 
-
-
 <system name="Propulsion">
     
     <property>systems/engine/mp-inhg</property>
     
-    <property> /controls/armament/drop-tank-released-1 </property>
-    <property> /controls/armament/drop-tank-released-2 </property>
+    <property>/controls/armament/drop-tank-released-1</property>
+    <property>/controls/armament/drop-tank-released-2</property>
     <property value="1">systems/engine/ram-air-control</property>
     <property value="0">systems/engine/hot-air-control</property>
         
@@ -445,29 +443,24 @@
        </pure_gain>-->
 
     </channel>
-    
-    <channel name="Engine Loudness">
-       
-       <switch name="propulsion/engine/enclosure-attenuation">
-          <default value="1"/>
-          <test value= "propulsion/engine/enclosure-attenuation-level">
-             /sim/current-view/internal GT 0.5
-          </test>
-      </switch>
 
-       <fcs_function name="enclosure attenuation">
-          <function>
-            <product>
-              <property>/canopy/position-norm</property>
-              <value>6.0</value>
-           </product>
-          </function>
-          <clipto>
-            <min>0.1</min>
-            <max> 1.0 </max>
-          </clipto>
-          <output>propulsion/engine/enclosure-attenuation-level</output>
-       </fcs_function>
+    <channel name="Engine Loudness">
+
+        <pure_gain name="propulsion/engine/enclosure-attenuation-level">
+            <input>/canopy/position-norm</input>
+            <gain>6.0</gain>
+            <clipto>
+                <min>0.1</min>
+                <max>1.0</max>
+            </clipto>
+        </pure_gain>
+
+        <switch name="propulsion/engine/enclosure-attenuation">
+            <default value="1"/>
+            <test value="propulsion/engine/enclosure-attenuation-level">
+                /sim/current-view/internal EQ 1
+            </test>
+        </switch>
 
     </channel>
 
