@@ -654,7 +654,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/M64/M64-submodels.xml</submodel-path>
+    <submodel-path>Aircraft/p51d/Stores/M64/M64-impact-left.xml</submodel-path>
   </submodel>
 
   <submodel>
@@ -678,7 +678,7 @@ Note: Positions of the 3D models are defined in Models/weapons.xml
     <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bomb</impact-report>
-    <submodel-path>Aircraft/p51d/Stores/M64/M64-submodels.xml</submodel-path>
+    <submodel-path>Aircraft/p51d/Stores/M64/M64-impact-right.xml</submodel-path>
   </submodel>
 
     <submodel>

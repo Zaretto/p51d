@@ -418,9 +418,7 @@
         <switch name="bomb right">
           <default value="0"/>
           <test logic="OR" value="1">
-              /controls/armament/salvo-both == 1
               /controls/armament/salvo-right == 1
-              systems/armament/trigger-both == 1
               systems/armament/trigger-right == 1
           </test>
           <output>/controls/armament/bomb-trigger-2</output>
@@ -430,9 +428,7 @@
        <switch name="bomb left">
           <default value="0"/>
           <test logic="OR" value="1">
-              /controls/armament/salvo-both == 1
               /controls/armament/salvo-left == 1
-              systems/armament/trigger-both == 1
               systems/armament/trigger-left == 1
           </test>
           <output>/controls/armament/bomb-trigger-1</output>
@@ -456,35 +452,19 @@
             </test>
         </switch>
 
-        <switch name="systems/armament/trigger-both">
-            <default value="0"/>
-            <test logic="AND" value="1">
-                systems/armament/trigger-valid EQ 1
-                systems/armament/bombs-both == 1
-            </test>
-        </switch>
-
-        <switch name="systems/armament/trigger-left">
-            <default value="0"/>
-            <test logic="AND" value="1">
-                systems/armament/trigger-valid EQ 1
-                /controls/armament/bombs-train == 1
-            </test>
-        </switch>
-
-        <property value="0">systems/armament/trigger-left-state</property>
+        <property value="0">systems/armament/trigger-state</property>
 
         <!-- In order to release the right bomb/tank, the left one has
              to be released first and then the trigger must be unpressed,
              before the trigger can be pressed again to release the right one.
         -->
-        <switch name="systems/armament/trigger-left-state">
-            <default value="systems/armament/trigger-left-state"/>
+        <switch name="systems/armament/trigger-state">
+            <default value="systems/armament/trigger-state"/>
 
             <!-- Left bomb/tank released -->
             <test logic="AND" value="1">
                 <test logic="AND" value="1">
-                    systems/armament/trigger-left-state EQ 0
+                    systems/armament/trigger-state EQ 0
                 </test>
 
                 <test logic="OR" value="1">
@@ -502,8 +482,22 @@
 
             <!-- Bomb trigger let go -->
             <test logic="AND" value="2">
-                systems/armament/trigger-left-state EQ 1
+                systems/armament/trigger-state EQ 1
                 /controls/armament/trigger2 EQ 0
+            </test>
+
+            <!-- Right bomb released -->
+            <test logic="AND" value="3">
+                <test logic="AND" value="1">
+                    systems/armament/trigger-state EQ 2
+                </test>
+
+                <test logic="AND" value="1">
+                    /ai/submodels/submodel[22]/count EQ 0
+                    /ai/submodels/submodel[23]/count EQ 0
+                    /ai/submodels/submodel[24]/count EQ 0
+                    /ai/submodels/submodel[25]/count EQ 0
+                </test>
             </test>
 
             <!-- Left bomb/tank present again -->
@@ -513,15 +507,92 @@
             </test>
         </switch>
 
+        <switch name="systems/armament/trigger-left">
+            <default value="0"/>
+            <test logic="OR" value="1">
+                <test logic="AND" value="1">
+                    systems/armament/trigger-valid EQ 1
+                    systems/armament/trigger-state EQ 0
+                    /controls/armament/bombs-train == 1
+                </test>
+
+                <test logic="AND" value="1">
+                    systems/armament/trigger-valid EQ 1
+                    systems/armament/bombs-both == 1
+                </test>
+            </test>
+        </switch>
+
         <switch name="systems/armament/trigger-right">
             <default value="0"/>
-            <test logic="AND" value="1">
-                systems/armament/trigger-valid EQ 1
-                systems/armament/trigger-left-state EQ 2
-                /controls/armament/bombs-train == 1
-           </test>
+            <test logic="OR" value="1">
+                <test logic="AND" value="1">
+                    systems/armament/trigger-valid EQ 1
+                    systems/armament/trigger-state EQ 2
+                    /controls/armament/bombs-train == 1
+                </test>
+
+                <test logic="AND" value="1">
+                    systems/armament/trigger-valid EQ 1
+                    systems/armament/bombs-both == 1
+                </test>
+            </test>
         </switch> 
 
     </channel>
+
+    <channel name="bomb-arming">
+
+        <property value="0">systems/armament/arm-left</property>
+        <property value="0">systems/armament/arm-right</property>
+
+        <!-- Electrical power is needed to arm or de-arm the bomb -->
+        <switch name="systems/armament/arm-left">
+            <default value="systems/armament/arm-left"/>
+            <test logic="AND" value="0">
+                /controls/engines/engine/master-bat EQ 1
+                /controls/armament/left-bomb-arm-chem-release != -1
+            </test>
+            <test logic="AND" value="1">
+                /controls/engines/engine/master-bat EQ 1
+                /controls/armament/left-bomb-arm-chem-release == -1
+            </test>
+        </switch>
+
+        <!-- Electrical power is needed to arm or de-arm the bomb -->
+        <switch name="systems/armament/arm-right">
+            <default value="systems/armament/arm-right"/>
+            <test logic="AND" value="0">
+                /controls/engines/engine/master-bat EQ 1
+                /controls/armament/right-bomb-arm-chem-release != -1
+            </test>
+            <test logic="AND" value="1">
+                /controls/engines/engine/master-bat EQ 1
+                /controls/armament/right-bomb-arm-chem-release == -1
+            </test>
+        </switch>
+
+        <property value="0">systems/armament/arm-release-left</property>
+        <property value="0">systems/armament/arm-release-right</property>
+
+        <!-- Store current arm status when the bomb gets released -->
+        <switch name="systems/armament/arm-release-left">
+            <default value="systems/armament/arm-release-left"/>
+            <test logic="AND" value="systems/armament/arm-left">
+                /controls/armament/bomb-trigger-1 EQ 1
+                /ai/submodels/submodel[22]/count EQ 1
+            </test>
+        </switch>
+
+        <!-- Store current arm status when the bomb gets released -->
+        <switch name="systems/armament/arm-release-right">
+            <default value="systems/armament/arm-release-right"/>
+            <test logic="AND" value="systems/armament/arm-right">
+                /controls/armament/bomb-trigger-2 EQ 1
+                /ai/submodels/submodel[23]/count EQ 1
+            </test>
+        </switch>
+
+     </channel>
 
 </system>
