@@ -163,6 +163,16 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <float n="13" alias="/gear/gear[1]/rollspeed-ms"/>
                 <float n="14" alias="/gear/gear[2]/rollspeed-ms"/>
 
+                <!-- Flight control surfaces -->
+                <float n="15" alias="/aircraft/surface-positions/aileron-pos-norm"/>
+                <float n="16" alias="/aircraft/surface-positions/elevator-pos-norm"/>
+                <float n="17" alias="/aircraft/surface-positions/rudder-pos-norm"/>
+
+                <!-- Trim tabs -->
+                <float n="18" alias="/aircraft/surface-positions/roll-trim-pos-norm"/>
+                <float n="19" alias="/aircraft/surface-positions/pitch-trim-pos-norm"/>
+                <float n="20" alias="/aircraft/surface-positions/yaw-trim-pos-norm"/>
+
                 <string n="0" type="string"/>
 
                 <!-- Securing -->

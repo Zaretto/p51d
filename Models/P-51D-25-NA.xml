@@ -47,6 +47,15 @@
             <tail-left-tiedown>sim/multiplay/generic/bool[3]</tail-left-tiedown>
             <tail-right-tiedown>sim/multiplay/generic/bool[4]</tail-right-tiedown>
         </securing>
+        <surfaces>
+            <aileron>sim/multiplay/generic/float[15]</aileron>
+            <elevator>sim/multiplay/generic/float[16]</elevator>
+            <rudder>sim/multiplay/generic/float[17]</rudder>
+
+            <roll-trim>sim/multiplay/generic/float[18]</roll-trim>
+            <pitch-trim>sim/multiplay/generic/float[19]</pitch-trim>
+            <yaw-trim>sim/multiplay/generic/float[20]</yaw-trim>
+        </surfaces>
     </params>
 
  <path>P-51D-25NA.ac</path>
@@ -1111,7 +1120,7 @@
   <object-name>aileronRight</object-name>
   <object-name>aileronTrimTabRight</object-name>
   <object-name>aileronTrimTabLinkageRight</object-name>
-  <property>/aircraft/surface-positions/aileron-pos-norm</property>
+  <property alias="/params/surfaces/aileron"/>
   <factor>-15</factor><!-- 15 deg -->
   <axis>   
    <x1-m>3.37</x1-m>
@@ -1128,7 +1137,7 @@
   <object-name>aileronLeft</object-name>
   <object-name>aileronTrimTabLeft</object-name>
   <object-name>aileronTrimTabLinkageLeft</object-name>
-  <property>/aircraft/surface-positions/aileron-pos-norm</property>
+  <property alias="/params/surfaces/aileron"/>
   <factor>-15</factor><!-- 15 deg -->
   <axis>   
    <x1-m>3.37</x1-m>
@@ -1148,7 +1157,7 @@
   <type>rotate</type>
   <object-name>aileronTrimTabLeft</object-name>
   <object-name>aileronTrimTabLinkageLeft</object-name>
-  <property>/aircraft/surface-positions/roll-trim-pos-norm</property>
+  <property alias="/params/surfaces/roll-trim"/>
   <factor>10</factor><!-- 10 deg -->
   <axis>
    <x1-m>3.47279</x1-m>
@@ -1163,7 +1172,7 @@
  <animation>
   <type>rotate</type>
   <object-name>aileronTrimTabLinkageLeft</object-name>
-  <property>/aircraft/surface-positions/roll-trim-pos-norm</property>
+  <property alias="/params/surfaces/roll-trim"/>
   <factor>-7.0</factor>
   <axis>
    <x1-m>3.5804</x1-m>
@@ -1184,7 +1193,7 @@
   <object-name>rudderTrimLinkageFairing</object-name>
   <object-name>rudderTrimTabHorn</object-name>
   <object-name>rudderTrimTabRod</object-name>
-  <property>/aircraft/surface-positions/rudder-pos-norm</property>
+  <property alias="/params/surfaces/rudder"/>
   <factor>30.0</factor><!-- 30 deg -->
   <axis>   
    <x1-m>8.32</x1-m>
@@ -1203,7 +1212,7 @@
   <object-name>elevatorTrimTabRight</object-name>
   <object-name>elevatorTrimTabRodleft</object-name>
   <object-name>elevatorTrimTabRodRight</object-name>
-  <property>/aircraft/surface-positions/elevator-pos-norm</property>
+  <property alias="/params/surfaces/elevator"/>
   <factor>-30.0</factor><!-- 30 deg up, 20 deg down -->
   <axis>   
    <x1-m>7.82</x1-m>
@@ -1451,7 +1460,7 @@
   <type>rotate</type>
   <object-name>elevatorTrimTabLeft</object-name>
   <object-name>elevatorTrimTabRodleft</object-name>
-  <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+  <property alias="/params/surfaces/pitch-trim"/>
   <interpolation>
    <entry>
     <ind>-1</ind>
@@ -1479,7 +1488,7 @@
   <animation>
   <type>rotate</type>
   <object-name>elevatorTrimTabRodleft</object-name>
-  <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+  <property alias="/params/surfaces/pitch-trim"/>
   <interpolation>
    <entry>
     <ind>-1</ind>
@@ -1508,7 +1517,7 @@
   <type>rotate</type>
   <object-name>elevatorTrimTabRight</object-name>
   <object-name>elevatorTrimTabRodRight</object-name>
-  <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+  <property alias="/params/surfaces/pitch-trim"/>
   <interpolation>
    <entry>
     <ind>1</ind>
@@ -1536,7 +1545,7 @@
    <animation>
   <type>rotate</type>
   <object-name>elevatorTrimTabRodRight</object-name>
-  <property>/aircraft/surface-positions/pitch-trim-pos-norm</property>
+  <property alias="/params/surfaces/pitch-trim"/>
   <interpolation>
    <entry>
     <ind>1</ind>
@@ -1564,7 +1573,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rudderTrimTab</object-name>
-  <property>/aircraft/surface-positions/yaw-trim-pos-norm</property>
+  <property alias="/params/surfaces/yaw-trim"/>
   <factor>-10</factor>
     <axis>   
    <x1-m>8.74048</x1-m>
@@ -1579,7 +1588,7 @@
  <animation>
   <type>translate</type>
   <object-name>rudderTrimTabRod</object-name>
-  <property>/aircraft/surface-positions/yaw-trim-pos-norm</property>
+  <property alias="/params/surfaces/yaw-trim"/>
   <factor>0.001</factor>
     <axis>   
    <x1-m>8.49452</x1-m>
@@ -2218,7 +2227,7 @@
         <type>rotate</type>
         <object-name>nav-light-tail-dim</object-name>
         <object-name>nav-light-tail-bright</object-name>
-        <property>/aircraft/surface-positions/rudder-pos-norm</property>
+        <property alias="/params/surfaces/rudder"/>
         <factor>30.0</factor><!-- 30 deg -->
         <axis>
             <x1-m>8.32</x1-m>
