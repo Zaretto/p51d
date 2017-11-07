@@ -18,6 +18,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   <minimum-fg-version>2017.3.1</minimum-fg-version>
 
   <description>North American Aviation P-51D-25-NA</description>
+  <long-description>The North American Aviation P-51 Mustang is an American long-range, single-seat fighter and fighter-bomber used during World War II, the Korean War and other conflicts.</long-description>
   <author>Jim Wilson, Jon Berndt, Hal V. Engel, and onox</author>
   <status>production</status>
   <rating>
@@ -26,6 +27,20 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
      <model type="int">4</model>
      <cockpit type="int">4</cockpit>
   </rating>
+
+  <tags>
+      <tag>north-american</tag>
+      <tag>low-wing</tag>
+      <tag>tail-dragger</tag>
+      <tag>retractable-gear</tag>
+      <tag>castering</tag>
+      <tag>single-engine</tag>
+      <tag>piston</tag>
+      <tag>supercharged</tag>
+      <tag>variable-pitch</tag>
+      <tag>fighter</tag>
+      <tag>ww2</tag>
+  </tags>
 
    <user>
        <callsign>N5428V</callsign>
