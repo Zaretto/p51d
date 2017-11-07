@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <PropertyList>
 
+    <params>
+        <rpm>engines/engine[6]/rpm</rpm>
+    </params>
+
 <path>propDisk.ac</path>
 
  <animation>
@@ -8,8 +12,8 @@
   <object-name>spinner2</object-name>
   <condition>
    <greater-than>
-    <property>engines/engine[0]/rpm</property>
-    <value>1199</value>
+    <property alias="/params/rpm"/>
+    <value>600</value>
    </greater-than>
   </condition>
  </animation>
@@ -19,8 +23,8 @@
   <object-name>PropellerDisk</object-name>
   <condition>
    <greater-than>
-    <property>engines/engine[0]/rpm</property>
-    <value>1000</value>
+    <property alias="/params/rpm"/>
+    <value>500</value>
    </greater-than>
   </condition>
  </animation>
@@ -28,7 +32,7 @@
  <animation>
   <type>spin</type>
   <object-name>PropellerDisk</object-name>
-  <property>engines/engine[0]/rpm</property>
+  <property alias="/params/rpm"/>
   <factor>0.01</factor>
   <axis>   
    <x1-m>-0.2119331</x1-m>
@@ -43,7 +47,7 @@
   <animation>
   <type>spin</type>
   <object-name>spinner2</object-name>
-  <property>engines/engine[0]/rpm</property>
+  <property alias="/params/rpm"/>
   <factor>0.03</factor>
   <axis>   
    <x1-m>-0.2119331</x1-m>
@@ -58,7 +62,7 @@
   <animation>
   <type>transparency</type>
   <object-name>PropellerDisk</object-name>
-  <alpha-prop>engines/engine[0]/rpm</alpha-prop>
+  <alpha-prop alias="/params/rpm"/>
   <interpolation>
       <entry>
          <ind>0</ind>

@@ -284,6 +284,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             <n1 alias="/aircraft/pilot/heading-deg"/>
             <n2 alias="/aircraft/pilot/pitch-deg"/>
         </engine>
+
+        <engine n="6">
+            <rpm alias="/fdm/jsbsim/propulsion/engine/propeller-rpm"/>
+        </engine>
     </engines>
 
  <instrumentation>

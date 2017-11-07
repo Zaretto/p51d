@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <PropertyList>
 
+    <params>
+        <rpm>engines/engine[6]/rpm</rpm>
+    </params>
+
 <path>prop.ac</path>
 
  <animation>
@@ -12,8 +16,8 @@
   <object-name>spinner</object-name>
   <condition>
    <less-than>
-    <property>engines/engine[0]/rpm</property>
-    <value>1200</value>
+    <property alias="/params/rpm"/>
+    <value>600</value>
    </less-than>
   </condition>
  </animation>
@@ -25,7 +29,7 @@
   <object-name>propBlade3</object-name>
   <object-name>propBlade4</object-name>
   <object-name>spinner</object-name>
-  <property>engines/engine[0]/rpm</property>
+  <property alias="/params/rpm"/>
   <factor>0.479</factor>
   <axis>   
    <x1-m>-0.2125359</x1-m>
@@ -43,18 +47,18 @@
   <object-name>propBlade2</object-name>
   <object-name>propBlade3</object-name>
   <object-name>propBlade4</object-name>
-  <alpha-prop>engines/engine[0]/rpm</alpha-prop>
+  <alpha-property alias="/params/rpm"/>
   <interpolation>
       <entry>
          <ind>0</ind>
          <dep>1.0</dep>
       </entry>
       <entry>
-         <ind>900</ind>
+         <ind>450</ind>
          <dep>0.3</dep>
       </entry>
 	  <entry>
-         <ind>1100</ind>
+         <ind>550</ind>
          <dep>0.0</dep>
       </entry>
    </interpolation>
