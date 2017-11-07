@@ -58,6 +58,10 @@
             </test>
         </switch>
 
+        <switch name="systems/pilot/internal-pitch-deg">
+            <default value="/sim/current-view/pitch-offset-deg"/>
+        </switch>
+
         <switch name="systems/pilot/in-air">
             <default value="0"/>
 
@@ -122,8 +126,13 @@
                 /sim/current-view/internal EQ 0
             </test>
 
+            <test logic="AND" value="-/orientation/pitch-deg">
+                gear/wow EQ 1
+                /sim/current-view/internal EQ 0
+            </test>
+
             <!-- Internal cockpit view -->
-            <test logic="AND" value="systems/pilot/pitch-deg">
+            <test logic="AND" value="systems/pilot/internal-pitch-deg">
                 /sim/current-view/internal EQ 1
             </test>
         </switch>
