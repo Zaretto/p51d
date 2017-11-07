@@ -4,6 +4,14 @@
 
     <property value="0">systems/right-flor-gain</property>
 
+    <property value="0">systems/armament/trigger-state</property>
+
+    <property value="0">systems/armament/arm-left</property>
+    <property value="0">systems/armament/arm-right</property>
+
+    <property value="0">systems/armament/arm-release-left</property>
+    <property value="0">systems/armament/arm-release-right</property>
+
     <channel name="instruments">
 
         <!-- Vacuum-based instruments use gyro norm power = suction / 5,
@@ -455,8 +463,6 @@
             </test>
         </switch>
 
-        <property value="0">systems/armament/trigger-state</property>
-
         <!-- In order to release the right bomb/tank, the left one has
              to be released first and then the trigger must be unpressed,
              before the trigger can be pressed again to release the right one.
@@ -546,9 +552,6 @@
 
     <channel name="bomb-arming">
 
-        <property value="0">systems/armament/arm-left</property>
-        <property value="0">systems/armament/arm-right</property>
-
         <!-- Electrical power is needed to arm or de-arm the bomb -->
         <switch name="systems/armament/arm-left">
             <default value="systems/armament/arm-left"/>
@@ -574,9 +577,6 @@
                 /controls/armament/right-bomb-arm-chem-release == -1
             </test>
         </switch>
-
-        <property value="0">systems/armament/arm-release-left</property>
-        <property value="0">systems/armament/arm-release-right</property>
 
         <!-- Store current arm status when the bomb gets released -->
         <switch name="systems/armament/arm-release-left">
