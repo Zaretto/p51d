@@ -47,6 +47,16 @@
                 </binding>
             </checkbox>
 
+            <checkbox>
+                <halign>left</halign>
+                <label>Always show propeller blades</label>
+                <property>/aircraft/settings/show-blades</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+
         </group>
 
         <hrule/>

@@ -1,96 +1,107 @@
 <?xml version="1.0"?>
+
 <PropertyList>
 
     <params>
         <rpm>engines/engine[6]/rpm</rpm>
+        <show-blades>sim/multiplay/generic/bool[33]</show-blades>
     </params>
 
-<path>propDisk.ac</path>
+    <path>propDisk.ac</path>
 
- <animation>
-  <type>select</type>
-  <object-name>spinner2</object-name>
-  <condition>
-   <greater-than>
-    <property alias="/params/rpm"/>
-    <value>600</value>
-   </greater-than>
-  </condition>
- </animation>
-  
- <animation>
-  <type>select</type>
-  <object-name>PropellerDisk</object-name>
-  <condition>
-   <greater-than>
-    <property alias="/params/rpm"/>
-    <value>500</value>
-   </greater-than>
-  </condition>
- </animation>
+    <animation>
+        <type>select</type>
+        <object-name>spinner2</object-name>
+        <condition>
+            <and>
+                <not>
+                    <property alias="/params/show-blades"/>
+                </not>
+                <greater-than>
+                    <property alias="/params/rpm"/>
+                    <value>600</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
 
- <animation>
-  <type>spin</type>
-  <object-name>PropellerDisk</object-name>
-  <property alias="/params/rpm"/>
-  <factor>0.01</factor>
-  <axis>   
-   <x1-m>-0.2119331</x1-m>
-   <y1-m>-0.00001957826</y1-m>
-   <z1-m>-0.0697053</z1-m>
-   <x2-m>-0.8283391</x2-m>
-   <y2-m>0.00003032945</y2-m>
-   <z2-m>-0.0882788</z2-m>
-  </axis>
- </animation>
- 
-  <animation>
-  <type>spin</type>
-  <object-name>spinner2</object-name>
-  <property alias="/params/rpm"/>
-  <factor>0.03</factor>
-  <axis>   
-   <x1-m>-0.2119331</x1-m>
-   <y1-m>-0.00001957826</y1-m>
-   <z1-m>-0.0697053</z1-m>
-   <x2-m>-0.8283391</x2-m>
-   <y2-m>0.00003032945</y2-m>
-   <z2-m>-0.0882788</z2-m>
-  </axis>
- </animation>
- 
-  <animation>
-  <type>transparency</type>
-  <object-name>PropellerDisk</object-name>
-  <alpha-prop alias="/params/rpm"/>
-  <interpolation>
-      <entry>
-         <ind>0</ind>
-         <dep>0.0</dep>
-      </entry>
-      <entry>
-         <ind>1000</ind>
-         <dep>0.0</dep>
-      </entry>
-	  <entry>
-         <ind>1200</ind>
-         <dep>1.0</dep>
-      </entry>
-   </interpolation>
- </animation>
- 
-  
- <animation>
-  <type>material</type>
-   <object-name>spinner2</object-name>
-   <property-base>sim/model/livery</property-base>
-   <texture-spinner2>texture-spinner</texture-spinner2>
-   <texture>DDspinner2.png</texture>
- </animation>
- 
- <effect>
-    <inherits-from>Aircraft/p51d/Models/Effects/spinner</inherits-from>
-    <object-name>spinner2</object-name>
-</effect>
+    <animation>
+        <type>select</type>
+        <object-name>PropellerDisk</object-name>
+        <condition>
+            <and>
+                <not>
+                    <property alias="/params/show-blades"/>
+                </not>
+                <greater-than>
+                    <property alias="/params/rpm"/>
+                    <value>500</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>spin</type>
+        <object-name>PropellerDisk</object-name>
+        <property alias="/params/rpm"/>
+        <factor>0.01</factor>
+        <axis>
+            <x1-m>-0.2119331</x1-m>
+            <y1-m>-0.00001957826</y1-m>
+            <z1-m>-0.0697053</z1-m>
+            <x2-m>-0.8283391</x2-m>
+            <y2-m>0.00003032945</y2-m>
+            <z2-m>-0.0882788</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>spin</type>
+        <object-name>spinner2</object-name>
+        <property alias="/params/rpm"/>
+        <factor>0.03</factor>
+        <axis>
+            <x1-m>-0.2119331</x1-m>
+            <y1-m>-0.00001957826</y1-m>
+            <z1-m>-0.0697053</z1-m>
+            <x2-m>-0.8283391</x2-m>
+            <y2-m>0.00003032945</y2-m>
+            <z2-m>-0.0882788</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>transparency</type>
+        <object-name>PropellerDisk</object-name>
+        <alpha-prop alias="/params/rpm"/>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>600</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1200</ind>
+                <dep>1.0</dep>
+            </entry>
+        </interpolation>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>spinner2</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-spinner2>texture-spinner</texture-spinner2>
+        <texture>DDspinner2.png</texture>
+    </animation>
+
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/spinner</inherits-from>
+        <object-name>spinner2</object-name>
+    </effect>
 
 </PropertyList>

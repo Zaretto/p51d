@@ -198,6 +198,8 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <bool n="30" alias="/gear/gear[12]/spark"/>
                 <bool n="31" alias="/gear/gear[14]/spark"/>
                 <bool n="32" alias="/gear/gear[15]/spark"/>
+
+                <bool n="33" alias="/aircraft/settings/show-blades"/>
             </generic>
         </multiplay>
 
@@ -238,6 +240,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <!-- Save some properties when the simulator is shut down -->
         <aircraft-data>
             <path>/fdm/jsbsim/settings/damage</path>
+            <path>/aircraft/settings/show-blades</path>
             <path>/aircraft/pilot/always-visible</path>
             <path>/aircraft/securing/pitot-cover-visible</path>
             <path>/aircraft/securing/left-tiedown-visible</path>
@@ -286,6 +289,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         </engine>
 
         <engine n="6">
+            <n1 alias="/fdm/jsbsim/propulsion/engine/blade-angle"/>
             <rpm alias="/fdm/jsbsim/propulsion/engine/propeller-rpm"/>
         </engine>
     </engines>
@@ -622,6 +626,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
                 <pitch-deg type="double">0.0</pitch-deg>
             </head>
         </pilot>
+
+        <settings>
+            <show-blades type="bool">false</show-blades>
+        </settings>
     </aircraft>
 
  <consumables>

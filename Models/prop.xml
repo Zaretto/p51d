@@ -1,81 +1,155 @@
 <?xml version="1.0"?>
+
 <PropertyList>
 
     <params>
+        <blade-angle>engines/engine[6]/n1</blade-angle>
         <rpm>engines/engine[6]/rpm</rpm>
+        <show-blades>sim/multiplay/generic/bool[33]</show-blades>
     </params>
 
-<path>prop.ac</path>
+    <path>prop.ac</path>
 
- <animation>
-  <type>select</type>
-  <object-name>propBlade1</object-name>
-  <object-name>propBlade2</object-name>
-  <object-name>propBlade3</object-name>
-  <object-name>propBlade4</object-name>
-  <object-name>spinner</object-name>
-  <condition>
-   <less-than>
-    <property alias="/params/rpm"/>
-    <value>600</value>
-   </less-than>
-  </condition>
- </animation>
+    <animation>
+        <type>select</type>
+        <object-name>propBlade1</object-name>
+        <object-name>propBlade2</object-name>
+        <object-name>propBlade3</object-name>
+        <object-name>propBlade4</object-name>
+        <object-name>spinner</object-name>
+        <condition>
+            <or>
+                <property alias="/params/show-blades"/>
+                <less-than>
+                    <property alias="/params/rpm"/>
+                    <value>600</value>
+                </less-than>
+            </or>
+        </condition>
+    </animation>
 
- <animation>
-  <type>spin</type>
-  <object-name>propBlade1</object-name>
-  <object-name>propBlade2</object-name>
-  <object-name>propBlade3</object-name>
-  <object-name>propBlade4</object-name>
-  <object-name>spinner</object-name>
-  <property alias="/params/rpm"/>
-  <factor>0.479</factor>
-  <axis>   
-   <x1-m>-0.2125359</x1-m>
-   <y1-m>-0.0004501</y1-m>
-   <z1-m>-0.0631098</z1-m>
-   <x2-m>-0.828942</x2-m>
-   <y2-m>0.00081717</y2-m>
-   <z2-m>-0.0816373</z2-m>
-  </axis>
- </animation>
- 
- <animation>
-  <type>transparency</type>
-  <object-name>propBlade1</object-name>
-  <object-name>propBlade2</object-name>
-  <object-name>propBlade3</object-name>
-  <object-name>propBlade4</object-name>
-  <alpha-property alias="/params/rpm"/>
-  <interpolation>
-      <entry>
-         <ind>0</ind>
-         <dep>1.0</dep>
-      </entry>
-      <entry>
-         <ind>450</ind>
-         <dep>0.3</dep>
-      </entry>
-	  <entry>
-         <ind>550</ind>
-         <dep>0.0</dep>
-      </entry>
-   </interpolation>
- </animation>
- 
-  
- <animation>
-  <type>material</type>
-   <object-name>spinner</object-name>
-   <property-base>sim/model/livery</property-base>
-   <texture-prop>texture-spinner</texture-prop>
-   <texture>DDspinner.png</texture>
- </animation>
+    <animation>
+        <type>spin</type>
+        <object-name>propBlade1</object-name>
+        <object-name>propBlade2</object-name>
+        <object-name>propBlade3</object-name>
+        <object-name>propBlade4</object-name>
+        <object-name>spinner</object-name>
+        <property alias="/params/rpm"/>
+        <factor>0.479</factor>
+        <axis>
+            <x1-m>-0.2125359</x1-m>
+            <y1-m>-0.0004501</y1-m>
+            <z1-m>-0.0631098</z1-m>
+            <x2-m>-0.828942</x2-m>
+            <y2-m>0.00081717</y2-m>
+            <z2-m>-0.0816373</z2-m>
+        </axis>
+    </animation>
 
- <effect>
-    <inherits-from>Aircraft/p51d/Models/Effects/spinner</inherits-from>
-    <object-name>spinner</object-name>
-</effect>
+    <animation>
+        <type>rotate</type>
+        <object-name>propBlade1</object-name>
+        <property alias="/params/blade-angle"/>
+        <offset-deg>-23.0</offset-deg>
+        <axis>
+            <!-- blade 1 -->
+            <x2-m>-0.39968</x2-m>
+            <y2-m> 0.00152</y2-m>
+            <z2-m>-0.33038</z2-m>
+            <!-- center of mass spinner -->
+            <x1-m>-0.40511</x1-m>
+            <y1-m> 0.00004</y1-m>
+            <z1-m>-0.06897</z1-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>propBlade2</object-name>
+        <property alias="/params/blade-angle"/>
+        <factor>-1</factor>
+        <offset-deg>23.0</offset-deg>
+        <axis>
+            <!-- blade 2 -->
+            <x2-m>-0.40893</x2-m>
+            <y2-m>-0.26440</y2-m>
+            <z2-m>-0.06751</z2-m>
+            <!-- center of mass spinner -->
+            <x1-m>-0.40511</x1-m>
+            <y1-m> 0.00004</y1-m>
+            <z1-m>-0.06897</z1-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>propBlade3</object-name>
+        <property alias="/params/blade-angle"/>
+        <offset-deg>-23.0</offset-deg>
+        <axis>
+            <!-- blade 3 -->
+            <x2-m>-0.41635</x2-m>
+            <y2-m> 0.00152</y2-m>
+            <z2-m> 0.19704</z2-m>
+            <!-- center of mass spinner -->
+            <x1-m>-0.40511</x1-m>
+            <y1-m> 0.00004</y1-m>
+            <z1-m>-0.06897</z1-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>propBlade4</object-name>
+        <property alias="/params/blade-angle"/>
+        <offset-deg>-23.0</offset-deg>
+        <axis>
+            <!-- blade 4 -->
+            <x2-m>-0.40684</x2-m>
+            <y2-m>-0.26440</y2-m>
+            <z2-m>-0.06928</z2-m>
+            <!-- center of mass spinner -->
+            <x1-m>-0.40511</x1-m>
+            <y1-m> 0.00004</y1-m>
+            <z1-m>-0.06897</z1-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>transparency</type>
+        <object-name>propBlade1</object-name>
+        <object-name>propBlade2</object-name>
+        <object-name>propBlade3</object-name>
+        <object-name>propBlade4</object-name>
+        <alpha-prop alias="/params/rpm"/>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>1.0</dep>
+            </entry>
+            <entry>
+                <ind>450</ind>
+                <dep>0.3</dep>
+            </entry>
+            <entry>
+                <ind>550</ind>
+                <dep>0.0</dep>
+            </entry>
+        </interpolation>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>spinner</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-spinner</texture-prop>
+        <texture>DDspinner.png</texture>
+    </animation>
+
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/spinner</inherits-from>
+        <object-name>spinner</object-name>
+    </effect>
 
 </PropertyList>
