@@ -1,4 +1,11 @@
-var closest_distance = 50;
+io.include("Aircraft/ExpansionPack/Nasal/init.nas");
+
+with("logger");
+
+var max_distance_rocket = 10;
+var max_distance_bomb = 50;
+
+var max_message_distance = 100;
 
 var hit_count_bullets = 0;
 var hit_count_rockets = 0;
@@ -76,72 +83,87 @@ setlistener("/ai/models/model-impact", func (node) {
         return;
     }
 
-    var typeNode = ballistic.getNode("impact/type");
+    var typeNode  = ballistic.getNode("impact/type");
+    var solidNode = ballistic.getNode("material/solid");
     var name = ballistic.getNode("name").getValue();
 
-    if (typeNode != nil and typeNode.getValue() != "terrain") {
-        var lat = ballistic.getNode("impact/latitude-deg").getValue();
-        var lon = ballistic.getNode("impact/longitude-deg").getValue();
-        var impactPos = geo.Coord.new().set_latlon(lat, lon);
+    if (typeNode == nil) {
+        return;
+    }
 
-        foreach (var mp; props.globals.getNode("/ai/models").getChildren("multiplayer")) {
-            var mlat = mp.getNode("position/latitude-deg").getValue();
-            var mlon = mp.getNode("position/longitude-deg").getValue();
-            var malt = mp.getNode("position/altitude-ft").getValue() * FT2M;
-            var selectionPos = geo.Coord.new().set_latlon(mlat, mlon, malt);
-            var distance = impactPos.distance_to(selectionPos);
+    var lat = ballistic.getNode("impact/latitude-deg").getValue();
+    var lon = ballistic.getNode("impact/longitude-deg").getValue();
+    var impactPos = geo.Coord.new().set_latlon(lat, lon);
 
-            if (distance < closest_distance) {
-                closest_distance = distance;
-                callsign = mp.getNode("callsign").getValue();
+    foreach (var mp; props.globals.getNode("/ai/models").getChildren("multiplayer")) {
+        var mlat = mp.getNode("position/latitude-deg").getValue();
+        var mlon = mp.getNode("position/longitude-deg").getValue();
+        var malt = mp.getNode("position/altitude-ft").getValue() * FT2M;
+        var selectionPos = geo.Coord.new().set_latlon(mlat, mlon, malt);
+        var distance = impactPos.distance_to(selectionPos);
+
+        if (distance < closest_distance) {
+            closest_distance = distance;
+            callsign = mp.getNode("callsign").getValue();
+        }
+    }
+
+    if (callsign == "" or !solidNode.getBoolValue()) {
+        return;
+    }
+
+    if (isBulletImpact(name)) {
+        if (typeNode.getValue() != "terrain") {
+            if (callsign == callsign_bullets) {
+                hit_count_bullets += 1;
+            }
+            else {
+                callsign_bullets = callsign;
+                hit_count_bullets = 1;
+            }
+
+            if (hit_timer_bullets == 0) {
+                hit_timer_bullets = 1;
+                settimer(hitBullets, 1);
             }
         }
-
-        if (callsign != "") {
-            if (isBulletImpact(name)) {
-                if (callsign == callsign_bullets) {
-                    hit_count_bullets += 1;
-                }
-                else {
-                    callsign_bullets = callsign;
-                    hit_count_bullets = 0;
-                }
-
-                if (hit_timer_bullets == 0) {
-                    hit_timer_bullets = 1;
-                    settimer(hitBullets, 1);
-                }
+    }
+    elsif (isRocketImpact(name)) {
+        if (typeNode.getValue() != "terrain" or closest_distance < max_distance_rocket) {
+            if (callsign == callsign_rockets) {
+                hit_count_rockets += 1;
+            }
+            else {
+                callsign_rockets = callsign;
+                hit_count_rockets = 1;
             }
 
-            if (isRocketImpact(name)) {
-                if (callsign == callsign_rockets) {
-                    hit_count_rockets += 1;
-                }
-                else {
-                    callsign_rockets = callsign;
-                    hit_count_rockets = 0;
-                }
-
-                if (hit_timer_rockets == 0) {
-                    hit_timer_rockets = 1;
-                    settimer(hitRockets, 1);
-                }
+            if (hit_timer_rockets == 0) {
+                hit_timer_rockets = 1;
+                settimer(hitRockets, 1);
+            }
+        }
+        elsif (closest_distance < max_message_distance) {
+            logger.screen.red(sprintf("Missed %s by %d meters", callsign, closest_distance));
+        }
+    }
+    elsif (isBombImpact(name)) {
+        if (typeNode.getValue() != "terrain" or closest_distance < max_distance_bomb) {
+            if (callsign == callsign_bombs) {
+                hit_count_bombs += 1;
+            }
+            else {
+                callsign_bombs = callsign;
+                hit_count_bombs = 1;
             }
 
-            if (isBombImpact(name)) {
-                if (callsign == callsign_bombs) {
-                    hit_count_bombs += 1;
-                }
-                else {
-                    callsign_bombs = callsign;
-                    hit_count_bombs = 0;
-                }
-
-                if (hit_timer_bombs == 0) {
-                    hit_timer_bombs = 1;
-                    settimer(hitBombs, 1);
-                }
+            if (hit_timer_bombs == 0) {
+                hit_timer_bombs = 1;
+                settimer(hitBombs, 1);
             }
+        }
+        elsif (closest_distance < max_message_distance) {
+            logger.screen.red(sprintf("Missed %s by %d meters", callsign, closest_distance));
         }
     }
 });
