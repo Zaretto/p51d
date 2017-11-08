@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+
+    <name>interior</name>
+
+    <inherits-from>Effects/model-interior</inherits-from>
+
+    <parameters>
+        <texture n="4">
+            <type>cubemap</type>
+            <images>
+                <!-- px (tail) rotate 90 deg from N or S to W -->
+                <positive-x>Aircraft/p51d/Models/Effects/interior/0004.png</positive-x>
+                <!-- nx (nose) rotate 90 deg from N or S to E -->
+                <negative-x>Aircraft/p51d/Models/Effects/interior/0002.png</negative-x>
+                <!-- py (starboard/right) from N do not rotate -->
+                <positive-y>Aircraft/p51d/Models/Effects/interior/0001.png</positive-y>
+                <!-- ny (port/left) from N rotate 180 deg to S -->
+                <negative-y>Aircraft/p51d/Models/Effects/interior/0003.png</negative-y>
+                <!-- pz (top) rotate 90 deg from N or S to W -->
+                <positive-z>Aircraft/p51d/Models/Effects/interior/0006.png</positive-z>
+                <!-- nz (bottom) rotate 90 deg from N or S to W -->
+                <negative-z>Aircraft/p51d/Models/Effects/interior/0005.png</negative-z>
+            </images>
+        </texture>
+
+        <!-- Interior shadow -->
+        <opacity-cube-center type="vec3d" n="0">3.28972 0.0 0.675</opacity-cube-center>
+        <opacity-cube-scale type="vec3d" n="0">0.7 0.7 0.55</opacity-cube-scale>
+        <opacity-cube-angle type="float">0.0</opacity-cube-angle>
+
+        <!-- Flash light -->
+        <light-filter-one type="vec3d">0.5 0.5 0.5</light-filter-one>
+        <light-filter-two type="vec3d">0.9 0.2 0.2</light-filter-two>
+        <light-radius type="float">13</light-radius>
+
+        <!-- Irradiance map -->
+        <irradiance-map-type type="int">1</irradiance-map-type>
+        <irradiance-map-strength type="float">0.5</irradiance-map-strength>
+    </parameters>
+
+</PropertyList>
