@@ -91,8 +91,8 @@
                 <name>p51d-options</name>
                 <label>Aircraft Options...</label>
                 <binding>
-                    <command>dialog-show</command>
-                    <dialog-name>aircraft-options</dialog-name>
+                    <command>nasal</command>
+                    <script>dialogs.show_aircraft_options()</script>
                 </binding>
             </item>
 

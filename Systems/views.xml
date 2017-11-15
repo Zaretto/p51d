@@ -19,6 +19,25 @@
 
 <PropertyList>
 
+    <logic>
+        <name>Aircraft Options Can Repair</name>
+        <input>
+            <and>
+                <not>
+                    <property>/sim/freeze/replay-state</property>
+                </not>
+                <less-than>
+                    <property>/engines/engine[0]/rpm</property>
+                    <value>1.0</value>
+                </less-than>
+                <property>/gear/on-ground-at-rest</property>
+            </and>
+        </input>
+        <output>
+            <property>/aircraft/gui/can-repair</property>
+        </output>
+    </logic>
+
     <!-- ================================================================== -->
     <!-- Scroll Wheel Zooming                                               -->
     <!-- ================================================================== -->

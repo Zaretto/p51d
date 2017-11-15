@@ -1,7 +1,3 @@
-io.include("Aircraft/ExpansionPack/Nasal/init.nas");
-
-with("logger");
-
 var max_distance_rocket = 10;
 var max_distance_bomb = 50;
 

@@ -262,7 +262,6 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
 
         <!-- Save some properties when the simulator is shut down -->
         <aircraft-data>
-            <path>/fdm/jsbsim/settings/damage</path>
             <path>/aircraft/settings/show-blades</path>
             <path>/aircraft/pilot/always-visible</path>
             <path>/aircraft/securing/pitot-cover-visible</path>
@@ -658,6 +657,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <settings>
             <show-blades type="bool">false</show-blades>
         </settings>
+
+        <gui>
+            <can-repair type="bool">false</can-repair>
+        </gui>
     </aircraft>
 
  <consumables>
@@ -808,15 +811,25 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
  </ai>
 
     <nasal>
+        <!-- c172p is part of FGDATA and thus always present -->
         <math_ext>
             <file>Aircraft/c172p/Nasal/generic/math_ext.nas</file>
         </math_ext>
+        <logger>
+            <file>Aircraft/c172p/Nasal/generic/logger.nas</file>
+        </logger>
         <updateloop>
             <file>Aircraft/Generic/updateloop.nas</file>
         </updateloop>
         <sounds>
             <file>Nasal/sound.nas</file>
         </sounds>
+        <gui>
+            <file>Nasal/canvas-toolkit.nas</file>
+        </gui>
+        <dialogs>
+            <file>Nasal/aircraft-options.nas</file>
+        </dialogs>
     <p51d>
       <file>Aircraft/p51d/Nasal/over-ride-flaps.nas</file>
       <file>Aircraft/p51d/Nasal/stores.nas</file>

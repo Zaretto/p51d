@@ -13,10 +13,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-io.include("Aircraft/ExpansionPack/Nasal/init.nas");
-
-with("logger");
-
 setlistener("/aircraft/afcs/locks/rudder", func (node) {
     if (node.getBoolValue())
         logger.screen.green("Auto rudder enabled");
