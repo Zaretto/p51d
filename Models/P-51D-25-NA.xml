@@ -73,12 +73,6 @@
     </unload>
  </nasal>
 
-     <animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>30000</max-m>
-    </animation>
-
  <!-- Pilot -->
  <model>
    <path>Aircraft/p51d/Models/Pilot/pilotWWII.xml</path>
@@ -215,18 +209,44 @@
     <object-name>gunBastTubeFairingLeft</object-name>
 </effect>
 
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/interior/interior</inherits-from>
+        <object-name>amorGlassLowerFrame</object-name>
+        <object-name>canopyreleaseCableCover</object-name>
+        <object-name>fuselage</object-name>
+        <object-name>frontCanopySeal</object-name>
+        <object-name>fugelageInside</object-name>
+        <object-name>instrumentShroud</object-name>
+        <object-name>panel</object-name>
+        <object-name>windshieldFrame</object-name>
+    </effect>
+
  <model>
     <path>Aircraft/p51d/Models/Instruments/Instruments.xml</path>
  </model>
  
- <model>
-    <usage>interior</usage>
-    <path>Aircraft/p51d/Models/Cockpit/CockpitDevices.xml</path>
- </model>
+    <model>
+        <path>Aircraft/p51d/Models/Cockpit/K14/gunsight.xml</path>
+    </model>
 
- <model>
-  <path>Aircraft/p51d/Models/Cockpit/cockpit.xml</path>
- </model> 
+    <model>
+        <name>Gyro-gun-sight</name>
+        <path>Aircraft/Instruments-3d/computing-gun-sights/K14/K14-pipper.xml</path>
+        <offsets>
+            <x-m>2.90042</x-m>
+            <y-m>0.000</y-m>
+            <z-m>0.672</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/p51d/Models/Cockpit/SeatAndArmor/seat-vintage.xml</path>
+    </model>
+
+    <model>
+        <usage>interior</usage>
+        <path>Aircraft/p51d/Models/Cockpit/cockpit.xml</path>
+    </model>
  
  <model>
   <path>Aircraft/p51d/Models/Cockpit/enclosure.xml</path>
@@ -1694,72 +1714,6 @@
     <red>0.25</red>
     <green>0.12</green>
     <blue>0.12</blue>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>THROTTLE</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.25</red>
-    <green>0.15</green>
-    <blue>0.15</blue>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>gunsight</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.25</red>
-    <green>0.15</green>
-    <blue>0.15</blue>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>TRIMWHEELELEVATOR</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.25</red>
-    <green>0.15</green>
-    <blue>0.15</blue>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>TRIMKNOBAILERON</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.25</red>
-    <green>0.15</green>
-    <blue>0.15</blue>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>TRIMKNOBRUDDER</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.25</red>
-    <green>0.15</green>
-    <blue>0.15</blue>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>IGNITION</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.25</red>
-    <green>0.15</green>
-    <blue>0.15</blue>
   </emission>
  </animation>
 

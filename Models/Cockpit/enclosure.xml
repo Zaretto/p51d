@@ -151,4 +151,23 @@
         <object-name>windshield-interior</object-name>
     </effect>
 
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/interior/interior</inherits-from>
+        <object-name>canopyLowerSkin</object-name>
+        <object-name>exteriorWindshieldBow</object-name>
+        <object-name>windshieldBow</object-name>
+        <object-name>canopyTrackLeft</object-name>
+        <object-name>canopyTrackRight</object-name>
+        <object-name>frontDoublerLeft</object-name>
+        <object-name>frontDoublerRight</object-name>
+        <object-name>truckBodyLeft</object-name>
+        <object-name>truckBodyRight</object-name>
+        <object-name>truckBracketLeft</object-name>
+        <object-name>truckBracketRight</object-name>
+        <object-name>truckPlacardLeft</object-name>
+        <object-name>truckPlacardRight</object-name>
+        <object-name>upperCoverLeft</object-name>
+        <object-name>upperCoverRight</object-name>
+    </effect>
+
 </PropertyList>

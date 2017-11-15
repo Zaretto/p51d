@@ -366,57 +366,4460 @@
              </binding>
          </hovered>
     </animation>
-  
- <animation>
-  <type>material</type>
-    <object-name>carb-heat-warn</object-name>
-    <object-name>up-down-placard</object-name>
-    <object-name>gearLeverForward</object-name>
-    <object-name>gearLeverHardware</object-name>
-    <object-name>unlock-tailwheel-plac</object-name>
-    <object-name>brake-placard</object-name>
-    <object-name>naa-placard</object-name>
-    <object-name>speed-limits-plac</object-name>
-    <object-name>engine-limits-plac</object-name>
-    <object-name>MP-warning-placard</object-name>
-    <object-name>Ox-Dur-placard</object-name>
-    <object-name>gun-circuit</object-name>
-    <object-name>carbHP-plac-scrw2</object-name>
-    <object-name>carbHP-plac-scrw3</object-name>
-    <object-name>carbHP-plac-scrw4</object-name>
-    <object-name>unlockTailwheel</object-name> 
-    <object-name>MP-warning</object-name>
-    <object-name>land-gear-placard</object-name>
-    <object-name>gearLeverForward</object-name>
-    <object-name>gearLeverRear</object-name>
-    <object-name>RightRudderCarage</object-name>
-    <object-name>LeftRudderCarage</object-name>
-    <object-name>LeftRudderPedal</object-name>
-    <object-name>RightRudderPedal</object-name>
-    <object-name>floor-center</object-name>
-    <object-name>Fuel-line</object-name>
-    <object-name>Floor-Center-base</object-name>
-    <object-name>LeftCockpitConsole</object-name>
-    <object-name>BootTransition</object-name>
-    <object-name>Stick</object-name>
-    <object-name>Trigger2</object-name>
-    <object-name>BootBody</object-name>
-    <object-name>BootTop</object-name>
-    <object-name>ReostatKnob</object-name>
-    <object-name>ReostatPlate</object-name>    
-    <object-name>ConsolePanel</object-name>
-    <object-name>EjectSticker</object-name>
-    <object-name>CoolantSticker</object-name>
-    <object-name>CarbHeatSticker</object-name>
-    <object-name>air-placard</object-name>
-    <object-name>hot-air</object-name>
-    <object-name>ram-air</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.25</red>
-    <green>0.12</green>
-    <blue>0.12</blue>
-  </emission>
- </animation>
-    
+
+    <animation>
+        <type>material</type>
+
+        <object-name>carb-heat-warn</object-name>
+        <object-name>up-down-placard</object-name>
+        <object-name>gearLeverForward</object-name>
+        <object-name>gearLeverHardware</object-name>
+        <object-name>gearLeverRear</object-name>
+        <object-name>unlock-tailwheel-plac</object-name>
+        <object-name>brake-placard</object-name>
+        <object-name>naa-placard</object-name>
+        <object-name>speed-limits-plac</object-name>
+        <object-name>engine-limits-plac</object-name>
+        <object-name>MP-warning-placard</object-name>
+        <object-name>Ox-Dur-placard</object-name>
+        <object-name>gun-circuit</object-name>
+        <object-name>carbHP-plac-scrw2</object-name>
+        <object-name>carbHP-plac-scrw3</object-name>
+        <object-name>carbHP-plac-scrw4</object-name>
+        <object-name>unlockTailwheel</object-name>
+        <object-name>MP-warning</object-name>
+        <object-name>land-gear-placard</object-name>
+        <object-name>RightRudderCarage</object-name>
+        <object-name>LeftRudderCarage</object-name>
+        <object-name>LeftRudderPedal</object-name>
+        <object-name>RightRudderPedal</object-name>
+        <object-name>floor-center</object-name>
+        <object-name>Fuel-line</object-name>
+        <object-name>Floor-Center-base</object-name>
+        <object-name>LeftCockpitConsole</object-name>
+        <object-name>BootTransition</object-name>
+        <object-name>Stick</object-name>
+        <object-name>Trigger2</object-name>
+        <object-name>BootBody</object-name>
+        <object-name>BootTop</object-name>
+        <object-name>ReostatKnob</object-name>
+        <object-name>ReostatPlate</object-name>
+        <object-name>ConsolePanel</object-name>
+        <object-name>EjectSticker</object-name>
+        <object-name>CoolantSticker</object-name>
+        <object-name>CarbHeatSticker</object-name>
+        <object-name>air-placard</object-name>
+        <object-name>fuel-return-plac</object-name>
+        <object-name>LDG-fairing-plac</object-name>
+        <object-name>hot-air</object-name>
+        <object-name>ram-air</object-name>
+        <object-name>CockpitFloor-black</object-name>
+        <object-name>seat</object-name>
+        <object-name>parking-brake-handle</object-name>
+        <object-name>flor-body</object-name>
+        <object-name>ox-hose</object-name>
+        <object-name>mask-connector</object-name>
+
+        <!-- Bomb salvo -->
+        <object-name>salvo-bracked</object-name>
+        <object-name>left-salvo</object-name>
+        <object-name>right-salvo</object-name>
+
+        <!-- Canopy crank -->
+        <object-name>crank-body</object-name>
+        <object-name>crank-handle</object-name>
+        <object-name>crank-lever</object-name>
+        <object-name>crank-lock-button</object-name>
+        <object-name>crank-lock-lever</object-name>
+
+        <!-- Canopy emergency release -->
+        <object-name>release-bolt</object-name>
+        <object-name>release-bracket</object-name>
+        <object-name>release-handle</object-name>
+
+        <!-- Left switch panel -->
+        <object-name>coolant-door-sw-body</object-name>
+        <object-name>coolant-door-switch</object-name>
+        <object-name>coolant-switch-guard</object-name>
+        <object-name>oil-door-sw-body</object-name>
+        <object-name>oil-door-switch</object-name>
+        <object-name>oil-switch-guard</object-name>
+        <object-name>landing-light-sw-body</object-name>
+        <object-name>landing-light-switch</object-name>
+        <object-name>left-flor-hump</object-name>
+        <object-name>left-flor-knob</object-name>
+        <object-name>left-switch-box</object-name>
+
+        <!-- Engine switch panel -->
+        <object-name>boost-light-button</object-name>
+        <object-name>boost-sw-body</object-name>
+        <object-name>boost-sw-guard</object-name>
+        <object-name>boost-switch</object-name>
+        <object-name>engine-sw-plate</object-name>
+        <object-name>fuel-pump-sw-body</object-name>
+        <object-name>fuel-pump-switch</object-name>
+        <object-name>oil-dilute-sw-body</object-name>
+        <object-name>oil-dilute-switch</object-name>
+        <object-name>primer-sw-body</object-name>
+        <object-name>primer-sw-guard</object-name>
+        <object-name>primer-switch</object-name>
+        <object-name>starter-sw-guard</object-name>
+        <object-name>starter-switch</object-name>
+        <object-name>starter-switch-body</object-name>
+
+        <!-- Electric panel -->
+        <object-name>amp-face</object-name>
+        <object-name>amp-meter</object-name>
+        <object-name>amp-needle</object-name>
+        <object-name>bat-disc-sw-body</object-name>
+        <object-name>bat-disc-switch</object-name>
+        <object-name>breaker-reset</object-name>
+        <object-name>electric-panel-base</object-name>
+        <object-name>electric-panel-screw</object-name>
+        <object-name>gen-disc-sw-body</object-name>
+        <object-name>gen-disc-switch</object-name>
+        <object-name>gun-heat-sw-body</object-name>
+        <object-name>gun-heat-switch</object-name>
+        <object-name>pitot-heat-sw-body</object-name>
+        <object-name>pitot-heat-switch</object-name>
+        <object-name>rec-lgt-amb-sw-body</object-name>
+        <object-name>rec-lgt-amb-switch</object-name>
+        <object-name>rec-lgt-gr-sw-body</object-name>
+        <object-name>rec-lgt-gr-switch</object-name>
+        <object-name>rec-lgt-red-sw-body</object-name>
+        <object-name>rec-lgt-red-switch</object-name>
+        <object-name>rec-lights-key</object-name>
+        <object-name>right-flor-knob</object-name>
+        <object-name>tail-pos-lgt-sw-body</object-name>
+        <object-name>tail-pos-lgt-switch</object-name>
+        <object-name>wing-pos-lgt-sw-body</object-name>
+        <object-name>wing-pos-lgt-switch</object-name>
+
+        <!-- Flaps lever -->
+        <object-name>flaps-lever</object-name>
+        <object-name>flaps-index</object-name>
+
+        <!-- K-14 gun sight controller -->
+        <object-name>k-14-GS-gyro-fixed</object-name>
+        <object-name>k-14-GS-brightness</object-name>
+        <object-name>k-14-controller-body</object-name>
+        <object-name>k-14-switch</object-name>
+        <object-name>k-14-switch-case</object-name>
+
+        <!-- Stick lock behind stick -->
+        <object-name>stick-lock-knob</object-name>
+        <object-name>stick-lock-base</object-name>
+        <object-name>stick-lock</object-name>
+
+        <!-- Horn button -->
+        <object-name>horn-button</object-name>
+        <object-name>horn-button-base</object-name>
+        <object-name>horn-button-plate</object-name>
+
+        <!-- Fuel cutoff and selector -->
+        <object-name>fuel-off-lever</object-name>
+        <object-name>tank-selector-body</object-name>
+        <object-name>tank-selector-knob</object-name>
+
+        <!-- Hydraulic panel -->
+        <object-name>hydraulic-face</object-name>
+        <object-name>hydraulic-handle</object-name>
+        <object-name>hydraulic-needle</object-name>
+
+        <!-- Ignition switch -->
+        <object-name>ignition-face</object-name>
+        <object-name>ignition-handle</object-name>
+
+        <!-- Guns and camera switch -->
+        <object-name>gun-switch-face</object-name>
+        <object-name>gun-switch</object-name>
+        <object-name>gun-sw-base</object-name>
+
+        <!-- Rocket controls panel -->
+        <object-name>left-arm-switch</object-name>
+        <object-name>right-arm-switch</object-name>
+        <object-name>weapons-select-switch</object-name>
+        <object-name>instant-switch</object-name>
+        <object-name>instant-sw-body</object-name>
+        <object-name>weapons-select-sw</object-name>
+        <object-name>weapons-sel-sw-base</object-name>
+        <object-name>left-arm-sw-base</object-name>
+        <object-name>right-arm-sw-base</object-name>
+        <object-name>rocket-reset-knob</object-name>
+        <object-name>rocket-next-fired</object-name>
+        <object-name>rocket-controls-panel</object-name>
+        <object-name>rocket-bomb-face</object-name>
+        <object-name>single-auto-knob</object-name>
+
+        <!-- Throttle quadrant -->
+        <object-name>mixture-knob</object-name>
+        <object-name>mixture-handle</object-name>
+        <object-name>prop-knob</object-name>
+        <object-name>prop-handle</object-name>
+        <object-name>prop-mix-lock</object-name>
+        <object-name>throttle-range-lever</object-name>
+        <object-name>throttle-range-cable</object-name>
+        <object-name>throttle-range-cable-housing</object-name>
+        <object-name>throttle-base</object-name>
+        <object-name>throttle-grip</object-name>
+        <object-name>throttle-lever</object-name>
+        <object-name>throttle-lock</object-name>
+        <object-name>throttle-mic-button</object-name>
+
+        <!-- Aileron trim -->
+        <object-name>trim-aileron-index</object-name>
+        <object-name>trim-aileron-knob</object-name>
+        <object-name>trim-aileron-needle</object-name>
+        <object-name>trim-aileron-base</object-name>
+
+        <!-- Elevator trim -->
+        <object-name>trim-elevator-index</object-name>
+        <object-name>trim-elevator-needle</object-name>
+        <object-name>trim-elevator-wheel</object-name>
+
+        <!-- Rudder trim -->
+        <object-name>trim-rudder-index</object-name>
+        <object-name>trim-rudder-knob</object-name>
+        <object-name>trim-rudder-needle</object-name>
+
+        <!-- Oxygen regulator -->
+        <object-name>A-14A-alt-selector</object-name>
+        <object-name>A-14A-body</object-name>
+        <object-name>A-14A-normal-100-pct</object-name>
+
+        <!-- SCR-522C -->
+        <object-name>SCR-522-T-Lock</object-name>
+        <object-name>SCR-522C-A</object-name>
+        <object-name>SCR-522C-B</object-name>
+        <object-name>SCR-522C-C</object-name>
+        <object-name>SCR-522C-D</object-name>
+        <object-name>SCR-522C-OFF</object-name>
+        <object-name>SCR-522C-T-handle</object-name>
+        <object-name>SCR-522C-box</object-name>
+        <!--<object-name>SCR-522C-lamp-A.b</object-name>
+        <object-name>SCR-522C-lamp-A.d</object-name>
+        <object-name>SCR-522C-lamp-B.b</object-name>
+        <object-name>SCR-522C-lamp-B.d</object-name>
+        <object-name>SCR-522C-lamp-C.b</object-name>
+        <object-name>SCR-522C-lamp-C.d</object-name>
+        <object-name>SCR-522C-lamp-D.b</object-name>
+        <object-name>SCR-522C-lamp-D.d</object-name>
+        <object-name>SCR-522C-lamp-T.b</object-name>
+        <object-name>SCR-522C-lamp-T.d</object-name>-->
+        <object-name>SCR-522C-mask-1</object-name>
+
+        <!-- SCR-695 -->
+        <object-name>SCR-695-case</object-name>
+        <object-name>SD-button-1</object-name>
+        <object-name>SD-button-2</object-name>
+        <object-name>SD-reset</object-name>
+        <object-name>iff-distress-sw-base</object-name>
+        <object-name>iff-distress-sw-guard</object-name>
+        <object-name>iff-distress-switch</object-name>
+        <object-name>iff-power-sw-base</object-name>
+        <object-name>iff-power-switch</object-name>
+        <object-name>iff-signal-selector</object-name>
+        <object-name>iff-time-sw-base</object-name>
+        <object-name>iff-time-switch</object-name>
+
+        <!-- AN/APS-13 bell panel -->
+        <object-name>AN/APS-13-bell</object-name>
+        <object-name>AN/APS-13-bell-panel</object-name>
+
+        <!-- AN/APS-13 control panel -->
+        <object-name>aps-13-lamp</object-name>
+        <object-name>aps-13-panel</object-name>
+        <object-name>aps-13-power-sw-base</object-name>
+        <object-name>aps-13-power-switch</object-name>
+        <object-name>aps-13-screws</object-name>
+        <object-name>aps-13-test-sw-base</object-name>
+        <object-name>aps-13-test-switch</object-name>
+        <object-name>aps-13-audio</object-name>
+
+        <emission>
+            <factor-prop>controls/lighting/cabin-norm</factor-prop>
+            <red>0.25</red>
+            <green>0.12</green>
+            <blue>0.12</blue>
+        </emission>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Bomb Salvo                                                         -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>right-salvo</object-name>
+        <property>/controls/armament/salvo-right</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>6</dep>
+            </entry>
+        </interpolation>
+        <center>
+          <x-m> 2.6954</x-m>
+          <y-m>-0.2938</y-m>
+          <z-m>-0.2050</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>right-salvo</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/armament/salvo-right</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/armament/salvo-right</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>right-bomb-salvo</tooltip-id>
+                <label>Click to release right bomb</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>left-salvo</object-name>
+        <property>/controls/armament/salvo-left</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>6</dep>
+            </entry>
+        </interpolation>
+        <center>
+          <x-m> 2.6954</x-m>
+          <y-m>-0.2938</y-m>
+          <z-m>-0.2050</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>left-salvo</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/armament/salvo-left</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/armament/salvo-left</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>left-bomb-salvo</tooltip-id>
+                <label>Click to release left bomb</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Canopy Crank                                                       -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>crank-lever</object-name>
+        <object-name>crank-handle</object-name>
+        <object-name>crank-lock-button</object-name>
+        <object-name>crank-lock-lever</object-name>
+        <property>canopy/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-1800</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-1800</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>2.94689</x1-m>
+            <y1-m>0.382323</y1-m>
+            <z1-m>0.2227337</z1-m>
+            <x2-m>2.94521</x2-m>
+            <y2-m>0.3043341</y2-m>
+            <z2-m>0.2185814</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>crank-lock-button</object-name>
+        <property>canopy/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>45</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>45</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>2.8154</x1-m>
+            <y1-m>0.242515</y1-m>
+            <z1-m>0.319781</z1-m>
+            <x2-m>3.1154</x2-m>
+            <y2-m>0.242515</y2-m>
+            <z2-m>0.319781</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>crank-lock-lever</object-name>
+        <property>canopy/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>-15</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>-15</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>2.8154</x1-m>
+            <y1-m>0.287658</y1-m>
+            <z1-m>0.26652</z1-m>
+            <x2-m>3.1154</x2-m>
+            <y2-m>0.287658</y2-m>
+            <z2-m>0.26z652</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>crank-handle</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-cycle</command>
+                <property>/canopy/direction</property>
+                <value type="int">0</value>
+                <value type="int">1</value>
+            </binding>
+            <binding>
+                <command>property-interpolate</command>
+                <property>/canopy/position-norm</property>
+                <property>/canopy/direction</property>
+                <rate>0.15</rate>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>canopy-crank</tooltip-id>
+                <label>Click to open or close the canopy</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Flaps Lever                                                        -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>flaps-lever</object-name>
+        <property>/controls/flight/flaps</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-55</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <y>-1</y>
+        </axis>
+        <center>
+            <x-m>3.14540</x-m>
+            <y-m>-0.37305</y-m>
+            <z-m>-0.11372</z-m>
+        </center>
+
+        <increase>
+            <binding>
+                <command>nasal</command>
+                <script>controls.flapsDown(-1)</script>
+            </binding>
+        </increase>
+        <decrease>
+            <binding>
+                <command>nasal</command>
+                <script>controls.flapsDown(1)</script>
+            </binding>
+        </decrease>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>flaps-pos</tooltip-id>
+                <label>Flap position: %.1f deg</label>
+                <property>/fdm/jsbsim/fcs/flap-cmd-deg</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Parking Brake Handle                                               -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>translate</type>
+        <object-name>parking-brake-handle</object-name>
+        <property>/fdm/jsbsim/systems/brakes/brake-parking-cmd-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0.01</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.58542</x-m>
+            <y-m>0.025</y-m>
+            <z-m>0.051</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>parking-brake-handle</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/gear/brake-parking</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>parking-brakes-set</tooltip-id>
+                <label>Parking brakes: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var lever = getprop("/controls/gear/brake-parking");
+
+                    if (arg[0]) {
+                        var text = [' (tap brakes to release)', ' (push lever back!)'];
+                        return sprintf('ENABLED%s', text[lever]);
+                    }
+                    else {
+                        var text = ['', ' (depress and release brakes)'];
+                        return sprintf('RELEASED%s', text[lever]);
+                    }
+                </script>
+                <property>/aircraft/brakes/parking-set</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- K-14 Sight Controller                                              -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>k-14-switch</object-name>
+        <property>/controls/armament/gunsight/computer-on</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-60</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 2.68248</x1-m>
+            <y1-m>-0.24134</y1-m>
+            <z1-m> 0.35140</z1-m>
+
+            <x2-m> 2.68675</x2-m>
+            <y2-m>-0.24658</y2-m>
+            <z2-m> 0.34604</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>k-14-switch</object-name>
+        <object-name>k-14-switch-case</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/armament/gunsight/computer-on</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>k14-gunsight-switch</tooltip-id>
+                <label>Gunsight: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/armament/gunsight/computer-on</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <object-name>k-14-GS-brightness</object-name>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <property>/controls/armament/gunsight/intensity</property>
+        <factor>130.0</factor>
+        <offset-deg>-65.0</offset-deg>
+        <axis>
+            <x1-m> 2.72410</x1-m>
+            <y1-m>-0.27351</y1-m>
+            <z1-m> 0.33933</z1-m>
+
+            <x2-m> 2.71509</x2-m>
+            <y2-m>-0.27596</y2-m>
+            <z2-m> 0.33425</z2-m>
+        </axis>
+
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/armament/gunsight/intensity</property>
+                <factor>-0.1</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>k14-brightness</tooltip-id>
+                <label>Brightness: %3d %%</label>
+                <measure-text>Brightness: 100 %</measure-text>
+                <property>/controls/armament/gunsight/intensity</property>
+                <mapping>percent</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <object-name>k-14-GS-gyro-fixed</object-name>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <property>/controls/armament/gunsight/reticleSelectorPos</property>
+
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>90.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>-90.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x2-m> 2.67821</x2-m>
+            <y2-m>-0.21710</y2-m>
+            <z2-m> 0.40013</z2-m>
+
+            <x1-m> 2.66929</x1-m>
+            <y1-m>-0.21956</y1-m>
+            <z1-m> 0.39518</z1-m>
+        </axis>
+
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/armament/gunsight/reticleSelectorPos</property>
+                <value type="int">2</value>
+                <value type="int">1</value>
+                <value type="int">0</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>k14-reticle-selector</tooltip-id>
+                <label>Reticle: %s</label>
+                <property>/controls/armament/gunsight/reticleSelectorPos</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['FIXED', 'FIXED &amp; GYRO', 'GYRO'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
+
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Fuel Cut-Off And Selector                                          -->
+    <!-- ================================================================== -->
+
+    <!--
+        tanks are:
+         tank    left wing tank
+         tank[1] right wing tank
+         tank[2] fuselage tank
+         tank[3] left wing drop tank
+         tank[4] right wing drop tank
+    -->
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>horizontal</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>tank-selector-knob</object-name>
+        <property>/controls/fuel/tank-selector</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>109</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>252.6</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>180</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>328.5</dep>
+            </entry>
+            <entry>
+                <ind>4</ind>
+                <dep>31.4</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>2.70345</x1-m>
+            <y1-m>-0.02996</y1-m>
+            <z1-m>-0.26336</z1-m>
+
+            <x2-m>2.70744</x2-m>
+            <y2-m>-0.02996</y2-m>
+            <z2-m>-0.25831</z2-m>
+        </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/fuel/tank-selector</property>
+                <value type="int">1</value>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">4</value>
+                <value type="int">3</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>fuel-tank-selector</tooltip-id>
+                <label>Selected fuel tank: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['LEFT MAIN', 'RIGHT MAIN', 'FUSELAGE', 'LEFT DROP', 'RIGHT DROP'];
+                    return modes[arg[0]];
+                </script>
+                <property>/controls/fuel/tank-selector</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>fuel-off-lever</object-name>
+        <property>/controls/fuel/on</property>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>60</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.66790</x-m>
+            <y-m>-0.087</y-m>
+            <z-m>-0.30461</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+        </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/fuel/on</property>
+                <value type="bool">false</value>
+                <value type="bool">true</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>fuel-shut-off</tooltip-id>
+                <label>Fuel shut off: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/fuel/on</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Hydraulic Panel                                                    -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>hydraulic-needle</object-name>
+        <property>/fdm/jsbsim/systems/hydraulic/pressure</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2000</ind>
+                <dep>-180</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 2.68469</x1-m>
+            <y1-m> 0.05500</y1-m>
+            <z1-m>-0.27679</z1-m>
+            <x2-m> 2.68842</x2-m>
+            <y2-m> 0.05500</y2-m>
+            <z2-m>-0.27210</z2-m>
+        </axis>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Left Switch Panel                                                  -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>landing-light-switch</object-name>
+        <property>/controls/lighting/landing-lights</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.980</x-m>
+            <y-m>-0.326</y-m>
+            <z-m> 0.118</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>landing-light-switch</object-name>
+        <object-name>landing-light-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/lighting/landing-lights</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>landing-light-switch</tooltip-id>
+                <label>Landing light: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/lighting/landing-lights</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <object-name>left-flor-knob</object-name>
+        <property>/controls/lighting/left-flor-pos</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>180</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>270</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.91982</x-m>
+            <y-m>-0.31441</y-m>
+            <z-m> 0.11592</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+        </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/left-flor-pos</property>
+                <value type="int">0</value>
+                <value type="int">3</value>
+                <value type="int">2</value>
+                <value type="int">1</value>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>left-flor-knob</tooltip-id>
+                <label>Left fluorescent light: %s</label>
+                <property>/controls/lighting/left-flor-pos</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'START', 'ON', 'DIM'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>coolant-switch-guard</object-name>
+        <property>/controls/switches/coolant-guard-switch</property>
+        <factor>-120.0</factor>
+        <center>
+            <x-m> 3.07189</x-m>
+            <y-m>-0.31684</y-m>
+            <z-m> 0.09368</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>coolant-door-switch</object-name>
+        <property>/aircraft/switches/coolant</property>
+        <factor>25.0</factor>
+        <center>
+            <x-m> 3.07128</x-m>
+            <y-m>-0.32089</y-m>
+            <z-m> 0.11499</z-m>
+        </center>
+        <axis>
+            <z>1</z>
+        </axis>
+        <condition>
+            <not-equals>
+                <property>/aircraft/switches/coolant</property>
+                <value>2</value>
+            </not-equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>coolant-door-switch</object-name>
+        <object-name>coolant-door-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <property>devices/status/keyboard/shift</property>
+                        <equals>
+                            <property>/aircraft/switches/coolant</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">-1</value>
+            </binding>
+            <binding>
+                <condition>
+                    <and>
+                        <not>
+                            <property>devices/status/keyboard/shift</property>
+                        </not>
+                        <equals>
+                            <property>/aircraft/switches/coolant</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/aircraft/switches/coolant</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <equals>
+                            <property>/aircraft/switches/coolant</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">-1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/aircraft/switches/coolant</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>coolant-switch</tooltip-id>
+                <label>Coolant: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['CLOSED', 'OFF (close guard for AUTOMATIC)', 'OPEN', 'AUTOMATIC'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/aircraft/switches/coolant</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>coolant-switch-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/coolant-guard-switch</property>
+            </binding>
+            <binding>
+                <condition>
+                    <not>
+                        <property>/controls/switches/coolant-guard-switch</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">2</value>
+            </binding>
+            <binding>
+                <condition>
+                    <property>/controls/switches/coolant-guard-switch</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/coolant</property>
+                <value type="int">0</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>oil-switch-guard</object-name>
+        <property>/controls/switches/oil-guard-switch</property>
+        <factor>-120.0</factor>
+        <center>
+            <x-m> 3.01438</x-m>
+            <y-m>-0.31684</y-m>
+            <z-m> 0.09368</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>oil-door-switch</object-name>
+        <property>/aircraft/switches/oil</property>
+        <factor>25.0</factor>
+        <center>
+            <x-m> 3.01351</x-m>
+            <y-m>-0.32239</y-m>
+            <z-m> 0.11490</z-m>
+        </center>
+        <axis>
+            <z>1</z>
+        </axis>
+        <condition>
+            <not-equals>
+                <property>/aircraft/switches/oil</property>
+                <value>2</value>
+            </not-equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>oil-door-switch</object-name>
+        <object-name>oil-door-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <property>devices/status/keyboard/shift</property>
+                        <equals>
+                            <property>/aircraft/switches/oil</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">-1</value>
+            </binding>
+            <binding>
+                <condition>
+                    <and>
+                        <not>
+                            <property>devices/status/keyboard/shift</property>
+                        </not>
+                        <equals>
+                            <property>/aircraft/switches/oil</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/aircraft/switches/oil</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <and>
+                        <equals>
+                            <property>/aircraft/switches/oil</property>
+                            <value>0</value>
+                        </equals>
+                    </and>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">-1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/aircraft/switches/oil</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>oil-switch</tooltip-id>
+                <label>Oil: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['CLOSED', 'OFF (close guard for AUTOMATIC)', 'OPEN', 'AUTOMATIC'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/aircraft/switches/oil</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>oil-switch-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/oil-guard-switch</property>
+            </binding>
+            <binding>
+                <condition>
+                    <not>
+                        <property>/controls/switches/oil-guard-switch</property>
+                    </not>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">2</value>
+            </binding>
+            <binding>
+                <condition>
+                    <property>/controls/switches/oil-guard-switch</property>
+                </condition>
+                <command>property-assign</command>
+                <property>/aircraft/switches/oil</property>
+                <value type="int">0</value>
+            </binding>
+        </action>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Engine Switch Panel                                                -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>select</type>
+        <object-name>boost-light</object-name>
+        <condition>
+            <property>controls/engines/engine/boost-light-on</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>boost-switch</object-name>
+        <object-name>boost-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>/controls/engines/engine/supercharger-switch</property>
+                        <value>-1</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/supercharger-switch</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <condition>
+                        <equals>
+                            <property>/controls/engines/engine/supercharger-switch</property>
+                            <value>1</value>
+                        </equals>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine/supercharger-switch</property>
+                    <value>-1</value>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>boost-switch</object-name>
+        <property>/controls/engines/engine/supercharger-switch</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>-1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.58542</x-m>
+            <y-m>-0.225</y-m>
+            <z-m>-0.01</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/engines/engine/supercharger-switch</property>
+                <value type="int">0</value>
+                <value type="int">-1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>supercharger-switch</tooltip-id>
+                <label>Supercharger: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['LOW (better range at high altitude)', 'AUTO', 'HIGH'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/controls/engines/engine/supercharger-switch</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>boost-sw-guard</object-name>
+        <property>/controls/switches/supercharger-guard-switch</property>
+        <factor>-120.0</factor>
+        <center>
+            <x-m> 2.59432</x-m>
+            <y-m>-0.28458</y-m>
+            <z-m> 0.00859</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>boost-sw-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/supercharger-guard-switch</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>starter-switch</object-name>
+        <property>/controls/switches/starter</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.58542</x-m>
+            <y-m>-0.225</y-m>
+            <z-m>-0.01</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>starter-switch</object-name>
+        <object-name>starter-switch-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/switches/starter</property>
+                <value type="bool">true</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/switches/starter</property>
+                    <value type="bool">false</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>starter-switch</tooltip-id>
+                <label>Starter: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/switches/starter</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>starter-sw-guard</object-name>
+        <property>/controls/switches/starter-guard-switch</property>
+        <factor>-120.0</factor>
+        <center>
+            <x-m> 2.59432</x-m>
+            <y-m>-0.17988</y-m>
+            <z-m> 0.00859</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>starter-sw-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/starter-guard-switch</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>primer-switch</object-name>
+        <property>/controls/switches/primer</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.58542</x-m>
+            <y-m>-0.225</y-m>
+            <z-m>-0.01</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>primer-switch</object-name>
+        <object-name>primer-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/switches/primer</property>
+                <value type="bool">true</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/switches/primer</property>
+                    <value type="bool">false</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>primer-switch</tooltip-id>
+                <label>Primer: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/switches/primer</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>primer-sw-guard</object-name>
+        <property>/controls/switches/primer-guard-switch</property>
+        <factor>-120.0</factor>
+        <center>
+            <x-m> 2.59432</x-m>
+            <y-m>-0.15657</y-m>
+            <z-m> 0.00859</z-m>
+        </center>
+        <axis>
+            <y>1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>primer-sw-guard</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/primer-guard-switch</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>fuel-pump-switch</object-name>
+        <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.58542</x-m>
+            <y-m>-0.225</y-m>
+            <z-m>-0.01</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>fuel-pump-switch</object-name>
+        <object-name>fuel-pump-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>fuel-pump-switch</tooltip-id>
+                <label>Fuel pump: %s</label>
+                <mapping>on-off</mapping>
+                <property>/fdm/jsbsim/propulsion/fuel_pump</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>boost-light</object-name>
+        <object-name>boost-light-button</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/engines/engine/blower-light-check</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine/blower-light-check</property>
+                    <value>0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>blower-light-check</tooltip-id>
+                <label>High blower: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/engines/engine/boost-light-on</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Electric Panel                                                     -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>translate</type>
+        <object-name>rec-lights-key</object-name>
+        <property>/controls/lighting/rec-light-key</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-0.003</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.31500</y-m>
+            <z-m>0.03500</z-m>
+        </center>
+        <axis>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>rec-lights-key</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/lighting/rec-light-key</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/lighting/rec-light-key</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rec-lights-key</tooltip-id>
+                <label>Click to enable receiver light</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>breaker-reset</object-name>
+        <property>/controls/electric/reset</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-5</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.74642</x-m>
+            <y-m>0.345</y-m>
+            <z-m>0.035</z-m>
+        </center>
+        <axis>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>breaker-reset</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/electric/reset</property>
+                <value type="int">1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/electric/reset</property>
+                    <value type="int">0</value>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>breaker-reset</tooltip-id>
+                <label>Click to reset circuit breakers</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>gen-disc-switch</object-name>
+        <property>/controls/engines/engine/master-alt</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33200</y-m>
+            <z-m>0.07200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>gen-disc-switch</object-name>
+        <object-name>gen-disc-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/engines/engine/master-alt</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen-disc-switch</tooltip-id>
+                <label>Generator disconnect: %s</label>
+                <property>/controls/engines/engine/master-alt</property>
+                <mapping>on-off</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>bat-disc-switch</object-name>
+        <property>/controls/engines/engine/master-bat</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33200</y-m>
+            <z-m>0.07200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>bat-disc-switch</object-name>
+        <object-name>bat-disc-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/engines/engine/master-bat</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>bat-disc-switch</tooltip-id>
+                <label>Battery disconnect: %s</label>
+                <property>/controls/engines/engine/master-bat</property>
+                <mapping>on-off</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>gun-heat-switch</object-name>
+        <property>/controls/anti-ice/gun-heat</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33200</y-m>
+            <z-m>0.07200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>gun-heat-switch</object-name>
+        <object-name>gun-heat-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/anti-ice/gun-heat</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gun-heat-switch</tooltip-id>
+                <label>Gun heat: %s</label>
+                <property>/controls/anti-ice/gun-heat</property>
+                <mapping>on-off</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>pitot-heat-switch</object-name>
+        <property>/controls/anti-ice/pitot-heat</property>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33200</y-m>
+            <z-m>0.07200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>pitot-heat-switch</object-name>
+        <object-name>pitot-heat-sw-body</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/anti-ice/pitot-heat</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>pitot-heat-switch</tooltip-id>
+                <label>Pitot heat: %s</label>
+                <property>/controls/anti-ice/pitot-heat</property>
+                <mapping>on-off</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>wing-pos-lgt-switch</object-name>
+        <property>/controls/lighting/wing-position-lights</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33200</y-m>
+            <z-m>0.07200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <object-name>wing-pos-lgt-switch</object-name>
+        <object-name>wing-pos-lgt-sw-body</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/wing-position-lights</property>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>wing-pos-lgt-switch</tooltip-id>
+                <label>Position lights wings: %s</label>
+                <property>/controls/lighting/wing-position-lights</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'BRIGHT', 'DIM'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>tail-pos-lgt-switch</object-name>
+        <property>/controls/lighting/tail-position-lights</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33200</y-m>
+            <z-m>0.07200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <object-name>tail-pos-lgt-switch</object-name>
+        <object-name>tail-pos-lgt-sw-body</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/tail-position-lights</property>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>tail-pos-lgt-switch</tooltip-id>
+                <label>Position light tail: %s</label>
+                <property>/controls/lighting/tail-position-lights</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'BRIGHT', 'DIM'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rec-lgt-red-switch</object-name>
+        <property>/controls/lighting/red-rec-light-sw</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33000</y-m>
+            <z-m>0.01200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <object-name>rec-lgt-red-switch</object-name>
+        <object-name>rec-lgt-red-sw-body</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/red-rec-light-sw</property>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>red-rec-light</tooltip-id>
+                <label>Red recognition light: %s</label>
+                <property>/controls/lighting/red-rec-light-sw</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'KEY', 'STEADY'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rec-lgt-gr-switch</object-name>
+        <property>/controls/lighting/green-rec-light-sw</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33000</y-m>
+            <z-m>0.01200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <object-name>rec-lgt-gr-switch</object-name>
+        <object-name>rec-lgt-gr-sw-body</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/green-rec-light-sw</property>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>green-rec-light</tooltip-id>
+                <label>Green recognition light: %s</label>
+                <property>/controls/lighting/green-rec-light-sw</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'KEY', 'STEADY'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rec-lgt-amb-switch</object-name>
+        <property>/controls/lighting/amber-rec-light-sw</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.89642</x-m>
+            <y-m>0.33000</y-m>
+            <z-m>0.01200</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <object-name>rec-lgt-amb-switch</object-name>
+        <object-name>rec-lgt-amb-sw-body</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/amber-rec-light-sw</property>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>amber-rec-light</tooltip-id>
+                <label>Amber recognition light: %s</label>
+                <property>/controls/lighting/amber-rec-light-sw</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'KEY', 'STEADY'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30</drag-scale-px>
+        <object-name>right-flor-knob</object-name>
+        <property>/controls/lighting/right-flor-pos</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>180</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>270</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.77142</x-m>
+            <y-m>0.315</y-m>
+            <z-m>0.124</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/lighting/right-flor-pos</property>
+                <value type="int">0</value>
+                <value type="int">3</value>
+                <value type="int">2</value>
+                <value type="int">1</value>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>right-flor-light</tooltip-id>
+                <label>Right fluorescent light: %s</label>
+                <property>/controls/lighting/right-flor-pos</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'START', 'ON', 'DIM'];
+                    return modes[arg[0]];
+                </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Ignition Switch                                                    -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>10.0</drag-scale-px>
+        <shift-repeat type="int">1</shift-repeat>
+        <object-name>ignition-handle</object-name>
+        <property>/controls/engines/engine[0]/magnetos</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>55</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>80</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.58542</x-m>
+            <y-m>-0.10000</y-m>
+            <z-m>-0.01518</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/engines/engine[0]/magnetos</property>
+                <min>0</min>
+                <max>3</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>magnetos</tooltip-id>
+                <label>Magnetos: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'RIGHT', 'LEFT', 'BOTH'];
+                    return modes[arg[0]];
+                </script>
+                <property>/controls/engines/engine[0]/magnetos</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Guns And Camera Switch                                             -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>gun-switch</object-name>
+        <property>/controls/armament/gunsight/power-on</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>-1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>2.60</x-m>
+            <y-m>-0.095</y-m>
+            <z-m>-0.105</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>gun-switch</object-name>
+        <object-name>gun-sw-base</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/armament/gunsight/power-on</property>
+                <value type="int">-1</value>
+                <value type="int">0</value>
+                <value type="int">1</value>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    var modes = [0, 0, 1];
+                    var arg = getprop("/controls/armament/gunsight/power-on") + 1;
+                    setprop("/controls/armament/guns-enabled", modes[arg]);
+                </script>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gun-switch</tooltip-id>
+                <label>Guns: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['CAMERA AND SIGHT', 'OFF', 'GUNS, CAMERA, AND SIGHT'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/controls/armament/gunsight/power-on</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Rocket Controls Panel                                              -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>rocket-next-fired</object-name>
+        <property>/controls/armament/next-RX</property>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>32.7</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>65.5</dep>
+            </entry>
+            <entry>
+                <ind>4</ind>
+                <dep>105</dep>
+            </entry>
+            <entry>
+                <ind>5</ind>
+                <dep>140</dep>
+            </entry>
+            <entry>
+                <ind>6</ind>
+                <dep>176</dep>
+            </entry>
+            <entry>
+                <ind>7</ind>
+                <dep>211</dep>
+            </entry>
+            <entry>
+                <ind>8</ind>
+                <dep>246.1</dep>
+            </entry>
+            <entry>
+                <ind>9</ind>
+                <dep>295</dep>
+            </entry>
+            <entry>
+                <ind>10</ind>
+                <dep>329</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.59526</x-m>
+            <y-m> 0.01416</y-m>
+            <z-m>-0.14911</z-m>
+        </center>
+        <axis>
+            <x>0.9</x>
+            <y>0.0025</y>
+            <z>0.1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>horizontal</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>single-auto-knob</object-name>
+        <property>/controls/armament/rocket-controler</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-37</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>-80</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.59972</x-m>
+            <y-m>-0.03237</y-m>
+            <z-m>-0.09135</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/armament/rocket-controler</property>
+                <min>0</min>
+                <max>2</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rocket-controller</tooltip-id>
+                <label>Rocket controller: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['OFF', 'SINGLE', 'AUTO'];
+                    return modes[arg[0]];
+                </script>
+                <property>/controls/armament/rocket-controler</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>left-arm-switch</object-name>
+        <property>/controls/armament/left-bomb-arm-chem-release</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>-1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.58221</x-m>
+            <y-m> 0.00454</y-m>
+            <z-m>-0.03318</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+    </animation>
+
+    <!-- Spring-loaded for RELEASE position (page 63 of F-51D handbook) -->
+    <animation>
+        <type>pick</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>left-arm-switch</object-name>
+        <object-name>left-arm-sw-base</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>/controls/armament/left-bomb-arm-chem-release</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/controls/armament/left-bomb-arm-chem-release</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <condition>
+                        <equals>
+                            <property>/controls/armament/left-bomb-arm-chem-release</property>
+                            <value>1</value>
+                        </equals>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>/controls/armament/left-bomb-arm-chem-release</property>
+                    <value>0</value>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>left-arm-switch</object-name>
+        <object-name>left-arm-sw-base</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/armament/left-bomb-arm-chem-release</property>
+                <value type="int">-1</value>
+                <value type="int">0</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>left-bomb-arm</tooltip-id>
+                <label>Left bomb/chemical: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['ARM', 'OFF', 'RELEASE'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/controls/armament/left-bomb-arm-chem-release</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>right-arm-switch</object-name>
+        <property>/controls/armament/right-bomb-arm-chem-release</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>-1</ind>
+                <dep>-25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.58221</x-m>
+            <y-m> 0.03048</y-m>
+            <z-m>-0.03318</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+    </animation>
+
+    <!-- Spring-loaded for RELEASE position (page 63 of F-51D handbook) -->
+    <animation>
+        <type>pick</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>right-arm-switch</object-name>
+        <object-name>right-arm-sw-base</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>/controls/armament/right-bomb-arm-chem-release</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/controls/armament/right-bomb-arm-chem-release</property>
+                <value>1</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <condition>
+                        <equals>
+                            <property>/controls/armament/right-bomb-arm-chem-release</property>
+                            <value>1</value>
+                        </equals>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>/controls/armament/right-bomb-arm-chem-release</property>
+                    <value>0</value>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>right-arm-switch</object-name>
+        <object-name>right-arm-sw-base</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/armament/right-bomb-arm-chem-release</property>
+                <value type="int">-1</value>
+                <value type="int">0</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>right-bomb-arm</tooltip-id>
+                <label>Right bomb/chemical: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['ARM', 'OFF', 'RELEASE'];
+                    return modes[arg[0]+1];
+                </script>
+                <property>/controls/armament/right-bomb-arm-chem-release</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>instant-switch</object-name>
+        <property>/controls/armament/instant</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>25</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.59363</x-m>
+            <y-m> 0.04185</y-m>
+            <z-m>-0.08979</z-m>
+        </center>
+        <axis>
+            <z>-1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>instant-sw-body</object-name>
+        <object-name>instant-switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/armament/instant</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rockets-release</tooltip-id>
+                <label>Rocket fuse: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['DELAY', 'INSTANT'];
+                    return modes[arg[0]];
+                </script>
+                <property>/controls/armament/instant</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>weapons-select-sw</object-name>
+        <object-name>weapons-sel-sw-base</object-name>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/armament/weapons-select</property>
+                <value type="int">1</value>
+                <value type="int">2</value>
+                <value type="int">0</value>
+                <value type="int">3</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>weapons-select</tooltip-id>
+                <label>Selected weapons: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['SAFE', 'BOMBS BOTH', 'BOMBS TRAIN', 'ROCKETS'];
+                    return modes[arg[0]];
+                </script>
+                <property>/controls/armament/weapons-select</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>weapons-select-sw</object-name>
+        <property>/controls/armament/rockets</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>25</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.58221</x-m>
+            <y-m>-0.04295</y-m>
+            <z-m>-0.03318</z-m>
+        </center>
+        <axis>
+            <y>-1</y>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>weapons-select-sw</object-name>
+        <property>/controls/armament/bombs-train</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>40</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.58221</x-m>
+            <y-m>-0.04295</y-m>
+            <z-m>-0.03318</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>0.866</y>
+            <z>0.6</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>weapons-select-sw</object-name>
+        <property>/controls/armament/bombs-both</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-40</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m> 2.58221</x-m>
+            <y-m>-0.04295</y-m>
+            <z-m>-0.03318</z-m>
+        </center>
+        <axis>
+            <x>-0.012</x>
+            <y>-0.866</y>
+            <z>0.6</z>
+        </axis>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Throttle Quadrant                                                  -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>throttle-grip</object-name>
+        <object-name>throttle-mic-button</object-name>
+        <object-name>throttle-lever</object-name>
+        <object-name>throttle-range-lever</object-name>
+        <object-name>throttle-range-cable</object-name>
+        <object-name>throttle-range-cable-housing</object-name>
+        <property>/controls/engines/engine[0]/throttle</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>70</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <y>-1</y>
+        </axis>
+        <center>
+            <x-m>2.8342</x-m><!-- -0.02 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.32</y-m>
+            <z-m>0.115</z-m>
+        </center>
+    </animation>
+
+    <!--
+         Pulling the cable by turning the range control grip counter-
+         clockwise, increases the range. (See Figure 439B on page 383 of
+         AN 01-60JE-2 maintenance manual)
+    -->
+    <animation>
+        <type>rotate</type>
+        <object-name>throttle-grip</object-name>
+        <object-name>throttle-range-lever</object-name>
+        <object-name>throttle-range-cable</object-name>
+        <object-name>throttle-mic-button</object-name>
+        <property>/controls/armament/gunsight/range</property>
+        <interpolation>
+            <entry>
+                <ind>2400</ind>
+                <dep>30</dep>
+            </entry>
+            <entry>
+                <ind>600</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 2.92183</x1-m>
+            <y1-m>-0.29538</y1-m>
+            <z1-m> 0.22507</z1-m>
+            <x2-m> 2.93611</x2-m>
+            <y2-m>-0.20941</y2-m>
+            <z2-m> 0.24999</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>throttle-range-cable</object-name>
+        <property>/controls/armament/gunsight/range</property>
+        <interpolation>
+            <entry>
+                <ind>2400</ind>
+                <dep>-27</dep>
+            </entry>
+            <entry>
+                <ind>1500</ind>
+                <dep>-15</dep>
+            </entry>
+            <entry>
+                <ind>200</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 2.9366</x1-m>
+            <y1-m>-0.3100</y1-m>
+            <z1-m> 0.2705</z1-m>
+            <x2-m> 2.9372</x2-m>
+            <y2-m>-0.2300</y2-m>
+            <z2-m> 0.2705</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>throttle-range-cable</object-name>
+        <property>/controls/armament/gunsight/range</property>
+        <interpolation>
+            <entry>
+                <ind>2400</ind>
+                <dep>-16</dep>
+            </entry>
+            <entry>
+                <ind>200</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 2.9263</x1-m>
+            <y1-m>-0.3103</y1-m>
+            <z1-m> 0.2650</z1-m>
+            <x2-m> 2.9263</x2-m>
+            <y2-m>-0.3103</y2-m>
+            <z2-m> 0.2750</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>throttle-rangle-cable-housing</object-name>
+        <property>/controls/engines/engine[0]/throttle</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.5</ind>
+                <dep>0.115</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>0.180</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0.205</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+        </axis>
+        <center>
+            <x-m>2.8342</x-m><!-- -0.02 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.32</y-m>
+            <z-m>0.115</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>throttle-rangle-cable-housing</object-name>
+        <property>/controls/engines/engine[0]/throttle</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>-0.75</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>-1.2</dep>
+            </entry>
+            <entry>
+                <ind>0.25</ind>
+                <dep>-1.2</dep>
+            </entry>
+            <entry>
+                <ind>0.3</ind>
+                <dep>-1</dep>
+            </entry>
+            <entry>
+                <ind>0.4</ind>
+                <dep>-0.25</dep>
+            </entry>
+            <entry>
+                <ind>0.5</ind>
+                <dep>0.7</dep>
+            </entry>
+            <entry>
+                <ind>0.6</ind>
+                <dep>2.5</dep>
+            </entry>
+            <entry>
+                <ind>0.7</ind>
+                <dep>4.5</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>7</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>13</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 2.5726</x1-m>
+            <y1-m>-0.3155</y1-m>
+            <z1-m> 0.2425</z1-m>
+            <x2-m> 2.5726</x2-m>
+            <y2-m>-0.3153</y2-m>
+            <z2-m> 0.2425</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>5</drag-scale-px>
+        <object-name>throttle-grip</object-name>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/engines/engine[0]/throttle</property>
+                <factor>0.01</factor>
+                <min>0.0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>throttle-grip</tooltip-id>
+                <label>Throttle: %3d %%</label>
+                <label>Throttle: 100 %</label>
+                <property>/controls/engines/engine[0]/throttle</property>
+                <mapping>percent</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>prop-handle</object-name>
+        <object-name>prop-knob</object-name>
+        <property>/controls/engines/engine[0]/propeller-pitch</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>-80</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-10</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <y>-1</y>
+        </axis>
+        <center>
+            <x-m>2.8342</x-m><!-- -0.02 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.32</y-m>
+            <z-m>0.115</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>5</drag-scale-px>
+        <object-name>prop-knob</object-name>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/engines/engine[0]/propeller-pitch</property>
+                <factor>0.02</factor>
+                <min>0.0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>propeller-knob</tooltip-id>
+                <label>Propeller: %3d %%</label>
+                <label>Propeller: 100 %</label>
+                <property>/controls/engines/engine[0]/propeller-pitch</property>
+                <mapping>percent</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>mixture-handle</object-name>
+        <object-name>mixture-knob</object-name>
+        <property>/controls/engines/engine[0]/mixture</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>-10</dep>
+            </entry>
+            <entry>
+                <ind>0.1</ind>
+                <dep>-10</dep>
+            </entry>
+            <entry>
+                <ind>0.11</ind>
+                <dep>50</dep>
+            </entry>
+            <entry>
+                <ind>0.89</ind>
+                <dep>50</dep>
+            </entry>
+            <entry>
+                <ind>0.9</ind>
+                <dep>70</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>70</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <y>1</y>
+        </axis>
+        <center>
+            <x-m>2.8342</x-m><!-- -0.02 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.32</y-m>
+            <z-m>0.115</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>2</drag-scale-px>
+        <object-name>mixture-knob</object-name>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/engines/engine[0]/mixture</property>
+                <factor>0.01</factor>
+                <min>0.0</min>
+                <max>1.0</max>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>mixture-knob</tooltip-id>
+                <label>Mixture: %3d %%</label>
+                <label>Mixture: 100 %</label>
+                <property>/controls/engines/engine[0]/mixture</property>
+                <mapping>percent</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>throttle-mic-button</object-name>
+        <property>instrumentation/comm/SCR-522C/remote-pushed</property>
+        <factor>-0.005</factor>
+        <axis>
+            <y>1</y>
+        </axis>
+        <center>
+            <x-m>2.8342</x-m><!-- -0.02 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.32</y-m>
+            <z-m>0.115</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>throttle-mic-button</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>controls.ptt(1)</script>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.ptt(0)</script>
+                </binding>
+            </mod-up>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>mic-button</tooltip-id>
+                <label>Push to talk over radio</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Aileron trim                                                       -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>horizontal</drag-direction>
+        <drag-scale-px>10.0</drag-scale-px>
+        <object-name>trim-aileron-knob</object-name>
+        <property>/controls/flight/aileron-trim</property>
+        <factor>1440</factor>
+        <axis>
+            <x2-m> 2.86040</x2-m>
+            <y2-m>-0.35</y2-m>
+            <z2-m>-0.028</z2-m>
+
+            <x1-m>2.86716</x1-m>
+            <y1-m>-0.34929</y1-m>
+            <z1-m>-0.00333</z1-m>
+        </axis>
+
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/aileron-trim</property>
+                <factor>0.001</factor>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>aileron-trim</tooltip-id>
+                <measure-text>Aileron trim: -10.00 deg</measure-text>
+                <label>Aileron trim: %.2f deg</label>
+                <property>/controls/flight/aileron-trim</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var max_aileron_trim = 10.0;
+                    return arg[0] * max_aileron_trim;
+                 </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>trim-aileron-needle</object-name>
+        <property>/controls/flight/aileron-trim</property>
+        <factor>37.0</factor>
+        <axis>
+            <z>-1</z>
+        </axis>
+        <center>
+            <x-m>2.8604</x-m><!-- +0.035 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.35</y-m>
+            <z-m>-0.028</z-m>
+            <!-- pitch 15.0 deg -->
+        </center>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Elevator trim                                                      -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>10.0</drag-scale-px>
+        <object-name>trim-elevator-wheel</object-name>
+        <property>/controls/flight/elevator-trim</property>
+        <factor>1440</factor>
+        <axis>
+            <y>1</y>
+        </axis>
+        <center>
+            <x-m>2.9254</x-m><!-- +0.025 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.297</y-m>
+            <z-m>-0.13</z-m>
+        </center>
+
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/elevator-trim</property>
+                <factor>-0.0004</factor>
+                <min>-0.4</min>
+                <max>1.0</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>elevator-trim</tooltip-id>
+                <measure-text>Elevator trim: -25.00 deg</measure-text>
+                <label>Elevator trim: %.2f deg</label>
+                <property>/controls/flight/elevator-trim</property>
+                <mapping>nasal</mapping>
+                <script>
+                     var max_elevator_trim = -25.0;
+                     return arg[0] * max_elevator_trim;
+                 </script>
+            </binding>
+        </hovered>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>trim-elevator-needle</object-name>
+        <property>/controls/flight/elevator-trim</property>
+        <factor>70.0</factor>
+        <offset-deg>-20.0</offset-deg>
+        <axis>
+            <y>1</y>
+        </axis>
+        <center>
+            <x-m>2.9254</x-m><!-- +0.025 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.297</y-m>
+            <z-m>-0.13</z-m>
+        </center>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- Rudder trim                                                        -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>horizontal</drag-direction>
+        <drag-scale-px>10.0</drag-scale-px>
+        <object-name>trim-rudder-knob</object-name>
+        <property>/controls/flight/rudder-trim</property>
+        <factor>1440</factor>
+        <axis>
+            <z>-1</z>
+        </axis>
+        <center>
+            <x-m>2.9954</x-m><!-- +0.04 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.355</y-m>
+            <z-m>-0.048</z-m>
+        </center>
+
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/flight/rudder-trim</property>
+                <factor>0.001</factor>
+                <min>-1</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>rudder-trim</tooltip-id>
+                <measure-text>Rudder trim: -10.00 deg</measure-text>
+                <label>Rudder trim: %.2f deg</label>
+                <property>/controls/flight/rudder-trim</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var max_rudder_trim = 10.0;
+                    return arg[0] * max_rudder_trim;
+                 </script>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>trim-rudder-needle</object-name>
+        <property>/controls/flight/rudder-trim</property>
+        <factor>36.0</factor>
+        <axis>
+            <z>-1</z>
+        </axis>
+        <center>
+            <x-m>2.9954</x-m><!-- +0.04 (guessed using photo on page 10 of manual) -->
+            <y-m>-0.355</y-m>
+            <z-m>-0.048</z-m>
+        </center>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- SCR-522C Radio                                                     -->
+    <!-- ================================================================== -->
+
+    <animation>
+        <type>translate</type>
+        <object-name>SCR-522C-OFF</object-name>
+        <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-0.005</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>4</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>3.07451</x1-m>
+            <y1-m>0.34113</y1-m>
+            <z1-m>0.06682</z1-m>
+
+            <x2-m>3.07451</x2-m>
+            <y2-m>0.34027</y2-m>
+            <z2-m>0.07002</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SCR-522C-T-handle</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <condition>
+                    <equals>
+                        <property>/instrumentation/comm/SCR-522C/tr</property>
+                        <value>1</value>
+                    </equals>
+                </condition>
+                <command>property-assign</command>
+                <property>/instrumentation/comm/SCR-522C/tr</property>
+                <value>2</value>
+            </binding>
+            <mod-up>
+                <binding>
+                    <condition>
+                        <equals>
+                            <property>/instrumentation/comm/SCR-522C/tr</property>
+                            <value>2</value>
+                        </equals>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>/instrumentation/comm/SCR-522C/tr</property>
+                    <value>1</value>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <drag-direction>vertical</drag-direction>
+        <drag-scale-px>30.0</drag-scale-px>
+        <object-name>SCR-522C-T-handle</object-name>
+        <property>/instrumentation/comm/SCR-522C/tr</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>37.5</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>75</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>3.18533</x-m>
+            <y-m>0.34458</y-m>
+            <z-m>0.06291</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+        </axis>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/instrumentation/comm/SCR-522C/tr</property>
+                <value type="int">1</value>
+                <value type="int">0</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-transmit-switch</tooltip-id>
+                <label>Radio: %s</label>
+                <mapping>nasal</mapping>
+                <script>
+                    var modes = ['REMOTE', 'RECEIVE', 'TRANSMIT'];
+                    return modes[arg[0]];
+                </script>
+                <property>/instrumentation/comm/SCR-522C/tr</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SCR-522C-A</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                <value>1</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-channel-a</tooltip-id>
+                <label>Click to select channel A</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SCR-522C-B</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                <value>2</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-channel-b</tooltip-id>
+                <label>Click to select channel B</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SCR-522C-C</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                <value>3</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-channel-c</tooltip-id>
+                <label>Click to select channel C</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SCR-522C-D</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                <value>4</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-channel-d</tooltip-id>
+                <label>Click to select channel D</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SCR-522C-OFF</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                <value>0</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-select-off</tooltip-id>
+                <label>Click to turn radio off</label>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>SCR-522C-A</object-name>
+        <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-0.005</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>4</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>3.09311</x1-m>
+            <y1-m>0.34113</y1-m>
+            <z1-m>0.06682</z1-m>
+
+            <x2-m>3.09311</x2-m>
+            <y2-m>0.34027</y2-m>
+            <z2-m>0.07002</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>SCR-522C-B</object-name>
+        <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>-0.005</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>4</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>3.11161</x1-m>
+            <y1-m>0.34113</y1-m>
+            <z1-m>0.06682</z1-m>
+
+            <x2-m>3.11161</x2-m>
+            <y2-m>0.34027</y2-m>
+            <z2-m>0.07002</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>SCR-522C-C</object-name>
+        <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>-0.005</dep>
+            </entry>
+            <entry>
+                <ind>4</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>3.13070</x1-m>
+            <y1-m>0.34113</y1-m>
+            <z1-m>0.06682</z1-m>
+
+            <x2-m>3.13070</x2-m>
+            <y2-m>0.34027</y2-m>
+            <z2-m>0.07002</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>SCR-522C-D</object-name>
+        <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>4</ind>
+                <dep>-0.005</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>3.14841</x1-m>
+            <y1-m>0.34113</y1-m>
+            <z1-m>0.06682</z1-m>
+
+            <x2-m>3.14841</x2-m>
+            <y2-m>0.34027</y2-m>
+            <z2-m>0.07002</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-A.d</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                    <value>1</value>
+                </equals>
+                <property>/instrumentation/comm/SCR-522C/mask</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-A.b</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                    <value>1</value>
+                </equals>
+                <not>
+                    <property>/instrumentation/comm/SCR-522C/mask</property>
+                </not>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-B.d</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                    <value>2</value>
+                </equals>
+                <property>/instrumentation/comm/SCR-522C/mask</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-B.b</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                    <value>2</value>
+                </equals>
+                <not>
+                    <property>/instrumentation/comm/SCR-522C/mask</property>
+                </not>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-C.d</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                    <value>3</value>
+                </equals>
+                <property>/instrumentation/comm/SCR-522C/mask</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-C.b</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                    <value>3</value>
+                </equals>
+                <not>
+                    <property>/instrumentation/comm/SCR-522C/mask</property>
+                </not>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-D.d</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                    <value>4</value>
+                </equals>
+                <property>/instrumentation/comm/SCR-522C/mask</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-D.b</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                    <value>4</value>
+                </equals>
+                <not>
+                    <property>/instrumentation/comm/SCR-522C/mask</property>
+                </not>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-T.d</object-name>
+        <condition>
+            <and>
+                <not>
+                    <property>/instrumentation/comm/ptt</property>
+                </not>
+                <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                <property>/instrumentation/comm/SCR-522C/mask</property>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>SCR-522C-lamp-T.b</object-name>
+        <condition>
+            <and>
+                <not>
+                    <property>/instrumentation/comm/ptt</property>
+                </not>
+                <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+                <not>
+                    <property>/instrumentation/comm/SCR-522C/mask</property>
+                </not>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SCR-522C-mask-1</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-cycle</command>
+                <property>/instrumentation/comm/SCR-522C/mask</property>
+                <value type="bool">true</value>
+                <value type="bool">false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-set-mask</tooltip-id>
+                <label>Mask: %s</label>
+                <mapping>on-off</mapping>
+                <property>/instrumentation/comm/SCR-522C/mask</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>SCR-522C-mask-1</object-name>
+        <property>/instrumentation/comm/SCR-522C/mask</property>
+        <factor>0.007</factor>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>SCR-522-T-Lock</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-cycle</command>
+                <property>/instrumentation/comm/SCR-522C/tr-lock</property>
+                <value type="bool">true</value>
+                <value type="bool">false</value>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radio-lock</tooltip-id>
+                <label>Lock: %s</label>
+                <mapping>on-off</mapping>
+                <property>/instrumentation/comm/SCR-522C/tr-lock</property>
+            </binding>
+        </hovered>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>SCR-522-T-Lock</object-name>
+        <property>/instrumentation/comm/SCR-522C/tr-lock</property>
+        <factor>0.007</factor>
+        <axis>
+            <x>1</x>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>SCR-522C-lamp-A.b</object-name>
+        <object-name>SCR-522C-lamp-B.b</object-name>
+        <object-name>SCR-522C-lamp-C.b</object-name>
+        <object-name>SCR-522C-lamp-D.b</object-name>
+        <emission>
+            <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+            <red>0.3</red>
+            <green>0.3</green>
+            <blue>1.0</blue>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>SCR-522C-lamp-A.d</object-name>
+        <object-name>SCR-522C-lamp-B.d</object-name>
+        <object-name>SCR-522C-lamp-C.d</object-name>
+        <object-name>SCR-522C-lamp-D.d</object-name>
+        <emission>
+            <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+            <red>0.01</red>
+            <green>0.01</green>
+            <blue>0.25</blue>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>SCR-522C-lamp-T.b</object-name>
+        <emission>
+            <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+            <red>1.0</red>
+            <green>1.0</green>
+            <blue>1.0</blue>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>SCR-522C-lamp-T.d</object-name>
+        <emission>
+            <property>/instrumentation/comm/SCR-522C/frequencies/channel-selected</property>
+            <red>0.07</red>
+            <green>0.07</green>
+            <blue>0.07</blue>
+        </emission>
+    </animation>
+
+    <!-- ================================================================== -->
+    <!-- ALS interior shadow                                                -->
+    <!-- ================================================================== -->
+
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/interior/interior</inherits-from>
+        <object-name>carb-heat-warn</object-name>
+        <object-name>up-down-placard</object-name>
+        <object-name>gearLeverForward</object-name>
+        <object-name>gearLeverHardware</object-name>
+        <object-name>gearLeverRear</object-name>
+        <object-name>unlock-tailwheel-plac</object-name>
+        <object-name>brake-placard</object-name>
+        <object-name>naa-placard</object-name>
+        <object-name>speed-limits-plac</object-name>
+        <object-name>engine-limits-plac</object-name>
+        <object-name>MP-warning-placard</object-name>
+        <object-name>Ox-Dur-placard</object-name>
+        <object-name>gun-circuit</object-name>
+        <object-name>carbHP-plac-scrw2</object-name>
+        <object-name>carbHP-plac-scrw3</object-name>
+        <object-name>carbHP-plac-scrw4</object-name>
+        <object-name>unlockTailwheel</object-name>
+        <object-name>MP-warning</object-name>
+        <object-name>land-gear-placard</object-name>
+        <object-name>RightRudderCarage</object-name>
+        <object-name>LeftRudderCarage</object-name>
+        <object-name>LeftRudderPedal</object-name>
+        <object-name>RightRudderPedal</object-name>
+        <object-name>floor-center</object-name>
+        <object-name>Fuel-line</object-name>
+        <object-name>Floor-Center-base</object-name>
+        <object-name>LeftCockpitConsole</object-name>
+        <object-name>BootTransition</object-name>
+        <object-name>Stick</object-name>
+        <object-name>Trigger2</object-name>
+        <object-name>BootBody</object-name>
+        <object-name>BootTop</object-name>
+        <object-name>ReostatKnob</object-name>
+        <object-name>ReostatPlate</object-name>
+        <object-name>ConsolePanel</object-name>
+        <object-name>EjectSticker</object-name>
+        <object-name>CoolantSticker</object-name>
+        <object-name>CarbHeatSticker</object-name>
+        <object-name>air-placard</object-name>
+        <object-name>fuel-return-plac</object-name>
+        <object-name>LDG-fairing-plac</object-name>
+        <object-name>hot-air</object-name>
+        <object-name>ram-air</object-name>
+        <object-name>CockpitFloor-black</object-name>
+        <object-name>seat</object-name>
+        <object-name>parking-brake-handle</object-name>
+        <object-name>flor-body</object-name>
+        <object-name>ox-hose</object-name>
+        <object-name>mask-connector</object-name>
+
+        <!-- Bomb salvo -->
+        <object-name>salvo-bracked</object-name>
+        <object-name>left-salvo</object-name>
+        <object-name>right-salvo</object-name>
+
+        <!-- Canopy crank -->
+        <object-name>crank-body</object-name>
+        <object-name>crank-handle</object-name>
+        <object-name>crank-lever</object-name>
+        <object-name>crank-lock-button</object-name>
+        <object-name>crank-lock-lever</object-name>
+
+        <!-- Canopy emergency release -->
+        <object-name>release-bolt</object-name>
+        <object-name>release-bracket</object-name>
+        <object-name>release-handle</object-name>
+
+        <!-- Left switch panel -->
+        <object-name>coolant-door-sw-body</object-name>
+        <object-name>coolant-door-switch</object-name>
+        <object-name>coolant-switch-guard</object-name>
+        <object-name>oil-door-sw-body</object-name>
+        <object-name>oil-door-switch</object-name>
+        <object-name>oil-switch-guard</object-name>
+        <object-name>landing-light-sw-body</object-name>
+        <object-name>landing-light-switch</object-name>
+        <object-name>left-flor-hump</object-name>
+        <object-name>left-flor-knob</object-name>
+        <object-name>left-switch-box</object-name>
+
+        <!-- Engine switch panel -->
+        <object-name>boost-light</object-name>
+        <object-name>boost-light-button</object-name>
+        <object-name>boost-sw-body</object-name>
+        <object-name>boost-sw-guard</object-name>
+        <object-name>boost-switch</object-name>
+        <object-name>engine-sw-plate</object-name>
+        <object-name>fuel-pump-sw-body</object-name>
+        <object-name>fuel-pump-switch</object-name>
+        <object-name>oil-dilute-sw-body</object-name>
+        <object-name>oil-dilute-switch</object-name>
+        <object-name>primer-sw-body</object-name>
+        <object-name>primer-sw-guard</object-name>
+        <object-name>primer-switch</object-name>
+        <object-name>starter-sw-guard</object-name>
+        <object-name>starter-switch</object-name>
+        <object-name>starter-switch-body</object-name>
+
+        <!-- Electric panel -->
+        <object-name>amp-face</object-name>
+        <object-name>amp-meter</object-name>
+        <object-name>amp-needle</object-name>
+        <object-name>bat-disc-sw-body</object-name>
+        <object-name>bat-disc-switch</object-name>
+        <object-name>breaker-reset</object-name>
+        <object-name>electric-panel-base</object-name>
+        <object-name>electric-panel-screw</object-name>
+        <object-name>gen-disc-sw-body</object-name>
+        <object-name>gen-disc-switch</object-name>
+        <object-name>gun-heat-sw-body</object-name>
+        <object-name>gun-heat-switch</object-name>
+        <object-name>pitot-heat-sw-body</object-name>
+        <object-name>pitot-heat-switch</object-name>
+        <object-name>rec-lgt-amb-sw-body</object-name>
+        <object-name>rec-lgt-amb-switch</object-name>
+        <object-name>rec-lgt-gr-sw-body</object-name>
+        <object-name>rec-lgt-gr-switch</object-name>
+        <object-name>rec-lgt-red-sw-body</object-name>
+        <object-name>rec-lgt-red-switch</object-name>
+        <object-name>rec-lights-key</object-name>
+        <object-name>right-flor-knob</object-name>
+        <object-name>tail-pos-lgt-sw-body</object-name>
+        <object-name>tail-pos-lgt-switch</object-name>
+        <object-name>wing-pos-lgt-sw-body</object-name>
+        <object-name>wing-pos-lgt-switch</object-name>
+
+        <!-- Flaps lever -->
+        <object-name>flaps-lever</object-name>
+        <object-name>flaps-index</object-name>
+
+        <!-- K-14 gun sight controller -->
+        <object-name>k-14-GS-gyro-fixed</object-name>
+        <object-name>k-14-GS-brightness</object-name>
+        <object-name>k-14-controller-body</object-name>
+        <object-name>k-14-switch</object-name>
+        <object-name>k-14-switch-case</object-name>
+
+        <!-- Stick lock behind stick -->
+        <object-name>stick-lock-knob</object-name>
+        <object-name>stick-lock-base</object-name>
+        <object-name>stick-lock</object-name>
+
+        <!-- Horn button -->
+        <object-name>horn-button</object-name>
+        <object-name>horn-button-base</object-name>
+        <object-name>horn-button-plate</object-name>
+
+        <!-- Fuel cutoff and selector -->
+        <object-name>fuel-off-lever</object-name>
+        <object-name>tank-selector-body</object-name>
+        <object-name>tank-selector-knob</object-name>
+
+        <!-- Hydraulic panel -->
+        <object-name>hydraulic-face</object-name>
+        <object-name>hydraulic-handle</object-name>
+        <object-name>hydraulic-needle</object-name>
+
+        <!-- Ignition switch -->
+        <object-name>ignition-face</object-name>
+        <object-name>ignition-handle</object-name>
+
+        <!-- Guns and camera switch -->
+        <object-name>gun-switch-face</object-name>
+        <object-name>gun-switch</object-name>
+        <object-name>gun-sw-base</object-name>
+
+        <!-- Rocket controls panel -->
+        <object-name>left-arm-switch</object-name>
+        <object-name>right-arm-switch</object-name>
+        <object-name>weapons-select-switch</object-name>
+        <object-name>instant-switch</object-name>
+        <object-name>instant-sw-body</object-name>
+        <object-name>weapons-select-sw</object-name>
+        <object-name>weapons-sel-sw-base</object-name>
+        <object-name>left-arm-sw-base</object-name>
+        <object-name>right-arm-sw-base</object-name>
+        <object-name>rocket-reset-knob</object-name>
+        <object-name>rocket-next-fired</object-name>
+        <object-name>rocket-controls-panel</object-name>
+        <object-name>rocket-bomb-face</object-name>
+        <object-name>single-auto-knob</object-name>
+
+        <!-- Throttle quadrant -->
+        <object-name>mixture-knob</object-name>
+        <object-name>mixture-handle</object-name>
+        <object-name>prop-knob</object-name>
+        <object-name>prop-handle</object-name>
+        <object-name>prop-mix-lock</object-name>
+        <object-name>throttle-range-lever</object-name>
+        <object-name>throttle-range-cable</object-name>
+        <object-name>throttle-range-cable-housing</object-name>
+        <object-name>throttle-base</object-name>
+        <object-name>throttle-grip</object-name>
+        <object-name>throttle-lever</object-name>
+        <object-name>throttle-lock</object-name>
+        <object-name>throttle-mic-button</object-name>
+
+        <!-- Aileron trim -->
+        <object-name>trim-aileron-index</object-name>
+        <object-name>trim-aileron-knob</object-name>
+        <object-name>trim-aileron-needle</object-name>
+        <object-name>trim-aileron-base</object-name>
+
+        <!-- Elevator trim -->
+        <object-name>trim-elevator-index</object-name>
+        <object-name>trim-elevator-needle</object-name>
+        <object-name>trim-elevator-wheel</object-name>
+
+        <!-- Rudder trim -->
+        <object-name>trim-rudder-index</object-name>
+        <object-name>trim-rudder-knob</object-name>
+        <object-name>trim-rudder-needle</object-name>
+
+        <!-- Oxygen regulator -->
+        <object-name>A-14A-alt-selector</object-name>
+        <object-name>A-14A-body</object-name>
+        <object-name>A-14A-normal-100-pct</object-name>
+
+        <!-- SCR-522C -->
+        <object-name>SCR-522-T-Lock</object-name>
+        <object-name>SCR-522C-A</object-name>
+        <object-name>SCR-522C-B</object-name>
+        <object-name>SCR-522C-C</object-name>
+        <object-name>SCR-522C-D</object-name>
+        <object-name>SCR-522C-OFF</object-name>
+        <object-name>SCR-522C-T-handle</object-name>
+        <object-name>SCR-522C-box</object-name>
+        <object-name>SCR-522C-lamp-A.b</object-name>
+        <object-name>SCR-522C-lamp-A.d</object-name>
+        <object-name>SCR-522C-lamp-B.b</object-name>
+        <object-name>SCR-522C-lamp-B.d</object-name>
+        <object-name>SCR-522C-lamp-C.b</object-name>
+        <object-name>SCR-522C-lamp-C.d</object-name>
+        <object-name>SCR-522C-lamp-D.b</object-name>
+        <object-name>SCR-522C-lamp-D.d</object-name>
+        <object-name>SCR-522C-lamp-T.b</object-name>
+        <object-name>SCR-522C-lamp-T.d</object-name>
+        <object-name>SCR-522C-mask-1</object-name>
+
+        <!-- SCR-695 -->
+        <object-name>SCR-695-case</object-name>
+        <object-name>SD-button-1</object-name>
+        <object-name>SD-button-2</object-name>
+        <object-name>SD-reset</object-name>
+        <object-name>iff-distress-sw-base</object-name>
+        <object-name>iff-distress-sw-guard</object-name>
+        <object-name>iff-distress-switch</object-name>
+        <object-name>iff-power-sw-base</object-name>
+        <object-name>iff-power-switch</object-name>
+        <object-name>iff-signal-selector</object-name>
+        <object-name>iff-time-sw-base</object-name>
+        <object-name>iff-time-switch</object-name>
+
+        <!-- AN/APS-13 bell panel -->
+        <object-name>AN/APS-13-bell</object-name>
+        <object-name>AN/APS-13-bell-panel</object-name>
+
+        <!-- AN/APS-13 control panel -->
+        <object-name>aps-13-lamp</object-name>
+        <object-name>aps-13-panel</object-name>
+        <object-name>aps-13-power-sw-base</object-name>
+        <object-name>aps-13-power-switch</object-name>
+        <object-name>aps-13-screws</object-name>
+        <object-name>aps-13-test-sw-base</object-name>
+        <object-name>aps-13-test-switch</object-name>
+        <object-name>aps-13-audio</object-name>
+    </effect>
+
 </PropertyList>

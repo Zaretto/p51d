@@ -1,17 +1,23 @@
 <?xml version="1.0"?>
+
 <PropertyList>
 
- <path>seat-vintage.ac</path>
+    <path>seat-armor.ac</path>
 
- <animation>
-  <type>material</type>
-  <object-name>seatAndArmor</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.28</red>
-    <green>0.18</green>
-    <blue>0.18</blue>
-  </emission>
- </animation>
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/interior/interior</inherits-from>
+        <object-name>seat-armor</object-name>
+    </effect>
+
+    <animation>
+        <type>material</type>
+        <object-name>seat-armor</object-name>
+        <emission>
+            <factor-prop>controls/lighting/cabin-norm</factor-prop>
+            <red>0.28</red>
+            <green>0.18</green>
+            <blue>0.18</blue>
+        </emission>
+    </animation>
 
 </PropertyList>

@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-    <path>Aircraft/Instruments-3d/computing-gun-sights/K14/K14-sight.ac</path>
+    <path>K14-gun-sight.ac</path>
 
     <animation>
         <type>range</type>
@@ -27,14 +27,12 @@
         <factor>95</factor>
         <property>/controls/armament/gunsight/sunScreenDown</property>
         <center>
-            <x-m>-0.0673</x-m>
-            <y-m>0</y-m>
-            <z-m>0.0416</z-m>
+            <x-m>2.823120</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.622599</z-m>
         </center>
         <axis>
-            <x>0</x>
             <y>-1</y>
-            <z>0</z>
         </axis>
     </animation>
 
@@ -44,14 +42,12 @@
         <factor>75</factor>
         <property>/controls/armament/gunsight/sunScreenDown</property>
         <center>
-            <x-m>-0.0239</x-m>
-            <y-m>0</y-m>
-            <z-m>0.0172</z-m>
+            <x-m>2.86652</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.5982</z-m>
         </center>
         <axis>
-            <x>0</x>
             <y>1</y>
-            <z>0</z>
         </axis>
     </animation>
 
@@ -79,7 +75,6 @@
 
     <animation>
         <type>rotate</type>
-        <object-name>mask-knob</object-name>
         <object-name>mask-lever</object-name>
         <property>/controls/armament/gunsight/mask-off</property>
         <interpolation>
@@ -93,20 +88,17 @@
             </entry>
         </interpolation>
         <center>
-            <x-m>-0.052</x-m>
-            <y-m>-0.067911</y-m>
-            <z-m>0.0112</z-m>
+            <x-m> 2.83842</x-m>
+            <y-m>-0.06791</y-m>
+            <z-m> 0.59220</z-m>
         </center>
         <axis>
-            <x>0</x>
             <y>1</y>
-            <z>0</z>
         </axis>
     </animation>
 
     <animation>
         <type>pick</type>
-        <object-name>mask-knob</object-name>
         <object-name>mask-lever</object-name>
         <action>
             <button>0</button>
@@ -174,9 +166,9 @@
             </entry>
         </interpolation>
         <center>
-            <x-m>-0.0002</x-m>
-            <y-m>0.0005</y-m>
-            <z-m>-0.0105</z-m>
+            <x-m>2.89022</x-m>
+            <y-m>0.00050</y-m>
+            <z-m>0.57050</z-m>
         </center>
         <axis>
             <x>0.75</x>
@@ -311,9 +303,9 @@
             </entry>
         </interpolation>
         <center>
-            <x-m>-0.0485</x-m>
+            <x-m>2.84192</x-m>
             <y-m>-0.0762</y-m>
-            <z-m>-0.05053</z-m>
+            <z-m>0.53047</z-m>
         </center>
         <axis>
             <y>-1</y>
@@ -345,6 +337,19 @@
             <property>/sim/rendering/rembrandt/enabled</property>
         </condition>
         <object-name>reflector-plate</object-name>
+        <object-name>sunShieldGlass</object-name>
+    </effect>
+
+    <effect>
+        <inherits-from>Aircraft/p51d/Models/Effects/interior/interior</inherits-from>
+        <object-name>k14-main-body</object-name>
+        <object-name>mask-lever</object-name>
+        <object-name>rangeDial</object-name>
+        <object-name>reflector-plate</object-name>
+        <object-name>span-lever</object-name>
+        <object-name>span-scale</object-name>
+        <object-name>sunShadeControlLever</object-name>
+        <object-name>sunShield</object-name>
         <object-name>sunShieldGlass</object-name>
     </effect>
 
