@@ -38,6 +38,8 @@ New features
 
 * Fixed bomb release ordering and require arming for explosion animation
 
+* TODO Fixed set combat tanks level to zero when they are dropped
+
 * Use HD model of rocket for submodels with ALS flame effect and thicker smoke
 
 * Zoom in or out using mouse scrollwheel, up to a distance of 300 meters
@@ -50,7 +52,9 @@ New features
 
 * ALS glass effect for rain
 
-* TODO Exterior shadow
+* ALS interior shadow
+
+* TODO ALS exterior shadow
 
 * Engine fire when engine fails
 
@@ -96,6 +100,8 @@ New features
 
 * TODO Implemented rear radar warning receiver
 
+* TODO Implemented carb heat system to prevent ice near induction air duct
+
 * TODO Crash detection: coolant fluid leak
 
 * TODO Fuel boost pumps needed for sufficient fuel flow above 8500 ft
@@ -108,9 +114,19 @@ New features
 
 * TODO Added windshield defroster, hot and cold air control on floor
 
-* TODO Added fuselage fuel tank in cockpit
+* TODO Added fuselage fuel tank + tank level gage in cockpit
+
+* TODO Added radio's on top of fuselage tank
 
 * TODO Implemented fluorescent lights
+
+* TODO Added gun camera + door in left wing
+
+* TODO Added hydraulic accumulator in right wing
+
+* TODO Added gun doors in both wings
+
+* TODO Made throttle control smooth
 
 Authors
 =======
