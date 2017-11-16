@@ -61,16 +61,18 @@
  <path>P-51D-25NA.ac</path>
  
   <nasal>
-    <load>
+    <load><![CDATA[
       var self = cmdarg();
-	  print("LOAD P-51D-25NA ", self.getPath());
+	  print("LOAD P-51D-25-NA ", self.getPath());
       var livery_update = aircraft.livery_update.new("Aircraft/p51d/Models/Liveries", 10);
-    </load>
+
+      self.initNode("sim/model/is-remote", 1, "BOOL");
+    ]]></load>
  
-    <unload>
-      print("UNLOAD P-51D-25NA ", self.getPath());
+    <unload><![CDATA[
+      print("UNLOAD P-51D-25-NA ", self.getPath());
       livery_update.stop();
-    </unload>
+    ]]></unload>
  </nasal>
 
  <!-- Pilot -->
@@ -115,10 +117,7 @@
        </not-equals>
        <property>/aircraft/pilot/always-visible</property>
        <!-- so the pilot is always visible on multiplayer -->
-       <not-equals>
-         <property>/sim/aircraft</property>
-         <value>p51d-jsbsim</value>
-       </not-equals>           
+       <property>sim/model/is-remote</property>
      </or>
    </condition>
  </animation> 

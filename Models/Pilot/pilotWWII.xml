@@ -12,8 +12,8 @@
 				<factor type="float">-10</factor>
 				<offset-deg type="float">0</offset-deg>
 			</roll-animation>
-			<yaw-animation>/engines/engine[5]/n1</yaw-animation>
-			<pitch-animation>/engines/engine[5]/n2</pitch-animation>
+			<yaw-animation>engines/engine[5]/n1</yaw-animation>
+			<pitch-animation>engines/engine[5]/n2</pitch-animation>
 		</head>
 		<arms>
 			<upper-animation-pitch>

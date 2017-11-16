@@ -106,6 +106,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
    <livery>
      <file type="string">DD</file>
    </livery>
+   <is-remote type="bool">false</is-remote>
   </model> 
 
     <systems>
