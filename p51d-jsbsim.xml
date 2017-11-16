@@ -1928,7 +1928,6 @@ Hal V. Engel hvengel@astound.net
                     <property>fcs/elevator-pos-rad</property>
                     <value>0.2000</value>
                     <!-- Lowered elevator angle from 0.78 rad (~ 45 deg) to 30 deg -->
-                    <value>0.6712804815</value><!-- 30.0 / rad2deg(0.78)  -->
                 </product>
             </function>
         </axis>
@@ -2026,10 +2025,12 @@ Hal V. Engel hvengel@astound.net
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
                     <sum>
-                       <property>fcs/left-aileron-pos-rad</property>
+                       <product>
+                           <property>fcs/left-aileron-pos-rad</property>
+                           <!-- Lowered aileron angle from 0.35 rad (~ 20 deg) to 15 deg -->
+                           <value>1.336901521971921</value><!-- 0.35 / deg2rad(15 deg) -->
+                       </product>
                        <value>0.02</value>
-                       <!-- Lowered aileron angle from 0.35 rad (~ 20 deg) to 15 deg -->
-                       <value>0.0882006122</value><!-- = 0.35 - deg2rad(15 deg) -->
                     </sum>
                     <table>
                         <independentVar>velocities/mach</independentVar>
@@ -2292,7 +2293,6 @@ Hal V. Engel hvengel@astound.net
                     <property>metrics/cbarw-ft</property>
                     <property>fcs/elevator-pos-rad</property>
                     <!-- Lowered elevator angle from 0.78 rad (~ 45 deg) to 30 deg -->
-                    <value>0.6712804815</value><!-- 30.0 / rad2deg(0.78)  -->
                     <table>
                         <independentVar>/fdm/jsbsim/velocities/mach</independentVar>
                         <tableData>
