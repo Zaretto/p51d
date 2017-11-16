@@ -658,6 +658,10 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             <show-blades type="bool">false</show-blades>
         </settings>
 
+        <sounds>
+            <engine-repair type="bool">false</engine-repair>
+        </sounds>
+
         <gui>
             <can-repair type="bool">false</can-repair>
         </gui>
@@ -824,6 +828,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <sounds>
             <file>Nasal/sound.nas</file>
         </sounds>
+        <thunder>
+            <file>Nasal/generic/thunder.nas</file>
+        </thunder>
         <gui>
             <file>Nasal/canvas-toolkit.nas</file>
         </gui>

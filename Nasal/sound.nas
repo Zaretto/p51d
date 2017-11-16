@@ -13,10 +13,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-io.include("Aircraft/ExpansionPack/Nasal/init.nas");
-
-with("thunder");
-
 var play = func (name, timeout=0.1, delay=0) {
     var sound_prop = "/aircraft/sounds/" ~ name;
 

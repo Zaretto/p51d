@@ -17,7 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
-<PropertyList include="Aircraft/ExpansionPack/Systems/thunder-canopy.xml">
+<PropertyList include="generic/thunder-canopy.xml">
 
     <params>
         <canopy>/canopy/position-norm</canopy>
