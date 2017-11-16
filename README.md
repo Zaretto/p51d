@@ -13,20 +13,6 @@ This has reduced the size of the repository (including a checkout) from 1.6 GiB
 to 150 MiB. Please see one of the repositories above for the Blender files
 and blueprints in the `Resources/` folder.
 
-Dependencies
-------------
-
-The [ExpansionPack][url-fg-expansion-pack] aircraft is required
-in order to hear the thunder of lightning and to be able to receive damage.
-
-Installation
-------------
-
-1. Rename this directory to `p51d` and place it in FlightGear's `Aircraft`
-   directory.
-
-2. Install the [ExpansionPack][url-fg-expansion-pack] aircraft.
-
 New features
 ------------
 
@@ -371,4 +357,3 @@ real controls.
   [url-bfg]: http://rtyley.github.io/bfg-repo-cleaner/
   [url-wiki-p51d]: http://wiki.flightgear.org/North_American_P-51_Mustang
   [url-forum-engel]: https://forum.flightgear.org/viewtopic.php?f=4&t=28279#p268713
-  [url-fg-expansion-pack]: https://github.com/onox/ExpansionPack

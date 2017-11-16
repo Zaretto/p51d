@@ -831,6 +831,9 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
         <thunder>
             <file>Nasal/generic/thunder.nas</file>
         </thunder>
+        <damage>
+            <file>Nasal/generic/damage.nas</file>
+        </damage>
         <gui>
             <file>Nasal/canvas-toolkit.nas</file>
         </gui>

@@ -13,12 +13,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-io.include("Aircraft/ExpansionPack/Nasal/init.nas");
-
-with("damage");
-
-check_version("damage", 1, 0);
-
 # Duration in which no damage will occur. Assumes the aircraft has
 # stabilized within this duration.
 var repair_timeout = 3.0;
