@@ -1681,25 +1681,6 @@
 
  <animation>
   <type>material</type>
-  <object-name>aps-13-mount</object-name>
-  <object-name>accumlator</object-name>
-  <object-name>RFlourlLghtControl-1</object-name>
-  <object-name>breaker-reset</object-name>
-  <object-name>emergency-handle</object-name>
-  <object-name>emergency-h-base</object-name>
-  <object-name>emergency-spring</object-name>
-  <object-name>emergency-washer</object-name>
-  <object-name>emergency-bolt</object-name>
-  <emission>
-    <factor-prop>controls/lighting/cabin-norm</factor-prop>
-    <red>0.25</red>
-    <green>0.12</green>
-    <blue>0.12</blue>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
   <object-name>fugelageInside</object-name>
   <object-name>panel</object-name>
   <object-name>right-flor-body</object-name>
