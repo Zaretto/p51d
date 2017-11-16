@@ -61,3 +61,20 @@ setlistener("/sim/multiplay/online", func (n) {
         );
     }
 }, 0, 0);
+
+setlistener("/sim/signals/fdm-initialized", func {
+    var min_fg_version = getprop("/sim/minimum-fg-version");
+    var fg_version = getprop("/sim/version/flightgear");
+
+    var short_fg_version = string.replace(fg_version, '.', '');
+    var short_min_fg_version = string.replace(min_fg_version, '.', '');
+
+    # Transmit the FlightGear version in an MP packet
+    setprop("/sim/multiplay/generic/short[78]", num(substr(short_fg_version, 2)));
+
+    if (num(short_fg_version) <= num(short_min_fg_version)) {
+        var title = sprintf("FlightGear %s required", min_fg_version);
+        var message = sprintf("This model requires FlightGear %s or higher to work correctly. You are using version %s, which may not fully support this model.", min_fg_version, fg_version);
+        canvas.MessageBox.warning(title, message, nil, canvas.MessageBox.Ok | canvas.MessageBox.DontShowAgain);
+    }
+});
