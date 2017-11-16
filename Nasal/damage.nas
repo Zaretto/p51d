@@ -39,6 +39,13 @@ var repair_timer = maketimer(repair_timeout, func {
 });
 repair_timer.singleShot = 1;
 
+setlistener("/fdm/jsbsim/damage/repairing", func (node) {
+    if (node.getBoolValue())
+        logger.screen.white("Repairing damage...");
+    else
+        logger.screen.green("Damage repaired");
+}, 0, 0);
+
 setlistener("/fdm/jsbsim/systems/crash-detect/impact", func (n) {
     if (n.getBoolValue())
         # Engine

@@ -47,7 +47,23 @@ setlistener("/aircraft/brakes/parking-cmd", func (node) {
 
 setlistener("/aircraft/brakes/parking-set", func (node) {
     if (node.getBoolValue())
-        logger.screen.green("Parking brakes enabled (tap brakes to release)");
+        logger.screen.green("Parking brakes enabled (push lever back to secure)");
     else
         logger.screen.red("Parking brakes released");
+}, 0, 0);
+
+setlistener("/controls/gear/brake-parking", func (node) {
+    var set = getprop("/aircraft/brakes/parking-set");
+
+    if (node.getBoolValue())
+        if (set)
+            logger.screen.red("Pulled parking brakes lever (push lever back to secure)");
+        else
+            logger.screen.white("Pulled parking brakes lever (fully press brake pedals to enable)");
+    else {
+        if (set)
+            logger.screen.green("Pushed parking brakes lever back (tap brakes to release)");
+        else
+            logger.screen.white("Pushed parking brakes lever back");
+    }
 }, 0, 0);
