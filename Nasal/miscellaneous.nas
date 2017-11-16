@@ -72,7 +72,7 @@ setlistener("/sim/signals/fdm-initialized", func {
     # Transmit the FlightGear version in an MP packet
     setprop("/sim/multiplay/generic/short[78]", num(substr(short_fg_version, 2)));
 
-    if (num(short_fg_version) <= num(short_min_fg_version)) {
+    if (num(short_fg_version) < num(short_min_fg_version)) {
         var title = sprintf("FlightGear %s required", min_fg_version);
         var message = sprintf("This model requires FlightGear %s or higher to work correctly. You are using version %s, which may not fully support this model.", min_fg_version, fg_version);
         canvas.MessageBox.warning(title, message, nil, canvas.MessageBox.Ok | canvas.MessageBox.DontShowAgain);
