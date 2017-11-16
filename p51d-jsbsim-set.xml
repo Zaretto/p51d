@@ -841,7 +841,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
             <file>Nasal/generic/damage.nas</file>
         </damage>
         <gui>
-            <file>Nasal/canvas-toolkit.nas</file>
+            <file>Nasal/generic/canvas-toolkit.nas</file>
         </gui>
         <dialogs>
             <file>Nasal/aircraft-options.nas</file>
