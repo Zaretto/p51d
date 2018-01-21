@@ -199,7 +199,7 @@ Hal V. Engel hvengel@astound.net
                 <y> -72 </y>
                 <z> -85 </z>
             </location>
-            <static_friction> 0.55 </static_friction>
+            <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 9800 </spring_coeff>
@@ -215,7 +215,7 @@ Hal V. Engel hvengel@astound.net
                 <y> 72 </y>
                 <z> -85 </z>
             </location>
-            <static_friction> 0.55 </static_friction>
+            <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 9800 </spring_coeff>
@@ -2424,7 +2424,7 @@ Hal V. Engel hvengel@astound.net
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
                     <property>propulsion/engine/thrust-lbs</property>
-                    <value>-0.00006</value>
+                    <value>-0.00002</value>
                     <table>
                         <independentVar lookup="row">/velocities/airspeed-kt</independentVar>
                         <tableData>
