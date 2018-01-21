@@ -13,6 +13,9 @@
              2000 RPM should give 1100 - 1250 psi of system pressure.
              Accumulator pressure is 1000 - 1100 psi.
 
+             Pump limit is 1500 psi (continuous) or 1750 psi for 15 seconds.
+             Maximum speed is 4300 RPM.
+
              Using hydraulic equipment reduces pressure in accumulator.
              Unloader valve cuts in and starts building system pressure
              at 800 - 850 psi.
@@ -31,16 +34,21 @@
 
              When hydraulic equipment is being used, system pressure drops.
              When it gets to 800 - 850 psi, fluid will flow from the
-             accumulator to the system. The system pressure remains at
-             800 - 850 psi, but the accumulator pressure starts dropping.
+             accumulator (E) to the system (D). The system pressure remains
+             at 800 - 850 psi, but the accumulator pressure starts dropping.
              When the accumulator pressure reaches 800 - 850 psi too, the
              engine pump starts increasing pressure in the accumulator
              and system again.
 
+             Fluid flows from C through the one-way check valve to D.
+             At the same time the accumulator is charged. When the
+             accumulator reaches 1000 - 1100 psi, the unloading valve
+             unloads and fluid starts to flow from C to B (50 psi).
+
              Reservoir has 1.209 gallons volume with 0.5^3 inch reserved
              for brakes.
 
-             pump -> C -> D -> system
+             pump -> C -<o- D -> system
                      | \
                      /  \
                     B    E

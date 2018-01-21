@@ -67,6 +67,12 @@
             </function>
         </fcs_function>
 
+        <pure_gain name="systems/asi/indicated-airspeed-mph">
+            <input>systems/asi/indicated-airspeed</input>
+            <gain>1.15077945</gain>
+            <output>/instrumentation/airspeed-indicator/ias-mph</output>
+        </pure_gain>
+
         <switch name="systems/asi/pitot-serviceable">
             <output>/systems/pitot/serviceable</output>
             <default value="1"/>
