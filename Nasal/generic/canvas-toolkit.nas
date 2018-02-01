@@ -56,13 +56,13 @@ var create_group = func (root, name) {
 
     var hbox = canvas.HBoxLayout.new();
     var vbox = canvas.VBoxLayout.new();
-    
+
     hbox.addSpacing(12);
     hbox.addItem(vbox);
 
-    var group_vbox = canvas.VBoxLayout.new();    
+    var group_vbox = canvas.VBoxLayout.new();
     group_vbox.addItem(label);
     group_vbox.addItem(hbox);
-    
+
     return [vbox, group_vbox];
 };

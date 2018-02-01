@@ -31,9 +31,9 @@ var cannon_types = {
     " 7.62 hit":              0.005,# 7.62mm
     " 50 BMG hit":            0.015,# 12.7mm
 };
-    
-    
-    
+
+
+
 var warhead_lbs = {
     "aim-120":              44.00,
     "AIM120":               44.00,
@@ -87,7 +87,7 @@ var warhead_lbs = {
 };
 
 var fireMsgs = {
-  
+
     # F14
     " FOX3 at":       nil, # radar
     " FOX2 at":       nil, # heat
@@ -224,9 +224,9 @@ var incoming_listener = func {
               if (diff < 0) {
                 diff = 0;
               }
-              
+
               diff = diff * diff;
-              
+
               var probability = diff / (maxDist*maxDist);
 
               var failed = fail_systems(probability);
@@ -234,7 +234,7 @@ var incoming_listener = func {
               printf("Took %.1f%% damage from %s missile at %0.1f meters. %s systems was hit", percent,type,dist,failed);
               nearby_explosion();
             }
-          } 
+          }
         } elsif (cannon_types[last_vector[1]] != nil) {
           if (size(last_vector) > 2 and last_vector[2] == " "~callsign) {
             var last3 = split(" ", last_vector[3]);
@@ -254,7 +254,7 @@ var incoming_listener = func {
             } else {
               var probability = cannon_types[last_vector[1]];
               #print("probability: " ~ probability);
-              
+
               var failed = fail_systems(probability * 3);# Old messages is assumed to be 3 hits
               printf("Took %.1f%% x 3 damage from cannon! %s systems was hit.", probability*100, failed);
               nearby_explosion();
