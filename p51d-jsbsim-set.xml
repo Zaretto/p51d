@@ -23,7 +23,7 @@ Apr. 2010 Hal V. Engel hvengel@yahoo.com (JSBSim model)
   <author>Jim Wilson, Jon Berndt, Hal V. Engel, and onox</author>
 
   <status>production</status>
-  <aircraft-version type="int">1</aircraft-version>
+  <aircraft-version type="int">2</aircraft-version>
   <rating>
      <FDM type="int">5</FDM>
      <systems type="int">4</systems>
