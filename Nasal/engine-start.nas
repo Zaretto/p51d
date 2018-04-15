@@ -102,7 +102,6 @@ var autostart = func (n) {
     setprop("/controls/armament/guns-enabled", 1);
     setprop("/controls/armament/gunsight/computer-on", 1);
     setprop("/controls/armament/gunsight/reticleSelectorPos", 1);
-    setprop("/controls/gear/brake-parking", 1);
     setprop("/controls/engines/engine/magnetos", 3);
     setprop("/controls/engines/engine/throttle", 0.15);
     setprop("/fdm/jsbsim/propulsion/fuel_pump", 1);
@@ -111,6 +110,19 @@ var autostart = func (n) {
 
     setprop("/controls/lighting/wing-position-lights", 1);
     setprop("/controls/lighting/tail-position-lights", 1);
+
+    # Pull parking brake lever and depress brakes
+    setprop("/controls/gear/brake-parking", 1);
+    controls.applyBrakes(1);
+
+    settimer(func {
+        # Release the brakes
+        controls.applyBrakes(0);
+        settimer(func {
+            # Push parking brake lever back
+            setprop("/controls/gear/brake-parking", 0);
+        }, 1.0);
+    }, 1.0);
 
     if (autostart_listener_id != 0) {
         removelistener(autostart_listener_id);
